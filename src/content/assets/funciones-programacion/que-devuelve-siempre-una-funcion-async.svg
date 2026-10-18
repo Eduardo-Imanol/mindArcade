@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué devuelve siempre una función async?">
+<title>¿Qué devuelve siempre una función async?</title>
+<rect width="128" height="128" fill="#1a0b2e"/>
+  <circle cx="56.29" cy="94.48" r="38.01" fill="hsl(265 90% 64%)" fill-opacity="0.16"/>
+  <circle cx="127.02" cy="24.49" r="38.65" fill="hsl(265 90% 56%)" fill-opacity="0.20"/>
+  <circle cx="49.32" cy="45.50" r="50.86" fill="hsl(265 90% 62%)" fill-opacity="0.18"/>
+  <circle cx="80.08" cy="77.26" r="31.80" fill="hsl(265 90% 66%)" fill-opacity="0.13"/>
+<line x1="12.80" y1="45.61" x2="115.20" y2="65.19" stroke="hsl(265 90% 60%)" stroke-width="1.54"/>
+<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QD</text>
+</svg>

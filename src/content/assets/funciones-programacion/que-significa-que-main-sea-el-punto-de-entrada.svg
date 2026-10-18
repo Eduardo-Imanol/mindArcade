@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué significa que main() sea el punto de entrada?">
+<title>¿Qué significa que main() sea el punto de entrada?</title>
+<rect width="128" height="128" fill="#1a0b2e"/>
+  <circle cx="80.05" cy="21.99" r="32.92" fill="hsl(45 90% 63%)" fill-opacity="0.26"/>
+  <circle cx="110.17" cy="102.53" r="20.63" fill="hsl(45 90% 65%)" fill-opacity="0.17"/>
+  <circle cx="125.88" cy="37.49" r="22.00" fill="hsl(45 90% 66%)" fill-opacity="0.24"/>
+  <circle cx="85.24" cy="2.36" r="18.61" fill="hsl(45 90% 58%)" fill-opacity="0.18"/>
+<line x1="12.80" y1="48.79" x2="115.20" y2="41.15" stroke="hsl(45 90% 60%)" stroke-width="1.54"/>
+<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QS</text>
+</svg>

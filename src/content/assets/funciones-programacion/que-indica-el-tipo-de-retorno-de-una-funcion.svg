@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué indica el tipo de retorno de una función?">
+<title>¿Qué indica el tipo de retorno de una función?</title>
+<rect width="128" height="128" fill="#1a0b2e"/>
+  <circle cx="31.48" cy="122.36" r="38.35" fill="hsl(168 90% 67%)" fill-opacity="0.16"/>
+  <circle cx="100.66" cy="82.89" r="15.84" fill="hsl(168 90% 57%)" fill-opacity="0.16"/>
+  <circle cx="79.34" cy="49.23" r="43.67" fill="hsl(168 90% 64%)" fill-opacity="0.15"/>
+  <circle cx="98.88" cy="48.57" r="18.85" fill="hsl(168 90% 70%)" fill-opacity="0.30"/>
+<line x1="12.80" y1="55.24" x2="115.20" y2="60.72" stroke="hsl(168 90% 60%)" stroke-width="1.54"/>
+<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QI</text>
+</svg>

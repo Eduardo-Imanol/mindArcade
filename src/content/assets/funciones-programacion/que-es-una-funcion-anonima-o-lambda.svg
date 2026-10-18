@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué es una función anónima o lambda?">
+<title>¿Qué es una función anónima o lambda?</title>
+<rect width="128" height="128" fill="#1a0b2e"/>
+  <circle cx="112.38" cy="59.61" r="25.61" fill="hsl(168 90% 68%)" fill-opacity="0.15"/>
+  <circle cx="76.60" cy="31.33" r="44.66" fill="hsl(168 90% 57%)" fill-opacity="0.27"/>
+  <circle cx="0.07" cy="59.24" r="22.14" fill="hsl(168 90% 63%)" fill-opacity="0.29"/>
+  <circle cx="34.33" cy="38.68" r="28.63" fill="hsl(168 90% 68%)" fill-opacity="0.19"/>
+<line x1="12.80" y1="64.88" x2="115.20" y2="56.22" stroke="hsl(168 90% 60%)" stroke-width="1.54"/>
+<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QE</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué es una función de orden superior?">
+<title>¿Qué es una función de orden superior?</title>
+<rect width="128" height="128" fill="#1a0b2e"/>
+  <circle cx="37.02" cy="96.76" r="49.55" fill="hsl(320 90% 58%)" fill-opacity="0.20"/>
+  <circle cx="17.60" cy="45.32" r="20.23" fill="hsl(320 90% 68%)" fill-opacity="0.24"/>
+  <circle cx="29.78" cy="103.94" r="48.22" fill="hsl(320 90% 65%)" fill-opacity="0.13"/>
+  <circle cx="123.74" cy="66.04" r="34.05" fill="hsl(320 90% 69%)" fill-opacity="0.32"/>
+<line x1="12.80" y1="42.28" x2="115.20" y2="69.44" stroke="hsl(320 90% 60%)" stroke-width="1.54"/>
+<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QE</text>
+</svg>

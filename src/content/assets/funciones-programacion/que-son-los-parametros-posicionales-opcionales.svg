@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué son los parámetros posicionales opcionales?">
+<title>¿Qué son los parámetros posicionales opcionales?</title>
+<rect width="128" height="128" fill="#1a0b2e"/>
+  <circle cx="21.87" cy="53.45" r="49.37" fill="hsl(120 90% 65%)" fill-opacity="0.25"/>
+  <circle cx="19.91" cy="11.91" r="23.45" fill="hsl(120 90% 57%)" fill-opacity="0.13"/>
+  <circle cx="73.10" cy="55.18" r="17.14" fill="hsl(120 90% 67%)" fill-opacity="0.19"/>
+  <circle cx="46.38" cy="114.66" r="38.79" fill="hsl(120 90% 66%)" fill-opacity="0.13"/>
+<line x1="12.80" y1="77.86" x2="115.20" y2="80.02" stroke="hsl(120 90% 60%)" stroke-width="1.54"/>
+<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QS</text>
+</svg>

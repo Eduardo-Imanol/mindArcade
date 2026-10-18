@@ -1,0 +1,15 @@
+:root {
+  --bg: #0f051d;
+  --bg2: #1a0b2e;
+  --neon-cyan: #00ffcc;
+  --neon-magenta: #ff007f;
+  --neon-green: #39ff14;
+  --text: #f1f1f1;
+}
+.sepect-bg { background: var(--bg); color: var(--text); }
+.neon { text-shadow: 0 0 8px var(--neon-cyan), 0 0 24px var(--neon-cyan); }
+.card-neon { background: var(--bg2); border: 1px solid var(--neon-cyan); box-shadow: 0 0 12px rgba(0,255,204,.35); border-radius: 12px; }
+.btn-neon { min-height: 44px; min-width: 44px; border: 1px solid var(--neon-magenta); box-shadow: 0 0 10px rgba(255,0,127,.5); border-radius: 10px; padding: .6rem 1rem; }
+.btn-neon:focus-visible, a:focus-visible, button:focus-visible, textarea:focus-visible, input:focus-visible {
+  outline: 3px solid var(--neon-green); outline-offset: 2px;
+}
