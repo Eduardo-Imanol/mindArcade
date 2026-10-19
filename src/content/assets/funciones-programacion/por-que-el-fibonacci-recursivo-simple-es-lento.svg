@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el fibonacci recursivo simple es lento?">
+<title>¿Por qué el fibonacci recursivo simple es lento?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="36.11" cy="476.64" rx="185.26" ry="185.26" fill="hsl(45 90% 58% / 0.23)"/>
+<ellipse cx="380.6" cy="478.42" rx="103.28" ry="103.28" fill="hsl(45 90% 58% / 0.162)"/>
+<ellipse cx="210.45" cy="302.24" rx="85.22" ry="85.22" fill="hsl(45 90% 58% / 0.186)"/>
+<ellipse cx="361.46" cy="81.7" rx="88.11" ry="88.11" fill="hsl(45 90% 58% / 0.145)"/>
+<ellipse cx="256" cy="110" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(5)</text>
+<ellipse cx="150" cy="210" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="150" y="210" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">f(4)</text>
+<ellipse cx="362" cy="210" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="362" y="210" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">f(3)</text>
+<ellipse cx="90" cy="310" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="90" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">f(3)</text>
+<ellipse cx="210" cy="310" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="210" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">f(2)</text>
+<line x1="230" y1="138" x2="165" y2="185" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="282" y1="138" x2="347" y2="185" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="130" y1="238" x2="100" y2="285" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="172" y1="238" x2="198" y2="285" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<rect x="335" y="290" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="400" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">recalcula</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">O(2^n) · memo → O(n)</text>
+</svg>

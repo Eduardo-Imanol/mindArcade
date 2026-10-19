@@ -3,7 +3,7 @@ feature: topics-flashcards
 status: approved
 owner: Eduardo
 created: 2026-10-16
-updated: 2026-10-16
+updated: 2026-10-19
 related_tasks: tasks.md (approved — execution unblocked)
 ---
 
@@ -58,6 +58,7 @@ card ever renders without a visual identity.
 
 ## 4. Architectural constraints
 - Stack / patterns: Vite 5 + React 18 + Tailwind; layering per `docs/architecture.md`. No new dependencies (hash mini-router + native Canvas art in-house).
+- Responsive shell: hub, topic view, flashcards and memorama share a full-width desktop container (`width:100%; max-width:100%`, padding `clamp(16px, 4vw, 32px)`); inner content/board is centered via `.game-stage` (~960px) so the arcade background fills the viewport with no side gutters. Mobile behaviour (360px, no horizontal scroll, ≥44px targets) unchanged.
 - Routing: `src/app/router.js` — hash-based. Routes (frozen): `#/` (hub), `#/tema/:topicId`, `#/tema/:topicId/juego/:gameId`. Unknown → not-found view.
 - Game module framework (contract frozen once shipped):
   - Registry `src/games/registry.js` entries: `{ id, title, description, status: 'available'|'soon', minCards, load? }`; `load()` is a dynamic import resolving `{ default: Component }`. `soon` entries have no `load`.

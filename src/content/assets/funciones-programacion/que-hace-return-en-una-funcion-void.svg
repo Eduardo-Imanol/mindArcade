@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace return; en una función void?">
+<title>¿Qué hace return; en una función void?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="240.24" cy="53.37" rx="80.05" ry="80.05" fill="hsl(120 90% 58% / 0.177)"/>
+<ellipse cx="351.87" cy="172.23" rx="139.81" ry="139.81" fill="hsl(120 90% 58% / 0.143)"/>
+<ellipse cx="427.6" cy="151" rx="180.53" ry="180.53" fill="hsl(120 90% 58% / 0.23)"/>
+<ellipse cx="489.78" cy="109.47" rx="162.31" ry="162.31" fill="hsl(120 90% 58% / 0.151)"/>
+<rect x="116" y="110" width="280" height="290" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="130" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">void f()</text>
+<rect x="156" y="180" width="200" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="256" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">código</text>
+<line x1="256" y1="250" x2="256" y2="309.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,320 249.57,309.87 262.43,309.87" fill="#ffcc00"/>
+<text x="300" y="288" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">return;</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">sale antes sin valor</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se recorre un árbol recursivamente?">
+<title>¿Cómo se recorre un árbol recursivamente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="327.55" cy="268.42" rx="202.15" ry="202.15" fill="hsl(320 90% 58% / 0.14)"/>
+<ellipse cx="110.71" cy="282.53" rx="115.75" ry="115.75" fill="hsl(320 90% 58% / 0.186)"/>
+<ellipse cx="279.23" cy="17.49" rx="133.05" ry="133.05" fill="hsl(320 90% 58% / 0.197)"/>
+<ellipse cx="276.63" cy="158.16" rx="92.11" ry="92.11" fill="hsl(320 90% 58% / 0.148)"/>
+<ellipse cx="256" cy="110" rx="34" ry="34" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">8</text>
+<ellipse cx="150" cy="210" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="150" y="210" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3</text>
+<ellipse cx="362" cy="210" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="362" y="210" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">10</text>
+<ellipse cx="90" cy="310" rx="26" ry="26" fill="none" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="90" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">·</text>
+<ellipse cx="210" cy="310" rx="26" ry="26" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="210" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">6</text>
+<line x1="235" y1="136" x2="165" y2="188" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="277" y1="136" x2="347" y2="188" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="130" y1="236" x2="102" y2="286" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="170" y1="236" x2="198" y2="286" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<rect x="106" y="360" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">inorden: izq · valor · der</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">caso base: nodo nulo</text>
+</svg>

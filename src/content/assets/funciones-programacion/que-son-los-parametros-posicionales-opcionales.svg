@@ -1,10 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué son los parámetros posicionales opcionales?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son los parámetros posicionales opcionales?">
 <title>¿Qué son los parámetros posicionales opcionales?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="21.87" cy="53.45" r="49.37" fill="hsl(120 90% 65%)" fill-opacity="0.25"/>
-  <circle cx="19.91" cy="11.91" r="23.45" fill="hsl(120 90% 57%)" fill-opacity="0.13"/>
-  <circle cx="73.10" cy="55.18" r="17.14" fill="hsl(120 90% 67%)" fill-opacity="0.19"/>
-  <circle cx="46.38" cy="114.66" r="38.79" fill="hsl(120 90% 66%)" fill-opacity="0.13"/>
-<line x1="12.80" y1="77.86" x2="115.20" y2="80.02" stroke="hsl(120 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QS</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="87.47" cy="213.79" rx="189.59" ry="189.59" fill="hsl(120 90% 58% / 0.21)"/>
+<ellipse cx="340.95" cy="79.66" rx="84.06" ry="84.06" fill="hsl(120 90% 58% / 0.161)"/>
+<ellipse cx="65.31" cy="28.21" rx="147.7" ry="147.7" fill="hsl(120 90% 58% / 0.183)"/>
+<ellipse cx="23.78" cy="405.66" rx="121.48" ry="121.48" fill="hsl(120 90% 58% / 0.176)"/>
+<rect x="151" y="89" width="210" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#f1f1f1">f(a, [b])</text>
+<line x1="286" y1="205" x2="268" y2="205" stroke="#00ffcc" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="268" y1="205" x2="268" y2="295" stroke="#00ffcc" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="268" y1="295" x2="286" y2="295" stroke="#00ffcc" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="338" y1="205" x2="356" y2="205" stroke="#00ffcc" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="356" y1="205" x2="356" y2="295" stroke="#00ffcc" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="356" y1="295" x2="338" y2="295" stroke="#00ffcc" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="204" y="226" width="56" height="48" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="232" y="250" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">a</text>
+<rect x="284" y="226" width="56" height="48" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="312" y="250" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">b?</text>
+<text x="232" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">obligatorio</text>
+<text x="312" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">opcional o null</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">entre corchetes</text>
 </svg>

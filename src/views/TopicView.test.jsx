@@ -10,13 +10,19 @@ Una función encapsula lógica reutilizable.
 - Q: ¿Qué es una función? | A: Bloque de código reutilizable | E: easy
 - Q: ¿Qué es un parámetro? | A: Variable de entrada | E: easy`;
 
+const FIXTURE_B = `# Tema amplio
+- Q: perro | A: dog
+- Q: gato | A: cat
+- Q: sol | A: sun
+- Q: luna | A: moon`;
+
 afterEach(() => {
   localStorage.clear();
   document.body.innerHTML = '';
 });
 
 describe('TopicView', () => {
-  it('shows topic header + 10 game tiles, only flashcards openable', () => {
+  it('shows topic header + 10 game tiles, only flashcards openable with 2 cards', () => {
     const { topic } = saveCustomTopic({ title: 'Tema Demo', md: FIXTURE_A });
     const { container } = mount(<TopicView topicId={topic.id} />);
     expect(container.textContent).toContain('Tema Demo');
@@ -25,7 +31,8 @@ describe('TopicView', () => {
     const items = container.querySelectorAll('li');
     expect(items).toHaveLength(10);
     expect(container.textContent).toContain('Flashcards');
-    expect(container.textContent.match(/Próximamente/g)).toHaveLength(9);
+    expect(container.textContent).toContain('Necesitas al menos 4 cartas');
+    expect(container.textContent.match(/Próximamente/g)).toHaveLength(8);
 
     const links = [...container.querySelectorAll('a[href*="/juego/"]')];
     expect(links).toHaveLength(1);
@@ -33,6 +40,23 @@ describe('TopicView', () => {
 
     const disabled = [...container.querySelectorAll('button[disabled]')];
     expect(disabled).toHaveLength(9);
+  });
+
+  it('enables memorama when the topic reaches minCards (4)', () => {
+    const { topic } = saveCustomTopic({ title: 'Tema amplio', md: FIXTURE_B });
+    const { container } = mount(<TopicView topicId={topic.id} />);
+    expect(container.textContent).toContain('4 cartas');
+
+    const links = [...container.querySelectorAll('a[href*="/juego/"]')];
+    expect(links).toHaveLength(2);
+    expect(links.map((link) => link.getAttribute('href'))).toEqual(
+      expect.arrayContaining([
+        `#/tema/${topic.id}/juego/flashcards`,
+        `#/tema/${topic.id}/juego/memorama`,
+      ])
+    );
+    expect(container.textContent.match(/Próximamente/g)).toHaveLength(8);
+    expect(container.querySelectorAll('button[disabled]')).toHaveLength(8);
   });
 
   it('unknown topic → fallback with link home, no crash', () => {

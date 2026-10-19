@@ -1,10 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué indica el tipo de retorno de una función?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué indica el tipo de retorno de una función?">
 <title>¿Qué indica el tipo de retorno de una función?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="31.48" cy="122.36" r="38.35" fill="hsl(168 90% 67%)" fill-opacity="0.16"/>
-  <circle cx="100.66" cy="82.89" r="15.84" fill="hsl(168 90% 57%)" fill-opacity="0.16"/>
-  <circle cx="79.34" cy="49.23" r="43.67" fill="hsl(168 90% 64%)" fill-opacity="0.15"/>
-  <circle cx="98.88" cy="48.57" r="18.85" fill="hsl(168 90% 70%)" fill-opacity="0.30"/>
-<line x1="12.80" y1="55.24" x2="115.20" y2="60.72" stroke="hsl(168 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QI</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="125.91" cy="489.46" rx="151.37" ry="151.37" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="98.82" cy="402.64" rx="157.89" ry="157.89" fill="hsl(168 90% 58% / 0.141)"/>
+<ellipse cx="71.74" cy="108.81" rx="154.2" ry="154.2" fill="hsl(168 90% 58% / 0.178)"/>
+<ellipse cx="377.5" cy="313.71" rx="89.5" ry="89.5" fill="hsl(168 90% 58% / 0.217)"/>
+<rect x="125" y="170" width="150" height="60" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="200" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#f1f1f1">int f()</text>
+<line x1="275" y1="200" x2="361.2" y2="200" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="372,200 361.87,206.43 361.87,193.57" fill="#39ff14"/>
+<rect x="385" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="420" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">42</text>
+<rect x="125" y="300" width="150" height="60" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="200" y="330" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">void f()</text>
+<rect x="311.2" y="310" width="137.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="380" y="330" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">sin valor</text>
+<text x="256" y="90" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">return entrega…</text>
 </svg>

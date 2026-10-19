@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué aporta la restricción T extends Comparable&lt;T&gt;?">
+<title>¿Qué aporta la restricción T extends Comparable&lt;T&gt;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="335.89" cy="436.77" rx="104.75" ry="104.75" fill="hsl(45 90% 58% / 0.229)"/>
+<ellipse cx="449.35" cy="273.36" rx="182.91" ry="182.91" fill="hsl(45 90% 58% / 0.215)"/>
+<ellipse cx="493.9" cy="222.82" rx="143.1" ry="143.1" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="315.94" cy="22.7" rx="124.82" ry="124.82" fill="hsl(45 90% 58% / 0.143)"/>
+<rect x="86" y="71" width="340" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="100" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">T extends Comparable&lt;T&gt;</text>
+<line x1="256" y1="145" x2="256" y2="199.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,210 249.57,199.87 262.43,199.87" fill="#00ffcc"/>
+<rect x="60" y="240" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">compareTo ✓</text>
+<rect x="280" y="240" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="380" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">no comparable ✗</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">limita T a tipos comparables</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">usar compareTo dentro con seguridad</text>
+</svg>

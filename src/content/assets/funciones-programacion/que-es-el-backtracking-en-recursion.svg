@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el backtracking en recursión?">
+<title>¿Qué es el backtracking en recursión?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="477.77" cy="128.34" rx="169.52" ry="169.52" fill="hsl(168 90% 58% / 0.191)"/>
+<ellipse cx="33.47" cy="192.7" rx="161.39" ry="161.39" fill="hsl(168 90% 58% / 0.193)"/>
+<ellipse cx="60.55" cy="213.99" rx="181.43" ry="181.43" fill="hsl(168 90% 58% / 0.227)"/>
+<ellipse cx="135.88" cy="324.9" rx="106.21" ry="106.21" fill="hsl(168 90% 58% / 0.207)"/>
+<rect x="25" y="99" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="90" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">[a, b, c]</text>
+<line x1="170" y1="130" x2="240.84" y2="174.28" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="250,180 238,180.08 244.82,169.18" fill="#00ffcc"/>
+<rect x="245" y="190" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="300" y="210" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">elegir</text>
+<line x1="300" y1="245" x2="300" y2="284.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,295 293.57,284.87 306.43,284.87" fill="#8a7fb5"/>
+<rect x="240" y="305" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="300" y="325" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">explorar</text>
+<line x1="250" y1="350" x2="179.66" y2="385.17" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="170,390 176.19,379.72 181.94,391.22" fill="#ff007f"/>
+<rect x="50" y="395" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="110" y="415" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">deshacer</text>
+<line x1="170" y1="415" x2="239.2" y2="415" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="250,415 239.87,421.43 239.87,408.57" fill="#8a7fb5"/>
+<rect x="290" y="395" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="340" y="415" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">seguir</text>
+<text x="430" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">como permutaciones</text>
+</svg>

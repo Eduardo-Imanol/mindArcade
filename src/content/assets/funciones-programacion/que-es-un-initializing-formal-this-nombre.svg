@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un initializing formal (this.nombre)?">
+<title>¿Qué es un initializing formal (this.nombre)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="426.45" cy="272.56" rx="168.16" ry="168.16" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="507.67" cy="198.4" rx="100.6" ry="100.6" fill="hsl(320 90% 58% / 0.153)"/>
+<ellipse cx="90.48" cy="133.95" rx="77.97" ry="77.97" fill="hsl(320 90% 58% / 0.161)"/>
+<ellipse cx="236.43" cy="1.02" rx="127.59" ry="127.59" fill="hsl(320 90% 58% / 0.235)"/>
+<rect x="96" y="81" width="320" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">Punto(this.x, this.y)</text>
+<line x1="160" y1="160" x2="160" y2="239.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="160,250 153.57,239.87 166.43,239.87" fill="#00ffcc"/>
+<line x1="352" y1="160" x2="352" y2="239.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="352,250 345.57,239.87 358.43,239.87" fill="#ff007f"/>
+<rect x="125" y="269" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="160" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">x</text>
+<rect x="317" y="269" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="352" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">y</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">this.nombre asigna el campo</text>
+<rect x="136" y="420" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="440" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">atajo de constructor</text>
+</svg>

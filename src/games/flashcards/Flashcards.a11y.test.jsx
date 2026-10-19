@@ -58,12 +58,13 @@ describe('Flashcards a11y + keyboard', () => {
     expect(card.getAttribute('aria-label')).toMatch(/Carta 1 de 2/);
   });
 
-  it('360px mobile contract: >=44px targets, focus ring, no fixed wide layout', () => {
+  it('360px mobile contract: >=44px targets, focus ring, fluid full-width layout', () => {
     const tokens = fs.readFileSync(path.join(process.cwd(), 'src/ui/tokens.css'), 'utf8');
     const code = fs.readFileSync(path.join(process.cwd(), 'src/games/flashcards/Flashcards.jsx'), 'utf8');
     expect(tokens).toMatch(/\.btn-neon\s*{[^}]*min-height:\s*44px/s);
     expect(tokens).toMatch(/focus-visible/);
-    expect(code).toMatch(/maxWidth:\s*720/);
+    expect(code).toMatch(/maxWidth:\s*'100%'/);
+    expect(code).toMatch(/game-stage/);
     expect(code).not.toMatch(/width:\s*\d{4,}/);
   });
 });

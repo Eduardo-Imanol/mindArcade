@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el shadowing?">
+<title>¿Qué es el shadowing?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="289.32" cy="352.82" rx="198.63" ry="198.63" fill="hsl(168 90% 58% / 0.192)"/>
+<ellipse cx="207.52" cy="468.47" rx="178" ry="178" fill="hsl(168 90% 58% / 0.166)"/>
+<ellipse cx="13.17" cy="328.33" rx="203.04" ry="203.04" fill="hsl(168 90% 58% / 0.156)"/>
+<ellipse cx="340.26" cy="489.41" rx="131.37" ry="131.37" fill="hsl(168 90% 58% / 0.192)"/>
+<rect x="85" y="109" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="140" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">x = 1</text>
+<text x="140" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">exterior</text>
+<rect x="240" y="70" width="230" height="180" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="254" y="88" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">interior</text>
+<rect x="300" y="139" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="355" y="160" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">x = 2</text>
+<rect x="80" y="260" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="140" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">oculta</text>
+<line x1="200" y1="260" x2="289.97" y2="224.01" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="300,220 292.98,229.73 288.2,217.79" fill="#ff007f"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mismo nombre gana el de adentro</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">shadowing</text>
+</svg>

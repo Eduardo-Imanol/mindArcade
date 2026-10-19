@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué pasa si una función con tipo de retorno no ejecuta return?">
+<title>¿Qué pasa si una función con tipo de retorno no ejecuta return?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="147.16" cy="95.72" rx="167.86" ry="167.86" fill="hsl(168 90% 58% / 0.178)"/>
+<ellipse cx="120.96" cy="406.1" rx="83.78" ry="83.78" fill="hsl(168 90% 58% / 0.161)"/>
+<ellipse cx="365.98" cy="461.3" rx="167.91" ry="167.91" fill="hsl(168 90% 58% / 0.194)"/>
+<ellipse cx="145.69" cy="34.94" rx="182.14" ry="182.14" fill="hsl(168 90% 58% / 0.181)"/>
+<rect x="120" y="141" width="140" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="190" y="170" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">int f()</text>
+<rect x="285" y="150" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="360" y="170" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">sin return</text>
+<line x1="190" y1="210" x2="190" y2="269.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="190,280 183.57,269.87 196.43,269.87" fill="#ff007f"/>
+<rect x="139.8" y="300" width="100.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="190" y="320" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">error</text>
+<text x="190" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">int no admite null</text>
+<rect x="292" y="276" width="96" height="48" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="340" y="300" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f()</text>
+<line x1="340" y1="260" x2="340" y2="246.8" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="340,236 346.43,246.13 333.57,246.13" fill="#8a7fb5"/>
+<text x="340" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">sin tipo → null</text>
+</svg>

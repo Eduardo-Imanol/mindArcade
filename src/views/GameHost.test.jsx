@@ -100,4 +100,90 @@ describe('GameHost wiring', () => {
     await waitFor(() => container.textContent.includes('Carta 1 de 2'));
     expect(container.querySelector('span[role="img"]').textContent).toBe('🦴');
   });
+
+  it('memorama receives selectCards with unlearned-first selection (AC-3)', async () => {
+    const md = `# Tema Seleccion
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four
+- Q: cinco | A: five
+- Q: seis | A: six`;
+    const { topic } = saveCustomTopic({ title: 'Tema Seleccion', md });
+    const now = Date.now();
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({
+        [topic.id]: {
+          uno: { reps: 3, nextReview: now },
+          dos: { reps: 4, nextReview: now },
+          tres: { reps: 1, nextReview: now + 1_000_000 },
+          cuatro: { reps: 1, nextReview: now + 1_000_000 },
+          cinco: { reps: 1, nextReview: now + 1_000_000 },
+        },
+      })
+    );
+
+    const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
+    await waitFor(() => container.textContent.includes('Memorama'));
+    click(findButton(container, 'Fácil · 4 parejas'));
+
+    const ids = new Set(
+      [...container.querySelectorAll('.memorama-tile')].map((tile) => tile.dataset.cardId)
+    );
+    expect(ids).toEqual(new Set(['tres', 'cuatro', 'cinco', 'seis']));
+    expect(ids.has('uno')).toBe(false);
+    expect(ids.has('dos')).toBe(false);
+  });
+
+  it('memorama grading persists SRS + XP + history via the existing onGrade path', async () => {
+    const md = `# Tema Memorama
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four`;
+    const { topic } = saveCustomTopic({ title: 'Tema Memorama', md });
+    const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
+    await waitFor(() => container.textContent.includes('Memorama'));
+    click(findButton(container, 'Fácil · 4 parejas'));
+
+    const front = container.querySelector('.memorama-tile[data-face="front"]');
+    const cardId = front.dataset.cardId;
+    const back = container.querySelector(
+      `.memorama-tile[data-card-id="${cardId}"][data-face="back"]`
+    );
+    click(front);
+    click(back);
+
+    await waitFor(() => loadSrs()[topic.id] && loadSrs()[topic.id][cardId]);
+    expect(loadSrs()[topic.id][cardId].reps).toBe(1);
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(10);
+    expect(profile.history).toHaveLength(1);
+    expect(profile.history[0]).toMatchObject({ topicId: topic.id, cardId, grade: 'facil' });
+  });
+
+  it('memorama exit grades unmatched cards as otra-vez and persists them (AC-6)', async () => {
+    const md = `# Tema Sin Parejas
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four`;
+    const { topic } = saveCustomTopic({ title: 'Tema Sin Parejas', md });
+    const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
+    await waitFor(() => container.textContent.includes('Memorama'));
+    click(findButton(container, 'Fácil · 4 parejas'));
+
+    click(findButton(container, 'Salir'));
+
+    const graded = loadSrs()[topic.id];
+    expect(Object.keys(graded).sort()).toEqual(['cuatro', 'dos', 'tres', 'uno']);
+    expect(Object.values(graded).every((entry) => entry.reps === 0)).toBe(true);
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(0);
+    expect(profile.history).toHaveLength(4);
+    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+  });
 });

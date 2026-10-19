@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué recomienda la práctica sobre await en funciones async?">
+<title>¿Qué recomienda la práctica sobre await en funciones async?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="238.59" cy="289.77" rx="132.81" ry="132.81" fill="hsl(120 90% 58% / 0.165)"/>
+<ellipse cx="33.62" cy="417.64" rx="88.9" ry="88.9" fill="hsl(120 90% 58% / 0.207)"/>
+<ellipse cx="166.33" cy="482.41" rx="175.63" ry="175.63" fill="hsl(120 90% 58% / 0.164)"/>
+<ellipse cx="245.65" cy="69.71" rx="171.43" ry="171.43" fill="hsl(120 90% 58% / 0.166)"/>
+<rect x="80" y="103" width="160" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="160" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">async f()</text>
+<rect x="295" y="103" width="130" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="360" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">Future</text>
+<line x1="245" y1="130" x2="281.2" y2="130" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="292,130 281.87,136.43 281.87,123.57" fill="#ffcc00"/>
+<line x1="160" y1="175" x2="160" y2="234.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="160,245 153.57,234.87 166.43,234.87" fill="#39ff14"/>
+<rect x="90" y="260" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">await ✓</text>
+<line x1="360" y1="175" x2="360" y2="234.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,245 353.57,234.87 366.43,234.87" fill="#ff007f"/>
+<rect x="280" y="260" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="360" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">olvidado ✗</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">await SIEMPRE los Futures</text>
+<rect x="116" y="420" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="256" y="440" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">linter: unawaited_futures</text>
+</svg>

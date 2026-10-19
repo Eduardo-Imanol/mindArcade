@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se pasa un valor no constante como defecto?">
+<title>¿Cómo se pasa un valor no constante como defecto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="207.23" cy="325.38" rx="101.83" ry="101.83" fill="hsl(120 90% 58% / 0.194)"/>
+<ellipse cx="254.58" cy="403.72" rx="179.95" ry="179.95" fill="hsl(120 90% 58% / 0.219)"/>
+<ellipse cx="395.83" cy="415.54" rx="174.48" ry="174.48" fill="hsl(120 90% 58% / 0.237)"/>
+<ellipse cx="505.2" cy="46.14" rx="77.51" ry="77.51" fill="hsl(120 90% 58% / 0.21)"/>
+<rect x="141" y="90" width="230" height="60" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">f([List? l])</text>
+<line x1="256" y1="165" x2="256" y2="214.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,225 249.57,214.87 262.43,214.87" fill="#00ffcc"/>
+<rect x="116" y="240" width="280" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" font-weight="700" fill="#ffcc00">l ??= []</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">nulable + ??= dentro</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">lista vacía en cada llamada</text>
+</svg>

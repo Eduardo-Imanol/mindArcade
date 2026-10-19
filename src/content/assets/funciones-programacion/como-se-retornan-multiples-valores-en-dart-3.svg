@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se retornan múltiples valores en Dart 3?">
+<title>¿Cómo se retornan múltiples valores en Dart 3?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="485.35" cy="289.61" rx="162.76" ry="162.76" fill="hsl(320 90% 58% / 0.205)"/>
+<ellipse cx="264.26" cy="425.07" rx="176.77" ry="176.77" fill="hsl(320 90% 58% / 0.176)"/>
+<ellipse cx="51.82" cy="108.71" rx="188.13" ry="188.13" fill="hsl(320 90% 58% / 0.201)"/>
+<ellipse cx="309.02" cy="80.01" rx="80.69" ry="80.69" fill="hsl(320 90% 58% / 0.179)"/>
+<rect x="115" y="112" width="110" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="170" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">f()</text>
+<line x1="230" y1="140" x2="309.2" y2="140" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="320,140 309.87,146.43 309.87,133.57" fill="#39ff14"/>
+<rect x="330" y="100" width="140" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="400" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#39ff14">(1, 2)</text>
+<text x="400" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">Record</text>
+<line x1="256" y1="220" x2="256" y2="279.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,290 249.57,279.87 262.43,279.87" fill="#00ffcc"/>
+<rect x="106" y="310" width="130" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="276" y="310" width="130" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="171" y="345" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">a = 1</text>
+<text x="341" y="345" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">b = 2</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">desestructura en la llamada</text>
+</svg>

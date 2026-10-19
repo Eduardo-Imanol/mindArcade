@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene usar =&gt; en vez de llaves?">
+<title>¿Cuándo conviene usar =&gt; en vez de llaves?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="313.5" cy="158.13" rx="188.16" ry="188.16" fill="hsl(265 90% 58% / 0.146)"/>
+<ellipse cx="100.41" cy="459.53" rx="160.59" ry="160.59" fill="hsl(265 90% 58% / 0.145)"/>
+<ellipse cx="393.44" cy="511.02" rx="185" ry="185" fill="hsl(265 90% 58% / 0.18)"/>
+<ellipse cx="61.59" cy="225.35" rx="184.86" ry="184.86" fill="hsl(265 90% 58% / 0.191)"/>
+<rect x="60" y="140" width="180" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">=&gt; simple</text>
+<text x="150" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">1 expresión</text>
+<line x1="150" y1="270" x2="150" y2="309.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="150,320 143.57,309.87 156.43,309.87" fill="#39ff14"/>
+<text x="150" y="345" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">corta y clara</text>
+<rect x="272" y="140" width="180" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="286" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">{ }</text>
+<text x="362" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">varias</text>
+<text x="362" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">sentencias</text>
+<text x="362" y="345" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">usa llaves</text>
+</svg>

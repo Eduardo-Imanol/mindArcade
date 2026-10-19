@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa que un identificador empiece con _?">
+<title>¿Qué significa que un identificador empiece con _?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="505.48" cy="98.35" rx="152.1" ry="152.1" fill="hsl(320 90% 58% / 0.144)"/>
+<ellipse cx="427.72" cy="44.36" rx="160.55" ry="160.55" fill="hsl(320 90% 58% / 0.154)"/>
+<ellipse cx="392.24" cy="360.02" rx="135.82" ry="135.82" fill="hsl(320 90% 58% / 0.222)"/>
+<ellipse cx="243" cy="452.97" rx="191" ry="191" fill="hsl(320 90% 58% / 0.227)"/>
+<rect x="60" y="90" width="190" height="300" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">archivo.dart</text>
+<rect x="90" y="179" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="155" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">_privado</text>
+<rect x="85" y="265" width="140" height="50" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="155" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">_ayuda()</text>
+<rect x="300" y="150" width="160" height="180" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="314" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">otro.dart</text>
+<rect x="310" y="240" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="380" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">✗ invisible</text>
+<line x1="252" y1="240" x2="287.2" y2="240" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="298,240 287.87,246.43 287.87,233.57" fill="#ff007f"/>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">_ es privado a la BIBLIOTECA</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">no a la clase</text>
+</svg>

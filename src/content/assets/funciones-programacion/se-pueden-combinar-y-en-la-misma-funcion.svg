@@ -1,10 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Se pueden combinar [ ] y { } en la misma función?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Se pueden combinar [ ] y { } en la misma función?">
 <title>¿Se pueden combinar [ ] y { } en la misma función?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="45.03" cy="27.24" r="46.00" fill="hsl(120 90% 68%)" fill-opacity="0.23"/>
-  <circle cx="63.34" cy="115.17" r="18.17" fill="hsl(120 90% 59%)" fill-opacity="0.26"/>
-  <circle cx="101.54" cy="5.67" r="27.70" fill="hsl(120 90% 68%)" fill-opacity="0.13"/>
-  <circle cx="54.38" cy="47.49" r="22.46" fill="hsl(120 90% 68%)" fill-opacity="0.15"/>
-<line x1="12.80" y1="72.46" x2="115.20" y2="59.47" stroke="hsl(120 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">SP</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="180.13" cy="108.98" rx="177.91" ry="177.91" fill="hsl(120 90% 58% / 0.23)"/>
+<ellipse cx="273.7" cy="253.37" rx="191.45" ry="191.45" fill="hsl(120 90% 58% / 0.147)"/>
+<ellipse cx="135.91" cy="365.19" rx="177.28" ry="177.28" fill="hsl(120 90% 58% / 0.144)"/>
+<ellipse cx="164.47" cy="447.54" rx="80.91" ry="80.91" fill="hsl(120 90% 58% / 0.182)"/>
+<rect x="116" y="80" width="280" height="60" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">f(a, [b], {c})</text>
+<rect x="191" y="210" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="230" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#ff007f">✗ no</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">un solo estilo de opcionales</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">posicionales primero</text>
+<rect x="106" y="420" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="440" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">f(a, [b])  ·  f(a, {c})</text>
 </svg>

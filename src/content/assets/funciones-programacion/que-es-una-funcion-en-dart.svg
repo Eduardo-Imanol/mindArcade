@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué es una función en Dart?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una función en Dart?">
 <title>¿Qué es una función en Dart?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="50.94" cy="116.04" r="31.42" fill="hsl(265 90% 57%)" fill-opacity="0.20"/>
-  <circle cx="126.09" cy="53.10" r="48.77" fill="hsl(265 90% 62%)" fill-opacity="0.29"/>
-  <circle cx="15.35" cy="60.62" r="18.46" fill="hsl(265 90% 63%)" fill-opacity="0.26"/>
-  <circle cx="93.97" cy="39.80" r="37.68" fill="hsl(265 90% 59%)" fill-opacity="0.19"/>
-<line x1="12.80" y1="67.27" x2="115.20" y2="69.01" stroke="hsl(265 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QE</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="203.76" cy="464.17" rx="127.35" ry="127.35" fill="hsl(265 90% 58% / 0.152)"/>
+<ellipse cx="210.51" cy="504.36" rx="126.9" ry="126.9" fill="hsl(265 90% 58% / 0.227)"/>
+<ellipse cx="246.82" cy="428.66" rx="87.64" ry="87.64" fill="hsl(265 90% 58% / 0.187)"/>
+<ellipse cx="41.31" cy="256.81" rx="164.72" ry="164.72" fill="hsl(265 90% 58% / 0.213)"/>
+<rect x="181" y="221" width="150" height="70" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="256" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" font-weight="700" fill="#f1f1f1">f(x)</text>
+<rect x="20" y="235" width="104" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="72" y="256" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">datos</text>
+<rect x="380" y="235" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="440" y="256" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">resultado</text>
+<line x1="130" y1="256" x2="164.2" y2="256" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175,256 164.87,262.43 164.87,249.57" fill="#00ffcc"/>
+<line x1="337" y1="256" x2="365.2" y2="256" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="376,256 365.87,262.43 365.87,249.57" fill="#39ff14"/>
+<text x="152" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">recibe</text>
+<text x="360" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">devuelve</text>
 </svg>

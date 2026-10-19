@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la recursión mutua?">
+<title>¿Qué es la recursión mutua?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="364.01" cy="83.82" rx="82.4" ry="82.4" fill="hsl(45 90% 58% / 0.21)"/>
+<ellipse cx="370.21" cy="462.31" rx="185.13" ry="185.13" fill="hsl(45 90% 58% / 0.179)"/>
+<ellipse cx="169.76" cy="4.31" rx="117.97" ry="117.97" fill="hsl(45 90% 58% / 0.221)"/>
+<ellipse cx="193.54" cy="348.67" rx="138.69" ry="138.69" fill="hsl(45 90% 58% / 0.24)"/>
+<rect x="45" y="151" width="170" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="180" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">esPar(n)</text>
+<rect x="292" y="151" width="180" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="382" y="180" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">esImpar(n)</text>
+<line x1="220" y1="155" x2="289.2" y2="155" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,155 289.87,161.43 289.87,148.57" fill="#00ffcc"/>
+<line x1="300" y1="210" x2="230.8" y2="210" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="220,210 230.13,203.57 230.13,216.43" fill="#ff007f"/>
+<text x="260" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">n-1</text>
+<text x="260" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">n-1</text>
+<rect x="141" y="310" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#f1f1f1" stroke-width="2"/>
+<text x="256" y="330" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">se llaman entre sí</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">ambas necesitan caso base</text>
+<ellipse cx="132.5" cy="330" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="145" cy="330" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="157.5" cy="330" rx="4" ry="4" fill="#8a7fb5"/>
+</svg>

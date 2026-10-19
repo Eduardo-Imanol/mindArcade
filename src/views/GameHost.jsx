@@ -3,11 +3,12 @@ import NotFound from '../components/NotFound.jsx';
 import { getGame } from '../games/registry.js';
 import { loadCatalog } from '../core/content/catalog.js';
 import { applyGrade, loadSrs, orderDeck, saveSrs } from '../core/repetition/srs.js';
+import { selectDueCards } from '../core/repetition/selectDueCards.js';
 import { awardXP, recordStreak } from '../core/storage/xp.js';
 import { createStore } from '../core/storage/store.js';
 import { navigate } from '../app/router.js';
 
-const PAGE = { minHeight: '100vh', padding: 16, maxWidth: 720, margin: '0 auto' };
+const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
 const GRADE_DIFFICULTY = { 'otra-vez': 'easy', dificil: 'hard', facil: 'easy' };
 
 export default function GameHost({ topicId, gameId }) {
@@ -16,6 +17,7 @@ export default function GameHost({ topicId, gameId }) {
   const game = useMemo(() => getGame(gameId), [gameId]);
   const [Component, setComponent] = useState(null);
   const [deck, setDeck] = useState(null);
+  const [selectCards, setSelectCards] = useState(null);
   const srsRef = useRef(null);
   const profileRef = useRef(null);
 
@@ -34,6 +36,9 @@ export default function GameHost({ topicId, gameId }) {
         overrides[card.id] ? { ...card, image: overrides[card.id] } : card
       );
       setDeck(orderDeck(cards, srs[topic.id] || {}, Date.now()));
+      setSelectCards(() => (count) =>
+        selectDueCards(cards, (srsRef.current || {})[topic.id] || {}, { count })
+      );
       setComponent(() => module.default);
     });
     return () => {
@@ -55,7 +60,7 @@ export default function GameHost({ topicId, gameId }) {
     );
   }
 
-  if (!Component || deck === null) {
+  if (!Component || deck === null || !selectCards) {
     return (
       <main className="sepect-bg" style={PAGE}>
         <p role="status">Cargando juego…</p>
@@ -92,6 +97,7 @@ export default function GameHost({ topicId, gameId }) {
   return (
     <Component
       deck={deck}
+      selectCards={selectCards}
       onGrade={onGrade}
       onExit={() => navigate(`#/tema/${topic.id}`)}
     />

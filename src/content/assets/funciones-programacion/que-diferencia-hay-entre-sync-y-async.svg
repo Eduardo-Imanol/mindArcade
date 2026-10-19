@@ -1,10 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué diferencia hay entre sync* y async*?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre sync* y async*?">
 <title>¿Qué diferencia hay entre sync* y async*?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="104.55" cy="61.69" r="19.75" fill="hsl(45 90% 58%)" fill-opacity="0.29"/>
-  <circle cx="73.34" cy="80.03" r="31.59" fill="hsl(45 90% 64%)" fill-opacity="0.16"/>
-  <circle cx="59.54" cy="106.64" r="41.44" fill="hsl(45 90% 56%)" fill-opacity="0.32"/>
-  <circle cx="19.43" cy="95.89" r="27.17" fill="hsl(45 90% 66%)" fill-opacity="0.13"/>
-<line x1="12.80" y1="65.59" x2="115.20" y2="57.42" stroke="hsl(45 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QD</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="418.21" cy="246.77" rx="86.91" ry="86.91" fill="hsl(45 90% 58% / 0.157)"/>
+<ellipse cx="427.48" cy="293.37" rx="154.91" ry="154.91" fill="hsl(45 90% 58% / 0.182)"/>
+<ellipse cx="307.19" cy="112.82" rx="133.6" ry="133.6" fill="hsl(45 90% 58% / 0.223)"/>
+<ellipse cx="347.77" cy="38.76" rx="201.54" ry="201.54" fill="hsl(45 90% 58% / 0.155)"/>
+<rect x="40" y="80" width="210" height="320" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="54" y="98" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sync*</text>
+<rect x="85" y="160" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="145" y="180" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">yield</text>
+<rect x="75" y="250" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="145" y="270" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Iterable</text>
+<text x="145" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">perezoso</text>
+<rect x="262" y="80" width="210" height="320" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="276" y="98" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">async*</text>
+<rect x="307" y="160" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="367" y="180" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">yield</text>
+<rect x="297" y="250" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="367" y="270" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">Stream</text>
+<text x="367" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">eventos en el tiempo</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">Iterable ≠ Stream</text>
 </svg>

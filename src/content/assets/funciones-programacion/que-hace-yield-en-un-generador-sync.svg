@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace yield* en un generador sync*?">
+<title>¿Qué hace yield* en un generador sync*?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="395.98" cy="369.1" rx="197.33" ry="197.33" fill="hsl(168 90% 58% / 0.197)"/>
+<ellipse cx="399.31" cy="319.14" rx="93.27" ry="93.27" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="510.36" cy="35.06" rx="86.97" ry="86.97" fill="hsl(168 90% 58% / 0.211)"/>
+<ellipse cx="96.25" cy="74.87" rx="125.89" ry="125.89" fill="hsl(168 90% 58% / 0.157)"/>
+<rect x="80" y="103" width="180" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="170" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sync* f()</text>
+<line x1="270" y1="140" x2="331.8" y2="192.97" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="340,200 328.12,198.29 336.49,188.52" fill="#00ffcc"/>
+<rect x="270" y="213" width="180" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="360" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">yield* g()</text>
+<text x="280" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">delega</text>
+<rect x="95" y="259" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">valores</text>
+<line x1="160" y1="230" x2="157.12" y2="244.41" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="155,255 150.68,243.8 163.29,246.33" fill="#8a7fb5"/>
+<rect x="126" y="360" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">recursión con yield</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">yield* reenvía todo el generador</text>
+</svg>

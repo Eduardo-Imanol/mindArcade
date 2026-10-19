@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene usar parámetros nombrados con required?">
+<title>¿Cuándo conviene usar parámetros nombrados con required?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="181.91" cy="158.98" rx="178.88" ry="178.88" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="111.33" cy="60.72" rx="162" ry="162" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="408.53" cy="197.88" rx="111.86" ry="111.86" fill="hsl(265 90% 58% / 0.2)"/>
+<ellipse cx="483.79" cy="496.29" rx="84.36" ry="84.36" fill="hsl(265 90% 58% / 0.159)"/>
+<rect x="50" y="100" width="200" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="150" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">más de</text>
+<text x="150" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#ff007f">2-3 args</text>
+<rect x="262" y="100" width="200" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="362" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">booleans</text>
+<text x="362" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">ambiguos</text>
+<line x1="150" y1="260" x2="150" y2="319.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="150,330 143.57,319.87 156.43,319.87" fill="#8a7fb5"/>
+<line x1="362" y1="260" x2="362" y2="319.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="362,330 355.57,319.87 368.43,319.87" fill="#8a7fb5"/>
+<rect x="141" y="350" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">autodocumenta</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">f(nombre: &quot;Ana&quot;, esAdmin: true)</text>
+</svg>

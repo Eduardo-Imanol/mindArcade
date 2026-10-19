@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ocurre si una recursión nunca alcanza su caso base?">
+<title>¿Qué ocurre si una recursión nunca alcanza su caso base?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="462.41" cy="282.9" rx="99" ry="99" fill="hsl(120 90% 58% / 0.181)"/>
+<ellipse cx="415.66" cy="34.61" rx="166.89" ry="166.89" fill="hsl(120 90% 58% / 0.18)"/>
+<ellipse cx="415.04" cy="323.11" rx="192.62" ry="192.62" fill="hsl(120 90% 58% / 0.164)"/>
+<ellipse cx="99.79" cy="261.02" rx="152.06" ry="152.06" fill="hsl(120 90% 58% / 0.145)"/>
+<rect x="100" y="340" width="240" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="108" y1="348" x2="332" y2="348" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="220" y="368" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(5)</text>
+<rect x="114" y="284" width="240" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="122" y1="292" x2="346" y2="292" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="234" y="312" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(4)</text>
+<rect x="128" y="228" width="240" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="136" y1="236" x2="360" y2="236" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="248" y="256" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(3)</text>
+<rect x="142" y="172" width="240" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="150" y1="180" x2="374" y2="180" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="262" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(2)</text>
+<rect x="156" y="116" width="240" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="164" y1="124" x2="388" y2="124" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="276" y="144" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(1)</text>
+<line x1="390" y1="120" x2="421.36" y2="96.48" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="430,90 425.75,101.22 418.04,90.94" fill="#ff007f"/>
+<rect x="155" y="50" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="300" y="70" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">StackOverflowError</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">pila de llamadas sin tope</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">nunca alcanza el caso base</text>
+</svg>

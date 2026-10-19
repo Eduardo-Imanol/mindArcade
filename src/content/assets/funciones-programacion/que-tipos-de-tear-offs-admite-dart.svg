@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tipos de tear-offs admite Dart?">
+<title>¿Qué tipos de tear-offs admite Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="203.77" cy="200.08" rx="197.08" ry="197.08" fill="hsl(45 90% 58% / 0.158)"/>
+<ellipse cx="264.46" cy="220.76" rx="85.48" ry="85.48" fill="hsl(45 90% 58% / 0.235)"/>
+<ellipse cx="502.81" cy="44.9" rx="162.05" ry="162.05" fill="hsl(45 90% 58% / 0.192)"/>
+<ellipse cx="103.22" cy="299.35" rx="96.33" ry="96.33" fill="hsl(45 90% 58% / 0.176)"/>
+<rect x="95" y="94" width="250" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="220" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">int.parse</text>
+<rect x="335" y="102" width="130" height="36" rx="18" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="400" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">estático</text>
+<rect x="95" y="204" width="250" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="220" y="230" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">&apos;hola&apos;.toUpperCase</text>
+<rect x="335" y="212" width="130" height="36" rx="18" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="400" y="230" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">método ligado</text>
+<rect x="95" y="314" width="250" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="220" y="340" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">Persona.new</text>
+<rect x="335" y="322" width="130" height="36" rx="18" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="400" y="340" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">constructor</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3 tipos de tear-offs en Dart</text>
+</svg>

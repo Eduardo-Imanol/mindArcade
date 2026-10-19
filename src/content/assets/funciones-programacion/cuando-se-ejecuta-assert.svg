@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo se ejecuta assert?">
+<title>¿Cuándo se ejecuta assert?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="128.73" cy="216.9" rx="117.12" ry="117.12" fill="hsl(168 90% 58% / 0.144)"/>
+<ellipse cx="510.18" cy="84.97" rx="151.2" ry="151.2" fill="hsl(168 90% 58% / 0.179)"/>
+<ellipse cx="18.51" cy="224.08" rx="79.28" ry="79.28" fill="hsl(168 90% 58% / 0.188)"/>
+<ellipse cx="383.4" cy="331.04" rx="121.07" ry="121.07" fill="hsl(168 90% 58% / 0.154)"/>
+<rect x="50" y="90" width="200" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="64" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">debug</text>
+<rect x="60" y="170" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="190" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">assert(x &gt; 0)</text>
+<rect x="75" y="240" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">se evalúa ✓</text>
+<rect x="262" y="90" width="200" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="276" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">producción</text>
+<rect x="272" y="170" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="362" y="190" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">assert(x &gt; 0)</text>
+<rect x="292" y="240" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">ignorado ✗</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">solo existe en modo debug</text>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">en release no se evalúa</text>
+</svg>

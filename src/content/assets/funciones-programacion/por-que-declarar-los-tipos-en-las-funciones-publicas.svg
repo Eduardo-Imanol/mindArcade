@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué declarar los tipos en las funciones públicas?">
+<title>¿Por qué declarar los tipos en las funciones públicas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="374.15" cy="389.88" rx="203.21" ry="203.21" fill="hsl(45 90% 58% / 0.162)"/>
+<ellipse cx="285.73" cy="132.21" rx="194.52" ry="194.52" fill="hsl(45 90% 58% / 0.213)"/>
+<ellipse cx="270.48" cy="428.42" rx="91.35" ry="91.35" fill="hsl(45 90% 58% / 0.169)"/>
+<ellipse cx="92" cy="12.24" rx="204.55" ry="204.55" fill="hsl(45 90% 58% / 0.196)"/>
+<rect x="70" y="113" width="200" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="170" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sumar(a, b)</text>
+<rect x="335" y="120" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="400" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">legible?</text>
+<line x1="256" y1="195" x2="256" y2="249.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,260 249.57,249.87 262.43,249.87" fill="#00ffcc"/>
+<rect x="5" y="282" width="330" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="170" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">int sumar(int a, int b)</text>
+<rect x="390" y="290" width="60" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="420" y="310" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">✓</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">más seguridad y claridad</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">aunque los tipos son opcionales</text>
+</svg>

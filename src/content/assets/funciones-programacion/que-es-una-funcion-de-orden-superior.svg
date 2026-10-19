@@ -1,10 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué es una función de orden superior?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una función de orden superior?">
 <title>¿Qué es una función de orden superior?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="37.02" cy="96.76" r="49.55" fill="hsl(320 90% 58%)" fill-opacity="0.20"/>
-  <circle cx="17.60" cy="45.32" r="20.23" fill="hsl(320 90% 68%)" fill-opacity="0.24"/>
-  <circle cx="29.78" cy="103.94" r="48.22" fill="hsl(320 90% 65%)" fill-opacity="0.13"/>
-  <circle cx="123.74" cy="66.04" r="34.05" fill="hsl(320 90% 69%)" fill-opacity="0.32"/>
-<line x1="12.80" y1="42.28" x2="115.20" y2="69.44" stroke="hsl(320 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QE</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="148.07" cy="387.05" rx="190.19" ry="190.19" fill="hsl(320 90% 58% / 0.159)"/>
+<ellipse cx="196.36" cy="70.41" rx="118.81" ry="118.81" fill="hsl(320 90% 58% / 0.153)"/>
+<ellipse cx="454.17" cy="295.78" rx="102.65" ry="102.65" fill="hsl(320 90% 58% / 0.221)"/>
+<ellipse cx="438.16" cy="338.22" rx="77.66" ry="77.66" fill="hsl(320 90% 58% / 0.237)"/>
+<rect x="166" y="71" width="180" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="100" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">alta(fn)</text>
+<rect x="85" y="215" width="90" height="50" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="130" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">fn</text>
+<line x1="200" y1="150" x2="161.34" y2="203.26" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="155,212 155.75,200.02 166.16,207.58" fill="#ff007f"/>
+<text x="120" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">recibe</text>
+<rect x="310" y="215" width="160" height="50" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="390" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">devuelve f</text>
+<line x1="310" y1="150" x2="353.22" y2="203.59" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,212 348.63,208.15 358.64,200.08" fill="#39ff14"/>
+<text x="400" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">o devuelve</text>
+<rect x="96" y="360" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="380" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">función de orden superior</text>
+<ellipse cx="217.5" cy="300" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="255" cy="300" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="292.5" cy="300" rx="4" ry="4" fill="#8a7fb5"/>
 </svg>

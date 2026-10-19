@@ -1,10 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Cuál es la buena práctica sobre Function sin tipo?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la buena práctica sobre Function sin tipo?">
 <title>¿Cuál es la buena práctica sobre Function sin tipo?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="20.31" cy="36.39" r="30.13" fill="hsl(120 90% 57%)" fill-opacity="0.30"/>
-  <circle cx="72.36" cy="20.73" r="42.87" fill="hsl(120 90% 66%)" fill-opacity="0.15"/>
-  <circle cx="114.23" cy="68.85" r="31.00" fill="hsl(120 90% 64%)" fill-opacity="0.17"/>
-  <circle cx="40.92" cy="84.12" r="52.03" fill="hsl(120 90% 55%)" fill-opacity="0.14"/>
-<line x1="12.80" y1="48.18" x2="115.20" y2="85.80" stroke="hsl(120 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">CE</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="81.24" cy="145.55" rx="122.88" ry="122.88" fill="hsl(120 90% 58% / 0.154)"/>
+<ellipse cx="470.37" cy="289.45" rx="93.24" ry="93.24" fill="hsl(120 90% 58% / 0.212)"/>
+<ellipse cx="372.03" cy="76.77" rx="190.48" ry="190.48" fill="hsl(120 90% 58% / 0.194)"/>
+<ellipse cx="208.53" cy="323.42" rx="105.78" ry="105.78" fill="hsl(120 90% 58% / 0.172)"/>
+<rect x="50" y="120" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="140" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">Function f</text>
+<rect x="305" y="120" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="380" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">✗ seguro</text>
+<line x1="240" y1="170" x2="204.83" y2="240.34" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="200,250 198.78,238.06 210.28,243.81" fill="#ff007f"/>
+<rect x="65" y="280" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="140" y="300" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">typedef</text>
+<rect x="270" y="280" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="380" y="300" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">int Function(int)</text>
+<rect x="136" y="370" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">✓ tipos concretos</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">evita Function sin tipo</text>
 </svg>

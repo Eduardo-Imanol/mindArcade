@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué restricción tienen los valores por defecto de un parámetro?">
+<title>¿Qué restricción tienen los valores por defecto de un parámetro?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="357.97" cy="306.86" rx="158.48" ry="158.48" fill="hsl(120 90% 58% / 0.236)"/>
+<ellipse cx="445.46" cy="182.1" rx="190.77" ry="190.77" fill="hsl(120 90% 58% / 0.145)"/>
+<ellipse cx="394.53" cy="12.49" rx="110.39" ry="110.39" fill="hsl(120 90% 58% / 0.203)"/>
+<ellipse cx="32.41" cy="278.35" rx="167.19" ry="167.19" fill="hsl(120 90% 58% / 0.203)"/>
+<rect x="146" y="81" width="220" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">f([a = 1])</text>
+<rect x="85" y="230" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="250" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">const ✓</text>
+<rect x="280" y="230" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="360" y="250" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">runtime ✗</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">debe ser const de compilación</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">nunca calculado en ejecución</text>
+</svg>

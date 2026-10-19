@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué restricciones tiene el operador flecha =&gt;?">
+<title>¿Qué restricciones tiene el operador flecha =&gt;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="171.43" cy="437.62" rx="136.09" ry="136.09" fill="hsl(120 90% 58% / 0.182)"/>
+<ellipse cx="256.23" cy="368.1" rx="182.81" ry="182.81" fill="hsl(120 90% 58% / 0.231)"/>
+<ellipse cx="284.94" cy="101.63" rx="82.27" ry="82.27" fill="hsl(120 90% 58% / 0.178)"/>
+<ellipse cx="88.34" cy="305.94" rx="180.44" ry="180.44" fill="hsl(120 90% 58% / 0.22)"/>
+<rect x="105" y="140" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="160" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">expr</text>
+<rect x="75" y="210" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="230" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">?? ternario</text>
+<rect x="325" y="140" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="380" y="160" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">if { }</text>
+<rect x="325" y="210" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="380" y="230" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">for { }</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">=&gt; solo admite 1 expresión</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">sentencias van con llaves</text>
+</svg>

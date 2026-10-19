@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué un closure puede causar fugas de memoria?">
+<title>¿Por qué un closure puede causar fugas de memoria?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="15.62" cy="148.72" rx="154.05" ry="154.05" fill="hsl(120 90% 58% / 0.225)"/>
+<ellipse cx="391.85" cy="270.35" rx="150.66" ry="150.66" fill="hsl(120 90% 58% / 0.228)"/>
+<ellipse cx="383.44" cy="490.69" rx="136.7" ry="136.7" fill="hsl(120 90% 58% / 0.191)"/>
+<ellipse cx="500.67" cy="502.9" rx="88.49" ry="88.49" fill="hsl(120 90% 58% / 0.153)"/>
+<rect x="50" y="80" width="200" height="260" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="64" y="98" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">listener</text>
+<rect x="90" y="165" width="120" height="50" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="190" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">onTap</text>
+<rect x="70" y="259" width="160" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="150" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">objeto grande</text>
+<rect x="300" y="130" width="170" height="160" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="314" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">closure vivo</text>
+<line x1="255" y1="200" x2="287.2" y2="200" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="298,200 287.87,206.43 287.87,193.57" fill="#ff007f"/>
+<rect x="315" y="230" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="385" y="250" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">no se libera</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mientras exista el closure,</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">captura → memoria retenida</text>
+<text x="256" y="478" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">cancela listeners en dispose</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se comporta una lista al pasarla a una función?">
+<title>¿Cómo se comporta una lista al pasarla a una función?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="282.31" cy="488.69" rx="198.13" ry="198.13" fill="hsl(265 90% 58% / 0.24)"/>
+<ellipse cx="78.31" cy="416.94" rx="133.29" ry="133.29" fill="hsl(265 90% 58% / 0.234)"/>
+<ellipse cx="77.41" cy="282.14" rx="89.49" ry="89.49" fill="hsl(265 90% 58% / 0.215)"/>
+<ellipse cx="37.28" cy="341.99" rx="146.04" ry="146.04" fill="hsl(265 90% 58% / 0.233)"/>
+<rect x="75" y="119" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lista</text>
+<rect x="300" y="100" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="375" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">[1, 2]</text>
+<line x1="190" y1="150" x2="287.25" y2="141" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="298,140 288.5,147.34 287.32,134.53" fill="#00ffcc"/>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">misma referencia</text>
+<rect x="95" y="303" width="130" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="160" y="330" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">add(3)</text>
+<rect x="285" y="303" width="150" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="360" y="330" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lista = []</text>
+<rect x="60" y="400" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="420" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">afecta al original</text>
+<rect x="285" y="400" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="360" y="420" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">solo local</text>
+<ellipse cx="245" cy="330" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="260" cy="330" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="275" cy="330" rx="4" ry="4" fill="#8a7fb5"/>
+</svg>

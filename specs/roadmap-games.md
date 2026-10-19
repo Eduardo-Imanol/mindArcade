@@ -14,13 +14,16 @@
 - `minCards` declara el mínimo de cartas para habilitar el juego en un tema.
 - Toda carta lleva imagen (ver spec-02 §4): resuelta por `CardImage` con precedencia override UI > token `| I:` > emoji automático > arte generativo de fallback.
 - Todo juego que muestre cartas debe renderizar `CardImage`: como pista (ahorcado, sopa-de-letras, quiz, caza, lluvia, serpiente), en las caras (memorama, conecta-pares) o en ambos lados (flashcards).
+- **Todo juego DEBE incluir TTS** (obligatorio desde spec-03): lectura de textos con Web Speech API vía helper compartido `src/core/audio/tts.js` (gratis, 0 deps), lectura al interactuar + botón 🔊 por elemento + toggle global de sonido persistido. Sin `speechSynthesis` → controles ocultos sin romper el juego.
+- **Selección de cartas por SRS** (desde spec-03): los juegos deben pedir sus cartas con `selectCards(count)` (prop opcional que arma GameHost con `selectDueCards`) priorizando palabras no vistas/no aprendidas; el patrón aplica a los 10 juegos.
+- **Grados en juegos de aciertos**: 1.er intento → `facil`, intentos medios → `dificil`, nunca resuelto → `otra-vez` (spec-03, reutilizable). Nota: en memorama "1.er intento" se interpreta como `attempts <= 1` (fallos previos ≤1 → `facil`), según el contrato de test de spec-03 §6.
 
 ## Catálogo e iteración (orden acordado)
 
 | # | ID (estable) | Juego | Mecánica con deck genérico | minCards | Origen en VocaPlayLand | Spec |
 |---|---|---|---|---|---|---|
 | 1 | `flashcards` | Flashcards | Frente: término; dorso: significado; voltear + autoevaluación (Otra vez / Difícil / Fácil) → SM-2 + XP | 1 | Flashcards | **spec-02 (este incremento)** |
-| 2 | `memorama` | Memorama | Emparejar carta-término con carta-significado | 4 | Memory | spec-03 |
+| 2 | `memorama` | Memorama | Emparejar carta-término con carta-significado | 4 | Memory | **spec-03 (available)** |
 | 3 | `ahorcado` | Ahorcado | Adivinar el término letra a letra usando el significado como pista | 3 | Hangman | spec-04 |
 | 4 | `sopa-de-letras` | Sopa de letras | Encontrar los términos ocultos en la cuadrícula; se marca al hallarlos | 4 | Word Search | spec-05 |
 | 5 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | spec-06 |

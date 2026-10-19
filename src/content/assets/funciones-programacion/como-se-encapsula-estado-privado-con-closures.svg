@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se encapsula estado privado con closures?">
+<title>¿Cómo se encapsula estado privado con closures?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="476.35" cy="214" rx="87.57" ry="87.57" fill="hsl(168 90% 58% / 0.178)"/>
+<ellipse cx="422.94" cy="147.92" rx="124.39" ry="124.39" fill="hsl(168 90% 58% / 0.151)"/>
+<ellipse cx="205.39" cy="253.58" rx="193.56" ry="193.56" fill="hsl(168 90% 58% / 0.207)"/>
+<ellipse cx="84.13" cy="57.67" rx="107.53" ry="107.53" fill="hsl(168 90% 58% / 0.22)"/>
+<rect x="60" y="90" width="392" height="300" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">cuentaBanco()</text>
+<rect x="196" y="159" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="180" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">_saldo</text>
+<text x="340" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">privado</text>
+<rect x="65" y="264" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="150" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">depositar()</text>
+<rect x="290" y="264" width="140" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="360" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">saldo()</text>
+<line x1="200" y1="220" x2="180.72" y2="250.84" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="175,260 174.92,248 185.82,254.82" fill="#39ff14"/>
+<line x1="310" y1="220" x2="333.52" y2="251.36" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="340,260 328.78,255.75 339.06,248.04" fill="#00ffcc"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">_saldo solo vía sus closures</text>
+</svg>

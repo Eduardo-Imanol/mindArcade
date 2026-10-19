@@ -1,10 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Para qué sirve required en un parámetro nombrado?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Para qué sirve required en un parámetro nombrado?">
 <title>¿Para qué sirve required en un parámetro nombrado?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="20.28" cy="65.66" r="35.09" fill="hsl(45 90% 60%)" fill-opacity="0.22"/>
-  <circle cx="75.41" cy="7.69" r="16.09" fill="hsl(45 90% 57%)" fill-opacity="0.17"/>
-  <circle cx="42.87" cy="110.30" r="33.97" fill="hsl(45 90% 60%)" fill-opacity="0.13"/>
-  <circle cx="71.83" cy="53.44" r="48.33" fill="hsl(45 90% 66%)" fill-opacity="0.27"/>
-<line x1="12.80" y1="57.10" x2="115.20" y2="57.83" stroke="hsl(45 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">PQ</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="81.14" cy="262.63" rx="140.06" ry="140.06" fill="hsl(45 90% 58% / 0.172)"/>
+<ellipse cx="266.61" cy="301.66" rx="79.67" ry="79.67" fill="hsl(45 90% 58% / 0.142)"/>
+<ellipse cx="51.32" cy="130.4" rx="116.26" ry="116.26" fill="hsl(45 90% 58% / 0.226)"/>
+<ellipse cx="248.16" cy="174.28" rx="75.73" ry="75.73" fill="hsl(45 90% 58% / 0.196)"/>
+<rect x="116" y="99" width="280" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">f({required a})</text>
+<rect x="171" y="230" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="250" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">required</text>
+<line x1="256" y1="180" x2="256" y2="207.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,218 249.57,207.87 262.43,207.87" fill="#ff007f"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">obliga a pasar a:</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">estándar en Flutter · APIs legibles</text>
 </svg>

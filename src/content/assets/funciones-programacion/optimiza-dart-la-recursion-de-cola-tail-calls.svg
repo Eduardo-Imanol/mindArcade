@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Optimiza Dart la recursión de cola (tail calls)?">
+<title>¿Optimiza Dart la recursión de cola (tail calls)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="77.31" cy="41.36" rx="78.55" ry="78.55" fill="hsl(265 90% 58% / 0.22)"/>
+<ellipse cx="105.41" cy="179.17" rx="77.59" ry="77.59" fill="hsl(265 90% 58% / 0.149)"/>
+<ellipse cx="71.15" cy="354" rx="80.47" ry="80.47" fill="hsl(265 90% 58% / 0.199)"/>
+<ellipse cx="255" cy="449.98" rx="150.38" ry="150.38" fill="hsl(265 90% 58% / 0.167)"/>
+<rect x="50" y="102" width="200" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">f(n-1) return</text>
+<rect x="310" y="110" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="380" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">tail call</text>
+<line x1="256" y1="180" x2="256" y2="239.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,250 249.57,239.87 262.43,239.87" fill="#8a7fb5"/>
+<rect x="116" y="270" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">✗ Dart NO optimiza</text>
+<line x1="256" y1="330" x2="256" y2="379.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,390 249.57,379.87 262.43,379.87" fill="#ffcc00"/>
+<rect x="106" y="400" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="420" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">profundidad → usa iteración</text>
+</svg>

@@ -29,7 +29,7 @@ describe('TopicsHub', () => {
   it('shows the builtin topic with its card count', () => {
     const { container } = mount(<TopicsHub />);
     expect(container.textContent).toContain('Funciones en Programación');
-    expect(container.textContent).toContain('20 cartas');
+    expect(container.textContent).toContain('96 cartas');
   });
 
   it('create flow: paste fixture A → preview counts → save → topic visible with 3 cards', () => {

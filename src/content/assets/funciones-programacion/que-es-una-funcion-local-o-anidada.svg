@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una función local o anidada?">
+<title>¿Qué es una función local o anidada?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="262.01" cy="400.23" rx="159.09" ry="159.09" fill="hsl(168 90% 58% / 0.235)"/>
+<ellipse cx="411.77" cy="208.6" rx="101.73" ry="101.73" fill="hsl(168 90% 58% / 0.169)"/>
+<ellipse cx="356.09" cy="421.93" rx="147.81" ry="147.81" fill="hsl(168 90% 58% / 0.225)"/>
+<ellipse cx="105.7" cy="82.96" rx="130.38" ry="130.38" fill="hsl(168 90% 58% / 0.185)"/>
+<rect x="60" y="60" width="392" height="340" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="78" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">externa()</text>
+<rect x="90" y="129" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="140" y="150" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">x = 3</text>
+<rect x="110" y="200" width="292" height="160" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="124" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">interna()</text>
+<rect x="191" y="265" width="130" height="50" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">ve a x</text>
+<line x1="145" y1="175" x2="193.61" y2="241.29" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="200,250 188.82,245.63 199.19,238.03" fill="#ff007f"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">solo existe dentro</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">ve las variables de la contenedora</text>
+<ellipse cx="137.5" cy="175" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="155" cy="175" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="172.5" cy="175" rx="4" ry="4" fill="#8a7fb5"/>
+</svg>

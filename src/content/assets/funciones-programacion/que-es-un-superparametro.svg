@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un superparámetro?">
+<title>¿Qué es un superparámetro?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="270.57" cy="47.76" rx="189.14" ry="189.14" fill="hsl(265 90% 58% / 0.153)"/>
+<ellipse cx="355.03" cy="369.32" rx="145.09" ry="145.09" fill="hsl(265 90% 58% / 0.152)"/>
+<ellipse cx="412.24" cy="320.2" rx="134.45" ry="134.45" fill="hsl(265 90% 58% / 0.145)"/>
+<ellipse cx="408.12" cy="346.53" rx="89.71" ry="89.71" fill="hsl(265 90% 58% / 0.235)"/>
+<rect x="60" y="70" width="392" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="88" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">class Padre</text>
+<rect x="191" y="129" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">nombre</text>
+<rect x="100" y="250" width="312" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="114" y="268" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">class Hijo</text>
+<rect x="116" y="303" width="280" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="256" y="330" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">Hijo(super.nombre)</text>
+<line x1="256" y1="220" x2="256" y2="239.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,250 249.57,239.87 262.43,239.87" fill="#39ff14"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">reenvía al constructor padre</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">Dart 2.17+</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se simulan argumentos de número variable en Dart?">
+<title>¿Cómo se simulan argumentos de número variable en Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="508.05" cy="44.9" rx="73.35" ry="73.35" fill="hsl(265 90% 58% / 0.158)"/>
+<ellipse cx="478.83" cy="10.57" rx="131.95" ry="131.95" fill="hsl(265 90% 58% / 0.226)"/>
+<ellipse cx="27.71" cy="151.62" rx="191.46" ry="191.46" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="8.48" cy="388.46" rx="80" ry="80" fill="hsl(265 90% 58% / 0.16)"/>
+<rect x="136" y="81" width="240" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">f(List args)</text>
+<rect x="65" y="239" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">[1, 2, 3]</text>
+<line x1="200" y1="240" x2="234.64" y2="179.38" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="240,170 240.56,181.99 229.39,175.61" fill="#00ffcc"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">no existe …args</text>
+<rect x="315" y="240" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="380" y="260" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">…spread</text>
+<line x1="330" y1="250" x2="304.25" y2="189.93" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="300,180 309.9,186.78 298.08,191.85" fill="#39ff14"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">o usa … al llamar</text>
+</svg>

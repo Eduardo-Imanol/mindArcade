@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un typedef genérico?">
+<title>¿Qué es un typedef genérico?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="282.6" cy="280.97" rx="169.36" ry="169.36" fill="hsl(120 90% 58% / 0.194)"/>
+<ellipse cx="385.62" cy="391.05" rx="154.05" ry="154.05" fill="hsl(120 90% 58% / 0.14)"/>
+<ellipse cx="394.54" cy="296.06" rx="177.03" ry="177.03" fill="hsl(120 90% 58% / 0.145)"/>
+<ellipse cx="189.72" cy="206.05" rx="122.99" ry="122.99" fill="hsl(120 90% 58% / 0.189)"/>
+<text x="256" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#00ffcc">typedef Transformador</text>
+<text x="256" y="155" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">&lt;T, R&gt; = R Function(T)</text>
+<rect x="80" y="259" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">T=int</text>
+<rect x="206" y="259" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">R=str</text>
+<rect x="332" y="259" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="382" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">T, R…</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">alias parametrizado</text>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">se infiere en cada uso</text>
+</svg>

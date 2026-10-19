@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se consume un Stream creado con async*?">
+<title>¿Cómo se consume un Stream creado con async*?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="240.69" cy="277.7" rx="171.87" ry="171.87" fill="hsl(168 90% 58% / 0.23)"/>
+<ellipse cx="289.03" cy="159.97" rx="148.5" ry="148.5" fill="hsl(168 90% 58% / 0.199)"/>
+<ellipse cx="447.1" cy="79.87" rx="203.66" ry="203.66" fill="hsl(168 90% 58% / 0.225)"/>
+<ellipse cx="437.49" cy="113.92" rx="78.23" ry="78.23" fill="hsl(168 90% 58% / 0.233)"/>
+<rect x="50" y="93" width="180" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="140" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">async* s()</text>
+<line x1="240" y1="130" x2="310.84" y2="174.28" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="320,180 308,180.08 314.82,169.18" fill="#ff007f"/>
+<ellipse cx="180" cy="240" rx="7" ry="7" fill="#ffcc00"/>
+<ellipse cx="220" cy="240" rx="7" ry="7" fill="#ffcc00"/>
+<ellipse cx="260" cy="240" rx="7" ry="7" fill="#ffcc00"/>
+<ellipse cx="300" cy="240" rx="7" ry="7" fill="#ffcc00"/>
+<ellipse cx="340" cy="240" rx="7" ry="7" fill="#ffcc00"/>
+<ellipse cx="380" cy="240" rx="7" ry="7" fill="#ffcc00"/>
+<text x="280" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">Stream</text>
+<line x1="256" y1="310" x2="256" y2="349.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,360 249.57,349.87 262.43,349.87" fill="#00ffcc"/>
+<rect x="121" y="375" width="270" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="395" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">await for (v in s)</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">itera los valores emitidos</text>
+</svg>

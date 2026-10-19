@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué es una función anónima o lambda?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una función anónima o lambda?">
 <title>¿Qué es una función anónima o lambda?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="112.38" cy="59.61" r="25.61" fill="hsl(168 90% 68%)" fill-opacity="0.15"/>
-  <circle cx="76.60" cy="31.33" r="44.66" fill="hsl(168 90% 57%)" fill-opacity="0.27"/>
-  <circle cx="0.07" cy="59.24" r="22.14" fill="hsl(168 90% 63%)" fill-opacity="0.29"/>
-  <circle cx="34.33" cy="38.68" r="28.63" fill="hsl(168 90% 68%)" fill-opacity="0.19"/>
-<line x1="12.80" y1="64.88" x2="115.20" y2="56.22" stroke="hsl(168 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QE</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="449.54" cy="238.42" rx="107.22" ry="107.22" fill="hsl(168 90% 58% / 0.228)"/>
+<ellipse cx="76.39" cy="306.41" rx="104.26" ry="104.26" fill="hsl(168 90% 58% / 0.216)"/>
+<ellipse cx="69.09" cy="392.41" rx="71.75" ry="71.75" fill="hsl(168 90% 58% / 0.186)"/>
+<ellipse cx="90.34" cy="262.86" rx="187.5" ry="187.5" fill="hsl(168 90% 58% / 0.167)"/>
+<rect x="130" y="119" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="160" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f</text>
+<line x1="200" y1="140" x2="269.2" y2="140" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,140 269.87,146.43 269.87,133.57" fill="#00ffcc"/>
+<rect x="265" y="112" width="190" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="360" y="140" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">(x) =&gt; x*2</text>
+<text x="360" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">sin nombre</text>
+<line x1="256" y1="230" x2="256" y2="289.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#8a7fb5"/>
+<rect x="106" y="320" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">o se pasa como argumento</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">función anónima / lambda</text>
 </svg>

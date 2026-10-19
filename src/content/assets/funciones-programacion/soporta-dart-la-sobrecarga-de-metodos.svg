@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Soporta Dart la sobrecarga de métodos?">
+<title>¿Soporta Dart la sobrecarga de métodos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="221.53" cy="273.31" rx="141.17" ry="141.17" fill="hsl(120 90% 58% / 0.147)"/>
+<ellipse cx="474.19" cy="265.17" rx="82.39" ry="82.39" fill="hsl(120 90% 58% / 0.154)"/>
+<ellipse cx="214.54" cy="486.34" rx="148.38" ry="148.38" fill="hsl(120 90% 58% / 0.175)"/>
+<ellipse cx="508" cy="491.03" rx="117.5" ry="117.5" fill="hsl(120 90% 58% / 0.22)"/>
+<rect x="75" y="103" width="170" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="160" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sumar(int)</text>
+<rect x="255" y="103" width="210" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="360" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">sumar(int, int)</text>
+<rect x="126" y="220" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#ff007f">✗ mismo nombre</text>
+<line x1="256" y1="280" x2="256" y2="329.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,340 249.57,329.87 262.43,329.87" fill="#8a7fb5"/>
+<rect x="81" y="355" width="350" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="375" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">opcionales · nombrados · otro nombre</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">Dart NO soporta sobrecarga</text>
+</svg>

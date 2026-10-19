@@ -45,6 +45,9 @@ export function createGame({onEnd}){
 2. Dificultad 1-5 siempre parametrizada, nunca hardcodeada.
 3. Todo juego reporta `{score, timeMs, accuracy, xp}` al terminar.
 4. Duración sesión: 60-180s.
+5. **TTS obligatorio en todo juego** (spec-03): leer textos/palabras con `src/core/audio/tts.js` (Web Speech API, gratis, 0 deps) — lectura al interactuar + botón 🔊 + toggle global; `isSupported()` false → controles ocultos.
+6. Cartas por SRS: pedir deck con el prop opcional `selectCards(count)` de GameHost (prioriza no aprendidas, spec-03).
+7. Flip/volteo con CSS puro (`preserve-3d`), nunca dependencias de animación.
 
 ## Cuándo usar
 Al pedir "crea un mini-juego", "nuevo juego de X".

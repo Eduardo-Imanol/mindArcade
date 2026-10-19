@@ -3,7 +3,7 @@ import NotFound from '../components/NotFound.jsx';
 import { listGames } from '../games/registry.js';
 import { loadCatalog } from '../core/content/catalog.js';
 
-const PAGE = { minHeight: '100vh', padding: 16, maxWidth: 960, margin: '0 auto' };
+const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
 
 export default function TopicView({ topicId }) {
   const topics = useMemo(() => loadCatalog(), []);
@@ -32,7 +32,7 @@ export default function TopicView({ topicId }) {
       >
         {listGames().map((game) => (
           <li key={game.id}>
-            {game.status === 'available' ? (
+            {game.status === 'available' && topic.cards.length >= (game.minCards || 1) ? (
               <a
                 className="card-neon"
                 href={`#/tema/${topic.id}/juego/${game.id}`}
@@ -67,7 +67,9 @@ export default function TopicView({ topicId }) {
               >
                 <h3 style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
                 <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
-                <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-magenta)' }}>Próximamente</p>
+                <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-magenta)' }}>
+                  {game.status === 'available' ? `Necesitas al menos ${game.minCards} cartas` : 'Próximamente'}
+                </p>
               </button>
             )}
           </li>

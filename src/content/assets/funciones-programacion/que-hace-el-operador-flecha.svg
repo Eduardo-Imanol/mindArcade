@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué hace el operador flecha =&gt;?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace el operador flecha =&gt;?">
 <title>¿Qué hace el operador flecha =&gt;?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="3.90" cy="72.37" r="30.04" fill="hsl(45 90% 56%)" fill-opacity="0.14"/>
-  <circle cx="51.89" cy="81.71" r="37.69" fill="hsl(45 90% 69%)" fill-opacity="0.17"/>
-  <circle cx="63.22" cy="98.54" r="45.32" fill="hsl(45 90% 67%)" fill-opacity="0.23"/>
-  <circle cx="1.02" cy="55.10" r="42.07" fill="hsl(45 90% 68%)" fill-opacity="0.19"/>
-<line x1="12.80" y1="80.78" x2="115.20" y2="71.34" stroke="hsl(45 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QH</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="15.59" cy="289.47" rx="122.59" ry="122.59" fill="hsl(45 90% 58% / 0.145)"/>
+<ellipse cx="38.84" cy="207.58" rx="156.66" ry="156.66" fill="hsl(45 90% 58% / 0.198)"/>
+<ellipse cx="473.35" cy="138.82" rx="137.43" ry="137.43" fill="hsl(45 90% 58% / 0.217)"/>
+<ellipse cx="399.41" cy="408.45" rx="144.12" ry="144.12" fill="hsl(45 90% 58% / 0.141)"/>
+<text x="256" y="180" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="110" font-weight="700" fill="#00ffcc">=&gt;</text>
+<line x1="256" y1="250" x2="256" y2="289.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#00ffcc"/>
+<rect x="116" y="320" width="280" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="130" y="338" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">{ return expr; }</text>
+<text x="256" y="88" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#8a7fb5">una sola expresión</text>
 </svg>

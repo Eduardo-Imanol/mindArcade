@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un typedef?">
+<title>¿Qué es un typedef?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="482.06" cy="258.6" rx="86.98" ry="86.98" fill="hsl(265 90% 58% / 0.196)"/>
+<ellipse cx="432.03" cy="230.92" rx="123.48" ry="123.48" fill="hsl(265 90% 58% / 0.207)"/>
+<ellipse cx="90.88" cy="233.16" rx="132.77" ry="132.77" fill="hsl(265 90% 58% / 0.18)"/>
+<ellipse cx="338.14" cy="389.98" rx="73.37" ry="73.37" fill="hsl(265 90% 58% / 0.142)"/>
+<text x="256" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">typedef Operacion</text>
+<text x="256" y="165" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">= int Function(int, int)</text>
+<line x1="256" y1="210" x2="256" y2="269.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 249.57,269.87 262.43,269.87" fill="#00ffcc"/>
+<rect x="106" y="300" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Operacion op = suma</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">alias legible del tipo</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">typedef</text>
+</svg>

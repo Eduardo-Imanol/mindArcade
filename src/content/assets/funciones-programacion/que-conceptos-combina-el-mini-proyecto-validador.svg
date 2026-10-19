@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué conceptos combina el mini-proyecto Validador?">
+<title>¿Qué conceptos combina el mini-proyecto Validador?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="103.7" cy="218.25" rx="105.24" ry="105.24" fill="hsl(168 90% 58% / 0.145)"/>
+<ellipse cx="221.76" cy="37.85" rx="183.9" ry="183.9" fill="hsl(168 90% 58% / 0.213)"/>
+<ellipse cx="239.69" cy="273.29" rx="113.47" ry="113.47" fill="hsl(168 90% 58% / 0.198)"/>
+<ellipse cx="28.95" cy="509.71" rx="142.93" ry="142.93" fill="hsl(168 90% 58% / 0.174)"/>
+<rect x="60" y="108" width="120" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="120" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">T</text>
+<rect x="196" y="108" width="120" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">typedef</text>
+<rect x="332" y="108" width="120" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="392" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">closure</text>
+<rect x="60" y="218" width="120" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="120" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">lambda</text>
+<rect x="196" y="218" width="120" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">call()</text>
+<rect x="332" y="218" width="120" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="392" y="240" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">orden sup.</text>
+<line x1="256" y1="300" x2="256" y2="349.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,360 249.57,349.87 262.43,349.87" fill="#8a7fb5"/>
+<rect x="126" y="375" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="395" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">Validador.agregar()</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">todo combinado + encadenamiento</text>
+</svg>

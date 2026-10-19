@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una fábrica de funciones?">
+<title>¿Qué es una fábrica de funciones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="144.89" cy="338.3" rx="77.81" ry="77.81" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="225.72" cy="311.96" rx="92.64" ry="92.64" fill="hsl(265 90% 58% / 0.218)"/>
+<ellipse cx="290.43" cy="344.51" rx="133.49" ry="133.49" fill="hsl(265 90% 58% / 0.188)"/>
+<ellipse cx="386.66" cy="294.16" rx="107.75" ry="107.75" fill="hsl(265 90% 58% / 0.218)"/>
+<rect x="10" y="101" width="260" height="58" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="140" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">multiplicadorPor(2)</text>
+<line x1="260" y1="160" x2="332.82" y2="241.93" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="340,250 328.46,246.7 338.07,238.16" fill="#00ffcc"/>
+<rect x="260" y="262" width="200" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="360" y="290" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">(n) =&gt; n*2</text>
+<rect x="135" y="280" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="200" y="300" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">(3) → 6</text>
+<line x1="250" y1="280" x2="269.35" y2="283.22" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="280,285 268.95,289.68 271.06,276.99" fill="#8a7fb5"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">una función que devuelve closures</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">fábrica de funciones</text>
+</svg>

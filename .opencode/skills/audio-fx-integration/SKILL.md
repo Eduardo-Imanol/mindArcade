@@ -35,5 +35,11 @@ export function setSound(v){ enabled=v; store.set({settings:{...store.get().sett
 4. Volumen bajo (gain 0.15), sonidos <200ms salvo win.
 5. `destroy()` de juego corta sonidos pendientes.
 
+## TTS obligatorio (spec-03 — todo juego)
+- Todo juego DEBE leer los textos en voz alta con **Web Speech API** (gratis, 0 deps): helper compartido `src/core/audio/tts.js`.
+- Patrón requerido: lectura automática al voltear/interactuar (tras gesto de usuario) + botón 🔊 por carta/elemento + toggle global de sonido persistido en `sepect.settings.v1 = { muted }`.
+- `speak(text, {lang})` cancela utterance previo (rate 0.9, pitch 1.1), selecciona voz por prefijo de idioma; `isSupported()` false → ocultar controles, nunca crashear.
+- Flashcards y Memorama (spec-03) son la referencia de integración.
+
 ## Cuándo usar
-Al añadir feedback de acierto/fallo/click/win.
+Al añadir feedback de acierto/fallo/click/win o texto leído en voz alta (TTS) en cualquier juego.

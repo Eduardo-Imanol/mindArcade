@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el pattern matching con switch en funciones (Dart 3)?">
+<title>¿Qué es el pattern matching con switch en funciones (Dart 3)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="11.82" cy="398.97" rx="120.64" ry="120.64" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="448.88" cy="273.35" rx="191.56" ry="191.56" fill="hsl(265 90% 58% / 0.188)"/>
+<ellipse cx="370.49" cy="216.56" rx="156.39" ry="156.39" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="511.66" cy="319.75" rx="189.05" ry="189.05" fill="hsl(265 90% 58% / 0.17)"/>
+<rect x="60" y="70" width="392" height="260" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="88" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">switch (v)</text>
+<rect x="136" y="108" width="240" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">int n =&gt; …</text>
+<rect x="136" y="164" width="240" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="186" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">[a, b] =&gt; …</text>
+<rect x="136" y="220" width="240" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="242" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">(int, int) =&gt; …</text>
+<rect x="136" y="276" width="240" height="44" rx="22" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="256" y="298" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">_ =&gt; …</text>
+<line x1="256" y1="340" x2="256" y2="379.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,390 249.57,379.87 262.43,379.87" fill="#00ffcc"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">devuelve un valor</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">tipos + listas + records + guardas</text>
+</svg>

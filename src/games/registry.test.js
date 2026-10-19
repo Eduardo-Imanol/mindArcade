@@ -2,10 +2,27 @@ import { describe, it, expect } from 'vitest';
 import { getGame, listGames } from './registry.js';
 
 describe('games registry', () => {
-  it('flashcards available, memorama soon, nope null', () => {
+  it('flashcards + memorama available, nope null', () => {
     expect(getGame('flashcards').status).toBe('available');
-    expect(getGame('memorama').status).toBe('soon');
+    expect(getGame('memorama').status).toBe('available');
     expect(getGame('nope')).toBeNull();
+  });
+  it('memorama load() resolves a default component', async () => {
+    const module = await getGame('memorama').load();
+    expect(typeof module.default).toBe('function');
+  });
+  it('the other 8 games stay soon', () => {
+    const soon = listGames().filter((game) => game.status === 'soon');
+    expect(soon.map((game) => game.id)).toEqual([
+      'ahorcado',
+      'sopa-de-letras',
+      'quiz-significado',
+      'caza-significados',
+      'intruso',
+      'lluvia-meteoros',
+      'conecta-pares',
+      'serpiente-significados',
+    ]);
   });
   it('catalog is the full ordered list of 10 stable ids', () => {
     const ids = listGames().map((game) => game.id);

@@ -12,8 +12,9 @@ const GAMES = [
     id: 'memorama',
     title: 'Memorama',
     description: 'Empareja cada término con su significado.',
-    status: 'soon',
+    status: 'available',
     minCards: 4,
+    load: () => import('./memorama/index.jsx'),
   },
   {
     id: 'ahorcado',

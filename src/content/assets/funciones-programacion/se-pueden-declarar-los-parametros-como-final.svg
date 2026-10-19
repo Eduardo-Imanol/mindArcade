@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Se pueden declarar los parámetros como final?">
+<title>¿Se pueden declarar los parámetros como final?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="511.56" cy="103.46" rx="130.25" ry="130.25" fill="hsl(168 90% 58% / 0.22)"/>
+<ellipse cx="4.83" cy="480.07" rx="180.41" ry="180.41" fill="hsl(168 90% 58% / 0.163)"/>
+<ellipse cx="74.52" cy="80.86" rx="99.3" ry="99.3" fill="hsl(168 90% 58% / 0.164)"/>
+<ellipse cx="177.6" cy="264.51" rx="79.17" ry="79.17" fill="hsl(168 90% 58% / 0.24)"/>
+<rect x="156" y="100" width="200" height="60" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="130" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#f1f1f1">f(final x)</text>
+<rect x="201" y="249" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="270" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">x = 1</text>
+<line x1="256" y1="175" x2="256" y2="224.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,235 249.57,224.87 262.43,224.87" fill="#00ffcc"/>
+<rect x="181" y="340" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="360" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">x = 2 ✗</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">parámetros = variables locales</text>
+</svg>

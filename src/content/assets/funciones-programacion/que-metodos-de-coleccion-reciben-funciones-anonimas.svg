@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué métodos de colección reciben funciones anónimas?">
+<title>¿Qué métodos de colección reciben funciones anónimas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="175.69" cy="285.11" rx="129.39" ry="129.39" fill="hsl(320 90% 58% / 0.209)"/>
+<ellipse cx="102.43" cy="111.23" rx="169.36" ry="169.36" fill="hsl(320 90% 58% / 0.225)"/>
+<ellipse cx="339.97" cy="137.85" rx="117.48" ry="117.48" fill="hsl(320 90% 58% / 0.21)"/>
+<ellipse cx="310.53" cy="328.62" rx="121.31" ry="121.31" fill="hsl(320 90% 58% / 0.226)"/>
+<rect x="45" y="84" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="130" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">map(fn)</text>
+<rect x="295" y="84" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="380" y="110" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">where(fn)</text>
+<rect x="45" y="164" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="190" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">reduce(fn)</text>
+<rect x="295" y="164" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="380" y="190" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">fold(fn)</text>
+<rect x="45" y="244" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="130" y="270" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">any(fn)</text>
+<rect x="295" y="244" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="380" y="270" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">every(fn)</text>
+<rect x="45" y="324" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="350" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sort(fn)</text>
+<rect x="295" y="324" width="170" height="52" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="380" y="350" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">forEach(fn)</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">todos reciben funciones anónimas</text>
+</svg>

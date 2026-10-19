@@ -8,7 +8,7 @@ import { findEmoji } from '../core/content/image.js';
 import { saveImage } from '../core/storage/images.js';
 import { slugify } from '../core/content/slug.js';
 
-const PAGE = { minHeight: '100vh', padding: 16, maxWidth: 960, margin: '0 auto' };
+const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
 const INPUT = {
   width: '100%',
   background: '#0f051d',

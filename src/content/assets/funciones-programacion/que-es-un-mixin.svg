@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un mixin?">
+<title>¿Qué es un mixin?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="447.76" cy="300.66" rx="96.05" ry="96.05" fill="hsl(265 90% 58% / 0.232)"/>
+<ellipse cx="147.92" cy="299.3" rx="74.26" ry="74.26" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="301.27" cy="478.43" rx="171.67" ry="171.67" fill="hsl(265 90% 58% / 0.208)"/>
+<ellipse cx="64.18" cy="236.44" rx="139.96" ry="139.96" fill="hsl(265 90% 58% / 0.16)"/>
+<rect x="60" y="80" width="200" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="98" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">mixin Volador</text>
+<rect x="95" y="136" width="130" height="48" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="160" y="160" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">volar()</text>
+<line x1="270" y1="145" x2="319.2" y2="145" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="330,145 319.87,151.43 319.87,138.57" fill="#39ff14"/>
+<rect x="310" y="80" width="162" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="324" y="98" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">class Pato</text>
+<rect x="346" y="150" width="90" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="391" y="170" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">with</text>
+<line x1="256" y1="240" x2="256" y2="289.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#8a7fb5"/>
+<rect x="161" y="320" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="340" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">Pato.volar()</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">bloque de métodos reutilizable</text>
+</svg>

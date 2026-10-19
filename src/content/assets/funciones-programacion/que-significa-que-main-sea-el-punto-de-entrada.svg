@@ -1,10 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="¿Qué significa que main() sea el punto de entrada?">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa que main() sea el punto de entrada?">
 <title>¿Qué significa que main() sea el punto de entrada?</title>
-<rect width="128" height="128" fill="#1a0b2e"/>
-  <circle cx="80.05" cy="21.99" r="32.92" fill="hsl(45 90% 63%)" fill-opacity="0.26"/>
-  <circle cx="110.17" cy="102.53" r="20.63" fill="hsl(45 90% 65%)" fill-opacity="0.17"/>
-  <circle cx="125.88" cy="37.49" r="22.00" fill="hsl(45 90% 66%)" fill-opacity="0.24"/>
-  <circle cx="85.24" cy="2.36" r="18.61" fill="hsl(45 90% 58%)" fill-opacity="0.18"/>
-<line x1="12.80" y1="48.79" x2="115.20" y2="41.15" stroke="hsl(45 90% 60%)" stroke-width="1.54"/>
-<text x="64" y="64" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, monospace" font-size="38" font-weight="700" fill="#f1f1f1">QS</text>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="320.21" cy="87.97" rx="132.55" ry="132.55" fill="hsl(45 90% 58% / 0.194)"/>
+<ellipse cx="359.92" cy="440.69" rx="178.31" ry="178.31" fill="hsl(45 90% 58% / 0.154)"/>
+<ellipse cx="326.74" cy="126.75" rx="202.6" ry="202.6" fill="hsl(45 90% 58% / 0.169)"/>
+<ellipse cx="88.52" cy="388.24" rx="150.01" ry="150.01" fill="hsl(45 90% 58% / 0.207)"/>
+<rect x="171" y="87" width="170" height="66" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="32" font-weight="700" fill="#f1f1f1">main()</text>
+<line x1="256" y1="160" x2="256" y2="229.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,240 249.57,229.87 262.43,229.87" fill="#39ff14"/>
+<rect x="146" y="250" width="220" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">tu programa</text>
+<line x1="256" y1="316" x2="256" y2="369.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="256,380 249.57,369.87 262.43,369.87" fill="#8a7fb5"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">todo empieza aquí</text>
 </svg>

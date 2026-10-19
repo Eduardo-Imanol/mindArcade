@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son los parámetros genéricos?">
+<title>¿Qué son los parámetros genéricos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="381.13" cy="473.89" rx="127.29" ry="127.29" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="84.88" cy="370.54" rx="89.38" ry="89.38" fill="hsl(265 90% 58% / 0.231)"/>
+<ellipse cx="248.64" cy="487.05" rx="190.34" ry="190.34" fill="hsl(265 90% 58% / 0.229)"/>
+<ellipse cx="382.2" cy="118.9" rx="137.97" ry="137.97" fill="hsl(265 90% 58% / 0.207)"/>
+<rect x="121" y="89" width="270" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">T primero&lt;T&gt;()</text>
+<rect x="90" y="259" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="140" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">T=int</text>
+<rect x="206" y="259" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">T=str</text>
+<rect x="317" y="259" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="372" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">T=bool</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">T se infiere en la llamada</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5"> admite restricción extends</text>
+</svg>

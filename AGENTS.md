@@ -8,6 +8,7 @@ Sepect is a local-first arcade learning engine: spaced repetition + mini-games. 
 - Storage: localStorage (sync) + IndexedDB (history), no backend
 - Canvas: native Canvas by default, p5.js optional per game
 - Audio: Web Audio API synthesized, no audio assets
+- TTS: Web Speech API (`src/core/audio/tts.js`, free, zero deps) — MANDATORY in every game
 - Package manager: npm
 
 ## Repository map
@@ -44,6 +45,7 @@ npm run build      # production build
 - Commands requiring human approval: infra changes, adding dependencies, history-rewriting git.
 - Return a task as done only if tests + lint pass at 100%.
 - Spec-Anchored: no code beyond signed `specs/spec-*.md` scope.
+- Every game MUST include TTS: read card text aloud via `src/core/audio/tts.js` (Web Speech API), speaker button + global mute toggle (spec-03).
 
 ## Local overrides
 - Per-module rules live in `<module>/AGENTS.override.md`.

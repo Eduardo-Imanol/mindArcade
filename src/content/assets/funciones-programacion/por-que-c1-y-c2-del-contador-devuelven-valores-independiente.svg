@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué c1() y c2() del contador devuelven valores independientes?">
+<title>¿Por qué c1() y c2() del contador devuelven valores independientes?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="414.75" cy="382.49" rx="184.19" ry="184.19" fill="hsl(45 90% 58% / 0.185)"/>
+<ellipse cx="379.46" cy="182.17" rx="108.2" ry="108.2" fill="hsl(45 90% 58% / 0.19)"/>
+<ellipse cx="4.84" cy="292.58" rx="188.61" ry="188.61" fill="hsl(45 90% 58% / 0.192)"/>
+<ellipse cx="408.39" cy="381.4" rx="134.23" ry="134.23" fill="hsl(45 90% 58% / 0.186)"/>
+<rect x="161" y="62" width="190" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="90" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">contador()</text>
+<line x1="160" y1="130" x2="133.1" y2="219.66" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="130,230 126.75,218.45 139.07,222.14" fill="#00ffcc"/>
+<line x1="352" y1="130" x2="378.9" y2="219.66" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="382,230 372.93,222.14 385.25,218.45" fill="#ff007f"/>
+<rect x="40" y="240" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="54" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">entorno 1</text>
+<rect x="70" y="299" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="320" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">cuenta=1</text>
+<rect x="292" y="240" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="306" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">entorno 2</text>
+<rect x="322" y="299" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="382" y="320" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">cuenta=1</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">c1() y c2() → valores independientes</text>
+</svg>

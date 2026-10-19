@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la composición de funciones?">
+<title>¿Qué es la composición de funciones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="450.91" cy="72.98" rx="186.08" ry="186.08" fill="hsl(168 90% 58% / 0.233)"/>
+<ellipse cx="116.31" cy="496.7" rx="100.31" ry="100.31" fill="hsl(168 90% 58% / 0.198)"/>
+<ellipse cx="36.2" cy="94.58" rx="118.6" ry="118.6" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="467.45" cy="365.22" rx="186.59" ry="186.59" fill="hsl(168 90% 58% / 0.207)"/>
+<rect x="50" y="179" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="80" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">x</text>
+<line x1="115" y1="200" x2="144.2" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="155,200 144.87,206.43 144.87,193.57" fill="#8a7fb5"/>
+<rect x="165" y="173" width="110" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="220" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">g(x)</text>
+<line x1="280" y1="200" x2="309.2" y2="200" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="320,200 309.87,206.43 309.87,193.57" fill="#00ffcc"/>
+<rect x="335" y="173" width="110" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="390" y="200" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">f( )</text>
+<line x1="450" y1="200" x2="469.2" y2="200" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="480,200 469.87,206.43 469.87,193.57" fill="#ff007f"/>
+<text x="256" y="320" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="38" font-weight="700" fill="#f1f1f1">f(g(x))</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">g primero · f después</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">componer(f, g) = (x) =&gt; f(g(x))</text>
+</svg>

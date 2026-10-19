@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo captura la variable de un for una closure en Dart?">
+<title>¿Cómo captura la variable de un for una closure en Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="401.34" cy="172.89" rx="73.16" ry="73.16" fill="hsl(120 90% 58% / 0.145)"/>
+<ellipse cx="230.64" cy="276.18" rx="100.99" ry="100.99" fill="hsl(120 90% 58% / 0.15)"/>
+<ellipse cx="155.67" cy="327.25" rx="75.04" ry="75.04" fill="hsl(120 90% 58% / 0.224)"/>
+<ellipse cx="229.95" cy="20.47" rx="187.47" ry="187.47" fill="hsl(120 90% 58% / 0.226)"/>
+<rect x="60" y="70" width="200" height="320" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="88" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">Dart</text>
+<rect x="85" y="139" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="160" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">iter 1 → v1</text>
+<rect x="85" y="209" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="230" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">iter 2 → v2</text>
+<rect x="85" y="279" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="160" y="300" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">iter 3 → v3</text>
+<rect x="300" y="130" width="170" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="314" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">closures</text>
+<rect x="320" y="186" width="130" height="48" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="385" y="210" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">() =&gt; v</text>
+<rect x="325" y="260" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="385" y="280" text-anchor="center" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">cada uno</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cada iteración tiene SU copia</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">sin el bug clásico de JavaScript</text>
+</svg>
