@@ -1,84 +1,95 @@
 import React, { useMemo } from 'react';
 import NotFound from '../components/NotFound.jsx';
 import { listGames } from '../games/registry.js';
+import { gameArtUrl } from '../games/art.js';
 import { availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
 
-const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
-
 export default function TopicView({ topicId }) {
   const topics = useMemo(() => loadCatalog(), []);
+  const games = useMemo(() => listGames(), []);
   const topic = topics.find((entry) => entry.id === topicId);
 
   if (!topic) {
     return <NotFound message={`Tema "${topicId}" no encontrado`} />;
   }
 
-  return (
-    <main className="sepect-bg" style={PAGE}>
-      <a href="#/" style={{ color: 'var(--neon-cyan)', textDecoration: 'none' }}>← Volver a temas</a>
-      <h1 className="neon" style={{ fontSize: 28, margin: '8px 0 0' }}>{topic.title}</h1>
-      {topic.description && <p style={{ margin: '4px 0 0', opacity: 0.85 }}>{topic.description}</p>}
-      <p style={{ margin: '4px 0 0', opacity: 0.7, fontSize: 14 }}>{topic.cards.length} cartas</p>
+  const availability = games.map((game) => ({
+    game,
+    ...getGameAvailability(game, { topic, topics }),
+  }));
+  const playableCount = availability.filter((entry) => entry.playable).length;
 
-      <h2 className="neon" style={{ fontSize: 18, marginTop: 20 }}>Elige un juego</h2>
-      <ul
-        style={{
-          listStyle: 'none',
-          padding: 0,
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
-          gap: 12,
-        }}
-      >
-        {listGames().map((game) => {
-          const availability = getGameAvailability(game, { topic, topics });
-          return (
-            <li key={game.id}>
-              {availability.playable ? (
-                <a
-                  className="card-neon"
-                  href={`#/tema/${topic.id}/juego/${game.id}`}
-                  style={{
-                    display: 'block',
-                    padding: 16,
-                    minHeight: 44,
-                    textDecoration: 'none',
-                    color: 'var(--text)',
-                  }}
-                >
-                  <h3 className="neon" style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
-                  <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
-                  <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-green)' }}>Jugar ahora</p>
-                </a>
-              ) : (
-                <button
-                  className="card-neon"
-                  type="button"
-                  disabled
-                  style={{
-                    display: 'block',
-                    width: '100%',
-                    padding: 16,
-                    minHeight: 44,
-                    textAlign: 'left',
-                    color: 'var(--text)',
-                    opacity: 0.55,
-                    cursor: 'not-allowed',
-                    background: 'var(--bg2)',
-                  }}
-                >
-                  <h3 style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
-                  <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
-                  <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-magenta)' }}>
-                    {availabilityMessage(availability)}
+  return (
+    <main className="sepect-bg topic-page">
+      <div className="topic-page__inner">
+        <a className="topic-back" href="#/">← Volver a temas</a>
+
+        <header className="topic-header">
+          <div className="topic-header__text">
+            <h1 className="neon topic-title">{topic.title}</h1>
+            {topic.description && <p className="topic-description">{topic.description}</p>}
+          </div>
+          <span className="topic-cards">{topic.cards.length} cartas</span>
+        </header>
+
+        <div className="topic-games__head">
+          <h2 className="neon topic-games__title">Elige un juego</h2>
+          <span className="topic-games__count">
+            {playableCount} de {games.length} disponibles
+          </span>
+        </div>
+
+        <ul className="game-grid">
+          {availability.map(({ game, playable, ...state }) => {
+            const art = gameArtUrl(game.id);
+            const content = (
+              <>
+                <div className="game-tile__media">
+                  {art && (
+                    <img
+                      className="game-tile__img"
+                      src={art}
+                      alt=""
+                      loading="lazy"
+                      width="512"
+                      height="320"
+                    />
+                  )}
+                </div>
+                <div className="game-tile__body">
+                  <h3 className="game-tile__title">{game.title}</h3>
+                  <p className="game-tile__desc">{game.description}</p>
+                  <p className="game-tile__cta">
+                    {playable ? 'Jugar ahora →' : availabilityMessage(state)}
                   </p>
-                </button>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+                </div>
+              </>
+            );
+
+            return (
+              <li key={game.id} className="game-grid__item">
+                {playable ? (
+                  <a
+                    className="card-neon game-tile"
+                    href={`#/tema/${topic.id}/juego/${game.id}`}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <button
+                    className="card-neon game-tile game-tile--disabled"
+                    type="button"
+                    disabled
+                  >
+                    {content}
+                  </button>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </main>
   );
 }

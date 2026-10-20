@@ -60,3 +60,34 @@ describe('TopicView intruso availability', () => {
     expect(tileFor(container, 'El intruso').textContent).toContain('Jugar ahora');
   });
 });
+
+describe('TopicView serpiente availability', () => {
+  it('gates serpiente-significados below 4 cards and enables it with 4+', () => {
+    const short = topic('corto', 'Corto', 3);
+    catalog.topics = [short];
+    const gated = mount(<TopicView topicId={short.id} />);
+    const gatedTile = tileFor(gated.container, 'Serpiente de significados');
+    expect(gatedTile).toBeTruthy();
+    expect(gatedTile.textContent).toContain('Necesitas al menos 4 cartas');
+    expect(gatedTile.querySelector('button[disabled]')).toBeTruthy();
+    expect(
+      gated.container.querySelector(
+        `a[href="#/tema/${short.id}/juego/serpiente-significados"]`
+      )
+    ).toBeNull();
+    gated.unmount();
+
+    const ready = topic('listo', 'Listo', 4);
+    catalog.topics = [ready];
+    const open = mount(<TopicView topicId={ready.id} />);
+    expect(
+      open.container.querySelector(
+        `a[href="#/tema/${ready.id}/juego/serpiente-significados"]`
+      )
+    ).toBeTruthy();
+    expect(tileFor(open.container, 'Serpiente de significados').textContent).toContain(
+      'Jugar ahora'
+    );
+    open.unmount();
+  });
+});

@@ -5,6 +5,14 @@ import { saveCustomTopic } from '../core/content/catalog.js';
 import { loadSrs } from '../core/repetition/srs.js';
 import { createStore } from '../core/storage/store.js';
 import { click, fire, mount, waitFor } from '../test/render.jsx';
+import {
+  advanceFeedback,
+  eatBack,
+  forceSelfCollision,
+  lives,
+  rafHarness,
+  setRounds,
+} from '../test/serpiente.js';
 
 const FIXTURE_A = `# Tema GameHost
 Una función encapsula lógica reutilizable.
@@ -39,6 +47,29 @@ const AHORCADO_BACK_TO_CARD = {
 const AHORCADO_LETTERS = [...'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'];
 const AHORCADO_MISTAKES = { gato: 0, perro: 2, luna: 6, sol: 0, mar: 2, flor: 6 };
 const AHORCADO_XP = { facil: 10, dificil: 25, 'otra-vez': 0 };
+
+const SERPIENTE_MD = `# Tema Serpiente
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four
+- Q: cinco | A: five
+- Q: seis | A: six`;
+
+const serpienteCard = (topic, container) => {
+  const front = container.querySelector('.serpiente-prompt__text').textContent;
+  return topic.cards.find((card) => card.front === front);
+};
+
+const startSerpiente = (container, rounds) => {
+  setRounds(container, rounds);
+  click(findButton(container, 'Empezar'));
+};
+
+const wrongSerpienteBack = (container, correctBack, excluded = []) =>
+  [...container.querySelectorAll('.serpiente-legend__text')]
+    .map((node) => node.textContent)
+    .find((back) => back !== correctBack && !excluded.includes(back));
 
 const QUIZ_MD = `# Tema Quiz
 - Q: uno | A: one
@@ -119,6 +150,75 @@ const startIntruso = (container, rounds) => {
   click(findButton(container, 'Empezar'));
 };
 
+const LLUVIA_MD = `# Tema Lluvia
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four
+- Q: cinco | A: five
+- Q: seis | A: six`;
+
+const startLluvia = (container, rounds, rhythm) => {
+  const select = container.querySelector('#lluvia-rounds');
+  const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set;
+  setter.call(select, String(rounds));
+  fire(select, 'change');
+  if (rhythm) click(findButton(container, rhythm));
+  click(findButton(container, 'Empezar'));
+};
+
+const lluviaPrompt = (container) => {
+  const prompt =
+    container.querySelector('.lluvia-radar__text') ||
+    container.querySelector('.lluvia-capsule__text');
+  return prompt ? prompt.textContent : null;
+};
+const lluviaOptions = (container) => [...container.querySelectorAll('.lluvia-option')];
+const lluviaOptionBack = (button) =>
+  (button.getAttribute('aria-label') || '').replace(/^Opción \d+: /, '');
+const lluviaCard = (topic, container) =>
+  topic.cards.find((card) => card.front === lluviaPrompt(container));
+const lluviaCorrect = (container, card) =>
+  lluviaOptions(container).find((button) => lluviaOptionBack(button) === card.back);
+const lluviaWrong = (container, card) =>
+  lluviaOptions(container).find((button) => lluviaOptionBack(button) !== card.back);
+
+const CONECTA_MD = `# Tema Conecta
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four`;
+
+const CONECTA_SIX_MD = `# Tema Conecta Seleccion
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four
+- Q: cinco | A: five
+- Q: seis | A: six`;
+
+const conectaCard = (container, text) =>
+  [...container.querySelectorAll('.conecta-card')].find(
+    (button) => button.querySelector('.conecta-card__text')?.textContent === text
+  );
+
+const conectaQuestions = (container) => [
+  ...container.querySelectorAll('section[aria-label="Preguntas"] .conecta-card'),
+];
+
+const startConecta = (container, pairs) => {
+  const select = container.querySelector('#conecta-pairs');
+  const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set;
+  setter.call(select, String(pairs));
+  fire(select, 'change');
+  click(findButton(container, 'Empezar'));
+};
+
+const matchConecta = (container, front, back) => {
+  click(conectaCard(container, front));
+  click(conectaCard(container, back));
+};
+
 const intrusoOptions = (container) => [...container.querySelectorAll('.intruso-option')];
 const intrusoBack = (button) =>
   (button.getAttribute('aria-label') || '').replace(/^Opción \d+: /, '');
@@ -131,6 +231,7 @@ afterEach(() => {
   localStorage.clear();
   document.body.innerHTML = '';
   window.location.hash = '';
+  vi.unstubAllGlobals();
   vi.restoreAllMocks();
 });
 
@@ -659,4 +760,492 @@ describe('GameHost wiring', () => {
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
   });
+
+  it('lluvia-meteoros loads through GameHost and plays with the shared contract (AC-19)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Lluvia', md: LLUVIA_MD });
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="lluvia-meteoros" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+
+    startLluvia(container, 3);
+    expect(container.textContent).toContain('Meteoro 1 de 3');
+    expect(lluviaOptions(container)).toHaveLength(3);
+
+    const card = lluviaCard(topic, container);
+    click(lluviaCorrect(container, card));
+    expect(loadSrs()[topic.id][card.id].reps).toBe(1);
+    expect(createStore().load().history).toHaveLength(1);
+
+    click(findButton(container, 'Salir'));
+    expect(window.location.hash).toBe(`#/tema/${topic.id}`);
+    unmount();
+  });
+
+  it('lluvia-meteoros receives selectCards with unlearned-first selection (AC-19)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Lluvia Seleccion', md: LLUVIA_MD });
+    const now = Date.now();
+    const learned = {
+      uno: { reps: 3, nextReview: now },
+      dos: { reps: 4, nextReview: now },
+    };
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({ [topic.id]: { ...learned } })
+    );
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="lluvia-meteoros" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startLluvia(container, 3);
+
+    const played = [];
+    for (let round = 0; round < 3; round += 1) {
+      const card = lluviaCard(topic, container);
+      played.push(card.id);
+      click(lluviaCorrect(container, card));
+      click(findButton(container, round === 2 ? 'Ver resumen' : 'Siguiente'));
+    }
+
+    expect(container.textContent).toContain('Sesión completada');
+    expect(played).toEqual(['cuatro', 'cinco', 'seis']);
+
+    const graded = loadSrs()[topic.id];
+    expect(graded.uno).toEqual(learned.uno);
+    expect(graded.dos).toEqual(learned.dos);
+    expect(graded.tres).toBeUndefined();
+    for (const cardId of played) expect(graded[cardId].reps).toBe(1);
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(30);
+    expect(profile.history.map(({ cardId }) => cardId)).toEqual(played);
+    unmount();
+  });
+
+  it('lluvia-meteoros grades facil/otra-vez and persists SRS + XP + history across reload (AC-19)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Lluvia Grades', md: LLUVIA_MD });
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="lluvia-meteoros" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startLluvia(container, 3);
+
+    const played = [];
+    for (let round = 0; round < 3; round += 1) {
+      const card = lluviaCard(topic, container);
+      if (round === 1) {
+        click(lluviaWrong(container, card));
+        played.push({ id: card.id, grade: 'otra-vez' });
+      } else {
+        click(lluviaCorrect(container, card));
+        played.push({ id: card.id, grade: 'facil' });
+      }
+      click(findButton(container, round === 2 ? 'Ver resumen' : 'Siguiente'));
+    }
+
+    expect(container.textContent).toContain('Sesión completada');
+    expect(container.textContent).toContain('2 aciertos');
+    expect(container.textContent).toContain('1 fallos');
+    expect(container.textContent).toContain('+20 XP');
+
+    const srsBefore = loadSrs();
+    const profileBefore = createStore().load();
+    expect(profileBefore.xp).toBe(20);
+    expect(profileBefore.history.map(({ cardId, grade }) => ({ cardId, grade }))).toEqual(
+      played.map(({ id, grade }) => ({ cardId: id, grade }))
+    );
+    for (const card of played) {
+      expect(srsBefore[topic.id][card.id]).toMatchObject({
+        reps: card.grade === 'otra-vez' ? 0 : 1,
+        interval: 1,
+        ease: card.grade === 'facil' ? 2.65 : 2.3,
+      });
+    }
+
+    unmount();
+    expect(loadSrs()).toEqual(srsBefore);
+    expect(createStore().load()).toEqual(profileBefore);
+
+    const reloaded = mount(<GameHost topicId={topic.id} gameId="lluvia-meteoros" />);
+    await waitFor(() => findButton(reloaded.container, 'Empezar'));
+    expect(loadSrs()).toEqual(srsBefore);
+    expect(createStore().load()).toEqual(profileBefore);
+    reloaded.unmount();
+  });
+
+  it('lluvia-meteoros exit mid-meteor grades only the current card as otra-vez (AC-19)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Lluvia Exit', md: LLUVIA_MD });
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="lluvia-meteoros" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startLluvia(container, 3);
+
+    const resolved = lluviaCard(topic, container);
+    click(lluviaCorrect(container, resolved));
+    click(findButton(container, 'Siguiente'));
+    const pending = lluviaCard(topic, container);
+    click(findButton(container, 'Salir'));
+
+    const graded = loadSrs()[topic.id];
+    expect(Object.keys(graded).sort()).toEqual([resolved.id, pending.id].sort());
+    expect(graded[resolved.id].reps).toBe(1);
+    expect(graded[pending.id].reps).toBe(0);
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(10);
+    expect(profile.history).toHaveLength(2);
+    expect(profile.history.map(({ cardId, grade }) => ({ cardId, grade }))).toEqual([
+      { cardId: resolved.id, grade: 'facil' },
+      { cardId: pending.id, grade: 'otra-vez' },
+    ]);
+    expect(new Set(profile.history.map(({ cardId }) => cardId)).size).toBe(2);
+    unmount();
+  });
+
+  it('lluvia-meteoros survival game over does not grade unshown rounds (AC-19)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Lluvia Survival', md: LLUVIA_MD });
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="lluvia-meteoros" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startLluvia(container, 5, 'Supervivencia');
+
+    const played = [];
+    for (let round = 0; round < 3; round += 1) {
+      const card = lluviaCard(topic, container);
+      played.push(card.id);
+      click(lluviaWrong(container, card));
+      if (round < 2) click(findButton(container, 'Siguiente'));
+    }
+
+    expect(container.textContent).toContain('Sesión completada');
+    expect(container.textContent).toContain('0 aciertos');
+    expect(container.textContent).toContain('3 fallos');
+
+    const graded = loadSrs()[topic.id];
+    expect(Object.keys(graded).sort()).toEqual([...played].sort());
+    expect(graded[played[0]].reps).toBe(0);
+    expect(graded[played[1]].reps).toBe(0);
+    expect(graded[played[2]].reps).toBe(0);
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(0);
+    expect(profile.history).toHaveLength(3);
+    expect(profile.history.map(({ cardId }) => cardId)).toEqual(played);
+    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+    unmount();
+  });
+
+  it('conecta-pares loads through GameHost and persists facil grades across reload (AC-11, AC-18)', async () => {
+    const md = `# Tema Conecta
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three`;
+    const { topic } = saveCustomTopic({ title: 'Tema Conecta', md });
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="conecta-pares" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+
+    startConecta(container, 3);
+    expect(conectaQuestions(container)).toHaveLength(3);
+    expect(container.querySelector('[aria-label="Significados"]')).toBeTruthy();
+
+    matchConecta(container, 'uno', 'one');
+    matchConecta(container, 'dos', 'two');
+    matchConecta(container, 'tres', 'three');
+
+    expect(container.textContent).toContain('Sesión completada');
+    expect(container.textContent).toContain('Pares emparejados: 3 de 3');
+    expect(container.textContent).toContain('+30 XP');
+
+    const srsBefore = loadSrs();
+    const profileBefore = createStore().load();
+    expect(Object.keys(srsBefore[topic.id]).sort()).toEqual(['dos', 'tres', 'uno']);
+    for (const cardId of ['uno', 'dos', 'tres']) {
+      expect(srsBefore[topic.id][cardId]).toMatchObject({
+        reps: 1,
+        interval: 1,
+        ease: 2.65,
+      });
+    }
+    expect(profileBefore.xp).toBe(30);
+    expect(profileBefore.history.map(({ cardId, grade }) => ({ cardId, grade }))).toEqual([
+      { cardId: 'uno', grade: 'facil' },
+      { cardId: 'dos', grade: 'facil' },
+      { cardId: 'tres', grade: 'facil' },
+    ]);
+
+    unmount();
+    expect(loadSrs()).toEqual(srsBefore);
+    expect(createStore().load()).toEqual(profileBefore);
+
+    const reloaded = mount(<GameHost topicId={topic.id} gameId="conecta-pares" />);
+    await waitFor(() => findButton(reloaded.container, 'Empezar'));
+    expect(loadSrs()).toEqual(srsBefore);
+    expect(createStore().load()).toEqual(profileBefore);
+    reloaded.unmount();
+  });
+
+  it('conecta-pares grades dificil after an error and otra-vez for pending cards on exit', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Conecta', md: CONECTA_MD });
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="conecta-pares" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+
+    startConecta(container, 4);
+    matchConecta(container, 'uno', 'one');
+
+    click(conectaCard(container, 'dos'));
+    click(conectaCard(container, 'three'));
+    expect(container.textContent).toContain('1 error');
+    click(conectaCard(container, 'dos'));
+    click(conectaCard(container, 'two'));
+
+    click(findButton(container, 'Salir'));
+
+    const graded = loadSrs()[topic.id];
+    expect(Object.keys(graded).sort()).toEqual(['cuatro', 'dos', 'tres', 'uno']);
+    expect(graded.uno).toMatchObject({ reps: 1, interval: 1, ease: 2.65 });
+    expect(graded.dos).toMatchObject({ reps: 1, interval: 1, ease: 2.35 });
+    expect(graded.tres).toMatchObject({ reps: 0, interval: 1, ease: 2.3 });
+    expect(graded.cuatro).toMatchObject({ reps: 0, interval: 1, ease: 2.3 });
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(35);
+    expect(profile.history).toHaveLength(4);
+    expect(profile.history[0]).toMatchObject({ cardId: 'uno', grade: 'facil' });
+    expect(profile.history[1]).toMatchObject({ cardId: 'dos', grade: 'dificil' });
+    const pendingGrades = profile.history
+      .slice(2)
+      .map(({ cardId, grade }) => ({ cardId, grade }));
+    expect(pendingGrades).toHaveLength(2);
+    expect(pendingGrades).toEqual(
+      expect.arrayContaining([
+        { cardId: 'tres', grade: 'otra-vez' },
+        { cardId: 'cuatro', grade: 'otra-vez' },
+      ])
+    );
+    unmount();
+  });
+
+  it('conecta-pares receives the chosen pair count from selectCards with unlearned-first selection', async () => {
+    const { topic } = saveCustomTopic({
+      title: 'Tema Conecta Seleccion',
+      md: CONECTA_SIX_MD,
+    });
+    const now = Date.now();
+    const learned = {
+      uno: { reps: 3, nextReview: now },
+      dos: { reps: 4, nextReview: now },
+    };
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({ [topic.id]: { ...learned } })
+    );
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="conecta-pares" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startConecta(container, 3);
+
+    expect(conectaQuestions(container)).toHaveLength(3);
+    click(findButton(container, 'Salir'));
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(0);
+    expect(profile.history).toHaveLength(3);
+    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+    const selectedIds = profile.history.map(({ cardId }) => cardId);
+    expect(new Set(selectedIds).size).toBe(3);
+    expect(selectedIds).not.toContain('uno');
+    expect(selectedIds).not.toContain('dos');
+    expect(selectedIds.every((cardId) => ['tres', 'cuatro', 'cinco', 'seis'].includes(cardId))).toBe(
+      true
+    );
+
+    const graded = loadSrs()[topic.id];
+    expect(graded.uno).toEqual(learned.uno);
+    expect(graded.dos).toEqual(learned.dos);
+    for (const cardId of selectedIds) expect(graded[cardId].reps).toBe(0);
+    unmount();
+  });
+
+  it('conecta-pares direct URL below minCards shows the safe gate without loading the game', () => {
+    const md = `# Tema Corto Conecta
+- Q: uno | A: one
+- Q: dos | A: two`;
+    const { topic } = saveCustomTopic({ title: 'Tema Corto Conecta', md });
+    const { container } = mount(<GameHost topicId={topic.id} gameId="conecta-pares" />);
+
+    expect(container.textContent).toContain('Juego no disponible');
+    expect(container.textContent).toContain('Necesitas al menos 3 cartas');
+    expect(container.textContent).not.toContain('Cargando juego');
+    expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
+    expect(findButton(container, 'Empezar')).toBeUndefined();
+  });
+  it('serpiente-significados loads through GameHost, selects unlearned cards and persists facil', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Serpiente', md: SERPIENTE_MD });
+    const now = Date.now();
+    const learned = {
+      uno: { reps: 3, nextReview: now },
+      dos: { reps: 4, nextReview: now },
+    };
+    localStorage.setItem('sepect.srs.v1', JSON.stringify({ [topic.id]: learned }));
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+    const harness = rafHarness();
+
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="serpiente-significados" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startSerpiente(container, 4);
+    expect(container.textContent).toContain('Ronda 1 de 4');
+
+    const card = serpienteCard(topic, container);
+    expect(['tres', 'cuatro', 'cinco', 'seis']).toContain(card.id);
+    eatBack(container, harness, card.back);
+
+    const graded = loadSrs()[topic.id];
+    expect(graded[card.id]).toMatchObject({ reps: 1, interval: 1, ease: 2.65 });
+    expect(graded.uno).toEqual(learned.uno);
+    expect(graded.dos).toEqual(learned.dos);
+    const profile = createStore().load();
+    expect(profile.xp).toBe(10);
+    expect(profile.history).toHaveLength(1);
+    expect(profile.history[0]).toMatchObject({
+      topicId: topic.id,
+      cardId: card.id,
+      grade: 'facil',
+    });
+
+    click(findButton(container, 'Salir'));
+    expect(window.location.hash).toBe(`#/tema/${topic.id}`);
+    expect(Object.keys(loadSrs()[topic.id]).sort()).toEqual(['dos', 'uno', card.id].sort());
+    expect(createStore().load().history).toHaveLength(1);
+    unmount();
+
+    const reloaded = mount(
+      <GameHost topicId={topic.id} gameId="serpiente-significados" />
+    );
+    await waitFor(() => findButton(reloaded.container, 'Empezar'));
+    expect(loadSrs()[topic.id]).toEqual(graded);
+    expect(createStore().load().xp).toBe(10);
+    reloaded.unmount();
+  });
+
+  it('serpiente-significados persists dificil and mid-round otra-vez without re-emitting', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Serpiente Dificil', md: SERPIENTE_MD });
+    const harness = rafHarness();
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="serpiente-significados" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startSerpiente(container, 4);
+
+    const first = serpienteCard(topic, container);
+    eatBack(container, harness, wrongSerpienteBack(container, first.back));
+    expect(lives(container)).toBe(4);
+    eatBack(container, harness, first.back);
+
+    const firstGraded = loadSrs()[topic.id][first.id];
+    expect(firstGraded).toMatchObject({ reps: 1, interval: 1, ease: 2.35 });
+    expect(createStore().load().xp).toBe(25);
+
+    advanceFeedback(harness);
+    expect(container.textContent).toContain('Ronda 2 de 4');
+    const second = serpienteCard(topic, container);
+    expect(second.id).not.toBe(first.id);
+
+    click(findButton(container, 'Salir'));
+    const graded = loadSrs()[topic.id];
+    expect(graded[first.id]).toMatchObject({ reps: 1, interval: 1, ease: 2.35 });
+    expect(graded[second.id]).toMatchObject({ reps: 0, interval: 1, ease: 2.3 });
+    expect(Object.keys(graded)).toHaveLength(2);
+    const profile = createStore().load();
+    expect(profile.xp).toBe(25);
+    expect(profile.history.map(({ cardId, grade }) => ({ cardId, grade }))).toEqual([
+      { cardId: first.id, grade: 'dificil' },
+      { cardId: second.id, grade: 'otra-vez' },
+    ]);
+    unmount();
+
+    const reloaded = mount(
+      <GameHost topicId={topic.id} gameId="serpiente-significados" />
+    );
+    await waitFor(() => findButton(reloaded.container, 'Empezar'));
+    expect(loadSrs()[topic.id]).toEqual(graded);
+    expect(createStore().load()).toEqual(profile);
+    reloaded.unmount();
+  });
+
+  it('serpiente-significados game over grades only the current card and not unshown rounds', async () => {
+    const { topic } = saveCustomTopic({
+      title: 'Tema Serpiente Game Over',
+      md: SERPIENTE_MD,
+    });
+    const harness = rafHarness();
+    const { container, unmount } = mount(
+      <GameHost topicId={topic.id} gameId="serpiente-significados" />
+    );
+    await waitFor(() => findButton(container, 'Empezar'));
+    startSerpiente(container, 4);
+
+    const first = serpienteCard(topic, container);
+    eatBack(container, harness, wrongSerpienteBack(container, first.back));
+    eatBack(container, harness, first.back);
+    advanceFeedback(harness);
+    expect(container.textContent).toContain('Ronda 2 de 4');
+
+    const second = serpienteCard(topic, container);
+    expect(second.id).not.toBe(first.id);
+    forceSelfCollision(container, harness);
+    expect(lives(container)).toBe(3);
+
+    const wrongA = wrongSerpienteBack(container, second.back);
+    eatBack(container, harness, wrongA);
+    expect(lives(container)).toBe(2);
+    forceSelfCollision(container, harness);
+    expect(lives(container)).toBe(1);
+
+    const wrongB = wrongSerpienteBack(container, second.back, [wrongA]);
+    eatBack(container, harness, wrongB);
+    expect(container.textContent).toContain('Partida terminada');
+
+    const graded = loadSrs()[topic.id];
+    expect(graded[first.id]).toMatchObject({ reps: 1, interval: 1, ease: 2.35 });
+    expect(graded[second.id]).toMatchObject({ reps: 0, interval: 1, ease: 2.3 });
+    expect(Object.keys(graded)).toHaveLength(2);
+    const profile = createStore().load();
+    expect(profile.xp).toBe(25);
+    expect(profile.history.map(({ cardId, grade }) => ({ cardId, grade }))).toEqual([
+      { cardId: first.id, grade: 'dificil' },
+      { cardId: second.id, grade: 'otra-vez' },
+    ]);
+    unmount();
+  });
+
+  it('serpiente-significados direct URL below minCards shows the safe gate without loading', () => {
+    const md = `# Tema Corto Serpiente
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three`;
+    const { topic } = saveCustomTopic({ title: 'Tema Corto Serpiente', md });
+    const { container } = mount(
+      <GameHost topicId={topic.id} gameId="serpiente-significados" />
+    );
+
+    expect(container.textContent).toContain('Juego no disponible');
+    expect(container.textContent).toContain('Necesitas al menos 4 cartas');
+    expect(container.textContent).not.toContain('Cargando juego');
+    expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
+    expect(findButton(container, 'Empezar')).toBeUndefined();
+  });
+
 });

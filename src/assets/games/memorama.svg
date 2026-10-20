@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" width="512" height="320" role="img" aria-label="Memorama">
+<title>Memorama</title>
+<rect x="0" y="0" width="512" height="320" fill="#1a0b2e"/>
+<ellipse cx="345.25" cy="116.45" rx="113.98" ry="113.98" fill="hsl(320 90% 58% / 0.215)"/>
+<ellipse cx="158.99" cy="176.71" rx="77.36" ry="77.36" fill="hsl(320 90% 58% / 0.165)"/>
+<ellipse cx="297.81" cy="287.97" rx="88.52" ry="88.52" fill="hsl(320 90% 58% / 0.164)"/>
+<rect x="116" y="50" width="92" height="82" rx="12" fill="rgba(57, 255, 20, .1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="162" y="91" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">A</text>
+<rect x="220" y="50" width="92" height="82" rx="12" fill="rgba(57, 255, 20, .1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="266" y="91" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">A</text>
+<rect x="324" y="50" width="92" height="82" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#8a7fb5" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text x="370" y="91" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">?</text>
+<rect x="116" y="146" width="92" height="82" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#8a7fb5" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text x="162" y="187" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">?</text>
+<rect x="220" y="146" width="92" height="82" rx="12" fill="rgba(0, 255, 204, .08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="266" y="187" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">B</text>
+<rect x="324" y="146" width="92" height="82" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#8a7fb5" stroke-width="2.5" stroke-dasharray="8 7"/>
+<text x="370" y="187" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">?</text>
+<text x="256" y="282" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">empareja y recuerda</text>
+</svg>

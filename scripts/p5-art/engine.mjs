@@ -46,7 +46,7 @@ export class Sketch {
     this._tx = 0;
     this._ty = 0;
     this._textSize = 28;
-    this._textAlign = 'center';
+    this._textAlign = 'middle';
     this._textWeight = 700;
     this._radius = 10;
     this._dash = null;
@@ -222,8 +222,8 @@ export function baseBg(p, { bubbles = 4, hue } = {}) {
   }
 }
 
-export function renderSketch(setupFn, { label, seed = 1, size = 512 } = {}) {
-  const p = new Sketch(size, size, seed);
+export function renderSketch(setupFn, { label, seed = 1, size = 512, height = size } = {}) {
+  const p = new Sketch(size, height, seed);
   setupFn(p);
   return p.toSVG({ label });
 }

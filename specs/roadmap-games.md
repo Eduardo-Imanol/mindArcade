@@ -13,9 +13,11 @@
 - Un mismo juego funciona con cualquier tema sin cambiar código: solo cambia el `.md` del tema.
 - `minCards` declara el mínimo de cartas para habilitar el juego en un tema.
 - Toda carta lleva imagen (ver spec-02 §4): resuelta por `CardImage` con precedencia override UI > token `| I:` > emoji automático > arte generativo de fallback.
-- Todo juego que muestre cartas debe renderizar `CardImage`: como pista (ahorcado, sopa-de-letras, quiz, caza, lluvia, serpiente), en las caras (memorama, conecta-pares) o en ambos lados (flashcards).
-- **Todo juego DEBE incluir TTS** (obligatorio desde spec-03): lectura de textos con Web Speech API vía helper compartido `src/core/audio/tts.js` (gratis, 0 deps), lectura al interactuar + botón 🔊 por elemento + toggle global de sonido persistido. Sin `speechSynthesis` → controles ocultos sin romper el juego.
-- **Selección de cartas por SRS** (desde spec-03): los juegos deben pedir sus cartas con `selectCards(count)` (prop opcional que arma GameHost con `selectDueCards`) priorizando palabras no vistas/no aprendidas; el patrón aplica a los 10 juegos.
+- Todo juego que muestre cartas debe renderizar `CardImage`: como pista (ahorcado, quiz, lluvia, serpiente) o en ambos lados (flashcards). **Excepción:** `conecta-pares` (spec-10) es el único juego sin imágenes: no usa `CardImage`, `<img>`, `<canvas>` ni p5; sus líneas SVG son decorativas (`aria-hidden`, `pointer-events:none`), no arte de carta.
+- **Todo juego DEBE incluir TTS** (obligatorio desde spec-03): lectura de textos con Web Speech API vía helper compartido `src/core/audio/tts.js` (gratis, 0 deps), lectura al interactuar + botón 🔊 por elemento + toggle global de sonido persistido. En `conecta-pares` «botón por elemento» se interpreta como botón 🔊 del elemento activo en la barra de selección (spec-10), sin añadir 20 botones. Sin `speechSynthesis` → controles ocultos sin romper el juego.
+- **Selección de cartas por SRS** (spec-12, supersede spec-03 AC-3): los juegos deben pedir sus cartas con `selectCards(count)` (prop opcional que arma GameHost con `selectStudyCards`). El pool son las cartas no aprendidas (`new`/`learning`) mezcladas y, si faltan, las aprendidas **solo si están vencidas** (`nextReview <= now`), ordenadas por `nextReview`. Nunca se ofrecen aprendidas no vencidas. El patrón aplica a los 8 juegos.
+- **Contrato de juego** (spec-12): cada juego se declara con `defineGame({ id, title, description?, art?, status, minCards, minTopics?, minCardsPerTopic?, load })` (`src/games/definition.js`), congelado. `registry` es data-driven y la matriz de reutilización se prueba con al menos dos temas. Sin reescritura a clases.
+- **Portada y fichas de juego** (spec-12): la ficha de juego muestra solo título + portada del tema (`topicCoverCard`) + estado/CTA, sin descripción. La portada es la primera carta del deck con imagen explícita; si no hay, la primera carta.
 - **Grados en juegos de aciertos**: 1.er intento → `facil`, intentos medios → `dificil`, nunca resuelto → `otra-vez` (spec-03, reutilizable). Nota: en memorama "1.er intento" se interpreta como `attempts <= 1` (fallos previos ≤1 → `facil`), según el contrato de test de spec-03 §6.
 
 ## Catálogo e iteración (orden acordado)
@@ -25,19 +27,18 @@
 | 1 | `flashcards` | Flashcards | Frente: término; dorso: significado; voltear + autoevaluación (Otra vez / Difícil / Fácil) → SM-2 + XP | 1 | Flashcards | **spec-02 (este incremento)** |
 | 2 | `memorama` | Memorama | Emparejar carta-término con carta-significado | 4 | Memory | **spec-03 (available)** |
 | 3 | `ahorcado` | Ahorcado | Adivinar el término letra a letra usando el significado como pista | 3 | Hangman | **spec-04 (available)** |
-| 4 | `sopa-de-letras` | Sopa de letras | Encontrar los términos ocultos en la cuadrícula; se marca al hallarlos | 4 | Word Search | spec-05 (pendiente) |
-| 5 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | **spec-06 (available)** |
-| 6 | `caza-significados` | Caza de significados | Arcade cronometrado: cazar la opción correcta antes de que escape (adaptación de caza de sonidos sin audio) | 4 | Sound Hunt | spec-07 |
-| 7 | `intruso` | El intruso | Set de 3 significados del tema + 1 de otro tema: encontrar el intruso (gate: ≥2 temas con ≥3 cartas) | 3 | Intruder | **spec-08 (available)** |
-| 8 | `lluvia-meteoros` | Lluvia de meteoros | Escribir/elegir la traducción antes de que el meteoro caiga | 6 | Meteor Rush | spec-09 |
-| 9 | `conecta-pares` | Conecta palabra–significado | Unir pares término↔significado tocando ambas columnas | 3 | Connect the Words | spec-10 |
-| 10 | `serpiente-significados` | Serpiente de significados | Snake que come la fruta con el significado correcto del término pedido | 4 | Snake | spec-11 |
+| 4 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | **spec-06 (available)** |
+| 5 | `intruso` | El intruso | Set de 3 significados del tema + 1 de otro tema: encontrar el intruso (gate: ≥2 temas con ≥3 cartas) | 3 | Intruder | **spec-08 (available)** |
+| 6 | `lluvia-meteoros` | Lluvia de meteoros | Escribir/elegir la traducción antes de que el meteoro caiga | 6 | Meteor Rush | **spec-09 (available)** |
+| 7 | `conecta-pares` | Conecta pregunta–significado | Unir pares término↔significado tocando ambas columnas | 3 | Connect the Words | **spec-10 (available)** |
+| 8 | `serpiente-significados` | Serpiente de significados | Snake que come la fruta con el significado correcto del término pedido | 4 | Snake | **spec-11 (available)** |
 
 Regla de iteración: se pulen uno a uno. Cada spec se firma antes de codificar;
 al terminar se actualiza este roadmap (status `available`) y se abre la siguiente.
 
-> Excepción 2026-10-19: se adelanta `quiz-significado` (spec-06) por petición de
-> Eduardo; `sopa-de-letras` (spec-05) queda pendiente y conserva su lugar en el roadmap.
+> Catálogo completo (2026-10-20): **8 available / 0 soon**. spec-11 cierra el roadmap
+> de juegos. spec-12 «retouch-learning-dashboard» (borrador) es el incremento de
+> métricas, selección espaciada, hub y dashboard; no añade juegos.
 
 ## Contenido de temas (formato MD canónico)
 
@@ -57,8 +58,11 @@ Una función encapsula lógica reutilizable y evita repetir código.
 - Líneas inválidas → se cuentan como errores y el resto se conserva.
 - Temas incluidos: `src/content/topics/*.md`. Temas personalizados: creados desde la UI (localStorage).
 
-## Contenido pendiente inmediato
+## Contenido
 
-- `src/content/topics/funciones-programacion.md` — se redacta con la información del tema
-  que entregue Eduardo (tarea T11 de spec-02). Ese mismo MD alimentará los juegos 2–10
-  sin retocar código.
+- `src/content/topics/funciones-programacion.md` — tema integrado con 96 cartas; alimenta
+  los 8 juegos sin retocar código.
+- spec-12 (borrador): el parser conservará la descripción completa del tema (sin recorte
+  de 160 caracteres) y el hub/tema mostrarán esa descripción íntegra.
+- Temas personalizados: `createdAt` persistido; los integrados reciben `addedAt` en el
+  primer avistamiento local (`sepect.topics.meta.v1`).

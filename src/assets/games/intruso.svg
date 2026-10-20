@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" width="512" height="320" role="img" aria-label="El intruso">
+<title>El intruso</title>
+<rect x="0" y="0" width="512" height="320" fill="#1a0b2e"/>
+<ellipse cx="132.57" cy="137.73" rx="72.96" ry="72.96" fill="hsl(320 90% 58% / 0.143)"/>
+<ellipse cx="325.86" cy="3.93" rx="86.13" ry="86.13" fill="hsl(320 90% 58% / 0.159)"/>
+<ellipse cx="124.54" cy="180.79" rx="77.76" ry="77.76" fill="hsl(320 90% 58% / 0.224)"/>
+<rect x="76" y="62" width="168" height="70" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="160" y="97" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">del tema</text>
+<rect x="268" y="62" width="168" height="70" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="352" y="97" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">del tema</text>
+<rect x="76" y="152" width="168" height="70" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="160" y="187" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">del tema</text>
+<rect x="268" y="152" width="168" height="70" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="352" y="187" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">otro tema</text>
+<text x="256" y="282" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">encuentra el que sobra</text>
+</svg>

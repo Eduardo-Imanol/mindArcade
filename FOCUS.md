@@ -1,27 +1,52 @@
 # FOCUS
 
 ## Active objective (single)
-spec-08 "intruso" (El intruso) — **COMPLETED 2026-10-19**.
-Implementación T1–T10, docs, verificación adversarial AC-1..AC-14 y archivo de tasks completados.
+spec-12 "retouch-learning-dashboard" — **borrador creado 2026-10-20**; pendiente de
+firma de Eduardo. Solo se crearon documentos; **no se ha implementado código**.
 
 ## Current phase
-Fases SDD para spec-08:
-- F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; deps/infra/git-history requieren aprobación humana).
-- F2 ✅ `specs/spec-08-intruso.md` firmada por Eduardo con decisiones: 3 significados del ancla + 1 intruso de otro tema; gate 2 temas × ≥3 cartas; un intento con grade en el tema de la intrusa; rondas 3–10 default 10; TTS obligatorio.
-- F3 ✅ `tasks.md` spec-08 aprobado (T1–T10). spec-06 archivada en `specs/tasks-06-quiz-significado.md` (T8 `[~]` — pendiente diff humano).
-- F4 ✅ T1 lógica pura, T2 tests, T3 availability helper, T4 UI/CSS, T5 GameHost (gate + groups + topic-aware grade), T6 registry (5 available / 5 soon), T7 TopicView, T8 UI/a11y/isolation, T9 integración GameHost, docs AC-13. Gates `test` 296/296, `lint` 0, `build` OK (warning preexistente de chunk).
-- F5 ✅ Verificación adversarial AC-1..AC-14 **PASS** (0 bloqueantes); `tasks.md` archivado en `specs/tasks-08-intruso.md`. Checklist manual a11y en navegador pendiente de ejecución humana (no bloqueante).
+Fases SDD para spec-12:
+- F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; deps/infra/git-history
+  requieren aprobación humana).
+- F2 🟡 `specs/spec-12-retouch-learning-dashboard.md` creada como borrador. Decisiones
+  propuestas: descripción completa; portada = primera imagen del deck; fechas
+  persistidas localmente; selección no aprendidas + vencidas; dashboard `#/progreso`;
+  `GameDefinition` por objeto; «Sepect» fuera del header; sin deps nuevas.
+- F3 🟡 `specs/tasks-12-retouch-learning-dashboard.md` creada con T1–T11 y grafo.
+- F4 ⏸️ Bloqueada hasta firma humana de la spec.
+- F5 ⏸️ Pendiente.
+- F6 ⏸️ Pendiente.
 
 ## Blockers
-- none
+- Firma humana de `specs/spec-12-retouch-learning-dashboard.md`.
+- Confirmación del orden de tareas (T1–T11).
 
-## Decisions locked (spec-08)
-- Gate de contenido en helper puro `src/games/availability.js`: ancla ≥3 cartas y ≥2 temas con ≥3 cartas; mensaje «En mantenimiento · agrega otro tema con al menos 3 cartas».
-- `GameHost` arma `groups` (ancla siempre incluida + temas elegibles) con overrides de imagen; `onGrade(cardId, grade, { topicId })` valida el tema contra el catálogo.
-- La intrusa se califica en SU tema; XP/racha se mantienen en GameHost.
-- `intruso` no usa `selectCards`; la ronda se arma con el ancla completa y anti-repetición de intrusas.
-- TTS: prompt con título del ancla, `back` al elegir, 🔊 del intruso revelado; `stopSpeech()` al desmontar.
-- `spec-05` (sopa de letras) sigue pendiente; `caza-significados` (spec-07) conserva su idea original.
+## Decisiones propuestas (spec-12, pendientes de firma)
+- **Selección de estudio**: no aprendidas (`new`/`learning`) primero; completar solo
+  con aprendidas vencidas (`nextReview <= now`). Nunca aprendidas no vencidas. Esto
+  supersede el backfill de spec-03 AC-3.
+- **Estados**: `new` (sin SRS o `reps=0`), `learning` (`reps 1–2`), `learned`
+  (`reps >= 3`); `LEARNED_REPS = 3`.
+- **Métricas**: `getTopicMetrics`/`getGlobalMetrics` derivadas de catálogo + SRS +
+  historial; días y actividad en UTC; historial con tope 5.000; intentos con `xp`.
+- **Dashboard**: ruta `#/progreso`, KPIs globales, sección por tema, actividad 14
+  días, estados vacíos, sin librerías nuevas.
+- **Fechas**: custom `createdAt`; integrados primer avistamiento en
+  `sepect.topics.meta.v1`.
+- **Portada**: `topicCoverCard` = primera carta con imagen explícita; si no, primera
+  carta. Se usa en ficha de tema y ficha de juego.
+- **Fichas de juego**: título + portada + estado/CTA; sin descripción.
+- **Hub**: sin «Sepect» visible; buscador con lupa; orden por fecha/nombre/cartas/
+  progreso; filtro de estado.
+- **Modularidad**: `GameDefinition` congelado + props únicas; matriz de reutilización
+  con 2 temas; sin reescritura a clases.
+- **Alcance**: sin deps nuevas, sin backend, sin cambios en SM-2/Elo ni en la
+  mecánica de los 8 juegos.
+
+## Previous increment
+spec-11 "serpiente-significados" — cerrada técnicamente 2026-10-20; pendiente
+aprobación humana del diff. Catálogo **8 available / 0 soon**.
 
 ## Next atomic step
-Decidir el siguiente incremento: spec-05 (sopa de letras) o spec-07 (caza-significados). Pendiente heredado: aprobación humana del diff de spec-06 (T8 `[~]`).
+Revisar y firmar `specs/spec-12-retouch-learning-dashboard.md`. Después, ejecutar
+T1–T11 según `specs/tasks-12-retouch-learning-dashboard.md`.

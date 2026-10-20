@@ -1,6 +1,7 @@
 // src/core/content/catalog.js — builtin (Vite ?raw glob) + custom (localStorage) topics
 import { parseTopic } from '../parser/parser.js';
 import { slugify, uniqueId } from './slug.js';
+import { loadTopicMeta, normalizeDate } from './topicMeta.js';
 
 const KEY = 'sepect.topics.custom.v1';
 
@@ -18,13 +19,14 @@ export function loadBuiltinTopicMds() {
     .map(([, md]) => md);
 }
 
-function ingest(md, source, titleHint, taken, images) {
+function ingest(md, source, titleHint, taken, images, meta = {}, createdAt) {
   if (typeof md !== 'string' || !md.trim()) return null;
   const { topic, cards, errors } = parseTopic(md);
   if (cards.length === 0) return null;
   const id = uniqueId(slugify(titleHint || topic.title), taken);
   taken.add(id);
-  return {
+  const addedAt = normalizeDate(createdAt) || normalizeDate(meta?.[id]?.addedAt);
+  const parsed = {
     id,
     source,
     title: (titleHint || topic.title || 'Tema sin título').slice(0, 80),
@@ -33,18 +35,28 @@ function ingest(md, source, titleHint, taken, images) {
     errors,
     images: images && typeof images === 'object' ? images : {},
   };
+  if (addedAt) parsed.addedAt = addedAt;
+  return parsed;
 }
 
-export function buildCatalog(builtinTopicMds = [], customTopics = []) {
+export function buildCatalog(builtinTopicMds = [], customTopics = [], meta = {}) {
+  const safeMeta = meta && typeof meta === 'object' && !Array.isArray(meta) ? meta : {};
   const taken = new Set();
   const topics = [];
   for (const entry of builtinTopicMds) {
-    const topic = ingest(typeof entry === 'string' ? entry : entry?.md, 'builtin', null, taken);
+    const topic = ingest(
+      typeof entry === 'string' ? entry : entry?.md,
+      'builtin',
+      null,
+      taken,
+      undefined,
+      safeMeta
+    );
     if (topic) topics.push(topic);
   }
   for (const entry of customTopics) {
     if (!entry) continue;
-    const topic = ingest(entry.md, 'custom', entry.title, taken, entry.images);
+    const topic = ingest(entry.md, 'custom', entry.title, taken, entry.images, safeMeta, entry.createdAt);
     if (topic) topics.push(topic);
   }
   return topics;

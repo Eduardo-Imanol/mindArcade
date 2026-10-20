@@ -14,11 +14,13 @@ Sepect is a local-first arcade learning engine: spaced repetition + mini-games. 
 ## Repository map
 - `src/core/engine/` — single game loop, states init-playing-paused-over
 - `src/core/storage/` — central store, XP, streaks, persistence
-- `src/core/repetition/` — SM-2 simplified + Elo rating
+- `src/core/repetition/` — SM-2 simplified + Elo rating; study selection (`selectStudyCards`, spec-12 draft)
 - `src/core/parser/` — Markdown/JSON topic parser to validated questions
-- `src/games/` — isolated mini-games, each implements BaseMiniGame
+- `src/core/content/` — built-in/custom topic catalog; topic metadata + covers (`spec-12` draft)
+- `src/core/metrics/` — per-topic/global progress metrics (`spec-12` draft)
+- `src/games/` — isolated mini-games declared via `GameDefinition` (`spec-12` draft)
 - `src/components/` — neon design system (Button, Card, Modal)
-- `src/views/` — Dashboard, Topic selector, Stats
+- `src/views/` — TopicsHub, TopicView, GameHost, Dashboard (`#/progreso`, spec-12 draft)
 - `src/ui/` — shared canvas/audio helpers
 - `docs/` — detailed docs (read on demand)
 - `specs/` — active specifications (source of truth)

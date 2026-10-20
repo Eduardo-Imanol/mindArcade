@@ -2,12 +2,15 @@ import { describe, it, expect } from 'vitest';
 import { getGame, listGames } from './registry.js';
 
 describe('games registry', () => {
-  it('flashcards + memorama + ahorcado + quiz-significado + intruso available, nope null', () => {
+  it('eight games available, unknown id null', () => {
     expect(getGame('flashcards').status).toBe('available');
     expect(getGame('memorama').status).toBe('available');
     expect(getGame('ahorcado').status).toBe('available');
     expect(getGame('quiz-significado').status).toBe('available');
     expect(getGame('intruso').status).toBe('available');
+    expect(getGame('lluvia-meteoros').status).toBe('available');
+    expect(getGame('conecta-pares').status).toBe('available');
+    expect(getGame('serpiente-significados').status).toBe('available');
     expect(getGame('nope')).toBeNull();
   });
   it('memorama load() resolves a default component', async () => {
@@ -34,40 +37,51 @@ describe('games registry', () => {
     const module = await game.load();
     expect(typeof module.default).toBe('function');
   });
-  it('the other 5 games stay soon', () => {
-    const soon = listGames().filter((game) => game.status === 'soon');
-    expect(soon.map((game) => game.id)).toEqual([
-      'sopa-de-letras',
-      'caza-significados',
-      'lluvia-meteoros',
-      'conecta-pares',
-      'serpiente-significados',
-    ]);
+  it('lluvia-meteoros load() resolves a default component with minCards 6', async () => {
+    const game = getGame('lluvia-meteoros');
+    expect(game.minCards).toBe(6);
+    const module = await game.load();
+    expect(typeof module.default).toBe('function');
   });
-  it('catalog exposes exactly 5 available and 5 soon', () => {
+  it('conecta-pares load() resolves a default component with minCards 3', async () => {
+    const game = getGame('conecta-pares');
+    expect(game.title).toBe('Conecta pregunta–significado');
+    expect(game.description).toBe(
+      'Une cada pregunta con su significado tocando ambas columnas.'
+    );
+    expect(game.minCards).toBe(3);
+    const module = await game.load();
+    expect(typeof module.default).toBe('function');
+  });
+  it('serpiente-significados load() resolves with minCards 4', async () => {
+    const game = getGame('serpiente-significados');
+    expect(game.title).toBe('Serpiente de significados');
+    expect(game.minCards).toBe(4);
+    const module = await game.load();
+    expect(typeof module.default).toBe('function');
+  });
+  it('catalog exposes exactly 8 available games and no upcoming ones', () => {
     const games = listGames();
-    expect(games.filter((game) => game.status === 'available')).toHaveLength(5);
-    expect(games.filter((game) => game.status === 'soon')).toHaveLength(5);
+    expect(games).toHaveLength(8);
+    expect(games.filter((game) => game.status === 'available')).toHaveLength(8);
+    expect(games.filter((game) => game.status === 'soon')).toHaveLength(0);
   });
-  it('catalog is the full ordered list of 10 stable ids', () => {
+  it('catalog is the full ordered list of 8 stable ids', () => {
     const ids = listGames().map((game) => game.id);
     expect(ids).toEqual([
       'flashcards',
       'memorama',
       'ahorcado',
-      'sopa-de-letras',
       'quiz-significado',
-      'caza-significados',
       'intruso',
       'lluvia-meteoros',
       'conecta-pares',
       'serpiente-significados',
     ]);
   });
-  it('only available games expose load()', () => {
+  it('every game exposes load()', () => {
     for (const game of listGames()) {
-      if (game.status === 'available') expect(typeof game.load).toBe('function');
-      else expect(game.load).toBeUndefined();
+      expect(typeof game.load).toBe('function');
     }
     expect(typeof getGame('flashcards').load).toBe('function');
   });

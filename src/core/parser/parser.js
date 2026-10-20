@@ -51,8 +51,9 @@ export function parseTopic(md = '') {
     if (typeof md !== 'string') return { ...empty, errors: ['Input must be a string'] };
     const lines = md.split('\n');
     let title = '';
-    let description = '';
     let inCode = false;
+    let seenCard = false;
+    const descriptionLines = [];
     const cardLines = [];
     for (const raw of lines) {
       const line = raw.trim();
@@ -60,20 +61,29 @@ export function parseTopic(md = '') {
         inCode = !inCode;
         continue;
       }
-      if (inCode || !line) continue;
+      if (inCode) continue;
+      if (seenCard) {
+        if (line.startsWith('-')) cardLines.push(line);
+        continue;
+      }
+      if (!line) {
+        if (descriptionLines.length) descriptionLines.push('');
+        continue;
+      }
       const h = line.match(/^#{1,6}\s+(.+)/);
       if (h) {
         if (!title) title = h[1].trim().slice(0, 80);
         continue;
       }
       if (line.startsWith('-')) {
+        seenCard = true;
         cardLines.push(line);
         continue;
       }
-      if (title && !description && !/^[>|]/.test(line) && !/^[-*_=]{3,}$/.test(line)) {
-        description = line.slice(0, 160);
-      }
+      if (/^[>|]/.test(line) || /^[-*_=]{3,}$/.test(line)) continue;
+      descriptionLines.push(line);
     }
+    const description = descriptionLines.join('\n').trim();
     const topic = { id: slugify(title), title, description };
     const cards = [];
     const errors = [];

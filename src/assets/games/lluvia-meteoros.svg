@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" width="512" height="320" role="img" aria-label="Lluvia de meteoros">
+<title>Lluvia de meteoros</title>
+<rect x="0" y="0" width="512" height="320" fill="#1a0b2e"/>
+<ellipse cx="68.88" cy="185.29" rx="94.51" ry="94.51" fill="hsl(45 90% 58% / 0.169)"/>
+<ellipse cx="418.8" cy="184.69" rx="163.66" ry="163.66" fill="hsl(45 90% 58% / 0.193)"/>
+<ellipse cx="184.08" cy="3.11" rx="82.74" ry="82.74" fill="hsl(45 90% 58% / 0.193)"/>
+<line x1="348" y1="18" x2="276" y2="78" stroke="hsl(45 90% 60% / 0.28)" stroke-width="12" stroke-linecap="round"/>
+<line x1="348" y1="18" x2="276" y2="78" stroke="#ffcc00" stroke-width="2.5" stroke-linecap="round"/>
+<ellipse cx="266" cy="86" rx="19" ry="19" fill="hsl(45 92% 62%)"/>
+<ellipse cx="258" cy="78" rx="7" ry="7" fill="hsl(45 92% 72% / 0.5)"/>
+<rect x="56" y="214" width="120" height="54" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="116" y="241" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<rect x="196" y="214" width="120" height="54" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="241" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<rect x="336" y="214" width="120" height="54" rx="12" fill="rgba(255, 0, 127, .06)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="396" y="241" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">C</text>
+<line x1="266" y1="110" x2="266" y2="204" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 8"/>
+<text x="256" y="294" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">responde antes del impacto</text>
+</svg>
