@@ -1,6 +1,7 @@
 # Manual a11y checklist (AC-7) — run before closing a spec
 
-Automated coverage lives in `Flashcards.a11y.test.jsx`, `TopicsHub.test.jsx`,
+Automated coverage lives in `Flashcards.a11y.test.jsx`, `Memorama.a11y.test.jsx`,
+`Ahorcado.a11y.test.jsx`, `QuizSignificado.a11y.test.jsx`, `TopicsHub.test.jsx`,
 `TopicView.test.jsx` and `CardImage.test.jsx`; jsdom cannot measure layout, so this
 checklist is completed by a human on a real browser (Chrome/Firefox, touch + keyboard).
 
@@ -41,6 +42,27 @@ checklist is completed by a human on a real browser (Chrome/Firefox, touch + key
 - [ ] Board fits without horizontal scroll at 360px (≥4 columns); reaches 8 columns inside the centered ~960px stage (`.game-stage`) on a full-width desktop container (no side gutters).
 - [ ] `prefers-reduced-motion` → flip is instant (no transition).
 - [ ] Without `speechSynthesis` (or with sound muted) all 🔊 controls are hidden and the game is fully playable.
+
+## Ahorcado
+- [ ] Setup: native labelled rounds `<select>` (3–10, default 10) reachable by Tab; Enter/Space on "Empezar" starts; "Salir" and sound toggle reachable.
+- [ ] Round: the 27 letter buttons (A–Z + Ñ) are reachable by Tab; Enter/Space guesses; the physical keyboard also plays letters (including `ñ`).
+- [ ] Used letters are disabled and their accessible name includes "usada (acierto|fallo)"; focus ring uses `--neon-green`.
+- [ ] `aria-live` announces mistakes/attempts remaining, round result and the revealed word on loss, without stale repeats.
+- [ ] Word boxes reveal the original characters (accents/Ñ preserved) and spaces stay visible; no horizontal scroll at 360px; targets ≥44px.
+- [ ] "🔊 Pista" repeats the hint after the round starts; global sound toggle works; without `speechSynthesis` all 🔊 controls are hidden and the game is fully playable.
+- [ ] Result screen: "Siguiente ronda", "Ver resumen" and "Jugar de nuevo"/"Volver al tema" reachable by keyboard.
+- [ ] `prefers-reduced-motion` → no hangman part-entry animation nor alarm pulse.
+
+## Elige el significado
+- [ ] Setup: native labelled rounds `<select>` (3–10, default 10) reachable by Tab; sound toggle and "Salir" reachable; "Empezar" starts with a user gesture.
+- [ ] Round: question stays at the top as text (no image); four meaning cards form a 2×2 grid, each with a decorative image and a native `<button>` option labelled "Opción N: <significado>".
+- [ ] First wrong answer turns red and is disabled; a second wrong answer or a correct answer reveals the correct option in green and shows "Siguiente".
+- [ ] `aria-live` announces correct/incorrect, remaining attempt and the correct answer without stale repeats.
+- [ ] Keyboard: Tab/Shift+Tab reach every option, question 🔊, "Siguiente", "Salir" and sound toggle; Enter/Space activate; focus ring uses `--neon-green`.
+- [ ] 2×2 grid fits without horizontal scroll at 360px; long meanings wrap (no truncation); targets ≥44px.
+- [ ] TTS: question is read at round start, 🔊 repeats it, selecting an option reads its meaning and "🔊 Respuesta" reads the correct meaning; global mute works.
+- [ ] Without `speechSynthesis` all 🔊 controls are hidden and the game is fully playable.
+- [ ] `prefers-reduced-motion` → no transitions/animations.
 
 ## Screen reader pass (VoiceOver/TalkBack or NVDA)
 - [ ] Dialog opens with content reachable; Cerrar and Cancelar both work.

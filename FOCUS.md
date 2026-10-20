@@ -1,23 +1,27 @@
 # FOCUS
 
 ## Active objective (single)
-spec-03 "memorama" — APPROVED 2026-10-19. Execute SDD gates then tasks T1–T10.
+spec-06 "quiz-significado" (Elige el significado) — **APPROVED 2026-10-19**.
+Spec firmada + tasks T1–T8 aprobadas. Implementación pendiente (T1–T8).
 
 ## Current phase
-Fase 1 ✅ + Fase 2 ✅ (gates verificados 2026-10-19):
-- F1: AGENTS.md 51 líneas, sin secrets/.env, permisos claros (autónomos: lint/test; aprobación humana: deps nuevas, infra, git history-rewrite). Sin MCP/servidores necesarios.
-- F2: spec-03 firmada = template completo (HU, AC-1..AC-12 binarios, restricciones, casos límite, contrato de pruebas, firma Eduardo). Interfaces verificadas contra código real (srs shape, registry, GameHost GRADE_DIFFICULTY, CardImage, store quota-safe) — cero patrones inventados.
-Siguiente: Fase 3 ✅ (tasks.md T1–T10 firmado) → Fase 4: arrancar T1 ∥ T2 ∥ T7.
+Fases SDD para spec-06:
+- F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; permisos: lint/test autónomos, deps/infra/git-history requieren aprobación humana).
+- F2 ✅ `specs/spec-06-quiz-significado.md` firmada por Eduardo con decisiones: pregunta arriba solo `front` (sin imagen) + TTS; 4 opciones 2×2 con `CardImage` + `back`; 1 correcta + 3 distractores del deck completo con dedupe; 2 intentos → facil/dificil/otra-vez; rondas 3–10 default 10 vía `selectCards`; TTS automático + 🔊 + toggle global.
+- F3 ✅ `tasks.md` spec-06 aprobado (T1–T8). spec-04 archivada en `specs/tasks-04-ahorcado.md` (T10 queda `[~]` pendiente de diff humano).
+- F4 ⏳ En ejecución: T1 ✅ lógica pura + T2 ✅ tests, T3 ✅ UI/CSS (20 tests del juego). Siguiente: T4 registry.
 
 ## Blockers
 - none
 
-## Decisions locked (spec-03)
-- Grades por intentos: 1.er intento `facil`, 2–3 `dificil`, nunca hallado `otra-vez`.
-- Dificultad Fácil 4 / Medio 6 / Difícil 8 parejas; selección SOLO de cartas no aprendidas (aleatoria, `selectDueCards`, "aprendida" ≡ `reps >= 3`).
-- Contrato de juego extendido solo aditivamente: `selectCards?` opcional; SRS vive en GameHost.
-- 1 jugador. Flip 3D CSS puro. TTS al voltear + 🔊 + toggle global (T7/T8, al final del plan).
-- Sin dependencias nuevas.
+## Decisions locked (spec-06)
+- Pregunta superior = solo `front`; opciones = `CardImage` decorativa (`alt=""`) + `back`.
+- Distractores desde el deck completo (no solo las rondas seleccionadas), dedupe por `back` normalizado, excluyendo la carta correcta por `id`; fallback 2–4 opciones.
+- Grades: 1.er intento correcto `facil`; 2.º intento correcto `dificil`; 2 fallos `otra-vez` revelando la correcta.
+- Rondas 3–10 (default 10); `selectCards(rounds)` con no-aprendidas primero y backfill por `nextReview`.
+- Salida a mitad: `pendingGrades` → `otra-vez` solo para rondas sin resolver (seq monótono).
+- SRS/XP/history solo en GameHost; sin cambios en `GameHost.jsx` ni en el núcleo.
+- Spec-05 (sopa de letras) queda pendiente; se adelantó spec-06 por petición de Eduardo.
 
 ## Next atomic step
-T1–T10 ✅ (2026-10-19: 155 tests green, lint 0, build OK). Verificador adversario: 5 hallazgos corregidos. Pendiente: aprobación humana del diff (T10) → siguiente spec (ahorcado, spec-04).
+Ejecutar T4: `quiz-significado` → `available` en `src/games/registry.js` + actualizar `registry.test.js`.

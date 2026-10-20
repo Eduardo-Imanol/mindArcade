@@ -1,10 +1,10 @@
 import React from 'react';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import GameHost from './GameHost.jsx';
 import { saveCustomTopic } from '../core/content/catalog.js';
 import { loadSrs } from '../core/repetition/srs.js';
 import { createStore } from '../core/storage/store.js';
-import { click, mount, waitFor } from '../test/render.jsx';
+import { click, fire, mount, waitFor } from '../test/render.jsx';
 
 const FIXTURE_A = `# Tema GameHost
 Una función encapsula lógica reutilizable.
@@ -14,13 +14,69 @@ Una función encapsula lógica reutilizable.
 - Q: ¿Qué es el retorno? | A: Resultado que devuelve | E: hard
 - LINEA ROTA`;
 
+const AHORCADO_MD = `# Tema Ahorcado
+- Q: gato | A: felino doméstico
+- Q: perro | A: mejor amigo
+- Q: luna | A: satélite natural
+- Q: sol | A: estrella del sistema solar
+- Q: mar | A: masa de agua salada
+- Q: flor | A: parte de la planta`;
+
+const AHORCADO_GRADES_MD = `# Tema Ahorcado Grades
+- Q: gato | A: felino doméstico
+- Q: perro | A: mejor amigo
+- Q: luna | A: satélite natural`;
+
+const AHORCADO_BACK_TO_CARD = {
+  'felino doméstico': { id: 'gato', front: 'GATO' },
+  'mejor amigo': { id: 'perro', front: 'PERRO' },
+  'satélite natural': { id: 'luna', front: 'LUNA' },
+  'estrella del sistema solar': { id: 'sol', front: 'SOL' },
+  'masa de agua salada': { id: 'mar', front: 'MAR' },
+  'parte de la planta': { id: 'flor', front: 'FLOR' },
+};
+
+const AHORCADO_LETTERS = [...'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'];
+const AHORCADO_MISTAKES = { gato: 0, perro: 2, luna: 6, sol: 0, mar: 2, flor: 6 };
+const AHORCADO_XP = { facil: 10, dificil: 25, 'otra-vez': 0 };
+
 const findButton = (container, text) =>
   [...container.querySelectorAll('button')].find((button) => button.textContent === text);
+
+const startAhorcado = (container, rounds) => {
+  const select = container.querySelector('#ahorcado-rounds');
+  const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set;
+  setter.call(select, String(rounds));
+  fire(select, 'change');
+  click(findButton(container, 'Empezar'));
+};
+
+const currentAhorcadoCard = (container) => {
+  const hint = container.querySelector('.ahorcado-hint__text').textContent;
+  return AHORCADO_BACK_TO_CARD[hint];
+};
+
+const guessLetter = (container, letter) => {
+  const button = [...container.querySelectorAll('.ahorcado-key')].find(
+    (candidate) => candidate.textContent === letter
+  );
+  click(button);
+};
+
+const solveAhorcadoRound = (container, mistakes) => {
+  const card = currentAhorcadoCard(container);
+  const wrong = AHORCADO_LETTERS.filter((letter) => !card.front.includes(letter));
+  for (const letter of wrong.slice(0, mistakes)) guessLetter(container, letter);
+  if (mistakes >= 6) return card;
+  for (const letter of [...new Set(card.front)]) guessLetter(container, letter);
+  return card;
+};
 
 afterEach(() => {
   localStorage.clear();
   document.body.innerHTML = '';
   window.location.hash = '';
+  vi.restoreAllMocks();
 });
 
 describe('GameHost wiring', () => {
@@ -185,5 +241,104 @@ describe('GameHost wiring', () => {
     expect(profile.xp).toBe(0);
     expect(profile.history).toHaveLength(4);
     expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+  });
+
+  it('ahorcado receives selectCards with unlearned-first selection (AC-3)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Ahorcado', md: AHORCADO_MD });
+    const now = Date.now();
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({ [topic.id]: { sol: { reps: 3, nextReview: now + 1_000 } } })
+    );
+    vi.spyOn(Math, 'random').mockReturnValue(0);
+
+    const { container } = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
+    await waitFor(() => findButton(container, 'Empezar'));
+    startAhorcado(container, 3);
+    click(findButton(container, 'Salir'));
+
+    const graded = loadSrs()[topic.id];
+    expect(Object.keys(graded).sort()).toEqual(['luna', 'mar', 'perro', 'sol']);
+    expect(graded.luna.reps).toBe(0);
+    expect(graded.mar.reps).toBe(0);
+    expect(graded.perro.reps).toBe(0);
+    expect(graded.sol).toEqual({ reps: 3, nextReview: now + 1_000 });
+    expect(graded.gato).toBeUndefined();
+    expect(graded.flor).toBeUndefined();
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(0);
+    expect(profile.history.map((entry) => entry.cardId).sort()).toEqual(['luna', 'mar', 'perro']);
+    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+  });
+
+  it('ahorcado grades facil/dificil/otra-vez and persists SRS + XP + history across reload (AC-9)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Ahorcado Grades', md: AHORCADO_GRADES_MD });
+    const { container, unmount } = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
+    await waitFor(() => findButton(container, 'Empezar'));
+    startAhorcado(container, 3);
+
+    const played = [];
+    for (let round = 0; round < 3; round += 1) {
+      const card = currentAhorcadoCard(container);
+      const mistakes = AHORCADO_MISTAKES[card.id];
+      solveAhorcadoRound(container, mistakes);
+      const grade = mistakes >= 6 ? 'otra-vez' : mistakes <= 1 ? 'facil' : 'dificil';
+      played.push({ ...card, grade, mistakes });
+      click(findButton(container, round === 2 ? 'Ver resumen' : 'Siguiente ronda'));
+    }
+
+    expect(container.textContent).toContain('Sesión completada');
+    expect([...played].map((card) => card.grade).sort()).toEqual(['dificil', 'facil', 'otra-vez']);
+    const expectedXp = played.reduce((sum, card) => sum + AHORCADO_XP[card.grade], 0);
+    const srsBefore = loadSrs();
+    const profileBefore = createStore().load();
+
+    expect(profileBefore.xp).toBe(expectedXp);
+    expect(profileBefore.history.map(({ cardId, grade }) => ({ cardId, grade }))).toEqual(
+      played.map(({ id, grade }) => ({ cardId: id, grade }))
+    );
+    for (const card of played) {
+      expect(srsBefore[topic.id][card.id]).toMatchObject({
+        reps: card.grade === 'otra-vez' ? 0 : 1,
+        interval: 1,
+        ease: card.grade === 'facil' ? 2.65 : card.grade === 'dificil' ? 2.35 : 2.3,
+      });
+    }
+
+    unmount();
+    expect(loadSrs()).toEqual(srsBefore);
+    expect(createStore().load()).toEqual(profileBefore);
+
+    const reloaded = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
+    await waitFor(() => findButton(reloaded.container, 'Empezar'));
+    expect(loadSrs()).toEqual(srsBefore);
+    expect(createStore().load()).toEqual(profileBefore);
+  });
+
+  it('ahorcado exit mid-session grades unresolved rounds as otra-vez (AC-10)', async () => {
+    const { topic } = saveCustomTopic({ title: 'Tema Ahorcado', md: AHORCADO_MD });
+    const { container } = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
+    await waitFor(() => findButton(container, 'Empezar'));
+    startAhorcado(container, 4);
+
+    const card = solveAhorcadoRound(container, 0);
+    expect(findButton(container, 'Siguiente ronda')).toBeTruthy();
+    click(findButton(container, 'Salir'));
+    click(findButton(container, 'Salir'));
+
+    const graded = loadSrs()[topic.id];
+    expect(graded[card.id].reps).toBe(1);
+    const pending = Object.keys(graded).filter((cardId) => cardId !== card.id);
+    expect(pending).toHaveLength(3);
+    expect(pending.every((cardId) => graded[cardId].reps === 0)).toBe(true);
+
+    const profile = createStore().load();
+    expect(profile.xp).toBe(10);
+    expect(profile.history).toHaveLength(4);
+    expect(profile.history[0]).toMatchObject({ cardId: card.id, grade: 'facil' });
+    expect(
+      profile.history.slice(1).every((entry) => entry.grade === 'otra-vez')
+    ).toBe(true);
   });
 });

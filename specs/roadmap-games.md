@@ -24,9 +24,9 @@
 |---|---|---|---|---|---|---|
 | 1 | `flashcards` | Flashcards | Frente: término; dorso: significado; voltear + autoevaluación (Otra vez / Difícil / Fácil) → SM-2 + XP | 1 | Flashcards | **spec-02 (este incremento)** |
 | 2 | `memorama` | Memorama | Emparejar carta-término con carta-significado | 4 | Memory | **spec-03 (available)** |
-| 3 | `ahorcado` | Ahorcado | Adivinar el término letra a letra usando el significado como pista | 3 | Hangman | spec-04 |
-| 4 | `sopa-de-letras` | Sopa de letras | Encontrar los términos ocultos en la cuadrícula; se marca al hallarlos | 4 | Word Search | spec-05 |
-| 5 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | spec-06 |
+| 3 | `ahorcado` | Ahorcado | Adivinar el término letra a letra usando el significado como pista | 3 | Hangman | **spec-04 (available)** |
+| 4 | `sopa-de-letras` | Sopa de letras | Encontrar los términos ocultos en la cuadrícula; se marca al hallarlos | 4 | Word Search | spec-05 (pendiente) |
+| 5 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | **spec-06 (approved 2026-10-19)** |
 | 6 | `caza-significados` | Caza de significados | Arcade cronometrado: cazar la opción correcta antes de que escape (adaptación de caza de sonidos sin audio) | 4 | Sound Hunt | spec-07 |
 | 7 | `intruso` | El intruso | Set de 4 significados: encontrar el que no pertenece (requiere grupos/etiquetas en el deck) | 4 | Intruder | spec-08 |
 | 8 | `lluvia-meteoros` | Lluvia de meteoros | Escribir/elegir la traducción antes de que el meteoro caiga | 6 | Meteor Rush | spec-09 |
@@ -35,6 +35,9 @@
 
 Regla de iteración: se pulen uno a uno. Cada spec se firma antes de codificar;
 al terminar se actualiza este roadmap (status `available`) y se abre la siguiente.
+
+> Excepción 2026-10-19: se adelanta `quiz-significado` (spec-06) por petición de
+> Eduardo; `sopa-de-letras` (spec-05) queda pendiente y conserva su lugar en el roadmap.
 
 ## Contenido de temas (formato MD canónico)
 

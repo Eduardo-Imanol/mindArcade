@@ -5,7 +5,6 @@ import { isSupported, speak } from '../../core/audio/tts.js';
 import { DIFFICULTIES, createState, pendingGrades, reduce } from './memorama.logic.js';
 
 const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
-const CLOSE_DELAY_MS = 1000;
 
 export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {}) {
   const [cards, setCards] = useState(null);
@@ -20,11 +19,7 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
     }
   }, [state, onGrade]);
 
-  useEffect(() => {
-    if (!state || !state.locked) return undefined;
-    const id = setTimeout(() => setState((prev) => reduce(prev, { type: 'close' })), CLOSE_DELAY_MS);
-    return () => clearTimeout(id);
-  }, [state]);
+  const closePair = () => setState((prev) => reduce(prev, { type: 'close' }));
 
   const choose = (option) => {
     const requested = (selectCards ? selectCards(option.pairs) : deck.slice(0, option.pairs)) || [];
@@ -127,6 +122,9 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
       ? '¡Par encontrado!'
       : '';
 
+  const openTiles = state.open.map((index) => state.tiles[index]);
+  const infoKey = openTiles.length ? openTiles.map((tile) => tile.key).join('|') : 'empty';
+
   return (
     <main className="sepect-bg memorama-page" style={PAGE}>
       <div className="game-stage">
@@ -158,13 +156,15 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
                   data-face={tile.face}
                   data-open={revealed ? 'true' : 'false'}
                   data-matched={matched ? 'true' : 'false'}
+                  data-text={tile.text}
                   aria-label={label}
                   aria-pressed={revealed}
                   onClick={() => flip(index)}
                 >
                   <span className="memorama-tile__front" aria-hidden={!revealed}>
-                    <CardImage card={card} size={56} />
-                    <span className="memorama-tile__text">{tile.text}</span>
+                    <span className="memorama-tile__img">
+                      <CardImage card={card} size={56} />
+                    </span>
                   </span>
                   <span className="memorama-tile__cover" aria-hidden="true">?</span>
                 </button>
@@ -181,6 +181,30 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
               </div>
             );
           })}
+        </div>
+        <div className="memorama-info" role="region" aria-label="Texto de la carta seleccionada">
+          {openTiles.length === 0 ? (
+            <p className="memorama-info__hint">Toca una carta para leer su texto</p>
+          ) : (
+            <div className="memorama-info__inner" key={infoKey}>
+              {openTiles.map((tile) => (
+                <div className="memorama-info__entry" key={tile.key}>
+                  <span className="memorama-info__label">{tile.face === 'front' ? 'Término' : 'Significado'}</span>
+                  <p className="memorama-info__text">{tile.text}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {state.locked && (
+            <button
+              type="button"
+              className="btn-neon memorama-info__flip"
+              onClick={closePair}
+              aria-label="Voltear de nuevo las cartas"
+            >
+              🔄 Voltear de nuevo
+            </button>
+          )}
         </div>
       </div>
     </main>

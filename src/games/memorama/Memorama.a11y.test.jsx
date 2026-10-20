@@ -1,4 +1,4 @@
-import React, { act } from 'react';
+import React from 'react';
 import fs from 'node:fs';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
@@ -136,7 +136,6 @@ describe('Memorama a11y + responsive contract (AC-7, AC-8)', () => {
   });
 
   it('no re-announces a stale pair after a later mismatch resolves (AC-8)', () => {
-    vi.useFakeTimers();
     const view = mount(<Memorama deck={DECK} onGrade={() => ({})} onExit={() => {}} />);
     start(view.container);
     const status = () => view.container.querySelector('[aria-live="polite"]').textContent;
@@ -149,27 +148,46 @@ describe('Memorama a11y + responsive contract (AC-7, AC-8)', () => {
     click(tile(view.container, 'c', 'front'));
     expect(status()).toContain('no coinciden');
 
-    act(() => vi.advanceTimersByTime(1000));
+    click(buttonByText(view.container, '🔄 Voltear'));
     expect(status()).not.toContain('Par encontrado');
-    vi.useRealTimers();
     view.unmount();
   });
 
-  it('responsive contract: >=4 cols at 360px, 8 cols + fluid full-width container on desktop', () => {
+  it('keeps the mismatch text visible and only flips back on demand', () => {
+    const view = mount(<Memorama deck={DECK} onGrade={() => ({})} onExit={() => {}} />);
+    start(view.container);
+    const info = () => view.container.querySelector('.memorama-info');
+
+    click(tile(view.container, 'a', 'front'));
+    click(tile(view.container, 'b', 'front'));
+    const a = tile(view.container, 'a', 'front');
+    const b = tile(view.container, 'b', 'front');
+    expect(a.dataset.open).toBe('true');
+    expect(b.dataset.open).toBe('true');
+    expect(info().textContent).toContain(a.getAttribute('data-text'));
+    expect(info().textContent).toContain(b.getAttribute('data-text'));
+
+    const flip = buttonByText(view.container, '🔄 Voltear');
+    expect(flip).toBeTruthy();
+    click(flip);
+    expect(a.dataset.open).toBe('false');
+    expect(b.dataset.open).toBe('false');
+    expect(info().textContent).toContain('Toca una carta');
+    view.unmount();
+  });
+
+  it('responsive contract: exactly 3 cols, square tiles, info panel below the board', () => {
     const tokens = fs.readFileSync(path.join(process.cwd(), 'src/ui/tokens.css'), 'utf8');
     const code = fs.readFileSync(path.join(process.cwd(), 'src/games/memorama/Memorama.jsx'), 'utf8');
 
     const board = tokens.match(/\.memorama-board\s*{([^}]*)}/s)[1];
-    const min = Number(board.match(/minmax\((\d+)px,\s*1fr\)/)[1]);
-    const gap = Number(board.match(/gap:\s*(\d+)px/)[1]);
-    const mobileColumns = Math.floor((360 - 32 + gap) / (min + gap));
-    expect(mobileColumns).toBeGreaterThanOrEqual(4);
-    expect(mobileColumns).toBeLessThanOrEqual(8);
+    expect(board).toMatch(/grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
+    expect(board).toMatch(/gap:\s*10px/);
 
     const tile = tokens.match(/\.memorama-tile\s*{([^}]*)}/s)[1];
     expect(tile).toMatch(/min-height:\s*44px/);
     expect(tile).toMatch(/min-width:\s*44px/);
-    expect(tile).toMatch(/aspect-ratio:\s*3\s*\/\s*4/);
+    expect(tile).toMatch(/aspect-ratio:\s*1\s*\/\s*1/);
 
     const page = tokens.match(/\.memorama-page\s*{([^}]*)}/s)[1];
     expect(page).toMatch(/max-width:\s*100%/);
@@ -178,10 +196,30 @@ describe('Memorama a11y + responsive contract (AC-7, AC-8)', () => {
     expect(stage).toMatch(/max-width:\s*960px/);
     expect(stage).toMatch(/margin:\s*0 auto/);
 
-    expect(tokens).toMatch(
-      /@media\s*\(min-width:\s*1024px\)[\s\S]*?grid-template-columns:\s*repeat\(8,\s*minmax\(0,\s*1fr\)\)/
-    );
+    expect(tokens).toMatch(/\.memorama-info\s*{/);
     expect(tokens).toMatch(/prefers-reduced-motion[\s\S]*?transition:\s*none/);
+    expect(code).toMatch(/memorama-info/);
+    expect(code).not.toMatch(/memorama-tile__text/);
     expect(code).not.toMatch(/width:\s*\d{4,}/);
+  });
+
+  it('info panel shows the revealed card text and updates on each flip', () => {
+    const view = mount(<Memorama deck={DECK} onGrade={() => ({})} onExit={() => {}} />);
+    start(view.container);
+    const info = () => view.container.querySelector('.memorama-info');
+
+    expect(info().textContent).toContain('Toca una carta');
+
+    const first = tiles(view.container)[0];
+    click(first);
+    expect(info().textContent).toContain(first.getAttribute('data-text'));
+
+    const second = tiles(view.container).find(
+      (el) => el !== first && el.dataset.open === 'false' && el.dataset.cardId !== first.dataset.cardId
+    );
+    click(second);
+    expect(info().textContent).toContain(first.getAttribute('data-text'));
+    expect(info().textContent).toContain(second.getAttribute('data-text'));
+    view.unmount();
   });
 });

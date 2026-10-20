@@ -92,7 +92,7 @@ export default function Flashcards({ deck = [], onGrade, onExit } = {}) {
             textAlign: 'center',
           }}
         >
-          <CardImage card={card} size={128} />
+          <CardImage card={card} size={128} fill />
           <span style={{ fontSize: 20, fontWeight: 700 }}>{card.front}</span>
           {state.flipped && <span aria-live="polite">{card.back}</span>}
         </button>

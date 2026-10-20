@@ -67,7 +67,7 @@ function drawTile(ctx, { size, dpr, seed, label }) {
   ctx.fillText(initials(label), s / 2, s / 2);
 }
 
-function FallbackTile({ seed = 'carta', label = '', size = 96, className = '' }) {
+function FallbackTile({ seed = 'carta', label = '', size = 96, fill = false, className = '' }) {
   const ref = useRef(null);
   useEffect(() => {
     const canvas = ref.current;
@@ -90,12 +90,12 @@ function FallbackTile({ seed = 'carta', label = '', size = 96, className = '' })
       role="img"
       aria-label={label || 'Ilustración generada'}
       className={className}
-      style={{ width: size, height: size, display: 'block', borderRadius: 12 }}
+      style={fill ? { display: 'block', borderRadius: 12 } : { width: size, height: size, display: 'block', borderRadius: 12 }}
     />
   );
 }
 
-export default function CardImage({ card = {}, image, overrides, size = 96, alt, className = '' }) {
+export default function CardImage({ card = {}, image, overrides, size = 96, fill = false, alt, className = '' }) {
   const resolved = useMemo(
     () => (image ? image : resolveCardImage(card, overrides)),
     [card, image, overrides]
@@ -103,6 +103,8 @@ export default function CardImage({ card = {}, image, overrides, size = 96, alt,
   const [broken, setBroken] = useState(false);
   const [uploadSrc, setUploadSrc] = useState(null);
   const label = alt ?? card?.front ?? 'Imagen de la carta';
+  const fillClass = [className, fill ? 'card-image--fill' : ''].filter(Boolean).join(' ') || undefined;
+  const emojiClass = [className, fill ? 'card-image--fill card-image--emoji' : ''].filter(Boolean).join(' ') || undefined;
 
   useEffect(() => {
     setBroken(false);
@@ -136,8 +138,12 @@ export default function CardImage({ card = {}, image, overrides, size = 96, alt,
       <span
         role="img"
         aria-label={label}
-        className={className}
-        style={{ fontSize: Math.round(size * 0.6), lineHeight: 1, display: 'inline-block', width: size, textAlign: 'center' }}
+        className={emojiClass}
+        style={
+          fill
+            ? undefined
+            : { fontSize: Math.round(size * 0.6), lineHeight: 1, display: 'inline-block', width: size, textAlign: 'center' }
+        }
       >
         {resolved.value}
       </span>
@@ -154,14 +160,13 @@ export default function CardImage({ card = {}, image, overrides, size = 96, alt,
       <img
         src={src}
         alt={label}
-        width={size}
-        height={size}
+        {...(fill ? {} : { width: size, height: size })}
         onError={() => setBroken(true)}
-        className={className}
-        style={{ objectFit: 'cover', borderRadius: 12, border: '1px solid rgba(0,255,204,.35)', display: 'block' }}
+        className={fillClass}
+        style={{ objectFit: fill ? 'contain' : 'cover', borderRadius: 12, border: '1px solid rgba(0,255,204,.35)', display: 'block' }}
       />
     );
   }
 
-  return <FallbackTile seed={resolved?.value || card?.id} label={label} size={size} className={className} />;
+  return <FallbackTile seed={resolved?.value || card?.id} label={label} size={fill ? 512 : size} fill={fill} className={fillClass} />;
 }

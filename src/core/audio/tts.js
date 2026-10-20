@@ -23,6 +23,12 @@ function pickVoice(voices, lang) {
   );
 }
 
+export function stopSpeech() {
+  if (isSupported() && typeof window.speechSynthesis.cancel === 'function') {
+    window.speechSynthesis.cancel();
+  }
+}
+
 export function speak(text, options = {}) {
   if (!isSupported()) return null;
   const clean = text == null ? '' : String(text).trim();

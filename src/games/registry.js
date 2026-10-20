@@ -20,8 +20,9 @@ const GAMES = [
     id: 'ahorcado',
     title: 'Ahorcado',
     description: 'Adivina el término letra a letra usando el significado como pista.',
-    status: 'soon',
+    status: 'available',
     minCards: 3,
+    load: () => import('./ahorcado/index.jsx'),
   },
   {
     id: 'sopa-de-letras',
