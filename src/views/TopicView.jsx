@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import NotFound from '../components/NotFound.jsx';
 import { listGames } from '../games/registry.js';
+import { availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
 
 const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
@@ -30,50 +31,53 @@ export default function TopicView({ topicId }) {
           gap: 12,
         }}
       >
-        {listGames().map((game) => (
-          <li key={game.id}>
-            {game.status === 'available' && topic.cards.length >= (game.minCards || 1) ? (
-              <a
-                className="card-neon"
-                href={`#/tema/${topic.id}/juego/${game.id}`}
-                style={{
-                  display: 'block',
-                  padding: 16,
-                  minHeight: 44,
-                  textDecoration: 'none',
-                  color: 'var(--text)',
-                }}
-              >
-                <h3 className="neon" style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
-                <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
-                <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-green)' }}>Jugar ahora</p>
-              </a>
-            ) : (
-              <button
-                className="card-neon"
-                type="button"
-                disabled
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  padding: 16,
-                  minHeight: 44,
-                  textAlign: 'left',
-                  color: 'var(--text)',
-                  opacity: 0.55,
-                  cursor: 'not-allowed',
-                  background: 'var(--bg2)',
-                }}
-              >
-                <h3 style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
-                <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
-                <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-magenta)' }}>
-                  {game.status === 'available' ? `Necesitas al menos ${game.minCards} cartas` : 'Próximamente'}
-                </p>
-              </button>
-            )}
-          </li>
-        ))}
+        {listGames().map((game) => {
+          const availability = getGameAvailability(game, { topic, topics });
+          return (
+            <li key={game.id}>
+              {availability.playable ? (
+                <a
+                  className="card-neon"
+                  href={`#/tema/${topic.id}/juego/${game.id}`}
+                  style={{
+                    display: 'block',
+                    padding: 16,
+                    minHeight: 44,
+                    textDecoration: 'none',
+                    color: 'var(--text)',
+                  }}
+                >
+                  <h3 className="neon" style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
+                  <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
+                  <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-green)' }}>Jugar ahora</p>
+                </a>
+              ) : (
+                <button
+                  className="card-neon"
+                  type="button"
+                  disabled
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: 16,
+                    minHeight: 44,
+                    textAlign: 'left',
+                    color: 'var(--text)',
+                    opacity: 0.55,
+                    cursor: 'not-allowed',
+                    background: 'var(--bg2)',
+                  }}
+                >
+                  <h3 style={{ fontSize: 16, margin: 0 }}>{game.title}</h3>
+                  <p style={{ margin: '6px 0 0', opacity: 0.85, fontSize: 14 }}>{game.description}</p>
+                  <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--neon-magenta)' }}>
+                    {availabilityMessage(availability)}
+                  </p>
+                </button>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </main>
   );

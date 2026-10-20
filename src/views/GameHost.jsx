@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import NotFound from '../components/NotFound.jsx';
 import { getGame } from '../games/registry.js';
+import { availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
 import { applyGrade, loadSrs, orderDeck, saveSrs } from '../core/repetition/srs.js';
 import { selectDueCards } from '../core/repetition/selectDueCards.js';
@@ -15,14 +16,19 @@ export default function GameHost({ topicId, gameId }) {
   const topics = useMemo(() => loadCatalog(), []);
   const topic = topics.find((entry) => entry.id === topicId);
   const game = useMemo(() => getGame(gameId), [gameId]);
+  const availability = useMemo(
+    () => getGameAvailability(game, { topic, topics }),
+    [game, topic, topics]
+  );
   const [Component, setComponent] = useState(null);
   const [deck, setDeck] = useState(null);
+  const [groups, setGroups] = useState(null);
   const [selectCards, setSelectCards] = useState(null);
   const srsRef = useRef(null);
   const profileRef = useRef(null);
 
   useEffect(() => {
-    if (!topic || !game || game.status !== 'available' || typeof game.load !== 'function') {
+    if (!topic || !game || !availability.playable || typeof game.load !== 'function') {
       return undefined;
     }
     let active = true;
@@ -31,11 +37,23 @@ export default function GameHost({ topicId, gameId }) {
       const srs = loadSrs();
       srsRef.current = srs;
       profileRef.current = createStore().load();
-      const overrides = topic.images || {};
-      const cards = topic.cards.map((card) =>
-        overrides[card.id] ? { ...card, image: overrides[card.id] } : card
-      );
+      const cardsWithOverrides = (entry) => {
+        const overrides = entry.images || {};
+        return entry.cards.map((card) =>
+          overrides[card.id] ? { ...card, image: overrides[card.id] } : card
+        );
+      };
+      const cards = cardsWithOverrides(topic);
+      const minPerTopic = game.minCardsPerTopic || game.minCards || 1;
+      const nextGroups = topics
+        .filter((entry) => entry.id === topic.id || entry.cards.length >= minPerTopic)
+        .map((entry) => ({
+          id: entry.id,
+          title: entry.title,
+          cards: cardsWithOverrides(entry),
+        }));
       setDeck(orderDeck(cards, srs[topic.id] || {}, Date.now()));
+      setGroups(nextGroups);
       setSelectCards(() => (count) =>
         selectDueCards(cards, (srsRef.current || {})[topic.id] || {}, { count })
       );
@@ -44,7 +62,7 @@ export default function GameHost({ topicId, gameId }) {
     return () => {
       active = false;
     };
-  }, [topic, game]);
+  }, [topic, game, topics, availability.playable]);
 
   if (!topic) return <NotFound message={`Tema "${topicId}" no encontrado`} />;
 
@@ -60,7 +78,23 @@ export default function GameHost({ topicId, gameId }) {
     );
   }
 
-  if (!Component || deck === null || !selectCards) {
+  if (!availability.playable) {
+    return (
+      <main className="sepect-bg" style={PAGE}>
+        <h1 className="neon" style={{ fontSize: 24 }}>Juego no disponible</h1>
+        <p>{availabilityMessage(availability)}</p>
+        <a
+          className="btn-neon"
+          href={`#/tema/${topic.id}`}
+          style={{ display: 'inline-block', textDecoration: 'none' }}
+        >
+          Volver al tema
+        </a>
+      </main>
+    );
+  }
+
+  if (!Component || deck === null || groups === null || !selectCards) {
     return (
       <main className="sepect-bg" style={PAGE}>
         <p role="status">Cargando juego…</p>
@@ -68,11 +102,17 @@ export default function GameHost({ topicId, gameId }) {
     );
   }
 
-  const onGrade = (cardId, grade) => {
+  const onGrade = (cardId, grade, context) => {
     const correct = grade !== 'otra-vez';
     const now = Date.now();
+    const targetTopicId =
+      context &&
+      typeof context.topicId === 'string' &&
+      topics.some((entry) => entry.id === context.topicId)
+        ? context.topicId
+        : topic.id;
 
-    const nextSrs = applyGrade(srsRef.current || {}, topic.id, cardId, grade, now);
+    const nextSrs = applyGrade(srsRef.current || {}, targetTopicId, cardId, grade, now);
     srsRef.current = nextSrs;
     saveSrs(nextSrs);
 
@@ -85,7 +125,7 @@ export default function GameHost({ topicId, gameId }) {
 
     const store = createStore();
     profileRef.current = store.addAttempt(nextProfile, {
-      topicId: topic.id,
+      topicId: targetTopicId,
       cardId,
       grade,
       at: new Date(now).toISOString(),
@@ -97,6 +137,8 @@ export default function GameHost({ topicId, gameId }) {
   return (
     <Component
       deck={deck}
+      groups={groups}
+      anchorTopicId={topic.id}
       selectCards={selectCards}
       onGrade={onGrade}
       onExit={() => navigate(`#/tema/${topic.id}`)}

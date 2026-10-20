@@ -33,7 +33,7 @@ describe('TopicView', () => {
     expect(container.textContent).toContain('Flashcards');
     expect(container.textContent).toContain('Necesitas al menos 4 cartas');
     expect(container.textContent).toContain('Necesitas al menos 3 cartas');
-    expect(container.textContent.match(/Próximamente/g)).toHaveLength(7);
+    expect(container.textContent.match(/Próximamente/g)).toHaveLength(5);
 
     const links = [...container.querySelectorAll('a[href*="/juego/"]')];
     expect(links).toHaveLength(1);
@@ -43,22 +43,24 @@ describe('TopicView', () => {
     expect(disabled).toHaveLength(9);
   });
 
-  it('enables memorama and ahorcado when the topic reaches their minCards', () => {
+  it('enables all available games, including intruso, with two eligible topics', () => {
     const { topic } = saveCustomTopic({ title: 'Tema amplio', md: FIXTURE_B });
     const { container } = mount(<TopicView topicId={topic.id} />);
     expect(container.textContent).toContain('4 cartas');
 
     const links = [...container.querySelectorAll('a[href*="/juego/"]')];
-    expect(links).toHaveLength(3);
+    expect(links).toHaveLength(5);
     expect(links.map((link) => link.getAttribute('href'))).toEqual(
       expect.arrayContaining([
         `#/tema/${topic.id}/juego/flashcards`,
         `#/tema/${topic.id}/juego/memorama`,
         `#/tema/${topic.id}/juego/ahorcado`,
+        `#/tema/${topic.id}/juego/quiz-significado`,
+        `#/tema/${topic.id}/juego/intruso`,
       ])
     );
-    expect(container.textContent.match(/Próximamente/g)).toHaveLength(7);
-    expect(container.querySelectorAll('button[disabled]')).toHaveLength(7);
+    expect(container.textContent.match(/Próximamente/g)).toHaveLength(5);
+    expect(container.querySelectorAll('button[disabled]')).toHaveLength(5);
   });
 
   it('unknown topic → fallback with link home, no crash', () => {

@@ -1,9 +1,10 @@
 # Manual a11y checklist (AC-7) — run before closing a spec
 
 Automated coverage lives in `Flashcards.a11y.test.jsx`, `Memorama.a11y.test.jsx`,
-`Ahorcado.a11y.test.jsx`, `QuizSignificado.a11y.test.jsx`, `TopicsHub.test.jsx`,
-`TopicView.test.jsx` and `CardImage.test.jsx`; jsdom cannot measure layout, so this
-checklist is completed by a human on a real browser (Chrome/Firefox, touch + keyboard).
+`Ahorcado.a11y.test.jsx`, `QuizSignificado.a11y.test.jsx`, `Intruso.a11y.test.jsx`,
+`TopicsHub.test.jsx`, `TopicView.test.jsx`, `TopicView.availability.test.jsx` and
+`CardImage.test.jsx`; jsdom cannot measure layout, so this checklist is completed by a
+human on a real browser (Chrome/Firefox, touch + keyboard).
 
 ## Setup
 - [ ] `npm run dev`, open at 360×640 (DevTools device mode) then 1280×800.
@@ -61,6 +62,19 @@ checklist is completed by a human on a real browser (Chrome/Firefox, touch + key
 - [ ] Keyboard: Tab/Shift+Tab reach every option, question 🔊, "Siguiente", "Salir" and sound toggle; Enter/Space activate; focus ring uses `--neon-green`.
 - [ ] 2×2 grid fits without horizontal scroll at 360px; long meanings wrap (no truncation); targets ≥44px.
 - [ ] TTS: question is read at round start, 🔊 repeats it, selecting an option reads its meaning and "🔊 Respuesta" reads the correct meaning; global mute works.
+- [ ] Without `speechSynthesis` all 🔊 controls are hidden and the game is fully playable.
+- [ ] `prefers-reduced-motion` → no transitions/animations.
+
+## El intruso
+- [ ] Topic view: with only one eligible topic, the "El intruso" tile is disabled and announces "En mantenimiento · agrega otro tema con al menos 3 cartas"; with two topics of ≥3 cards it becomes a "Jugar ahora" link.
+- [ ] Direct URL below `minCards` or without the second eligible topic shows the safe screen and "Volver al tema"; the game never loads in that state.
+- [ ] Setup: native labelled rounds `<select>` (3–10, default 10) reachable by Tab; sound toggle, "Empezar" and "Salir" reachable; "Empezar" starts with a user gesture.
+- [ ] Round: prompt shows the anchor topic title; four meaning buttons form a 2×2 grid with a decorative image and an accessible name "Opción N: <significado>"; no `front` is exposed before answering.
+- [ ] One attempt: a wrong base turns red, the intruder turns green, its topic is revealed, every option is disabled and "Siguiente" appears; a correct pick announces "¡Correcto!".
+- [ ] `aria-live` announces the round, the result and the intruder topic without stale repeats after "Siguiente".
+- [ ] Keyboard: Tab/Shift+Tab reach every option, question 🔊, "Siguiente", "Salir" and sound toggle; Enter/Space activate; focus ring uses `--neon-green`.
+- [ ] 2×2 grid fits without horizontal scroll at 360px; long meanings wrap; targets ≥44px.
+- [ ] TTS: the prompt is read at round start, 🔊 "Pregunta" repeats it, selecting an option reads its meaning and 🔊 "Intruso" reads the revealed intruder; global mute works.
 - [ ] Without `speechSynthesis` all 🔊 controls are hidden and the game is fully playable.
 - [ ] `prefers-reduced-motion` → no transitions/animations.
 

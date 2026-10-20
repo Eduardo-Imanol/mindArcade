@@ -26,9 +26,9 @@
 | 2 | `memorama` | Memorama | Emparejar carta-término con carta-significado | 4 | Memory | **spec-03 (available)** |
 | 3 | `ahorcado` | Ahorcado | Adivinar el término letra a letra usando el significado como pista | 3 | Hangman | **spec-04 (available)** |
 | 4 | `sopa-de-letras` | Sopa de letras | Encontrar los términos ocultos en la cuadrícula; se marca al hallarlos | 4 | Word Search | spec-05 (pendiente) |
-| 5 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | **spec-06 (approved 2026-10-19)** |
+| 5 | `quiz-significado` | Elige el significado | Pregunta (término) + 4 opciones de significado; solo una correcta | 4 | Quiz / Choose the Word | **spec-06 (available)** |
 | 6 | `caza-significados` | Caza de significados | Arcade cronometrado: cazar la opción correcta antes de que escape (adaptación de caza de sonidos sin audio) | 4 | Sound Hunt | spec-07 |
-| 7 | `intruso` | El intruso | Set de 4 significados: encontrar el que no pertenece (requiere grupos/etiquetas en el deck) | 4 | Intruder | spec-08 |
+| 7 | `intruso` | El intruso | Set de 3 significados del tema + 1 de otro tema: encontrar el intruso (gate: ≥2 temas con ≥3 cartas) | 3 | Intruder | **spec-08 (available)** |
 | 8 | `lluvia-meteoros` | Lluvia de meteoros | Escribir/elegir la traducción antes de que el meteoro caiga | 6 | Meteor Rush | spec-09 |
 | 9 | `conecta-pares` | Conecta palabra–significado | Unir pares término↔significado tocando ambas columnas | 3 | Connect the Words | spec-10 |
 | 10 | `serpiente-significados` | Serpiente de significados | Snake que come la fruta con el significado correcto del término pedido | 4 | Snake | spec-11 |
