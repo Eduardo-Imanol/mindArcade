@@ -404,10 +404,14 @@ SRS inválido, historial inválido o storage lleno.
 ## ✍️ Firma
 
 - [ ] Spec revisada y firmada por humano (punto de no retorno).
+- [x] Arranque autorizado por Eduardo el **2026-10-20** («la spec 12 comienza con
+  T1 y T2»): habilita **T1 (parser descripción completa)** y **T2 (topicMeta +
+  portada)**; ambos completados con gates verdes. T3–T11 pendientes de la firma
+  completa.
 - Decisiones a firmar: selección no aprendidas + vencidas; portada = primera imagen
   del deck; fechas persistidas localmente; dashboard `#/progreso`; `GameDefinition`
   por objeto; descripción completa; «Sepect» fuera del header; sin dependencias
   nuevas.
 
-**Nota de estado:** este documento es un borrador. No se implementa código hasta que
-Eduardo lo firme y confirme el orden de las tareas.
+**Nota de estado:** borrador con **arranque parcial autorizado (T1+T2)**. El resto
+de la implementación (T3–T11) espera la firma humana completa.

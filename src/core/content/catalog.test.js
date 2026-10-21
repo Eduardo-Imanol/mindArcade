@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { buildCatalog, loadCatalog, loadCustomTopics, saveCustomTopic, slugify, uniqueId } from './catalog.js';
+import { loadTopicMeta } from './topicMeta.js';
 
 const FIXTURE_A = `# Funciones en Programación
 Una función encapsula lógica reutilizable y evita repetir código.
@@ -65,5 +66,56 @@ describe('custom topic persistence', () => {
     localStorage.setItem('sepect.topics.custom.v1', '{oops');
     expect(loadCustomTopics()).toEqual([]);
     expect(() => loadCatalog()).not.toThrow();
+  });
+});
+
+describe('addedAt (spec-12 AC-8)', () => {
+  const META = { 'funciones-en-programacion': { addedAt: '2026-01-01T00:00:00.000Z' } };
+
+  it('buildCatalog exposes addedAt from meta without writing', () => {
+    const catalog = buildCatalog([FIXTURE_A], [], META);
+    expect(catalog[0].addedAt).toBe('2026-01-01T00:00:00.000Z');
+    expect(localStorage.getItem('sepect.topics.meta.v1')).toBeNull();
+  });
+  it('without meta → no addedAt field', () => {
+    const catalog = buildCatalog([FIXTURE_A], []);
+    expect(catalog[0].addedAt).toBeUndefined();
+  });
+  it('custom createdAt wins over meta', () => {
+    const catalog = buildCatalog([], [{ title: 'Mi tema', md: FIXTURE_A, createdAt: '2026-05-05T05:05:05.000Z' }], META);
+    expect(catalog[0].source).toBe('custom');
+    expect(catalog[0].addedAt).toBe('2026-05-05T05:05:05.000Z');
+  });
+  it('old custom without createdAt falls back to meta, or to nothing', () => {
+    const custom = { title: 'Mi tema', md: FIXTURE_A };
+    const withMeta = buildCatalog([], [custom], { 'mi-tema': { addedAt: '2026-01-01T00:00:00.000Z' } });
+    expect(withMeta[0].addedAt).toBe('2026-01-01T00:00:00.000Z');
+    const without = buildCatalog([], [custom]);
+    expect(without[0].addedAt).toBeUndefined();
+  });
+  it('corrupt meta input is ignored', () => {
+    const catalog = buildCatalog([FIXTURE_A], [], { 'funciones-en-programacion': { addedAt: 'nope' } });
+    expect(catalog[0].addedAt).toBeUndefined();
+    expect(buildCatalog([FIXTURE_A], [], []).length).toBe(1);
+  });
+  it('saveCustomTopic persists createdAt and returns addedAt', () => {
+    const ok = saveCustomTopic({ title: 'Con fecha', md: FIXTURE_A });
+    expect(ok.ok).toBe(true);
+    const reloaded = loadCustomTopics()[0];
+    expect(typeof reloaded.createdAt).toBe('string');
+    expect(Number.isFinite(Date.parse(reloaded.createdAt))).toBe(true);
+    expect(ok.topic.addedAt).toBe(reloaded.createdAt);
+    expect(buildCatalog([], loadCustomTopics())[0].addedAt).toBe(reloaded.createdAt);
+  });
+  it('loadCatalog is pure: it never writes topic meta', () => {
+    loadCatalog();
+    expect(localStorage.getItem('sepect.topics.meta.v1')).toBeNull();
+  });
+  it('loadCatalog merges builtin + meta dates', () => {
+    localStorage.setItem('sepect.topics.meta.v1', JSON.stringify(META));
+    const catalog = loadCatalog();
+    expect(catalog[0].source).toBe('builtin');
+    expect(catalog[0].addedAt).toBe('2026-01-01T00:00:00.000Z');
+    expect(loadTopicMeta()).toEqual(META);
   });
 });

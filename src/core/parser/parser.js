@@ -62,12 +62,8 @@ export function parseTopic(md = '') {
         continue;
       }
       if (inCode) continue;
-      if (seenCard) {
-        if (line.startsWith('-')) cardLines.push(line);
-        continue;
-      }
       if (!line) {
-        if (descriptionLines.length) descriptionLines.push('');
+        if (!seenCard && descriptionLines.length) descriptionLines.push('');
         continue;
       }
       const h = line.match(/^#{1,6}\s+(.+)/);
@@ -75,13 +71,15 @@ export function parseTopic(md = '') {
         if (!title) title = h[1].trim().slice(0, 80);
         continue;
       }
+      if (/^[-*_=]{3,}$/.test(line)) continue;
       if (line.startsWith('-')) {
         seenCard = true;
         cardLines.push(line);
         continue;
       }
-      if (/^[>|]/.test(line) || /^[-*_=]{3,}$/.test(line)) continue;
-      descriptionLines.push(line);
+      if (seenCard) continue;
+      if (/^[>|]/.test(line)) continue;
+      descriptionLines.push(raw.trimStart());
     }
     const description = descriptionLines.join('\n').trim();
     const topic = { id: slugify(title), title, description };

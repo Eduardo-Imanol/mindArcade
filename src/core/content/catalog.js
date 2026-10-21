@@ -95,11 +95,13 @@ export function saveCustomTopic({ title = '', md = '', images = {} } = {}) {
   const custom = loadCustomTopics();
   const taken = [...builtin.map((t) => t.id), ...custom.map((t) => t.id)];
   const id = uniqueId(slugify(title || parsed.topic.title), taken);
+  const createdAt = new Date().toISOString();
   const record = {
     id,
     title: title || parsed.topic.title || 'Tema sin título',
     md,
     images,
+    createdAt,
   };
   const persisted = saveCustomTopics([...custom, record]);
   if (!persisted.ok) {
@@ -107,10 +109,19 @@ export function saveCustomTopic({ title = '', md = '', images = {} } = {}) {
   }
   return {
     ok: true,
-    topic: { id, title: record.title, source: 'custom', description: parsed.topic.description, cards: parsed.cards, errors: parsed.errors, images },
+    topic: {
+      id,
+      title: record.title,
+      source: 'custom',
+      description: parsed.topic.description,
+      cards: parsed.cards,
+      errors: parsed.errors,
+      images,
+      addedAt: createdAt,
+    },
   };
 }
 
 export function loadCatalog() {
-  return buildCatalog(loadBuiltinTopicMds(), loadCustomTopics());
+  return buildCatalog(loadBuiltinTopicMds(), loadCustomTopics(), loadTopicMeta());
 }

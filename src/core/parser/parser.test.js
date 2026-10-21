@@ -20,6 +20,15 @@ const FIXTURE_C = `# Animales
 - Q: house | A: casa | I: https://example.com/house.png
 - Q: book | A: libro`;
 
+const LONG_DESCRIPTION = 'Una descripción muy larga. '.repeat(40);
+
+const FIXTURE_LONG = `# Tema largo
+${LONG_DESCRIPTION}
+
+Segundo párrafo.
+
+- Q: a | A: b`;
+
 describe('parseMarkdown', () => {
   it('fixture → 3 questions + 1 error', () => {
     const { questions, errors } = parseMarkdown(FIXTURE);
@@ -73,5 +82,55 @@ describe('parseTopic', () => {
     expect(() => parseTopic(null)).not.toThrow();
     expect(parseTopic(42).cards).toEqual([]);
     expect(parseTopic('').cards).toEqual([]);
+  });
+});
+
+describe('parseTopic — descripción completa (spec-12 AC-1/AC-3)', () => {
+  it('keeps the whole prose >400 chars with two paragraphs, no truncation', () => {
+    const { topic, cards } = parseTopic(FIXTURE_LONG);
+    expect(topic.description).toBe(`${LONG_DESCRIPTION}\n\nSegundo párrafo.`);
+    expect(topic.description.length).toBeGreaterThan(400);
+    expect(cards).toHaveLength(1);
+  });
+  it('contract from spec: two paragraphs preserved exactly, cards parse', () => {
+    const md = `# Tema\n${LONG_DESCRIPTION}\n\nSegundo párrafo.\n\n- Q: a | A: b`;
+    const { topic, cards } = parseTopic(md);
+    expect(topic.description).toBe(`${LONG_DESCRIPTION}\n\nSegundo párrafo.`);
+    expect(topic.description).toContain('\n\n');
+    expect(cards[0]).toMatchObject({ front: 'a', back: 'b' });
+  });
+  it('no description → empty string', () => {
+    expect(parseTopic('# Tema\n- Q: a | A: b').topic.description).toBe('');
+    expect(parseTopic('- Q: a | A: b').topic.description).toBe('');
+    expect(parseTopic('# Tema\n\n\n- Q: a | A: b').topic.description).toBe('');
+  });
+  it('headings, code blocks and horizontal rules never pollute the description', () => {
+    const md = [
+      '# Título',
+      'Párrafo inicial.',
+      '## Subtítulo intermedio',
+      '```',
+      'const x = 1;',
+      '```',
+      '---',
+      '> blockquote',
+      'Párrafo final.',
+      '',
+      '- Q: a | A: b',
+    ].join('\n');
+    const { topic, cards, errors } = parseTopic(md);
+    expect(topic.description).toBe('Párrafo inicial.\nPárrafo final.');
+    expect(topic.description).not.toMatch(/Subtítulo|const x|blockquote|---/);
+    expect(cards).toHaveLength(1);
+    expect(errors).toEqual([]);
+  });
+  it('prose after the first card is ignored for description', () => {
+    const { topic, cards } = parseTopic('# T\nIntro.\n- Q: a | A: b\nTexto posterior.');
+    expect(topic.description).toBe('Intro.');
+    expect(cards).toHaveLength(1);
+  });
+  it('multiline prose keeps line breaks and trims outer blanks', () => {
+    const { topic } = parseTopic('# T\n\n  Línea uno\nLínea dos\n\n\n- Q: a | A: b');
+    expect(topic.description).toBe('Línea uno\nLínea dos');
   });
 });

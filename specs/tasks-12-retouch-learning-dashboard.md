@@ -1,8 +1,9 @@
 # tasks.md — retouch-learning-dashboard (spec-12, borrador)
 
 > Derivado de `specs/spec-12-retouch-learning-dashboard.md` (borrador 2026-10-20).
-> **Estado: documentos creados; sin código ejecutado.** La implementación empieza
-> solo después de la firma humana y de que Eduardo confirme el orden.
+> **Estado: T1 y T2 implementados el 2026-10-20** con autorización de arranque de
+> Eduardo («la spec 12 comienza con T1 y T2»); T3–T11 pendientes y la firma completa
+> de la spec sigue abierta.
 > Incremento anterior: spec-11 cerrada técnicamente (`specs/tasks-11-serpiente-significados.md`).
 > Sin dependencias nuevas. Sin backend. Sin cambios en la mecánica de los 8 juegos.
 
@@ -31,13 +32,13 @@ Cadenas críticas:
 ## Tasks
 
 ### T1 — Parser: descripción completa [depends: none]
-- [ ] **Deliverable:** `src/core/parser/parser.js`:
+- [x] **Deliverable:** `src/core/parser/parser.js`:
   - `parseTopic` acumula toda la prosa anterior a la primera carta, conservando
     párrafos y saltos relevantes.
   - Elimina el `slice(0, 160)` de `description`.
   - Excluye encabezados, bloques de código, líneas de carta y reglas horizontales.
   - No lanza excepciones con entradas inválidas.
-- [ ] **Tests:** `src/core/parser/parser.test.js`:
+- [x] **Tests:** `src/core/parser/parser.test.js`:
   - fixture de >400 caracteres y dos párrafos → descripción exacta;
   - descripción vacía → `''`;
   - fixture A existente sigue igual;
@@ -46,21 +47,24 @@ Cadenas críticas:
 - **Contexto:** spec §Decisiones, HU-1; parser actual y tests existentes.
 - **Done when:** tests del parser en verde y ningún test antiguo de descripción roto.
 - **Estimate:** S.
+- **Estado:** ✅ hecho 2026-10-20. Corrección añadida: la regla horizontal `---`
+  se detecta antes que la línea de carta (antes se empujaba como carta y truncaba
+  la descripción). Gates: 560/560, lint 0, build OK.
 
 ### T2 — Metadatos de tema, `addedAt` y portada [depends: none]
-- [ ] **Deliverable:** `src/core/content/topicMeta.js`:
+- [x] **Deliverable:** `src/core/content/topicMeta.js`:
   - clave `sepect.topics.meta.v1`;
   - `loadTopicMeta()`, `saveTopicMeta()`, `ensureTopicMeta(topics, now)`;
   - cuota/JSON corrupto → fallback seguro;
   - no muta la entrada.
-- [ ] **Deliverable:** `src/core/content/cover.js`:
+- [x] **Deliverable:** `src/core/content/cover.js`:
   - `topicCoverCard(topic)` → primera carta con imagen explícita; si no, primera
     carta.
-- [ ] **Deliverable:** `src/core/content/catalog.js`:
+- [x] **Deliverable:** `src/core/content/catalog.js`:
   - `saveCustomTopic` persiste `createdAt`;
   - `buildCatalog` expone `addedAt` si existe, sin escribir;
   - los temas custom antiguos sin `createdAt` quedan soportados.
-- [ ] **Tests:** `topicMeta.test.js`, `cover.test.js`, `catalog.test.js`:
+- [x] **Tests:** `topicMeta.test.js`, `cover.test.js`, `catalog.test.js`:
   - fecha persistida y estable en segunda llamada;
   - corrupción segura;
   - portada con/sin imagen;
@@ -69,6 +73,8 @@ Cadenas críticas:
 - **Contexto:** spec HU-2; `catalog.js`; `CardImage`; `sepect.topics.custom.v1`.
 - **Done when:** fechas y portada deterministas, sin side effects en `loadCatalog`.
 - **Estimate:** M.
+- **Estado:** ✅ hecho 2026-10-20. `loadCatalog()` pasa `loadTopicMeta()` como
+  tercer argumento (lectura pura, sin escritura). Gates: 560/560, lint 0, build OK.
 
 ### T3 — Estados de aprendizaje y selección de estudio [depends: none]
 - [ ] **Deliverable:** `src/core/repetition/learning.js`:
@@ -276,12 +282,15 @@ Cadenas críticas:
 - **Riesgo principal:** el cambio de selección (spec-03 AC-3 superseded) rompe
   fixtures antiguos que esperaban backfill con aprendidas no vencidas. Se actualizan
   junto con cada tarea, no al final.
-- **Regla:** no se implementa nada hasta que Eduardo firme la spec-12 y confirme el
-  orden de las tareas.
+- **Regla:** T1/T2 autorizados por Eduardo el 2026-10-20 (arranque del incremento).
+  Para T3 en adelante se requiere además la firma completa de la spec-12.
 
 ## Sign-off
 
-- [ ] Approved by: Eduardo — date: pendiente.
+- [ ] Approved by: Eduardo — date: pendiente (amplio).
+- [x] Autorización parcial de arranque: **Eduardo — 2026-10-20 — «la spec 12
+  comienza con T1 y T2»** (habilita T1/T2; T3–T11 siguen esperando la firma de la
+  spec completa).
 - Decisiones a firmar: selección no aprendidas + vencidas; portada = primera imagen
   del deck; fechas persistidas localmente; dashboard `#/progreso`; `GameDefinition`
   por objeto; descripción completa; «Sepect» fuera del header; sin dependencias
@@ -290,5 +299,8 @@ Cadenas críticas:
 ## Estado actual
 
 - [x] Documentos creados: `spec-12` + `tasks-12`.
-- [ ] Código: no iniciado.
-- [ ] Firma humana: pendiente.
+- [x] T1 — Parser: descripción completa (2026-10-20).
+- [x] T2 — `topicMeta` + `topicCoverCard` + `createdAt` (2026-10-20).
+- [ ] T3–T11: no iniciados.
+- [ ] Firma completa de la spec: pendiente.
+- Gates tras T1+T2: `npm test` 560/560, `npm run lint` 0, `npm run build` OK.
