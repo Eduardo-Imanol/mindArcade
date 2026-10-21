@@ -175,6 +175,15 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 - [ ] Sound toggle in the header and in-game stay in sync; mute persists after reload.
 - [ ] `prefers-reduced-motion` → `.btn-neon` and modal transitions are instant.
 
+## Spec-15 — PWA instalable + carátula
+- [ ] Hub: la carátula (`img.hub-cover`) aparece bajo la cabecera, con `alt` descriptivo, `width`/`height` 1200×630 y sin desplazamiento horizontal a 360px; no duplica el `h1` ni añade texto navegable.
+- [ ] La carátula no tapa ni desplaza los controles del hub en 360px ni en escritorio; el orden de tabulación sigue siendo cabecera → búsqueda → filtros → temas.
+- [ ] Con lector de pantalla, la carátula se anuncia como imagen con su descripción y no como texto suelto.
+- [ ] Chrome (escritorio y Android): aparece la opción «Instalar» con el icono propio del arcade (no el «N» de Netlify); el nombre instalado es «Sepect — Arcade de aprendizaje».
+- [ ] Instalado, la app abre a pantalla completa (`display: standalone`), arranca sin conexión y conserva la portada/carátula.
+- [ ] `manifest.webmanifest` responde `Content-Type: application/manifest+json` (verificar en DevTools → Network) y el service worker se registra en producción (DevTools → Application → Service Workers).
+- [ ] La pantalla «Añadir a pantalla de inicio» en iOS muestra la carátula/imagen propia (apple-touch-icon 180×180).
+
 ## Screen reader pass (VoiceOver/TalkBack or NVDA)
 - [ ] Dialog opens with content reachable; Cerrar and Cancelar both work.
 - [ ] Grade + XP summary announced on completion.

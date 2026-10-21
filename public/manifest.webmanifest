@@ -1,0 +1,56 @@
+{
+  "name": "Sepect — Arcade de aprendizaje",
+  "short_name": "Sepect",
+  "description": "Arcade local para aprender temas importantes: programación, idiomas, universidad y más. Minijuegos con repetición espaciada, sin backend y sin envío de datos.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "background_color": "#0f051d",
+  "theme_color": "#120b29",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["education", "games", "productivity"],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mis temas",
+      "short_name": "Temas",
+      "url": "./",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Progreso",
+      "short_name": "Progreso",
+      "url": "./#/progreso",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

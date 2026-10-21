@@ -1,79 +1,76 @@
 # FOCUS
 
 ## Active objective (single)
-spec-13 "impeccable-ui-retouch" — **T1–T22 + T24 implementados y documentados
-2026-10-21**; gates verdes (671/671 tests, lint 0, build OK). Pendiente T23
-(sesión manual 360px + teclado del flujo «Crear tema») y la firma humana del
-diff. La aprobación/firma de spec-12 sigue pendiente; no se abre otro
-incremento hasta cerrar ambas.
+spec-15 "pwa-arcade-cover" — **T1–T13 implementados y documentados 2026-10-21**;
+gates verdes (tests 100%, lint 0, build OK). Pendiente T14 (verificación manual:
+instalar la PWA en Chrome) y T15 (firma humana de la spec). Petición explícita de
+Eduardo: PWA instalable (hoy Chrome decía «Esta aplicación no puede ser
+instalarse») + carátula arcade propia.
 
-**Adicional (cerrado técnicamente):** spec-14 «topic-content-pipeline» T1–T8 completados
-2026-10-21; gates verdes (680/680 tests, lint 0, build OK), skill + referencias
-y test de arte generalizado. Pendiente firma humana del diff. AC-29 al ejecutar
-el primer tema real.
+**Pendientes de firma (anteriores):** spec-12, spec-13 y spec-14 siguen
+esperando aprobación humana del diff; spec-13 conserva T23 (sesión manual
+360px + teclado) sin cerrar.
 
 ## Current phase
-Fases SDD para spec-13:
+Fases SDD para spec-15:
 - F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; deps/infra/git-history
   requieren aprobación humana).
-- F2 ✅ `specs/spec-13-impeccable-ui-retouch.md` (firmada) con alcance 3 altas
-  + medias UI.
-- F3 ✅ `tasks.md` con T1–T24 y grafo de dependencias.
-- F4 ✅ Fases A–C (T1–T21) implementadas.
-- F5 ✅ Fase D: gates (`npm test` 671/671, `npm run lint` 0, `npm run build`
-  OK — solo warning preexistente de chunk >500 kB) + docs sincronizados
-  (checklist a11y, MEMORY, FOCUS, spec ACs y tareas marcadas).
-- F6 🟡 Cierre: T23 sesión manual + firma humana del diff.
+- F2 ✅ `specs/spec-15-pwa-arcade-cover.md` (draft) con alcance PWA + marca.
+- F3 ✅ `tasks.md` con T1–T15 y grafo de dependencias.
+- F4 ✅ Fases A–C (T1–T11) implementadas: arte propio (PNG sin deps), manifest,
+  SW, `_headers`, `index.html`, registro del SW, carátula en el hub.
+- F5 ✅ Fase D: gates (`npm test`, `npm run lint` 0, `npm run build` OK — solo
+  warning preexistente de chunk >500 kB) + docs sincronizados (spec, tasks,
+  MEMORY, FOCUS, checklist a11y).
+- F6 🟡 Cierre: T14 verificación manual (instalar PWA) + T15 firma.
 
 ## Blockers
-- T23: sesión manual humana (360px + teclado, flujo «Crear tema»).
-- Firmas pendientes: spec-12 y spec-13 (difiere de aprobación de implementación).
+- T14: verificación manual humana de la instalación (Chrome Android y escritorio).
+- Firmas pendientes: spec-12, spec-13, spec-14 y spec-15.
 
 ## Done this session (2026-10-21)
-- **Fase A (T1–T4)**: `Modal.jsx` con overlay/backdrop, `role="dialog"`,
-  `aria-labelledby` (prop `title` + `useId`), focus trap Tab/Shift+Tab, Escape,
-  restauración de foco y scroll lock; clases `.modal-*`; `CreateTopicForm` sin
-  `h2` propio; tests DOM en `TopicsHub.a11y.test.jsx`.
-- **Fase B (T5–T15)**: tokens nuevos (`--bg3`, `--bg-deep`, `--neon-violet`,
-  `--cyan-dim`, `--text-dim`, …); cian unificado `#00ffcc` (fuera `#00f5d4` y
-  `#0d0d1a`); violeta pares `#b388ff` (6.5:1); `.btn-neon` completo con
-  reduced-motion; estilos de `select` de serpiente; `.error-page` y
-  `.game-app-title`; `PAGE`/`INPUT`/`CONTROL` fuera de vistas; `Button.jsx`
-  eliminado.
-- **Fase C (T16–T21)**: `components/ProgressBar.jsx`, hook
-  `views/useStudyCardCounts.js`, `document.title` por ruta (test
-  `src/app/title.test.js`), `aria-describedby` en tiles de juegos,
-  emisor `subscribeSettings` + `SoundToggle` sincronizado con
-  `useSyncExternalStore` (test AC-21), `Dashboard` empareja métricas por `id`.
-- **Gate de design system**: `src/ui/design-system.test.js` cubre AC-6..AC-18
-  y AC-9/10/11/12/13/14/20/22 por regex/DOM.
+- **spec-15 Fase A**: `scripts/p5-art/raster.mjs` (canvas RGBA + encoder PNG con
+  `node:zlib`), `scripts/p5-art/pixel-font.mjs` (fuente pixel 5×7),
+  `scripts/p5-art/arcade-brand.mjs` (icono de gabinete + cover 1200×630),
+  `scripts/generate-pwa-assets.mjs` (`npm run pwa:assets`).
+- **spec-15 Fase B**: `public/manifest.webmanifest` (standalone, iconos any +
+  maskable, shortcuts), `public/sw.js` (install/activate/fetch, precache del
+  shell, cache-first en `/assets/`, network-first en navegaciones),
+  `src/core/pwa/registerServiceWorker.js` + registro en `src/main.jsx` solo en
+  PROD, `public/_headers` con `Content-Type: application/manifest+json`.
+- **spec-15 Fase C**: carátula arcade en el hero del hub (`TopicsHub.jsx` +
+  `.hub-cover` en `tokens.css`).
+- **spec-15 Fase D**: `scripts/generate-pwa-assets.test.mjs` (10 casos) y
+  `src/core/pwa/registerServiceWorker.test.js` (4 casos); `tasks.md` de spec-13
+  archivado en `specs/tasks-13-impeccable-ui-retouch.md`.
+- **spec-11 (cerrado)**: D-pad táctil de la serpiente movido justo debajo del
+  tablero (`3adc282`, subido a `origin/main`).
 
-## Decisions (spec-13)
-- **Contraste**: nuevo token `--neon-violet: #b388ff` para texto violeta
-  (≈6.5:1); el violeta original `#7c4dff` solo sobrevive si lo exige el diseño.
-- **Un solo cian app-wide**: `--neon-cyan: #00ffcc`; el gate de
-  `design-system.test.js` falla si reaparece `#00f5d4`/`#0d0d1a`.
-- **Tailwind preflight se conserva**: los daños colaterales (márgenes UA
-  anulados) se reparan con clases explícitas (`.error-page`,
-  `.game-app-title`), quitando Tailwind está fuera de alcance.
-- **Tests leen tokens.css/código fuente**: al mover código a componentes hay
-  que actualizar las aserciones (pasó con ConectaPares y Dashboard).
-- **TopicView conserva `button[disabled]`** + `aria-describedby` (AC-20).
-- **Fuera de alcance**: partir `tokens.css`, reducir juegos >200 líneas,
-  refactor de store/persistencia, tocar `metrics.js`.
+## Decisions (spec-15)
+- **Cero dependencias**: nada de `vite-plugin-pwa`/Workbox; el SW es propio y
+  los PNG se generan con Node puro (`node:zlib`).
+- **Rutas relativas** (`./`) en manifest/HTML/SW para tolerar subpaths.
+- **Netlify y MIME**: Netlify no sirve `.webmanifest` como
+  `application/manifest+json`; se fuerza con `public/_headers` (sin tocar
+  `netlify.toml`, para no pisar la config del panel).
+- **La carátula no implica contenido nuevo**: comunica la visión (programación,
+  idiomas, universidad); los temas curriculares siguen fuera de alcance.
+- **El hub gana la carátula como portada**: la idea «arcade de aprendizaje» se
+  entiende al entrar, no solo al instalar.
 
 ## Previous increments
 - spec-14 "topic-content-pipeline" — implementación T1–T8 completa 2026-10-21;
-  gates verdes 680/680, generalización verificada con tema sintético; pendiente
-  firma humana del diff (AC-29 al primer tema real).
+  gates verdes 680/680; pendiente firma humana del diff (AC-29 al primer tema real).
+- spec-13 "impeccable-ui-retouch" — T1–T22 + T24 implementados; plan archivado en
+  `specs/tasks-13-impeccable-ui-retouch.md`; pendiente T23 y firma.
 - spec-12 "retouch-learning-dashboard" — implementación T1–T11 completa
   2026-10-20; gates verdes 654/654; pendiente firma humana del diff/spec.
 - spec-11 "serpiente-significados" — cerrada técnicamente 2026-10-20;
   catálogo **8 juegos / 8 available / 0 soon**.
 
 ## Next atomic step
-T23 (humano): `npm run dev`, sesión en 360px + solo teclado del flujo
-«Crear tema» contra el checklist `docs/manual-a11y-checklist.md` (sección
-spec-13) → firma del diff → archivar `tasks.md` en `specs/tasks-13-*.md` si
-procede. Antes de firmar, re-ejecutar `npm test`, `npm run lint` y
-`npm run build`.
+T14 (humano): desplegar en Netlify, abrir la app en Chrome (Android y
+escritorio) y comprobar que aparece «Instalar» con el icono propio, que la app
+arranca sin conexión y que la carátula se ve bien en el hub (360px y desktop).
+Después: T15 (firma de spec-15) y firma de los incrementos pendientes.
+

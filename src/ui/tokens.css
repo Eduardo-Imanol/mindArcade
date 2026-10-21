@@ -215,6 +215,16 @@ a.game-tile:hover .game-tile__img { transform: scale(1.04); }
 .hub-subtitle { margin: 4px 0 0; opacity: .8; }
 .hub-header__actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .hub-progress-link { display: inline-flex; align-items: center; text-decoration: none; color: var(--text); }
+.hub-cover {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 16px auto 0;
+  border: 1px solid rgba(0, 255, 204, .28);
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 255, 204, .16);
+}
 .hub-controls {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;

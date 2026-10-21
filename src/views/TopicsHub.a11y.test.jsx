@@ -37,6 +37,17 @@ describe('TopicsHub a11y (AC-11)', () => {
     }
   });
 
+  it('shows the arcade cover as a described image (spec-15 AC-8)', () => {
+    const { container } = mount(<TopicsHub />);
+    const cover = container.querySelector('img.hub-cover');
+    expect(cover).toBeTruthy();
+    expect(cover.getAttribute('src')).toContain('cover/arcade-cover.png');
+    expect(cover.getAttribute('alt').length).toBeGreaterThan(20);
+    expect(cover.getAttribute('width')).toBe('1200');
+    expect(cover.getAttribute('height')).toBe('630');
+    expect(container.querySelectorAll('h1')).toHaveLength(1);
+  });
+
   it('exposes progressbar semantics with values on each topic card', () => {
     const { container } = mount(<TopicsHub />);
     const bar = container.querySelector('a.topic-card-tile [role="progressbar"]');

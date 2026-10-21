@@ -232,6 +232,15 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
         </div>
       </header>
 
+      <img
+        className="hub-cover"
+        src={`${import.meta.env.BASE_URL || '/'}cover/arcade-cover.png`}
+        alt="Carátula de Sepect: un arcade con una máquina por tipo de tema (programación, idiomas y universidad)."
+        width="1200"
+        height="630"
+        decoding="async"
+      />
+
       {topics.length === 0 ? (
         <div style={{ marginTop: 16 }}>
           <Card title="Aún no hay temas">
