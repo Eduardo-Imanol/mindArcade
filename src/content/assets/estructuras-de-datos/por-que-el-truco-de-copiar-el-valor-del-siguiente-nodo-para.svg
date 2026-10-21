@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el truco de copiar el valor del siguiente nodo para borrarlo es incorrecto?">
+<title>¿Por qué el truco de copiar el valor del siguiente nodo para borrarlo es incorrecto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="364.02" cy="364.35" rx="157.11" ry="157.11" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="314.99" cy="28.6" rx="111.91" ry="111.91" fill="hsl(320 90% 58% / 0.18)"/>
+<ellipse cx="484.65" cy="399.31" rx="188.76" ry="188.76" fill="hsl(320 90% 58% / 0.159)"/>
+<ellipse cx="460.41" cy="184.13" rx="123.91" ry="123.91" fill="hsl(320 90% 58% / 0.147)"/>
+<rect x="90" y="190" width="90" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="104" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">A</text>
+<rect x="200" y="190" width="90" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="214" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">B</text>
+<rect x="310" y="190" width="90" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="324" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">C</text>
+<line x1="180" y1="225" x2="187.2" y2="225" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="198,225 187.87,231.43 187.87,218.57" fill="#00ffcc"/>
+<line x1="290" y1="225" x2="297.2" y2="225" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="308,225 297.87,231.43 297.87,218.57" fill="#00ffcc"/>
+<line x1="400" y1="225" x2="409.2" y2="225" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="420,225 409.87,231.43 409.87,218.57" fill="#00ffcc"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">copiar valor B→A</text>
+<rect x="65.68" y="370" width="380.64" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">falla último / referencias</text>
+</svg>

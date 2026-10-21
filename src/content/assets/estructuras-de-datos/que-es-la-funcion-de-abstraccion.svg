@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la función de abstracción?">
+<title>¿Qué es la función de abstracción?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="365.1" cy="160.42" rx="156.7" ry="156.7" fill="hsl(320 90% 58% / 0.189)"/>
+<ellipse cx="423.17" cy="210" rx="181.75" ry="181.75" fill="hsl(320 90% 58% / 0.146)"/>
+<ellipse cx="46.2" cy="439.39" rx="85.12" ry="85.12" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="311.35" cy="221.59" rx="101.77" ry="101.77" fill="hsl(320 90% 58% / 0.163)"/>
+<rect x="46" y="130" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="60" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">rep. A</text>
+<rect x="46" y="290" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="60" y="308" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">rep. B</text>
+<line x1="206" y1="175" x2="260.24" y2="227.49" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="268,235 256.25,232.57 265.19,223.33" fill="#00ffcc"/>
+<line x1="206" y1="335" x2="260.24" y2="282.51" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="268,275 265.19,286.67 256.25,277.43" fill="#ff007f"/>
+<rect x="242" y="234" width="176" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="330" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mismo valor</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">AF(r)</text>
+</svg>

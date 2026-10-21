@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tres casos tiene el borrado en un BST?">
+<title>¿Qué tres casos tiene el borrado en un BST?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="20.39" cy="286.58" rx="162.04" ry="162.04" fill="hsl(45 90% 58% / 0.198)"/>
+<ellipse cx="377.9" cy="509.02" rx="178.22" ry="178.22" fill="hsl(45 90% 58% / 0.168)"/>
+<ellipse cx="23.4" cy="464.29" rx="203.78" ry="203.78" fill="hsl(45 90% 58% / 0.164)"/>
+<ellipse cx="234.04" cy="482.71" rx="143.03" ry="143.03" fill="hsl(45 90% 58% / 0.229)"/>
+<rect x="215.72" y="130" width="80.56" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">hoja</text>
+<rect x="195.26" y="210" width="121.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">un hijo</text>
+<rect x="113.42" y="290" width="285.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">dos hijos (sucesor)</text>
+</svg>

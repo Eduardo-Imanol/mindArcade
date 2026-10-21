@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre matriz y lista de adyacencia?">
+<title>¿Qué diferencia hay entre matriz y lista de adyacencia?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="324.65" cy="277.31" rx="95.77" ry="95.77" fill="hsl(120 90% 58% / 0.178)"/>
+<ellipse cx="285.32" cy="412.53" rx="188.22" ry="188.22" fill="hsl(120 90% 58% / 0.18)"/>
+<ellipse cx="8.93" cy="176.98" rx="73.19" ry="73.19" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="147.01" cy="97.33" rx="157.42" ry="157.42" fill="hsl(120 90% 58% / 0.227)"/>
+<rect x="30.98" y="150" width="238.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">matriz O(1) / Θ(V²)</text>
+<rect x="248.56" y="150" width="226.88" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">lista Θ(V+E) / mem</text>
+</svg>

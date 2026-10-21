@@ -19,19 +19,13 @@ import {
   summarize,
 } from './conecta-pares.logic.js';
 
-const PAGE = {
-  minHeight: '100vh',
-  width: '100%',
-  maxWidth: '100%',
-  padding: '16px clamp(16px, 4vw, 32px)',
-};
 
 const PAIR_COLORS = [
   '#00ffcc',
   '#ff007f',
   '#39ff14',
   '#ffd166',
-  '#7c4dff',
+  '#b388ff',
   '#ff6b35',
   '#00b3ff',
   '#ff4d6d',
@@ -256,9 +250,9 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
 
   if (available < MIN_PAIRS || startFailed) {
     return (
-      <main className="sepect-bg conecta-page" style={PAGE}>
+      <main className="sepect-bg conecta-page topic-page">
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Conecta pregunta–significado</h1>
+          <h1 className="neon game-app-title">Conecta pregunta–significado</h1>
           <p>
             Necesitas al menos 3 pares únicos de pregunta y significado para jugar este tema.
           </p>
@@ -284,9 +278,9 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
       (_, index) => MIN_PAIRS + index
     );
     return (
-      <main className="sepect-bg conecta-page" style={PAGE}>
+      <main className="sepect-bg conecta-page topic-page">
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Conecta pregunta–significado</h1>
+          <h1 className="neon game-app-title">Conecta pregunta–significado</h1>
           <p>Une cada pregunta con su significado tocando ambas columnas.</p>
           <div className="conecta-setup">
             <label htmlFor="conecta-pairs">Pares</label>
@@ -320,13 +314,12 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
   if (state.phase === 'complete') {
     const stats = summarize(state);
     return (
-      <main className="sepect-bg conecta-page" style={PAGE}>
+      <main className="sepect-bg conecta-page topic-page">
         <div className="game-stage">
           <h1
-            className="neon conecta-summary__title"
+            className="neon conecta-summary__title game-app-title"
             ref={summaryHeadingRef}
             tabIndex={-1}
-            style={{ fontSize: 24 }}
           >
             Sesión completada
           </h1>
@@ -419,7 +412,7 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
   };
 
   return (
-    <main className="sepect-bg conecta-page" style={PAGE}>
+    <main className="sepect-bg conecta-page topic-page">
       <div className="game-stage">
         <header className="conecta-header">
           <p className="conecta-progress">

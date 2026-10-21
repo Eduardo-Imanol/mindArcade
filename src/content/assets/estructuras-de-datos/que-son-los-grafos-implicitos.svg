@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son los grafos implícitos?">
+<title>¿Qué son los grafos implícitos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="150.53" cy="237.09" rx="143.99" ry="143.99" fill="hsl(265 90% 58% / 0.23)"/>
+<ellipse cx="114.75" cy="295.44" rx="101.39" ry="101.39" fill="hsl(265 90% 58% / 0.209)"/>
+<ellipse cx="468.91" cy="271.15" rx="135.8" ry="135.8" fill="hsl(265 90% 58% / 0.208)"/>
+<ellipse cx="453.89" cy="348.97" rx="202.95" ry="202.95" fill="hsl(265 90% 58% / 0.182)"/>
+<ellipse cx="151" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="102" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="53" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="235" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="158" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="81" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="193" cy="312" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="130" cy="312" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="67" cy="312" rx="4" ry="4" fill="#8a7fb5"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">vecinos calculados</text>
+<rect x="133.88" y="360" width="244.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">sin materializar</text>
+</svg>

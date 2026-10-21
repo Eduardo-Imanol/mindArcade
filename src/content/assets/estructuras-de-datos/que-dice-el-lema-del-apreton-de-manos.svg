@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué dice el lema del apretón de manos?">
+<title>¿Qué dice el lema del apretón de manos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="338.96" cy="407.28" rx="117.86" ry="117.86" fill="hsl(320 90% 58% / 0.189)"/>
+<ellipse cx="400.99" cy="399.8" rx="151.8" ry="151.8" fill="hsl(320 90% 58% / 0.144)"/>
+<ellipse cx="418.92" cy="406.38" rx="174.26" ry="174.26" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="73.66" cy="205.95" rx="182.2" ry="182.2" fill="hsl(320 90% 58% / 0.201)"/>
+<rect x="126" y="163" width="260" height="74" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">∑ deg(v) = 2|E|</text>
+</svg>

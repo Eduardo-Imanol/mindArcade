@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué importa la altura de un árbol de búsqueda?">
+<title>¿Por qué importa la altura de un árbol de búsqueda?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="444.81" cy="427.79" rx="151.74" ry="151.74" fill="hsl(45 90% 58% / 0.235)"/>
+<ellipse cx="49.09" cy="79.69" rx="185.34" ry="185.34" fill="hsl(45 90% 58% / 0.165)"/>
+<ellipse cx="283.9" cy="34.02" rx="182.73" ry="182.73" fill="hsl(45 90% 58% / 0.18)"/>
+<ellipse cx="510.49" cy="353.43" rx="172.38" ry="172.38" fill="hsl(45 90% 58% / 0.157)"/>
+<rect x="104.12" y="160" width="303.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#00ffcc">operación ~ O(h)</text>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">AVL/RB/B-tree acotan h</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿En qué se diferencian los análisis de peor caso, promedio, esperado y amortizado?">
+<title>¿En qué se diferencian los análisis de peor caso, promedio, esperado y amortizado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="197.48" cy="308.33" rx="158.68" ry="158.68" fill="hsl(168 90% 58% / 0.144)"/>
+<ellipse cx="47.39" cy="443.82" rx="132.84" ry="132.84" fill="hsl(168 90% 58% / 0.238)"/>
+<ellipse cx="421.47" cy="424.08" rx="198.06" ry="198.06" fill="hsl(168 90% 58% / 0.215)"/>
+<ellipse cx="28.91" cy="393.45" rx="168.4" ry="168.4" fill="hsl(168 90% 58% / 0.191)"/>
+<rect x="68" y="96" width="168" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="152" y="116" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">peor caso</text>
+<text x="350" y="116" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">la peor entrada</text>
+<rect x="68" y="184" width="168" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="152" y="204" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">promedio</text>
+<text x="350" y="204" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">distribución</text>
+<rect x="68" y="272" width="168" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="152" y="292" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">esperado</text>
+<text x="350" y="292" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">datos internos</text>
+<rect x="68" y="360" width="168" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="152" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">amortizado</text>
+<text x="350" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">secuencia</text>
+</svg>

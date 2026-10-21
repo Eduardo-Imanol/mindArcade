@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se implementa decreaseKey en un heap binario?">
+<title>¿Cómo se implementa decreaseKey en un heap binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="440.74" cy="245.1" rx="111.37" ry="111.37" fill="hsl(168 90% 58% / 0.184)"/>
+<ellipse cx="410.7" cy="167.81" rx="123.38" ry="123.38" fill="hsl(168 90% 58% / 0.214)"/>
+<ellipse cx="437.65" cy="59.99" rx="178.96" ry="178.96" fill="hsl(168 90% 58% / 0.16)"/>
+<ellipse cx="337.18" cy="175.17" rx="167.36" ry="167.36" fill="hsl(168 90% 58% / 0.149)"/>
+<rect x="145" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="180" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">9</text>
+<line x1="250" y1="235" x2="287.2" y2="235" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="298,235 287.87,241.43 287.87,228.57" fill="#00ffcc"/>
+<rect x="295" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="330" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="195.26" y="300" width="121.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sift-up</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">index map / lazy deletion</text>
+</svg>

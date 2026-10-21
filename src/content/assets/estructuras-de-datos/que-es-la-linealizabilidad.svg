@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la linealizabilidad?">
+<title>¿Qué es la linealizabilidad?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="159" cy="115.18" rx="88.19" ry="88.19" fill="hsl(320 90% 58% / 0.16)"/>
+<ellipse cx="130.01" cy="243.69" rx="118.49" ry="118.49" fill="hsl(320 90% 58% / 0.211)"/>
+<ellipse cx="321.34" cy="494.51" rx="88.77" ry="88.77" fill="hsl(320 90% 58% / 0.217)"/>
+<ellipse cx="151.4" cy="369.9" rx="89.24" ry="89.24" fill="hsl(320 90% 58% / 0.209)"/>
+<line x1="90" y1="250" x2="422" y2="250" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="200" cy="250" rx="5" ry="5" fill="none" stroke="#f1f1f1" stroke-width="2"/>
+<ellipse cx="330" cy="250" rx="5" ry="5" fill="none" stroke="#f1f1f1" stroke-width="2"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">ocurre entre invocación/respuesta</text>
+</svg>

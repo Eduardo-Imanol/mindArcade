@@ -1,13 +1,32 @@
 import React, { useMemo } from 'react';
 import NotFound from '../components/NotFound.jsx';
+import CardImage from '../components/CardImage.jsx';
+import ProgressBar from '../components/ProgressBar.jsx';
 import { listGames } from '../games/registry.js';
-import { gameArtUrl } from '../games/art.js';
 import { availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
-
+import { topicCoverCard } from '../core/content/cover.js';
+import { loadSrs } from '../core/repetition/srs.js';
+import { getTopicMetrics } from '../core/metrics/metrics.js';
+import { createStore } from '../core/storage/store.js';
+import { useStudyCardCounts } from './useStudyCardCounts.js';
 export default function TopicView({ topicId }) {
   const topics = useMemo(() => loadCatalog(), []);
   const games = useMemo(() => listGames(), []);
+  const srs = useMemo(() => loadSrs(), []);
+  const history = useMemo(() => createStore().load().history || [], []);
+  const now = useMemo(() => Date.now(), []);
+  const studyCardCounts = useStudyCardCounts(topics, srs);
+  const gameArt = useMemo(
+    () =>
+      Object.fromEntries(
+        games.map((game) => [
+          game.id,
+          game.art ? { kind: 'url', value: game.art } : null,
+        ])
+      ),
+    [games]
+  );
   const topic = topics.find((entry) => entry.id === topicId);
 
   if (!topic) {
@@ -16,9 +35,11 @@ export default function TopicView({ topicId }) {
 
   const availability = games.map((game) => ({
     game,
-    ...getGameAvailability(game, { topic, topics }),
+    ...getGameAvailability(game, { topic, topics, studyCardCounts }),
   }));
   const playableCount = availability.filter((entry) => entry.playable).length;
+  const metrics = getTopicMetrics(topic, srs, history, now);
+  const cover = topicCoverCard(topic) || { id: topic.id, front: topic.title };
 
   return (
     <main className="sepect-bg topic-page">
@@ -30,8 +51,24 @@ export default function TopicView({ topicId }) {
             <h1 className="neon topic-title">{topic.title}</h1>
             {topic.description && <p className="topic-description">{topic.description}</p>}
           </div>
-          <span className="topic-cards">{topic.cards.length} cartas</span>
+          <div className="topic-header__side">
+            <span className="topic-cards">{topic.cards.length} cartas</span>
+            <a className="btn-neon topic-progress-link" href="#/progreso">Progreso</a>
+          </div>
         </header>
+
+        <section className="topic-metrics" aria-label="Progreso del tema">
+          <ProgressBar value={metrics.progress} label={`Progreso de ${topic.title}`} />
+          <p className="topic-metrics__stats">
+            {metrics.learned} aprendidas · {metrics.notLearned} por aprender ·{' '}
+            {metrics.dueNow} para repasar
+          </p>
+          <p className="topic-metrics__days">
+            {metrics.daysStudied === 0
+              ? 'Sin sesiones todavía'
+              : `${metrics.daysStudied} día${metrics.daysStudied === 1 ? '' : 's'} de estudio`}
+          </p>
+        </section>
 
         <div className="topic-games__head">
           <h2 className="neon topic-games__title">Elige un juego</h2>
@@ -42,25 +79,20 @@ export default function TopicView({ topicId }) {
 
         <ul className="game-grid">
           {availability.map(({ game, playable, ...state }) => {
-            const art = gameArtUrl(game.id);
             const content = (
               <>
                 <div className="game-tile__media">
-                  {art && (
-                    <img
-                      className="game-tile__img"
-                      src={art}
-                      alt=""
-                      loading="lazy"
-                      width="512"
-                      height="320"
-                    />
-                  )}
+                  <CardImage
+                    image={gameArt[game.id]}
+                    card={cover}
+                    alt=""
+                    fill
+                    className="game-tile__img"
+                  />
                 </div>
                 <div className="game-tile__body">
                   <h3 className="game-tile__title">{game.title}</h3>
-                  <p className="game-tile__desc">{game.description}</p>
-                  <p className="game-tile__cta">
+                  <p className="game-tile__cta" id={`game-availability-${game.id}`}>
                     {playable ? 'Jugar ahora →' : availabilityMessage(state)}
                   </p>
                 </div>
@@ -81,6 +113,7 @@ export default function TopicView({ topicId }) {
                     className="card-neon game-tile game-tile--disabled"
                     type="button"
                     disabled
+                    aria-describedby={`game-availability-${game.id}`}
                   >
                     {content}
                   </button>

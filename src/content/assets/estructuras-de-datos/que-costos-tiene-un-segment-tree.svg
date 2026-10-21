@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué costos tiene un segment tree?">
+<title>¿Qué costos tiene un segment tree?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="201.47" cy="303.96" rx="91.86" ry="91.86" fill="hsl(265 90% 58% / 0.206)"/>
+<ellipse cx="462.11" cy="142.08" rx="83.08" ry="83.08" fill="hsl(265 90% 58% / 0.198)"/>
+<ellipse cx="460.91" cy="453.53" rx="179.8" ry="179.8" fill="hsl(265 90% 58% / 0.235)"/>
+<ellipse cx="305.31" cy="33.07" rx="77.87" ry="77.87" fill="hsl(265 90% 58% / 0.204)"/>
+<rect x="174.8" y="130" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">build O(n)</text>
+<rect x="140.7" y="200" width="230.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">update O(log n)</text>
+<rect x="147.52" y="270" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">query O(log n)</text>
+<rect x="174.8" y="340" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">space O(n)</text>
+</svg>

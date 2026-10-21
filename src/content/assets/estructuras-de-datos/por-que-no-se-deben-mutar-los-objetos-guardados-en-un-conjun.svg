@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué no se deben mutar los objetos guardados en un conjunto hash?">
+<title>¿Por qué no se deben mutar los objetos guardados en un conjunto hash?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="488.95" cy="463.8" rx="82.28" ry="82.28" fill="hsl(120 90% 58% / 0.212)"/>
+<ellipse cx="255.13" cy="454.78" rx="166.47" ry="166.47" fill="hsl(120 90% 58% / 0.23)"/>
+<ellipse cx="425.01" cy="193.79" rx="180.07" ry="180.07" fill="hsl(120 90% 58% / 0.216)"/>
+<ellipse cx="241.79" cy="214.69" rx="203.74" ry="203.74" fill="hsl(120 90% 58% / 0.194)"/>
+<rect x="176" y="170" width="160" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="190" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">clave</text>
+<line x1="256" y1="290" x2="256" y2="329.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,340 249.57,329.87 262.43,329.87" fill="#00ffcc"/>
+<rect x="131.4" y="380" width="249.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">hashCode cambia</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">se pierde en la tabla</text>
+</svg>

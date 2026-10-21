@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una lista XOR?">
+<title>¿Qué es una lista XOR?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="106.65" cy="115.69" rx="198.95" ry="198.95" fill="hsl(120 90% 58% / 0.211)"/>
+<ellipse cx="336.17" cy="383.46" rx="158.19" ry="158.19" fill="hsl(120 90% 58% / 0.152)"/>
+<ellipse cx="232.25" cy="181.38" rx="197.27" ry="197.27" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="495.57" cy="86.85" rx="175.75" ry="175.75" fill="hsl(120 90% 58% / 0.141)"/>
+<rect x="110" y="200" width="292" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">prev xor next</text>
+<rect x="181.62" y="320" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">1 puntero</text>
+<rect x="113.42" y="380" width="285.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">incompatible con GC</text>
+</svg>

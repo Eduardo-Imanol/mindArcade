@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el pointer chasing serializa la ejecución?">
+<title>¿Por qué el pointer chasing serializa la ejecución?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="142.98" cy="350.36" rx="123.62" ry="123.62" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="206.87" cy="139.02" rx="153.98" ry="153.98" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="411.87" cy="287.8" rx="133.95" ry="133.95" fill="hsl(265 90% 58% / 0.192)"/>
+<ellipse cx="489.06" cy="423.73" rx="73.76" ry="73.76" fill="hsl(265 90% 58% / 0.172)"/>
+<line x1="90" y1="150" x2="289.31" y2="121.53" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,120 290.88,127.8 289.06,115.07" fill="#00ffcc"/>
+<line x1="300" y1="120" x2="186.48" y2="271.36" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="180,280 180.94,268.04 191.22,275.75" fill="#00ffcc"/>
+<line x1="180" y1="280" x2="389.37" y2="318.07" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="400,320 388.88,324.51 391.18,311.86" fill="#00ffcc"/>
+<line x1="400" y1="320" x2="258.71" y2="423.61" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="250,430 254.37,418.82 261.97,429.19" fill="#00ffcc"/>
+<ellipse cx="90" cy="150" rx="22" ry="22" fill="rgba(0, 255, 204, 0.12)" stroke="#00ffcc" stroke-width="2.5"/>
+<ellipse cx="300" cy="120" rx="22" ry="22" fill="rgba(0, 255, 204, 0.12)" stroke="#00ffcc" stroke-width="2.5"/>
+<ellipse cx="180" cy="280" rx="22" ry="22" fill="rgba(0, 255, 204, 0.12)" stroke="#00ffcc" stroke-width="2.5"/>
+<ellipse cx="400" cy="320" rx="22" ry="22" fill="rgba(0, 255, 204, 0.12)" stroke="#00ffcc" stroke-width="2.5"/>
+<ellipse cx="250" cy="430" rx="22" ry="22" fill="rgba(0, 255, 204, 0.12)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="480" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">cada carga espera a la anterior</text>
+</svg>

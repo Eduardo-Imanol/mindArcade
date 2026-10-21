@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ventaja tiene el formato CSR?">
+<title>¿Qué ventaja tiene el formato CSR?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="139.62" cy="388.68" rx="193.92" ry="193.92" fill="hsl(320 90% 58% / 0.176)"/>
+<ellipse cx="36.64" cy="200.6" rx="132.56" ry="132.56" fill="hsl(320 90% 58% / 0.233)"/>
+<ellipse cx="275.02" cy="441.15" rx="95.27" ry="95.27" fill="hsl(320 90% 58% / 0.174)"/>
+<ellipse cx="0.82" cy="165.31" rx="160.14" ry="160.14" fill="hsl(320 90% 58% / 0.165)"/>
+<rect x="188.44" y="130" width="135.12" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">compacto</text>
+<rect x="147.52" y="200" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">cache-friendly</text>
+<rect x="181.62" y="270" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">immutable</text>
+<rect x="NaN" y="340" width="NaN" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">[object Object]</text>
+</svg>

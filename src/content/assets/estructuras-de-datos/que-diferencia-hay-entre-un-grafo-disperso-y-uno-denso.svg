@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre un grafo disperso y uno denso?">
+<title>¿Qué diferencia hay entre un grafo disperso y uno denso?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="170.53" cy="33.48" rx="180.37" ry="180.37" fill="hsl(320 90% 58% / 0.202)"/>
+<ellipse cx="2.15" cy="400.31" rx="79.08" ry="79.08" fill="hsl(320 90% 58% / 0.147)"/>
+<ellipse cx="307.61" cy="413.66" rx="93.6" ry="93.6" fill="hsl(320 90% 58% / 0.181)"/>
+<ellipse cx="52.98" cy="126.48" rx="170.67" ry="170.67" fill="hsl(320 90% 58% / 0.197)"/>
+<rect x="45.16" y="170" width="189.68" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="140" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">disperso E~V</text>
+<rect x="290.8" y="170" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="372" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">denso E~V²</text>
+</svg>

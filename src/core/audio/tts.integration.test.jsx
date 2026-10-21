@@ -193,4 +193,24 @@ describe('global sound toggle (AC-9)', () => {
     const { container } = mount(<SoundToggle />);
     expect(container.querySelector('button')).toBeNull();
   });
+
+  it('keeps every mounted toggle in sync with a stable label (AC-21)', () => {
+    installSpeech();
+    const first = mount(<SoundToggle />);
+    const second = mount(<SoundToggle />);
+    const buttonA = first.container.querySelector('button');
+    const buttonB = second.container.querySelector('button');
+    expect(buttonA.getAttribute('aria-label')).toBe('Sonido');
+    expect(buttonA.getAttribute('aria-pressed')).toBe('false');
+
+    click(buttonA);
+    expect(buttonB.getAttribute('aria-pressed')).toBe('true');
+    expect(buttonA.getAttribute('aria-label')).toBe('Sonido');
+
+    click(buttonB);
+    expect(buttonA.getAttribute('aria-pressed')).toBe('false');
+
+    first.unmount();
+    second.unmount();
+  });
 });

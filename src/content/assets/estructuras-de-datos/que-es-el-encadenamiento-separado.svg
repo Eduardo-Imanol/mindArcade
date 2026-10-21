@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el encadenamiento separado?">
+<title>¿Qué es el encadenamiento separado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="57.12" cy="316.02" rx="187.09" ry="187.09" fill="hsl(45 90% 58% / 0.176)"/>
+<ellipse cx="74.62" cy="278.29" rx="197.12" ry="197.12" fill="hsl(45 90% 58% / 0.237)"/>
+<ellipse cx="358.46" cy="83.15" rx="97.8" ry="97.8" fill="hsl(45 90% 58% / 0.147)"/>
+<ellipse cx="168.55" cy="479.27" rx="124.99" ry="124.99" fill="hsl(45 90% 58% / 0.206)"/>
+<rect x="90" y="150" width="90" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="104" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">0</text>
+<rect x="90" y="230" width="90" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="90" y="300" width="90" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="135" y1="210" x2="135" y2="217.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="135,228 128.57,217.87 141.43,217.87" fill="#00ffcc"/>
+<rect x="210" y="150" width="90" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="224" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">1</text>
+<rect x="210" y="230" width="90" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="210" y="300" width="90" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="255" y1="210" x2="255" y2="217.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="255,228 248.57,217.87 261.43,217.87" fill="#00ffcc"/>
+<rect x="330" y="150" width="90" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="344" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">2</text>
+<rect x="330" y="230" width="90" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="330" y="300" width="90" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="375" y1="210" x2="375" y2="217.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="375,228 368.57,217.87 381.43,217.87" fill="#00ffcc"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">listas por ranura</text>
+</svg>

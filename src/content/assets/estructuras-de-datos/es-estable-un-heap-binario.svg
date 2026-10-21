@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Es estable un heap binario?">
+<title>¿Es estable un heap binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="400.9" cy="461.84" rx="77.55" ry="77.55" fill="hsl(265 90% 58% / 0.211)"/>
+<ellipse cx="491.5" cy="234.71" rx="91.17" ry="91.17" fill="hsl(265 90% 58% / 0.204)"/>
+<ellipse cx="386.58" cy="401.51" rx="203.78" ry="203.78" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="8.5" cy="38.29" rx="139.7" ry="139.7" fill="hsl(265 90% 58% / 0.208)"/>
+<rect x="205.8" y="170" width="100.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="60" font-weight="700" fill="#ff007f">NO</text>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">sin desempate</text>
+<rect x="113.42" y="340" width="285.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">+contador secuencia</text>
+</svg>

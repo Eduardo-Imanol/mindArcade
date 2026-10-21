@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene un TreeSet en lugar de un HashSet?">
+<title>¿Cuándo conviene un TreeSet en lugar de un HashSet?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="445.37" cy="57.56" rx="202.2" ry="202.2" fill="hsl(320 90% 58% / 0.209)"/>
+<ellipse cx="415.35" cy="16.91" rx="172.88" ry="172.88" fill="hsl(320 90% 58% / 0.192)"/>
+<ellipse cx="36.39" cy="186.04" rx="159.38" ry="159.38" fill="hsl(320 90% 58% / 0.187)"/>
+<ellipse cx="326.29" cy="61.84" rx="80.78" ry="80.78" fill="hsl(320 90% 58% / 0.228)"/>
+<rect x="178.52" y="130" width="154.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">ordenado</text>
+<text x="256" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">floor/ceiling/rangos</text>
+<line x1="256" y1="260" x2="256" y2="309.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,320 249.57,309.87 262.43,309.87" fill="#39ff14"/>
+<rect x="190.92" y="360" width="130.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">TreeSet</text>
+</svg>

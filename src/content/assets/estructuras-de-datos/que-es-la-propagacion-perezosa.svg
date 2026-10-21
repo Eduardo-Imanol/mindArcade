@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la propagación perezosa?">
+<title>¿Qué es la propagación perezosa?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="217.55" cy="444.97" rx="84.69" ry="84.69" fill="hsl(168 90% 58% / 0.176)"/>
+<ellipse cx="284.65" cy="136.22" rx="83.8" ry="83.8" fill="hsl(168 90% 58% / 0.182)"/>
+<ellipse cx="328.98" cy="170.41" rx="122.42" ry="122.42" fill="hsl(168 90% 58% / 0.15)"/>
+<ellipse cx="48.36" cy="320.26" rx="96.42" ry="96.42" fill="hsl(168 90% 58% / 0.147)"/>
+<rect x="154.34" y="150" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ffcc00">tag en nodo</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">aplica al bajar</text>
+<rect x="86.76" y="300" width="338.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">rango update O(log n)</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un árbol ternario de búsqueda?">
+<title>¿Qué es un árbol ternario de búsqueda?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="359.76" cy="489.18" rx="78.63" ry="78.63" fill="hsl(320 90% 58% / 0.23)"/>
+<ellipse cx="123.82" cy="187.96" rx="155.31" ry="155.31" fill="hsl(320 90% 58% / 0.228)"/>
+<ellipse cx="254.67" cy="310.92" rx="83.52" ry="83.52" fill="hsl(320 90% 58% / 0.149)"/>
+<ellipse cx="350.28" cy="170.16" rx="157.07" ry="157.07" fill="hsl(320 90% 58% / 0.236)"/>
+<rect x="201" y="109" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">&lt; = &gt;</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">3 hijos · compacto</text>
+<rect x="161.16" y="300" width="189.68" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">O(L + log n)</text>
+</svg>

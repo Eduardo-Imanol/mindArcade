@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué un isolate de Dart puede tener condiciones de carrera lógicas?">
+<title>¿Por qué un isolate de Dart puede tener condiciones de carrera lógicas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="106.78" cy="394.01" rx="178.59" ry="178.59" fill="hsl(168 90% 58% / 0.152)"/>
+<ellipse cx="143.68" cy="451.98" rx="145.56" ry="145.56" fill="hsl(168 90% 58% / 0.219)"/>
+<ellipse cx="428.53" cy="396.13" rx="111.33" ry="111.33" fill="hsl(168 90% 58% / 0.228)"/>
+<ellipse cx="161.09" cy="103.08" rx="90.51" ry="90.51" fill="hsl(168 90% 58% / 0.165)"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">await cede control</text>
+<rect x="127.06" y="270" width="257.88" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">async interleaved</text>
+</svg>

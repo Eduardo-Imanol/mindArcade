@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un Fenwick tree?">
+<title>¿Qué es un Fenwick tree?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="256.89" cy="360.79" rx="156.09" ry="156.09" fill="hsl(120 90% 58% / 0.161)"/>
+<ellipse cx="222.82" cy="392.13" rx="197.49" ry="197.49" fill="hsl(120 90% 58% / 0.187)"/>
+<ellipse cx="284.1" cy="173.6" rx="134.49" ry="134.49" fill="hsl(120 90% 58% / 0.186)"/>
+<ellipse cx="485.22" cy="71.88" rx="131.18" ry="131.18" fill="hsl(120 90% 58% / 0.178)"/>
+<rect x="96" y="165" width="320" height="70" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">add(i,v), prefixSum(i)</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">índice i &amp; -i</text>
+<rect x="183.48" y="300" width="145.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">O(log n)</text>
+</svg>

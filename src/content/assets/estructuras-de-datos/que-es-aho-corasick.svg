@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es Aho–Corasick?">
+<title>¿Qué es Aho–Corasick?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="324.89" cy="188.44" rx="150.72" ry="150.72" fill="hsl(168 90% 58% / 0.162)"/>
+<ellipse cx="95.19" cy="101.16" rx="160.65" ry="160.65" fill="hsl(168 90% 58% / 0.18)"/>
+<ellipse cx="384.46" cy="506.17" rx="112.4" ry="112.4" fill="hsl(168 90% 58% / 0.232)"/>
+<ellipse cx="403.87" cy="487.58" rx="201.94" ry="201.94" fill="hsl(168 90% 58% / 0.231)"/>
+<rect x="81.8" y="150" width="348.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">trie + enlaces fallo</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">todos patrones simultáneo</text>
+<rect x="114.66" y="300" width="282.68" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">O(texto+patrones+coinc)</text>
+</svg>

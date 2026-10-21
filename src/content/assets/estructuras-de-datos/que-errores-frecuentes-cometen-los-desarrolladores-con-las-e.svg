@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué errores frecuentes cometen los desarrolladores con las estructuras de datos?">
+<title>¿Qué errores frecuentes cometen los desarrolladores con las estructuras de datos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="103.14" cy="41.23" rx="189.65" ry="189.65" fill="hsl(120 90% 58% / 0.198)"/>
+<ellipse cx="459.75" cy="276.56" rx="160.55" ry="160.55" fill="hsl(120 90% 58% / 0.195)"/>
+<ellipse cx="400.23" cy="467.96" rx="93.16" ry="93.16" fill="hsl(120 90% 58% / 0.174)"/>
+<ellipse cx="255.11" cy="137.87" rx="141.69" ry="141.69" fill="hsl(120 90% 58% / 0.158)"/>
+<rect x="174.8" y="130" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">removeAt(0)</text>
+<rect x="137.6" y="200" width="236.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">contains en bucle</text>
+<rect x="168.6" y="270" width="174.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">concat bucle</text>
+<rect x="143.8" y="340" width="224.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">mutar clave hash</text>
+</svg>

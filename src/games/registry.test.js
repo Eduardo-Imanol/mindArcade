@@ -85,4 +85,15 @@ describe('games registry', () => {
     }
     expect(typeof getGame('flashcards').load).toBe('function');
   });
+  it('every entry is a frozen GameDefinition (AC-27)', () => {
+    for (const game of listGames()) {
+      expect(Object.isFrozen(game)).toBe(true);
+    }
+    expect(Object.isFrozen(getGame('flashcards'))).toBe(true);
+    expect(Object.isFrozen(getGame('intruso'))).toBe(true);
+  });
+  it('getGame returns the very same frozen instance as listGames', () => {
+    const flashcards = listGames().find((game) => game.id === 'flashcards');
+    expect(getGame('flashcards')).toBe(flashcards);
+  });
 });

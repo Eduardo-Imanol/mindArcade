@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el recorrido de Morris y qué ventaja tiene?">
+<title>¿Qué es el recorrido de Morris y qué ventaja tiene?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="54.84" cy="180.92" rx="96.05" ry="96.05" fill="hsl(265 90% 58% / 0.147)"/>
+<ellipse cx="19.59" cy="173.87" rx="181.88" ry="181.88" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="459.4" cy="413.07" rx="111.84" ry="111.84" fill="hsl(265 90% 58% / 0.23)"/>
+<ellipse cx="126.02" cy="284.07" rx="190.52" ry="190.52" fill="hsl(265 90% 58% / 0.213)"/>
+<rect x="65.68" y="150" width="380.64" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">inorden sin pila/recursión</text>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">punteros temporales</text>
+<rect x="97.92" y="300" width="316.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">O(1) espacio extra</text>
+</svg>

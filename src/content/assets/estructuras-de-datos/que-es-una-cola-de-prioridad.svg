@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una cola de prioridad?">
+<title>¿Qué es una cola de prioridad?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="67.24" cy="5.65" rx="171.25" ry="171.25" fill="hsl(45 90% 58% / 0.237)"/>
+<ellipse cx="306.8" cy="153.85" rx="151.46" ry="151.46" fill="hsl(45 90% 58% / 0.142)"/>
+<ellipse cx="300.49" cy="13.01" rx="76.2" ry="76.2" fill="hsl(45 90% 58% / 0.202)"/>
+<ellipse cx="103.77" cy="180.47" rx="192.49" ry="192.49" fill="hsl(45 90% 58% / 0.193)"/>
+<rect x="105" y="129" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="140" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">5</text>
+<rect x="221" y="109" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="337" y="149" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="372" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="174.8" y="240" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">extractMin</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">min primero</text>
+</svg>

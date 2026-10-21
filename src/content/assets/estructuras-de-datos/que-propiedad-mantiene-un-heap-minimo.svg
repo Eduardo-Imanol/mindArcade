@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué propiedad mantiene un heap mínimo?">
+<title>¿Qué propiedad mantiene un heap mínimo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="477.97" cy="420.91" rx="109.82" ry="109.82" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="19.38" cy="493.9" rx="177.56" ry="177.56" fill="hsl(168 90% 58% / 0.186)"/>
+<ellipse cx="332.47" cy="347.44" rx="196.43" ry="196.43" fill="hsl(168 90% 58% / 0.165)"/>
+<ellipse cx="406.77" cy="502.76" rx="194.97" ry="194.97" fill="hsl(168 90% 58% / 0.196)"/>
+<rect x="221" y="99" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">1</text>
+<line x1="256" y1="155" x2="185.16" y2="199.28" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="176,205 181.18,194.18 188,205.08" fill="#8a7fb5"/>
+<line x1="256" y1="155" x2="326.84" y2="199.28" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="336,205 324,205.08 330.82,194.18" fill="#8a7fb5"/>
+<rect x="141" y="219" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="176" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="301" y="219" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="336" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3</text>
+<line x1="176" y1="275" x2="133.64" y2="317.36" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="126,325 128.62,313.29 137.71,322.38" fill="#8a7fb5"/>
+<line x1="176" y1="275" x2="218.36" y2="317.36" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="226,325 214.29,322.38 223.38,313.29" fill="#8a7fb5"/>
+<rect x="91" y="339" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="126" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="191" y="339" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="226" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">5</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">padre &lt;= hijos</text>
+</svg>

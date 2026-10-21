@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo detecta un ciclo una lista con el algoritmo de Floyd?">
+<title>¿Cómo detecta un ciclo una lista con el algoritmo de Floyd?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="296.52" cy="66.43" rx="76.05" ry="76.05" fill="hsl(168 90% 58% / 0.192)"/>
+<ellipse cx="475.72" cy="138.61" rx="155.54" ry="155.54" fill="hsl(168 90% 58% / 0.2)"/>
+<ellipse cx="257.51" cy="444.76" rx="191.04" ry="191.04" fill="hsl(168 90% 58% / 0.165)"/>
+<ellipse cx="134.33" cy="46.7" rx="191.62" ry="191.62" fill="hsl(168 90% 58% / 0.237)"/>
+<rect x="70" y="160" width="70" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="140" y1="188" x2="147.2" y2="188" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="158,188 147.87,194.43 147.87,181.57" fill="#00ffcc"/>
+<rect x="160" y="160" width="70" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="230" y1="188" x2="237.2" y2="188" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="248,188 237.87,194.43 237.87,181.57" fill="#00ffcc"/>
+<rect x="250" y="160" width="70" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="320" y1="188" x2="327.2" y2="188" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="338,188 327.87,194.43 327.87,181.57" fill="#00ffcc"/>
+<rect x="340" y="160" width="70" height="56" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="430" y1="188" x2="430" y2="269.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="430,280 423.57,269.87 436.43,269.87" fill="#ff007f"/>
+<line x1="430" y1="280" x2="115.8" y2="280" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="105,280 115.13,273.57 115.13,286.43" fill="#ff007f"/>
+<line x1="105" y1="280" x2="105" y2="226.8" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="105,216 111.43,226.13 98.57,226.13" fill="#ff007f"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">tortuga x1 · liebre x2</text>
+<rect x="154.34" y="400" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">se encuentran</text>
+</svg>

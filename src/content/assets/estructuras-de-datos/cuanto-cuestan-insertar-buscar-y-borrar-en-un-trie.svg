@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuánto cuestan insertar, buscar y borrar en un trie?">
+<title>¿Cuánto cuestan insertar, buscar y borrar en un trie?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="269.33" cy="417.13" rx="92.44" ry="92.44" fill="hsl(265 90% 58% / 0.164)"/>
+<ellipse cx="188.3" cy="294.72" rx="103.26" ry="103.26" fill="hsl(265 90% 58% / 0.174)"/>
+<ellipse cx="482.29" cy="392.77" rx="139.41" ry="139.41" fill="hsl(265 90% 58% / 0.201)"/>
+<ellipse cx="215.34" cy="328.43" rx="178.98" ry="178.98" fill="hsl(265 90% 58% / 0.179)"/>
+<rect x="193.4" y="180" width="125.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="40" font-weight="700" fill="#39ff14">O(L)</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">L = longitud clave</text>
+</svg>

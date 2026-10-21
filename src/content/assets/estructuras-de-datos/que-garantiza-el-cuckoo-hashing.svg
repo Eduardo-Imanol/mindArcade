@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza el cuckoo hashing?">
+<title>¿Qué garantiza el cuckoo hashing?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="148.85" cy="89.82" rx="105.68" ry="105.68" fill="hsl(45 90% 58% / 0.212)"/>
+<ellipse cx="369.03" cy="0.74" rx="76.67" ry="76.67" fill="hsl(45 90% 58% / 0.152)"/>
+<ellipse cx="74.47" cy="70.18" rx="72.82" ry="72.82" fill="hsl(45 90% 58% / 0.191)"/>
+<ellipse cx="470.95" cy="272.19" rx="167.94" ry="167.94" fill="hsl(45 90% 58% / 0.184)"/>
+<rect x="80" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="94" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">tabla A</text>
+<rect x="282" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="296" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">tabla B</text>
+<line x1="230" y1="220" x2="269.2" y2="220" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,220 269.87,226.43 269.87,213.57" fill="#39ff14"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">expulsar a la otra casa</text>
+<rect x="154.34" y="370" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">búsqueda O(1)</text>
+</svg>

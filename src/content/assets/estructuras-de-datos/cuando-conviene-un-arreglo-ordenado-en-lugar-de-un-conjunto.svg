@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene un arreglo ordenado en lugar de un conjunto hash?">
+<title>¿Cuándo conviene un arreglo ordenado en lugar de un conjunto hash?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="132.92" cy="242.9" rx="126.96" ry="126.96" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="302.83" cy="506.32" rx="204.57" ry="204.57" fill="hsl(265 90% 58% / 0.239)"/>
+<ellipse cx="388.74" cy="137.87" rx="140.43" ry="140.43" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="194.04" cy="455.57" rx="130.14" ry="130.14" fill="hsl(265 90% 58% / 0.17)"/>
+<rect x="90" y="210" width="56" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="104" y="228" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">1</text>
+<rect x="160" y="210" width="56" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="174" y="228" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">2</text>
+<rect x="230" y="210" width="56" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="244" y="228" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">3</text>
+<rect x="300" y="210" width="56" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="314" y="228" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">4</text>
+<rect x="370" y="210" width="56" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="384" y="228" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">5</text>
+<rect x="133.88" y="310" width="244.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">búsqueda binaria</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">casi estático</text>
+</svg>

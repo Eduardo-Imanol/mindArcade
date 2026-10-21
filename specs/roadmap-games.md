@@ -17,7 +17,7 @@
 - **Todo juego DEBE incluir TTS** (obligatorio desde spec-03): lectura de textos con Web Speech API vía helper compartido `src/core/audio/tts.js` (gratis, 0 deps), lectura al interactuar + botón 🔊 por elemento + toggle global de sonido persistido. En `conecta-pares` «botón por elemento» se interpreta como botón 🔊 del elemento activo en la barra de selección (spec-10), sin añadir 20 botones. Sin `speechSynthesis` → controles ocultos sin romper el juego.
 - **Selección de cartas por SRS** (spec-12, supersede spec-03 AC-3): los juegos deben pedir sus cartas con `selectCards(count)` (prop opcional que arma GameHost con `selectStudyCards`). El pool son las cartas no aprendidas (`new`/`learning`) mezcladas y, si faltan, las aprendidas **solo si están vencidas** (`nextReview <= now`), ordenadas por `nextReview`. Nunca se ofrecen aprendidas no vencidas. El patrón aplica a los 8 juegos.
 - **Contrato de juego** (spec-12): cada juego se declara con `defineGame({ id, title, description?, art?, status, minCards, minTopics?, minCardsPerTopic?, load })` (`src/games/definition.js`), congelado. `registry` es data-driven y la matriz de reutilización se prueba con al menos dos temas. Sin reescritura a clases.
-- **Portada y fichas de juego** (spec-12): la ficha de juego muestra solo título + portada del tema (`topicCoverCard`) + estado/CTA, sin descripción. La portada es la primera carta del deck con imagen explícita; si no hay, la primera carta.
+- **Portada y fichas de juego** (spec-12): la ficha de juego muestra solo título + imagen representativa del juego (`game.art`, `src/assets/games/<id>.svg`) + estado/CTA, sin descripción. Si un juego no declara `art`, se usa la portada del tema (`topicCoverCard`): primera carta del deck con imagen explícita; si no hay, la primera carta.
 - **Grados en juegos de aciertos**: 1.er intento → `facil`, intentos medios → `dificil`, nunca resuelto → `otra-vez` (spec-03, reutilizable). Nota: en memorama "1.er intento" se interpreta como `attempts <= 1` (fallos previos ≤1 → `facil`), según el contrato de test de spec-03 §6.
 
 ## Catálogo e iteración (orden acordado)
@@ -37,8 +37,9 @@ Regla de iteración: se pulen uno a uno. Cada spec se firma antes de codificar;
 al terminar se actualiza este roadmap (status `available`) y se abre la siguiente.
 
 > Catálogo completo (2026-10-20): **8 available / 0 soon**. spec-11 cierra el roadmap
-> de juegos. spec-12 «retouch-learning-dashboard» (borrador) es el incremento de
-> métricas, selección espaciada, hub y dashboard; no añade juegos.
+> de juegos. spec-12 «retouch-learning-dashboard» (implementada T1–T11, pendiente de
+> firma humana del diff) es el incremento de métricas, selección espaciada, hub y
+> dashboard; no añade juegos.
 
 ## Contenido de temas (formato MD canónico)
 
@@ -62,7 +63,7 @@ Una función encapsula lógica reutilizable y evita repetir código.
 
 - `src/content/topics/funciones-programacion.md` — tema integrado con 96 cartas; alimenta
   los 8 juegos sin retocar código.
-- spec-12 (borrador): el parser conservará la descripción completa del tema (sin recorte
-  de 160 caracteres) y el hub/tema mostrarán esa descripción íntegra.
+- spec-12: el parser conserva la descripción completa del tema (sin recorte de 160
+  caracteres) y el hub/tema muestran esa descripción íntegra.
 - Temas personalizados: `createdAt` persistido; los integrados reciben `addedAt` en el
-  primer avistamiento local (`sepect.topics.meta.v1`).
+  primer avistamiento local (`sepect.topics.meta.v1`) al cargar el hub.

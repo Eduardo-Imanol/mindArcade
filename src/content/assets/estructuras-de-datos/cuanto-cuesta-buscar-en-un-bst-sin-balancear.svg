@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuánto cuesta buscar en un BST sin balancear?">
+<title>¿Cuánto cuesta buscar en un BST sin balancear?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="391.04" cy="343.74" rx="156.55" ry="156.55" fill="hsl(168 90% 58% / 0.161)"/>
+<ellipse cx="411.94" cy="234.53" rx="184.05" ry="184.05" fill="hsl(168 90% 58% / 0.156)"/>
+<ellipse cx="16.75" cy="415.81" rx="180.57" ry="180.57" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="334.38" cy="311.46" rx="83.98" ry="83.98" fill="hsl(168 90% 58% / 0.198)"/>
+<rect x="99.8" y="150" width="100.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">O(h)</text>
+<rect x="248.56" y="150" width="226.88" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">esperado ~4.3 ln n</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">peor caso lista</text>
+</svg>

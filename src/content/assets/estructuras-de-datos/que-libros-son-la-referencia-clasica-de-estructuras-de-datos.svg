@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué libros son la referencia clásica de estructuras de datos?">
+<title>¿Qué libros son la referencia clásica de estructuras de datos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="6.75" cy="181.53" rx="108.77" ry="108.77" fill="hsl(168 90% 58% / 0.173)"/>
+<ellipse cx="257.96" cy="143.56" rx="73.6" ry="73.6" fill="hsl(168 90% 58% / 0.142)"/>
+<ellipse cx="80.76" cy="372.43" rx="122.02" ry="122.02" fill="hsl(168 90% 58% / 0.233)"/>
+<ellipse cx="346.62" cy="9.84" rx="75.01" ry="75.01" fill="hsl(168 90% 58% / 0.201)"/>
+<rect x="215.72" y="130" width="80.56" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">CLRS</text>
+<rect x="140.7" y="200" width="230.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Sedgewick&amp;Wayne</text>
+<rect x="208.9" y="270" width="94.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Knuth</text>
+<rect x="195.26" y="340" width="121.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Okasaki</text>
+</svg>

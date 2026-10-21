@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el direccionamiento abierto?">
+<title>¿Qué es el direccionamiento abierto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="193.14" cy="158.99" rx="174.47" ry="174.47" fill="hsl(45 90% 58% / 0.152)"/>
+<ellipse cx="166.63" cy="352.74" rx="149.29" ry="149.29" fill="hsl(45 90% 58% / 0.147)"/>
+<ellipse cx="415.73" cy="418.29" rx="196.97" ry="196.97" fill="hsl(45 90% 58% / 0.182)"/>
+<ellipse cx="21.9" cy="250.45" rx="77.83" ry="77.83" fill="hsl(45 90% 58% / 0.182)"/>
+<rect x="76" y="200" width="64" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="90" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">0</text>
+<rect x="154" y="200" width="64" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="168" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">1</text>
+<rect x="232" y="200" width="64" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="246" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">2</text>
+<rect x="310" y="200" width="64" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="324" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">3</text>
+<rect x="388" y="200" width="64" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="402" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">4</text>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sondeo tras colisión</text>
+<rect x="120.24" y="360" width="271.52" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">todo en el arreglo</text>
+</svg>

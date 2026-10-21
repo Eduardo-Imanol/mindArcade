@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo se usa Bellman–Ford en lugar de Dijkstra?">
+<title>¿Cuándo se usa Bellman–Ford en lugar de Dijkstra?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="180.05" cy="286.33" rx="187.11" ry="187.11" fill="hsl(120 90% 58% / 0.171)"/>
+<ellipse cx="254.12" cy="25.95" rx="188.84" ry="188.84" fill="hsl(120 90% 58% / 0.225)"/>
+<ellipse cx="475.02" cy="166.74" rx="152.56" ry="152.56" fill="hsl(120 90% 58% / 0.176)"/>
+<ellipse cx="158.64" cy="345.4" rx="191.53" ry="191.53" fill="hsl(120 90% 58% / 0.215)"/>
+<rect x="122.1" y="170" width="267.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">pesos negativos</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">detecta ciclo negativo</text>
+<rect x="194.64" y="300" width="122.72" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">O(V·E)</text>
+</svg>

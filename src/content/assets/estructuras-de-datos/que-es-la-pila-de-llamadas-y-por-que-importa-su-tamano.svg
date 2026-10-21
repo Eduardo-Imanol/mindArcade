@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la pila de llamadas y por qué importa su tamaño?">
+<title>¿Qué es la pila de llamadas y por qué importa su tamaño?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="288.86" cy="424.27" rx="141.77" ry="141.77" fill="hsl(120 90% 58% / 0.163)"/>
+<ellipse cx="178.49" cy="436.86" rx="193.9" ry="193.9" fill="hsl(120 90% 58% / 0.219)"/>
+<ellipse cx="352.95" cy="483.41" rx="167.29" ry="167.29" fill="hsl(120 90% 58% / 0.177)"/>
+<ellipse cx="112.71" cy="275.44" rx="79.8" ry="79.8" fill="hsl(120 90% 58% / 0.188)"/>
+<rect x="196" y="320" width="120" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="196" y="260" width="120" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="196" y="200" width="120" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="196" y="140" width="120" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">frame</text>
+<rect x="147.52" y="400" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">stack overflow</text>
+<text x="256" y="90" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">1–8 MB</text>
+</svg>

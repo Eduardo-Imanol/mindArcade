@@ -1,7 +1,7 @@
 import React from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import GameHost from './GameHost.jsx';
-import { saveCustomTopic } from '../core/content/catalog.js';
+import { saveCustomTopic, loadCatalog } from '../core/content/catalog.js';
 import { loadSrs } from '../core/repetition/srs.js';
 import { createStore } from '../core/storage/store.js';
 import { click, fire, mount, waitFor } from '../test/render.jsx';
@@ -227,6 +227,20 @@ const intrusoIntruderOption = (container) =>
 const intrusoBaseOption = (container) =>
   intrusoOptions(container).find((button) => !INTRUSO_OTHER_BACKS.includes(intrusoBack(button)));
 
+// El catálogo built-in puede crecer (N temas): se bloquean los built-in distintos
+// del ancla para que estos tests dependan solo de los topics que ellos crean.
+const lockOtherBuiltinTopics = (keepId) => {
+  const srs = JSON.parse(localStorage.getItem('sepect.srs.v1') || '{}');
+  const future = Date.now() + 30 * 86_400_000;
+  for (const entry of loadCatalog()) {
+    if (entry.id === keepId || entry.source !== 'builtin') continue;
+    srs[entry.id] = Object.fromEntries(
+      entry.cards.map((card) => [card.id, { reps: 3, nextReview: future }])
+    );
+  }
+  localStorage.setItem('sepect.srs.v1', JSON.stringify(srs));
+};
+
 afterEach(() => {
   localStorage.clear();
   document.body.innerHTML = '';
@@ -237,6 +251,7 @@ afterEach(() => {
 
 describe('GameHost wiring', () => {
   it('grade → SRS + XP + history persisted; survives reload; exit returns to topic', async () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0.999999);
     const { topic } = saveCustomTopic({ title: 'Tema GameHost', md: FIXTURE_A });
     const { container, unmount } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
     await waitFor(() => container.textContent.includes('Carta 1 de 3'));
@@ -255,13 +270,15 @@ describe('GameHost wiring', () => {
       topicId: topic.id,
       cardId: 'que-es-una-funcion',
       grade: 'facil',
+      xp: 10,
     });
+    expect(typeof profile.history[0].at).toBe('string');
 
     unmount();
     expect(loadSrs()).toEqual(srs);
 
     const reloaded = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
-    await waitFor(() => reloaded.container.textContent.includes('¿Qué es un parámetro?'));
+    await waitFor(() => reloaded.container.textContent.includes('Carta 1 de 3'));
 
     click(findButton(reloaded.container, 'Salir'));
     expect(window.location.hash).toBe(`#/tema/${topic.id}`);
@@ -300,6 +317,7 @@ describe('GameHost wiring', () => {
   });
 
   it('topic UI image override reaches gameplay (AC-9 tier-1)', async () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0.999999);
     const md = `# Tema Override
 - Q: dog | A: perro
 - Q: house | A: casa`;
@@ -642,6 +660,7 @@ describe('GameHost wiring', () => {
         delta: { kind: 'emoji', value: '🦴' },
       },
     });
+    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
 
     const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
     await waitFor(() => findButton(container, 'Empezar'));
@@ -660,6 +679,7 @@ describe('GameHost wiring', () => {
 
   it('intruso grades facil/otra-vez under the intruder topic and persists across reload', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
+    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
     const { container, unmount } = mount(
       <GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />
     );
@@ -713,6 +733,7 @@ describe('GameHost wiring', () => {
 
   it('intruso exit mid-round grades only the current intruder as otra-vez', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
+    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
     const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
     await waitFor(() => findButton(container, 'Empezar'));
     startIntruso(container, 3);
@@ -755,7 +776,7 @@ describe('GameHost wiring', () => {
     const { container } = mount(<GameHost topicId={topic.id} gameId="intruso" />);
 
     expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('Necesitas al menos 3 cartas');
+    expect(container.textContent).toContain('Te quedan 2 cartas por aprender o repasar');
     expect(container.textContent).not.toContain('Cargando juego');
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
@@ -1085,7 +1106,7 @@ describe('GameHost wiring', () => {
     const { container } = mount(<GameHost topicId={topic.id} gameId="conecta-pares" />);
 
     expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('Necesitas al menos 3 cartas');
+    expect(container.textContent).toContain('Te quedan 2 cartas por aprender o repasar');
     expect(container.textContent).not.toContain('Cargando juego');
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
@@ -1242,10 +1263,108 @@ describe('GameHost wiring', () => {
     );
 
     expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('Necesitas al menos 4 cartas');
+    expect(container.textContent).toContain('Te quedan 3 cartas por aprender o repasar');
     expect(container.textContent).not.toContain('Cargando juego');
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
+  });
+
+  it('offers unlearned plus only due learned cards, never not-due ones (AC-14)', async () => {
+    const md = `# Tema Elegibles
+- Q: aaa | A: uno
+- Q: bbb | A: dos
+- Q: ccc | A: tres
+- Q: ddd | A: cuatro`;
+    const { topic } = saveCustomTopic({ title: 'Tema Elegibles', md });
+    const now = Date.now();
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({
+        [topic.id]: {
+          aaa: { reps: 3, nextReview: now - 2000 },
+          bbb: { reps: 4, nextReview: now - 1000 },
+          ccc: { reps: 3, nextReview: now + 60_000 },
+        },
+      })
+    );
+    vi.spyOn(Math, 'random').mockReturnValue(0.999999);
+
+    const { container, unmount } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
+    await waitFor(() => container.textContent.includes('Carta 1 de 3'));
+    expect(container.textContent).not.toContain('Carta 1 de 4');
+
+    for (let round = 0; round < 3; round += 1) {
+      click(container.querySelector('.card-neon'));
+      click(findButton(container, 'Fácil'));
+    }
+
+    const graded = loadSrs()[topic.id];
+    expect(graded.aaa.reps).toBe(4);
+    expect(graded.bbb.reps).toBe(5);
+    expect(graded.ddd.reps).toBe(1);
+    expect(graded.ccc).toMatchObject({ reps: 3, nextReview: now + 60_000 });
+
+    const profile = createStore().load();
+    expect(profile.history).toHaveLength(3);
+    expect(profile.history.every((entry) => entry.xp === 10)).toBe(true);
+    expect(profile.xp).toBe(30);
+    unmount();
+  });
+
+  it('shows «Todo al día» and never mounts the game when nothing is eligible (AC-15)', () => {
+    const md = `# Tema Al Dia
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four`;
+    const { topic } = saveCustomTopic({ title: 'Tema Al Dia', md });
+    const now = Date.now();
+    const future = now + 30 * 86_400_000;
+    const locked = {};
+    for (const card of topic.cards) locked[card.id] = { reps: 3, nextReview: future };
+    localStorage.setItem('sepect.srs.v1', JSON.stringify({ [topic.id]: locked }));
+
+    const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
+    expect(container.textContent).toContain('Todo al día');
+    expect(container.textContent).not.toContain('Cargando juego');
+    expect(container.textContent).not.toContain('Memorama');
+    expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
+    expect(findButton(container, 'Fácil · 4 parejas')).toBeUndefined();
+  });
+
+  it('blocks intruso when the other topic has no eligible cards (AC-20)', () => {
+    const { topic: other } = saveCustomTopic({ title: 'Tema Intruso Vacio', md: INTRUSO_OTHER_MD });
+    const future = Date.now() + 30 * 86_400_000;
+    const locked = {};
+    for (const card of other.cards) locked[card.id] = { reps: 3, nextReview: future };
+    localStorage.setItem('sepect.srs.v1', JSON.stringify({ [other.id]: locked }));
+    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
+
+    const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
+    expect(container.textContent).toContain('Juego no disponible');
+    expect(container.textContent).toContain('En mantenimiento');
+    expect(findButton(container, 'Empezar')).toBeUndefined();
+  });
+
+  it('builds intruso groups only from topics with enough eligible cards (AC-20)', async () => {
+    saveCustomTopic({ title: 'Tema Listo Intruso', md: INTRUSO_OTHER_MD });
+    const { topic: short } = saveCustomTopic({ title: 'Tema Corto Intruso', md: INTRUSO_OTHER_MD });
+    const future = Date.now() + 30 * 86_400_000;
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({
+        [short.id]: {
+          alfa: { reps: 3, nextReview: future },
+          beta: { reps: 3, nextReview: future },
+        },
+      })
+    );
+    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
+
+    const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
+    await waitFor(() => findButton(container, 'Empezar'));
+    expect(container.textContent).toContain('1 tema disponible como intruso');
+    expect(container.textContent).not.toContain('2 temas disponibles como intruso');
   });
 
 });

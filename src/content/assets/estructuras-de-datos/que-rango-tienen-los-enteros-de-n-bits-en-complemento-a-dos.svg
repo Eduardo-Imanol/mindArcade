@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué rango tienen los enteros de n bits en complemento a dos?">
+<title>¿Qué rango tienen los enteros de n bits en complemento a dos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="284.43" cy="194.51" rx="170.32" ry="170.32" fill="hsl(265 90% 58% / 0.143)"/>
+<ellipse cx="27.85" cy="330.7" rx="173.97" ry="173.97" fill="hsl(265 90% 58% / 0.172)"/>
+<ellipse cx="412.61" cy="465" rx="128.07" ry="128.07" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="335.29" cy="386.18" rx="174.51" ry="174.51" fill="hsl(265 90% 58% / 0.162)"/>
+<rect x="70" y="210" width="372" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<line x1="256" y1="210" x2="256" y2="290" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="110" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">−2ⁿ⁻¹</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">0</text>
+<text x="402" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">2ⁿ⁻¹−1</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">desborda y envuelve</text>
+</svg>

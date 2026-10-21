@@ -106,4 +106,74 @@ describe('game availability gate', () => {
     expect(result.reason).toBe(AVAILABILITY_REASONS.minCards);
     expect(getGameAvailability(null).reason).toBe(AVAILABILITY_REASONS.soon);
   });
+
+  it('switches to eligible counts when studyCardCounts is provided', () => {
+    const result = getGameAvailability(
+      { status: 'available', minCards: 4 },
+      {
+        topic: topic('a', 10),
+        topics: [topic('a', 10)],
+        studyCardCounts: { a: 2 },
+      }
+    );
+    expect(result).toMatchObject({
+      playable: false,
+      reason: AVAILABILITY_REASONS.minCards,
+      minCards: 4,
+      cardCount: 10,
+      eligible: 2,
+      eligibleBased: true,
+    });
+    expect(availabilityMessage(result)).toBe('Te quedan 2 cartas por aprender o repasar');
+  });
+
+  it('reports «Todo al día» when no card is study-eligible', () => {
+    const result = getGameAvailability(
+      { status: 'available', minCards: 1 },
+      {
+        topic: topic('a', 8),
+        topics: [topic('a', 8)],
+        studyCardCounts: { a: 0 },
+      }
+    );
+    expect(result).toMatchObject({
+      playable: false,
+      reason: AVAILABILITY_REASONS.allCaughtUp,
+      eligible: 0,
+    });
+    expect(availabilityMessage(result)).toBe('Todo al día');
+  });
+
+  it('falls back to total cards when the counts map omits a topic', () => {
+    const result = getGameAvailability(
+      { status: 'available', minCards: 4 },
+      { topic: topic('a', 5), topics: [topic('a', 5)], studyCardCounts: { other: 0 } }
+    );
+    expect(result.playable).toBe(true);
+  });
+
+  it('counts only topics with enough eligible cards as intruso distractors', () => {
+    const result = getGameAvailability(INTRUSO, {
+      topic: topic('funciones', 6),
+      topics: [topic('funciones', 6), topic('algoritmos', 4), topic('idiomas', 5)],
+      studyCardCounts: { funciones: 6, algoritmos: 2, idiomas: 1 },
+    });
+    expect(result).toMatchObject({
+      playable: false,
+      reason: AVAILABILITY_REASONS.minTopics,
+      eligible: 1,
+    });
+    expect(availabilityMessage(result)).toBe(
+      'En mantenimiento · agrega otro tema con al menos 3 cartas'
+    );
+  });
+
+  it('unlocks intruso with two topics of at least 3 eligible cards', () => {
+    const result = getGameAvailability(INTRUSO, {
+      topic: topic('funciones', 6),
+      topics: [topic('funciones', 6), topic('idiomas', 5)],
+      studyCardCounts: { funciones: 6, idiomas: 3 },
+    });
+    expect(result).toMatchObject({ playable: true, reason: AVAILABILITY_REASONS.ok });
+  });
 });

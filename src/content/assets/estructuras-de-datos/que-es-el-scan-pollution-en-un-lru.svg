@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el scan pollution en un LRU?">
+<title>¿Qué es el scan pollution en un LRU?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="101.47" cy="38.13" rx="190.78" ry="190.78" fill="hsl(45 90% 58% / 0.166)"/>
+<ellipse cx="307.91" cy="231.96" rx="91.44" ry="91.44" fill="hsl(45 90% 58% / 0.199)"/>
+<ellipse cx="374" cy="356.3" rx="131.73" ry="131.73" fill="hsl(45 90% 58% / 0.184)"/>
+<ellipse cx="104.43" cy="102.29" rx="98.34" ry="98.34" fill="hsl(45 90% 58% / 0.192)"/>
+<rect x="130.16" y="170" width="251.68" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">gran recorrido</text>
+<line x1="256" y1="250" x2="256" y2="289.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#ffcc00"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">desaloja caliente</text>
+</svg>

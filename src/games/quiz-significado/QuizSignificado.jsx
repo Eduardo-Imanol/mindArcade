@@ -88,7 +88,7 @@ export default function QuizSignificado({ deck = [], selectCards, onGrade, onExi
     return (
       <main className="sepect-bg quiz-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Elige el significado</h1>
+          <h1 className="neon game-app-title">Elige el significado</h1>
           <p>Este tema no tiene cartas suficientes todavía.</p>
           <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
         </div>
@@ -100,7 +100,7 @@ export default function QuizSignificado({ deck = [], selectCards, onGrade, onExi
     return (
       <main className="sepect-bg quiz-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Elige el significado</h1>
+          <h1 className="neon game-app-title">Elige el significado</h1>
           <p>Lee el término y elige su significado entre cuatro opciones. Tienes dos intentos.</p>
           <div className="quiz-setup">
             <label htmlFor="quiz-rounds">Rondas</label>
@@ -132,7 +132,7 @@ export default function QuizSignificado({ deck = [], selectCards, onGrade, onExi
       return (
         <main className="sepect-bg quiz-page" style={PAGE}>
           <div className="game-stage">
-            <h1 className="neon" style={{ fontSize: 24 }}>Sin preguntas disponibles</h1>
+            <h1 className="neon game-app-title">Sin preguntas disponibles</h1>
             <p>No hay cartas disponibles para esta sesión.</p>
             <div className="quiz-actions">
               <button className="btn-neon" type="button" onClick={handleReplay}>Elegir rondas</button>
@@ -149,7 +149,7 @@ export default function QuizSignificado({ deck = [], selectCards, onGrade, onExi
     return (
       <main className="sepect-bg quiz-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Sesión completada</h1>
+          <h1 className="neon game-app-title">Sesión completada</h1>
           <p role="status">
             {stats.firstTry} de {stats.total} aciertos al primer intento · {stats.fails} fallos · +{gained} XP
           </p>
@@ -168,7 +168,7 @@ export default function QuizSignificado({ deck = [], selectCards, onGrade, onExi
     return (
       <main className="sepect-bg quiz-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Elige el significado</h1>
+          <h1 className="neon game-app-title">Elige el significado</h1>
           <p>No hay preguntas disponibles.</p>
           <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
         </div>

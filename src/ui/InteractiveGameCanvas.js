@@ -61,7 +61,7 @@ export function createGameCanvas(canvas, opts = {}) {
   }
 
   // Partículas al acertar: matemáticas puras, sin imágenes
-  function burst(x, y, n = reduced ? 0 : 24, color = '#00f5d4') {
+  function burst(x, y, n = reduced ? 0 : 24, color = '#00ffcc') {
     for (let i = 0; i < n; i++) {
       const pt = particles[pIdx++ % particles.length];
       const a = Math.random() * Math.PI * 2, sp = (1 + Math.random() * 3) * s.dpr;
@@ -142,8 +142,8 @@ export function createGameCanvas(canvas, opts = {}) {
 function defaultSetup() {}
 function defaultDraw(ctx, { w, h, t }) {
   // Demo: círculo pulsante + texto vectorial (sin assets)
-  ctx.fillStyle = '#0d0d1a'; ctx.fillRect(0, 0, w, h);
-  ctx.fillStyle = '#00f5d4';
+  ctx.fillStyle = '#0f051d'; ctx.fillRect(0, 0, w, h);
+  ctx.fillStyle = '#00ffcc';
   ctx.beginPath(); ctx.arc(w / 2, h / 2, 36 + 8 * Math.sin(t / 300), 0, 7); ctx.fill();
   ctx.fillStyle = '#f1f1f1'; ctx.font = '16px system-ui'; ctx.textAlign = 'center';
   ctx.fillText('Arrastra o toca — reemplaza draw()', w / 2, h / 2 + 70);

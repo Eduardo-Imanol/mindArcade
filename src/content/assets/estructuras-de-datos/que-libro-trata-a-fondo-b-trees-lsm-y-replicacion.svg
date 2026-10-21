@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué libro trata a fondo B-trees, LSM y replicación?">
+<title>¿Qué libro trata a fondo B-trees, LSM y replicación?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="28.13" cy="424.89" rx="73.49" ry="73.49" fill="hsl(120 90% 58% / 0.178)"/>
+<ellipse cx="266.38" cy="56.77" rx="161.89" ry="161.89" fill="hsl(120 90% 58% / 0.18)"/>
+<ellipse cx="493.15" cy="308.45" rx="156.89" ry="156.89" fill="hsl(120 90% 58% / 0.157)"/>
+<ellipse cx="357.28" cy="446.12" rx="72.38" ry="72.38" fill="hsl(120 90% 58% / 0.194)"/>
+<rect x="147.52" y="170" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Kleppmann DDIA</text>
+<rect x="72.5" y="260" width="367" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Petrov Database Internals</text>
+</svg>

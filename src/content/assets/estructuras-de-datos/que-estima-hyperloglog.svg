@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué estima HyperLogLog?">
+<title>¿Qué estima HyperLogLog?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="89.41" cy="417.87" rx="148.59" ry="148.59" fill="hsl(168 90% 58% / 0.236)"/>
+<ellipse cx="363.27" cy="350.56" rx="194.54" ry="194.54" fill="hsl(168 90% 58% / 0.22)"/>
+<ellipse cx="63.52" cy="325.54" rx="103.54" ry="103.54" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="494.51" cy="5.94" rx="153.81" ry="153.81" fill="hsl(168 90% 58% / 0.174)"/>
+<rect x="58.86" y="150" width="394.28" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">registro más largo 0-prefix</text>
+<ellipse cx="193.25" cy="270" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="130.5" cy="270" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="67.75" cy="270" rx="4" ry="4" fill="#8a7fb5"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">media armónica</text>
+<rect x="113.42" y="410" width="285.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">cardinalidad aprox.</text>
+</svg>

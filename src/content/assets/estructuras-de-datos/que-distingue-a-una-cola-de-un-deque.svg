@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué distingue a una cola de un deque?">
+<title>¿Qué distingue a una cola de un deque?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="312.54" cy="0.62" rx="185.27" ry="185.27" fill="hsl(320 90% 58% / 0.203)"/>
+<ellipse cx="340.57" cy="365.46" rx="98.52" ry="98.52" fill="hsl(320 90% 58% / 0.193)"/>
+<ellipse cx="229.96" cy="186.2" rx="86.03" ry="86.03" fill="hsl(320 90% 58% / 0.185)"/>
+<ellipse cx="48.93" cy="167.66" rx="112.97" ry="112.97" fill="hsl(320 90% 58% / 0.225)"/>
+<rect x="70" y="150" width="170" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="155" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">cola FIFO</text>
+<rect x="75.04" y="255" width="159.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="155" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">frente→final</text>
+<rect x="272" y="150" width="170" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="357" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">deque</text>
+<rect x="265.88" y="255" width="182.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="357" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">ambos extremos</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuánto cuesta insertar en un heap binario?">
+<title>¿Cuánto cuesta insertar en un heap binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="204.95" cy="317.61" rx="177.46" ry="177.46" fill="hsl(168 90% 58% / 0.203)"/>
+<ellipse cx="24.66" cy="66.37" rx="157.35" ry="157.35" fill="hsl(168 90% 58% / 0.175)"/>
+<ellipse cx="207.62" cy="172.06" rx="129.55" ry="129.55" fill="hsl(168 90% 58% / 0.176)"/>
+<ellipse cx="510.71" cy="34.84" rx="139.11" ry="139.11" fill="hsl(168 90% 58% / 0.156)"/>
+<rect x="168.6" y="150" width="174.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">O(log n)</text>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">sift-up</text>
+<rect x="146.28" y="300" width="219.44" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">O(1) promedio</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">hojas comunes</text>
+</svg>

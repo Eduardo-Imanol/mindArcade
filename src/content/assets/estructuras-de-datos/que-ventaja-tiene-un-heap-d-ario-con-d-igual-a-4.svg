@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ventaja tiene un heap d-ario con d igual a 4?">
+<title>¿Qué ventaja tiene un heap d-ario con d igual a 4?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="192.64" cy="294.74" rx="114.09" ry="114.09" fill="hsl(320 90% 58% / 0.235)"/>
+<ellipse cx="53.79" cy="332.4" rx="101.5" ry="101.5" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="168.24" cy="373.63" rx="110.1" ry="110.1" fill="hsl(320 90% 58% / 0.207)"/>
+<ellipse cx="129.59" cy="335.99" rx="198.35" ry="198.35" fill="hsl(320 90% 58% / 0.239)"/>
+<rect x="221" y="99" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">1</text>
+<line x1="256" y1="155" x2="165.46" y2="204.8" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="156,210 161.78,199.48 167.98,210.75" fill="#8a7fb5"/>
+<line x1="256" y1="155" x2="229.43" y2="200.67" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="224,210 223.54,198.01 234.65,204.48" fill="#8a7fb5"/>
+<line x1="256" y1="155" x2="286.09" y2="200.96" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="292,210 281.07,205.04 291.83,198" fill="#8a7fb5"/>
+<line x1="256" y1="155" x2="350.45" y2="204.95" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,210 348.04,210.95 354.05,199.58" fill="#8a7fb5"/>
+<rect x="126" y="224" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="156" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="194" y="224" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="224" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="262" y="224" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="292" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="330" y="224" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="360" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">5</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">4 hijos / nodo</text>
+<rect x="147.52" y="380" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">caché-friendly</text>
+</svg>

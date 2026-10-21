@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un LSM-tree?">
+<title>¿Qué es un LSM-tree?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="40.75" cy="504.4" rx="152.32" ry="152.32" fill="hsl(265 90% 58% / 0.153)"/>
+<ellipse cx="486.2" cy="379.21" rx="152.29" ry="152.29" fill="hsl(265 90% 58% / 0.142)"/>
+<ellipse cx="53.95" cy="405.93" rx="72.02" ry="72.02" fill="hsl(265 90% 58% / 0.228)"/>
+<ellipse cx="418.97" cy="16.78" rx="150.4" ry="150.4" fill="hsl(265 90% 58% / 0.174)"/>
+<rect x="90" y="200" width="90" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="104" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">log</text>
+<line x1="180" y1="240" x2="197.2" y2="240" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="208,240 197.87,246.43 197.87,233.57" fill="#8a7fb5"/>
+<rect x="200" y="200" width="90" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="214" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">memtable</text>
+<line x1="290" y1="240" x2="307.2" y2="240" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="318,240 307.87,246.43 307.87,233.57" fill="#8a7fb5"/>
+<rect x="310" y="200" width="90" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="324" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">SSTable</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">escrituras secuenciales</text>
+</svg>

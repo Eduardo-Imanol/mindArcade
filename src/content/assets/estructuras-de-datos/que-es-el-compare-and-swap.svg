@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el compare-and-swap?">
+<title>¿Qué es el compare-and-swap?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="200.34" cy="450.87" rx="110.32" ry="110.32" fill="hsl(168 90% 58% / 0.229)"/>
+<ellipse cx="394.62" cy="269.94" rx="87.2" ry="87.2" fill="hsl(168 90% 58% / 0.168)"/>
+<ellipse cx="262.07" cy="352.8" rx="129.51" ry="129.51" fill="hsl(168 90% 58% / 0.22)"/>
+<ellipse cx="175.48" cy="506.76" rx="162.58" ry="162.58" fill="hsl(168 90% 58% / 0.158)"/>
+<rect x="86" y="163" width="340" height="74" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">CAS(addr,esperado,nuevo)</text>
+<rect x="186.58" y="300" width="138.84" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">atómico</text>
+</svg>

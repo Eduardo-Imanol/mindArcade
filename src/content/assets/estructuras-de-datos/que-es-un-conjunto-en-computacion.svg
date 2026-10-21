@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un conjunto en computación?">
+<title>¿Qué es un conjunto en computación?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="173.05" cy="103.92" rx="98.43" ry="98.43" fill="hsl(265 90% 58% / 0.147)"/>
+<ellipse cx="47.63" cy="467.3" rx="150.5" ry="150.5" fill="hsl(265 90% 58% / 0.197)"/>
+<ellipse cx="362.83" cy="90.82" rx="150" ry="150" fill="hsl(265 90% 58% / 0.21)"/>
+<ellipse cx="226.11" cy="357.41" rx="81.2" ry="81.2" fill="hsl(265 90% 58% / 0.186)"/>
+<ellipse cx="151.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="103" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="54.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="312" cy="200" rx="35" ry="35" fill="none" stroke="#f1f1f1" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">sin duplicados</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se calcula el costo amortizado con el método del potencial?">
+<title>¿Cómo se calcula el costo amortizado con el método del potencial?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="42.32" cy="237.53" rx="83.37" ry="83.37" fill="hsl(120 90% 58% / 0.234)"/>
+<ellipse cx="119.18" cy="11.16" rx="101.67" ry="101.67" fill="hsl(120 90% 58% / 0.215)"/>
+<ellipse cx="64.39" cy="450.65" rx="113.61" ry="113.61" fill="hsl(120 90% 58% / 0.224)"/>
+<ellipse cx="381.5" cy="107.98" rx="98.75" ry="98.75" fill="hsl(120 90% 58% / 0.19)"/>
+<rect x="126" y="131" width="260" height="78" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">ĉ = c + ΔΦ</text>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">costo real + potencial</text>
+<line x1="256" y1="285" x2="256" y2="329.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,340 249.57,329.87 262.43,329.87" fill="#39ff14"/>
+<rect x="116" y="350" width="280" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="395" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">Φ(estado)</text>
+</svg>

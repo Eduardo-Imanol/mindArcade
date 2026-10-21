@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el filtro de Bloom no admite borrado?">
+<title>¿Por qué el filtro de Bloom no admite borrado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="228.9" cy="121.68" rx="127.28" ry="127.28" fill="hsl(320 90% 58% / 0.217)"/>
+<ellipse cx="168.07" cy="262.91" rx="132.11" ry="132.11" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="411.39" cy="6.31" rx="157.87" ry="157.87" fill="hsl(320 90% 58% / 0.217)"/>
+<ellipse cx="188.04" cy="457.66" rx="101.39" ry="101.39" fill="hsl(320 90% 58% / 0.187)"/>
+<rect x="123.96" y="170" width="264.08" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">bits compartidos</text>
+<line x1="256" y1="250" x2="256" y2="299.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,310 249.57,299.87 262.43,299.87" fill="#ffcc00"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">contar/conjuntos únicos</text>
+<rect x="156.2" y="410" width="199.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">Counting Bloom</text>
+</svg>

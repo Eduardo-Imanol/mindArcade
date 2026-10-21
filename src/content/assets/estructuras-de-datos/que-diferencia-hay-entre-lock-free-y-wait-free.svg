@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre lock-free y wait-free?">
+<title>¿Qué diferencia hay entre lock-free y wait-free?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="40.01" cy="240.46" rx="101.52" ry="101.52" fill="hsl(168 90% 58% / 0.177)"/>
+<ellipse cx="154.23" cy="178.47" rx="175.07" ry="175.07" fill="hsl(168 90% 58% / 0.2)"/>
+<ellipse cx="84.1" cy="488.22" rx="163.7" ry="163.7" fill="hsl(168 90% 58% / 0.149)"/>
+<ellipse cx="194.09" cy="500.13" rx="131.78" ry="131.78" fill="hsl(168 90% 58% / 0.233)"/>
+<rect x="-2.5" y="170" width="305" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">lock-free: algún progresa</text>
+<rect x="259.72" y="170" width="204.56" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">wait-free: todos</text>
+</svg>

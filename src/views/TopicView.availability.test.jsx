@@ -29,6 +29,7 @@ function tileFor(container, title) {
 afterEach(() => {
   catalog.topics = [];
   document.body.innerHTML = '';
+  localStorage.clear();
 });
 
 describe('TopicView intruso availability', () => {
@@ -68,7 +69,7 @@ describe('TopicView serpiente availability', () => {
     const gated = mount(<TopicView topicId={short.id} />);
     const gatedTile = tileFor(gated.container, 'Serpiente de significados');
     expect(gatedTile).toBeTruthy();
-    expect(gatedTile.textContent).toContain('Necesitas al menos 4 cartas');
+    expect(gatedTile.textContent).toContain('Te quedan 3 cartas por aprender o repasar');
     expect(gatedTile.querySelector('button[disabled]')).toBeTruthy();
     expect(
       gated.container.querySelector(
@@ -89,5 +90,41 @@ describe('TopicView serpiente availability', () => {
       'Jugar ahora'
     );
     open.unmount();
+  });
+});
+
+describe('TopicView eligible counts', () => {
+  it('bases the gate on study-eligible cards, not on the topic total', () => {
+    const ready = topic('listo', 'Listo', 6);
+    catalog.topics = [ready];
+    localStorage.setItem(
+      'sepect.srs.v1',
+      JSON.stringify({
+        listo: {
+          'listo-0': { reps: 3, nextReview: Date.now() + 86_400_000 },
+          'listo-1': { reps: 3, nextReview: Date.now() + 86_400_000 },
+        },
+      })
+    );
+
+    const { container, unmount } = mount(<TopicView topicId={ready.id} />);
+    const tile = tileFor(container, 'Lluvia de meteoros');
+    expect(tile.textContent).toContain('Te quedan 4 cartas por aprender o repasar');
+    expect(tile.querySelector('button[disabled]')).toBeTruthy();
+    unmount();
+  });
+
+  it('shows «Todo al día» when every card is learned and not due', () => {
+    const ready = topic('aldia', 'Al día', 4);
+    catalog.topics = [ready];
+    const future = Date.now() + 86_400_000;
+    const locked = {};
+    for (const card of ready.cards) locked[card.id] = { reps: 3, nextReview: future };
+    localStorage.setItem('sepect.srs.v1', JSON.stringify({ aldia: locked }));
+
+    const { container, unmount } = mount(<TopicView topicId={ready.id} />);
+    expect(container.textContent).toContain('Todo al día');
+    expect(container.querySelectorAll('a[href*="/juego/"]')).toHaveLength(0);
+    unmount();
   });
 });

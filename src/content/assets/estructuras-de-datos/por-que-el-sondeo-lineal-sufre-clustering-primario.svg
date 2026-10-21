@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el sondeo lineal sufre clustering primario?">
+<title>¿Por qué el sondeo lineal sufre clustering primario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="33.36" cy="21.91" rx="188.96" ry="188.96" fill="hsl(265 90% 58% / 0.158)"/>
+<ellipse cx="80.02" cy="122.54" rx="171.2" ry="171.2" fill="hsl(265 90% 58% / 0.205)"/>
+<ellipse cx="120.11" cy="158.74" rx="172.9" ry="172.9" fill="hsl(265 90% 58% / 0.228)"/>
+<ellipse cx="306.76" cy="444.94" rx="157.16" ry="157.16" fill="hsl(265 90% 58% / 0.229)"/>
+<rect x="76" y="210" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<rect x="138" y="210" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<rect x="200" y="210" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<rect x="262" y="210" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<rect x="324" y="210" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="386" y="210" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="154.34" y="310" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">rachas largas</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">sondeos se disparan</text>
+</svg>

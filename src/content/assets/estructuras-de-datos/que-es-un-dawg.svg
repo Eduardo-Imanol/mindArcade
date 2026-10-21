@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un DAWG?">
+<title>¿Qué es un DAWG?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="460.68" cy="369.75" rx="187.4" ry="187.4" fill="hsl(120 90% 58% / 0.214)"/>
+<ellipse cx="151.45" cy="418.03" rx="76.7" ry="76.7" fill="hsl(120 90% 58% / 0.233)"/>
+<ellipse cx="484.7" cy="49.4" rx="155.31" ry="155.31" fill="hsl(120 90% 58% / 0.204)"/>
+<ellipse cx="279.75" cy="195.73" rx="159.69" ry="159.69" fill="hsl(120 90% 58% / 0.169)"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">trie minimizado + sufijos</text>
+<rect x="146.28" y="260" width="219.44" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">AFD acíclico</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué propiedades tiene un árbol rojinegro?">
+<title>¿Qué propiedades tiene un árbol rojinegro?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="361.02" cy="275.34" rx="117.72" ry="117.72" fill="hsl(168 90% 58% / 0.234)"/>
+<ellipse cx="71.34" cy="436.47" rx="105.16" ry="105.16" fill="hsl(168 90% 58% / 0.23)"/>
+<ellipse cx="428.24" cy="34.99" rx="154.06" ry="154.06" fill="hsl(168 90% 58% / 0.213)"/>
+<ellipse cx="104.22" cy="217.23" rx="188.95" ry="188.95" fill="hsl(168 90% 58% / 0.224)"/>
+<rect x="187.2" y="110" width="137.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">raíz negra</text>
+<rect x="187.2" y="180" width="137.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">nil negras</text>
+<rect x="142.56" y="250" width="226.88" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">rojo sin rojo hijo</text>
+<rect x="159.3" y="320" width="193.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">mismo nº negros</text>
+</svg>

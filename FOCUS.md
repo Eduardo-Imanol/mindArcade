@@ -1,66 +1,79 @@
 # FOCUS
 
 ## Active objective (single)
-spec-12 "retouch-learning-dashboard" — **T1 y T2 completados 2026-10-20** con
-arranque autorizado por Eduardo («la spec 12 comienza con T1 y T2»). Gates en verde
-(tests 560/560, lint 0, build OK). T3–T11 pendientes; firma completa de la spec
-sigue abierta.
+spec-13 "impeccable-ui-retouch" — **T1–T22 + T24 implementados y documentados
+2026-10-21**; gates verdes (671/671 tests, lint 0, build OK). Pendiente T23
+(sesión manual 360px + teclado del flujo «Crear tema») y la firma humana del
+diff. La aprobación/firma de spec-12 sigue pendiente; no se abre otro
+incremento hasta cerrar ambas.
+
+**Adicional (cerrado técnicamente):** spec-14 «topic-content-pipeline» T1–T8 completados
+2026-10-21; gates verdes (680/680 tests, lint 0, build OK), skill + referencias
+y test de arte generalizado. Pendiente firma humana del diff. AC-29 al ejecutar
+el primer tema real.
 
 ## Current phase
-Fases SDD para spec-12:
+Fases SDD para spec-13:
 - F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; deps/infra/git-history
   requieren aprobación humana).
-- F2 ✅ `specs/spec-12-retouch-learning-dashboard.md` creada (borrador) y **arranque
-  parcial autorizado** por Eduardo 2026-10-20 para T1+T2.
-- F3 ✅ `specs/tasks-12-retouch-learning-dashboard.md` con T1–T11 y grafo.
-- F4 🟡 Implementación en marcha: **T1 ✅ T2 ✅**; T3–T11 en espera (T3/T4 pueden
-  arrancar en paralelo con firma).
-- F5 ⏸️ Pendiente (docs + verificación adversaria = T11).
-- F6 ⏸️ Pendiente.
+- F2 ✅ `specs/spec-13-impeccable-ui-retouch.md` (firmada) con alcance 3 altas
+  + medias UI.
+- F3 ✅ `tasks.md` con T1–T24 y grafo de dependencias.
+- F4 ✅ Fases A–C (T1–T21) implementadas.
+- F5 ✅ Fase D: gates (`npm test` 671/671, `npm run lint` 0, `npm run build`
+  OK — solo warning preexistente de chunk >500 kB) + docs sincronizados
+  (checklist a11y, MEMORY, FOCUS, spec ACs y tareas marcadas).
+- F6 🟡 Cierre: T23 sesión manual + firma humana del diff.
 
 ## Blockers
-- Firma completa de `specs/spec-12-retouch-learning-dashboard.md` para T3–T11
-  (especialmente la regla de selección que supersede spec-03 AC-3).
-- (Superado) autorización de arranque T1+T2 — concedida 2026-10-20.
+- T23: sesión manual humana (360px + teclado, flujo «Crear tema»).
+- Firmas pendientes: spec-12 y spec-13 (difiere de aprobación de implementación).
 
-## Done this session (2026-10-20)
-- **T1 — parser**: `description` completa sin `slice(0,160)`, prosa anterior a la
-  primera carta con párrafos intactos; excluye heading/código/HR; fix: la HR `---`
-  ya no se interpreta como carta. Tests nuevos en `parser.test.js`.
-- **T2 — fechas y portada**: `src/core/content/topicMeta.js`
-  (`sepect.topics.meta.v1`, `loadTopicMeta`/`saveTopicMeta`/`ensureTopicMeta`,
-  fallback seguro, sin mutar entrada), `src/core/content/cover.js`
-  (`topicCoverCard`), `catalog.js` con `createdAt` en `saveCustomTopic` y
-  `addedAt` en `buildCatalog(..., meta)` sin escribir; `loadCatalog()` lee meta.
-  Tests: `topicMeta.test.js` (12), `cover.test.js` (6), `catalog.test.js` (+8).
+## Done this session (2026-10-21)
+- **Fase A (T1–T4)**: `Modal.jsx` con overlay/backdrop, `role="dialog"`,
+  `aria-labelledby` (prop `title` + `useId`), focus trap Tab/Shift+Tab, Escape,
+  restauración de foco y scroll lock; clases `.modal-*`; `CreateTopicForm` sin
+  `h2` propio; tests DOM en `TopicsHub.a11y.test.jsx`.
+- **Fase B (T5–T15)**: tokens nuevos (`--bg3`, `--bg-deep`, `--neon-violet`,
+  `--cyan-dim`, `--text-dim`, …); cian unificado `#00ffcc` (fuera `#00f5d4` y
+  `#0d0d1a`); violeta pares `#b388ff` (6.5:1); `.btn-neon` completo con
+  reduced-motion; estilos de `select` de serpiente; `.error-page` y
+  `.game-app-title`; `PAGE`/`INPUT`/`CONTROL` fuera de vistas; `Button.jsx`
+  eliminado.
+- **Fase C (T16–T21)**: `components/ProgressBar.jsx`, hook
+  `views/useStudyCardCounts.js`, `document.title` por ruta (test
+  `src/app/title.test.js`), `aria-describedby` en tiles de juegos,
+  emisor `subscribeSettings` + `SoundToggle` sincronizado con
+  `useSyncExternalStore` (test AC-21), `Dashboard` empareja métricas por `id`.
+- **Gate de design system**: `src/ui/design-system.test.js` cubre AC-6..AC-18
+  y AC-9/10/11/12/13/14/20/22 por regex/DOM.
 
-## Decisiones propuestas (spec-12, pendientes de firma)
-- **Selección de estudio**: no aprendidas (`new`/`learning`) primero; completar solo
-  con aprendidas vencidas (`nextReview <= now`). Nunca aprendidas no vencidas. Esto
-  supersede el backfill de spec-03 AC-3.
-- **Estados**: `new` (sin SRS o `reps=0`), `learning` (`reps 1–2`), `learned`
-  (`reps >= 3`); `LEARNED_REPS = 3`.
-- **Métricas**: `getTopicMetrics`/`getGlobalMetrics` derivadas de catálogo + SRS +
-  historial; días y actividad en UTC; historial con tope 5.000; intentos con `xp`.
-- **Dashboard**: ruta `#/progreso`, KPIs globales, sección por tema, actividad 14
-  días, estados vacíos, sin librerías nuevas.
-- **Fechas**: custom `createdAt`; integrados primer avistamiento en
-  `sepect.topics.meta.v1`.
-- **Portada**: `topicCoverCard` = primera carta con imagen explícita; si no, primera
-  carta. Se usa en ficha de tema y ficha de juego.
-- **Fichas de juego**: título + portada + estado/CTA; sin descripción.
-- **Hub**: sin «Sepect» visible; buscador con lupa; orden por fecha/nombre/cartas/
-  progreso; filtro de estado.
-- **Modularidad**: `GameDefinition` congelado + props únicas; matriz de reutilización
-  con 2 temas; sin reescritura a clases.
-- **Alcance**: sin deps nuevas, sin backend, sin cambios en SM-2/Elo ni en la
-  mecánica de los 8 juegos.
+## Decisions (spec-13)
+- **Contraste**: nuevo token `--neon-violet: #b388ff` para texto violeta
+  (≈6.5:1); el violeta original `#7c4dff` solo sobrevive si lo exige el diseño.
+- **Un solo cian app-wide**: `--neon-cyan: #00ffcc`; el gate de
+  `design-system.test.js` falla si reaparece `#00f5d4`/`#0d0d1a`.
+- **Tailwind preflight se conserva**: los daños colaterales (márgenes UA
+  anulados) se reparan con clases explícitas (`.error-page`,
+  `.game-app-title`), quitando Tailwind está fuera de alcance.
+- **Tests leen tokens.css/código fuente**: al mover código a componentes hay
+  que actualizar las aserciones (pasó con ConectaPares y Dashboard).
+- **TopicView conserva `button[disabled]`** + `aria-describedby` (AC-20).
+- **Fuera de alcance**: partir `tokens.css`, reducir juegos >200 líneas,
+  refactor de store/persistencia, tocar `metrics.js`.
 
-## Previous increment
-spec-11 "serpiente-significados" — cerrada técnicamente 2026-10-20; pendiente
-aprobación humana del diff. Catálogo **8 available / 0 soon**.
+## Previous increments
+- spec-14 "topic-content-pipeline" — implementación T1–T8 completa 2026-10-21;
+  gates verdes 680/680, generalización verificada con tema sintético; pendiente
+  firma humana del diff (AC-29 al primer tema real).
+- spec-12 "retouch-learning-dashboard" — implementación T1–T11 completa
+  2026-10-20; gates verdes 654/654; pendiente firma humana del diff/spec.
+- spec-11 "serpiente-significados" — cerrada técnicamente 2026-10-20;
+  catálogo **8 juegos / 8 available / 0 soon**.
 
 ## Next atomic step
-T3 — `src/core/repetition/learning.js` + `selectStudyCards` (supersede spec-03
-AC-3; requiere la firma de la spec-12). En paralelo T4 (métricas) depende de T3.
-Después T5/T6 → T7/T8/T9 → T10 → T11 (docs + gates + firma del diff).
+T23 (humano): `npm run dev`, sesión en 360px + solo teclado del flujo
+«Crear tema» contra el checklist `docs/manual-a11y-checklist.md` (sección
+spec-13) → firma del diff → archivar `tasks.md` en `specs/tasks-13-*.md` si
+procede. Antes de firmar, re-ejecutar `npm test`, `npm run lint` y
+`npm run build`.

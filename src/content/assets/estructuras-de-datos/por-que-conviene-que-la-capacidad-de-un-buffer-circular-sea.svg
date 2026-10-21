@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué conviene que la capacidad de un buffer circular sea potencia de 2?">
+<title>¿Por qué conviene que la capacidad de un buffer circular sea potencia de 2?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="286.17" cy="235.5" rx="168.99" ry="168.99" fill="hsl(45 90% 58% / 0.194)"/>
+<ellipse cx="72.86" cy="8.11" rx="135.11" ry="135.11" fill="hsl(45 90% 58% / 0.198)"/>
+<ellipse cx="67.94" cy="326.51" rx="188.18" ry="188.18" fill="hsl(45 90% 58% / 0.237)"/>
+<ellipse cx="285.35" cy="41.34" rx="100.71" ry="100.71" fill="hsl(45 90% 58% / 0.233)"/>
+<rect x="141" y="163" width="230" height="74" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">c &amp; (c-1)</text>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">potencia de 2</text>
+<rect x="113.42" y="340" width="285.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">módulo sin división</text>
+</svg>

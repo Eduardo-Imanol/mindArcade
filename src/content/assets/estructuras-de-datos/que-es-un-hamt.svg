@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un HAMT?">
+<title>¿Qué es un HAMT?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="498.42" cy="153.28" rx="165.22" ry="165.22" fill="hsl(120 90% 58% / 0.199)"/>
+<ellipse cx="390.97" cy="271.23" rx="154.62" ry="154.62" fill="hsl(120 90% 58% / 0.176)"/>
+<ellipse cx="186.3" cy="434.68" rx="148.84" ry="148.84" fill="hsl(120 90% 58% / 0.227)"/>
+<ellipse cx="475.6" cy="139.58" rx="121.24" ry="121.24" fill="hsl(120 90% 58% / 0.148)"/>
+<rect x="146.28" y="150" width="219.44" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">trie hash 32</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">bitmap + arreglo compacto</text>
+<rect x="162.4" y="300" width="187.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ffcc00">O(log₃₂ n)</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué operaciones ofrece una pila y con qué costo?">
+<title>¿Qué operaciones ofrece una pila y con qué costo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="185.4" cy="86" rx="191.04" ry="191.04" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="449.31" cy="128.15" rx="86.5" ry="86.5" fill="hsl(265 90% 58% / 0.188)"/>
+<ellipse cx="159.06" cy="30.29" rx="147.36" ry="147.36" fill="hsl(265 90% 58% / 0.163)"/>
+<ellipse cx="19.14" cy="44.45" rx="82.47" ry="82.47" fill="hsl(265 90% 58% / 0.188)"/>
+<rect x="213.24" y="110" width="85.52" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">push</text>
+<text x="380" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">O(1)</text>
+<rect x="220.68" y="190" width="70.64" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">pop</text>
+<text x="380" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">O(1)</text>
+<rect x="213.24" y="270" width="85.52" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">peek</text>
+<text x="380" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">O(1)</text>
+<rect x="190.92" y="350" width="130.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">isEmpty</text>
+<text x="380" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">O(1)</text>
+</svg>

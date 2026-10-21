@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un grafo?">
+<title>¿Qué es un grafo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="304.59" cy="259.3" rx="114.39" ry="114.39" fill="hsl(45 90% 58% / 0.197)"/>
+<ellipse cx="450.6" cy="230.34" rx="143.41" ry="143.41" fill="hsl(45 90% 58% / 0.231)"/>
+<ellipse cx="42.94" cy="441.52" rx="164.26" ry="164.26" fill="hsl(45 90% 58% / 0.219)"/>
+<ellipse cx="120.54" cy="193.29" rx="185.29" ry="185.29" fill="hsl(45 90% 58% / 0.232)"/>
+<ellipse cx="135.75" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="91.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="47.25" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="249.75" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="167.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="85.25" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<line x1="220" y1="200" x2="281.2" y2="200" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="292,200 281.87,206.43 281.87,193.57" fill="#00ffcc"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">V, E</text>
+</svg>

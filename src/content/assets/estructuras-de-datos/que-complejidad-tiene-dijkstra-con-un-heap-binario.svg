@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complejidad tiene Dijkstra con un heap binario?">
+<title>¿Qué complejidad tiene Dijkstra con un heap binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="498.77" cy="349.45" rx="200.09" ry="200.09" fill="hsl(168 90% 58% / 0.224)"/>
+<ellipse cx="510.99" cy="204.49" rx="99.94" ry="99.94" fill="hsl(168 90% 58% / 0.218)"/>
+<ellipse cx="73.86" cy="160.79" rx="84.29" ry="84.29" fill="hsl(168 90% 58% / 0.193)"/>
+<ellipse cx="254.26" cy="376.76" rx="190.94" ry="190.94" fill="hsl(168 90% 58% / 0.16)"/>
+<rect x="97.92" y="130" width="316.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">heap binario O((V+E)log V)</text>
+<rect x="120.24" y="200" width="271.52" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">Fibonacci O(E+V log V)</text>
+<rect x="181.62" y="270" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">array O(V²)</text>
+</svg>

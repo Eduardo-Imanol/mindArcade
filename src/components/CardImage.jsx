@@ -90,7 +90,7 @@ function FallbackTile({ seed = 'carta', label = '', size = 96, fill = false, cla
       role="img"
       aria-label={label || 'Ilustración generada'}
       className={className}
-      style={fill ? { display: 'block', borderRadius: 12 } : { width: size, height: size, display: 'block', borderRadius: 12 }}
+      style={fill ? { display: 'block', width: '100%', height: '100%' } : { width: size, height: size, display: 'block', borderRadius: 12 }}
     />
   );
 }
@@ -163,7 +163,11 @@ export default function CardImage({ card = {}, image, overrides, size = 96, fill
         {...(fill ? {} : { width: size, height: size })}
         onError={() => setBroken(true)}
         className={fillClass}
-        style={{ objectFit: fill ? 'contain' : 'cover', borderRadius: 12, border: '1px solid rgba(0,255,204,.35)', display: 'block' }}
+        style={
+          fill
+            ? { objectFit: 'cover', display: 'block' }
+            : { objectFit: 'cover', borderRadius: 12, border: '1px solid rgba(0,255,204,.35)', display: 'block' }
+        }
       />
     );
   }

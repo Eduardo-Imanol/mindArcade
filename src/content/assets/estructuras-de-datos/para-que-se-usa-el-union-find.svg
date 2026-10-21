@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Para qué se usa el union-find?">
+<title>¿Para qué se usa el union-find?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="281.12" cy="129.12" rx="94.15" ry="94.15" fill="hsl(168 90% 58% / 0.197)"/>
+<ellipse cx="254.8" cy="331.28" rx="132.42" ry="132.42" fill="hsl(168 90% 58% / 0.22)"/>
+<ellipse cx="301.86" cy="309.57" rx="90.69" ry="90.69" fill="hsl(168 90% 58% / 0.179)"/>
+<ellipse cx="116.09" cy="118.9" rx="109.29" ry="109.29" fill="hsl(168 90% 58% / 0.19)"/>
+<rect x="195.26" y="130" width="121.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Kruskal</text>
+<rect x="167.98" y="200" width="176.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">componentes</text>
+<rect x="202.08" y="270" width="107.84" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">ciclos</text>
+<rect x="167.98" y="340" width="176.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">percolación</text>
+</svg>

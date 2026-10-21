@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene sustituir la librería estándar por una implementación propia?">
+<title>¿Cuándo conviene sustituir la librería estándar por una implementación propia?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="151.55" cy="199.62" rx="127.4" ry="127.4" fill="hsl(45 90% 58% / 0.163)"/>
+<ellipse cx="453.31" cy="247.86" rx="107.47" ry="107.47" fill="hsl(45 90% 58% / 0.203)"/>
+<ellipse cx="285.41" cy="149.88" rx="125.97" ry="125.97" fill="hsl(45 90% 58% / 0.209)"/>
+<ellipse cx="183.7" cy="476.54" rx="117.36" ry="117.36" fill="hsl(45 90% 58% / 0.174)"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">solo con cuello medido</text>
+<rect x="133.88" y="270" width="244.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">medir en release</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">probar dart:collection primero</text>
+</svg>

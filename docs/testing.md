@@ -4,9 +4,9 @@
 - Scope spec-01: parser, SM-2/Elo, XP/streak, engine state machine.
 - Done = 100% tests + eslint/prettier clean (see `docs/security.md` for persistence tests).
 
-## spec-12 (draft)
+## spec-12 (implemented; human sign-off pending)
 
-Cover these contracts when the spec is signed:
+Cover these contracts:
 
 - **Parser**: topic description is returned complete (no 160-char slice), multi-paragraph,
   headings/code/card lines excluded; empty description stays `''`.
@@ -29,4 +29,20 @@ Cover these contracts when the spec is signed:
   full description without `line-clamp`, game tiles without descriptions, dashboard
   KPIs/activity/empty states, `#/progreso` route.
 - **a11y**: `role="progressbar"` with `aria-valuenow`, native controls, labels, focus;
-  manual checklist in `docs/manual-a11y-checklist.md`.
+  `TopicsHub.a11y.test.jsx`, `TopicView.a11y.test.jsx`, `Dashboard.a11y.test.jsx`
+  cover accessible names, 44 px target CSS, no description truncation, responsive
+  360 px reflow regexes and `prefers-reduced-motion`; the no-horizontal-scroll check
+  is completed by a human via `docs/manual-a11y-checklist.md`.
+- **Hub meta**: `TopicsHub` calls `ensureTopicMeta` so built-in topics persist their
+  first-seen `addedAt` (test: stable across remounts).
+
+## spec-14 (implementada; revisión de diff pendiente)
+
+- **Arte por tema**: `scripts/generate-topic-art.test.mjs` descubre todos los
+  `src/content/topics/*.md` y valida cobertura de sketches, huérfanos de sketch y de
+  SVG, paridad assets↔cartas, calidad accesible (512×512, `role="img"`, `<title>`,
+  `aria-label`, <200 KB), determinismo byte a byte y el ciclo de `generateArt`
+  (escribe, omite sin `--force`, reporta faltantes). Sin números ni temas fijos.
+- **Fixtures**: el mismo archivo se ejecuta con un tema y con dos temas sintéticos en
+  un directorio temporal, y comprueba que un asset ausente, un SVG sobrante, un
+  sketch huérfano o una carta sin sketch se reportan con tema y carta.

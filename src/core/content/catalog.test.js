@@ -114,8 +114,10 @@ describe('addedAt (spec-12 AC-8)', () => {
   it('loadCatalog merges builtin + meta dates', () => {
     localStorage.setItem('sepect.topics.meta.v1', JSON.stringify(META));
     const catalog = loadCatalog();
-    expect(catalog[0].source).toBe('builtin');
-    expect(catalog[0].addedAt).toBe('2026-01-01T00:00:00.000Z');
+    const builtin = catalog.find((topic) => topic.id === 'funciones-en-programacion');
+    expect(builtin).toBeTruthy();
+    expect(builtin.source).toBe('builtin');
+    expect(builtin.addedAt).toBe('2026-01-01T00:00:00.000Z');
     expect(loadTopicMeta()).toEqual(META);
   });
 });

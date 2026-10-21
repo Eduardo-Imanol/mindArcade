@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un segment tree?">
+<title>¿Qué es un segment tree?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="324.92" cy="256.37" rx="195.48" ry="195.48" fill="hsl(120 90% 58% / 0.209)"/>
+<ellipse cx="324.27" cy="183.75" rx="75.07" ry="75.07" fill="hsl(120 90% 58% / 0.2)"/>
+<ellipse cx="206.23" cy="67.11" rx="73.52" ry="73.52" fill="hsl(120 90% 58% / 0.167)"/>
+<ellipse cx="303.42" cy="379.52" rx="163.09" ry="163.09" fill="hsl(120 90% 58% / 0.209)"/>
+<rect x="181" y="89" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">rango total</text>
+<line x1="256" y1="145" x2="194.49" y2="193.33" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="186,200 189.99,188.68 197.94,198.8" fill="#8a7fb5"/>
+<line x1="256" y1="145" x2="317.51" y2="193.33" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="326,200 314.06,198.8 322.01,188.68" fill="#8a7fb5"/>
+<rect x="131" y="214" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="186" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">[0,n/2]</text>
+<rect x="271" y="214" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="326" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">[n/2,n)</text>
+<ellipse cx="193" cy="340" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="130" cy="340" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="67" cy="340" rx="4" ry="4" fill="#8a7fb5"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">agregación asociativa</text>
+</svg>

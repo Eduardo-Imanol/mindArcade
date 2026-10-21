@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué problemas se resuelven con una pila?">
+<title>¿Qué problemas se resuelven con una pila?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="451.02" cy="474.86" rx="114.94" ry="114.94" fill="hsl(320 90% 58% / 0.218)"/>
+<ellipse cx="289.64" cy="209.23" rx="200.42" ry="200.42" fill="hsl(320 90% 58% / 0.146)"/>
+<ellipse cx="62.6" cy="378.28" rx="159.64" ry="159.64" fill="hsl(320 90% 58% / 0.187)"/>
+<ellipse cx="485.77" cy="466.25" rx="127.19" ry="127.19" fill="hsl(320 90% 58% / 0.164)"/>
+<rect x="174.8" y="100" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">paréntesis</text>
+<rect x="154.34" y="168" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="188" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">infix→postfix</text>
+<rect x="222.54" y="236" width="66.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">RPN</text>
+<rect x="222.54" y="304" width="66.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="324" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">DFS</text>
+<rect x="181.62" y="372" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="392" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">undo/redo</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene un trie frente a una tabla hash?">
+<title>¿Cuándo conviene un trie frente a una tabla hash?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="182.17" cy="296.45" rx="195.56" ry="195.56" fill="hsl(45 90% 58% / 0.231)"/>
+<ellipse cx="255.49" cy="48.98" rx="162.16" ry="162.16" fill="hsl(45 90% 58% / 0.227)"/>
+<ellipse cx="155.79" cy="68.76" rx="203.61" ry="203.61" fill="hsl(45 90% 58% / 0.16)"/>
+<ellipse cx="360.51" cy="473.16" rx="202.38" ry="202.38" fill="hsl(45 90% 58% / 0.236)"/>
+<rect x="188.44" y="130" width="135.12" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">prefijos</text>
+<rect x="181.62" y="200" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">orden lex</text>
+<rect x="147.52" y="270" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">longest-prefix</text>
+<rect x="147.52" y="340" width="216.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">autocompletado</text>
+</svg>

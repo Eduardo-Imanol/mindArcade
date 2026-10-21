@@ -106,7 +106,7 @@ export default function Intruso({ groups = [], anchorTopicId, onGrade, onExit } 
     return (
       <main className="sepect-bg intruso-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>El intruso</h1>
+          <h1 className="neon game-app-title">El intruso</h1>
           <p>Este juego necesita al menos dos temas con 3 cartas cada uno.</p>
           <div className="intruso-actions">
             <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
@@ -121,7 +121,7 @@ export default function Intruso({ groups = [], anchorTopicId, onGrade, onExit } 
     return (
       <main className="sepect-bg intruso-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>El intruso</h1>
+          <h1 className="neon game-app-title">El intruso</h1>
           <p>
             Tres significados son del tema actual; uno es de otro tema. Toca el que no
             pertenece. Tienes un solo intento por ronda.
@@ -157,7 +157,7 @@ export default function Intruso({ groups = [], anchorTopicId, onGrade, onExit } 
       return (
         <main className="sepect-bg intruso-page" style={PAGE}>
           <div className="game-stage">
-            <h1 className="neon" style={{ fontSize: 24 }}>Sin rondas disponibles</h1>
+            <h1 className="neon game-app-title">Sin rondas disponibles</h1>
             <p>No hay suficientes significados únicos para armar el set. Agrega cartas o temas.</p>
             <div className="intruso-actions">
               <button className="btn-neon" type="button" onClick={handleReplay}>Elegir rondas</button>
@@ -174,7 +174,7 @@ export default function Intruso({ groups = [], anchorTopicId, onGrade, onExit } 
     return (
       <main className="sepect-bg intruso-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Sesión completada</h1>
+          <h1 className="neon game-app-title">Sesión completada</h1>
           <p role="status">
             {stats.correct} de {stats.total} aciertos · {stats.fails} fallos · +{gained} XP
           </p>
@@ -193,7 +193,7 @@ export default function Intruso({ groups = [], anchorTopicId, onGrade, onExit } 
     return (
       <main className="sepect-bg intruso-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>El intruso</h1>
+          <h1 className="neon game-app-title">El intruso</h1>
           <p>No hay una ronda disponible.</p>
           <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
         </div>

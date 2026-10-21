@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué construir un heap con el algoritmo de Floyd cuesta O(n)?">
+<title>¿Por qué construir un heap con el algoritmo de Floyd cuesta O(n)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="98.34" cy="119.34" rx="93.95" ry="93.95" fill="hsl(320 90% 58% / 0.142)"/>
+<ellipse cx="505.68" cy="265.21" rx="86.51" ry="86.51" fill="hsl(320 90% 58% / 0.17)"/>
+<ellipse cx="422.96" cy="59.9" rx="164.84" ry="164.84" fill="hsl(320 90% 58% / 0.19)"/>
+<ellipse cx="256.4" cy="65.92" rx="204.45" ry="204.45" fill="hsl(320 90% 58% / 0.201)"/>
+<ellipse cx="174" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="118" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="62" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">desde último interno</text>
+<rect x="205.8" y="380" width="100.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#39ff14">O(n)</text>
+</svg>

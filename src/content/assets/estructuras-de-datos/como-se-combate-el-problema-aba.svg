@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se combate el problema ABA?">
+<title>¿Cómo se combate el problema ABA?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="53.15" cy="374.25" rx="95.8" ry="95.8" fill="hsl(265 90% 58% / 0.201)"/>
+<ellipse cx="167.37" cy="107.88" rx="152.33" ry="152.33" fill="hsl(265 90% 58% / 0.155)"/>
+<ellipse cx="33.34" cy="11.6" rx="147.87" ry="147.87" fill="hsl(265 90% 58% / 0.145)"/>
+<ellipse cx="508.16" cy="38.04" rx="130.85" ry="130.85" fill="hsl(265 90% 58% / 0.22)"/>
+<rect x="161.16" y="130" width="189.68" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">tag+contador</text>
+<rect x="174.8" y="200" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">hazard ptr</text>
+<rect x="222.54" y="270" width="66.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">RCU</text>
+<rect x="202.08" y="340" width="107.84" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">épocas</text>
+</svg>

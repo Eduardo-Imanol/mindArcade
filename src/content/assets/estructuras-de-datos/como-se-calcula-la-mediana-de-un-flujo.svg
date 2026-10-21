@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se calcula la mediana de un flujo?">
+<title>¿Cómo se calcula la mediana de un flujo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="305.27" cy="46.91" rx="142.02" ry="142.02" fill="hsl(45 90% 58% / 0.195)"/>
+<ellipse cx="433.7" cy="433.21" rx="168.44" ry="168.44" fill="hsl(45 90% 58% / 0.162)"/>
+<ellipse cx="181.05" cy="292.78" rx="173.02" ry="173.02" fill="hsl(45 90% 58% / 0.153)"/>
+<ellipse cx="498.36" cy="485.14" rx="157.52" ry="157.52" fill="hsl(45 90% 58% / 0.234)"/>
+<rect x="70" y="170" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="84" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">inferior</text>
+<text x="145" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">max-heap</text>
+<rect x="292" y="170" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="306" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">superior</text>
+<text x="367" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">min-heap</text>
+<rect x="174.8" y="340" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">equilibrar</text>
+</svg>

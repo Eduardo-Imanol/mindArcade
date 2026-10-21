@@ -61,6 +61,13 @@ export function click(element) {
 }
 
 export function setValue(element, value) {
+  setNativeValue(element, value);
+  const eventType =
+    element instanceof HTMLSelectElement ? 'change' : 'input';
+  fire(element, eventType);
+}
+
+function setNativeValue(element, value) {
   const proto =
     element instanceof HTMLTextAreaElement
       ? HTMLTextAreaElement.prototype
@@ -69,11 +76,12 @@ export function setValue(element, value) {
         : HTMLInputElement.prototype;
   const setter = Object.getOwnPropertyDescriptor(proto, 'value').set;
   setter.call(element, value);
-  fire(element, 'input');
 }
 
-export function keydown(target, key) {
+export function keydown(target, key, init = {}) {
   act(() => {
-    target.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true, cancelable: true }));
+    target.dispatchEvent(
+      new KeyboardEvent('keydown', { key, bubbles: true, cancelable: true, ...init })
+    );
   });
 }

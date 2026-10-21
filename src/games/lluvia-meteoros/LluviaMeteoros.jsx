@@ -425,7 +425,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     return (
       <main className="sepect-bg lluvia-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Lluvia de meteoros</h1>
+          <h1 className="neon game-app-title">Lluvia de meteoros</h1>
           <p>
             Necesitas al menos 6 cartas y 3 significados distintos para jugar. Agrega
             contenido al tema y vuelve a intentarlo.
@@ -443,7 +443,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     return (
       <main className="sepect-bg lluvia-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Lluvia de meteoros</h1>
+          <h1 className="neon game-app-title">Lluvia de meteoros</h1>
           <p>
             Cada meteoro trae el concepto de una carta. Elige su significado antes de que
             impacte. Un solo intento por meteoro.
@@ -519,7 +519,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
       return (
         <main className="sepect-bg lluvia-page" style={PAGE}>
           <div className="game-stage">
-            <h1 className="neon" style={{ fontSize: 24 }}>Sin meteoros disponibles</h1>
+            <h1 className="neon game-app-title">Sin meteoros disponibles</h1>
             <p>
               Este tema no tiene suficientes significados distintos para armar la sesión.
               Necesitas al menos 6 cartas y 3 respuestas únicas.
@@ -538,7 +538,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     return (
       <main className="sepect-bg lluvia-page" style={PAGE}>
         <div className="game-stage">
-          <h1 ref={summaryRef} className="neon" tabIndex={-1} style={{ fontSize: 24 }}>
+          <h1 ref={summaryRef} className="neon game-app-title" tabIndex={-1}>
             Sesión completada
           </h1>
           <div className="card-neon lluvia-summary">
@@ -562,7 +562,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     return (
       <main className="sepect-bg lluvia-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Partida en pausa</h1>
+          <h1 className="neon game-app-title">Partida en pausa</h1>
           <div className="card-neon lluvia-pause">
             <p style={{ margin: 0 }}>
               Meteoro {state.roundIndex + 1} de {state.total} · {state.score} puntos
@@ -591,7 +591,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     return (
       <main className="sepect-bg lluvia-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Lluvia de meteoros</h1>
+          <h1 className="neon game-app-title">Lluvia de meteoros</h1>
           <p>No hay un meteoro disponible.</p>
           <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
         </div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el false sharing y por qué importa en una cola SPSC?">
+<title>¿Qué es el false sharing y por qué importa en una cola SPSC?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="335.22" cy="355.22" rx="201.23" ry="201.23" fill="hsl(265 90% 58% / 0.24)"/>
+<ellipse cx="228.38" cy="431.01" rx="134.94" ry="134.94" fill="hsl(265 90% 58% / 0.198)"/>
+<ellipse cx="358.64" cy="60.9" rx="154.7" ry="154.7" fill="hsl(265 90% 58% / 0.24)"/>
+<ellipse cx="408.72" cy="160.03" rx="134.15" ry="134.15" fill="hsl(265 90% 58% / 0.166)"/>
+<rect x="90" y="190" width="140" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="104" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">head</text>
+<rect x="282" y="190" width="140" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="296" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">tail</text>
+<line x1="232" y1="235" x2="280" y2="235" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round"/>
+<rect x="140.7" y="320" width="230.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">misma línea 64B</text>
+<rect x="195.26" y="380" width="121.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">padding</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué contradicción resume la conjetura RUM?">
+<title>¿Qué contradicción resume la conjetura RUM?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="44.29" cy="379.58" rx="173.74" ry="173.74" fill="hsl(120 90% 58% / 0.233)"/>
+<ellipse cx="108.13" cy="213.2" rx="136.03" ry="136.03" fill="hsl(120 90% 58% / 0.216)"/>
+<ellipse cx="299.48" cy="423.93" rx="131.9" ry="131.9" fill="hsl(120 90% 58% / 0.151)"/>
+<ellipse cx="288.36" cy="63.45" rx="93.14" ry="93.14" fill="hsl(120 90% 58% / 0.188)"/>
+<rect x="45.22" y="150" width="421.56" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">lectura / escritura / espacio</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">no minimizar los 3</text>
+</svg>

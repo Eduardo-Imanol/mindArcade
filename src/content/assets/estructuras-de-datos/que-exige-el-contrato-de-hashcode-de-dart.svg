@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué exige el contrato de hashCode de Dart?">
+<title>¿Qué exige el contrato de hashCode de Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="379.05" cy="306.73" rx="197.88" ry="197.88" fill="hsl(320 90% 58% / 0.143)"/>
+<ellipse cx="383.55" cy="213.93" rx="204.79" ry="204.79" fill="hsl(320 90% 58% / 0.142)"/>
+<ellipse cx="257.26" cy="21.26" rx="98.94" ry="98.94" fill="hsl(320 90% 58% / 0.214)"/>
+<ellipse cx="85.07" cy="412.2" rx="109.58" ry="109.58" fill="hsl(320 90% 58% / 0.235)"/>
+<rect x="110" y="170" width="130" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="124" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">a==b</text>
+<line x1="240" y1="215" x2="269.2" y2="215" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,215 269.87,221.43 269.87,208.57" fill="#39ff14"/>
+<rect x="282" y="170" width="130" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="296" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">hash igual</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">estable mientras sea clave</text>
+</svg>

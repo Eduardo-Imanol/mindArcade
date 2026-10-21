@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre grafo dirigido, no dirigido, ponderado y multigrafo?">
+<title>¿Qué diferencia hay entre grafo dirigido, no dirigido, ponderado y multigrafo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="450.99" cy="424.94" rx="81.36" ry="81.36" fill="hsl(120 90% 58% / 0.153)"/>
+<ellipse cx="221.13" cy="444.32" rx="170.28" ry="170.28" fill="hsl(120 90% 58% / 0.156)"/>
+<ellipse cx="373.78" cy="254.21" rx="154.52" ry="154.52" fill="hsl(120 90% 58% / 0.167)"/>
+<ellipse cx="202.92" cy="347.16" rx="186.97" ry="186.97" fill="hsl(120 90% 58% / 0.231)"/>
+<rect x="188.44" y="120" width="135.12" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">dirigido</text>
+<rect x="167.98" y="190" width="176.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">no dirigido</text>
+<rect x="181.62" y="260" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">ponderado</text>
+<rect x="174.8" y="330" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">multigrafo</text>
+</svg>

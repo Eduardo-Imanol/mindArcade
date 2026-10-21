@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una estructura persistente?">
+<title>¿Qué es una estructura persistente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="295.91" cy="383.61" rx="76.26" ry="76.26" fill="hsl(168 90% 58% / 0.188)"/>
+<ellipse cx="298.17" cy="191.82" rx="179.31" ry="179.31" fill="hsl(168 90% 58% / 0.233)"/>
+<ellipse cx="400.36" cy="296.29" rx="163.14" ry="163.14" fill="hsl(168 90% 58% / 0.218)"/>
+<ellipse cx="242.94" cy="341.87" rx="190.68" ry="190.68" fill="hsl(168 90% 58% / 0.233)"/>
+<rect x="90" y="200" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="104" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">v1</text>
+<line x1="240" y1="240" x2="269.2" y2="240" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,240 269.87,246.43 269.87,233.57" fill="#00ffcc"/>
+<rect x="290" y="200" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="304" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">v2</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">v1 sigue válida</text>
+</svg>

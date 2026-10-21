@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre una estructura parcialmente y una totalmente persistente?">
+<title>¿Qué diferencia hay entre una estructura parcialmente y una totalmente persistente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="321.53" cy="97.9" rx="188.06" ry="188.06" fill="hsl(45 90% 58% / 0.184)"/>
+<ellipse cx="181.06" cy="505.5" rx="123.63" ry="123.63" fill="hsl(45 90% 58% / 0.235)"/>
+<ellipse cx="190.15" cy="468.61" rx="138.8" ry="138.8" fill="hsl(45 90% 58% / 0.171)"/>
+<ellipse cx="471.47" cy="56.43" rx="87.52" ry="87.52" fill="hsl(45 90% 58% / 0.228)"/>
+<rect x="106.6" y="170" width="298.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">parcial: solo última</text>
+<rect x="79.32" y="260" width="353.36" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">total: cualquier versión</text>
+</svg>

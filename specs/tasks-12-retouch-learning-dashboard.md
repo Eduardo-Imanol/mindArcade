@@ -1,9 +1,8 @@
 # tasks.md — retouch-learning-dashboard (spec-12, borrador)
 
 > Derivado de `specs/spec-12-retouch-learning-dashboard.md` (borrador 2026-10-20).
-> **Estado: T1 y T2 implementados el 2026-10-20** con autorización de arranque de
-> Eduardo («la spec 12 comienza con T1 y T2»); T3–T11 pendientes y la firma completa
-> de la spec sigue abierta.
+> **Estado: T1–T11 implementados el 2026-10-20**; la firma humana del diff y de la
+> spec sigue abierta.
 > Incremento anterior: spec-11 cerrada técnicamente (`specs/tasks-11-serpiente-significados.md`).
 > Sin dependencias nuevas. Sin backend. Sin cambios en la mecánica de los 8 juegos.
 
@@ -77,20 +76,20 @@ Cadenas críticas:
   tercer argumento (lectura pura, sin escritura). Gates: 560/560, lint 0, build OK.
 
 ### T3 — Estados de aprendizaje y selección de estudio [depends: none]
-- [ ] **Deliverable:** `src/core/repetition/learning.js`:
+- [x] **Deliverable:** `src/core/repetition/learning.js`:
   - `LEARNED_REPS = 3`;
   - `getCardLearningState(state)` → `new|learning|learned`;
   - normalización de `reps` inválidos.
-- [ ] **Deliverable:** `src/core/repetition/selectStudyCards.js`:
+- [x] **Deliverable:** `src/core/repetition/selectStudyCards.js`:
   - `selectStudyCards(cards, srs, { count, now, random })`;
   - no aprendidas primero (barajadas);
   - completar solo con aprendidas vencidas (`nextReview <= now`), por `nextReview`
     ascendente;
   - nunca devolver no vencidas; nunca más de `count`;
   - determinista con `random` fijo.
-- [ ] **Deliverable:** retirar/actualizar `selectDueCards.js` y su test para que no
+- [x] **Deliverable:** retirar/actualizar `selectDueCards.js` y su test para que no
   quede una segunda semántica viva. La nueva regla supersede spec-03 AC-3.
-- [ ] **Tests:** `learning.test.js`, `selectStudyCards.test.js`:
+- [x] **Tests:** `learning.test.js`, `selectStudyCards.test.js`:
   - estados y bordes;
   - fixture 2 nuevas + 1 aprendiendo + 4 vencidas + 3 no vencidas;
   - `count` 0/negativo/mayor que el pool;
@@ -100,9 +99,11 @@ Cadenas críticas:
 - **Contexto:** spec HU-3; `selectDueCards` actual; `sm2.js`; tests de spec-03.
 - **Done when:** nueva selección pura probada; ningún uso de la regla antigua.
 - **Estimate:** M.
+- **Estado:** ✅ hecho 2026-10-20 (`selectDueCards.js` y su test eliminados; 12 tests
+  nuevos en verde).
 
 ### T4 — Métricas core [depends: T3 para estados]
-- [ ] **Deliverable:** `src/core/metrics/metrics.js`:
+- [x] **Deliverable:** `src/core/metrics/metrics.js`:
   - `GRADE_XP = { facil: 10, dificil: 25, 'otra-vez': 0 }`;
   - `dayKey(at)` UTC (`toISOString().slice(0,10)`);
   - `getTopicMetrics(topic, srs, history, now)`;
@@ -110,7 +111,7 @@ Cadenas críticas:
   - `getActivity(history, days = 14, now)`;
   - `bestStreak(days)`;
   - filtrado de intentos inválidos y derivación de XP legacy.
-- [ ] **Tests:** `metrics.test.js` con `now` fijo:
+- [x] **Tests:** `metrics.test.js` con `now` fijo:
   - tema 10 cartas, 4 learned/3 learning/3 new, 2 vencidas, 5 intentos en 2 días;
   - precisión, progreso, días, XP;
   - global con 2 temas, días únicos, racha actual/mejor, actividad de 14 días con
@@ -120,26 +121,27 @@ Cadenas críticas:
 - **Contexto:** spec HU-3/HU-4; `store.js`; `srs.js`; `xp.js`.
 - **Done when:** métricas deterministas y cubiertas con fixtures exactos.
 - **Estimate:** M.
+- **Estado:** ✅ hecho 2026-10-20 (`metrics.test.js`: 15 tests verdes).
 
 ### T5 — Persistencia de intentos, GameHost y disponibilidad [depends: T2, T3, T4]
-- [ ] **Deliverable:** `src/core/storage/store.js`:
+- [x] **Deliverable:** `src/core/storage/store.js`:
   - tope de historial 5.000;
   - compatibilidad con perfiles antiguos;
   - `addAttempt` conserva `xp` si viene.
-- [ ] **Deliverable:** `src/views/GameHost.jsx`:
+- [x] **Deliverable:** `src/views/GameHost.jsx`:
   - `now` fijo por sesión;
   - deck = `selectStudyCards(topic.cards, srs[topic.id], { count: total, now })`;
   - `selectCards(count)` usa la misma regla;
   - `groups` de `intruso` con cartas elegibles por tema;
   - estado «Todo al día» si no hay elegibles (no monta el juego);
   - intento guardado con `xp`.
-- [ ] **Deliverable:** `src/games/availability.js`:
+- [x] **Deliverable:** `src/games/availability.js`:
   - acepta conteos elegibles (`studyCardCounts`) además del total;
   - mensajes nuevos para pocas cartas elegibles;
   - `intruso` usa elegibles por tema.
-- [ ] **Deliverable:** `src/views/TopicView.jsx` (solo la parte de datos):
+- [x] **Deliverable:** `src/views/TopicView.jsx` (solo la parte de datos):
   - carga SRS y calcula elegibles para disponibilidad y conteos.
-- [ ] **Tests:** `GameHost.test.jsx`, `availability.test.js`,
+- [x] **Tests:** `GameHost.test.jsx`, `availability.test.js`,
   `TopicView.availability.test.jsx`:
   - no aprendidas primero;
   - una aprendida no vencida no aparece;
@@ -153,15 +155,18 @@ Cadenas críticas:
   existentes (habrá que ajustar fixtures con `nextReview`).
 - **Done when:** todos los juegos reciben solo elegibles y los gates usan elegibles.
 - **Estimate:** L.
+- **Estado:** ✅ hecho 2026-10-20. Notas: el resultado `ok` de `getGameAvailability`
+  conserva el contrato exacto; se añaden `eligible`/`eligibleBased` solo en los casos
+  con `studyCardCounts`; el deck queda barajado (tests con `Math.random` fijado).
 
 ### T6 — GameDefinition y matriz de reutilización [depends: T3]
-- [ ] **Deliverable:** `src/games/definition.js`:
+- [x] **Deliverable:** `src/games/definition.js`:
   - `defineGame` con validación y `Object.freeze`;
   - campos `id`, `title`, `description?`, `art?`, `status`, `minCards`, `minTopics?`,
     `minCardsPerTopic?`, `load`.
-- [ ] **Deliverable:** `src/games/registry.js` usa `defineGame`; conserva los 8 IDs,
+- [x] **Deliverable:** `src/games/registry.js` usa `defineGame`; conserva los 8 IDs,
   orden y metadata.
-- [ ] **Deliverable:** tests:
+- [x] **Deliverable:** tests:
   - `registry.test.js` actualizado (objeto congelado, 8 available, `load()`);
   - matriz de reutilización con 2 decks (programación e idiomas) para los 8 juegos;
   - ausencia de texto hardcodeado de «Funciones» en `src/games/**`.
@@ -169,9 +174,12 @@ Cadenas críticas:
 - **Contexto:** spec HU-5; registry actual; isolation tests; fixtures de tests.
 - **Done when:** registry es data-driven y la matriz multi-tema pasa.
 - **Estimate:** M.
+- **Estado:** ✅ hecho 2026-10-20. `definition.test.js` (7), `reuse.matrix.test.jsx`
+  (5, incluye escaneo de texto hardcodeado). Flashcards gana `<h1>` en pantalla de
+  juego para cumplir la matriz. Gates: 640/640, lint 0, build OK.
 
 ### T7 — Hub: búsqueda, orden, filtros, portadas y progreso [depends: T2, T4, T5]
-- [ ] **Deliverable:** `src/views/TopicsHub.jsx`:
+- [x] **Deliverable:** `src/views/TopicsHub.jsx`:
   - header sin «Sepect»: «Tus temas» + acciones «Crear tema»/«Progreso»;
   - buscador con lupa, `type="search"`, etiqueta accesible, limpiar;
   - selector de orden (Recientes/Antiguos/Nombre A-Z/Nombre Z-A/Más cartas/Progreso);
@@ -179,9 +187,9 @@ Cadenas críticas:
   - ficha con portada `topicCoverCard`, progreso, aprendidas/pendientes, días;
   - estado sin resultados;
   - conservar creación de temas y modal.
-- [ ] **Deliverable:** helpers puros de búsqueda/orden/filtro (en `src/core/content/`
+- [x] **Deliverable:** helpers puros de búsqueda/orden/filtro (en `src/core/content/`
   o `src/views/topics.js`) con tests.
-- [ ] **Tests:** `TopicsHub.test.jsx` y tests de helpers:
+- [x] **Tests:** `TopicsHub.test.jsx` y tests de helpers:
   - header sin «Sepect»;
   - búsqueda por título/descripción sin acentos;
   - orden por fecha/nombre/cartas/progreso;
@@ -192,18 +200,21 @@ Cadenas críticas:
 - **Contexto:** spec HU-2; `TopicsHub.jsx` actual; `CardImage`; `topicMeta`.
 - **Done when:** hub usable con 0/1/10+ temas y filtros deterministas.
 - **Estimate:** L.
+- **Estado:** ✅ hecho 2026-10-20. `topics.js` + `topics.test.js` (16),
+  `TopicsHub.test.jsx` ampliado (11). `setValue` de `render.jsx` dispara `change`
+  en selects.
 
 ### T8 — TopicView: descripción completa y fichas de juego [depends: T1, T2, T5, T6]
-- [ ] **Deliverable:** `src/views/TopicView.jsx`:
+- [x] **Deliverable:** `src/views/TopicView.jsx`:
   - descripción completa con `white-space: pre-line`, sin truncado;
   - header con métricas (aprendidas/pendientes/progreso/días);
-  - fichas de juego con título + portada del tema + estado/CTA;
+  - fichas de juego con título + imagen representativa del juego + estado/CTA;
   - eliminar descripción del juego/tema en la ficha;
   - motivo de bloqueo basado en elegibles;
   - contador `X de 8 disponibles`.
-- [ ] **Tests:** `TopicView.test.jsx` y `TopicView.availability.test.jsx`:
+- [x] **Tests:** `TopicView.test.jsx` y `TopicView.availability.test.jsx`:
   - descripción >160 chars visible completa y sin `line-clamp`;
-  - 8 fichas, imágenes de portada (misma portada) y `alt=""`;
+  - 8 fichas, arte propio por juego y `alt=""`;
   - ausencia de descripciones en fichas;
   - gate por elegibles;
   - tema desconocido sigue dando 404.
@@ -212,20 +223,23 @@ Cadenas críticas:
 - **Contexto:** spec HU-1/HU-2/HU-3; `TopicView.jsx`; `CardImage`; `GameDefinition`.
 - **Done when:** la descripción se lee completa y la selección de juegos es limpia.
 - **Estimate:** M.
+- **Estado:** ✅ hecho 2026-10-20. `TopicView.test.jsx` ampliado (8). Cada ficha
+  renderiza el arte propio del juego (`game.art`) y cae a la portada del tema si el
+  juego no declara arte (AC-9).
 
 ### T9 — Dashboard avanzado y ruta `#/progreso` [depends: T2, T4, T6]
-- [ ] **Deliverable:** `src/app/router.js` + `src/app/App.jsx`:
+- [x] **Deliverable:** `src/app/router.js` + `src/app/App.jsx`:
   - `parseHash('#/progreso')` → `{ view: 'progress' }`;
   - `<Dashboard />` en esa ruta;
   - enlaces desde hub y TopicView.
-- [ ] **Deliverable:** `src/views/Dashboard.jsx`:
+- [x] **Deliverable:** `src/views/Dashboard.jsx`:
   - reemplaza el demo spec-01;
   - KPIs globales;
   - sección por tema (portada, métricas, progreso, última sesión, enlace);
   - actividad de 14 días (CSS + alternativa textual);
   - estados vacíos y datos corruptos;
   - lectura fresca al montar.
-- [ ] **Tests:** `router.test.js`, `Dashboard.test.jsx`/`Dashboard.a11y.test.jsx`:
+- [x] **Tests:** `router.test.js`, `Dashboard.test.jsx`/`Dashboard.a11y.test.jsx`:
   - ruta y navegación;
   - KPIs con fixture fijo;
   - temas ordenados por pendientes;
@@ -237,14 +251,16 @@ Cadenas críticas:
 - **Contexto:** spec HU-4; `Dashboard.jsx` actual (no ruteado); `metrics.js`.
 - **Done when:** dashboard avanzado local, fresco y accesible.
 - **Estimate:** L.
+- **Estado:** ✅ hecho 2026-10-20. `Dashboard.test.jsx` (7, nuevo) +
+  `Dashboard.a11y.test.jsx` reescrito (2) + `router.test.js` (+1).
 
 ### T10 — CSS responsive y accesibilidad [depends: T7, T8, T9]
-- [ ] **Deliverable:** `src/ui/tokens.css`:
+- [x] **Deliverable:** `src/ui/tokens.css`:
   - hub: header, buscador, filtros, grid, portadas, barras de progreso;
   - TopicView: descripción completa, fichas título+imagen, estados;
   - dashboard: KPIs, grid de temas, actividad, estados vacíos;
   - responsive 360 px, targets ≥44 px, foco visible, reduced motion.
-- [ ] **Tests:** a11y de hub/TopicView/Dashboard:
+- [x] **Tests:** a11y de hub/TopicView/Dashboard:
   - controles nativos, labels, foco, teclado;
   - `role="progressbar"` con valores;
   - sin `line-clamp`/ellipsis en descripción;
@@ -253,9 +269,12 @@ Cadenas críticas:
 - **Contexto:** spec restricciones de UI; tokens actuales; `docs/manual-a11y-checklist.md`.
 - **Done when:** las tres vistas nuevas cumplen el contrato visual y a11y.
 - **Estimate:** M.
+- **Estado:** ✅ hecho 2026-10-20. `TopicsHub.a11y.test.jsx` (5),
+  `TopicView.a11y.test.jsx` (5), `Dashboard.a11y.test.jsx` (4). `index.html` pasa a
+  `lang="es"`. Checklist manual actualizado.
 
 ### T11 — Documentación, verificación adversaria y gates [depends: T1–T10]
-- [ ] **Deliverable:** docs sincronizados:
+- [x] **Deliverable:** docs sincronizados:
   - `specs/roadmap-games.md` (regla de selección y GameDefinition);
   - `MEMORY.md` (decisiones y aprendizajes);
   - `FOCUS.md` (estado final);
@@ -263,14 +282,18 @@ Cadenas críticas:
   - `docs/testing.md` (nuevos contratos);
   - `docs/manual-a11y-checklist.md` (hub/tema/dashboard);
   - `tasks.md` (estado final).
-- [ ] **Verificación adversaria:** revisar AC-1..AC-34 contra tests y diff; buscar
-  regresiones en los 8 juegos y en los tests de selección antiguos.
-- [ ] **Gates:** `npm test`, `npm run lint`, `npm run build`.
+- [x] **Verificación adversaria:** revisar AC-1..AC-34 contra tests y diff; buscar
+  regresiones en los 8 juegos y en los tests de selección antiguos. **Gap AC-8
+  corregido:** `ensureTopicMeta` no se invocaba; `TopicsHub` ahora persiste el primer
+  `addedAt` de los temas integrados (test de estabilidad).
+- [x] **Gates:** `npm test`, `npm run lint`, `npm run build` (ver estado final).
 - [ ] **Cierre:** aprobación humana del diff y de la spec.
 - **AC cubiertos:** AC-32, AC-33, AC-34.
 - **Contexto:** spec completa; `docs/testing.md`; skill `impeccable`.
 - **Done when:** gates 100 %, documentos sincronizados y firma humana.
 - **Estimate:** S.
+- **Estado:** ✅ implementación y verificación hechas 2026-10-20; firma humana
+  pendiente.
 
 ## Sizing / execution flow
 
@@ -283,7 +306,7 @@ Cadenas críticas:
   fixtures antiguos que esperaban backfill con aprendidas no vencidas. Se actualizan
   junto con cada tarea, no al final.
 - **Regla:** T1/T2 autorizados por Eduardo el 2026-10-20 (arranque del incremento).
-  Para T3 en adelante se requiere además la firma completa de la spec-12.
+  T3–T11 implementados en la misma fecha; la firma formal de la spec sigue pendiente.
 
 ## Sign-off
 
@@ -301,6 +324,11 @@ Cadenas críticas:
 - [x] Documentos creados: `spec-12` + `tasks-12`.
 - [x] T1 — Parser: descripción completa (2026-10-20).
 - [x] T2 — `topicMeta` + `topicCoverCard` + `createdAt` (2026-10-20).
-- [ ] T3–T11: no iniciados.
-- [ ] Firma completa de la spec: pendiente.
-- Gates tras T1+T2: `npm test` 560/560, `npm run lint` 0, `npm run build` OK.
+- [x] T3 — `learning` + `selectStudyCards` (2026-10-20).
+- [x] T4 — Métricas core (2026-10-20).
+- [x] T5 — Persistencia de intentos, GameHost y disponibilidad (2026-10-20).
+- [x] T6–T9: completados 2026-10-20.
+- [x] T10–T11: completados 2026-10-20.
+- [ ] Firma completa de la spec: pendiente (borrador).
+- Gates finales tras T10–T11: `npm test` **654/654** (67 files), `npm run lint` 0,
+  `npm run build` OK (solo warning preexistente de chunk >500 kB).

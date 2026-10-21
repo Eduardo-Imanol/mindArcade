@@ -1,6 +1,6 @@
 // src/core/storage/store.js — localStorage profile + capped history, quota-safe
 const KEY = 'sepect.profile.v1';
-const MAX_HISTORY = 1000;
+const MAX_HISTORY = 5000;
 
 export function createStore(backend) {
   const mem = { data: null };

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un bitset y cuándo es la mejor opción?">
+<title>¿Qué es un bitset y cuándo es la mejor opción?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="111.67" cy="292.58" rx="147.14" ry="147.14" fill="hsl(168 90% 58% / 0.237)"/>
+<ellipse cx="425.4" cy="492.76" rx="186.23" ry="186.23" fill="hsl(168 90% 58% / 0.218)"/>
+<ellipse cx="82.94" cy="4.75" rx="144.95" ry="144.95" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="377.09" cy="504.65" rx="201.84" ry="201.84" fill="hsl(168 90% 58% / 0.235)"/>
+<rect x="70" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="120" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="170" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="220" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="270" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="320" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="370" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="420" y="150" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="70" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="120" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="170" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="220" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="270" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="320" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="370" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="420" y="220" width="40" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="133.88" y="310" width="244.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">1 bit / elemento</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">universo acotado y denso</text>
+</svg>

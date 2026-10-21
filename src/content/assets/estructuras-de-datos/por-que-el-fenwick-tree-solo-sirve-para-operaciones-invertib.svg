@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el Fenwick tree solo sirve para operaciones invertibles?">
+<title>¿Por qué el Fenwick tree solo sirve para operaciones invertibles?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="370.75" cy="466.28" rx="87.19" ry="87.19" fill="hsl(45 90% 58% / 0.181)"/>
+<ellipse cx="435.78" cy="160.06" rx="108.05" ry="108.05" fill="hsl(45 90% 58% / 0.211)"/>
+<ellipse cx="493.98" cy="147.55" rx="119.03" ry="119.03" fill="hsl(45 90% 58% / 0.155)"/>
+<ellipse cx="107.23" cy="417.03" rx="123.38" ry="123.38" fill="hsl(45 90% 58% / 0.172)"/>
+<rect x="99.78" y="170" width="312.44" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">prefix(j)-prefix(i-1)</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">min no invertible</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se implementa una caché LRU con get y put en O(1)?">
+<title>¿Cómo se implementa una caché LRU con get y put en O(1)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="259.99" cy="72.1" rx="189.29" ry="189.29" fill="hsl(168 90% 58% / 0.146)"/>
+<ellipse cx="237.33" cy="386.07" rx="131.97" ry="131.97" fill="hsl(168 90% 58% / 0.167)"/>
+<ellipse cx="313.61" cy="213.7" rx="76.2" ry="76.2" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="378.58" cy="335.24" rx="109.71" ry="109.71" fill="hsl(168 90% 58% / 0.208)"/>
+<rect x="80" y="200" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="94" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">HashMap</text>
+<line x1="230" y1="245" x2="259.2" y2="245" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="270,245 259.87,251.43 259.87,238.57" fill="#8a7fb5"/>
+<rect x="280" y="200" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="294" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">DList</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">frente = más reciente</text>
+</svg>

@@ -29,7 +29,7 @@ export function createCanvasQuiz(canvasEl, topic = []) {
       const q = topic[card]?.q ?? '¿Qué es `let`? (demo)';
       ctx.fillText(String(q).slice(0, 28), w / 2, h / 2);
       // progreso dinámico: barra lerp sin DOM
-      ctx.fillStyle = '#00f5d4';
+      ctx.fillStyle = '#00ffcc';
       ctx.fillRect(w / 2 - 100, h / 2 + 70, 200 * ((card + 1) / Math.max(1, topic.length || 3)), 8);
     },
   });

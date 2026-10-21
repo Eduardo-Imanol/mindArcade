@@ -89,7 +89,7 @@ export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {
     return (
       <main className="sepect-bg ahorcado-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Ahorcado</h1>
+          <h1 className="neon game-app-title">Ahorcado</h1>
           <p>Este tema no tiene cartas suficientes todavía.</p>
           <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
         </div>
@@ -101,7 +101,7 @@ export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {
     return (
       <main className="sepect-bg ahorcado-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Ahorcado</h1>
+          <h1 className="neon game-app-title">Ahorcado</h1>
           <p>Adivina el término letra a letra usando su significado como pista.</p>
           <div className="ahorcado-setup">
             <label htmlFor="ahorcado-rounds">Rondas</label>
@@ -135,7 +135,7 @@ export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {
     return (
       <main className="sepect-bg ahorcado-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Sesión completada</h1>
+          <h1 className="neon game-app-title">Sesión completada</h1>
           <p role="status">
             {wins} de {state.total} rondas ganadas · {fails} fallos · +{gained} XP
           </p>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué invariante mantiene un árbol AVL?">
+<title>¿Qué invariante mantiene un árbol AVL?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="325.93" cy="289.86" rx="105.25" ry="105.25" fill="hsl(320 90% 58% / 0.163)"/>
+<ellipse cx="419.69" cy="110.43" rx="195.11" ry="195.11" fill="hsl(320 90% 58% / 0.182)"/>
+<ellipse cx="235.18" cy="172.13" rx="139.46" ry="139.46" fill="hsl(320 90% 58% / 0.224)"/>
+<ellipse cx="223.49" cy="445.35" rx="179.61" ry="179.61" fill="hsl(320 90% 58% / 0.186)"/>
+<rect x="66.3" y="170" width="379.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">|h(izq)-h(der)| ≤ 1</text>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">factor balance</text>
+</svg>

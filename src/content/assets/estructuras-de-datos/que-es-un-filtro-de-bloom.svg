@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un filtro de Bloom?">
+<title>¿Qué es un filtro de Bloom?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="32.9" cy="176.45" rx="108.78" ry="108.78" fill="hsl(265 90% 58% / 0.157)"/>
+<ellipse cx="136.29" cy="202.96" rx="185.35" ry="185.35" fill="hsl(265 90% 58% / 0.202)"/>
+<ellipse cx="413.07" cy="206.87" rx="79.34" ry="79.34" fill="hsl(265 90% 58% / 0.226)"/>
+<ellipse cx="403.85" cy="368.15" rx="80.48" ry="80.48" fill="hsl(265 90% 58% / 0.235)"/>
+<rect x="76" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="114" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="152" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="190" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="228" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="266" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="304" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="342" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="380" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="418" y="200" width="28" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">k funciones hash</text>
+<rect x="106.6" y="370" width="298.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">sin falsos negativos</text>
+</svg>

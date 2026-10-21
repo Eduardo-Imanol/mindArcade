@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se calcula la dirección de un elemento en un arreglo?">
+<title>¿Cómo se calcula la dirección de un elemento en un arreglo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="14.13" cy="64.7" rx="78.37" ry="78.37" fill="hsl(320 90% 58% / 0.141)"/>
+<ellipse cx="23.15" cy="455.3" rx="167.89" ry="167.89" fill="hsl(320 90% 58% / 0.226)"/>
+<ellipse cx="93.73" cy="158.78" rx="204.12" ry="204.12" fill="hsl(320 90% 58% / 0.211)"/>
+<ellipse cx="263.75" cy="102.22" rx="77.81" ry="77.81" fill="hsl(320 90% 58% / 0.187)"/>
+<rect x="72" y="200" width="60" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="148" y="200" width="60" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="224" y="200" width="60" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="300" y="200" width="60" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="376" y="200" width="60" height="64" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="102" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">0</text>
+<text x="178" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">1</text>
+<text x="254" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">2</text>
+<text x="330" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">3</text>
+<text x="406" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">4</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">base + i·s</text>
+</svg>

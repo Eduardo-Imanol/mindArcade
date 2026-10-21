@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el formato CSR para representar un grafo?">
+<title>¿Qué es el formato CSR para representar un grafo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="209.14" cy="490.17" rx="143.82" ry="143.82" fill="hsl(265 90% 58% / 0.159)"/>
+<ellipse cx="392.24" cy="81.94" rx="119.4" ry="119.4" fill="hsl(265 90% 58% / 0.204)"/>
+<ellipse cx="318.34" cy="326.35" rx="99.12" ry="99.12" fill="hsl(265 90% 58% / 0.187)"/>
+<ellipse cx="206.8" cy="359.05" rx="106.67" ry="106.67" fill="hsl(265 90% 58% / 0.23)"/>
+<rect x="90" y="200" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="104" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">offsets</text>
+<rect x="258" y="200" width="150" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="272" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">targets</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">vecinos contiguos</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un tipo abstracto de datos?">
+<title>¿Qué es un tipo abstracto de datos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="226.47" cy="263.25" rx="129.72" ry="129.72" fill="hsl(120 90% 58% / 0.151)"/>
+<ellipse cx="457.92" cy="329.75" rx="187.96" ry="187.96" fill="hsl(120 90% 58% / 0.232)"/>
+<ellipse cx="243.33" cy="457.37" rx="126.64" ry="126.64" fill="hsl(120 90% 58% / 0.219)"/>
+<ellipse cx="463.45" cy="495.84" rx="196.86" ry="196.86" fill="hsl(120 90% 58% / 0.225)"/>
+<rect x="191" y="219" width="130" height="74" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="36" font-weight="700" fill="#f1f1f1">TAD</text>
+<rect x="45" y="119" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="120" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">dominio D</text>
+<rect x="304" y="119" width="176" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="392" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">operaciones O</text>
+<rect x="181" y="379" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">axiomas A</text>
+<line x1="190" y1="180" x2="210.69" y2="216.6" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="216,226 205.42,220.34 216.61,214.02" fill="#00ffcc"/>
+<line x1="322" y1="180" x2="301.31" y2="216.6" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,226 295.39,214.02 306.58,220.34" fill="#ff007f"/>
+<line x1="256" y1="370" x2="256" y2="310.8" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 262.43,310.13 249.57,310.13" fill="#39ff14"/>
+</svg>

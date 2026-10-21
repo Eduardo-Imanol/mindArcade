@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el particionado de estructuras?">
+<title>¿Qué es el particionado de estructuras?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="71.26" cy="464.01" rx="98.91" ry="98.91" fill="hsl(320 90% 58% / 0.197)"/>
+<ellipse cx="504.04" cy="410.49" rx="92.07" ry="92.07" fill="hsl(320 90% 58% / 0.171)"/>
+<ellipse cx="419.55" cy="440.12" rx="172.38" ry="172.38" fill="hsl(320 90% 58% / 0.168)"/>
+<ellipse cx="307.18" cy="437.03" rx="86.17" ry="86.17" fill="hsl(320 90% 58% / 0.182)"/>
+<rect x="86" y="200" width="70" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="172" y="200" width="70" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="258" y="200" width="70" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="344" y="200" width="70" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">shards + lock propio</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el hashing universal?">
+<title>¿Qué es el hashing universal?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="93.41" cy="106.59" rx="119.57" ry="119.57" fill="hsl(168 90% 58% / 0.202)"/>
+<ellipse cx="369.79" cy="222.53" rx="172.78" ry="172.78" fill="hsl(168 90% 58% / 0.196)"/>
+<ellipse cx="436.33" cy="319.86" rx="96.29" ry="96.29" fill="hsl(168 90% 58% / 0.195)"/>
+<ellipse cx="217.62" cy="437.91" rx="79.18" ry="79.18" fill="hsl(168 90% 58% / 0.184)"/>
+<rect x="113.42" y="150" width="285.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Pr[h(x)=h(y)] ≤ 1/m</text>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">para x≠y</text>
+<rect x="122.1" y="300" width="267.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">O(1+α) esperado</text>
+</svg>

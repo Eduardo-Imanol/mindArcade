@@ -1,5 +1,11 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { DEFAULT_SETTINGS, isMuted, loadSettings, saveSettings } from './settings.js';
+import {
+  DEFAULT_SETTINGS,
+  isMuted,
+  loadSettings,
+  saveSettings,
+  subscribeSettings,
+} from './settings.js';
 
 const KEY = 'sepect.settings.v1';
 
@@ -50,5 +56,15 @@ describe('settings', () => {
     setItem.mockRestore();
     expect(loadSettings()).toEqual({ muted: true });
     expect(saveSettings({ muted: false }).ok).toBe(true);
+  });
+
+  it('notifies subscribers on save and stops after unsubscribe (AC-21)', () => {
+    const listener = vi.fn();
+    const unsubscribe = subscribeSettings(listener);
+    saveSettings({ muted: true });
+    expect(listener).toHaveBeenCalledTimes(1);
+    unsubscribe();
+    saveSettings({ muted: false });
+    expect(listener).toHaveBeenCalledTimes(1);
   });
 });

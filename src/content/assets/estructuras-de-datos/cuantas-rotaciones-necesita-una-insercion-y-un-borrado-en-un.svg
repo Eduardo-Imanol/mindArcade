@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuántas rotaciones necesita una inserción y un borrado en un AVL?">
+<title>¿Cuántas rotaciones necesita una inserción y un borrado en un AVL?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="348.59" cy="344.81" rx="171.27" ry="171.27" fill="hsl(168 90% 58% / 0.161)"/>
+<ellipse cx="509.59" cy="480.37" rx="178.41" ry="178.41" fill="hsl(168 90% 58% / 0.156)"/>
+<ellipse cx="170.17" cy="187.22" rx="125.19" ry="125.19" fill="hsl(168 90% 58% / 0.15)"/>
+<ellipse cx="257.13" cy="68.95" rx="137.03" ry="137.03" fill="hsl(168 90% 58% / 0.176)"/>
+<rect x="52.6" y="180" width="174.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="140" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">insert: ≤1</text>
+<rect x="253.6" y="180" width="236.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="372" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">borrar: ≤O(log n)</text>
+</svg>

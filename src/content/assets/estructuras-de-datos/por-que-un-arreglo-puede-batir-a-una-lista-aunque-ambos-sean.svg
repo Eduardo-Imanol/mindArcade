@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué un arreglo puede batir a una lista aunque ambos sean O(n)?">
+<title>¿Por qué un arreglo puede batir a una lista aunque ambos sean O(n)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="496.56" cy="71.16" rx="79.09" ry="79.09" fill="hsl(265 90% 58% / 0.141)"/>
+<ellipse cx="344.82" cy="370.93" rx="194.58" ry="194.58" fill="hsl(265 90% 58% / 0.236)"/>
+<ellipse cx="465.14" cy="17.1" rx="165.78" ry="165.78" fill="hsl(265 90% 58% / 0.198)"/>
+<ellipse cx="33.18" cy="427.82" rx="136" ry="136" fill="hsl(265 90% 58% / 0.171)"/>
+<rect x="70.04" y="150" width="159.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">localidad</text>
+<rect x="294.92" y="150" width="130.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="360" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">memmove</text>
+<line x1="230" y1="245" x2="269.2" y2="245" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,245 269.87,251.43 269.87,238.57" fill="#00ffcc"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">cache mucho más rápido</text>
+</svg>

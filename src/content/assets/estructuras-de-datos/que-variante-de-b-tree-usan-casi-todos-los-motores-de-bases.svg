@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué variante de B-tree usan casi todos los motores de bases de datos?">
+<title>¿Qué variante de B-tree usan casi todos los motores de bases de datos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="312.18" cy="380.05" rx="204" ry="204" fill="hsl(168 90% 58% / 0.228)"/>
+<ellipse cx="379.92" cy="158.53" rx="144.85" ry="144.85" fill="hsl(168 90% 58% / 0.164)"/>
+<ellipse cx="186.19" cy="93.63" rx="80.06" ry="80.06" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="151.75" cy="27.82" rx="125.65" ry="125.65" fill="hsl(168 90% 58% / 0.198)"/>
+<rect x="156.2" y="150" width="199.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="40" font-weight="700" fill="#00ffcc">B+ tree</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">internos = guías · hojas = datos</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">hojas doblemente enlazadas</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza el union-find y con qué costo?">
+<title>¿Qué garantiza el union-find y con qué costo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="314.29" cy="141.55" rx="85.61" ry="85.61" fill="hsl(45 90% 58% / 0.147)"/>
+<ellipse cx="0.25" cy="354.05" rx="156.31" ry="156.31" fill="hsl(45 90% 58% / 0.216)"/>
+<ellipse cx="179.53" cy="445.04" rx="130.78" ry="130.78" fill="hsl(45 90% 58% / 0.236)"/>
+<ellipse cx="335.89" cy="47.69" rx="159.73" ry="159.73" fill="hsl(45 90% 58% / 0.184)"/>
+<rect x="45.22" y="150" width="421.56" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">compresión + unión por tamaño</text>
+<rect x="19.8" y="260" width="472.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="40" font-weight="700" fill="#39ff14">O(α(n)) amortizado</text>
+</svg>

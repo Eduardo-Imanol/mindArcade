@@ -96,7 +96,7 @@ export function InteractiveGameCanvas({
           className={className}
           role="img"
           aria-label={label}
-          style={{ width: '100%', height: 'min(60vh, 560px)', display: 'block', borderRadius: 12, background: '#0d0d1a', touchAction: 'none' }}
+          style={{ width: '100%', height: 'min(60vh, 560px)', display: 'block', borderRadius: 12, background: '#0f051d', touchAction: 'none' }}
         />
       )}
       <div aria-live="polite" className="sr-only" />

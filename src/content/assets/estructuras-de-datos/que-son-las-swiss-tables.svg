@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son las Swiss tables?">
+<title>¿Qué son las Swiss tables?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="445.92" cy="127.52" rx="166.29" ry="166.29" fill="hsl(265 90% 58% / 0.159)"/>
+<ellipse cx="169.82" cy="393.01" rx="78.67" ry="78.67" fill="hsl(265 90% 58% / 0.24)"/>
+<ellipse cx="296.06" cy="41.08" rx="200.38" ry="200.38" fill="hsl(265 90% 58% / 0.174)"/>
+<ellipse cx="207.78" cy="347.65" rx="117.61" ry="117.61" fill="hsl(265 90% 58% / 0.225)"/>
+<rect x="76" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="122" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="168" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="214" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="260" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="306" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="352" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="398" y="170" width="36" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="256" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">bytes de control</text>
+<rect x="154.34" y="320" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">SIMD 16 bytes</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">factor de carga 7/8</text>
+</svg>

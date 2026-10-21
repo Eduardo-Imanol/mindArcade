@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un gap buffer?">
+<title>¿Qué es un gap buffer?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="43.18" cy="0.38" rx="199.71" ry="199.71" fill="hsl(120 90% 58% / 0.227)"/>
+<ellipse cx="17.15" cy="95.26" rx="203.43" ry="203.43" fill="hsl(120 90% 58% / 0.166)"/>
+<ellipse cx="199.91" cy="499.53" rx="142.32" ry="142.32" fill="hsl(120 90% 58% / 0.18)"/>
+<ellipse cx="178.16" cy="480.97" rx="74.61" ry="74.61" fill="hsl(120 90% 58% / 0.183)"/>
+<rect x="60" y="190" width="110" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="115" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">texto</text>
+<rect x="170" y="190" width="150" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="245" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">hueco</text>
+<rect x="320" y="190" width="130" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="385" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">texto</text>
+<line x1="245" y1="140" x2="245" y2="169.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="245,180 238.57,169.87 251.43,169.87" fill="#00ffcc"/>
+<text x="245" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">cursor</text>
+<rect x="154.34" y="320" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">insertar O(1)</text>
+</svg>

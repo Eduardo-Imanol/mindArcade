@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona un buffer circular?">
+<title>¿Cómo funciona un buffer circular?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="45.43" cy="427.06" rx="160.99" ry="160.99" fill="hsl(265 90% 58% / 0.169)"/>
+<ellipse cx="168.04" cy="495.09" rx="133.5" ry="133.5" fill="hsl(265 90% 58% / 0.235)"/>
+<ellipse cx="484.96" cy="404.82" rx="118.79" ry="118.79" fill="hsl(265 90% 58% / 0.227)"/>
+<ellipse cx="361.36" cy="40.56" rx="154.24" ry="154.24" fill="hsl(265 90% 58% / 0.209)"/>
+<rect x="86" y="190" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="148" y="190" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="210" y="190" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="272" y="190" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="334" y="190" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="396" y="190" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="112" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">head</text>
+<text x="398" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">tail</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">módulo c</text>
+</svg>

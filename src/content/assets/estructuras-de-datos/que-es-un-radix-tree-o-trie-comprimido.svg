@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un radix tree o trie comprimido?">
+<title>¿Qué es un radix tree o trie comprimido?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="311.4" cy="4.94" rx="142.27" ry="142.27" fill="hsl(120 90% 58% / 0.166)"/>
+<ellipse cx="43.81" cy="136.61" rx="181.25" ry="181.25" fill="hsl(120 90% 58% / 0.159)"/>
+<ellipse cx="458.8" cy="215.36" rx="202.35" ry="202.35" fill="hsl(120 90% 58% / 0.228)"/>
+<ellipse cx="408.1" cy="67.99" rx="182.63" ry="182.63" fill="hsl(120 90% 58% / 0.185)"/>
+<text x="150" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">&quot;cat&quot;,&quot;car&quot;</text>
+<line x1="230" y1="200" x2="259.2" y2="200" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="270,200 259.87,206.43 259.87,193.57" fill="#00ffcc"/>
+<text x="362" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">&quot;ca&quot;→&quot;t&quot;,&quot;r&quot;</text>
+<rect x="167.98" y="300" width="176.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">≤2n-1 nodos</text>
+</svg>

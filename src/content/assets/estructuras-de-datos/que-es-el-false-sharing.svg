@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el false sharing?">
+<title>¿Qué es el false sharing?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="438.75" cy="249.73" rx="120.95" ry="120.95" fill="hsl(320 90% 58% / 0.235)"/>
+<ellipse cx="409.93" cy="134.43" rx="189.36" ry="189.36" fill="hsl(320 90% 58% / 0.194)"/>
+<ellipse cx="10" cy="476.41" rx="168.87" ry="168.87" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="303.84" cy="128.52" rx="183" ry="183" fill="hsl(320 90% 58% / 0.162)"/>
+<rect x="110" y="190" width="140" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="124" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">x</text>
+<rect x="262" y="190" width="140" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="276" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">y</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">misma línea 64B</text>
+<rect x="195.26" y="300" width="121.48" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">padding</text>
+</svg>

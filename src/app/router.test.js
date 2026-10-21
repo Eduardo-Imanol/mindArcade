@@ -10,6 +10,10 @@ describe('parseHash', () => {
   it('topic route', () => {
     expect(parseHash('#/tema/funciones')).toEqual({ view: 'topic', topicId: 'funciones' });
   });
+  it('progress route', () => {
+    expect(parseHash('#/progreso')).toEqual({ view: 'progress' });
+    expect(parseHash('#/progreso/')).toEqual({ view: 'progress' });
+  });
   it('game route', () => {
     expect(parseHash('#/tema/funciones/juego/flashcards')).toEqual({
       view: 'game',

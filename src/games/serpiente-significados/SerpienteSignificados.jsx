@@ -522,7 +522,6 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
             ref={summaryRef}
             className="neon serpiente-title"
             tabIndex={-1}
-            style={{ fontSize: 24 }}
           >
             {title}
           </h1>

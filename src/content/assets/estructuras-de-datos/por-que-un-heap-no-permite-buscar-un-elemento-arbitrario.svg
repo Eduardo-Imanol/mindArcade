@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué un heap no permite buscar un elemento arbitrario?">
+<title>¿Por qué un heap no permite buscar un elemento arbitrario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="185.63" cy="315.38" rx="144.02" ry="144.02" fill="hsl(168 90% 58% / 0.234)"/>
+<ellipse cx="175.23" cy="304.2" rx="74.19" ry="74.19" fill="hsl(168 90% 58% / 0.21)"/>
+<ellipse cx="505.61" cy="100.02" rx="106.48" ry="106.48" fill="hsl(168 90% 58% / 0.144)"/>
+<ellipse cx="456.28" cy="361.04" rx="81.32" ry="81.32" fill="hsl(168 90% 58% / 0.225)"/>
+<ellipse cx="151.25" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="102.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="53.75" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<rect x="65.68" y="300" width="380.64" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">solo ancestro-descendiente</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">sin búsqueda directa</text>
+</svg>

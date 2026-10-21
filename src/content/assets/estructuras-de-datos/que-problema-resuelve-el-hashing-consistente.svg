@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué problema resuelve el hashing consistente?">
+<title>¿Qué problema resuelve el hashing consistente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="228.86" cy="456.96" rx="203.69" ry="203.69" fill="hsl(265 90% 58% / 0.184)"/>
+<ellipse cx="261.53" cy="162.97" rx="110.82" ry="110.82" fill="hsl(265 90% 58% / 0.184)"/>
+<ellipse cx="3.44" cy="412.83" rx="83.47" ry="83.47" fill="hsl(265 90% 58% / 0.156)"/>
+<ellipse cx="118.28" cy="488.97" rx="174.47" ry="174.47" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="256" cy="256" rx="70" ry="70" fill="none" stroke="#f1f1f1" stroke-width="2"/>
+<ellipse cx="193" cy="256" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="130" cy="256" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="67" cy="256" rx="4" ry="4" fill="#8a7fb5"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">anillo hash</text>
+</svg>

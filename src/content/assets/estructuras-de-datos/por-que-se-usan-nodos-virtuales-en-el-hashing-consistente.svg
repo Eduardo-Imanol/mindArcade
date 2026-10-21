@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué se usan nodos virtuales en el hashing consistente?">
+<title>¿Por qué se usan nodos virtuales en el hashing consistente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="238.06" cy="395.83" rx="193.04" ry="193.04" fill="hsl(168 90% 58% / 0.167)"/>
+<ellipse cx="215.45" cy="365.75" rx="138.2" ry="138.2" fill="hsl(168 90% 58% / 0.19)"/>
+<ellipse cx="443.19" cy="460.75" rx="142.41" ry="142.41" fill="hsl(168 90% 58% / 0.18)"/>
+<ellipse cx="28.78" cy="205.36" rx="160.15" ry="160.15" fill="hsl(168 90% 58% / 0.22)"/>
+<ellipse cx="150.5" cy="230" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="101" cy="230" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="51.5" cy="230" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="235.5" cy="280" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="159" cy="280" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="82.5" cy="280" rx="4" ry="4" fill="#8a7fb5"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">reparto uniforme</text>
+</svg>

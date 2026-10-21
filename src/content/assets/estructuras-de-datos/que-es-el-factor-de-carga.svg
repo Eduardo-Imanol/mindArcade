@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el factor de carga?">
+<title>¿Qué es el factor de carga?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="427.28" cy="360.81" rx="93.55" ry="93.55" fill="hsl(320 90% 58% / 0.182)"/>
+<ellipse cx="144.9" cy="406.71" rx="168.49" ry="168.49" fill="hsl(320 90% 58% / 0.212)"/>
+<ellipse cx="226.95" cy="329.78" rx="78.3" ry="78.3" fill="hsl(320 90% 58% / 0.229)"/>
+<ellipse cx="463.99" cy="464.71" rx="153.63" ry="153.63" fill="hsl(320 90% 58% / 0.177)"/>
+<rect x="156" y="163" width="200" height="74" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="36" font-weight="700" fill="#f1f1f1">α = n/m</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">elementos / ranuras</text>
+</svg>

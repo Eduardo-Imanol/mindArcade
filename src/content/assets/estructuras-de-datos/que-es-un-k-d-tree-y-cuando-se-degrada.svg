@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un k-d tree y cuándo se degrada?">
+<title>¿Qué es un k-d tree y cuándo se degrada?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="265.43" cy="436.86" rx="158.75" ry="158.75" fill="hsl(168 90% 58% / 0.169)"/>
+<ellipse cx="410.93" cy="128.95" rx="204.59" ry="204.59" fill="hsl(168 90% 58% / 0.145)"/>
+<ellipse cx="58.96" cy="448.43" rx="200.43" ry="200.43" fill="hsl(168 90% 58% / 0.232)"/>
+<ellipse cx="144.49" cy="422.63" rx="168.34" ry="168.34" fill="hsl(168 90% 58% / 0.188)"/>
+<line x1="150" y1="150" x2="150" y2="360" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round"/>
+<line x1="150" y1="250" x2="362" y2="250" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">alternar ejes</text>
+<rect x="131.4" y="400" width="249.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">dim alta → O(n)</text>
+</svg>

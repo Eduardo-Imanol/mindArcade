@@ -40,7 +40,7 @@ export default function Flashcards({ deck = [], onGrade, onExit } = {}) {
     return (
       <main className="sepect-bg" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Flashcards</h1>
+          <h1 className="neon game-app-title">Flashcards</h1>
           <p>Este tema no tiene cartas todavía.</p>
           <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
         </div>
@@ -52,7 +52,7 @@ export default function Flashcards({ deck = [], onGrade, onExit } = {}) {
     return (
       <main className="sepect-bg" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Sesión completada</h1>
+          <h1 className="neon game-app-title">Sesión completada</h1>
           <p role="status">
             {state.correct} correctas · {state.wrong} fallos · +{state.gained} XP
           </p>
@@ -68,6 +68,7 @@ export default function Flashcards({ deck = [], onGrade, onExit } = {}) {
   return (
     <main className="sepect-bg" style={PAGE}>
       <div className="game-stage">
+        <h1 className="neon game-app-title" style={{ margin: '0 0 8px' }}>Flashcards</h1>
         <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
           <p style={{ margin: 0 }}>Carta {state.index + 1} de {deck.length}</p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el problema ABA?">
+<title>¿Qué es el problema ABA?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="480.53" cy="70.72" rx="139.59" ry="139.59" fill="hsl(120 90% 58% / 0.194)"/>
+<ellipse cx="506.77" cy="209.69" rx="83.08" ry="83.08" fill="hsl(120 90% 58% / 0.195)"/>
+<ellipse cx="343.08" cy="235" rx="100.29" ry="100.29" fill="hsl(120 90% 58% / 0.143)"/>
+<ellipse cx="378.23" cy="483.27" rx="168.91" ry="168.91" fill="hsl(120 90% 58% / 0.234)"/>
+<rect x="95" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<rect x="193" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="228" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<rect x="291" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="326" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">CAS cree que igual</text>
+</svg>

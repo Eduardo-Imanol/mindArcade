@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son la profundidad, la altura, el grado y la hoja de un árbol?">
+<title>¿Qué son la profundidad, la altura, el grado y la hoja de un árbol?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="154.63" cy="329.93" rx="79.25" ry="79.25" fill="hsl(265 90% 58% / 0.215)"/>
+<ellipse cx="374.53" cy="466.07" rx="164.25" ry="164.25" fill="hsl(265 90% 58% / 0.216)"/>
+<ellipse cx="229.19" cy="442.93" rx="145.68" ry="145.68" fill="hsl(265 90% 58% / 0.239)"/>
+<ellipse cx="502.82" cy="49.4" rx="191.95" ry="191.95" fill="hsl(265 90% 58% / 0.186)"/>
+<rect x="68.8" y="110" width="162.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">profundidad</text>
+<text x="330" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">aristas desde raíz</text>
+<rect x="99.8" y="190" width="100.4" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">altura</text>
+<text x="330" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">máxima profundidad</text>
+<rect x="106" y="270" width="88" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">grado</text>
+<text x="330" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">nº hijos</text>
+<rect x="112.2" y="350" width="75.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">hoja</text>
+<text x="330" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">sin hijos</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un rope y qué problema resuelve?">
+<title>¿Qué es un rope y qué problema resuelve?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="115.17" cy="489.34" rx="138.54" ry="138.54" fill="hsl(265 90% 58% / 0.222)"/>
+<ellipse cx="93.84" cy="505.09" rx="159.29" ry="159.29" fill="hsl(265 90% 58% / 0.236)"/>
+<ellipse cx="83.56" cy="233.61" rx="184.57" ry="184.57" fill="hsl(265 90% 58% / 0.221)"/>
+<ellipse cx="185.93" cy="266.11" rx="124.78" ry="124.78" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="193.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="131" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="68.5" cy="200" rx="4" ry="4" fill="#8a7fb5"/>
+<rect x="58.86" y="290" width="394.28" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">concat/split/index O(log n)</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">textos enormes</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complejidad tienen BFS y DFS?">
+<title>¿Qué complejidad tienen BFS y DFS?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="27.85" cy="210.89" rx="133.51" ry="133.51" fill="hsl(168 90% 58% / 0.164)"/>
+<ellipse cx="78.92" cy="294.6" rx="176.22" ry="176.22" fill="hsl(168 90% 58% / 0.232)"/>
+<ellipse cx="157.7" cy="262.86" rx="105.53" ry="105.53" fill="hsl(168 90% 58% / 0.173)"/>
+<ellipse cx="321.49" cy="460.84" rx="136.49" ry="136.49" fill="hsl(168 90% 58% / 0.199)"/>
+<rect x="77.48" y="170" width="145.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">BFS cola</text>
+<rect x="259.72" y="170" width="204.56" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">DFS pila/rec</text>
+<rect x="187.2" y="300" width="137.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#ffcc00">O(V+E)</text>
+</svg>

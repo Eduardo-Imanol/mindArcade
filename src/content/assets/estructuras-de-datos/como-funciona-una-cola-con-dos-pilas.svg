@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona una cola con dos pilas?">
+<title>¿Cómo funciona una cola con dos pilas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="393.77" cy="31.87" rx="192.88" ry="192.88" fill="hsl(265 90% 58% / 0.173)"/>
+<ellipse cx="457.87" cy="344.42" rx="167.31" ry="167.31" fill="hsl(265 90% 58% / 0.217)"/>
+<ellipse cx="314.87" cy="292.67" rx="154.51" ry="154.51" fill="hsl(265 90% 58% / 0.149)"/>
+<ellipse cx="78.68" cy="64.68" rx="128.45" ry="128.45" fill="hsl(265 90% 58% / 0.203)"/>
+<rect x="90" y="150" width="130" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="104" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">entrada</text>
+<rect x="292" y="150" width="130" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="306" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">salida</text>
+<line x1="220" y1="190" x2="279.2" y2="190" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="290,190 279.87,196.43 279.87,183.57" fill="#8a7fb5"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">volcar al vaciar</text>
+<rect x="140.7" y="360" width="230.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(1) amortizado</text>
+</svg>

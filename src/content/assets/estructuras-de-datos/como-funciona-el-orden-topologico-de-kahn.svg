@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona el orden topológico de Kahn?">
+<title>¿Cómo funciona el orden topológico de Kahn?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="372.5" cy="195.01" rx="161.69" ry="161.69" fill="hsl(320 90% 58% / 0.148)"/>
+<ellipse cx="426.57" cy="411.44" rx="153.78" ry="153.78" fill="hsl(320 90% 58% / 0.186)"/>
+<ellipse cx="465.68" cy="359.2" rx="84.15" ry="84.15" fill="hsl(320 90% 58% / 0.217)"/>
+<ellipse cx="342.24" cy="110.58" rx="101.2" ry="101.2" fill="hsl(320 90% 58% / 0.184)"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">grado entrada 0 → cola</text>
+<rect x="38.4" y="270" width="435.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">si no todos procesados → ciclo</text>
+</svg>

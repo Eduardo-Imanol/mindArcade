@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el deque por bloques?">
+<title>¿Qué es el deque por bloques?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="391.27" cy="40.24" rx="190.79" ry="190.79" fill="hsl(168 90% 58% / 0.151)"/>
+<ellipse cx="275.19" cy="134.61" rx="131.85" ry="131.85" fill="hsl(168 90% 58% / 0.199)"/>
+<ellipse cx="479.54" cy="179.6" rx="141.34" ry="141.34" fill="hsl(168 90% 58% / 0.167)"/>
+<ellipse cx="323.67" cy="278.23" rx="148.39" ry="148.39" fill="hsl(168 90% 58% / 0.18)"/>
+<rect x="80" y="180" width="110" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="94" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">bloque</text>
+<rect x="210" y="180" width="110" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="224" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">bloque</text>
+<rect x="340" y="180" width="110" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="354" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">bloque</text>
+<rect x="120.24" y="300" width="271.52" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">arreglo de bloques</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">extremos crecen bien</text>
+</svg>

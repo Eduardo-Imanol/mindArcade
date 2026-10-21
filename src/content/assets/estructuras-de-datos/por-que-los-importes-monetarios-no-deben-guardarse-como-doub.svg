@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué los importes monetarios no deben guardarse como double?">
+<title>¿Por qué los importes monetarios no deben guardarse como double?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="475.41" cy="418.8" rx="105.15" ry="105.15" fill="hsl(265 90% 58% / 0.184)"/>
+<ellipse cx="357.76" cy="59.25" rx="126.37" ry="126.37" fill="hsl(265 90% 58% / 0.175)"/>
+<ellipse cx="505.14" cy="483.48" rx="147.94" ry="147.94" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="365.12" cy="423.93" rx="123.09" ry="123.09" fill="hsl(265 90% 58% / 0.217)"/>
+<rect x="122.1" y="140" width="267.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="160" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">0.1 + 0.2 ≠ 0.3</text>
+<text x="256" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">double IEEE 754</text>
+<rect x="154.34" y="300" width="203.32" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">30 centavos</text>
+<text x="256" y="385" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">enteros en unidad mínima</text>
+</svg>

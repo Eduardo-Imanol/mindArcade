@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué estructura usa Kruskal y cuál usa Prim?">
+<title>¿Qué estructura usa Kruskal y cuál usa Prim?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="128.01" cy="181.96" rx="94.7" ry="94.7" fill="hsl(320 90% 58% / 0.168)"/>
+<ellipse cx="314.19" cy="304.5" rx="148.22" ry="148.22" fill="hsl(320 90% 58% / 0.165)"/>
+<ellipse cx="407.36" cy="352.89" rx="85.46" ry="85.46" fill="hsl(320 90% 58% / 0.209)"/>
+<ellipse cx="251.6" cy="364.86" rx="117.14" ry="117.14" fill="hsl(320 90% 58% / 0.165)"/>
+<rect x="36.56" y="170" width="226.88" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">Kruskal union-find</text>
+<rect x="298.78" y="170" width="126.44" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">Prim heap</text>
+</svg>

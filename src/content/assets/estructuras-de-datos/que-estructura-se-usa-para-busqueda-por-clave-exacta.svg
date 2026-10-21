@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué estructura se usa para búsqueda por clave exacta?">
+<title>¿Qué estructura se usa para búsqueda por clave exacta?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="275.97" cy="217.37" rx="94.92" ry="94.92" fill="hsl(120 90% 58% / 0.171)"/>
+<ellipse cx="119.73" cy="429.99" rx="100.23" ry="100.23" fill="hsl(120 90% 58% / 0.179)"/>
+<ellipse cx="53.92" cy="252.04" rx="85.88" ry="85.88" fill="hsl(120 90% 58% / 0.149)"/>
+<ellipse cx="287.64" cy="151.15" rx="180.56" ry="180.56" fill="hsl(120 90% 58% / 0.156)"/>
+<rect x="119" y="180" width="274" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="40" font-weight="700" fill="#39ff14">tabla hash</text>
+<rect x="146.28" y="290" width="219.44" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">O(1) esperado</text>
+</svg>

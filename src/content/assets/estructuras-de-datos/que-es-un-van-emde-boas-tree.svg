@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un van Emde Boas tree?">
+<title>¿Qué es un van Emde Boas tree?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="436.42" cy="343.25" rx="84.33" ry="84.33" fill="hsl(120 90% 58% / 0.149)"/>
+<ellipse cx="359.95" cy="278.57" rx="187.84" ry="187.84" fill="hsl(120 90% 58% / 0.215)"/>
+<ellipse cx="454.21" cy="189.59" rx="92.27" ry="92.27" fill="hsl(120 90% 58% / 0.166)"/>
+<ellipse cx="6.03" cy="467.49" rx="157.17" ry="157.17" fill="hsl(120 90% 58% / 0.214)"/>
+<rect x="97.92" y="170" width="316.16" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">sucesor/predecesor</text>
+<rect x="131.4" y="270" width="249.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#39ff14">O(log log U)</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">U grande</text>
+</svg>

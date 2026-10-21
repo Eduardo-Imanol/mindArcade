@@ -49,7 +49,7 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
     return (
       <main className="sepect-bg memorama-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Memorama</h1>
+          <h1 className="neon game-app-title">Memorama</h1>
           <p>Este tema no tiene cartas suficientes todavía.</p>
           <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
         </div>
@@ -61,7 +61,7 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
     return (
       <main className="sepect-bg memorama-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Memorama</h1>
+          <h1 className="neon game-app-title">Memorama</h1>
           <p>Elige la dificultad: empareja cada término con su significado.</p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {DIFFICULTIES.map((option) => (
@@ -85,7 +85,7 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
     return (
       <main className="sepect-bg memorama-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon" style={{ fontSize: 24 }}>Sesión completada</h1>
+          <h1 className="neon game-app-title">Sesión completada</h1>
           <p role="status">{state.matched.length} pares encontrados</p>
           <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
             {isSupported() && (

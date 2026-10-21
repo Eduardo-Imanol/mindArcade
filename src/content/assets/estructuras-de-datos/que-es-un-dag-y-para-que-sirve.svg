@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un DAG y para qué sirve?">
+<title>¿Qué es un DAG y para qué sirve?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="140.4" cy="85.64" rx="87.02" ry="87.02" fill="hsl(320 90% 58% / 0.222)"/>
+<ellipse cx="222.82" cy="88.5" rx="114.46" ry="114.46" fill="hsl(320 90% 58% / 0.181)"/>
+<ellipse cx="479.45" cy="386.8" rx="188.08" ry="188.08" fill="hsl(320 90% 58% / 0.192)"/>
+<ellipse cx="159.19" cy="95.43" rx="139.74" ry="139.74" fill="hsl(320 90% 58% / 0.148)"/>
+<rect x="95" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<line x1="165" y1="200" x2="204.2" y2="200" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="215,200 204.87,206.43 204.87,193.57" fill="#39ff14"/>
+<rect x="215" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="250" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="285" y1="200" x2="324.2" y2="200" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="335,200 324.87,206.43 324.87,193.57" fill="#39ff14"/>
+<rect x="335" y="179" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="370" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">C</text>
+<rect x="162.4" y="300" width="187.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">sin ciclos</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">orden topológico</text>
+</svg>

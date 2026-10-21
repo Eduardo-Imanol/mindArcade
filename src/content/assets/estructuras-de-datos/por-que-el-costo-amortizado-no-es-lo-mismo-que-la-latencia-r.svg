@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el costo amortizado no es lo mismo que la latencia real?">
+<title>¿Por qué el costo amortizado no es lo mismo que la latencia real?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="340.33" cy="66.55" rx="117.76" ry="117.76" fill="hsl(120 90% 58% / 0.141)"/>
+<ellipse cx="316.33" cy="346.04" rx="155.67" ry="155.67" fill="hsl(120 90% 58% / 0.149)"/>
+<ellipse cx="27.85" cy="241.57" rx="186.17" ry="186.17" fill="hsl(120 90% 58% / 0.15)"/>
+<ellipse cx="21.07" cy="104.07" rx="169.5" ry="169.5" fill="hsl(120 90% 58% / 0.148)"/>
+<rect x="92" y="324" width="30" height="26" rx="4" fill="#00ffcc"/>
+<rect x="140" y="328" width="30" height="22" rx="4" fill="#00ffcc"/>
+<rect x="188" y="326" width="30" height="24" rx="4" fill="#00ffcc"/>
+<rect x="236" y="330" width="30" height="20" rx="4" fill="#00ffcc"/>
+<rect x="284" y="324" width="30" height="26" rx="4" fill="#00ffcc"/>
+<rect x="332" y="328" width="30" height="22" rx="4" fill="#00ffcc"/>
+<rect x="380" y="230" width="30" height="120" rx="4" fill="#ff007f"/>
+<text x="200" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">push O(1)</text>
+<text x="380" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">redimensiona</text>
+<rect x="168.6" y="430" width="174.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">percentil 99</text>
+</svg>

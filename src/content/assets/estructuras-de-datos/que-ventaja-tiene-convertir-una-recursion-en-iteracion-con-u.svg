@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ventaja tiene convertir una recursión en iteración con una pila explícita?">
+<title>¿Qué ventaja tiene convertir una recursión en iteración con una pila explícita?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="454.89" cy="22.69" rx="202.63" ry="202.63" fill="hsl(168 90% 58% / 0.147)"/>
+<ellipse cx="229.66" cy="78.19" rx="120.13" ry="120.13" fill="hsl(168 90% 58% / 0.23)"/>
+<ellipse cx="0.19" cy="346.67" rx="173.5" ry="173.5" fill="hsl(168 90% 58% / 0.201)"/>
+<ellipse cx="182.81" cy="283.43" rx="134.88" ry="134.88" fill="hsl(168 90% 58% / 0.22)"/>
+<rect x="80" y="150" width="150" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="94" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">recursiva</text>
+<text x="155" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">stack</text>
+<line x1="230" y1="210" x2="259.2" y2="210" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="270,210 259.87,216.43 259.87,203.57" fill="#00ffcc"/>
+<rect x="280" y="150" width="150" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="294" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">explícita</text>
+<text x="355" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">heap</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sin desbordar</text>
+</svg>

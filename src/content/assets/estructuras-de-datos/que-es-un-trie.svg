@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un trie?">
+<title>¿Qué es un trie?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="404.09" cy="83.63" rx="138.62" ry="138.62" fill="hsl(45 90% 58% / 0.189)"/>
+<ellipse cx="475.78" cy="171.88" rx="95.59" ry="95.59" fill="hsl(45 90% 58% / 0.219)"/>
+<ellipse cx="79.87" cy="327.32" rx="201.26" ry="201.26" fill="hsl(45 90% 58% / 0.231)"/>
+<ellipse cx="112.31" cy="349.59" rx="163.08" ry="163.08" fill="hsl(45 90% 58% / 0.178)"/>
+<rect x="216" y="89" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">raíz</text>
+<line x1="256" y1="145" x2="222.35" y2="191.27" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="216,200 216.76,188.02 227.16,195.59" fill="#00ffcc"/>
+<line x1="256" y1="145" x2="289.65" y2="191.27" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,200 284.84,195.59 295.24,188.02" fill="#00ffcc"/>
+<rect x="191" y="214" width="50" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="216" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">c</text>
+<rect x="271" y="214" width="50" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="296" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">d</text>
+<line x1="216" y1="270" x2="191.56" y2="310.74" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="186,320 185.7,308 196.73,314.62" fill="#39ff14"/>
+<line x1="296" y1="270" x2="320.44" y2="310.74" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="326,320 315.27,314.62 326.3,308" fill="#39ff14"/>
+<rect x="151" y="334" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="186" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">at</text>
+<rect x="291" y="334" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="326" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">do</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">prefijos</text>
+</svg>

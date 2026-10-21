@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el compartimento estructural?">
+<title>¿Qué es el compartimento estructural?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="506.1" cy="344.32" rx="143.4" ry="143.4" fill="hsl(265 90% 58% / 0.187)"/>
+<ellipse cx="494.57" cy="382.75" rx="87.51" ry="87.51" fill="hsl(265 90% 58% / 0.161)"/>
+<ellipse cx="46.67" cy="28.32" rx="111.77" ry="111.77" fill="hsl(265 90% 58% / 0.169)"/>
+<ellipse cx="490.02" cy="98.22" rx="126.65" ry="126.65" fill="hsl(265 90% 58% / 0.143)"/>
+<rect x="122.1" y="170" width="267.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">compartir nodos</text>
+<rect x="122.1" y="270" width="267.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">O(log n) nuevos</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el rojinegro sale más barato que el AVL en cargas con muchas escrituras?">
+<title>¿Por qué el rojinegro sale más barato que el AVL en cargas con muchas escrituras?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="75.84" cy="92.98" rx="88.45" ry="88.45" fill="hsl(320 90% 58% / 0.169)"/>
+<ellipse cx="371.12" cy="387.75" rx="151.07" ry="151.07" fill="hsl(320 90% 58% / 0.176)"/>
+<ellipse cx="291.88" cy="38.24" rx="108.93" ry="108.93" fill="hsl(320 90% 58% / 0.174)"/>
+<ellipse cx="293.86" cy="36.97" rx="185.41" ry="185.41" fill="hsl(320 90% 58% / 0.189)"/>
+<rect x="25.4" y="150" width="249.2" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">RB: ≤2 ins / ≤3 borr</text>
+<rect x="242.98" y="150" width="238.04" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">AVL: más rotaciones</text>
+</svg>

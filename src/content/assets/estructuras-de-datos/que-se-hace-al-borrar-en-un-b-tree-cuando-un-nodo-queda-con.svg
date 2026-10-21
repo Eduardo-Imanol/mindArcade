@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué se hace al borrar en un B-tree cuando un nodo queda con menos de t−1 claves?">
+<title>¿Qué se hace al borrar en un B-tree cuando un nodo queda con menos de t−1 claves?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="171.39" cy="388.27" rx="184.96" ry="184.96" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="8.62" cy="191.67" rx="196.75" ry="196.75" fill="hsl(168 90% 58% / 0.162)"/>
+<ellipse cx="134.8" cy="503.44" rx="148.66" ry="148.66" fill="hsl(168 90% 58% / 0.178)"/>
+<ellipse cx="179.18" cy="199.59" rx="113.44" ry="113.44" fill="hsl(168 90% 58% / 0.239)"/>
+<rect x="130.16" y="150" width="251.68" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">pedir prestado</text>
+<rect x="178.52" y="240" width="154.96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">fusionar</text>
+</svg>

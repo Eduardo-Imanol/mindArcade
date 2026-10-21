@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué estructura de árbol elige la guía para cada carga de trabajo?">
+<title>¿Qué estructura de árbol elige la guía para cada carga de trabajo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="450.2" cy="38.5" rx="163.61" ry="163.61" fill="hsl(265 90% 58% / 0.162)"/>
+<ellipse cx="18.75" cy="73.93" rx="168.86" ry="168.86" fill="hsl(265 90% 58% / 0.203)"/>
+<ellipse cx="263.89" cy="266.16" rx="133.88" ry="133.88" fill="hsl(265 90% 58% / 0.199)"/>
+<ellipse cx="73.9" cy="363.34" rx="163.06" ry="163.06" fill="hsl(265 90% 58% / 0.16)"/>
+<rect x="92.36" y="110" width="115.28" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="150" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">lecturas</text>
+<rect x="328.54" y="110" width="66.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">AVL</text>
+<rect x="109.1" y="190" width="81.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="150" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">mixto</text>
+<rect x="330" y="190" width="64" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">RB</text>
+<rect x="109.1" y="270" width="81.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="150" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">disco</text>
+<rect x="308.08" y="270" width="107.84" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">B-tree</text>
+<rect x="70.04" y="350" width="159.92" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="150" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">concurrencia</text>
+<rect x="239.88" y="350" width="244.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">skip-list/B-link</text>
+</svg>

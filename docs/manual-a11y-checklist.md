@@ -4,11 +4,15 @@ Automated coverage lives in `Flashcards.a11y.test.jsx`, `Memorama.a11y.test.jsx`
 `Ahorcado.a11y.test.jsx`, `QuizSignificado.a11y.test.jsx`, `Intruso.a11y.test.jsx`,
 `LluviaMeteoros.a11y.test.jsx`, `ConectaPares.a11y.test.jsx`,
 `SerpienteSignificados.a11y.test.jsx`, `serpiente-significados.isolation.test.js`,
-`TopicsHub.test.jsx`,
-`TopicView.test.jsx`, `TopicView.availability.test.jsx`, `Dashboard.test.jsx`
-(spec-12, draft) and `CardImage.test.jsx`;
+`TopicsHub.test.jsx`, `TopicsHub.a11y.test.jsx`, `TopicView.test.jsx`,
+`TopicView.availability.test.jsx`, `TopicView.a11y.test.jsx`, `Dashboard.test.jsx`,
+`Dashboard.a11y.test.jsx`, `CardImage.test.jsx`, `tts.integration.test.jsx`,
+`design-system.test.js` (spec-13 gate) and `title.test.js`;
 jsdom cannot measure layout, so this checklist is completed by a human on a real
-browser (Chrome/Firefox, touch + keyboard).
+browser (Chrome/Firefox, touch + keyboard). The automated suites cover native
+controls/labels, `role="progressbar"` values, no `line-clamp`/ellipsis on the topic
+description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
+360 px no-horizontal-scroll contract is checked here manually plus CSS regexes.
 
 ## Setup
 - [ ] `npm run dev`, open at 360×640 (DevTools device mode) then 1280×800.
@@ -157,6 +161,19 @@ browser (Chrome/Firefox, touch + keyboard).
 - [ ] 360 px: no horizontal scroll; prompt and legend wrap completely (`overflow-wrap:anywhere`, `hyphens:auto`); the board is centered and ≤480 px on desktop; its cell count stays fixed on resize (only scales visually).
 - [ ] Summary: Rondas shows points, hits, fails, first-try hits, best streak, lives and local XP; Supervivencia shows final length, hits, fails, best streak and XP; "Jugar de nuevo" keeps mode/difficulty/rounds and "Volver al tema" exits; both are keyboard reachable.
 - [ ] `prefers-reduced-motion` → no apple pulse/animation; rules, speed and scoring are identical.
+
+## Spec-13 — impeccable UI retouch
+- [ ] Create-topic modal: Tab/Shift+Tab stay trapped inside; Escape closes; clicking the
+      backdrop closes; body scroll is locked while open; focus returns to «Crear tema».
+- [ ] All buttons/inputs show the visible focus ring; `.btn-neon` hover/active feel right.
+- [ ] Search field: the ✕ clear button never overlaps the typed text at 360px.
+- [ ] Serpiente setup select looks styled like the quiz one (border/background/radius).
+- [ ] No horizontal scroll at 360px in hub, topic, game and error screens; `html`/`body`
+      show the app background while overscrolling (iOS-style).
+- [ ] Error/404 screens (`NotFound`, GameHost guards) keep the h1→p→action rhythm.
+- [ ] Browser tab title follows the route (Temas / Progreso / tema / juego / 404).
+- [ ] Sound toggle in the header and in-game stay in sync; mute persists after reload.
+- [ ] `prefers-reduced-motion` → `.btn-neon` and modal transitions are instant.
 
 ## Screen reader pass (VoiceOver/TalkBack or NVDA)
 - [ ] Dialog opens with content reachable; Cerrar and Cancelar both work.

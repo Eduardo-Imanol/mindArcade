@@ -1,78 +1,109 @@
-# tasks.md — spec-12 retouch-learning-dashboard
+# tasks.md — spec-13 impeccable-ui-retouch
 
-> Spec `specs/spec-12-retouch-learning-dashboard.md` (borrador 2026-10-20).
-> **Eduardo autorizó iniciar la implementación con T1 y T2** (2026-10-20).
-> Plan detallado en `specs/tasks-12-retouch-learning-dashboard.md` (T1–T11).
-> Estado: **T1 y T2 completados** (gates en verde). T3–T11 pendientes.
+> Spec `specs/spec-13-impeccable-ui-retouch.md` (✅ aceptada por Eduardo 2026-10-21).
+> Plan de 4 fases (A–D) acordado por chat. Alcance: altas + medias UI.
+> Fuera de alcance: partir `tokens.css`, refactor de juegos >200 líneas,
+> eliminar Tailwind, refactor de store.
 >
-> Incremento anterior: spec-11 «serpiente-significados» cerrada técnicamente
-> (`specs/tasks-11-serpiente-significados.md`), pendiente aprobación humana del diff.
-> Siguen pendientes las aprobaciones de spec-06, spec-09 y spec-10.
+> Incremento anterior: spec-12 «retouch-learning-dashboard» T1–T11 completados
+> (`specs/tasks-12-retouch-learning-dashboard.md`), pendiente aprobación humana
+> del diff y firma de la spec. Siguen pendientes las aprobaciones de
+> spec-06, spec-09 y spec-10.
 
 ## Objetivo del incremento
 
-Retoque penúltimo en 5 bloques:
-
-1. Descripción completa del tema (sin recorte de 160 caracteres).
-2. Juegos como `GameDefinition` reutilizable + pruebas multi-tema.
-3. Métricas `nuevo/aprendiendo/aprendido`, repaso espaciado y selección
-   «no aprendidas + vencidas».
-4. Dashboard avanzado local en `#/progreso`.
-5. Hub con búsqueda, orden, filtros, portadas y fichas de juego sin descripción;
-   «Sepect» fuera del header visible.
+Gate `impeccable` sobre la interfaz: Modal accesible y visible, design system
+con tokens coherentes, componentes compartidos sin duplicación, a11y media
+(título SPA, mute sincronizado, tiles no disponibles anunciados).
 
 ## Tareas
 
-- [x] T1 — Parser: descripción completa (2026-10-20).
-- [x] T2 — `addedAt` + `topicMeta` + `topicCoverCard` (2026-10-20).
-- [ ] T3 — `learning` + `selectStudyCards` (supersede spec-03 AC-3).
-- [ ] T4 — Métricas core por tema/global + actividad.
-- [ ] T5 — Persistencia de intentos + GameHost + availability.
-- [ ] T6 — `GameDefinition` + registry + matriz multi-tema.
-- [ ] T7 — Hub: búsqueda, orden, filtros, portadas, progreso.
-- [ ] T8 — TopicView: descripción completa y fichas título+portada.
-- [ ] T9 — Dashboard avanzado + ruta `#/progreso`.
-- [ ] T10 — CSS responsive + a11y.
-- [ ] T11 — Docs, verificación adversaria y gates.
+### Fase A — Modal accesible y funcional (las 3 altas) — AC-1..AC-5
 
-### T1 (hecho)
-- `src/core/parser/parser.js`: `description` acumula toda la prosa anterior a la
-  primera carta (párrafos y saltos intactos, sin `slice(0,160)`); excluye
-  encabezados, código, líneas de carta y reglas horizontales (una `---` ya no se
-  interpreta como carta); no lanza excepciones.
-- Tests: `src/core/parser/parser.test.js` (fixture >400 chars con 2 párrafos,
-  contrato exacto, vacío, código/heading/HR, prosa posterior a cartas).
+- [x] T1 — `src/components/Modal.jsx`: overlay `position: fixed` + backdrop
+  (patrón `.serpiente-pause-overlay`), prop `title` con `h2` interno,
+  `aria-labelledby`, foco inicial, focus trap Tab/Shift+Tab, Escape cierra,
+  restauración de foco al disparador, bloqueo de scroll del body, clic en
+  backdrop cierra.
+- [x] T2 — `src/ui/tokens.css`: clases `.modal-overlay` y `.modal`
+  (max-width 480px, max-height 90vh, scroll interno, tokens neon).
+- [x] T3 — `src/views/TopicsHub.jsx:365`: pasar `title="Crear tema"`; quitar
+  el `h2` de `CreateTopicForm` (ya lo renderiza Modal).
+- [x] T4 — `src/views/TopicsHub.a11y.test.jsx`: aserciones DOM del diálogo
+  (nombre accesible, foco al abrir, trap, Escape, foco restaurado, backdrop).
 
-### T2 (hecho)
-- `src/core/content/topicMeta.js`: clave `sepect.topics.meta.v1`,
-  `loadTopicMeta`/`saveTopicMeta`/`ensureTopicMeta`/`normalizeDate` — cuota o JSON
-  corrupto → fallback seguro, sin mutar la entrada.
-- `src/core/content/cover.js`: `topicCoverCard(topic)` → primera carta con imagen
-  explícita (`card.image` o override del tema); si no, primera carta.
-- `src/core/content/catalog.js`: `saveCustomTopic` persiste `createdAt` y devuelve
-  `addedAt`; `buildCatalog(list, custom, meta)` expone `addedAt` sin escribir;
-  `loadCatalog()` lee meta (puro, no escribe).
-- Tests: `topicMeta.test.js`, `cover.test.js` (nuevos) + `catalog.test.js` (+8).
+### Fase B — Tokens, colores y componentes base — AC-6..AC-18
 
-## Decisiones pendientes de firma
+- [x] T5 — `tokens.css` `:root`: añadir `--bg3: #2a1148`, `--bg-deep: #0b0416`,
+  `--neon-violet: #b388ff`; reemplazar hex sueltos de tokens.css
+  (L84, 190, 292 → `var(--bg)`; L395, 961, 1352, 1368, 1373, 453 → vars).
+- [x] T6 — Cian unificado: `InteractiveGameCanvas.js` (L64, 145-148) y
+  `.jsx` (L99): `#00f5d4`→`#00ffcc`, `#0d0d1a`→`#0f051d`.
+- [x] T7 — `ConectaPares.jsx:34`: violeta texto `#7c4dff`→`#b388ff`
+  (badge + números SVG línea). Verificar contraste ≥4.5:1.
+- [x] T8 — `.btn-neon` (tokens.css:12): `display:inline-flex`,
+  `align-items/justify-content:center`, `gap`, `cursor:pointer`,
+  `background:transparent`, `text-decoration:none`, `:hover`/`:active`
+  (borde/glow verde), bloque `prefers-reduced-motion`.
+  Arregla `Dashboard.jsx:140` (`<a class="btn-neon">` inline sin 44px).
+- [x] T9 — `TopicsHub.jsx`: estilos inline `INPUT`/`CONTROL` → clases
+  `.hub-field`/`.hub-select` en tokens.css; `padding-right ≥44px` en
+  `#hub-search` para no tapar con el ✕ (AC-8).
+- [x] T10 — `tokens.css`: `.serpiente-setup-row select` estilado al estilo
+  `.quiz-setup select`; `cursor:pointer` en `.serpiente-speak`.
+- [x] T11 — Daños del preflight: clase `.error-page` con ritmo h1→p→a para
+  `GameHost.jsx:95-135` y `NotFound.jsx`; margen del `h2` del form;
+  espaciado de hijos de `Card`.
+- [x] T12 — PAGE duplicado ×4: reemplazar `style={PAGE}` por
+  `className="topic-page"` (clase ya existente tokens.css:17) en `GameHost`,
+  `TopicsHub`, `ConectaPares`, `NotFound`; borrar constantes.
+- [x] T13 — Overscroll iOS: `html, body { background: var(--bg) }`.
+- [x] T14 — `h1` de juegos: clase `.game-app-title` en tokens.css; reemplazo
+  mecánico de `style={{ fontSize: 24 }}` en juegos + `GameHost` (21 sitios).
+- [x] T15 — Borrar `src/components/Button.jsx` (código muerto).
 
-- Selección de cartas: no aprendidas primero + aprendidas **solo vencidas**.
-- Portada de tema/ficha de juego: primera imagen del deck.
-- Fechas: custom `createdAt`; integrados primer avistamiento local.
-- Dashboard: `#/progreso`.
-- Modularidad: objeto `GameDefinition`, sin reescritura a clases.
-- Descripción completa del tema; «Sepect» fuera del header.
-- Sin dependencias nuevas, sin backend, sin cambios en SM-2/Elo.
+### Fase C — Compartidos y a11y media — AC-11..AC-13, AC-19..AC-22
 
-## Gates (tras T1+T2, 2026-10-20)
+- [x] T16 — Extraer `src/components/ProgressBar.jsx`; consumir en
+  `TopicsHub`, `TopicView`, `Dashboard` (borrar copias).
+- [x] T17 — Extraer hook `useStudyCardCounts` (compartido `TopicView` +
+  `GameHost`).
+- [x] T18 — `App.jsx`: `document.title` por ruta (Temas/Progreso/tema/
+  juego/404) + test.
+- [x] T19 — `TopicView.jsx:126`: `id` en mensaje de disponibilidad +
+  `aria-describedby` en el botón `disabled`.
+- [x] T20 — `SoundToggle.jsx`: `aria-label` estático con `aria-pressed`;
+  emisor `subscribe` en `settings.js` + listener `storage`; consumir con
+  `useSyncExternalStore`.
+- [x] T21 — `Dashboard.jsx:113`: emparejar tema↔métricas por `id`.
 
-- `npm test`: 560/560 ✅ (59 files).
-- `npm run lint`: 0 errores/warnings ✅.
-- `npm run build`: OK ✅ (solo warning preexistente de chunk >500 kB).
-- Verificación adversaria AC-1..AC-34 y aprobación humana del diff → al cierre (T11).
+### Fase D — Gate impeccable de cierre
 
-## Siguiente paso
+- [x] T22 — `npm test` 100%, `npm run lint` 0 warnings, `npm run build` OK.
+- [ ] T23 — Sesión manual: flujo «Crear tema» completo, 360px + teclado,
+  reduced-motion. Revisión adversarial del diff (parser/loop/persistencia).
+- [x] T24 — Actualizar docs (`docs/manual-a11y-checklist.md`, `MEMORY.md`)
+  y dejar tasks.md con gates finales.
 
-T3 — `learning` + `selectStudyCards` (bloquea T4/T5/T6), según el grafo de
-`specs/tasks-12-retouch-learning-dashboard.md`. El resto de decisiones de spec-12
-siguen pendientes de firma para T3 en adelante.
+## Grafo de dependencias
+
+```
+T1–T4 (Fase A)          ← independiente, primera
+T5–T7 (tokens/colores)  ← T8–T10 dependen de T5
+T11–T15 (base)          ← T8/T9 tocan TopicsHub — secuenciar con T3
+T16–T17 (compartidos)   ← independiente de Fase A
+T18–T21 (a11y media)    ← T20 independiente; T19 con T11
+T22–T24 (gates)         ← al final, secuencial
+```
+
+## Decisiones firmadas
+
+- Modal con `title` propio; único consumidor TopicsHub (HU-1).
+- Preflight de Tailwind se conserva; solo reparación de daños (AC-16).
+- Violeta de Conecta Pares (`PAIR_COLORS`): `#7c4dff` → `#b388ff` (badge, borde
+  y número SVG; texto ≥4.5:1).
+- Sin dependencias nuevas; sin cambios en SRS/XP/persistencia.
+
+## Gates
+
+- [x] T22: `npm test` 100% · `npm run lint` 0 warnings · `npm run build` OK.

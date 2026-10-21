@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene una sparse table?">
+<title>¿Cuándo conviene una sparse table?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="383.99" cy="279.05" rx="172.58" ry="172.58" fill="hsl(120 90% 58% / 0.163)"/>
+<ellipse cx="359.11" cy="457.73" rx="137.08" ry="137.08" fill="hsl(120 90% 58% / 0.229)"/>
+<ellipse cx="365.66" cy="280.25" rx="73.06" ry="73.06" fill="hsl(120 90% 58% / 0.231)"/>
+<ellipse cx="320.81" cy="406.68" rx="181.57" ry="181.57" fill="hsl(120 90% 58% / 0.24)"/>
+<rect x="168.6" y="150" width="174.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">estático</text>
+<rect x="133.88" y="240" width="244.24" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">build O(n log n)</text>
+<rect x="168.6" y="320" width="174.8" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">query O(1)</text>
+</svg>

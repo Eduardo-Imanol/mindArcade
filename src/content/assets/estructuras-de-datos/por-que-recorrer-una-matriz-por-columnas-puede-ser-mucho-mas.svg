@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué recorrer una matriz por columnas puede ser mucho más lento que por filas?">
+<title>¿Por qué recorrer una matriz por columnas puede ser mucho más lento que por filas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="502.1" cy="279.35" rx="142.17" ry="142.17" fill="hsl(320 90% 58% / 0.207)"/>
+<ellipse cx="62.67" cy="205.72" rx="98.77" ry="98.77" fill="hsl(320 90% 58% / 0.164)"/>
+<ellipse cx="123.14" cy="426.68" rx="74.86" ry="74.86" fill="hsl(320 90% 58% / 0.175)"/>
+<ellipse cx="461.04" cy="22.26" rx="203.55" ry="203.55" fill="hsl(320 90% 58% / 0.193)"/>
+<rect x="130" y="130" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="192" y="130" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="254" y="130" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="316" y="130" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="130" y="192" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="192" y="192" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="254" y="192" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="316" y="192" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="130" y="254" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="192" y="254" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="254" y="254" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="316" y="254" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="130" y="316" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="192" y="316" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="254" y="316" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="316" y="316" width="52" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="90" y1="156" x2="90" y2="339.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="90,350 83.57,339.87 96.43,339.87" fill="#39ff14"/>
+<text x="62" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">columnas</text>
+<line x1="130" y1="400" x2="355.2" y2="400" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="366,400 355.87,406.43 355.87,393.57" fill="#00ffcc"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">filas contiguas</text>
+</svg>

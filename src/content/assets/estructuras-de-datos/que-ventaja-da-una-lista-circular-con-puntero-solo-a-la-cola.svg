@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ventaja da una lista circular con puntero solo a la cola?">
+<title>¿Qué ventaja da una lista circular con puntero solo a la cola?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="163.26" cy="425.4" rx="107.91" ry="107.91" fill="hsl(45 90% 58% / 0.15)"/>
+<ellipse cx="177.92" cy="140.5" rx="148.86" ry="148.86" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="147.97" cy="460.89" rx="151.4" ry="151.4" fill="hsl(45 90% 58% / 0.143)"/>
+<ellipse cx="468.55" cy="284.4" rx="80.32" ry="80.32" fill="hsl(45 90% 58% / 0.191)"/>
+<rect x="201" y="165" width="110" height="70" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">tail</text>
+<line x1="311" y1="200" x2="349.2" y2="200" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,200 349.87,206.43 349.87,193.57" fill="#39ff14"/>
+<rect x="360" y="170" width="80" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="80" y="170" width="80" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="80" y1="230" x2="80" y2="259.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="80,270 73.57,259.87 86.43,259.87" fill="#39ff14"/>
+<line x1="80" y1="270" x2="349.2" y2="270" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,270 349.87,276.43 349.87,263.57" fill="#39ff14"/>
+<line x1="360" y1="270" x2="360" y2="240.8" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,230 366.43,240.13 353.57,240.13" fill="#39ff14"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">push front/back + pop front O(1)</text>
+</svg>

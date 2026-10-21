@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿En qué consiste el hashing Robin Hood?">
+<title>¿En qué consiste el hashing Robin Hood?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="56.57" cy="72.18" rx="190.98" ry="190.98" fill="hsl(168 90% 58% / 0.168)"/>
+<ellipse cx="280.67" cy="251.68" rx="119.64" ry="119.64" fill="hsl(168 90% 58% / 0.149)"/>
+<ellipse cx="329.19" cy="144.17" rx="187.84" ry="187.84" fill="hsl(168 90% 58% / 0.214)"/>
+<ellipse cx="387.6" cy="457.97" rx="135.82" ry="135.82" fill="hsl(168 90% 58% / 0.231)"/>
+<rect x="109.08" y="150" width="293.84" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">comparar distancia</text>
+<line x1="256" y1="230" x2="256" y2="279.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,290 249.57,279.87 262.43,279.87" fill="#8a7fb5"/>
+<rect x="126" y="300" width="260" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">intercambiar si residente viaja más</text>
+</svg>

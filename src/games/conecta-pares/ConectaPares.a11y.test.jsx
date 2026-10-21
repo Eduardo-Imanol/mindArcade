@@ -274,7 +274,8 @@ describe('conecta-pares responsive and motion contract', () => {
     expect(tokens).toMatch(/\.conecta-lines\s*{[^}]*pointer-events:\s*none/s);
     expect(tokens).toMatch(/\.conecta-line-group text\s*{[^}]*font-weight:\s*700/s);
 
-    expect(code).toMatch(/maxWidth:\s*'100%'/);
+    expect(tokens).toMatch(/\.topic-page\s*{[^}]*max-width:\s*100%/s);
+    expect(code).toMatch(/topic-page/);
     expect(code).toMatch(/game-stage/);
     expect(code).toMatch(/aria-hidden="true"/);
     expect(code).not.toMatch(/ellipsis|textOverflow|line-clamp/);

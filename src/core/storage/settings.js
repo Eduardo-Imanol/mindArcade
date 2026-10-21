@@ -4,6 +4,21 @@ const KEY = 'sepect.settings.v1';
 export const DEFAULT_SETTINGS = { muted: false };
 
 let memory = null;
+const listeners = new Set();
+
+function notify() {
+  for (const listener of listeners) listener();
+}
+
+export function subscribeSettings(listener) {
+  listeners.add(listener);
+  if (typeof window !== 'undefined' && listeners.size === 1) {
+    window.addEventListener('storage', (event) => {
+      if (event.key === null || event.key === KEY) notify();
+    });
+  }
+  return () => listeners.delete(listener);
+}
 
 function readRaw() {
   if (memory !== null) return memory;
@@ -37,9 +52,11 @@ export function saveSettings(settings = {}) {
     } else {
       memory = JSON.stringify(next);
     }
+    notify();
     return { ok: true, settings: next };
   } catch {
     memory = JSON.stringify(next);
+    notify();
     console.warn('Sepect: no se pudo guardar la configuración, fallback en memoria');
     return { ok: false, settings: next };
   }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la copia de caminos?">
+<title>¿Qué es la copia de caminos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="241.16" cy="230.62" rx="101.61" ry="101.61" fill="hsl(120 90% 58% / 0.233)"/>
+<ellipse cx="366.84" cy="376.27" rx="105.95" ry="105.95" fill="hsl(120 90% 58% / 0.146)"/>
+<ellipse cx="188.95" cy="312.37" rx="131.33" ry="131.33" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="400.88" cy="356.65" rx="76.75" ry="76.75" fill="hsl(120 90% 58% / 0.147)"/>
+<ellipse cx="193.25" cy="180" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="130.5" cy="180" rx="4" ry="4" fill="#8a7fb5"/>
+<ellipse cx="67.75" cy="180" rx="4" ry="4" fill="#8a7fb5"/>
+<line x1="256" y1="230" x2="222.75" y2="271.57" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="216,280 217.31,268.07 227.35,276.11" fill="#00ffcc"/>
+<line x1="256" y1="230" x2="289.25" y2="271.57" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,280 284.65,276.11 294.69,268.07" fill="#00ffcc"/>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">solo camino nuevo</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">resto compartido</text>
+</svg>

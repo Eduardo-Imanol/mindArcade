@@ -25,7 +25,7 @@ related_tasks: specs/tasks-12-retouch-learning-dashboard.md (draft — pending s
 
 | Campo | Valor |
 |---|---|
-| Estado | 🟡 Borrador — pendiente de firma |
+| Estado | 🟡 Borrador — implementación T1–T11 hecha, pendiente de firma humana |
 | Escala | Alta (parser + catálogo + selección + métricas + dashboard + framework de juegos + UI) |
 | Fecha | 2026-10-20 |
 | Revisada por | Eduardo — pendiente |
@@ -37,8 +37,9 @@ related_tasks: specs/tasks-12-retouch-learning-dashboard.md (draft — pending s
 1. **Cartas aprendidas en juegos**: solo no aprendidas + aprendidas vencidas
    (`nextReview <= now`). Las aprendidas no vencidas no aparecen. Si no hay cartas
    elegibles: «Todo al día».
-2. **Imagen de la ficha de juego**: la primera imagen del deck (portada del tema),
-   no el arte específico del juego. Sin descripción en la ficha.
+2. **Imagen de la ficha de juego**: el arte representativo propio de cada juego
+   (`game.art`); si el juego no declara arte, se usa la primera imagen del deck
+   (portada del tema). Sin descripción en la ficha.
 3. **Fecha de agregado**: temas custom guardan `createdAt`; los integrados reciben
    fecha de primer avistamiento persistida en localStorage. No se editan los `.md`.
 4. **Dashboard**: ruta `#/progreso` con botón «Progreso» en hub y vista de tema.
@@ -98,13 +99,15 @@ portada representativa, **para** entrar rápido al tema correcto.
   `ensureTopicMeta(topics)` es quien persiste las fechas faltantes.
 - [ ] AC-9: La portada del tema (`topicCoverCard`) es la primera carta con imagen
   explícita (`card.image` o override del tema); si ninguna la tiene, se usa la
-  primera carta y `CardImage` dibuja su fallback. En la ficha de juego se usa la
-  misma portada, no el arte propio del juego. El arte propio queda como metadata
-  opcional, sin renderizarse en `TopicView`.
-- [ ] AC-10: La ficha de juego muestra **solo** título, portada y estado/CTA
-  («Jugar ahora» o el motivo de bloqueo). No muestra descripción del juego ni del
-  tema. Los 8 juegos siguen apareciendo en el orden del registry. Las imágenes
-  decorativas usan `alt=""`; la portada de tema usa un `alt` con el título.
+  primera carta y `CardImage` dibuja su fallback. En la ficha de juego se renderiza
+  el arte representativo propio del juego (`game.art`, generado en
+  `src/assets/games/<id>.svg`); si el juego no declara `art`, se usa la portada del
+  tema como fallback.
+- [ ] AC-10: La ficha de juego muestra **solo** título, imagen representativa del
+  juego y estado/CTA («Jugar ahora» o el motivo de bloqueo). No muestra
+  descripción del juego ni del tema. Los 8 juegos siguen apareciendo en el orden
+  del registry. Las imágenes decorativas usan `alt=""`; la portada de tema usa un
+  `alt` con el título.
 - [ ] AC-11: Hub y TopicView son operables con teclado, tienen foco visible,
   objetivos táctiles ≥44 px y no generan scroll horizontal a 360 px.
 
@@ -373,8 +376,8 @@ SALIDA:   { view:'progress' }
   elegibles → «Todo al día»; salida y persistencia de SRS/XP/history intactas.
 - `TopicsHub`: header sin «Sepect»; buscador con lupa; orden y filtro; portada;
   progreso; estado vacío.
-- `TopicView`: descripción completa sin truncado; 8 fichas con título + portada,
-  sin descripción; estado de bloqueo basado en elegibles.
+- `TopicView`: descripción completa sin truncado; 8 fichas con título + imagen
+  representativa del juego, sin descripción; estado de bloqueo basado en elegibles.
 - `Dashboard`: KPIs, temas, actividad, estados vacíos, `role="progressbar"`, enlace
   desde hub/tema y ruta `#/progreso`.
 - A11y: teclado, foco visible, 44 px, 360 px sin scroll horizontal, reduced motion.
@@ -396,8 +399,8 @@ SRS inválido, historial inválido o storage lleno.
 - Fechas históricas exactas para temas integrados: se usa primer avistamiento local.
 - Agregados de métricas más allá del tope de 5.000 intentos.
 - Cambios en `scheduleNext`/SM-2/Elo, en el motor de juego o en las reglas de XP.
-- Reemplazar el arte propio de los juegos en otros contextos: solo se deja de usar
-  en la ficha de `TopicView`.
+- Reemplazar el arte propio de los juegos en otros contextos: la ficha de
+  `TopicView` lo muestra, pero no se reutiliza como portada de tema ni en el hub.
 
 ---
 
@@ -413,5 +416,6 @@ SRS inválido, historial inválido o storage lleno.
   por objeto; descripción completa; «Sepect» fuera del header; sin dependencias
   nuevas.
 
-**Nota de estado:** borrador con **arranque parcial autorizado (T1+T2)**. El resto
-de la implementación (T3–T11) espera la firma humana completa.
+**Nota de estado:** borrador con **implementación T1–T11 completada (2026-10-20)** y
+gates en verde. La firma humana del diff y de la spec sigue pendiente; no se abre otro
+incremento hasta cerrarla.

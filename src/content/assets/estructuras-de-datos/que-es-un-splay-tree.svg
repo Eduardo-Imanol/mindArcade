@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un splay tree?">
+<title>¿Qué es un splay tree?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="311.57" cy="228.43" rx="199.33" ry="199.33" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="410.7" cy="413.75" rx="135.14" ry="135.14" fill="hsl(265 90% 58% / 0.205)"/>
+<ellipse cx="124.06" cy="254.05" rx="140.69" ry="140.69" fill="hsl(265 90% 58% / 0.191)"/>
+<ellipse cx="254.5" cy="394.32" rx="171.83" ry="171.83" fill="hsl(265 90% 58% / 0.205)"/>
+<rect x="94.2" y="170" width="323.6" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">splay al acceder</text>
+<text x="NaN" y="NaN" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">auto-ajustable</text>
+<rect x="101.64" y="300" width="308.72" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">O(log n) amortizado</text>
+</svg>
