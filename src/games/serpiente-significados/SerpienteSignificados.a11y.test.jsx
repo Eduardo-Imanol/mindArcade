@@ -230,6 +230,23 @@ describe('serpiente-significados TTS controls (AC-16)', () => {
   });
 });
 
+describe('serpiente-significados mobile D-pad placement (AC-17, AC-18)', () => {
+  it('renders the arrow controls directly under the board on mobile', () => {
+    const view = mountGame();
+    click(buttonByText(view.container, 'Empezar'));
+
+    const boardWrap = view.container.querySelector('.serpiente-board-wrap');
+    const dpad = view.container.querySelector('.serpiente-dpad');
+    expect(boardWrap).toBeTruthy();
+    expect(dpad).toBeTruthy();
+    expect(boardWrap.nextElementSibling).toBe(dpad);
+    expect(dpad.getAttribute('role')).toBe('group');
+    expect(dpad.getAttribute('aria-label')).toBe('Controles de movimiento');
+    expect(dpad.nextElementSibling.classList.contains('serpiente-legend')).toBe(true);
+    view.unmount();
+  });
+});
+
 describe('serpiente-significados responsive + a11y CSS contract (AC-17, AC-18)', () => {
   it('keeps targets, wrap, focus, reduced motion and a 480px board', () => {
     const tokens = fs.readFileSync(path.join(process.cwd(), 'src/ui/tokens.css'), 'utf8');
@@ -242,6 +259,9 @@ describe('serpiente-significados responsive + a11y CSS contract (AC-17, AC-18)',
     expect(tokens).toMatch(/\.serpiente-page\s*{[^}]*max-width:\s*100%/s);
     expect(tokens).toMatch(
       /\.serpiente-board-wrap\s*{[^}]*max-width:\s*min\(480px,\s*92vw\)/s
+    );
+    expect(tokens).toMatch(
+      /\.serpiente-dpad\s*{[^}]*max-width:\s*min\(480px,\s*92vw\)/s
     );
     expect(tokens).toMatch(/\.serpiente-board\s*{[^}]*aspect-ratio:\s*1\s*\/\s*1/s);
     expect(tokens).toMatch(/\.serpiente-board\s*{[^}]*overflow:\s*hidden/s);

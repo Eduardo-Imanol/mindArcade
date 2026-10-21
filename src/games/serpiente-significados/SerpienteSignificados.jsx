@@ -679,6 +679,49 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
           </div>
         </div>
 
+        <div
+          className="serpiente-dpad"
+          role="group"
+          aria-label="Controles de movimiento"
+        >
+          <button
+            className="serpiente-dpad__btn serpiente-dpad__up"
+            type="button"
+            aria-label="Mover arriba"
+            disabled={state.phase !== 'playing'}
+            onClick={() => handleDirection('UP')}
+          >
+            ▲
+          </button>
+          <button
+            className="serpiente-dpad__btn serpiente-dpad__left"
+            type="button"
+            aria-label="Mover a la izquierda"
+            disabled={state.phase !== 'playing'}
+            onClick={() => handleDirection('LEFT')}
+          >
+            ◀
+          </button>
+          <button
+            className="serpiente-dpad__btn serpiente-dpad__down"
+            type="button"
+            aria-label="Mover abajo"
+            disabled={state.phase !== 'playing'}
+            onClick={() => handleDirection('DOWN')}
+          >
+            ▼
+          </button>
+          <button
+            className="serpiente-dpad__btn serpiente-dpad__right"
+            type="button"
+            aria-label="Mover a la derecha"
+            disabled={state.phase !== 'playing'}
+            onClick={() => handleDirection('RIGHT')}
+          >
+            ▶
+          </button>
+        </div>
+
         <ol className="serpiente-legend" aria-label="Manzanas y significados">
           {state.apples.map((apple) => {
             const correct = answered && apple.correct;
@@ -730,45 +773,6 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
           aria-live="polite"
         >
           {announcement}
-        </div>
-
-        <div className="serpiente-dpad" role="group" aria-label="Controles de movimiento">
-          <button
-            className="serpiente-dpad__btn serpiente-dpad__up"
-            type="button"
-            aria-label="Mover arriba"
-            disabled={state.phase !== 'playing'}
-            onClick={() => handleDirection('UP')}
-          >
-            ▲
-          </button>
-          <button
-            className="serpiente-dpad__btn serpiente-dpad__left"
-            type="button"
-            aria-label="Mover a la izquierda"
-            disabled={state.phase !== 'playing'}
-            onClick={() => handleDirection('LEFT')}
-          >
-            ◀
-          </button>
-          <button
-            className="serpiente-dpad__btn serpiente-dpad__down"
-            type="button"
-            aria-label="Mover abajo"
-            disabled={state.phase !== 'playing'}
-            onClick={() => handleDirection('DOWN')}
-          >
-            ▼
-          </button>
-          <button
-            className="serpiente-dpad__btn serpiente-dpad__right"
-            type="button"
-            aria-label="Mover a la derecha"
-            disabled={state.phase !== 'playing'}
-            onClick={() => handleDirection('RIGHT')}
-          >
-            ▶
-          </button>
         </div>
 
         <p className="serpiente-help">

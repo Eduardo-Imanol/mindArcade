@@ -1430,7 +1430,7 @@ a.topic-card-tile:hover {
   cursor: pointer;
 }
 .serpiente-speak--legend { flex: 0 0 44px; width: 44px; margin-top: 0; padding: 0; font-size: 16px; }
-.serpiente-board-wrap { width: 100%; max-width: min(480px, 92vw); margin: 14px auto 10px; }
+.serpiente-board-wrap { width: 100%; max-width: min(480px, 92vw); margin: 14px auto 0; }
 .serpiente-board {
   --serpiente-cells: 15;
   position: relative;
@@ -1491,7 +1491,7 @@ a.topic-card-tile:hover {
   display: grid;
   gap: 6px;
   max-width: 640px;
-  margin: 0 auto;
+  margin: 12px auto 0;
   padding: 0;
   list-style: none;
 }
@@ -1550,7 +1550,10 @@ a.topic-card-tile:hover {
   grid-template-rows: repeat(2, 56px);
   justify-content: center;
   gap: 8px;
-  margin: 14px auto 0;
+  width: 100%;
+  max-width: min(480px, 92vw);
+  margin: 12px auto 0;
+  touch-action: manipulation;
 }
 .serpiente-dpad__btn {
   min-width: 56px;
