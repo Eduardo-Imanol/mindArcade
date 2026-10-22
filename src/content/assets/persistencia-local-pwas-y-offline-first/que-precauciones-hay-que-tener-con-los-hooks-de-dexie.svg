@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué precauciones hay que tener con los hooks de Dexie?">
+<title>¿Qué precauciones hay que tener con los hooks de Dexie?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="474.84" cy="386.61" rx="153.34" ry="153.34" fill="hsl(120 90% 58% / 0.193)"/>
+<ellipse cx="42.31" cy="484.33" rx="173.56" ry="173.56" fill="hsl(120 90% 58% / 0.226)"/>
+<ellipse cx="35.31" cy="436.32" rx="108.18" ry="108.18" fill="hsl(120 90% 58% / 0.197)"/>
+<ellipse cx="22.47" cy="475.38" rx="87.42" ry="87.42" fill="hsl(120 90% 58% / 0.159)"/>
+<rect x="106" y="100" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">solo la pestaña que escribe</text>
+<rect x="126" y="165" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">reading en cada lectura</text>
+<rect x="156" y="230" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">error → aborta</text>
+<rect x="141" y="295" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">nunca red dentro</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">hook reading es costoso</text>
+</svg>

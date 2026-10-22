@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué operaciones masivas ofrece IndexedDB frente a recorrer un cursor?">
+<title>¿Qué operaciones masivas ofrece IndexedDB frente a recorrer un cursor?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="417.19" cy="419.35" rx="160.65" ry="160.65" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="396.62" cy="332.06" rx="129.48" ry="129.48" fill="hsl(265 90% 58% / 0.18)"/>
+<ellipse cx="310.57" cy="13.76" rx="73.97" ry="73.97" fill="hsl(265 90% 58% / 0.227)"/>
+<ellipse cx="164.49" cy="421.42" rx="164.82" ry="164.82" fill="hsl(265 90% 58% / 0.225)"/>
+<rect x="60" y="110" width="170" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">delete</text>
+<text x="145" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">por rango</text>
+<rect x="272" y="110" width="170" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">count</text>
+<text x="357" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">sin traer filas</text>
+<rect x="60" y="240" width="170" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">getAll</text>
+<text x="145" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">por lotes</text>
+<rect x="272" y="240" width="170" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="286" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">cursor</text>
+<text x="357" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">ida y vuelta</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">getAll gana en lotes</text>
+</svg>

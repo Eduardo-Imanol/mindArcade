@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el borrado lógico con lápidas es preferible a borrar el registro?">
+<title>¿Por qué el borrado lógico con lápidas es preferible a borrar el registro?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="443.41" cy="427" rx="198.02" ry="198.02" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="288.51" cy="276.7" rx="104.73" ry="104.73" fill="hsl(168 90% 58% / 0.141)"/>
+<ellipse cx="111.75" cy="322.02" rx="85.58" ry="85.58" fill="hsl(168 90% 58% / 0.167)"/>
+<ellipse cx="35.54" cy="404.5" rx="184.76" ry="184.76" fill="hsl(168 90% 58% / 0.222)"/>
+<rect x="80" y="130" width="200" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="94" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">borrado</text>
+<text x="180" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">deletedAt</text>
+<line x1="286" y1="185" x2="319.2" y2="185" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="330,185 319.87,191.43 319.87,178.57" fill="#00ffcc"/>
+<rect x="335" y="165" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="400" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">lápida</text>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">se propaga y se purga</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">tras una ventana</text>
+<rect x="120" y="380" width="272" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="134" y="398" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">resync completa</text>
+</svg>

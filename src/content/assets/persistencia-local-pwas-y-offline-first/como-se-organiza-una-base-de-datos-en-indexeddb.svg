@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se organiza una base de datos en IndexedDB?">
+<title>¿Cómo se organiza una base de datos en IndexedDB?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="93.31" cy="302.98" rx="84.85" ry="84.85" fill="hsl(320 90% 58% / 0.196)"/>
+<ellipse cx="237.49" cy="212.86" rx="170.42" ry="170.42" fill="hsl(320 90% 58% / 0.234)"/>
+<ellipse cx="317.8" cy="143.32" rx="201.1" ry="201.1" fill="hsl(320 90% 58% / 0.223)"/>
+<ellipse cx="230.56" cy="182.37" rx="144.47" ry="144.47" fill="hsl(320 90% 58% / 0.223)"/>
+<rect x="171" y="60" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="80" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">IDBFactory</text>
+<line x1="256" y1="105" x2="256" y2="134.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,145 249.57,134.87 262.43,134.87" fill="#00ffcc"/>
+<rect x="140" y="150" width="232" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="154" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">base de datos</text>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">nombre + versión</text>
+<line x1="256" y1="246" x2="256" y2="275.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,286 249.57,275.87 262.43,275.87" fill="#00ffcc"/>
+<rect x="90" y="290" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="104" y="308" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">store</text>
+<rect x="272" y="290" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="308" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">store</text>
+<line x1="165" y1="386" x2="165" y2="409.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="165,420 158.57,409.87 171.43,409.87" fill="#ffcc00"/>
+<line x1="347" y1="386" x2="347" y2="409.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="347,420 340.57,409.87 353.43,409.87" fill="#ffcc00"/>
+<rect x="115" y="415" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="165" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">índice</text>
+<rect x="297" y="415" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="347" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">índice</text>
+</svg>

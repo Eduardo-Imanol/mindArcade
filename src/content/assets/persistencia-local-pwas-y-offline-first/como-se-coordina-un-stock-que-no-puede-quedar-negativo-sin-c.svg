@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se coordina un stock que no puede quedar negativo sin conexión?">
+<title>¿Cómo se coordina un stock que no puede quedar negativo sin conexión?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="154.52" cy="63.28" rx="194.59" ry="194.59" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="329.46" cy="373.41" rx="203.26" ry="203.26" fill="hsl(265 90% 58% / 0.162)"/>
+<ellipse cx="2.52" cy="201.5" rx="148.14" ry="148.14" fill="hsl(265 90% 58% / 0.156)"/>
+<ellipse cx="87.97" cy="51.12" rx="185.81" ry="185.81" fill="hsl(265 90% 58% / 0.15)"/>
+<rect x="50" y="120" width="180" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">dispositivo</text>
+<rect x="75" y="165" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="140" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">reserva 2</text>
+<line x1="236" y1="170" x2="285.2" y2="170" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,170 285.87,176.43 285.87,163.57" fill="#00ffcc"/>
+<rect x="302" y="120" width="160" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="316" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">servidor</text>
+<text x="382" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">valida y rechaza</text>
+<rect x="90" y="280" width="332" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="104" y="298" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">reconciliación</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">nunca stock negativo</text>
+</svg>

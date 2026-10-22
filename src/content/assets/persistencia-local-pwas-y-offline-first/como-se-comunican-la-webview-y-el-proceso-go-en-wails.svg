@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se comunican la WebView y el proceso Go en Wails?">
+<title>¿Cómo se comunican la WebView y el proceso Go en Wails?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="373.99" cy="350.77" rx="100.03" ry="100.03" fill="hsl(265 90% 58% / 0.224)"/>
+<ellipse cx="279.69" cy="24.25" rx="158.36" ry="158.36" fill="hsl(265 90% 58% / 0.173)"/>
+<ellipse cx="73.74" cy="262.5" rx="148.74" ry="148.74" fill="hsl(265 90% 58% / 0.216)"/>
+<ellipse cx="470.65" cy="55.47" rx="119.93" ry="119.93" fill="hsl(265 90% 58% / 0.186)"/>
+<rect x="50" y="110" width="180" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">WebView</text>
+<text x="140" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">JS</text>
+<rect x="85" y="220" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="140" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">async</text>
+<rect x="80" y="270" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="140" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">events</text>
+<rect x="282" y="110" width="180" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="296" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">proceso Go</text>
+<text x="372" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">servicios</text>
+<rect x="322" y="220" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="372" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">Bind</text>
+<rect x="317" y="270" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="372" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">SQLite</text>
+<line x1="236" y1="200" x2="265.2" y2="200" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="276,200 265.87,206.43 265.87,193.57" fill="#ffcc00"/>
+<line x1="276" y1="250" x2="246.8" y2="250" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="236,250 246.13,243.57 246.13,256.43" fill="#ffcc00"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">IPC por canales nativos</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">no hay servidor HTTP local</text>
+</svg>

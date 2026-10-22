@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué versión de Wails es estable y cuál sigue en beta?">
+<title>¿Qué versión de Wails es estable y cuál sigue en beta?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="316.28" cy="298.1" rx="107.39" ry="107.39" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="477.19" cy="70.08" rx="172.77" ry="172.77" fill="hsl(168 90% 58% / 0.158)"/>
+<ellipse cx="184.91" cy="287.53" rx="162.27" ry="162.27" fill="hsl(168 90% 58% / 0.199)"/>
+<ellipse cx="190.06" cy="467.78" rx="71.69" ry="71.69" fill="hsl(168 90% 58% / 0.145)"/>
+<rect x="60" y="140" width="180" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">v2</text>
+<text x="150" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">estable</text>
+<text x="150" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">2.14</text>
+<rect x="102" y="300" width="96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">prod</text>
+<rect x="272" y="140" width="180" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="286" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">v3</text>
+<text x="362" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">beta</text>
+<text x="362" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ffcc00">3.0.0</text>
+<rect x="314" y="300" width="96" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="362" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">pre</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">no mezclar APIs</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se pide que el navegador conserve los datos y cuándo conviene pedirlo?">
+<title>¿Cómo se pide que el navegador conserve los datos y cuándo conviene pedirlo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="263.59" cy="31.04" rx="175.53" ry="175.53" fill="hsl(265 90% 58% / 0.196)"/>
+<ellipse cx="198.83" cy="397.1" rx="115" ry="115" fill="hsl(265 90% 58% / 0.182)"/>
+<ellipse cx="386.98" cy="415.35" rx="83.97" ry="83.97" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="128.55" cy="444.84" rx="192.26" ry="192.26" fill="hsl(265 90% 58% / 0.172)"/>
+<rect x="161" y="89" width="190" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#f1f1f1">persist()</text>
+<line x1="256" y1="156" x2="256" y2="199.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,210 249.57,199.87 262.43,199.87" fill="#00ffcc"/>
+<rect x="116" y="215" width="280" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="233" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">navegador</text>
+<text x="256" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">avisa o decide</text>
+<rect x="126" y="370" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">tras acción del usuario</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">no al cargar la página</text>
+</svg>

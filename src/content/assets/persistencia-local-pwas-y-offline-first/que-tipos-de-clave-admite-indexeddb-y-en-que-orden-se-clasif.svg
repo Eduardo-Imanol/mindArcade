@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tipos de clave admite IndexedDB y en qué orden se clasifican?">
+<title>¿Qué tipos de clave admite IndexedDB y en qué orden se clasifican?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="290.33" cy="498.84" rx="105.91" ry="105.91" fill="hsl(45 90% 58% / 0.211)"/>
+<ellipse cx="25.69" cy="449.87" rx="142.54" ry="142.54" fill="hsl(45 90% 58% / 0.217)"/>
+<ellipse cx="372.83" cy="375.94" rx="198.77" ry="198.77" fill="hsl(45 90% 58% / 0.188)"/>
+<ellipse cx="63.61" cy="32.88" rx="116.53" ry="116.53" fill="hsl(45 90% 58% / 0.152)"/>
+<rect x="26" y="109" width="88" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="70" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">número</text>
+<line x1="114" y1="130" x2="111.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="122,130 111.87,136.43 111.87,123.57" fill="#8a7fb5"/>
+<rect x="121" y="109" width="88" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="165" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">fecha</text>
+<line x1="209" y1="130" x2="206.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="217,130 206.87,136.43 206.87,123.57" fill="#8a7fb5"/>
+<rect x="216" y="109" width="88" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="260" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">cadena</text>
+<line x1="304" y1="130" x2="301.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="312,130 301.87,136.43 301.87,123.57" fill="#8a7fb5"/>
+<rect x="311" y="109" width="88" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="355" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">binario</text>
+<line x1="399" y1="130" x2="396.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="407,130 396.87,136.43 396.87,123.57" fill="#8a7fb5"/>
+<rect x="406" y="109" width="88" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="450" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">arreglo</text>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">orden de clasificación</text>
+<rect x="131" y="240" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">booleanos no son claves</text>
+<rect x="166" y="300" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">null tampoco</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">undefined tampoco</text>
+</svg>

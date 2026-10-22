@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se pagina por claves en el repositorio y qué es el cursor opaco?">
+<title>¿Cómo se pagina por claves en el repositorio y qué es el cursor opaco?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="134.6" cy="208.76" rx="189.56" ry="189.56" fill="hsl(320 90% 58% / 0.224)"/>
+<ellipse cx="199.32" cy="235.6" rx="100.21" ry="100.21" fill="hsl(320 90% 58% / 0.198)"/>
+<ellipse cx="258.45" cy="262.81" rx="104.43" ry="104.43" fill="hsl(320 90% 58% / 0.194)"/>
+<ellipse cx="48.64" cy="341.92" rx="121.56" ry="121.56" fill="hsl(320 90% 58% / 0.145)"/>
+<rect x="75" y="99" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="140" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cursor</text>
+<rect x="312" y="99" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="372" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">opaco</text>
+<line x1="206" y1="165" x2="206" y2="194.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="206,205 199.57,194.87 212.43,194.87" fill="#00ffcc"/>
+<rect x="126" y="215" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="206" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">(fecha, id)</text>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">WHERE (fecha, id) &lt;</text>
+<rect x="136" y="350" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">ORDER BY fecha, id</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">el frontend no interpreta</text>
+</svg>

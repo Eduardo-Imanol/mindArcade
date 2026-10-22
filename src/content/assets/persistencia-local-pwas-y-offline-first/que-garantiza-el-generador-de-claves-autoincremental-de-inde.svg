@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza el generador de claves autoincremental de IndexedDB?">
+<title>¿Qué garantiza el generador de claves autoincremental de IndexedDB?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="26.51" cy="223.75" rx="114.21" ry="114.21" fill="hsl(120 90% 58% / 0.178)"/>
+<ellipse cx="17.02" cy="430" rx="173.96" ry="173.96" fill="hsl(120 90% 58% / 0.206)"/>
+<ellipse cx="20.41" cy="486.89" rx="85.69" ry="85.69" fill="hsl(120 90% 58% / 0.221)"/>
+<ellipse cx="318.9" cy="54" rx="75.55" ry="75.55" fill="hsl(120 90% 58% / 0.196)"/>
+<rect x="75" y="110" width="70" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="110" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">1</text>
+<rect x="175" y="110" width="70" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="210" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">2</text>
+<rect x="295" y="110" width="70" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="330" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">7</text>
+<line x1="150" y1="130" x2="159.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="170,130 159.87,136.43 159.87,123.57" fill="#8a7fb5"/>
+<line x1="250" y1="130" x2="279.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="290,130 279.87,136.43 279.87,123.57" fill="#8a7fb5"/>
+<line x1="370" y1="130" x2="399.2" y2="130" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="410,130 399.87,136.43 399.87,123.57" fill="#8a7fb5"/>
+<rect x="405" y="110" width="70" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="440" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">9</text>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">nunca reutiliza</text>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">ni tras borrar</text>
+<rect x="110" y="320" width="292" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="124" y="338" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">clave explícita mayor</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">el generador salta</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se gestionan las migraciones de esquema en SQLite con Go?">
+<title>¿Cómo se gestionan las migraciones de esquema en SQLite con Go?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="457.3" cy="387.09" rx="143.45" ry="143.45" fill="hsl(320 90% 58% / 0.155)"/>
+<ellipse cx="216.6" cy="2.68" rx="140.22" ry="140.22" fill="hsl(320 90% 58% / 0.24)"/>
+<ellipse cx="104.48" cy="75.68" rx="180.64" ry="180.64" fill="hsl(320 90% 58% / 0.198)"/>
+<ellipse cx="368.42" cy="381.75" rx="108.48" ry="108.48" fill="hsl(320 90% 58% / 0.202)"/>
+<rect x="55" y="90" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="140" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">user_version</text>
+<rect x="297" y="90" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="372" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">go:embed</text>
+<rect x="80" y="180" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="88" y1="188" x2="272" y2="188" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="180" y="204" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">0001_init.sql</text>
+<rect x="80" y="226" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="88" y1="234" x2="272" y2="234" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="180" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">0002_outbox.sql</text>
+<rect x="80" y="272" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="88" y1="280" x2="272" y2="280" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="180" y="296" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">0003_index.sql</text>
+<line x1="286" y1="246" x2="305.2" y2="246" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="316,246 305.87,252.43 305.87,239.57" fill="#ff007f"/>
+<rect x="302" y="226" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="372" y="246" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">atómicas</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">solo hacia delante</text>
+<text x="256" y="395" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">copia antes de migrar</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se comprueba que el cifrado está realmente activo?">
+<title>¿Cómo se comprueba que el cifrado está realmente activo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="150.44" cy="312.86" rx="174.75" ry="174.75" fill="hsl(120 90% 58% / 0.231)"/>
+<ellipse cx="496.71" cy="61.45" rx="110.55" ry="110.55" fill="hsl(120 90% 58% / 0.148)"/>
+<ellipse cx="296.75" cy="117.25" rx="124.26" ry="124.26" fill="hsl(120 90% 58% / 0.152)"/>
+<ellipse cx="497.75" cy="0.88" rx="174.69" ry="174.69" fill="hsl(120 90% 58% / 0.215)"/>
+<rect x="116" y="83" width="280" height="54" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">PRAGMA cipher_version</text>
+<line x1="256" y1="140" x2="256" y2="169.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,180 249.57,169.87 262.43,169.87" fill="#00ffcc"/>
+<rect x="90" y="185" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="104" y="203" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">strings</text>
+<text x="170" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">sin texto</text>
+<rect x="262" y="185" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="276" y="203" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">sqlite3</text>
+<text x="342" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">no es una db</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">comprobar el archivo</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">y no solo el código</text>
+</svg>

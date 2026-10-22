@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué no se debe confiar en el orden de llegada de los datos sincronizados?">
+<title>¿Por qué no se debe confiar en el orden de llegada de los datos sincronizados?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="228.28" cy="164.43" rx="92.29" ry="92.29" fill="hsl(168 90% 58% / 0.218)"/>
+<ellipse cx="279.67" cy="153.34" rx="85.41" ry="85.41" fill="hsl(168 90% 58% / 0.218)"/>
+<ellipse cx="349.96" cy="407.44" rx="167.56" ry="167.56" fill="hsl(168 90% 58% / 0.15)"/>
+<ellipse cx="18.48" cy="424.65" rx="90.6" ry="90.6" fill="hsl(168 90% 58% / 0.192)"/>
+<rect x="50" y="119" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="120" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">pedido</text>
+<rect x="310" y="119" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="380" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cliente</text>
+<line x1="190" y1="140" x2="289.2" y2="140" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="300,140 289.87,146.43 289.87,133.57" fill="#8a7fb5"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">referencia colgante</text>
+<rect x="191" y="230" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">tolerada</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">sin integridad referencial</text>
+<text x="256" y="365" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">estricta entre entidades</text>
+</svg>

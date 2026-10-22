@@ -40,7 +40,11 @@
 
 
 
+- 2026-10-21 — **Primer tema real del pipeline (spec-14, AC-29)**: `persistencia-local-pwas-y-offline-first` generado desde el source `/Users/ideloperlc/Downloads/Persistencia local, PWAs y offline-first guía técnica exhaustiva.md` (copiado a `src/content/sources/persistencia-local-pwas-offline-first.md`; 1349 líneas, secciones 0–5, el documento original está truncado). 108 cartas (S0 3, S1 17, S2 23, S3 20, S4 19, S5 26; 23 easy / 85 hard) en `src/content/topics/persistencia-local-pwas-y-offline-first.md`; 108 SVG en `src/content/assets/persistencia-local-pwas-y-offline-first/` generados por `scripts/generate-topic-art.mjs`; 108 sketches en 3 módulos (`persistencia-web.mjs` 43, `persistencia-indexeddb-dexie.mjs` 39, `persistencia-sqlite-wails.mjs` 26) registrados en `scripts/p5-art/sketches/index.mjs` por `card-id` (los ids salen del `I: asset:` del topic, no se inventan). Sin tocar hub, juegos, parser ni vistas: `src/core/content/catalog.js` descubre `src/content/topics/*.md` por glob y los juegos son genéricos. Gates: `npm run lint` 0, `npm run build` OK, paridad 108/108 sin huérfanos, SVG deterministas byte a byte y sin solapes de texto.
+
+
 ## Resolved errors / gotchas
+- 2026-10-21 — Fallos de test **preexistentes en `main`** (verificado con `git stash`): (a) `estructuras-de-datos` (commit 1d07543) tiene 180 assets versionados pero ningún sketch registrado → 2 tests de `scripts/generate-topic-art.test.mjs` fallan (`missing-sketch`); (b) `public/icons/icon-192.png` no coincide byte a byte con `renderIcon()` en este entorno → 1 test de `scripts/generate-pwa-assets.test.mjs` falla. Ninguno lo introduce el tema nuevo.
 - 2026-10-16 — npm registry here lacks jsdom@25.0.8 and vitest@2.1.5; pinned jsdom ^25.0.1 + vitest ^2.1.0 + eslint globals pkg. Full install ~1-5min (slow network).
 - 2026-10-16 — eslint v9 flat config needs globals browser+node + react/jsx-uses-vars, else JSX components flagged unused and browser APIs flagged undef.
 - 2026-10-16 — Pre-existing templates had dead code (paintParticles, unused `t`, stale react-hooks disable) — removed, lint 0.

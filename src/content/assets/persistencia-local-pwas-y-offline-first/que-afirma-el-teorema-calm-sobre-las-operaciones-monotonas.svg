@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué afirma el teorema CALM sobre las operaciones monótonas?">
+<title>¿Qué afirma el teorema CALM sobre las operaciones monótonas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="43.38" cy="193.57" rx="87.52" ry="87.52" fill="hsl(320 90% 58% / 0.23)"/>
+<ellipse cx="132.91" cy="88.26" rx="92.2" ry="92.2" fill="hsl(320 90% 58% / 0.174)"/>
+<ellipse cx="412.12" cy="336.73" rx="182.27" ry="182.27" fill="hsl(320 90% 58% / 0.199)"/>
+<ellipse cx="147.85" cy="163.11" rx="88.92" ry="88.92" fill="hsl(320 90% 58% / 0.183)"/>
+<rect x="60" y="130" width="180" height="250" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">monótona</text>
+<text x="150" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">solo agrega</text>
+<text x="150" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">información</text>
+<rect x="85" y="310" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">sin coord.</text>
+<rect x="272" y="130" width="180" height="250" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="286" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">con coord.</text>
+<text x="362" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">requiere</text>
+<text x="362" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">consenso</text>
+<rect x="297" y="310" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="362" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">bloquea</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">CALM</text>
+</svg>

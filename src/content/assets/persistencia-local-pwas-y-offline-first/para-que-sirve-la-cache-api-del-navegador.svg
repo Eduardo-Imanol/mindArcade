@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Para qué sirve la Cache API del navegador?">
+<title>¿Para qué sirve la Cache API del navegador?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="320.01" cy="48.44" rx="81.05" ry="81.05" fill="hsl(320 90% 58% / 0.155)"/>
+<ellipse cx="387.99" cy="398.2" rx="143.29" ry="143.29" fill="hsl(320 90% 58% / 0.222)"/>
+<ellipse cx="218.98" cy="24.29" rx="146.48" ry="146.48" fill="hsl(320 90% 58% / 0.166)"/>
+<ellipse cx="223.01" cy="45.31" rx="89.16" ry="89.16" fill="hsl(320 90% 58% / 0.232)"/>
+<rect x="140" y="110" width="230" height="290" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="154" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Cache API</text>
+<rect x="135" y="179" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="200" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">Request</text>
+<line x1="200" y1="230" x2="200" y2="269.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="200,280 193.57,269.87 206.43,269.87" fill="#00ffcc"/>
+<rect x="130" y="289" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="200" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">Response</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">recursos estáticos</text>
+</svg>

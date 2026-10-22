@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿En qué consiste la detección activa de conectividad?">
+<title>¿En qué consiste la detección activa de conectividad?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="157.21" cy="57.99" rx="179.09" ry="179.09" fill="hsl(45 90% 58% / 0.197)"/>
+<ellipse cx="124.97" cy="138.28" rx="87.28" ry="87.28" fill="hsl(45 90% 58% / 0.192)"/>
+<ellipse cx="357.05" cy="127.49" rx="201.57" ry="201.57" fill="hsl(45 90% 58% / 0.215)"/>
+<ellipse cx="351.66" cy="123.49" rx="179.69" ry="179.69" fill="hsl(45 90% 58% / 0.151)"/>
+<rect x="151" y="82" width="210" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">HEAD /health</text>
+<line x1="256" y1="142" x2="256" y2="184.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,195 249.57,184.87 262.43,184.87" fill="#00ffcc"/>
+<rect x="171" y="205" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">timeout 3 s</text>
+<rect x="44" y="299" width="128" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="108" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">eventos</text>
+<rect x="180" y="299" width="152" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">fallos fetch</text>
+<rect x="339" y="299" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="404" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">visibility</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">combinar señales</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">navigator.connection solo ajusta</text>
+</svg>

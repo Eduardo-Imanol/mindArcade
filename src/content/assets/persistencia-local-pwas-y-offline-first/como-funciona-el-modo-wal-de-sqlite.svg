@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona el modo WAL de SQLite?">
+<title>¿Cómo funciona el modo WAL de SQLite?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="28.57" cy="38.93" rx="169.86" ry="169.86" fill="hsl(45 90% 58% / 0.238)"/>
+<ellipse cx="340.32" cy="9.63" rx="90.8" ry="90.8" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="169.48" cy="217.31" rx="135.54" ry="135.54" fill="hsl(45 90% 58% / 0.208)"/>
+<ellipse cx="447.7" cy="276.04" rx="184.17" ry="184.17" fill="hsl(45 90% 58% / 0.204)"/>
+<rect x="60" y="140" width="150" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">app.db</text>
+<rect x="300" y="100" width="160" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="314" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">app.db-wal</text>
+<rect x="300" y="250" width="160" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="314" y="268" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">app.db-shm</text>
+<line x1="216" y1="180" x2="283.92" y2="153.88" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="294,150 286.85,159.64 282.24,147.64" fill="#ff007f"/>
+<line x1="216" y1="230" x2="285.44" y2="283.42" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="294,290 282.05,288.92 289.89,278.73" fill="#ffcc00"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lectores no bloquean</text>
+<rect x="166" y="425" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">un solo escritor</text>
+</svg>

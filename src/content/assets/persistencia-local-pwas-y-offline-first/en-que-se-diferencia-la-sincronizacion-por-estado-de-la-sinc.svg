@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿En qué se diferencia la sincronización por estado de la sincronización por operaciones?">
+<title>¿En qué se diferencia la sincronización por estado de la sincronización por operaciones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="210.37" cy="239.56" rx="130.69" ry="130.69" fill="hsl(45 90% 58% / 0.197)"/>
+<ellipse cx="220.69" cy="68.53" rx="126.88" ry="126.88" fill="hsl(45 90% 58% / 0.192)"/>
+<ellipse cx="264.75" cy="103.94" rx="80.65" ry="80.65" fill="hsl(45 90% 58% / 0.175)"/>
+<ellipse cx="162.74" cy="365.6" rx="81.57" ry="81.57" fill="hsl(45 90% 58% / 0.149)"/>
+<rect x="50" y="110" width="190" height="260" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">por estado</text>
+<rect x="85" y="169" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="145" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">dirty</text>
+<text x="145" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">envía el</text>
+<text x="145" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">estado actual</text>
+<rect x="272" y="110" width="190" height="260" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">por operaciones</text>
+<rect x="307" y="169" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="367" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">patch</text>
+<text x="367" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">conserva la</text>
+<text x="367" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">intención</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">fusiona mejor</text>
+</svg>

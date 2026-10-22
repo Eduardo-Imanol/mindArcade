@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué and() y filter() se ejecutan en JavaScript y con qué cuidado hay que usarlos?">
+<title>¿Por qué and() y filter() se ejecutan en JavaScript y con qué cuidado hay que usarlos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="319.64" cy="38.08" rx="136.15" ry="136.15" fill="hsl(45 90% 58% / 0.237)"/>
+<ellipse cx="184.34" cy="440.51" rx="120.75" ry="120.75" fill="hsl(45 90% 58% / 0.169)"/>
+<ellipse cx="352.34" cy="368.47" rx="125.79" ry="125.79" fill="hsl(45 90% 58% / 0.18)"/>
+<ellipse cx="224.78" cy="55.37" rx="188.08" ry="188.08" fill="hsl(45 90% 58% / 0.184)"/>
+<rect x="60" y="90" width="392" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">índice acotado</text>
+<line x1="256" y1="186" x2="256" y2="215.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,226 249.57,215.87 262.43,215.87" fill="#00ffcc"/>
+<rect x="60" y="230" width="392" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="74" y="248" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">filter en JS</text>
+<text x="256" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">recorre lo que ya salió</text>
+<rect x="106" y="360" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">sin where = tabla entera</text>
+</svg>

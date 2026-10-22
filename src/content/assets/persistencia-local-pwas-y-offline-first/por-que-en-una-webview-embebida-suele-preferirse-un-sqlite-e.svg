@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué en una WebView embebida suele preferirse un SQLite en un archivo?">
+<title>¿Por qué en una WebView embebida suele preferirse un SQLite en un archivo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="123.42" cy="92.82" rx="125.74" ry="125.74" fill="hsl(120 90% 58% / 0.156)"/>
+<ellipse cx="442.1" cy="493.42" rx="183.66" ry="183.66" fill="hsl(120 90% 58% / 0.202)"/>
+<ellipse cx="207.93" cy="443.7" rx="77.41" ry="77.41" fill="hsl(120 90% 58% / 0.195)"/>
+<ellipse cx="244.82" cy="283.22" rx="97.32" ry="97.32" fill="hsl(120 90% 58% / 0.165)"/>
+<rect x="45" y="120" width="200" height="250" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="59" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">WebView</text>
+<text x="145" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">perfil invisible</text>
+<text x="145" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">se pierde al</text>
+<text x="145" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">reinstalar</text>
+<rect x="60" y="310" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="145" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">origen sintético</text>
+<rect x="267" y="120" width="200" height="250" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="281" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">app.db</text>
+<text x="367" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">archivo que</text>
+<text x="367" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">tú controlas</text>
+<rect x="312" y="310" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="367" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">SQLite</text>
+</svg>

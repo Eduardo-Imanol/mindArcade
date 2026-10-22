@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué fiabilidad tiene navigator.onLine para detectar la conexión?">
+<title>¿Qué fiabilidad tiene navigator.onLine para detectar la conexión?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="359.44" cy="494.63" rx="75.47" ry="75.47" fill="hsl(168 90% 58% / 0.221)"/>
+<ellipse cx="485.85" cy="95.71" rx="94.02" ry="94.02" fill="hsl(168 90% 58% / 0.196)"/>
+<ellipse cx="248.28" cy="25.79" rx="172.3" ry="172.3" fill="hsl(168 90% 58% / 0.23)"/>
+<ellipse cx="127.07" cy="485.54" rx="201.51" ry="201.51" fill="hsl(168 90% 58% / 0.149)"/>
+<rect x="50" y="120" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="140" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">onLine true</text>
+<text x="140" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">puede mentir</text>
+<text x="140" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">red cautiva</text>
+<rect x="282" y="120" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="372" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">onLine false</text>
+<text x="372" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">fiable</text>
+<text x="372" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">sin interfaz</text>
+<rect x="120" y="320" width="272" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="134" y="338" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sondeo real</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">no decidir con onLine</text>
+</svg>

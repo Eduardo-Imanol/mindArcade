@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué resuelve Dexie.js sobre la API nativa de IndexedDB?">
+<title>¿Qué resuelve Dexie.js sobre la API nativa de IndexedDB?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="190.68" cy="110.88" rx="101.87" ry="101.87" fill="hsl(45 90% 58% / 0.166)"/>
+<ellipse cx="124.69" cy="42.95" rx="151.72" ry="151.72" fill="hsl(45 90% 58% / 0.239)"/>
+<ellipse cx="468.17" cy="184.25" rx="116.29" ry="116.29" fill="hsl(45 90% 58% / 0.193)"/>
+<ellipse cx="40.35" cy="378.04" rx="192.77" ry="192.77" fill="hsl(45 90% 58% / 0.211)"/>
+<rect x="60" y="100" width="392" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">IndexedDB</text>
+<line x1="256" y1="196" x2="256" y2="225.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,236 249.57,225.87 262.43,225.87" fill="#00ffcc"/>
+<rect x="130" y="240" width="252" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="144" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Dexie</text>
+<rect x="115" y="359" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="180" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">promesas</text>
+<rect x="257" y="359" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="332" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">liveQuery</text>
+<rect x="120" y="419" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="180" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">hooks</text>
+<rect x="272" y="419" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="332" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">bulk</text>
+</svg>

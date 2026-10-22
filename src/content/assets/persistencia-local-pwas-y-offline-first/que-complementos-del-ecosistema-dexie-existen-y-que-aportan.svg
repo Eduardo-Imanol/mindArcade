@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complementos del ecosistema Dexie existen y qué aportan?">
+<title>¿Qué complementos del ecosistema Dexie existen y qué aportan?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="332.97" cy="54.08" rx="191.05" ry="191.05" fill="hsl(320 90% 58% / 0.157)"/>
+<ellipse cx="71.87" cy="438.67" rx="88.12" ry="88.12" fill="hsl(320 90% 58% / 0.154)"/>
+<ellipse cx="149.65" cy="299.2" rx="178.38" ry="178.38" fill="hsl(320 90% 58% / 0.142)"/>
+<ellipse cx="284.57" cy="109.77" rx="109.43" ry="109.43" fill="hsl(320 90% 58% / 0.175)"/>
+<rect x="45" y="99" width="170" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">react-hooks</text>
+<rect x="312" y="99" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="382" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">y-dexie</text>
+<rect x="35" y="189" width="190" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">export-import</text>
+<rect x="297" y="189" width="170" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="382" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">cloud-addon</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">useLiveQuery · Y.js · copias · sync</text>
+<rect x="136" y="370" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">dependencia externa</text>
+</svg>

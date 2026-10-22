@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se clasifican los datos según su patrón de sincronización?">
+<title>¿Cómo se clasifican los datos según su patrón de sincronización?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="244.65" cy="485.23" rx="115.64" ry="115.64" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="240.92" cy="12.84" rx="120.6" ry="120.6" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="385.67" cy="209.14" rx="174.94" ry="174.94" fill="hsl(265 90% 58% / 0.228)"/>
+<ellipse cx="49.1" cy="269.74" rx="116.22" ry="116.22" fill="hsl(265 90% 58% / 0.206)"/>
+<rect x="60" y="100" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">referencia</text>
+<text x="150" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">solo descarga</text>
+<rect x="272" y="100" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">usuario</text>
+<text x="362" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">ida y vuelta</text>
+<rect x="60" y="240" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">eventos</text>
+<text x="150" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">solo se agregan</text>
+<rect x="272" y="240" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="286" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">efímero</text>
+<text x="362" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">no se sincroniza</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">cuatro patrones</text>
+</svg>

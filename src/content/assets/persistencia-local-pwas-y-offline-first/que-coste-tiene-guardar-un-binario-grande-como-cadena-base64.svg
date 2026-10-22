@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué coste tiene guardar un binario grande como cadena base64?">
+<title>¿Qué coste tiene guardar un binario grande como cadena base64?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="15.69" cy="455.15" rx="131.89" ry="131.89" fill="hsl(320 90% 58% / 0.149)"/>
+<ellipse cx="360.24" cy="490.07" rx="156.15" ry="156.15" fill="hsl(320 90% 58% / 0.192)"/>
+<ellipse cx="50.27" cy="315.27" rx="110.36" ry="110.36" fill="hsl(320 90% 58% / 0.228)"/>
+<ellipse cx="184.93" cy="100.52" rx="131.2" ry="131.2" fill="hsl(320 90% 58% / 0.206)"/>
+<rect x="50" y="110" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="64" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">base64</text>
+<rect x="75" y="165" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="140" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">+33 %</text>
+<rect x="272" y="110" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Blob</text>
+<rect x="297" y="165" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">binario</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">mejor en crudo</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">pruébalo en iOS</text>
+<rect x="166" y="390" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">ArrayBuffer</text>
+</svg>

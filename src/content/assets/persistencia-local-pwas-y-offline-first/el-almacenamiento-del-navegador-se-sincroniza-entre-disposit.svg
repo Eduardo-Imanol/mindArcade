@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿El almacenamiento del navegador se sincroniza entre dispositivos?">
+<title>¿El almacenamiento del navegador se sincroniza entre dispositivos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="46.92" cy="50.59" rx="114.65" ry="114.65" fill="hsl(265 90% 58% / 0.214)"/>
+<ellipse cx="161.31" cy="72.03" rx="72.39" ry="72.39" fill="hsl(265 90% 58% / 0.207)"/>
+<ellipse cx="4.67" cy="495.14" rx="116.34" ry="116.34" fill="hsl(265 90% 58% / 0.163)"/>
+<ellipse cx="173.3" cy="441.55" rx="196.12" ry="196.12" fill="hsl(265 90% 58% / 0.157)"/>
+<rect x="60" y="160" width="170" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">dispositivo A</text>
+<rect x="95" y="230" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="145" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">perfil</text>
+<rect x="282" y="160" width="170" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="296" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">dispositivo B</text>
+<rect x="317" y="230" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="367" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">perfil</text>
+<line x1="240" y1="235" x2="261.2" y2="235" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="272,235 261.87,241.43 261.87,228.57" fill="#ff007f"/>
+<line x1="248" y1="225" x2="264" y2="245" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<line x1="264" y1="225" x2="248" y2="245" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ff007f">no se sincroniza</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">sí se comparte entre pestañas</text>
+</svg>

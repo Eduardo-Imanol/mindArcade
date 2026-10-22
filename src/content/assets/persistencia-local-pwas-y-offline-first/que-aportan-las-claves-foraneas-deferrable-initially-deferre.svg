@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué aportan las claves foráneas DEFERRABLE INITIALLY DEFERRED?">
+<title>¿Qué aportan las claves foráneas DEFERRABLE INITIALLY DEFERRED?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="312.73" cy="161.65" rx="111.52" ry="111.52" fill="hsl(320 90% 58% / 0.148)"/>
+<ellipse cx="137.33" cy="228.97" rx="111.26" ry="111.26" fill="hsl(320 90% 58% / 0.153)"/>
+<ellipse cx="350.55" cy="145.11" rx="199.3" ry="199.3" fill="hsl(320 90% 58% / 0.181)"/>
+<ellipse cx="187.1" cy="107.89" rx="88.76" ry="88.76" fill="hsl(320 90% 58% / 0.163)"/>
+<rect x="80" y="99" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="150" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">pedido</text>
+<rect x="292" y="99" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cliente</text>
+<line x1="226" y1="120" x2="289.2" y2="120" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="300,120 289.87,126.43 289.87,113.57" fill="#ffcc00"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">llega después</text>
+<rect x="181" y="220" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">DEFERRED</text>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">se comprueba al confirmar</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">no al insertar</text>
+<rect x="120" y="390" width="272" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="134" y="408" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">mismo orden libre</text>
+</svg>

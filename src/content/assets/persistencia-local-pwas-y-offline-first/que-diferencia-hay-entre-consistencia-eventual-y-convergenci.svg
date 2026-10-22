@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre consistencia eventual y convergencia fuerte?">
+<title>¿Qué diferencia hay entre consistencia eventual y convergencia fuerte?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="312.59" cy="56.83" rx="145.28" ry="145.28" fill="hsl(265 90% 58% / 0.237)"/>
+<ellipse cx="204.76" cy="17.17" rx="173.15" ry="173.15" fill="hsl(265 90% 58% / 0.22)"/>
+<ellipse cx="151.01" cy="288.94" rx="95.31" ry="95.31" fill="hsl(265 90% 58% / 0.169)"/>
+<ellipse cx="490.17" cy="3.76" rx="86.73" ry="86.73" fill="hsl(265 90% 58% / 0.196)"/>
+<rect x="50" y="140" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">réplica A</text>
+<rect x="312" y="140" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="326" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">réplica B</text>
+<line x1="206" y1="175" x2="295.2" y2="175" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="306,175 295.87,181.43 295.87,168.57" fill="#ff007f"/>
+<line x1="306" y1="235" x2="216.8" y2="235" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="206,235 216.13,228.57 216.13,241.43" fill="#39ff14"/>
+<rect x="181" y="100" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">convergen</text>
+<rect x="191" y="280" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">eventual</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">fusión conmutativa</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">idempotente · asociativa</text>
+</svg>

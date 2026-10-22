@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Dónde se crean los índices de un object store y qué opciones tienen?">
+<title>¿Dónde se crean los índices de un object store y qué opciones tienen?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="189.61" cy="360.02" rx="167.25" ry="167.25" fill="hsl(168 90% 58% / 0.168)"/>
+<ellipse cx="119.14" cy="234.41" rx="197.78" ry="197.78" fill="hsl(168 90% 58% / 0.195)"/>
+<ellipse cx="214.94" cy="217.86" rx="95.16" ry="95.16" fill="hsl(168 90% 58% / 0.195)"/>
+<ellipse cx="476.77" cy="7.23" rx="143.25" ry="143.25" fill="hsl(168 90% 58% / 0.168)"/>
+<rect x="120" y="90" width="272" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="134" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">upgradeneeded</text>
+<line x1="256" y1="186" x2="256" y2="215.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,226 249.57,215.87 262.43,215.87" fill="#00ffcc"/>
+<rect x="90" y="230" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="104" y="248" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">createIndex</text>
+<rect x="272" y="230" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="248" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">createIndex</text>
+<text x="165" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">unique</text>
+<text x="347" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">multiEntry</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">solo aquí se crean</text>
+</svg>

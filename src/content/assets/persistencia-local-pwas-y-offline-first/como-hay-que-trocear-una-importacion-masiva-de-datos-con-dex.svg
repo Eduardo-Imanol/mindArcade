@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo hay que trocear una importación masiva de datos con Dexie?">
+<title>¿Cómo hay que trocear una importación masiva de datos con Dexie?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="3.24" cy="286.5" rx="201" ry="201" fill="hsl(120 90% 58% / 0.184)"/>
+<ellipse cx="277.7" cy="325.34" rx="135.88" ry="135.88" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="233.46" cy="44.18" rx="172.73" ry="172.73" fill="hsl(120 90% 58% / 0.144)"/>
+<ellipse cx="307.87" cy="224.92" rx="115" ry="115" fill="hsl(120 90% 58% / 0.211)"/>
+<rect x="50" y="100" width="180" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">lote 1</text>
+<rect x="252" y="100" width="180" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="266" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">lote 2</text>
+<rect x="50" y="220" width="180" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="238" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">lote 3</text>
+<rect x="252" y="220" width="180" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="266" y="238" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">lote 4</text>
+<line x1="236" y1="145" x2="235.2" y2="145" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="246,145 235.87,151.43 235.87,138.57" fill="#8a7fb5"/>
+<line x1="342" y1="196" x2="342" y2="203.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="342,214 335.57,203.87 348.43,203.87" fill="#8a7fb5"/>
+<line x1="236" y1="265" x2="235.2" y2="265" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="246,265 235.87,271.43 235.87,258.57" fill="#8a7fb5"/>
+<rect x="126" y="350" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">1.000 – 5.000 objetos</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">una transacción por lote</text>
+</svg>

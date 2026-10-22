@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hay que hacer con los fallos parciales de un bulkPut?">
+<title>¿Qué hay que hacer con los fallos parciales de un bulkPut?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="95.34" cy="364.83" rx="130.62" ry="130.62" fill="hsl(320 90% 58% / 0.198)"/>
+<ellipse cx="229.04" cy="95.85" rx="96.98" ry="96.98" fill="hsl(320 90% 58% / 0.221)"/>
+<ellipse cx="234.35" cy="388.55" rx="159.1" ry="159.1" fill="hsl(320 90% 58% / 0.215)"/>
+<ellipse cx="17.87" cy="222.47" rx="171.33" ry="171.33" fill="hsl(320 90% 58% / 0.197)"/>
+<rect x="60" y="100" width="392" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">bulkPut</text>
+<line x1="256" y1="206" x2="256" y2="235.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,246 249.57,235.87 262.43,235.87" fill="#ff007f"/>
+<rect x="176" y="260" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">BulkError</text>
+<rect x="85" y="339" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="150" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">fallo 1</text>
+<rect x="297" y="339" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">fallo 2</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">captura dentro de la transacción</text>
+</svg>

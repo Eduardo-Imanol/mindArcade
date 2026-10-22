@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué aporta el event sourcing local a una aplicación local-first?">
+<title>¿Qué aporta el event sourcing local a una aplicación local-first?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="25.12" cy="377.71" rx="122.59" ry="122.59" fill="hsl(265 90% 58% / 0.239)"/>
+<ellipse cx="449.06" cy="343.48" rx="104.94" ry="104.94" fill="hsl(265 90% 58% / 0.16)"/>
+<ellipse cx="78.93" cy="254.8" rx="95.23" ry="95.23" fill="hsl(265 90% 58% / 0.178)"/>
+<ellipse cx="95.27" cy="394.93" rx="131.89" ry="131.89" fill="hsl(265 90% 58% / 0.207)"/>
+<rect x="60" y="120" width="200" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="128" x2="252" y2="128" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="143" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">evento 1</text>
+<rect x="60" y="164" width="200" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="172" x2="252" y2="172" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="187" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">evento 2</text>
+<rect x="60" y="208" width="200" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="216" x2="252" y2="216" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="231" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">evento 3</text>
+<line x1="266" y1="182" x2="305.2" y2="182" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="316,182 305.87,188.43 305.87,175.57" fill="#39ff14"/>
+<rect x="322" y="130" width="140" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="336" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">proyección</text>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">auditoría · deshacer</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">log + proyecciones</text>
+</svg>

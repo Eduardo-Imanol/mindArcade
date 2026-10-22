@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué hay que hacer la lectura-modificación-escritura dentro de una sola transacción?">
+<title>¿Por qué hay que hacer la lectura-modificación-escritura dentro de una sola transacción?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="277.62" cy="343.24" rx="80.4" ry="80.4" fill="hsl(265 90% 58% / 0.178)"/>
+<ellipse cx="45.53" cy="213.64" rx="141.53" ry="141.53" fill="hsl(265 90% 58% / 0.153)"/>
+<ellipse cx="377.59" cy="257.85" rx="75.1" ry="75.1" fill="hsl(265 90% 58% / 0.149)"/>
+<ellipse cx="325.97" cy="118.97" rx="113.94" ry="113.94" fill="hsl(265 90% 58% / 0.142)"/>
+<rect x="50" y="110" width="170" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="64" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">tab A</text>
+<rect x="292" y="110" width="170" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="306" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">tab B</text>
+<rect x="70" y="229" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="135" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">leer 1</text>
+<rect x="312" y="229" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="377" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">leer 1</text>
+<line x1="135" y1="286" x2="135" y2="319.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="135,330 128.57,319.87 141.43,319.87" fill="#00ffcc"/>
+<line x1="377" y1="286" x2="377" y2="319.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="377,330 370.57,319.87 383.43,319.87" fill="#00ffcc"/>
+<rect x="60" y="334" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="135" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">escribir 0</text>
+<rect x="302" y="334" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="377" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">escribir 0</text>
+<rect x="166" y="410" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">lost update</text>
+</svg>

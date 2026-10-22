@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre un repositorio y un servicio enlazado en Wails?">
+<title>¿Qué diferencia hay entre un repositorio y un servicio enlazado en Wails?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="278.61" cy="214.44" rx="77.56" ry="77.56" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="365.13" cy="0.32" rx="127.34" ry="127.34" fill="hsl(320 90% 58% / 0.17)"/>
+<ellipse cx="54.45" cy="189.42" rx="176.82" ry="176.82" fill="hsl(320 90% 58% / 0.143)"/>
+<ellipse cx="148.16" cy="452.22" rx="142.73" ry="142.73" fill="hsl(320 90% 58% / 0.227)"/>
+<rect x="50" y="100" width="190" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="64" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">servicio</text>
+<text x="145" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">valida</text>
+<text x="145" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">orquesta</text>
+<text x="145" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">devuelve DTO</text>
+<line x1="246" y1="215" x2="285.2" y2="215" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,215 285.87,221.43 285.87,208.57" fill="#00ffcc"/>
+<rect x="302" y="100" width="160" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="316" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">repositorio</text>
+<text x="382" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">datos</text>
+<text x="382" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">SQL</text>
+<text x="382" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">y nada más</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">sin tipos genéricos</text>
+</svg>

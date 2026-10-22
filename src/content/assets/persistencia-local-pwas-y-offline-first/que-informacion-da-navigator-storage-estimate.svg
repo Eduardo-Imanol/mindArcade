@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué información da navigator.storage.estimate()?">
+<title>¿Qué información da navigator.storage.estimate()?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="387.17" cy="399.39" rx="176.52" ry="176.52" fill="hsl(120 90% 58% / 0.145)"/>
+<ellipse cx="497.96" cy="70.74" rx="173.12" ry="173.12" fill="hsl(120 90% 58% / 0.178)"/>
+<ellipse cx="360.35" cy="375.72" rx="147.92" ry="147.92" fill="hsl(120 90% 58% / 0.206)"/>
+<ellipse cx="465.32" cy="63.38" rx="134.22" ry="134.22" fill="hsl(120 90% 58% / 0.185)"/>
+<rect x="80" y="130" width="352" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="94" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">uso</text>
+<rect x="96" y="150" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.25)" stroke="#00ffcc" stroke-width="2"/>
+<text x="196" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">45 %</text>
+<rect x="80" y="240" width="352" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="94" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">cuota</text>
+<rect x="96" y="260" width="320" height="40" rx="8" fill="rgba(255, 0, 127, 0.18)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">estimado</text>
+<rect x="136" y="360" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">QuotaExceededError</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué regla debe seguir el orden de un índice compuesto?">
+<title>¿Qué regla debe seguir el orden de un índice compuesto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="210.32" cy="190.34" rx="145.6" ry="145.6" fill="hsl(45 90% 58% / 0.148)"/>
+<ellipse cx="61.7" cy="110.55" rx="196.84" ry="196.84" fill="hsl(45 90% 58% / 0.204)"/>
+<ellipse cx="127.04" cy="101.39" rx="149.2" ry="149.2" fill="hsl(45 90% 58% / 0.166)"/>
+<ellipse cx="34.28" cy="275.55" rx="93.09" ry="93.09" fill="hsl(45 90% 58% / 0.224)"/>
+<rect x="80" y="100" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">status</text>
+<rect x="205" y="100" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="290" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">updatedAt</text>
+<line x1="220" y1="120" x2="212.8" y2="120" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="202,120 212.13,113.57 212.13,126.43" fill="#8a7fb5"/>
+<text x="150" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">igualdad</text>
+<text x="290" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">rango</text>
+<rect x="90" y="240" width="332" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="104" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">orden lexicográfico</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">rango solo al final</text>
+<rect x="156" y="380" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">pending · 24 h</text>
+</svg>

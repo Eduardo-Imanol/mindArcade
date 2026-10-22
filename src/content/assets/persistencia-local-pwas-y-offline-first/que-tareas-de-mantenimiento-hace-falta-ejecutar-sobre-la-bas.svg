@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tareas de mantenimiento hace falta ejecutar sobre la base local?">
+<title>¿Qué tareas de mantenimiento hace falta ejecutar sobre la base local?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="104.81" cy="80.16" rx="128.42" ry="128.42" fill="hsl(120 90% 58% / 0.152)"/>
+<ellipse cx="103.18" cy="44.96" rx="199.46" ry="199.46" fill="hsl(120 90% 58% / 0.233)"/>
+<ellipse cx="14.76" cy="63.33" rx="99.12" ry="99.12" fill="hsl(120 90% 58% / 0.168)"/>
+<ellipse cx="201.39" cy="149.45" rx="174.53" ry="174.53" fill="hsl(120 90% 58% / 0.231)"/>
+<rect x="70" y="85" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">optimize</text>
+<rect x="282" y="85" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="362" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">checkpoint</text>
+<rect x="65" y="155" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">purga lápidas</text>
+<rect x="277" y="155" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">quick_check</text>
+<rect x="75" y="225" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="150" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">VACUUM</text>
+<rect x="277" y="225" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="362" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">auto_vacuum</text>
+<rect x="100" y="320" width="312" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="114" y="338" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">fuera del arranque</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">integridad en segundo plano</text>
+</svg>

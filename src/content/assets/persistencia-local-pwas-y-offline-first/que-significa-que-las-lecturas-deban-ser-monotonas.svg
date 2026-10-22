@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa que las lecturas deban ser monótonas?">
+<title>¿Qué significa que las lecturas deban ser monótonas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="440.57" cy="48.13" rx="90.13" ry="90.13" fill="hsl(320 90% 58% / 0.226)"/>
+<ellipse cx="184.21" cy="122.05" rx="81.28" ry="81.28" fill="hsl(320 90% 58% / 0.155)"/>
+<ellipse cx="26.12" cy="154.52" rx="89.91" ry="89.91" fill="hsl(320 90% 58% / 0.224)"/>
+<ellipse cx="25.78" cy="343.94" rx="186.75" ry="186.75" fill="hsl(320 90% 58% / 0.227)"/>
+<rect x="80" y="129" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="140" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">rev 5</text>
+<rect x="312" y="129" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="372" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">rev 3</text>
+<line x1="206" y1="195" x2="309.2" y2="195" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="320,195 309.87,201.43 309.87,188.57" fill="#ff007f"/>
+<line x1="330" y1="175" x2="346" y2="215" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<line x1="346" y1="175" x2="330" y2="215" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<text x="372" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">se ignora</text>
+<rect x="161" y="310" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">nunca retrocede</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">cursores monótonos</text>
+</svg>

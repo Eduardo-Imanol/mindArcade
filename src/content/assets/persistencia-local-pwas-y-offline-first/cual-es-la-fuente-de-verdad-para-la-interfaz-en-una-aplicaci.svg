@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la fuente de verdad para la interfaz en una aplicación offline-first?">
+<title>¿Cuál es la fuente de verdad para la interfaz en una aplicación offline-first?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="256.16" cy="160.65" rx="190.18" ry="190.18" fill="hsl(168 90% 58% / 0.18)"/>
+<ellipse cx="265.85" cy="487.28" rx="184.54" ry="184.54" fill="hsl(168 90% 58% / 0.181)"/>
+<ellipse cx="144.94" cy="68.46" rx="143.84" ry="143.84" fill="hsl(168 90% 58% / 0.177)"/>
+<ellipse cx="253.06" cy="508.07" rx="129.27" ry="129.27" fill="hsl(168 90% 58% / 0.207)"/>
+<rect x="140" y="90" width="232" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="154" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">UI</text>
+<line x1="256" y1="186" x2="256" y2="239.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,250 249.57,239.87 262.43,239.87" fill="#00ffcc"/>
+<rect x="120" y="255" width="272" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="134" y="273" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">base local</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lee y escribe aquí</text>
+<line x1="392" y1="305" x2="449.2" y2="305" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="460,305 449.87,311.43 449.87,298.57" fill="#8a7fb5"/>
+<rect x="385" y="240" width="90" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="430" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">red</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">nadie espera a la red</text>
+</svg>

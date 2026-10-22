@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué implica que la expulsión del almacenamiento sea de todo o nada?">
+<title>¿Qué implica que la expulsión del almacenamiento sea de todo o nada?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="379.88" cy="89.49" rx="111.33" ry="111.33" fill="hsl(120 90% 58% / 0.204)"/>
+<ellipse cx="82.52" cy="189.11" rx="117.32" ry="117.32" fill="hsl(120 90% 58% / 0.218)"/>
+<ellipse cx="426.05" cy="417.49" rx="137.19" ry="137.19" fill="hsl(120 90% 58% / 0.2)"/>
+<ellipse cx="485.89" cy="434.09" rx="137.81" ry="137.81" fill="hsl(120 90% 58% / 0.154)"/>
+<rect x="60" y="120" width="130" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">IDB</text>
+<rect x="191" y="120" width="130" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="205" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">Cache</text>
+<rect x="322" y="120" width="130" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="336" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">OPFS</text>
+<line x1="256" y1="240" x2="256" y2="289.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#ffcc00"/>
+<rect x="120" y="305" width="272" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="134" y="323" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">todo o nada</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">arrancar desde cero</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">y avisar de lo perdido</text>
+</svg>

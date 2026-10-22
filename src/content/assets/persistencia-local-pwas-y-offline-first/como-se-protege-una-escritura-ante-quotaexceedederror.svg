@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se protege una escritura ante QuotaExceededError?">
+<title>¿Cómo se protege una escritura ante QuotaExceededError?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="52.39" cy="420.79" rx="79.17" ry="79.17" fill="hsl(120 90% 58% / 0.228)"/>
+<ellipse cx="245.59" cy="344.41" rx="200.27" ry="200.27" fill="hsl(120 90% 58% / 0.199)"/>
+<ellipse cx="204.47" cy="174.56" rx="113.92" ry="113.92" fill="hsl(120 90% 58% / 0.191)"/>
+<ellipse cx="306.67" cy="143.85" rx="189.33" ry="189.33" fill="hsl(120 90% 58% / 0.185)"/>
+<rect x="166" y="82" width="180" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">escribir()</text>
+<line x1="256" y1="142" x2="256" y2="174.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,185 249.57,174.87 262.43,174.87" fill="#00ffcc"/>
+<rect x="131" y="195" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">QuotaExceededError</text>
+<line x1="256" y1="245" x2="188.75" y2="293.67" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="180,300 184.44,288.85 191.98,299.27" fill="#ff007f"/>
+<line x1="330" y1="245" x2="372.74" y2="292.01" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="380,300 368.43,296.83 377.94,288.18" fill="#39ff14"/>
+<rect x="90" y="305" width="180" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="104" y="323" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">evict LRU</text>
+<rect x="300" y="305" width="160" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="314" y="323" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">reintenta</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">la cola de cambios no se toca</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza una transacción de escritura en Go con el patrón del repositorio?">
+<title>¿Qué garantiza una transacción de escritura en Go con el patrón del repositorio?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="487.46" cy="151.79" rx="107.3" ry="107.3" fill="hsl(45 90% 58% / 0.211)"/>
+<ellipse cx="319.63" cy="49.21" rx="112.3" ry="112.3" fill="hsl(45 90% 58% / 0.166)"/>
+<ellipse cx="346.56" cy="406.91" rx="193.95" ry="193.95" fill="hsl(45 90% 58% / 0.204)"/>
+<ellipse cx="286.26" cy="396.7" rx="144.08" ry="144.08" fill="hsl(45 90% 58% / 0.178)"/>
+<rect x="70" y="90" width="372" height="260" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="108" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">transacción</text>
+<rect x="100" y="149" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="170" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">entidad</text>
+<rect x="277" y="149" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="342" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">líneas</text>
+<rect x="100" y="239" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="170" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">outbox</text>
+<rect x="272" y="239" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="342" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">idempot</text>
+<rect x="166" y="380" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">todo o nada</text>
+</svg>

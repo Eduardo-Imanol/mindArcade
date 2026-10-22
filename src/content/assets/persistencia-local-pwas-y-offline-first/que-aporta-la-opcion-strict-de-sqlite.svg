@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué aporta la opción STRICT de SQLite?">
+<title>¿Qué aporta la opción STRICT de SQLite?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="49.09" cy="158.09" rx="101.67" ry="101.67" fill="hsl(120 90% 58% / 0.161)"/>
+<ellipse cx="9.88" cy="282.66" rx="165.66" ry="165.66" fill="hsl(120 90% 58% / 0.18)"/>
+<ellipse cx="88.55" cy="434.56" rx="125.65" ry="125.65" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="95.33" cy="48.66" rx="101.36" ry="101.36" fill="hsl(120 90% 58% / 0.201)"/>
+<rect x="60" y="100" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">STRICT</text>
+<text x="150" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">tipos</text>
+<rect x="85" y="220" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="150" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">INTEGER</text>
+<rect x="272" y="100" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="286" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">CHECK</text>
+<text x="362" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">invariantes</text>
+<rect x="282" y="220" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#00ffcc">dirty IN (0,1)</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">sin tipado flexible</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">la base rechaza el error</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre paginar por desplazamiento y paginar por claves?">
+<title>¿Qué diferencia hay entre paginar por desplazamiento y paginar por claves?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="215.98" cy="223.08" rx="202.32" ry="202.32" fill="hsl(320 90% 58% / 0.225)"/>
+<ellipse cx="97.18" cy="137.76" rx="179.42" ry="179.42" fill="hsl(320 90% 58% / 0.166)"/>
+<ellipse cx="455.33" cy="256.26" rx="108.95" ry="108.95" fill="hsl(320 90% 58% / 0.17)"/>
+<ellipse cx="239.22" cy="71.58" rx="193.9" ry="193.9" fill="hsl(320 90% 58% / 0.239)"/>
+<rect x="50" y="110" width="190" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="64" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">offset</text>
+<rect x="90" y="170" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="145" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">O(n)</text>
+<text x="145" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">avanza n</text>
+<text x="145" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">posiciones</text>
+<rect x="272" y="110" width="190" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">keyset</text>
+<rect x="302" y="170" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="367" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">O(log n)</text>
+<text x="367" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">reanuda desde</text>
+<text x="367" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">la última clave</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">clave vista, no offset</text>
+</svg>

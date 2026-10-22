@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué NO resuelve Dexie.js?">
+<title>¿Qué NO resuelve Dexie.js?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="11.05" cy="419.92" rx="102.74" ry="102.74" fill="hsl(168 90% 58% / 0.165)"/>
+<ellipse cx="158.26" cy="35.99" rx="83.77" ry="83.77" fill="hsl(168 90% 58% / 0.212)"/>
+<ellipse cx="290.62" cy="480.69" rx="124.98" ry="124.98" fill="hsl(168 90% 58% / 0.165)"/>
+<ellipse cx="8.88" cy="107.8" rx="74.59" ry="74.59" fill="hsl(168 90% 58% / 0.195)"/>
+<rect x="60" y="100" width="392" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">Dexie</text>
+<rect x="171" y="240" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">sin JOIN</text>
+<rect x="25" y="310" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">sin agregaciones</text>
+<rect x="277" y="310" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="382" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">sin optimizador</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">tú eliges el índice</text>
+</svg>

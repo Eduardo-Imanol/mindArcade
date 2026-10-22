@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿En qué versión está Dexie.js y qué complementos oficiales tiene?">
+<title>¿En qué versión está Dexie.js y qué complementos oficiales tiene?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="175.2" cy="193.3" rx="194.2" ry="194.2" fill="hsl(320 90% 58% / 0.167)"/>
+<ellipse cx="176.54" cy="369.77" rx="172.28" ry="172.28" fill="hsl(320 90% 58% / 0.177)"/>
+<ellipse cx="170.05" cy="82.87" rx="161.42" ry="161.42" fill="hsl(320 90% 58% / 0.144)"/>
+<ellipse cx="248.08" cy="482.05" rx="96.51" ry="96.51" fill="hsl(320 90% 58% / 0.21)"/>
+<rect x="161" y="83" width="190" height="54" rx="27" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">Dexie 4.x</text>
+<rect x="50" y="229" width="160" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">react-hooks</text>
+<rect x="317" y="229" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="382" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">y-dexie</text>
+<rect x="45" y="319" width="170" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cloud-addon</text>
+<rect x="307" y="319" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="382" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">y-dexie +</text>
+<text x="256" y="60" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">serie 4.4.x</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">complementos oficiales</text>
+<ellipse cx="230" cy="460" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="260" cy="460" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="290" cy="460" rx="4" ry="4" fill="#00ffcc"/>
+</svg>

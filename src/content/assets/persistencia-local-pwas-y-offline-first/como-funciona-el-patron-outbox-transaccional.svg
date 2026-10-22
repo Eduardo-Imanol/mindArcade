@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona el patrón outbox transaccional?">
+<title>¿Cómo funciona el patrón outbox transaccional?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="262.82" cy="475.34" rx="88.7" ry="88.7" fill="hsl(320 90% 58% / 0.222)"/>
+<ellipse cx="82.98" cy="70.49" rx="105.46" ry="105.46" fill="hsl(320 90% 58% / 0.223)"/>
+<ellipse cx="300.83" cy="178.91" rx="163.3" ry="163.3" fill="hsl(320 90% 58% / 0.191)"/>
+<ellipse cx="175.69" cy="208.6" rx="122.26" ry="122.26" fill="hsl(320 90% 58% / 0.169)"/>
+<rect x="90" y="120" width="332" height="260" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="104" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">transacción</text>
+<rect x="115" y="199" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="190" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">entidad</text>
+<rect x="255" y="199" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="330" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">outbox</text>
+<line x1="256" y1="300" x2="256" y2="329.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,340 249.57,329.87 262.43,329.87" fill="#00ffcc"/>
+<rect x="171" y="320" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">todo o nada</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">nunca se pierde ni se duplica</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué datos del navegador quedan expuestos al JavaScript del propio origen?">
+<title>¿Qué datos del navegador quedan expuestos al JavaScript del propio origen?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="229.88" cy="109.27" rx="129.28" ry="129.28" fill="hsl(265 90% 58% / 0.198)"/>
+<ellipse cx="436.65" cy="164.15" rx="153.99" ry="153.99" fill="hsl(265 90% 58% / 0.224)"/>
+<ellipse cx="168.93" cy="437.75" rx="186.51" ry="186.51" fill="hsl(265 90% 58% / 0.191)"/>
+<ellipse cx="152.39" cy="394" rx="117.59" ry="117.59" fill="hsl(265 90% 58% / 0.168)"/>
+<rect x="60" y="130" width="180" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">JS</text>
+<line x1="246" y1="190" x2="309.2" y2="190" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="320,190 309.87,196.43 309.87,183.57" fill="#ff007f"/>
+<rect x="326" y="130" width="130" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="340" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">storage</text>
+<rect x="176" y="300" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">sin cifrar</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">el usuario puede borrarlo</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">solo lo protege el disco</text>
+</svg>

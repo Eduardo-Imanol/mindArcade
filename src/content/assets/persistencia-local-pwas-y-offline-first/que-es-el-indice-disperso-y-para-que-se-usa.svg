@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el índice disperso y para qué se usa?">
+<title>¿Qué es el índice disperso y para qué se usa?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="12.36" cy="174.66" rx="202.71" ry="202.71" fill="hsl(320 90% 58% / 0.227)"/>
+<ellipse cx="352.15" cy="42.43" rx="190" ry="190" fill="hsl(320 90% 58% / 0.182)"/>
+<ellipse cx="58.2" cy="240.59" rx="157.73" ry="157.73" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="66.65" cy="72.29" rx="151.52" ry="151.52" fill="hsl(320 90% 58% / 0.162)"/>
+<rect x="60" y="120" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="68" y1="128" x2="252" y2="128" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="144" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">fila A</text>
+<rect x="60" y="168" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#8a7fb5" stroke-width="2"/>
+<line x1="68" y1="176" x2="252" y2="176" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="192" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">fila B</text>
+<rect x="60" y="216" width="200" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#8a7fb5" stroke-width="2"/>
+<line x1="68" y1="224" x2="252" y2="224" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">fila C</text>
+<rect x="225" y="160" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="300" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">dirty: 1</text>
+<line x1="266" y1="180" x2="230.8" y2="180" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="220,180 230.13,173.57 230.13,186.43" fill="#ff007f"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">solo las pendientes</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">índice diminuto</text>
+<rect x="131" y="380" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">se borra al sincronizar</text>
+</svg>
