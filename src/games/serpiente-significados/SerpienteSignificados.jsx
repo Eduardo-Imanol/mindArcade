@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import CardImage from '../../components/CardImage.jsx';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { createEngine } from '../../core/engine/engine.js';
@@ -401,91 +402,90 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
 
   if (state.phase === 'setup') {
     return (
-      <main className="sepect-bg serpiente-page" style={PAGE}>
-        <div className="game-stage">
-          <h1 className="neon serpiente-title">Serpiente de significados</h1>
-          <p>
-            Dirige la serpiente y come la manzana con el significado de la pregunta. Cada
-            manzana numerada tiene su significado en la leyenda.
-          </p>
-
-          <div className="serpiente-setup">
-            <fieldset className="serpiente-setup-fieldset">
-              <legend>Modo</legend>
-              <div className="serpiente-choice-row" role="group" aria-label="Modo">
-                {MODES.map((value) => (
-                  <button
-                    key={value}
-                    className={`serpiente-choice${mode === value ? ' is-selected' : ''}`}
-                    type="button"
-                    aria-pressed={mode === value}
-                    onClick={() => setMode(value)}
-                  >
-                    {MODE_LABELS[value]}
-                  </button>
-                ))}
-              </div>
-              <p className="serpiente-note">{MODE_HELP[mode]}</p>
-            </fieldset>
-
-            <fieldset className="serpiente-setup-fieldset">
-              <legend>Dificultad</legend>
-              <div className="serpiente-choice-row" role="group" aria-label="Dificultad">
-                {DIFFICULTIES.map((value) => (
-                  <button
-                    key={value}
-                    className={`serpiente-choice${difficulty === value ? ' is-selected' : ''}`}
-                    type="button"
-                    aria-pressed={difficulty === value}
-                    onClick={() => setDifficulty(value)}
-                  >
-                    {DIFFICULTY_LABELS[value]}
-                  </button>
-                ))}
-              </div>
-              <p className="serpiente-note">{DIFFICULTY_HELP[difficulty]}</p>
-            </fieldset>
-
-            {mode === 'rounds' ? (
-              <div className="serpiente-setup-row">
-                <label htmlFor="serpiente-rounds">Rondas</label>
-                <select
-                  id="serpiente-rounds"
-                  value={rounds}
-                  onChange={(event) => setRounds(Number(event.target.value))}
-                >
-                  {ROUND_OPTIONS.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            ) : (
-              <p className="serpiente-note">
-                La partida sigue hasta comer todo el mazo o perder las 5 vidas.
-              </p>
-            )}
-
-            <div className="serpiente-setup-row">
-              <button className="btn-neon" type="button" onClick={handleStart}>
-                Empezar
-              </button>
-            </div>
-          </div>
-
-          <p className="serpiente-note">
+      <GameSetup
+        pageClassName="serpiente-page"
+        title="Serpiente de significados"
+        titleClassName="serpiente-title"
+        lead="Dirige la serpiente y come la manzana con el significado de la pregunta. Cada manzana numerada tiene su significado en la leyenda."
+        note={
+          <>
             {MODE_LABELS[mode]} · {available} cartas disponibles · tablero {previewSize}×
             {previewSize} · {previewStep} ms por paso.
-          </p>
-          <div className="serpiente-actions">
+          </>
+        }
+        start={
+          <button className="btn-neon" type="button" onClick={handleStart}>
+            Empezar
+          </button>
+        }
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={handleExit}>
+            <button className="btn-neon game-setup__exit" type="button" onClick={handleExit}>
               Salir
             </button>
-          </div>
+          </>
+        }
+      >
+        <div className="serpiente-setup">
+          <fieldset className="serpiente-setup-fieldset">
+            <legend>Modo</legend>
+            <div className="serpiente-choice-row" role="group" aria-label="Modo">
+              {MODES.map((value) => (
+                <button
+                  key={value}
+                  className={`serpiente-choice${mode === value ? ' is-selected' : ''}`}
+                  type="button"
+                  aria-pressed={mode === value}
+                  onClick={() => setMode(value)}
+                >
+                  {MODE_LABELS[value]}
+                </button>
+              ))}
+            </div>
+            <p className="serpiente-note">{MODE_HELP[mode]}</p>
+          </fieldset>
+
+          <fieldset className="serpiente-setup-fieldset">
+            <legend>Dificultad</legend>
+            <div className="serpiente-choice-row" role="group" aria-label="Dificultad">
+              {DIFFICULTIES.map((value) => (
+                <button
+                  key={value}
+                  className={`serpiente-choice${difficulty === value ? ' is-selected' : ''}`}
+                  type="button"
+                  aria-pressed={difficulty === value}
+                  onClick={() => setDifficulty(value)}
+                >
+                  {DIFFICULTY_LABELS[value]}
+                </button>
+              ))}
+            </div>
+            <p className="serpiente-note">{DIFFICULTY_HELP[difficulty]}</p>
+          </fieldset>
+
+          {mode === 'rounds' ? (
+            <div className="serpiente-setup-row">
+              <label htmlFor="serpiente-rounds">Rondas</label>
+              <select
+                id="serpiente-rounds"
+                value={rounds}
+                onChange={(event) => setRounds(Number(event.target.value))}
+              >
+                {ROUND_OPTIONS.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : (
+            <p className="serpiente-note">
+              La partida sigue hasta comer todo el mazo o perder las 5 vidas.
+            </p>
+          )}
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

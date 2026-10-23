@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import CardImage from '../../components/CardImage.jsx';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import {
@@ -119,36 +120,43 @@ export default function Intruso({ groups = [], anchorTopicId, onGrade, onExit } 
 
   if (state.phase === 'setup') {
     return (
-      <main className="sepect-bg intruso-page" style={PAGE}>
-        <div className="game-stage">
-          <h1 className="neon game-app-title">El intruso</h1>
-          <p>
-            Tres significados son del tema actual; uno es de otro tema. Toca el que no
-            pertenece. Tienes un solo intento por ronda.
-          </p>
-          <div className="intruso-setup">
-            <label htmlFor="intruso-rounds">Rondas</label>
-            <select
-              id="intruso-rounds"
-              value={rounds}
-              onChange={(event) => setRounds(Number(event.target.value))}
-            >
-              {ROUND_OPTIONS.map((option) => (
-                <option key={option} value={option}>{option}</option>
-              ))}
-            </select>
-            <button className="btn-neon" type="button" onClick={handleStart}>Empezar</button>
-          </div>
-          <p className="intruso-note">
+      <GameSetup
+        pageClassName="intruso-page"
+        title="El intruso"
+        lead="Tres significados son del tema actual; uno es de otro tema. Toca el que no pertenece. Tienes un solo intento por ronda."
+        note={
+          <>
             Tema ancla: <strong>{anchor.title}</strong> · {others.length} tema
             {others.length === 1 ? '' : 's'} disponible{others.length === 1 ? '' : 's'} como intruso.
-          </p>
-          <div className="intruso-actions">
+          </>
+        }
+        start={
+          <button className="btn-neon" type="button" onClick={handleStart}>
+            Empezar
+          </button>
+        }
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={onExit}>Salir</button>
-          </div>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
+              Salir
+            </button>
+          </>
+        }
+      >
+        <div className="intruso-setup">
+          <label htmlFor="intruso-rounds">Rondas</label>
+          <select
+            id="intruso-rounds"
+            value={rounds}
+            onChange={(event) => setRounds(Number(event.target.value))}
+          >
+            {ROUND_OPTIONS.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

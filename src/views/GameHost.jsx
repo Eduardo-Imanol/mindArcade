@@ -4,6 +4,7 @@ import { getGame } from '../games/registry.js';
 import { AVAILABILITY_REASONS, availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
 import { applyGrade, loadSrs, saveSrs } from '../core/repetition/srs.js';
+import { buildFlashcardDecks } from '../core/repetition/flashcardDecks.js';
 import { selectStudyCards } from '../core/repetition/selectStudyCards.js';
 import { GRADE_XP } from '../core/metrics/metrics.js';
 import { awardXP, recordStreak } from '../core/storage/xp.js';
@@ -30,6 +31,7 @@ export default function GameHost({ topicId, gameId }) {
   const profileRef = useRef(null);
   const [Component, setComponent] = useState(null);
   const [deck, setDeck] = useState(null);
+  const [decks, setDecks] = useState(null);
   const [groups, setGroups] = useState(null);
   const [selectCards, setSelectCards] = useState(null);
 
@@ -65,9 +67,11 @@ export default function GameHost({ topicId, gameId }) {
           title: entry.title,
           cards: eligibleFor(entry),
         }));
+      const topicSrs = liveSrs && typeof liveSrs === 'object' ? liveSrs[topic.id] : null;
       setDeck(
-        selectStudyCards(cards, liveSrs[topic.id] || {}, { count: cards.length, now })
+        selectStudyCards(cards, topicSrs || {}, { count: cards.length, now })
       );
+      setDecks(buildFlashcardDecks(cards, topicSrs || {}));
       setGroups(nextGroups);
       setSelectCards(() => (count) =>
         selectStudyCards(cards, (srsRef.current || {})[topic.id] || {}, { count, now })
@@ -123,10 +127,23 @@ export default function GameHost({ topicId, gameId }) {
     );
   }
 
-  if (!Component || deck === null || groups === null || !selectCards) {
+  if (!Component || deck === null || decks === null || groups === null || !selectCards) {
     return (
-      <main className="sepect-bg topic-page error-page">
-        <p role="status">Cargando juego…</p>
+      <main className="sepect-bg topic-page game-loading-page">
+        <div className="game-loading" role="status" aria-live="polite">
+          <div className="game-loading__orbit" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+          <p className="game-loading__eyebrow">Un momento</p>
+          <h1 className="neon game-app-title">Preparando partida</h1>
+          <p className="game-loading__topic">{topic.title}</p>
+          <p className="game-loading__text">Cargando juego…</p>
+          <div className="game-loading__bar" aria-hidden="true">
+            <span />
+          </div>
+        </div>
       </main>
     );
   }
@@ -166,6 +183,7 @@ export default function GameHost({ topicId, gameId }) {
   return (
     <Component
       deck={deck}
+      decks={decks}
       groups={groups}
       anchorTopicId={topic.id}
       selectCards={selectCards}

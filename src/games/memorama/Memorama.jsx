@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CardImage from '../../components/CardImage.jsx';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak } from '../../core/audio/tts.js';
 import { DIFFICULTIES, createState, pendingGrades, reduce } from './memorama.logic.js';
@@ -59,25 +60,28 @@ export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {
 
   if (!state) {
     return (
-      <main className="sepect-bg memorama-page" style={PAGE}>
-        <div className="game-stage">
-          <h1 className="neon game-app-title">Memorama</h1>
-          <p>Elige la dificultad: empareja cada término con su significado.</p>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {DIFFICULTIES.map((option) => (
-              <button key={option.id} className="btn-neon" type="button" onClick={() => choose(option)}>
-                {option.label} · {Math.min(option.pairs, deck.length)} parejas
-              </button>
-            ))}
-          </div>
-          <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
+      <GameSetup
+        pageClassName="memorama-page"
+        title="Memorama"
+        lead="Elige la dificultad: empareja cada término con su significado."
+        note="Cada dificultad ajusta cuántas parejas se reparten en el tablero."
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={onExit}>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
               Salir
             </button>
-          </div>
+          </>
+        }
+      >
+        <div className="memorama-setup">
+          {DIFFICULTIES.map((option) => (
+            <button key={option.id} className="btn-neon" type="button" onClick={() => choose(option)}>
+              {`${option.label} · ${Math.min(option.pairs, deck.length)} parejas`}
+            </button>
+          ))}
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CardImage from '../../components/CardImage.jsx';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { ALARM_MISTAKES, renderHangman } from './hangman-art.mjs';
@@ -99,32 +100,38 @@ export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {
 
   if (state.phase === 'setup') {
     return (
-      <main className="sepect-bg ahorcado-page" style={PAGE}>
-        <div className="game-stage">
-          <h1 className="neon game-app-title">Ahorcado</h1>
-          <p>Adivina el término letra a letra usando su significado como pista.</p>
-          <div className="ahorcado-setup">
-            <label htmlFor="ahorcado-rounds">Rondas</label>
-            <select
-              id="ahorcado-rounds"
-              value={rounds}
-              onChange={(event) => setRounds(Number(event.target.value))}
-            >
-              {ROUND_OPTIONS.map((option) => (
-                <option key={option} value={option}>{option}</option>
-              ))}
-            </select>
-            <button className="btn-neon" type="button" onClick={handleStart}>Empezar</button>
-          </div>
-          <p className="ahorcado-note">
-            {Math.min(rounds, deck.length)} rondas disponibles con las cartas de este tema.
-          </p>
-          <div className="ahorcado-actions">
+      <GameSetup
+        pageClassName="ahorcado-page"
+        title="Ahorcado"
+        lead="Adivina el término letra a letra usando su significado como pista."
+        note={`${Math.min(rounds, deck.length)} rondas disponibles con las cartas de este tema.`}
+        start={
+          <button className="btn-neon" type="button" onClick={handleStart}>
+            Empezar
+          </button>
+        }
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={onExit}>Salir</button>
-          </div>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
+              Salir
+            </button>
+          </>
+        }
+      >
+        <div className="ahorcado-setup">
+          <label htmlFor="ahorcado-rounds">Rondas</label>
+          <select
+            id="ahorcado-rounds"
+            value={rounds}
+            onChange={(event) => setRounds(Number(event.target.value))}
+          >
+            {ROUND_OPTIONS.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

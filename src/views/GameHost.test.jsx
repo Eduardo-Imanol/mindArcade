@@ -254,6 +254,8 @@ describe('GameHost wiring', () => {
     vi.spyOn(Math, 'random').mockReturnValue(0.999999);
     const { topic } = saveCustomTopic({ title: 'Tema GameHost', md: FIXTURE_A });
     const { container, unmount } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
+    await waitFor(() => findButton(container, 'Empezar mazo'));
+    click(findButton(container, 'Empezar mazo'));
     await waitFor(() => container.textContent.includes('Carta 1 de 3'));
 
     click(container.querySelector('.card-neon'));
@@ -278,7 +280,9 @@ describe('GameHost wiring', () => {
     expect(loadSrs()).toEqual(srs);
 
     const reloaded = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
-    await waitFor(() => reloaded.container.textContent.includes('Carta 1 de 3'));
+    await waitFor(() => findButton(reloaded.container, 'Reanudar mazo'));
+    click(findButton(reloaded.container, 'Reanudar mazo'));
+    await waitFor(() => reloaded.container.textContent.includes('Carta 1 de'));
 
     click(findButton(reloaded.container, 'Salir'));
     expect(window.location.hash).toBe(`#/tema/${topic.id}`);
@@ -301,6 +305,8 @@ describe('GameHost wiring', () => {
 - Q: ccc | A: tres | E: easy`;
     const { topic } = saveCustomTopic({ title: 'Tema XP', md });
     const { container } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
+    await waitFor(() => findButton(container, 'Empezar mazo'));
+    click(findButton(container, 'Empezar mazo'));
     await waitFor(() => container.textContent.includes('Carta 1 de 3'));
 
     click(container.querySelector('.card-neon'));
@@ -327,6 +333,8 @@ describe('GameHost wiring', () => {
       images: { dog: { kind: 'emoji', value: '🦴' } },
     });
     const { container } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
+    await waitFor(() => findButton(container, 'Empezar mazo'));
+    click(findButton(container, 'Empezar mazo'));
     await waitFor(() => container.textContent.includes('Carta 1 de 2'));
     expect(container.querySelector('span[role="img"]').textContent).toBe('🦴');
   });
@@ -1289,25 +1297,20 @@ describe('GameHost wiring', () => {
     );
     vi.spyOn(Math, 'random').mockReturnValue(0.999999);
 
-    const { container, unmount } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
-    await waitFor(() => container.textContent.includes('Carta 1 de 3'));
-    expect(container.textContent).not.toContain('Carta 1 de 4');
-
-    for (let round = 0; round < 3; round += 1) {
-      click(container.querySelector('.card-neon'));
-      click(findButton(container, 'Fácil'));
-    }
-
-    const graded = loadSrs()[topic.id];
-    expect(graded.aaa.reps).toBe(4);
-    expect(graded.bbb.reps).toBe(5);
-    expect(graded.ddd.reps).toBe(1);
-    expect(graded.ccc).toMatchObject({ reps: 3, nextReview: now + 60_000 });
+    const { container, unmount } = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
+    await waitFor(() => findButton(container, 'Empezar'));
+    startAhorcado(container, 3);
+    click(findButton(container, 'Salir'));
 
     const profile = createStore().load();
+    const selected = profile.history.map((entry) => entry.cardId);
     expect(profile.history).toHaveLength(3);
-    expect(profile.history.every((entry) => entry.xp === 10)).toBe(true);
-    expect(profile.xp).toBe(30);
+    expect(new Set(selected)).toEqual(new Set(['aaa', 'bbb', 'ddd']));
+    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+
+    const graded = loadSrs()[topic.id];
+    expect(graded.ccc).toMatchObject({ reps: 3, nextReview: now + 60_000 });
+    for (const cardId of selected) expect(graded[cardId].reps).toBe(0);
     unmount();
   });
 

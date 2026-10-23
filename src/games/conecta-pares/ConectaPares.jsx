@@ -6,6 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import {
@@ -278,36 +279,38 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
       (_, index) => MIN_PAIRS + index
     );
     return (
-      <main className="sepect-bg conecta-page topic-page">
-        <div className="game-stage">
-          <h1 className="neon game-app-title">Conecta pregunta–significado</h1>
-          <p>Une cada pregunta con su significado tocando ambas columnas.</p>
-          <div className="conecta-setup">
-            <label htmlFor="conecta-pairs">Pares</label>
-            <select
-              id="conecta-pairs"
-              value={Math.min(requested, Math.min(MAX_PAIRS, available))}
-              onChange={(event) => setRequested(Number(event.target.value))}
-            >
-              {pairOptions.map((option) => (
-                <option key={option} value={option}>{option}</option>
-              ))}
-            </select>
-            <button className="btn-neon" type="button" onClick={handleStart}>
-              Empezar
-            </button>
-          </div>
-          <p className="conecta-note">
-            {available} pares únicos disponibles en este tema.
-          </p>
-          <div className="conecta-actions">
+      <GameSetup
+        pageClassName="conecta-page topic-page"
+        title="Conecta pregunta–significado"
+        lead="Une cada pregunta con su significado tocando ambas columnas."
+        note={`${available} pares únicos disponibles en este tema.`}
+        start={
+          <button className="btn-neon" type="button" onClick={handleStart}>
+            Empezar
+          </button>
+        }
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={handleExit}>
+            <button className="btn-neon game-setup__exit" type="button" onClick={handleExit}>
               Salir
             </button>
-          </div>
+          </>
+        }
+      >
+        <div className="conecta-setup">
+          <label htmlFor="conecta-pairs">Pares</label>
+          <select
+            id="conecta-pairs"
+            value={Math.min(requested, Math.min(MAX_PAIRS, available))}
+            onChange={(event) => setRequested(Number(event.target.value))}
+          >
+            {pairOptions.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

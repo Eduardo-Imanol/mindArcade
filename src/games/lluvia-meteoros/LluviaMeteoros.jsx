@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import CardImage from '../../components/CardImage.jsx';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { createEngine } from '../../core/engine/engine.js';
@@ -441,76 +442,81 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
 
   if (state.phase === 'setup') {
     return (
-      <main className="sepect-bg lluvia-page" style={PAGE}>
-        <div className="game-stage">
-          <h1 className="neon game-app-title">Lluvia de meteoros</h1>
-          <p>
-            Cada meteoro trae el concepto de una carta. Elige su significado antes de que
-            impacte. Un solo intento por meteoro.
-          </p>
-
-          <div className="lluvia-setup">
-            <fieldset className="lluvia-setup-fieldset">
-              <legend>Dificultad</legend>
-              <div className="lluvia-choice-row" role="group" aria-label="Dificultad">
-                {DIFFICULTIES.map((value) => (
-                  <button
-                    key={value}
-                    className={`lluvia-choice${difficulty === value ? ' is-selected' : ''}`}
-                    type="button"
-                    aria-pressed={difficulty === value}
-                    onClick={() => setDifficulty(value)}
-                  >
-                    {DIFFICULTY_LABELS[value]}
-                  </button>
-                ))}
-              </div>
-              <p className="lluvia-note">{DIFFICULTY_HELP[difficulty]}</p>
-            </fieldset>
-
-            <fieldset className="lluvia-setup-fieldset">
-              <legend>Ritmo</legend>
-              <div className="lluvia-choice-row" role="group" aria-label="Ritmo">
-                {RHYTHMS.map((value) => (
-                  <button
-                    key={value}
-                    className={`lluvia-choice${rhythm === value ? ' is-selected' : ''}`}
-                    type="button"
-                    aria-pressed={rhythm === value}
-                    onClick={() => setRhythm(value)}
-                  >
-                    {RHYTHM_LABELS[value]}
-                  </button>
-                ))}
-              </div>
-              <p className="lluvia-note">{RHYTHM_HELP[rhythm]}</p>
-            </fieldset>
-
-            <div className="lluvia-setup-row">
-              <label htmlFor="lluvia-rounds">Rondas</label>
-              <select
-                id="lluvia-rounds"
-                value={rounds}
-                onChange={(event) => setRounds(Number(event.target.value))}
-              >
-                {ROUND_OPTIONS.map((option) => (
-                  <option key={option} value={option}>{option}</option>
-                ))}
-              </select>
-              <button className="btn-neon" type="button" onClick={handleStart}>Empezar</button>
-            </div>
-          </div>
-
-          <p className="lluvia-note">
+      <GameSetup
+        pageClassName="lluvia-page"
+        title="Lluvia de meteoros"
+        lead="Cada meteoro trae el concepto de una carta. Elige su significado antes de que impacte. Un solo intento por meteoro."
+        note={
+          <>
             {Math.min(rounds, deckList.length)} meteoros disponibles · mínimo 6 cartas y 3
             significados distintos.
-          </p>
-          <div className="lluvia-actions">
+          </>
+        }
+        start={
+          <button className="btn-neon" type="button" onClick={handleStart}>
+            Empezar
+          </button>
+        }
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={onExit}>Salir</button>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
+              Salir
+            </button>
+          </>
+        }
+      >
+        <div className="lluvia-setup">
+          <fieldset className="lluvia-setup-fieldset">
+            <legend>Dificultad</legend>
+            <div className="lluvia-choice-row" role="group" aria-label="Dificultad">
+              {DIFFICULTIES.map((value) => (
+                <button
+                  key={value}
+                  className={`lluvia-choice${difficulty === value ? ' is-selected' : ''}`}
+                  type="button"
+                  aria-pressed={difficulty === value}
+                  onClick={() => setDifficulty(value)}
+                >
+                  {DIFFICULTY_LABELS[value]}
+                </button>
+              ))}
+            </div>
+            <p className="lluvia-note">{DIFFICULTY_HELP[difficulty]}</p>
+          </fieldset>
+
+          <fieldset className="lluvia-setup-fieldset">
+            <legend>Ritmo</legend>
+            <div className="lluvia-choice-row" role="group" aria-label="Ritmo">
+              {RHYTHMS.map((value) => (
+                <button
+                  key={value}
+                  className={`lluvia-choice${rhythm === value ? ' is-selected' : ''}`}
+                  type="button"
+                  aria-pressed={rhythm === value}
+                  onClick={() => setRhythm(value)}
+                >
+                  {RHYTHM_LABELS[value]}
+                </button>
+              ))}
+            </div>
+            <p className="lluvia-note">{RHYTHM_HELP[rhythm]}</p>
+          </fieldset>
+
+          <div className="lluvia-setup-row">
+            <label htmlFor="lluvia-rounds">Rondas</label>
+            <select
+              id="lluvia-rounds"
+              value={rounds}
+              onChange={(event) => setRounds(Number(event.target.value))}
+            >
+              {ROUND_OPTIONS.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
           </div>
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

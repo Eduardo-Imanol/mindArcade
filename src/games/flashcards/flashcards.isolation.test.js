@@ -20,6 +20,7 @@ describe('flashcards isolation', () => {
   it('game receives data via frozen props contract only', () => {
     const source = fs.readFileSync(path.join(DIR, 'Flashcards.jsx'), 'utf8');
     expect(source).toMatch(/deck/);
+    expect(source).toMatch(/decks/);
     expect(source).toMatch(/onGrade/);
     expect(source).toMatch(/onExit/);
     expect(source).not.toMatch(/localStorage|indexedDB|fetch\(/);

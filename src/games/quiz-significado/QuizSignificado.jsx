@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CardImage from '../../components/CardImage.jsx';
+import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import {
@@ -98,32 +99,38 @@ export default function QuizSignificado({ deck = [], selectCards, onGrade, onExi
 
   if (state.phase === 'setup') {
     return (
-      <main className="sepect-bg quiz-page" style={PAGE}>
-        <div className="game-stage">
-          <h1 className="neon game-app-title">Elige el significado</h1>
-          <p>Lee el término y elige su significado entre cuatro opciones. Tienes dos intentos.</p>
-          <div className="quiz-setup">
-            <label htmlFor="quiz-rounds">Rondas</label>
-            <select
-              id="quiz-rounds"
-              value={rounds}
-              onChange={(event) => setRounds(Number(event.target.value))}
-            >
-              {ROUND_OPTIONS.map((option) => (
-                <option key={option} value={option}>{option}</option>
-              ))}
-            </select>
-            <button className="btn-neon" type="button" onClick={handleStart}>Empezar</button>
-          </div>
-          <p className="quiz-note">
-            {Math.min(rounds, deck.length)} preguntas disponibles con las cartas de este tema.
-          </p>
-          <div className="quiz-actions">
+      <GameSetup
+        pageClassName="quiz-page"
+        title="Elige el significado"
+        lead="Lee el término y elige su significado entre cuatro opciones. Tienes dos intentos."
+        note={`${Math.min(rounds, deck.length)} preguntas disponibles con las cartas de este tema.`}
+        start={
+          <button className="btn-neon" type="button" onClick={handleStart}>
+            Empezar
+          </button>
+        }
+        actions={
+          <>
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={onExit}>Salir</button>
-          </div>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
+              Salir
+            </button>
+          </>
+        }
+      >
+        <div className="quiz-setup">
+          <label htmlFor="quiz-rounds">Rondas</label>
+          <select
+            id="quiz-rounds"
+            value={rounds}
+            onChange={(event) => setRounds(Number(event.target.value))}
+          >
+            {ROUND_OPTIONS.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
         </div>
-      </main>
+      </GameSetup>
     );
   }
 

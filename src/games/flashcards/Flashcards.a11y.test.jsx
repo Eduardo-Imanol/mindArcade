@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import Flashcards from './Flashcards.jsx';
-import { click, keydown, mount } from '../../test/render.jsx';
+import { click, keydown, mount, waitFor } from '../../test/render.jsx';
 
 const DECK = [
   { id: 'c1', front: 'dog', back: 'perro', difficulty: 'easy' },
@@ -66,5 +66,68 @@ describe('Flashcards a11y + keyboard', () => {
     expect(code).toMatch(/maxWidth:\s*'100%'/);
     expect(code).toMatch(/game-stage/);
     expect(code).not.toMatch(/width:\s*\d{4,}/);
+  });
+});
+
+
+describe('Flashcards decks (spec-16)', () => {
+  const deck = [
+    { id: 'c1', front: 'uno', back: 'one' },
+    { id: 'c2', front: 'dos', back: 'two' },
+    { id: 'c3', front: 'tres', back: 'three' },
+    { id: 'c4', front: 'cuatro', back: 'four' },
+    { id: 'c5', front: 'cinco', back: 'five' },
+    { id: 'c6', front: 'seis', back: 'six' },
+    { id: 'c7', front: 'siete', back: 'seven' },
+    { id: 'c8', front: 'ocho', back: 'eight' },
+    { id: 'c9', front: 'nueve', back: 'nine' },
+    { id: 'c10', front: 'diez', back: 'ten' },
+    { id: 'c11', front: 'once', back: 'eleven' },
+  ];
+  const decks = [
+    {
+      id: 'deck-1',
+      number: 1,
+      label: '1–10',
+      from: 1,
+      to: 10,
+      cards: deck.slice(0, 10),
+      total: 10,
+      studied: 2,
+      studiedIds: ['c1', 'c2'],
+      pending: 8,
+      complete: false,
+    },
+    {
+      id: 'deck-2',
+      number: 2,
+      label: '11–11',
+      from: 11,
+      to: 11,
+      cards: deck.slice(10, 11),
+      total: 1,
+      studied: 0,
+      studiedIds: [],
+      pending: 1,
+      complete: false,
+    },
+  ];
+
+  it('shows setup with decks and starts a partial session', async () => {
+    const onGrade = vi.fn(() => ({ gained: 10 }));
+    const { container } = mount(<Flashcards decks={decks} deck={deck} onGrade={onGrade} onExit={() => {}} />);
+    expect(container.textContent).toContain('Mazo 1');
+    expect(container.textContent).toContain('Reanudar mazo');
+    click([...container.querySelectorAll('button')].find((b) => b.textContent === 'Reanudar mazo'));
+    await waitFor(() => container.textContent.includes('Mazo 1'));
+    await waitFor(() => container.textContent.includes('Carta 1 de'));
+    expect(container.textContent).not.toContain('Carta 1 de 11');
+  });
+
+  it('can exit to topic from setup', () => {
+    const onExit = vi.fn();
+    const { container } = mount(<Flashcards decks={decks} deck={deck} onGrade={() => ({})} onExit={onExit} />);
+    click([...container.querySelectorAll('button')].find((b) => b.textContent === 'Volver al tema'));
+    expect(onExit).toHaveBeenCalled();
   });
 });
