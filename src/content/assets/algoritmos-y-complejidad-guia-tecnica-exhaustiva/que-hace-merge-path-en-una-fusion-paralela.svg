@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace merge path en una fusión paralela?">
+<title>¿Qué hace merge path en una fusión paralela?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="161.11" cy="495.71" rx="86.84" ry="86.84" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="506.45" cy="27.93" rx="159.59" ry="159.59" fill="hsl(265 90% 58% / 0.208)"/>
+<ellipse cx="356.82" cy="459.26" rx="106.81" ry="106.81" fill="hsl(265 90% 58% / 0.142)"/>
+<ellipse cx="417.55" cy="247.53" rx="102.2" ry="102.2" fill="hsl(265 90% 58% / 0.175)"/>
+<rect x="60" y="170" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">A</text>
+<rect x="272" y="170" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">B</text>
+<line x1="150" y1="315" x2="351.82" y2="243.6" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="362,240 354.59,249.44 350.3,237.32" fill="#39ff14"/>
+<rect x="146" y="320" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">partición diagonal</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">búsqueda binaria del corte</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">fusiona por tramos en paralelo</text>
+</svg>

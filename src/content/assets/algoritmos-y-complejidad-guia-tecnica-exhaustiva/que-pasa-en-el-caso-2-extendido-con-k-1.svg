@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué pasa en el caso 2 extendido con k = −1?">
+<title>¿Qué pasa en el caso 2 extendido con k = −1?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="318.08" cy="51.86" rx="152.31" ry="152.31" fill="hsl(120 90% 58% / 0.173)"/>
+<ellipse cx="99.65" cy="145.41" rx="94.86" ry="94.86" fill="hsl(120 90% 58% / 0.17)"/>
+<ellipse cx="457.06" cy="454.52" rx="101.85" ry="101.85" fill="hsl(120 90% 58% / 0.18)"/>
+<ellipse cx="281.6" cy="409.2" rx="198.38" ry="198.38" fill="hsl(120 90% 58% / 0.221)"/>
+<rect x="146" y="150" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">f = nᵖ / log n</text>
+<line x1="256" y1="210" x2="256" y2="249.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,260 249.57,249.87 262.43,249.87" fill="#00ffcc"/>
+<rect x="131" y="270" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">Θ(nᵖ log log n)</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">el caso 2 con k = −1</text>
+</svg>

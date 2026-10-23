@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un arreglo h-ordenado en Shell sort?">
+<title>¿Qué es un arreglo h-ordenado en Shell sort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="357.05" cy="208.5" rx="183.46" ry="183.46" fill="hsl(320 90% 58% / 0.236)"/>
+<ellipse cx="106.54" cy="463.66" rx="122.53" ry="122.53" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="350.28" cy="399.14" rx="102.77" ry="102.77" fill="hsl(320 90% 58% / 0.22)"/>
+<ellipse cx="380.48" cy="100.79" rx="143.2" ry="143.2" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="100" cy="150" rx="7" ry="7" fill="#00ffcc"/>
+<line x1="108" y1="150" x2="150" y2="150" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="158" cy="150" rx="7" ry="7" fill="#00ffcc"/>
+<line x1="166" y1="150" x2="208" y2="150" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="216" cy="150" rx="7" ry="7" fill="#00ffcc"/>
+<line x1="224" y1="150" x2="266" y2="150" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="274" cy="150" rx="7" ry="7" fill="#00ffcc"/>
+<line x1="282" y1="150" x2="324" y2="150" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="332" cy="150" rx="7" ry="7" fill="#00ffcc"/>
+<line x1="340" y1="150" x2="382" y2="150" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="390" cy="150" rx="7" ry="7" fill="#00ffcc"/>
+<ellipse cx="100" cy="186" rx="7" ry="7" fill="#ff007f"/>
+<line x1="108" y1="186" x2="150" y2="186" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="158" cy="186" rx="7" ry="7" fill="#ff007f"/>
+<line x1="166" y1="186" x2="208" y2="186" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="216" cy="186" rx="7" ry="7" fill="#ff007f"/>
+<line x1="224" y1="186" x2="266" y2="186" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="274" cy="186" rx="7" ry="7" fill="#ff007f"/>
+<line x1="282" y1="186" x2="324" y2="186" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="332" cy="186" rx="7" ry="7" fill="#ff007f"/>
+<line x1="340" y1="186" x2="382" y2="186" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="390" cy="186" rx="7" ry="7" fill="#ff007f"/>
+<ellipse cx="100" cy="222" rx="7" ry="7" fill="#39ff14"/>
+<line x1="108" y1="222" x2="150" y2="222" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="158" cy="222" rx="7" ry="7" fill="#39ff14"/>
+<line x1="166" y1="222" x2="208" y2="222" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="216" cy="222" rx="7" ry="7" fill="#39ff14"/>
+<line x1="224" y1="222" x2="266" y2="222" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="274" cy="222" rx="7" ry="7" fill="#39ff14"/>
+<line x1="282" y1="222" x2="324" y2="222" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="332" cy="222" rx="7" ry="7" fill="#39ff14"/>
+<line x1="340" y1="222" x2="382" y2="222" stroke="#8a7fb5" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="390" cy="222" rx="7" ry="7" fill="#39ff14"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">a[i] ≤ a[i + h]</text>
+<rect x="166" y="325" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="345" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">h-ordenado</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">cada subsecuencia está ordenada</text>
+</svg>

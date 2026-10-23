@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuáles son los riesgos de la mediana de tres como pivote?">
+<title>¿Cuáles son los riesgos de la mediana de tres como pivote?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="283.73" cy="68.65" rx="173.19" ry="173.19" fill="hsl(168 90% 58% / 0.156)"/>
+<ellipse cx="462.88" cy="41.72" rx="86.2" ry="86.2" fill="hsl(168 90% 58% / 0.149)"/>
+<ellipse cx="140.93" cy="380.04" rx="116.22" ry="116.22" fill="hsl(168 90% 58% / 0.159)"/>
+<ellipse cx="209.84" cy="75.97" rx="109.83" ry="109.83" fill="hsl(168 90% 58% / 0.208)"/>
+<rect x="90" y="169" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="130" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">a</text>
+<rect x="216" y="169" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">b</text>
+<rect x="342" y="169" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="382" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">c</text>
+<line x1="300" y1="230" x2="275.99" y2="266.01" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="270,275 270.27,263 280.97,270.14" fill="#39ff14"/>
+<rect x="176" y="285" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="305" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">mediana</text>
+<text x="256" y="385" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mejor pivote esperado</text>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">sigue siendo vulnerable</text>
+</svg>

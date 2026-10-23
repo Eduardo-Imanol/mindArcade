@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿List.sort de Dart es estable?">
+<title>¿List.sort de Dart es estable?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="122.42" cy="406.92" rx="180.47" ry="180.47" fill="hsl(320 90% 58% / 0.218)"/>
+<ellipse cx="6.6" cy="159.54" rx="129.2" ry="129.2" fill="hsl(320 90% 58% / 0.18)"/>
+<ellipse cx="193.52" cy="115.49" rx="89.67" ry="89.67" fill="hsl(320 90% 58% / 0.202)"/>
+<ellipse cx="161.84" cy="63.79" rx="146.3" ry="146.3" fill="hsl(320 90% 58% / 0.211)"/>
+<rect x="90" y="159" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·1</text>
+<rect x="216" y="159" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·2</text>
+<rect x="347" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="382" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="256" y1="225" x2="256" y2="264.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,275 249.57,264.87 262.43,264.87" fill="#39ff14"/>
+<rect x="90" y="289" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·1</text>
+<rect x="216" y="289" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·2</text>
+<rect x="347" y="289" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="382" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">conserva el orden de empate</text>
+<rect x="186" y="430" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">estable</text>
+</svg>

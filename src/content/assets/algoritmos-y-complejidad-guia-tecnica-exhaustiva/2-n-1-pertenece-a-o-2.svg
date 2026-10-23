@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿2^(n+1) pertenece a O(2ⁿ)?">
+<title>¿2^(n+1) pertenece a O(2ⁿ)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="52.3" cy="278.41" rx="157.04" ry="157.04" fill="hsl(120 90% 58% / 0.22)"/>
+<ellipse cx="119.58" cy="216.51" rx="178.59" ry="178.59" fill="hsl(120 90% 58% / 0.222)"/>
+<ellipse cx="278.18" cy="127.01" rx="184.92" ry="184.92" fill="hsl(120 90% 58% / 0.175)"/>
+<ellipse cx="62.17" cy="283.97" rx="87.88" ry="87.88" fill="hsl(120 90% 58% / 0.205)"/>
+<rect x="136" y="140" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="160" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">2^(n+1) − 1</text>
+<line x1="256" y1="200" x2="256" y2="239.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,250 249.57,239.87 262.43,239.87" fill="#39ff14"/>
+<rect x="176" y="260" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">O(2ⁿ)</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">el factor 2 es una constante</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">misma clase asintótica</text>
+</svg>

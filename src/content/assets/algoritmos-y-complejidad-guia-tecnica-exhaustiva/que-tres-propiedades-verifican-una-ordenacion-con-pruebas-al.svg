@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tres propiedades verifican una ordenación con pruebas aleatorias?">
+<title>¿Qué tres propiedades verifican una ordenación con pruebas aleatorias?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="304.29" cy="171.22" rx="190.29" ry="190.29" fill="hsl(320 90% 58% / 0.204)"/>
+<ellipse cx="257.23" cy="450.95" rx="146.59" ry="146.59" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="57.77" cy="231.69" rx="200.04" ry="200.04" fill="hsl(320 90% 58% / 0.188)"/>
+<ellipse cx="363.71" cy="415.92" rx="195" ry="195" fill="hsl(320 90% 58% / 0.196)"/>
+<rect x="55" y="170" width="120" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">permutación</text>
+<rect x="190" y="170" width="130" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="204" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">ordenado</text>
+<rect x="335" y="170" width="120" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="349" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">estable</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">mismos elementos, en orden</text>
+<text x="256" y="385" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">y empates conservados</text>
+<rect x="186" y="420" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">3 asserts</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ordenación conviene para objetos con estabilidad?">
+<title>¿Qué ordenación conviene para objetos con estabilidad?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="13.74" cy="456.97" rx="175.27" ry="175.27" fill="hsl(168 90% 58% / 0.215)"/>
+<ellipse cx="432.84" cy="359.68" rx="203.39" ry="203.39" fill="hsl(168 90% 58% / 0.203)"/>
+<ellipse cx="197.34" cy="264.3" rx="194.77" ry="194.77" fill="hsl(168 90% 58% / 0.235)"/>
+<ellipse cx="177.33" cy="187.93" rx="141.87" ry="141.87" fill="hsl(168 90% 58% / 0.2)"/>
+<rect x="70" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="84" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Timsort</text>
+<line x1="238" y1="220" x2="271.2" y2="220" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="282,220 271.87,226.43 271.87,213.57" fill="#8a7fb5"/>
+<rect x="292" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="306" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">merge sort</text>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">estable y adaptativo</text>
+<rect x="171" y="355" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(n log n)</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">memoria auxiliar O(n)</text>
+</svg>

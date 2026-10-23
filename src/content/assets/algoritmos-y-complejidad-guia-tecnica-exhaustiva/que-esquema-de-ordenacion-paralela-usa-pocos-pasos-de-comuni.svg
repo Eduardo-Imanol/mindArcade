@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué esquema de ordenación paralela usa pocos pasos de comunicación?">
+<title>¿Qué esquema de ordenación paralela usa pocos pasos de comunicación?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="36.94" cy="429.73" rx="87.91" ry="87.91" fill="hsl(45 90% 58% / 0.181)"/>
+<ellipse cx="365.45" cy="182.48" rx="127.4" ry="127.4" fill="hsl(45 90% 58% / 0.15)"/>
+<ellipse cx="355.15" cy="321.94" rx="116.59" ry="116.59" fill="hsl(45 90% 58% / 0.167)"/>
+<ellipse cx="283.12" cy="299.43" rx="94.66" ry="94.66" fill="hsl(45 90% 58% / 0.215)"/>
+<rect x="60" y="149" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="120" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">muestra</text>
+<rect x="297" y="149" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">splitters</text>
+<rect x="186" y="259" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="241" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cubos</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">cada procesador ordena su cubo</text>
+<rect x="166" y="405" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">sample sort</text>
+</svg>

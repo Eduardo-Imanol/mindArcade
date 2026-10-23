@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hacer si solo se necesita el k-ésimo elemento?">
+<title>¿Qué hacer si solo se necesita el k-ésimo elemento?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="192.75" cy="418.57" rx="172.9" ry="172.9" fill="hsl(320 90% 58% / 0.196)"/>
+<ellipse cx="57.44" cy="462.24" rx="197.44" ry="197.44" fill="hsl(320 90% 58% / 0.16)"/>
+<ellipse cx="312.38" cy="203.53" rx="168.84" ry="168.84" fill="hsl(320 90% 58% / 0.188)"/>
+<ellipse cx="194.75" cy="268.54" rx="87.13" ry="87.13" fill="hsl(320 90% 58% / 0.187)"/>
+<rect x="70" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">arreglo</text>
+<line x1="238" y1="220" x2="271.2" y2="220" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="282,220 271.87,226.43 271.87,213.57" fill="#39ff14"/>
+<rect x="292" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="306" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">quickselect</text>
+<rect x="156" y="295" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(n) esperado</text>
+<text x="256" y="395" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">no ordenes todo</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">peor caso O(n²) o BFPRT</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre AOT y JIT en Dart?">
+<title>¿Qué diferencia hay entre AOT y JIT en Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="171.26" cy="75.6" rx="119.15" ry="119.15" fill="hsl(265 90% 58% / 0.196)"/>
+<ellipse cx="241.02" cy="105.05" rx="170.57" ry="170.57" fill="hsl(265 90% 58% / 0.149)"/>
+<ellipse cx="115.67" cy="351.48" rx="161.11" ry="161.11" fill="hsl(265 90% 58% / 0.237)"/>
+<ellipse cx="335.92" cy="445.98" rx="102.76" ry="102.76" fill="hsl(265 90% 58% / 0.217)"/>
+<rect x="55" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">AOT</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">compila antes</text>
+<text x="145" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">arranque estable</text>
+<rect x="277" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">JIT</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">perfila en caliente</text>
+<text x="367" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">warm-up necesario</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">los benchmarks cambian</text>
+</svg>

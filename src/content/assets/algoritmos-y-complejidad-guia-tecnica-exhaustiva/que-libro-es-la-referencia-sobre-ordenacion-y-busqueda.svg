@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué libro es la referencia sobre ordenación y búsqueda?">
+<title>¿Qué libro es la referencia sobre ordenación y búsqueda?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="275.42" cy="145.58" rx="113.84" ry="113.84" fill="hsl(45 90% 58% / 0.191)"/>
+<ellipse cx="470.93" cy="55.4" rx="101.53" ry="101.53" fill="hsl(45 90% 58% / 0.186)"/>
+<ellipse cx="147.34" cy="490.92" rx="85.35" ry="85.35" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="267.69" cy="292.71" rx="172.78" ry="172.78" fill="hsl(45 90% 58% / 0.189)"/>
+<rect x="110" y="110" width="290" height="210" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="124" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">CLRS</text>
+<text x="256" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">Introduction to Algorithms</text>
+<text x="256" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">ordenación y búsqueda</text>
+<rect x="176" y="390" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">referencia</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">también Knuth, vol. 3</text>
+</svg>

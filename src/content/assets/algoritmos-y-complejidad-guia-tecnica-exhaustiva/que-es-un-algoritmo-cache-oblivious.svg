@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un algoritmo cache-oblivious?">
+<title>¿Qué es un algoritmo cache-oblivious?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="17.81" cy="400.07" rx="81.51" ry="81.51" fill="hsl(168 90% 58% / 0.2)"/>
+<ellipse cx="362.48" cy="498.07" rx="167.13" ry="167.13" fill="hsl(168 90% 58% / 0.185)"/>
+<ellipse cx="305.27" cy="409.64" rx="168.78" ry="168.78" fill="hsl(168 90% 58% / 0.231)"/>
+<ellipse cx="83.39" cy="210.07" rx="106.44" ry="106.44" fill="hsl(168 90% 58% / 0.154)"/>
+<rect x="70" y="160" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">recursivo</text>
+<line x1="228" y1="210" x2="271.2" y2="210" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="282,210 271.87,216.43 271.87,203.57" fill="#39ff14"/>
+<rect x="292" y="160" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="306" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">óptimo</text>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">sin conocer tamaños de caché</text>
+<rect x="171" y="340" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">funnel sort</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">funciona en toda la jerarquía</text>
+</svg>

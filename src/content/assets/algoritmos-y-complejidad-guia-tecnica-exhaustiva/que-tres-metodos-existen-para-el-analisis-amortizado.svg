@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tres métodos existen para el análisis amortizado?">
+<title>¿Qué tres métodos existen para el análisis amortizado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="403.78" cy="466.46" rx="85.43" ry="85.43" fill="hsl(320 90% 58% / 0.172)"/>
+<ellipse cx="487.86" cy="4.87" rx="84.98" ry="84.98" fill="hsl(320 90% 58% / 0.189)"/>
+<ellipse cx="152.92" cy="27.17" rx="91.98" ry="91.98" fill="hsl(320 90% 58% / 0.168)"/>
+<ellipse cx="471.95" cy="505.27" rx="167.85" ry="167.85" fill="hsl(320 90% 58% / 0.145)"/>
+<rect x="55" y="159" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="120" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">agregado</text>
+<rect x="235" y="159" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="300" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">créditos</text>
+<rect x="145" y="269" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="210" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">potencial</text>
+<line x1="210" y1="215" x2="194.01" y2="254.97" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="190,265 187.79,253.2 199.73,257.98" fill="#8a7fb5"/>
+<line x1="330" y1="215" x2="249.44" y2="259.76" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="240,265 245.73,254.46 251.98,265.7" fill="#8a7fb5"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">tres caminos equivalentes</text>
+</svg>

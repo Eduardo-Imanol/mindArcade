@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona la versión branchless de lower_bound?">
+<title>¿Cómo funciona la versión branchless de lower_bound?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="361.92" cy="326.23" rx="77.93" ry="77.93" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="54.81" cy="310.68" rx="148.47" ry="148.47" fill="hsl(320 90% 58% / 0.186)"/>
+<ellipse cx="405.8" cy="139.81" rx="188.3" ry="188.3" fill="hsl(320 90% 58% / 0.185)"/>
+<ellipse cx="399.62" cy="463.81" rx="96.27" ry="96.27" fill="hsl(320 90% 58% / 0.2)"/>
+<rect x="60" y="160" width="170" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="74" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">con rama</text>
+<text x="145" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">predicción 50 %</text>
+<rect x="282" y="160" width="170" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="296" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">sin rama</text>
+<text x="367" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">selección cmov</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">cuerpo de longitud constante</text>
+<rect x="181" y="400" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">sin saltos</text>
+</svg>

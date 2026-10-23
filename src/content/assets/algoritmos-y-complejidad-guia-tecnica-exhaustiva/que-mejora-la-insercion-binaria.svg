@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué mejora la inserción binaria?">
+<title>¿Qué mejora la inserción binaria?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="40.65" cy="399.06" rx="140.39" ry="140.39" fill="hsl(45 90% 58% / 0.156)"/>
+<ellipse cx="226.01" cy="305.14" rx="102.46" ry="102.46" fill="hsl(45 90% 58% / 0.158)"/>
+<ellipse cx="455.3" cy="160.83" rx="81.77" ry="81.77" fill="hsl(45 90% 58% / 0.14)"/>
+<ellipse cx="223.11" cy="169.15" rx="75.32" ry="75.32" fill="hsl(45 90% 58% / 0.222)"/>
+<rect x="151" y="130" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">busca posición</text>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">log i comparaciones</text>
+<line x1="256" y1="230" x2="256" y2="269.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 249.57,269.87 262.43,269.87" fill="#ffcc00"/>
+<rect x="141" y="290" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">desplazar cuesta i</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">sigue O(n²) por los movimientos</text>
+</svg>

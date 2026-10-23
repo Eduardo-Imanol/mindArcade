@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complejidad tiene buscar en una matriz ordenada por filas y columnas?">
+<title>¿Qué complejidad tiene buscar en una matriz ordenada por filas y columnas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="54.21" cy="44.05" rx="195.97" ry="195.97" fill="hsl(45 90% 58% / 0.184)"/>
+<ellipse cx="116.89" cy="448.05" rx="167.6" ry="167.6" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="469.19" cy="17.97" rx="123.32" ry="123.32" fill="hsl(45 90% 58% / 0.186)"/>
+<ellipse cx="216.1" cy="385.65" rx="202" ry="202" fill="hsl(45 90% 58% / 0.204)"/>
+<rect x="120" y="140" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="176" y="140" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="232" y="140" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="288" y="140" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="120" y="192" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="176" y="192" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="232" y="192" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="288" y="192" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="120" y="244" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="176" y="244" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="232" y="244" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="288" y="244" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="120" y="296" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="176" y="296" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="232" y="296" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="288" y="296" width="46" height="42" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="330" y1="152" x2="186.74" y2="331.56" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="180,340 181.29,328.07 191.35,336.09" fill="#00ffcc"/>
+<rect x="171" y="370" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">O(m + n)</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">desde la esquina superior derecha</text>
+</svg>

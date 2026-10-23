@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complejidad tiene merge sort y por qué es estable?">
+<title>¿Qué complejidad tiene merge sort y por qué es estable?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="138.05" cy="114.54" rx="166.27" ry="166.27" fill="hsl(320 90% 58% / 0.176)"/>
+<ellipse cx="425.78" cy="68.24" rx="121.6" ry="121.6" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="220.18" cy="510.52" rx="202.52" ry="202.52" fill="hsl(320 90% 58% / 0.235)"/>
+<ellipse cx="312.57" cy="451.43" rx="99.86" ry="99.86" fill="hsl(320 90% 58% / 0.164)"/>
+<ellipse cx="256" cy="110" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n</text>
+<ellipse cx="150" cy="200" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="150" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n/2</text>
+<ellipse cx="362" cy="200" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="362" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n/2</text>
+<line x1="256" y1="110" x2="150" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="256" y1="110" x2="362" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<rect x="161" y="270" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">Θ(n log n)</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">estable y predecible</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">necesita O(n) memoria</text>
+</svg>

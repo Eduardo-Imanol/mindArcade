@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace el teorema de Akra-Bazzi?">
+<title>¿Qué hace el teorema de Akra-Bazzi?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="6.44" cy="135.33" rx="190.99" ry="190.99" fill="hsl(45 90% 58% / 0.205)"/>
+<ellipse cx="143.87" cy="253.42" rx="179.61" ry="179.61" fill="hsl(45 90% 58% / 0.141)"/>
+<ellipse cx="137.81" cy="382.8" rx="135.38" ry="135.38" fill="hsl(45 90% 58% / 0.191)"/>
+<ellipse cx="201.82" cy="411.96" rx="167.54" ry="167.54" fill="hsl(45 90% 58% / 0.236)"/>
+<rect x="151" y="150" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">Σ aᵢbᵢᵖ = 1</text>
+<line x1="256" y1="210" x2="256" y2="249.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,260 249.57,249.87 262.43,249.87" fill="#39ff14"/>
+<rect x="100" y="280" width="312" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="114" y="298" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">T(x) = Θ(xᵖ · …)</text>
+<text x="256" y="405" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">subproblemas de tamaños distintos</text>
+</svg>

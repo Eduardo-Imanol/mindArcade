@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué logra la partición de 3 vías?">
+<title>¿Qué logra la partición de 3 vías?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="418.48" cy="448.67" rx="178.5" ry="178.5" fill="hsl(120 90% 58% / 0.186)"/>
+<ellipse cx="222.72" cy="330.22" rx="132.11" ry="132.11" fill="hsl(120 90% 58% / 0.227)"/>
+<ellipse cx="461.96" cy="313.27" rx="119.63" ry="119.63" fill="hsl(120 90% 58% / 0.22)"/>
+<ellipse cx="63.53" cy="374.26" rx="169.92" ry="169.92" fill="hsl(120 90% 58% / 0.231)"/>
+<rect x="50" y="190" width="120" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="64" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">&lt;</text>
+<rect x="186" y="190" width="140" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="200" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">=</text>
+<rect x="342" y="190" width="120" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="356" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">&gt;</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">partición de tres vías</text>
+<rect x="151" y="335" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(n) con iguales</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">evita el peor caso</text>
+</svg>

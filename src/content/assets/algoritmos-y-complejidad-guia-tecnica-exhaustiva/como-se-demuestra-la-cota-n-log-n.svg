@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se demuestra la cota Ω(n log n)?">
+<title>¿Cómo se demuestra la cota Ω(n log n)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="48.84" cy="248.28" rx="174.87" ry="174.87" fill="hsl(320 90% 58% / 0.148)"/>
+<ellipse cx="498.92" cy="217.67" rx="169.81" ry="169.81" fill="hsl(320 90% 58% / 0.204)"/>
+<ellipse cx="412.32" cy="430.64" rx="120.6" ry="120.6" fill="hsl(320 90% 58% / 0.182)"/>
+<ellipse cx="87.74" cy="31.99" rx="71.86" ry="71.86" fill="hsl(320 90% 58% / 0.226)"/>
+<rect x="136" y="120" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">n! permutaciones</text>
+<line x1="256" y1="180" x2="256" y2="219.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,230 249.57,219.87 262.43,219.87" fill="#8a7fb5"/>
+<rect x="131" y="240" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#ff007f">altura ≥ log₂(n!)</text>
+<line x1="256" y1="300" x2="256" y2="334.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,345 249.57,334.87 262.43,334.87" fill="#39ff14"/>
+<rect x="166" y="355" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">Ω(n log n)</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">Stirling cierra la cuenta</text>
+</svg>

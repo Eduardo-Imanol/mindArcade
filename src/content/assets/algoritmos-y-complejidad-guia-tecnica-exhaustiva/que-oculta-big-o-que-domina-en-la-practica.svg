@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué oculta Big-O que domina en la práctica?">
+<title>¿Qué oculta Big-O que domina en la práctica?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="330.29" cy="149.46" rx="157.47" ry="157.47" fill="hsl(265 90% 58% / 0.234)"/>
+<ellipse cx="487.26" cy="285.03" rx="158.81" ry="158.81" fill="hsl(265 90% 58% / 0.154)"/>
+<ellipse cx="82.67" cy="291.3" rx="134.13" ry="134.13" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="396.01" cy="377.17" rx="109.27" ry="109.27" fill="hsl(265 90% 58% / 0.237)"/>
+<rect x="90" y="179" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">caché</text>
+<rect x="296" y="179" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="356" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">saltos</text>
+<line x1="200" y1="240" x2="290.34" y2="285.17" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="300,290 288.06,291.22 293.81,279.72" fill="#8a7fb5"/>
+<line x1="320" y1="240" x2="239.44" y2="284.76" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="230,290 235.73,279.46 241.98,290.7" fill="#8a7fb5"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">constantes y memoria</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">la medición decide</text>
+</svg>

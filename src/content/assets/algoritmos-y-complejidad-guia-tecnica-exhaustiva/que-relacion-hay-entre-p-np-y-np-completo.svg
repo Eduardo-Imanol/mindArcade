@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué relación hay entre P, NP y NP-completo?">
+<title>¿Qué relación hay entre P, NP y NP-completo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="465.23" cy="291.54" rx="171.47" ry="171.47" fill="hsl(45 90% 58% / 0.196)"/>
+<ellipse cx="37.9" cy="271.65" rx="112.2" ry="112.2" fill="hsl(45 90% 58% / 0.199)"/>
+<ellipse cx="134.72" cy="476.2" rx="164.57" ry="164.57" fill="hsl(45 90% 58% / 0.141)"/>
+<ellipse cx="116.02" cy="349.03" rx="105.83" ry="105.83" fill="hsl(45 90% 58% / 0.151)"/>
+<rect x="50" y="160" width="130" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="64" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">P</text>
+<rect x="195" y="160" width="150" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="209" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">NP</text>
+<rect x="360" y="160" width="110" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="374" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">NP-C</text>
+<text x="115" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">decidir</text>
+<text x="270" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">verificar</text>
+<text x="415" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">más difíciles</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">si uno cae en P, todos</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué algoritmos lineales son estables?">
+<title>¿Qué algoritmos lineales son estables?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="196.97" cy="139.7" rx="78.64" ry="78.64" fill="hsl(265 90% 58% / 0.207)"/>
+<ellipse cx="511.49" cy="222.06" rx="124.61" ry="124.61" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="400.87" cy="436.23" rx="78.29" ry="78.29" fill="hsl(265 90% 58% / 0.232)"/>
+<ellipse cx="238.12" cy="412.78" rx="163.77" ry="163.77" fill="hsl(265 90% 58% / 0.222)"/>
+<rect x="55" y="149" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="120" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">counting</text>
+<rect x="265" y="149" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="330" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">radix LSD</text>
+<rect x="165" y="254" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="225" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">bucket</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">si cada cubo conserva el orden</text>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">MSD puede requerir cuidado</text>
+</svg>

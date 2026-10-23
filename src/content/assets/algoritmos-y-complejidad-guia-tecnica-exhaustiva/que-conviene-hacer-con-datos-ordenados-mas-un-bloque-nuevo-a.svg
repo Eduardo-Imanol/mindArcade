@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué conviene hacer con datos ordenados más un bloque nuevo al final?">
+<title>¿Qué conviene hacer con datos ordenados más un bloque nuevo al final?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="464.34" cy="126.6" rx="105" ry="105" fill="hsl(168 90% 58% / 0.173)"/>
+<ellipse cx="288.49" cy="292.05" rx="91.14" ry="91.14" fill="hsl(168 90% 58% / 0.18)"/>
+<ellipse cx="252.16" cy="238.98" rx="162.7" ry="162.7" fill="hsl(168 90% 58% / 0.222)"/>
+<ellipse cx="432.84" cy="457.84" rx="156.51" ry="156.51" fill="hsl(168 90% 58% / 0.208)"/>
+<rect x="60" y="170" width="230" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">ya ordenado</text>
+<rect x="300" y="170" width="150" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="314" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">bloque nuevo</text>
+<line x1="256" y1="260" x2="256" y2="294.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,305 249.57,294.87 262.43,294.87" fill="#00ffcc"/>
+<rect x="136" y="315" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="335" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#00ffcc">insertar o fusionar</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">no reordenar todo</text>
+</svg>

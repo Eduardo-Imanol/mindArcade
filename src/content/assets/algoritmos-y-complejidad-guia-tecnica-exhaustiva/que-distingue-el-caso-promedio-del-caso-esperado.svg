@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué distingue el caso promedio del caso esperado?">
+<title>¿Qué distingue el caso promedio del caso esperado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="427.85" cy="354.33" rx="197.91" ry="197.91" fill="hsl(265 90% 58% / 0.16)"/>
+<ellipse cx="114.91" cy="5.1" rx="92.97" ry="92.97" fill="hsl(265 90% 58% / 0.202)"/>
+<ellipse cx="6.66" cy="138.84" rx="72.66" ry="72.66" fill="hsl(265 90% 58% / 0.168)"/>
+<ellipse cx="252.22" cy="100.62" rx="120.08" ry="120.08" fill="hsl(265 90% 58% / 0.175)"/>
+<rect x="55" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">promedio</text>
+<rect x="277" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">esperado</text>
+<line x1="243" y1="230" x2="261.8" y2="230" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="269,230 262.25,234.29 262.25,225.71" fill="#8a7fb5"/>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">distribución de datos</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">azar del algoritmo</text>
+<text x="256" y="385" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">uno supone, el otro no</text>
+</svg>

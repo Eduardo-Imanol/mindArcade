@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué costo tiene radix sort LSD con d pasadas de base b?">
+<title>¿Qué costo tiene radix sort LSD con d pasadas de base b?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="482.3" cy="87.84" rx="173.08" ry="173.08" fill="hsl(120 90% 58% / 0.161)"/>
+<ellipse cx="471.48" cy="386.51" rx="163.64" ry="163.64" fill="hsl(120 90% 58% / 0.189)"/>
+<ellipse cx="197.23" cy="427.03" rx="154.96" ry="154.96" fill="hsl(120 90% 58% / 0.19)"/>
+<ellipse cx="52.98" cy="462.99" rx="86.66" ry="86.66" fill="hsl(120 90% 58% / 0.226)"/>
+<rect x="156" y="130" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="25" font-weight="700" fill="#00ffcc">d = ⌈w / r⌉</text>
+<line x1="256" y1="190" x2="256" y2="229.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,240 249.57,229.87 262.43,229.87" fill="#39ff14"/>
+<rect x="151" y="250" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">O(d(n + b))</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">b = 2ʳ cubos por pasada</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">w es el ancho de la clave</text>
+</svg>

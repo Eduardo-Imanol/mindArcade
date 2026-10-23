@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué dos propiedades se demuestran por separado en un algoritmo?">
+<title>¿Qué dos propiedades se demuestran por separado en un algoritmo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="250.27" cy="145.28" rx="77.71" ry="77.71" fill="hsl(168 90% 58% / 0.149)"/>
+<ellipse cx="10.81" cy="345.99" rx="180.37" ry="180.37" fill="hsl(168 90% 58% / 0.235)"/>
+<ellipse cx="274.38" cy="307.17" rx="126.89" ry="126.89" fill="hsl(168 90% 58% / 0.204)"/>
+<ellipse cx="351.22" cy="180.99" rx="107.43" ry="107.43" fill="hsl(168 90% 58% / 0.171)"/>
+<rect x="55" y="160" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">parcial</text>
+<rect x="277" y="160" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="291" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">termina</text>
+<line x1="243" y1="235" x2="261.8" y2="235" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="269,235 262.25,239.29 262.25,230.71" fill="#8a7fb5"/>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">si termina, cumple</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">toda entrada válida</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">dos pruebas distintas</text>
+</svg>

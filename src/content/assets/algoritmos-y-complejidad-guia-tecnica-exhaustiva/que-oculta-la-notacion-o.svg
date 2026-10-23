@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué oculta la notación Õ?">
+<title>¿Qué oculta la notación Õ?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="179.47" cy="364.3" rx="151.61" ry="151.61" fill="hsl(168 90% 58% / 0.148)"/>
+<ellipse cx="103.4" cy="154.87" rx="107.44" ry="107.44" fill="hsl(168 90% 58% / 0.206)"/>
+<ellipse cx="30.64" cy="116.25" rx="111.69" ry="111.69" fill="hsl(168 90% 58% / 0.18)"/>
+<ellipse cx="248.1" cy="46.62" rx="91.5" ry="91.5" fill="hsl(168 90% 58% / 0.223)"/>
+<rect x="181" y="169" width="150" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">Õ(f)</text>
+<line x1="256" y1="240" x2="256" y2="279.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,290 249.57,279.87 262.43,279.87" fill="#00ffcc"/>
+<rect x="146" y="300" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">O(f·logᵏ f)</text>
+<text x="256" y="405" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">oculta factores polilogarítmicos</text>
+</svg>

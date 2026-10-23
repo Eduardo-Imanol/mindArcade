@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la complejidad esperada de bucket sort?">
+<title>¿Cuál es la complejidad esperada de bucket sort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="321.78" cy="364.91" rx="149.26" ry="149.26" fill="hsl(168 90% 58% / 0.235)"/>
+<ellipse cx="195" cy="75" rx="122.9" ry="122.9" fill="hsl(168 90% 58% / 0.166)"/>
+<ellipse cx="208.78" cy="276.71" rx="100.67" ry="100.67" fill="hsl(168 90% 58% / 0.221)"/>
+<ellipse cx="185.33" cy="258.08" rx="148.28" ry="148.28" fill="hsl(168 90% 58% / 0.232)"/>
+<rect x="75" y="240" width="56" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="151" y="190" width="56" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="227" y="150" width="56" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="303" y="180" width="56" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="379" y="220" width="56" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">distribución uniforme</text>
+<rect x="191" y="330" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="27" font-weight="700" fill="#39ff14">O(n)</text>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">se degrada si los datos se concentran</text>
+</svg>

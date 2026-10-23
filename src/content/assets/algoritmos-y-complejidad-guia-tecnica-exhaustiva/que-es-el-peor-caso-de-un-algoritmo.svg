@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el peor caso de un algoritmo?">
+<title>¿Qué es el peor caso de un algoritmo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="425.38" cy="363.78" rx="203.16" ry="203.16" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="108.56" cy="224.87" rx="184.8" ry="184.8" fill="hsl(265 90% 58% / 0.154)"/>
+<ellipse cx="15.66" cy="94.64" rx="131.73" ry="131.73" fill="hsl(265 90% 58% / 0.223)"/>
+<ellipse cx="194.2" cy="469.62" rx="183.63" ry="183.63" fill="hsl(265 90% 58% / 0.172)"/>
+<rect x="90" y="260" width="60" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="172" y="220" width="60" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="254" y="180" width="60" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="336" y="100" width="60" height="230" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">máximo sobre |x| = n</text>
+<rect x="191" y="415" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ffcc00">garantía</text>
+</svg>

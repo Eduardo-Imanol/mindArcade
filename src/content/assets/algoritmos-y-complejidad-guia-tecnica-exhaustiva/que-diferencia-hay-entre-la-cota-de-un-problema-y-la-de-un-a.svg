@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre la cota de un problema y la de un algoritmo?">
+<title>¿Qué diferencia hay entre la cota de un problema y la de un algoritmo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="211.44" cy="246.55" rx="161.98" ry="161.98" fill="hsl(320 90% 58% / 0.157)"/>
+<ellipse cx="193.42" cy="88.86" rx="117.11" ry="117.11" fill="hsl(320 90% 58% / 0.203)"/>
+<ellipse cx="345.92" cy="140.77" rx="74.43" ry="74.43" fill="hsl(320 90% 58% / 0.185)"/>
+<ellipse cx="241.1" cy="211.33" rx="150.51" ry="150.51" fill="hsl(320 90% 58% / 0.181)"/>
+<rect x="55" y="150" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">algoritmo</text>
+<text x="145" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">cota superior</text>
+<rect x="277" y="150" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="291" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">problema</text>
+<text x="367" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">cota inferior</text>
+<rect x="186" y="350" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">óptimo</text>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">cuando coinciden</text>
+</svg>

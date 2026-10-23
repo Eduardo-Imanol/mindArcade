@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es replacement selection?">
+<title>¿Qué es replacement selection?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="410.93" cy="195.53" rx="186.69" ry="186.69" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="350.51" cy="425.98" rx="149.1" ry="149.1" fill="hsl(320 90% 58% / 0.216)"/>
+<ellipse cx="511.81" cy="475.24" rx="174.52" ry="174.52" fill="hsl(320 90% 58% / 0.184)"/>
+<ellipse cx="232.33" cy="232.6" rx="105.12" ry="105.12" fill="hsl(320 90% 58% / 0.193)"/>
+<rect x="60" y="160" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">heap</text>
+<line x1="228" y1="210" x2="277.2" y2="210" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="288,210 277.87,216.43 277.87,203.57" fill="#39ff14"/>
+<rect x="300" y="160" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="314" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">run</text>
+<rect x="156" y="285" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="305" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">runs más largos</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">aprovecha la memoria disponible</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">reduce pasadas de fusión</text>
+</svg>

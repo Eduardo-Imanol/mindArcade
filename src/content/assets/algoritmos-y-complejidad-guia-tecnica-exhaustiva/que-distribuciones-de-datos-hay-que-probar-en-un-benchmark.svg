@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué distribuciones de datos hay que probar en un benchmark?">
+<title>¿Qué distribuciones de datos hay que probar en un benchmark?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="456.78" cy="338.29" rx="100.81" ry="100.81" fill="hsl(120 90% 58% / 0.204)"/>
+<ellipse cx="427.62" cy="498.08" rx="191.35" ry="191.35" fill="hsl(120 90% 58% / 0.184)"/>
+<ellipse cx="369.89" cy="126.06" rx="147.19" ry="147.19" fill="hsl(120 90% 58% / 0.227)"/>
+<ellipse cx="500.68" cy="117.83" rx="183.14" ry="183.14" fill="hsl(120 90% 58% / 0.225)"/>
+<rect x="55" y="144" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="120" y="165" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">ordenado</text>
+<rect x="270" y="144" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="330" y="165" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">inverso</text>
+<rect x="55" y="234" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="120" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">aleatorio</text>
+<rect x="260" y="234" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="330" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">duplicados</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">casi ordenado y adversario también</text>
+<rect x="156" y="390" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">varias entradas</text>
+</svg>

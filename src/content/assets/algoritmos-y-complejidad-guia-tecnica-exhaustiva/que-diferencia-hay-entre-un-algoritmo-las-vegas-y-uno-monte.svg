@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre un algoritmo Las Vegas y uno Monte Carlo?">
+<title>¿Qué diferencia hay entre un algoritmo Las Vegas y uno Monte Carlo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="217.72" cy="185.49" rx="101.69" ry="101.69" fill="hsl(168 90% 58% / 0.188)"/>
+<ellipse cx="267.79" cy="207.73" rx="126.37" ry="126.37" fill="hsl(168 90% 58% / 0.162)"/>
+<ellipse cx="203.38" cy="133.53" rx="113.34" ry="113.34" fill="hsl(168 90% 58% / 0.176)"/>
+<ellipse cx="426.48" cy="451.51" rx="180.01" ry="180.01" fill="hsl(168 90% 58% / 0.184)"/>
+<rect x="55" y="150" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">Las Vegas</text>
+<rect x="277" y="150" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="291" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">Monte Carlo</text>
+<line x1="243" y1="225" x2="261.8" y2="225" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="269,225 262.25,229.29 262.25,220.71" fill="#8a7fb5"/>
+<text x="145" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">siempre acierta</text>
+<text x="145" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">tiempo aleatorio</text>
+<text x="367" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">tiempo fijo</text>
+<text x="367" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">alta probabilidad</text>
+<text x="180" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">quicksort y quickselect</text>
+</svg>

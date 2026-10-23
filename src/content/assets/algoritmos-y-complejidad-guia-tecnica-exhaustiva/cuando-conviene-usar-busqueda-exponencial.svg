@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo conviene usar búsqueda exponencial?">
+<title>¿Cuándo conviene usar búsqueda exponencial?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="484.71" cy="470.26" rx="186.19" ry="186.19" fill="hsl(265 90% 58% / 0.163)"/>
+<ellipse cx="217.27" cy="333.19" rx="184.13" ry="184.13" fill="hsl(265 90% 58% / 0.192)"/>
+<ellipse cx="16.02" cy="303.65" rx="110.51" ry="110.51" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="211.84" cy="186.69" rx="92.37" ry="92.37" fill="hsl(265 90% 58% / 0.154)"/>
+<rect x="65" y="149" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">tamaño ?</text>
+<rect x="305" y="149" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="360" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cerca</text>
+<rect x="185" y="259" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="245" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">m ≪ n</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">o fusionar listas desiguales</text>
+<rect x="176" y="405" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">galloping</text>
+</svg>

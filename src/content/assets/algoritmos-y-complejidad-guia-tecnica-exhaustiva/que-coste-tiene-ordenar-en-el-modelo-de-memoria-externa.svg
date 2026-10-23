@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué coste tiene ordenar en el modelo de memoria externa?">
+<title>¿Qué coste tiene ordenar en el modelo de memoria externa?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="328.52" cy="90.65" rx="139.39" ry="139.39" fill="hsl(168 90% 58% / 0.201)"/>
+<ellipse cx="360.86" cy="194.57" rx="178.51" ry="178.51" fill="hsl(168 90% 58% / 0.181)"/>
+<ellipse cx="235.57" cy="318.14" rx="195.9" ry="195.9" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="382.03" cy="510.81" rx="183.27" ry="183.27" fill="hsl(168 90% 58% / 0.221)"/>
+<rect x="60" y="150" width="160" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">RAM</text>
+<line x1="228" y1="200" x2="271.2" y2="200" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="282,200 271.87,206.43 271.87,193.57" fill="#ffcc00"/>
+<rect x="292" y="150" width="160" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="306" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">disco</text>
+<rect x="156" y="275" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ffcc00">E/S por bloque</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">se cuenta mover B elementos</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">no cada comparación</text>
+</svg>

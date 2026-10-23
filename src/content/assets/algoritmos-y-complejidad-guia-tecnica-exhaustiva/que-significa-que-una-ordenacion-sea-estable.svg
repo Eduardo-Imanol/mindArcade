@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa que una ordenación sea estable?">
+<title>¿Qué significa que una ordenación sea estable?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="258.3" cy="185.9" rx="146.8" ry="146.8" fill="hsl(168 90% 58% / 0.186)"/>
+<ellipse cx="283.23" cy="85.92" rx="144.16" ry="144.16" fill="hsl(168 90% 58% / 0.155)"/>
+<ellipse cx="227.35" cy="217.81" rx="132.7" ry="132.7" fill="hsl(168 90% 58% / 0.173)"/>
+<ellipse cx="67.13" cy="466.04" rx="112.61" ry="112.61" fill="hsl(168 90% 58% / 0.161)"/>
+<rect x="90" y="159" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·1</text>
+<rect x="190" y="159" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="230" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B·2</text>
+<rect x="290" y="159" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="330" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·3</text>
+<line x1="256" y1="230" x2="256" y2="274.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,285 249.57,274.87 262.43,274.87" fill="#39ff14"/>
+<rect x="90" y="299" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·1</text>
+<rect x="190" y="299" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="230" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A·3</text>
+<rect x="290" y="299" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="330" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B·2</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">las A conservan su orden</text>
+</svg>

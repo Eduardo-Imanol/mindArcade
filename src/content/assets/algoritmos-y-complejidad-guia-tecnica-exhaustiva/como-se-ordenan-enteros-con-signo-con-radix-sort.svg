@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se ordenan enteros con signo con radix sort?">
+<title>¿Cómo se ordenan enteros con signo con radix sort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="34.78" cy="389.95" rx="73" ry="73" fill="hsl(120 90% 58% / 0.233)"/>
+<ellipse cx="400.11" cy="83.87" rx="178.8" ry="178.8" fill="hsl(120 90% 58% / 0.239)"/>
+<ellipse cx="494.67" cy="448.86" rx="153.82" ry="153.82" fill="hsl(120 90% 58% / 0.215)"/>
+<ellipse cx="33.1" cy="352.12" rx="202.01" ry="202.01" fill="hsl(120 90% 58% / 0.155)"/>
+<rect x="70" y="160" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">int32</text>
+<line x1="230" y1="205" x2="279.2" y2="205" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="290,205 279.87,211.43 279.87,198.57" fill="#39ff14"/>
+<rect x="300" y="160" width="150" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="314" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">offset</text>
+<rect x="156" y="275" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">xor con 2³¹</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">los negativos quedan antes</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">se ordena como unsigned</text>
+</svg>

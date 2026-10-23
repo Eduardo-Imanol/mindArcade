@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa f pertenece a Θ(g)?">
+<title>¿Qué significa f pertenece a Θ(g)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="285.81" cy="345.81" rx="190.49" ry="190.49" fill="hsl(120 90% 58% / 0.173)"/>
+<ellipse cx="91.91" cy="487.34" rx="157.75" ry="157.75" fill="hsl(120 90% 58% / 0.163)"/>
+<ellipse cx="102.12" cy="223.51" rx="177.23" ry="177.23" fill="hsl(120 90% 58% / 0.232)"/>
+<ellipse cx="448.78" cy="370.61" rx="126.93" ry="126.93" fill="hsl(120 90% 58% / 0.239)"/>
+<rect x="131" y="110" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">c₁·g ≤ f ≤ c₂·g</text>
+<rect x="90" y="200" width="332" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="104" y="218" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Θ(g)</text>
+<text x="256" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">cota ajustada</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">para todo n ≥ n₀</text>
+</svg>

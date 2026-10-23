@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué condición debe cumplir un problema para resolverse por bisección sobre la respuesta?">
+<title>¿Qué condición debe cumplir un problema para resolverse por bisección sobre la respuesta?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="371.13" cy="159.48" rx="203.9" ry="203.9" fill="hsl(120 90% 58% / 0.141)"/>
+<ellipse cx="342.71" cy="218.6" rx="196.49" ry="196.49" fill="hsl(120 90% 58% / 0.22)"/>
+<ellipse cx="183.83" cy="504.69" rx="178.05" ry="178.05" fill="hsl(120 90% 58% / 0.191)"/>
+<ellipse cx="378.95" cy="124.83" rx="130.32" ry="130.32" fill="hsl(120 90% 58% / 0.209)"/>
+<rect x="60" y="170" width="180" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">factible(v)</text>
+<text x="150" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">monótona</text>
+<line x1="248" y1="230" x2="277.2" y2="230" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="288,230 277.87,236.43 277.87,223.57" fill="#39ff14"/>
+<rect x="280" y="210" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="360" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">O(f · log R)</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">decidir en O(f)</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">buscar el mínimo o máximo v</text>
+</svg>

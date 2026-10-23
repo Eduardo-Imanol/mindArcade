@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se ordenan ceros, unos y doses en un solo recorrido?">
+<title>¿Cómo se ordenan ceros, unos y doses en un solo recorrido?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="12.28" cy="342.99" rx="172.85" ry="172.85" fill="hsl(45 90% 58% / 0.141)"/>
+<ellipse cx="109.9" cy="78.76" rx="203.29" ry="203.29" fill="hsl(45 90% 58% / 0.179)"/>
+<ellipse cx="109.86" cy="497.31" rx="174.19" ry="174.19" fill="hsl(45 90% 58% / 0.167)"/>
+<ellipse cx="10.42" cy="220.71" rx="159.17" ry="159.17" fill="hsl(45 90% 58% / 0.165)"/>
+<rect x="55" y="190" width="120" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">0</text>
+<rect x="191" y="190" width="140" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="205" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">1</text>
+<rect x="347" y="190" width="120" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="361" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">2</text>
+<line x1="100" y1="270" x2="389.2" y2="270" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="400,270 389.87,276.43 389.87,263.57" fill="#39ff14"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">un solo recorrido</text>
+<rect x="161" y="350" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">Θ(n), O(1)</text>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">bandera holandesa</text>
+</svg>

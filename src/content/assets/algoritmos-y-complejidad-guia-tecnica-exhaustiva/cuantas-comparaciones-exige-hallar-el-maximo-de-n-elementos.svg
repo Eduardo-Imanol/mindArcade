@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuántas comparaciones exige hallar el máximo de n elementos?">
+<title>¿Cuántas comparaciones exige hallar el máximo de n elementos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="305.84" cy="223.23" rx="195.75" ry="195.75" fill="hsl(265 90% 58% / 0.184)"/>
+<ellipse cx="382" cy="154.42" rx="163.24" ry="163.24" fill="hsl(265 90% 58% / 0.208)"/>
+<ellipse cx="12.36" cy="39.82" rx="185.03" ry="185.03" fill="hsl(265 90% 58% / 0.175)"/>
+<ellipse cx="289.84" cy="365.91" rx="133.54" ry="133.54" fill="hsl(265 90% 58% / 0.176)"/>
+<rect x="80" y="180" width="56" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="150" y="180" width="56" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="220" y="180" width="56" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="290" y="180" width="56" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<rect x="360" y="180" width="56" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<line x1="100" y1="250" x2="369.2" y2="250" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="380,250 369.87,256.43 369.87,243.57" fill="#8a7fb5"/>
+<rect x="186" y="290" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">n − 1</text>
+<text x="256" y="395" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">cada elemento pierde una vez</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">cota inferior ajustada</text>
+</svg>

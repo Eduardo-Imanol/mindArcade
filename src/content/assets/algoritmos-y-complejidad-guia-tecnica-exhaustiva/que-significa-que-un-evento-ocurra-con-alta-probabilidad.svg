@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa que un evento ocurra con alta probabilidad?">
+<title>¿Qué significa que un evento ocurra con alta probabilidad?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="328.92" cy="14.99" rx="132.02" ry="132.02" fill="hsl(168 90% 58% / 0.2)"/>
+<ellipse cx="336.71" cy="435.83" rx="153.66" ry="153.66" fill="hsl(168 90% 58% / 0.227)"/>
+<ellipse cx="94.67" cy="103.15" rx="180.54" ry="180.54" fill="hsl(168 90% 58% / 0.151)"/>
+<ellipse cx="167.61" cy="71.74" rx="174.62" ry="174.62" fill="hsl(168 90% 58% / 0.228)"/>
+<rect x="151" y="170" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">1 − 1/n^c</text>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">con c constante</text>
+<line x1="256" y1="300" x2="256" y2="339.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,350 249.57,339.87 262.43,339.87" fill="#39ff14"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">riesgo despreciable</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tamaño de dígito se usa habitualmente en radix de 32 bits?">
+<title>¿Qué tamaño de dígito se usa habitualmente en radix de 32 bits?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="456.67" cy="194.15" rx="187.68" ry="187.68" fill="hsl(120 90% 58% / 0.229)"/>
+<ellipse cx="111.19" cy="36.06" rx="191.18" ry="191.18" fill="hsl(120 90% 58% / 0.148)"/>
+<ellipse cx="315.8" cy="258.49" rx="91.93" ry="91.93" fill="hsl(120 90% 58% / 0.175)"/>
+<ellipse cx="69.97" cy="361.38" rx="143.83" ry="143.83" fill="hsl(120 90% 58% / 0.218)"/>
+<rect x="90" y="159" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">8 bits</text>
+<rect x="297" y="159" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">11 bits</text>
+<rect x="80" y="259" width="140" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="150" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">256 cubos</text>
+<rect x="282" y="259" width="160" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="362" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">2048 cubos</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">4 u 3 pasadas para 32 bits</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">equilibra cubos y pasadas</text>
+</svg>

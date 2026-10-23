@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué aporta el Teorema Maestro al análisis de recurrencias?">
+<title>¿Qué aporta el Teorema Maestro al análisis de recurrencias?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="305.14" cy="109.83" rx="171.33" ry="171.33" fill="hsl(168 90% 58% / 0.149)"/>
+<ellipse cx="510.36" cy="352.12" rx="110" ry="110" fill="hsl(168 90% 58% / 0.171)"/>
+<ellipse cx="34.89" cy="30.87" rx="99.13" ry="99.13" fill="hsl(168 90% 58% / 0.178)"/>
+<ellipse cx="344.54" cy="188.53" rx="157.15" ry="157.15" fill="hsl(168 90% 58% / 0.15)"/>
+<rect x="70" y="150" width="372" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">T(n) = aT(n/b) + f(n)</text>
+<line x1="256" y1="250" x2="256" y2="284.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,295 249.57,284.87 262.43,284.87" fill="#8a7fb5"/>
+<rect x="161" y="305" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="325" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">p = log_b a</text>
+<text x="256" y="405" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">compara f con el exponente crítico</text>
+</svg>

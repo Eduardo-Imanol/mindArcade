@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ordenación conviene para primitivos sin estabilidad?">
+<title>¿Qué ordenación conviene para primitivos sin estabilidad?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="341.23" cy="417.89" rx="95.27" ry="95.27" fill="hsl(45 90% 58% / 0.187)"/>
+<ellipse cx="486.55" cy="329.85" rx="92.49" ry="92.49" fill="hsl(45 90% 58% / 0.189)"/>
+<ellipse cx="277.26" cy="397.99" rx="107.06" ry="107.06" fill="hsl(45 90% 58% / 0.176)"/>
+<ellipse cx="272.68" cy="480.65" rx="196.19" ry="196.19" fill="hsl(45 90% 58% / 0.218)"/>
+<rect x="60" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">pdqsort</text>
+<rect x="292" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="306" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">introsort</text>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">no necesitas conservar empates</text>
+<rect x="181" y="350" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">in-place</text>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">rápido en la práctica</text>
+</svg>

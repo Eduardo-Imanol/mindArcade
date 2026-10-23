@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué conclusión da el límite de f(n)/g(n) igual a cero?">
+<title>¿Qué conclusión da el límite de f(n)/g(n) igual a cero?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="121.14" cy="340.8" rx="94.34" ry="94.34" fill="hsl(120 90% 58% / 0.216)"/>
+<ellipse cx="439.29" cy="358.81" rx="166.12" ry="166.12" fill="hsl(120 90% 58% / 0.219)"/>
+<ellipse cx="497.8" cy="160.43" rx="141.09" ry="141.09" fill="hsl(120 90% 58% / 0.166)"/>
+<ellipse cx="220.74" cy="112.08" rx="155.69" ry="155.69" fill="hsl(120 90% 58% / 0.147)"/>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">lim f(n)/g(n)</text>
+<line x1="256" y1="220" x2="256" y2="274.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,285 249.57,274.87 262.43,274.87" fill="#00ffcc"/>
+<rect x="211" y="295" width="90" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" font-weight="700" fill="#39ff14">0</text>
+<text x="256" y="395" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">f pertenece a o(g)</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">y también a O(g)</text>
+</svg>

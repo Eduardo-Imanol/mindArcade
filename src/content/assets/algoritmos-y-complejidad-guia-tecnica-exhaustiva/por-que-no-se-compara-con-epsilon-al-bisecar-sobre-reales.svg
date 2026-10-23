@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué no se compara con epsilon al bisecar sobre reales?">
+<title>¿Por qué no se compara con epsilon al bisecar sobre reales?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="126.15" cy="205.86" rx="82.99" ry="82.99" fill="hsl(320 90% 58% / 0.144)"/>
+<ellipse cx="273.72" cy="420.61" rx="194.89" ry="194.89" fill="hsl(320 90% 58% / 0.187)"/>
+<ellipse cx="447.1" cy="451.18" rx="122.22" ry="122.22" fill="hsl(320 90% 58% / 0.179)"/>
+<ellipse cx="437.51" cy="302.79" rx="127.14" ry="127.14" fill="hsl(320 90% 58% / 0.19)"/>
+<line x1="70" y1="230" x2="442" y2="230" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="85" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<ellipse cx="143" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<ellipse cx="201" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<ellipse cx="259" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<ellipse cx="317" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<ellipse cx="375" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<ellipse cx="433" cy="230" rx="5" ry="5" fill="#8a7fb5"/>
+<rect x="136" y="130" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">iteraciones fijas</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">60 a 100 pasos</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">el bucle con epsilon puede no terminar</text>
+</svg>

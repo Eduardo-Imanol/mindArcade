@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Para qué sirve el árbol de recursión?">
+<title>¿Para qué sirve el árbol de recursión?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="449.35" cy="112.55" rx="182.28" ry="182.28" fill="hsl(265 90% 58% / 0.171)"/>
+<ellipse cx="374.42" cy="13.88" rx="84.51" ry="84.51" fill="hsl(265 90% 58% / 0.231)"/>
+<ellipse cx="386.33" cy="478.38" rx="176.01" ry="176.01" fill="hsl(265 90% 58% / 0.222)"/>
+<ellipse cx="227.65" cy="152.05" rx="138.33" ry="138.33" fill="hsl(265 90% 58% / 0.204)"/>
+<ellipse cx="256" cy="120" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n</text>
+<ellipse cx="170" cy="210" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="170" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n/2</text>
+<ellipse cx="342" cy="210" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="342" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n/2</text>
+<ellipse cx="110" cy="300" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="110" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">n/4</text>
+<ellipse cx="230" cy="300" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="230" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">n/4</text>
+<ellipse cx="282" cy="300" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="282" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">n/4</text>
+<ellipse cx="402" cy="300" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="402" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">n/4</text>
+<line x1="256" y1="120" x2="170" y2="210" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="256" y1="120" x2="342" y2="210" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">suma el costo por nivel</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué mejora Powersort sobre Timsort?">
+<title>¿Qué mejora Powersort sobre Timsort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="133.28" cy="131.25" rx="171.9" ry="171.9" fill="hsl(265 90% 58% / 0.227)"/>
+<ellipse cx="125.75" cy="246.4" rx="155.18" ry="155.18" fill="hsl(265 90% 58% / 0.174)"/>
+<ellipse cx="241.45" cy="8.38" rx="90.17" ry="90.17" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="448.85" cy="222.77" rx="131.76" ry="131.76" fill="hsl(265 90% 58% / 0.166)"/>
+<rect x="70" y="190" width="90" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="115" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">run</text>
+<rect x="166" y="190" width="70" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="201" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">run</text>
+<rect x="262" y="190" width="120" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="322" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">run</text>
+<rect x="358" y="190" width="60" height="52" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="388" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">run</text>
+<line x1="150" y1="260" x2="150" y2="289.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="150,300 143.57,289.87 156.43,289.87" fill="#39ff14"/>
+<line x1="340" y1="260" x2="340" y2="289.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="340,300 333.57,289.87 346.43,289.87" fill="#39ff14"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">árbol de fusiones equilibrado</text>
+<rect x="176" y="370" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">más rápido</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">menos comparaciones</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el orden UTF-16 no es el orden alfabético humano?">
+<title>¿Por qué el orden UTF-16 no es el orden alfabético humano?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="162.44" cy="183.8" rx="163.2" ry="163.2" fill="hsl(320 90% 58% / 0.183)"/>
+<ellipse cx="96.72" cy="92.6" rx="107.96" ry="107.96" fill="hsl(320 90% 58% / 0.193)"/>
+<ellipse cx="377" cy="21.74" rx="201.01" ry="201.01" fill="hsl(320 90% 58% / 0.188)"/>
+<ellipse cx="453.62" cy="47.27" rx="190.73" ry="190.73" fill="hsl(320 90% 58% / 0.183)"/>
+<rect x="55" y="160" width="180" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">code units</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">A &lt; a &lt; á</text>
+<rect x="277" y="160" width="180" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">collation</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">reglas del idioma</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">acentos, mayúsculas y locale</text>
+<rect x="161" y="400" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">Intl.Collator</text>
+</svg>

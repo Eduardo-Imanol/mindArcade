@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se ordenan datos con pocas claves distintas y no enteras?">
+<title>¿Cómo se ordenan datos con pocas claves distintas y no enteras?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="68.28" cy="176.24" rx="150.98" ry="150.98" fill="hsl(320 90% 58% / 0.182)"/>
+<ellipse cx="284.61" cy="447.58" rx="150.67" ry="150.67" fill="hsl(320 90% 58% / 0.22)"/>
+<ellipse cx="60.11" cy="184.56" rx="121.32" ry="121.32" fill="hsl(320 90% 58% / 0.159)"/>
+<ellipse cx="104.23" cy="352.17" rx="173.06" ry="173.06" fill="hsl(320 90% 58% / 0.199)"/>
+<rect x="80" y="160" width="110" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="94" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">clave A</text>
+<line x1="135" y1="238" x2="245.8" y2="276.46" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 244.32,282.75 248.54,270.6" fill="#8a7fb5"/>
+<rect x="210" y="160" width="110" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="224" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">clave B</text>
+<line x1="265" y1="238" x2="258.26" y2="269.44" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 251.84,268.75 264.41,271.44" fill="#8a7fb5"/>
+<rect x="340" y="160" width="110" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="354" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">clave C</text>
+<line x1="395" y1="238" x2="266.34" y2="276.88" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 263.84,270.91 267.56,283.22" fill="#8a7fb5"/>
+<rect x="146" y="290" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#00ffcc">agrupar por clave</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">buckets o hash, no comparar</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">cada grupo conserva el orden</text>
+</svg>

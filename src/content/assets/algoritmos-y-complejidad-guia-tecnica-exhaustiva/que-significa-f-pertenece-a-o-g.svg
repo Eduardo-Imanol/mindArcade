@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa f pertenece a O(g)?">
+<title>¿Qué significa f pertenece a O(g)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="470.4" cy="139.32" rx="160.52" ry="160.52" fill="hsl(45 90% 58% / 0.17)"/>
+<ellipse cx="68.5" cy="234.34" rx="117.13" ry="117.13" fill="hsl(45 90% 58% / 0.23)"/>
+<ellipse cx="297.26" cy="459.25" rx="135.22" ry="135.22" fill="hsl(45 90% 58% / 0.161)"/>
+<ellipse cx="156.44" cy="89.82" rx="196.97" ry="196.97" fill="hsl(45 90% 58% / 0.188)"/>
+<rect x="115" y="169" width="130" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="180" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#f1f1f1">f(n)</text>
+<rect x="265" y="169" width="150" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="340" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#f1f1f1">c·g(n)</text>
+<line x1="185" y1="260" x2="185" y2="289.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="185,300 178.57,289.87 191.43,289.87" fill="#00ffcc"/>
+<line x1="335" y1="260" x2="335" y2="289.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="335,300 328.57,289.87 341.43,289.87" fill="#ff007f"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">f ≤ c·g</text>
+<text x="256" y="395" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">para todo n ≥ n₀</text>
+</svg>

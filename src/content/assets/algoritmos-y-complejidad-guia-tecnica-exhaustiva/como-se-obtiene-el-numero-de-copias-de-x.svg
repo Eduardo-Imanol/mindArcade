@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se obtiene el número de copias de x?">
+<title>¿Cómo se obtiene el número de copias de x?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="462.08" cy="409.76" rx="86.31" ry="86.31" fill="hsl(120 90% 58% / 0.207)"/>
+<ellipse cx="88.06" cy="478.54" rx="83.83" ry="83.83" fill="hsl(120 90% 58% / 0.188)"/>
+<ellipse cx="39.94" cy="43.73" rx="127.92" ry="127.92" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="260.28" cy="56.45" rx="112.89" ry="112.89" fill="hsl(120 90% 58% / 0.163)"/>
+<rect x="70" y="175" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="124" y="175" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="178" y="175" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="232" y="175" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="286" y="175" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="340" y="175" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<line x1="130" y1="240" x2="280" y2="240" stroke="#39ff14" stroke-width="3" stroke-linecap="round"/>
+<text x="205" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">tres copias</text>
+<rect x="146" y="310" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">upper − lower</text>
+<text x="256" y="405" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">en O(log n)</text>
+</svg>

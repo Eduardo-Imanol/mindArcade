@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se mantiene la mediana móvil?">
+<title>¿Cómo se mantiene la mediana móvil?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="135.74" cy="319.47" rx="111.58" ry="111.58" fill="hsl(265 90% 58% / 0.227)"/>
+<ellipse cx="400.01" cy="409.42" rx="89.48" ry="89.48" fill="hsl(265 90% 58% / 0.174)"/>
+<ellipse cx="124.22" cy="27.44" rx="191.54" ry="191.54" fill="hsl(265 90% 58% / 0.175)"/>
+<ellipse cx="88.22" cy="204.03" rx="176.7" ry="176.7" fill="hsl(265 90% 58% / 0.2)"/>
+<rect x="55" y="150" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">max-heap</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">mitad menor</text>
+<rect x="277" y="150" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="291" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">min-heap</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">mitad mayor</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">la mediana está en el borde</text>
+<rect x="181" y="390" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(log n)</text>
+</svg>

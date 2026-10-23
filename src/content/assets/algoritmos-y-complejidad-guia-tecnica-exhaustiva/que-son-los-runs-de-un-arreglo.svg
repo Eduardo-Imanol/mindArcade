@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son los runs de un arreglo?">
+<title>¿Qué son los runs de un arreglo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="151.16" cy="425.92" rx="188.67" ry="188.67" fill="hsl(320 90% 58% / 0.166)"/>
+<ellipse cx="108.7" cy="111.28" rx="160.92" ry="160.92" fill="hsl(320 90% 58% / 0.237)"/>
+<ellipse cx="310.45" cy="429.1" rx="109.35" ry="109.35" fill="hsl(320 90% 58% / 0.201)"/>
+<ellipse cx="379.15" cy="489.77" rx="203.63" ry="203.63" fill="hsl(320 90% 58% / 0.205)"/>
+<rect x="60" y="180" width="140" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">ascendente</text>
+<rect x="210" y="180" width="90" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="224" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">baja</text>
+<rect x="310" y="180" width="145" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="324" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">ascendente</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">tramos ya ordenados</text>
+<rect x="176" y="330" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">se fusionan</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">Timsort los detecta</text>
+</svg>

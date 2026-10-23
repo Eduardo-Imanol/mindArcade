@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué solución tiene T(n) = 2T(n/4) + √n?">
+<title>¿Qué solución tiene T(n) = 2T(n/4) + √n?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="285.18" cy="417.67" rx="184.34" ry="184.34" fill="hsl(168 90% 58% / 0.195)"/>
+<ellipse cx="44.57" cy="484.14" rx="89.13" ry="89.13" fill="hsl(168 90% 58% / 0.226)"/>
+<ellipse cx="183.22" cy="244.85" rx="88.94" ry="88.94" fill="hsl(168 90% 58% / 0.177)"/>
+<ellipse cx="322.09" cy="293.34" rx="85.85" ry="85.85" fill="hsl(168 90% 58% / 0.212)"/>
+<rect x="70" y="150" width="372" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">T(n) = 2T(n/4) + n</text>
+<rect x="80" y="250" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="150" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ff007f">p = 1/2</text>
+<rect x="291" y="250" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="356" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ffcc00">f = n¹</text>
+<line x1="256" y1="300" x2="256" y2="329.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,340 249.57,329.87 262.43,329.87" fill="#39ff14"/>
+<rect x="186" y="350" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="27" font-weight="700" fill="#39ff14">Θ(n)</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">la raíz domina</text>
+</svg>

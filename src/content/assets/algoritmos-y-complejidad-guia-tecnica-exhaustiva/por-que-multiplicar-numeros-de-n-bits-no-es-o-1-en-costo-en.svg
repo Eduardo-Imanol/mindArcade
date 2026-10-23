@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué multiplicar números de n bits no es O(1) en costo en bits?">
+<title>¿Por qué multiplicar números de n bits no es O(1) en costo en bits?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="447.29" cy="193.67" rx="154.83" ry="154.83" fill="hsl(265 90% 58% / 0.147)"/>
+<ellipse cx="29.62" cy="216.67" rx="153.69" ry="153.69" fill="hsl(265 90% 58% / 0.166)"/>
+<ellipse cx="173.2" cy="311.72" rx="153.56" ry="153.56" fill="hsl(265 90% 58% / 0.225)"/>
+<ellipse cx="506.4" cy="154.74" rx="157.67" ry="157.67" fill="hsl(265 90% 58% / 0.201)"/>
+<rect x="55" y="150" width="180" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">escolar</text>
+<rect x="277" y="150" width="180" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">Karatsuba</text>
+<line x1="243" y1="210" x2="261.8" y2="210" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="269,210 262.25,214.29 262.25,205.71" fill="#8a7fb5"/>
+<rect x="90" y="295" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="145" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">O(n²)</text>
+<rect x="302" y="295" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="367" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">n^1.585</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">el coste crece con los bits</text>
+</svg>

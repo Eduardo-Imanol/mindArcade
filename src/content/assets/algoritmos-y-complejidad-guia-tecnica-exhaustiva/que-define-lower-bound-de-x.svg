@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué define lower_bound de x?">
+<title>¿Qué define lower_bound de x?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="255.99" cy="174.61" rx="81.24" ry="81.24" fill="hsl(168 90% 58% / 0.223)"/>
+<ellipse cx="41.2" cy="69.96" rx="107.71" ry="107.71" fill="hsl(168 90% 58% / 0.158)"/>
+<ellipse cx="17.96" cy="31.87" rx="95.38" ry="95.38" fill="hsl(168 90% 58% / 0.152)"/>
+<ellipse cx="89.64" cy="201.41" rx="184.21" ry="184.21" fill="hsl(168 90% 58% / 0.233)"/>
+<rect x="70" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="124" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="178" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<rect x="232" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="286" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="340" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<line x1="190" y1="160" x2="190" y2="171.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="190,182 183.57,171.87 196.43,171.87" fill="#ffcc00"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">primer a[i] ≥ x</text>
+<text x="256" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">posición antes de los iguales</text>
+<rect x="151" y="395" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">lower_bound</text>
+</svg>

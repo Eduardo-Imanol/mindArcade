@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tres obligaciones tiene un invariante de bucle?">
+<title>¿Qué tres obligaciones tiene un invariante de bucle?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="169.98" cy="354.68" rx="116.79" ry="116.79" fill="hsl(168 90% 58% / 0.154)"/>
+<ellipse cx="391.71" cy="422.99" rx="196.39" ry="196.39" fill="hsl(168 90% 58% / 0.153)"/>
+<ellipse cx="205.62" cy="263.2" rx="154.91" ry="154.91" fill="hsl(168 90% 58% / 0.226)"/>
+<ellipse cx="16.44" cy="321.69" rx="130.62" ry="130.62" fill="hsl(168 90% 58% / 0.168)"/>
+<rect x="90" y="140" width="330" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="98" y1="148" x2="412" y2="148" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="255" y="174" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">inicialización</text>
+<rect x="90" y="215" width="330" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="98" y1="223" x2="412" y2="223" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="255" y="249" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mantenimiento</text>
+<rect x="90" y="290" width="330" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="98" y1="298" x2="412" y2="298" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="255" y="324" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">terminación</text>
+<line x1="430" y1="170" x2="430" y2="344.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="430,355 423.57,344.87 436.43,344.87" fill="#8a7fb5"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">postcondición al salir</text>
+</svg>

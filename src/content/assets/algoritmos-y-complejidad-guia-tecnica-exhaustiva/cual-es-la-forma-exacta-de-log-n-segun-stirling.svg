@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la forma exacta de log₂(n!) según Stirling?">
+<title>¿Cuál es la forma exacta de log₂(n!) según Stirling?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="216.38" cy="227.67" rx="168.85" ry="168.85" fill="hsl(265 90% 58% / 0.155)"/>
+<ellipse cx="21.51" cy="327.62" rx="165.52" ry="165.52" fill="hsl(265 90% 58% / 0.223)"/>
+<ellipse cx="70.78" cy="333.39" rx="176.07" ry="176.07" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="179.61" cy="433.53" rx="160.66" ry="160.66" fill="hsl(265 90% 58% / 0.202)"/>
+<rect x="156" y="130" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">n log₂ n</text>
+<rect x="161" y="205" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">− 1.443 n</text>
+<rect x="161" y="280" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#8a7fb5">+ O(log n)</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">log₂(n!) es Θ(n log n)</text>
+</svg>

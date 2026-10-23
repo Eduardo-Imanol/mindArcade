@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué añade pdqsort a introsort?">
+<title>¿Qué añade pdqsort a introsort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="158.26" cy="400.29" rx="149.1" ry="149.1" fill="hsl(168 90% 58% / 0.198)"/>
+<ellipse cx="197.7" cy="496.39" rx="93.48" ry="93.48" fill="hsl(168 90% 58% / 0.225)"/>
+<ellipse cx="407.61" cy="74.46" rx="169.09" ry="169.09" fill="hsl(168 90% 58% / 0.158)"/>
+<ellipse cx="339.95" cy="484.66" rx="135.36" ry="135.36" fill="hsl(168 90% 58% / 0.171)"/>
+<rect x="141" y="140" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="160" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">detecta patrones</text>
+<line x1="256" y1="200" x2="256" y2="239.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,250 249.57,239.87 262.43,239.87" fill="#39ff14"/>
+<rect x="131" y="260" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">partición branchless</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">ordenaciones parciales y duplicados</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">menos ramas mal predichas</text>
+</svg>

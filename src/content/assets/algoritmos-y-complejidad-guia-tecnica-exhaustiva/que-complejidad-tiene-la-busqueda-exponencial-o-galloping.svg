@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complejidad tiene la búsqueda exponencial o galloping?">
+<title>¿Qué complejidad tiene la búsqueda exponencial o galloping?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="502.17" cy="149.03" rx="170.25" ry="170.25" fill="hsl(120 90% 58% / 0.192)"/>
+<ellipse cx="339.17" cy="435.3" rx="133.05" ry="133.05" fill="hsl(120 90% 58% / 0.183)"/>
+<ellipse cx="52.72" cy="256.9" rx="105.4" ry="105.4" fill="hsl(120 90% 58% / 0.232)"/>
+<ellipse cx="60.77" cy="259.33" rx="112.37" ry="112.37" fill="hsl(120 90% 58% / 0.165)"/>
+<rect x="60" y="179" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="90" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="142" y="179" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="172" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="224" y="179" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="254" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="306" y="179" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="336" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">8</text>
+<rect x="388" y="179" width="60" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="418" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">16</text>
+<line x1="410" y1="240" x2="410" y2="279.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="410,290 403.57,279.87 416.43,279.87" fill="#39ff14"/>
+<rect x="176" y="300" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">O(log p)</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">p es la posición del objetivo</text>
+</svg>

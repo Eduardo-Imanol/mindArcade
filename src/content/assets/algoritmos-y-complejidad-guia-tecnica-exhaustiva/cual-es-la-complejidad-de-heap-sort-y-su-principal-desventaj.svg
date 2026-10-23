@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la complejidad de heap sort y su principal desventaja?">
+<title>¿Cuál es la complejidad de heap sort y su principal desventaja?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="205.16" cy="502.08" rx="174.07" ry="174.07" fill="hsl(265 90% 58% / 0.14)"/>
+<ellipse cx="324.36" cy="344.38" rx="73.2" ry="73.2" fill="hsl(265 90% 58% / 0.239)"/>
+<ellipse cx="489.78" cy="261.11" rx="155.14" ry="155.14" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="421.82" cy="41.54" rx="159.43" ry="159.43" fill="hsl(265 90% 58% / 0.145)"/>
+<ellipse cx="256" cy="110" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">max</text>
+<ellipse cx="170" cy="200" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="170" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">9</text>
+<ellipse cx="342" cy="200" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="342" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">7</text>
+<line x1="256" y1="110" x2="170" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="256" y1="110" x2="342" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="342" y1="230" x2="421.08" y2="283.92" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="430,290 418.01,289.6 425.25,278.98" fill="#ffcc00"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">extrae el máximo</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">los iguales cambian de orden</text>
+<rect x="176" y="410" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">inestable</text>
+</svg>

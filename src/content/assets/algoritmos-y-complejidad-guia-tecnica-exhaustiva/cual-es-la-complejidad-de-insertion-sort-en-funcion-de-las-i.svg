@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la complejidad de insertion sort en función de las inversiones?">
+<title>¿Cuál es la complejidad de insertion sort en función de las inversiones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="229.74" cy="424.36" rx="154.72" ry="154.72" fill="hsl(320 90% 58% / 0.145)"/>
+<ellipse cx="454.93" cy="292.87" rx="90.59" ry="90.59" fill="hsl(320 90% 58% / 0.191)"/>
+<ellipse cx="68.48" cy="200.38" rx="180.4" ry="180.4" fill="hsl(320 90% 58% / 0.18)"/>
+<ellipse cx="137.93" cy="502.88" rx="173.1" ry="173.1" fill="hsl(320 90% 58% / 0.144)"/>
+<rect x="60" y="170" width="60" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="90" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="127" y="170" width="60" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="157" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="194" y="170" width="60" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="224" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="261" y="170" width="60" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="291" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">5</text>
+<rect x="328" y="170" width="60" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="358" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="395" y="170" width="60" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="425" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">6</text>
+<line x1="310" y1="225" x2="362.36" y2="277.36" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="370,285 358.29,282.38 367.38,273.29" fill="#39ff14"/>
+<rect x="166" y="295" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">1 inversión</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">costo O(n + I)</text>
+</svg>

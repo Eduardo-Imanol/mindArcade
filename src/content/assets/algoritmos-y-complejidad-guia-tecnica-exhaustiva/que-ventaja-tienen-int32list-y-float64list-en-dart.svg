@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ventaja tienen Int32List y Float64List en Dart?">
+<title>¿Qué ventaja tienen Int32List y Float64List en Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="282.5" cy="113.69" rx="163.99" ry="163.99" fill="hsl(120 90% 58% / 0.221)"/>
+<ellipse cx="205.26" cy="12.82" rx="108.76" ry="108.76" fill="hsl(120 90% 58% / 0.183)"/>
+<ellipse cx="329.83" cy="450.98" rx="199" ry="199" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="487.36" cy="469.42" rx="111.11" ry="111.11" fill="hsl(120 90% 58% / 0.151)"/>
+<rect x="55" y="170" width="180" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="69" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">List dynamic</text>
+<text x="145" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">valores boxed</text>
+<rect x="277" y="170" width="180" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">TypedData</text>
+<text x="367" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">bits contiguos</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">menos memoria y mejores accesos</text>
+<rect x="171" y="405" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">sin boxing</text>
+</svg>

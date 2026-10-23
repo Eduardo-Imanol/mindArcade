@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué complejidad esperada tiene la búsqueda por interpolación?">
+<title>¿Qué complejidad esperada tiene la búsqueda por interpolación?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="245.52" cy="148.49" rx="141.06" ry="141.06" fill="hsl(320 90% 58% / 0.158)"/>
+<ellipse cx="73.77" cy="370.79" rx="138.38" ry="138.38" fill="hsl(320 90% 58% / 0.206)"/>
+<ellipse cx="38.63" cy="493.87" rx="177.29" ry="177.29" fill="hsl(320 90% 58% / 0.239)"/>
+<ellipse cx="275.31" cy="8.04" rx="134.5" ry="134.5" fill="hsl(320 90% 58% / 0.177)"/>
+<line x1="70" y1="260" x2="442" y2="260" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<rect x="65" y="239" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="100" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lo</text>
+<rect x="377" y="239" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="412" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">hi</text>
+<line x1="220" y1="200" x2="290.84" y2="244.28" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,250 288,250.08 294.82,239.18" fill="#00ffcc"/>
+<rect x="215" y="300" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="300" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#00ffcc">estimación</text>
+<rect x="166" y="370" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">log log n</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">O(n) si la distribución es sesgada</text>
+</svg>

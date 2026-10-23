@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué virtud tiene selection sort?">
+<title>¿Qué virtud tiene selection sort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="468.6" cy="311.81" rx="113.7" ry="113.7" fill="hsl(45 90% 58% / 0.158)"/>
+<ellipse cx="142.29" cy="110.96" rx="99.6" ry="99.6" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="142.4" cy="419.45" rx="135.13" ry="135.13" fill="hsl(45 90% 58% / 0.163)"/>
+<ellipse cx="81.58" cy="34.18" rx="192.51" ry="192.51" fill="hsl(45 90% 58% / 0.161)"/>
+<rect x="90" y="180" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="123" y="203" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="163" y="180" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="196" y="203" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="236" y="180" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="269" y="203" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="309" y="180" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="342" y="203" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="131" y="260" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">n − 1 intercambios</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mínimo de escrituras</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">útil con escritura costosa</text>
+</svg>

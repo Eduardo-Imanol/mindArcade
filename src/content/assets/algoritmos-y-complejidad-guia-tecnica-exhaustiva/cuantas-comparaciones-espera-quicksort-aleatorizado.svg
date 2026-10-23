@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuántas comparaciones espera quicksort aleatorizado?">
+<title>¿Cuántas comparaciones espera quicksort aleatorizado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="329.85" cy="59.27" rx="130.28" ry="130.28" fill="hsl(168 90% 58% / 0.163)"/>
+<ellipse cx="178.06" cy="11.89" rx="80.76" ry="80.76" fill="hsl(168 90% 58% / 0.191)"/>
+<ellipse cx="229.62" cy="486.05" rx="119.97" ry="119.97" fill="hsl(168 90% 58% / 0.202)"/>
+<ellipse cx="511.25" cy="63.36" rx="126.09" ry="126.09" fill="hsl(168 90% 58% / 0.233)"/>
+<rect x="161" y="150" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#00ffcc">2n ln n</text>
+<line x1="256" y1="210" x2="256" y2="259.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,270 249.57,259.87 262.43,259.87" fill="#39ff14"/>
+<rect x="116" y="280" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">≈ 1.39 n log₂ n</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">+39 % que el mínimo teórico</text>
+</svg>

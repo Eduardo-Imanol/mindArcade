@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué contrato debe cumplir un comparador?">
+<title>¿Qué contrato debe cumplir un comparador?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="488.31" cy="433.43" rx="186.53" ry="186.53" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="345.27" cy="283.94" rx="138.76" ry="138.76" fill="hsl(265 90% 58% / 0.211)"/>
+<ellipse cx="364.65" cy="129.54" rx="76.85" ry="76.85" fill="hsl(265 90% 58% / 0.166)"/>
+<ellipse cx="282.72" cy="307.05" rx="195.86" ry="195.86" fill="hsl(265 90% 58% / 0.202)"/>
+<rect x="55" y="160" width="120" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">irreflexivo</text>
+<rect x="196" y="160" width="120" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="210" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">antisim.</text>
+<rect x="337" y="160" width="120" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="351" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">transitivo</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">orden débil estricto</text>
+<rect x="151" y="360" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">compare(a, b)</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">si no, el sort puede fallar</text>
+</svg>

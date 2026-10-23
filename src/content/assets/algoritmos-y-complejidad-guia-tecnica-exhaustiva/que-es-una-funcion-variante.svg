@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una función variante?">
+<title>¿Qué es una función variante?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="478.33" cy="479.18" rx="75.53" ry="75.53" fill="hsl(120 90% 58% / 0.153)"/>
+<ellipse cx="46.92" cy="292.38" rx="172.86" ry="172.86" fill="hsl(120 90% 58% / 0.155)"/>
+<ellipse cx="413.44" cy="277.55" rx="158.18" ry="158.18" fill="hsl(120 90% 58% / 0.163)"/>
+<ellipse cx="474.64" cy="76.86" rx="201.73" ry="201.73" fill="hsl(120 90% 58% / 0.159)"/>
+<rect x="115" y="139" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="160" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n</text>
+<rect x="100" y="219" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n − 1</text>
+<rect x="100" y="299" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n − 2</text>
+<line x1="150" y1="190" x2="150" y2="204.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="150,215 143.57,204.87 156.43,204.87" fill="#39ff14"/>
+<line x1="150" y1="270" x2="150" y2="284.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="150,295 143.57,284.87 156.43,284.87" fill="#39ff14"/>
+<text x="330" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">decrece, no negativa</text>
+<rect x="270" y="300" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="330" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">termina</text>
+</svg>

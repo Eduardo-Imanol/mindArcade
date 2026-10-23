@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuántas pasadas necesita ordenar 100 GB con 4 GB de RAM?">
+<title>¿Cuántas pasadas necesita ordenar 100 GB con 4 GB de RAM?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="400.98" cy="103.16" rx="177.01" ry="177.01" fill="hsl(320 90% 58% / 0.198)"/>
+<ellipse cx="369.96" cy="372.9" rx="79.51" ry="79.51" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="19.39" cy="491.83" rx="165.07" ry="165.07" fill="hsl(320 90% 58% / 0.183)"/>
+<ellipse cx="151.39" cy="18.27" rx="108.32" ry="108.32" fill="hsl(320 90% 58% / 0.204)"/>
+<rect x="75" y="150" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#00ffcc">100 GB</text>
+<rect x="282" y="150" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#ff007f">4 GB RAM</text>
+<line x1="256" y1="210" x2="256" y2="244.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,255 249.57,244.87 262.43,244.87" fill="#8a7fb5"/>
+<rect x="176" y="265" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">25 runs</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">1 pasada 25-aria con 26 buffers</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">o 5 pasadas binarias</text>
+</svg>

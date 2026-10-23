@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué algoritmo logra el mínimo de comparaciones para n = 5?">
+<title>¿Qué algoritmo logra el mínimo de comparaciones para n = 5?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="345.7" cy="42.36" rx="79.55" ry="79.55" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="271.1" cy="365.12" rx="82.6" ry="82.6" fill="hsl(168 90% 58% / 0.232)"/>
+<ellipse cx="108.73" cy="390.92" rx="114.86" ry="114.86" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="71.47" cy="139.71" rx="182.2" ry="182.2" fill="hsl(168 90% 58% / 0.215)"/>
+<rect x="83" y="159" width="54" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="110" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="149" y="159" width="54" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="176" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="215" y="159" width="54" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="242" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="281" y="159" width="54" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="308" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="347" y="159" width="54" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="374" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">5</text>
+<line x1="256" y1="225" x2="256" y2="264.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,275 249.57,264.87 262.43,264.87" fill="#39ff14"/>
+<rect x="141" y="285" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="305" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">7 comparaciones</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">Ford-Johnson / merge-insertion</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">mínimo teórico para n = 5</text>
+</svg>

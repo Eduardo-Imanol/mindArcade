@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ordenación conviene para enteros de ancho fijo y n grande?">
+<title>¿Qué ordenación conviene para enteros de ancho fijo y n grande?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="32.97" cy="383.42" rx="90.98" ry="90.98" fill="hsl(168 90% 58% / 0.16)"/>
+<ellipse cx="262.08" cy="326.96" rx="202.46" ry="202.46" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="509.68" cy="463.62" rx="78.62" ry="78.62" fill="hsl(168 90% 58% / 0.177)"/>
+<ellipse cx="372.54" cy="355.41" rx="81.29" ry="81.29" fill="hsl(168 90% 58% / 0.215)"/>
+<rect x="70" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">32 bits</text>
+<line x1="238" y1="220" x2="271.2" y2="220" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="282,220 271.87,226.43 271.87,213.57" fill="#39ff14"/>
+<rect x="292" y="170" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="306" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">radix</text>
+<rect x="151" y="295" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(d(n + b))</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">lineal si d es constante</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">claves enteras, no objetos</text>
+</svg>

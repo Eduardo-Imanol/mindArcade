@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es el error clásico al calcular el punto medio?">
+<title>¿Cuál es el error clásico al calcular el punto medio?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="378.13" cy="442.54" rx="79.62" ry="79.62" fill="hsl(45 90% 58% / 0.216)"/>
+<ellipse cx="368.8" cy="216.79" rx="163.4" ry="163.4" fill="hsl(45 90% 58% / 0.181)"/>
+<ellipse cx="214.23" cy="93.64" rx="74.33" ry="74.33" fill="hsl(45 90% 58% / 0.202)"/>
+<ellipse cx="117.75" cy="1.71" rx="197.83" ry="197.83" fill="hsl(45 90% 58% / 0.209)"/>
+<rect x="55" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="90" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lo</text>
+<rect x="387" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="422" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">hi</text>
+<rect x="131" y="240" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="25" font-weight="700" fill="#ffcc00">(lo + hi) / 2</text>
+<line x1="170" y1="290" x2="342" y2="290" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<text x="256" y="325" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ff007f">desborda</text>
+<rect x="116" y="370" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">lo + (hi − lo) / 2</text>
+</svg>

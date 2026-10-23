@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué dos significados tiene in-place?">
+<title>¿Qué dos significados tiene in-place?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="197.31" cy="261.8" rx="150.35" ry="150.35" fill="hsl(265 90% 58% / 0.159)"/>
+<ellipse cx="97.76" cy="65.92" rx="204.76" ry="204.76" fill="hsl(265 90% 58% / 0.184)"/>
+<ellipse cx="100.42" cy="351.39" rx="137.91" ry="137.91" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="234.98" cy="14.1" rx="179.33" ry="179.33" fill="hsl(265 90% 58% / 0.223)"/>
+<rect x="55" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">estricto</text>
+<rect x="277" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="291" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">liberal</text>
+<line x1="243" y1="230" x2="261.8" y2="230" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="269,230 262.25,234.29 262.25,225.71" fill="#8a7fb5"/>
+<rect x="90" y="245" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="145" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">O(1)</text>
+<rect x="297" y="245" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="367" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">O(log n)</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">la pila cuenta</text>
+</svg>

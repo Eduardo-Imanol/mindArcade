@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se resuelve T(n) = 2T(√n) + log n?">
+<title>¿Cómo se resuelve T(n) = 2T(√n) + log n?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="96.25" cy="496.53" rx="81.58" ry="81.58" fill="hsl(265 90% 58% / 0.185)"/>
+<ellipse cx="400.66" cy="207.14" rx="190.74" ry="190.74" fill="hsl(265 90% 58% / 0.217)"/>
+<ellipse cx="26.03" cy="257.03" rx="129.28" ry="129.28" fill="hsl(265 90% 58% / 0.218)"/>
+<ellipse cx="227.86" cy="292.58" rx="182.66" ry="182.66" fill="hsl(265 90% 58% / 0.167)"/>
+<rect x="60" y="160" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">√n</text>
+<line x1="188" y1="210" x2="221.2" y2="210" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="232,210 221.87,216.43 221.87,203.57" fill="#00ffcc"/>
+<rect x="240" y="160" width="140" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="254" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">m = log n</text>
+<line x1="388" y1="210" x2="409.2" y2="210" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="420,210 409.87,216.43 409.87,203.57" fill="#00ffcc"/>
+<rect x="126" y="310" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">log n · log log n</text>
+<text x="256" y="405" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">cambio de variable</text>
+</svg>

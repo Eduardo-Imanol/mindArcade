@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué dimensiones del costo se evalúan además del tiempo?">
+<title>¿Qué dimensiones del costo se evalúan además del tiempo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="347.78" cy="180.91" rx="142.34" ry="142.34" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="243.63" cy="363.57" rx="183.32" ry="183.32" fill="hsl(265 90% 58% / 0.209)"/>
+<ellipse cx="493.89" cy="74.89" rx="201.25" ry="201.25" fill="hsl(265 90% 58% / 0.223)"/>
+<ellipse cx="495.8" cy="152.13" rx="160.16" ry="160.16" fill="hsl(265 90% 58% / 0.211)"/>
+<rect x="65" y="149" width="130" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">espacio</text>
+<rect x="245" y="149" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="300" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">caché</text>
+<rect x="85" y="239" width="90" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">E/S</text>
+<rect x="240" y="239" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="300" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">latencia</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="25" font-weight="700" fill="#f1f1f1">varias dimensiones</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">no siempre coinciden</text>
+</svg>

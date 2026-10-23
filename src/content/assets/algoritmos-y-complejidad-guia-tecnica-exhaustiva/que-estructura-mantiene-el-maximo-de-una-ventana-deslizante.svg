@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué estructura mantiene el máximo de una ventana deslizante en O(n) total?">
+<title>¿Qué estructura mantiene el máximo de una ventana deslizante en O(n) total?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="114.73" cy="460.37" rx="183.32" ry="183.32" fill="hsl(168 90% 58% / 0.171)"/>
+<ellipse cx="186.23" cy="163.32" rx="155.46" ry="155.46" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="449.82" cy="298.62" rx="72.4" ry="72.4" fill="hsl(168 90% 58% / 0.228)"/>
+<ellipse cx="168.23" cy="411.07" rx="96.44" ry="96.44" fill="hsl(168 90% 58% / 0.206)"/>
+<rect x="65" y="180" width="50" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="90" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">5</text>
+<rect x="127" y="180" width="50" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="152" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="189" y="180" width="50" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="214" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="251" y="180" width="50" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="276" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="313" y="180" width="50" height="50" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="338" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">2</text>
+<line x1="90" y1="250" x2="319.2" y2="250" stroke="#00ffcc" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="330,250 319.87,256.43 319.87,243.57" fill="#00ffcc"/>
+<rect x="156" y="295" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">deque monótona</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">O(n) total, no O(nk)</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">descarta lo que ya no puede ganar</text>
+</svg>

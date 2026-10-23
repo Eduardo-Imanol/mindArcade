@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué construir un heap cuesta Θ(n) y no Θ(n log n)?">
+<title>¿Por qué construir un heap cuesta Θ(n) y no Θ(n log n)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="270.12" cy="499.35" rx="163.68" ry="163.68" fill="hsl(168 90% 58% / 0.151)"/>
+<ellipse cx="107.94" cy="477.64" rx="81.16" ry="81.16" fill="hsl(168 90% 58% / 0.181)"/>
+<ellipse cx="211.8" cy="5.12" rx="109.22" ry="109.22" fill="hsl(168 90% 58% / 0.166)"/>
+<ellipse cx="269.2" cy="361.64" rx="89.58" ry="89.58" fill="hsl(168 90% 58% / 0.163)"/>
+<ellipse cx="256" cy="130" rx="8" ry="8" fill="#39ff14"/>
+<ellipse cx="228.5" cy="185" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="283.5" cy="185" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="214.75" cy="240" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="242.25" cy="240" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="269.75" cy="240" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="297.25" cy="240" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="207.88" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="221.63" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="235.38" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="249.13" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="262.88" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="276.63" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="290.38" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<ellipse cx="304.13" cy="295" rx="8" ry="8" fill="#00ffcc"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">Σ n / 2ʰ converge</text>
+<rect x="196" y="385" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="405" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">O(n)</text>
+</svg>

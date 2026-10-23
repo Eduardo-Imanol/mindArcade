@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué demuestra la cota Ω(n log n) de la ordenación por comparaciones?">
+<title>¿Qué demuestra la cota Ω(n log n) de la ordenación por comparaciones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="202.34" cy="24.23" rx="112.45" ry="112.45" fill="hsl(45 90% 58% / 0.206)"/>
+<ellipse cx="294.08" cy="200.37" rx="186.41" ry="186.41" fill="hsl(45 90% 58% / 0.166)"/>
+<ellipse cx="470.75" cy="490.41" rx="99.08" ry="99.08" fill="hsl(45 90% 58% / 0.186)"/>
+<ellipse cx="473.45" cy="421.12" rx="155.46" ry="155.46" fill="hsl(45 90% 58% / 0.227)"/>
+<ellipse cx="256" cy="110" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">?</text>
+<ellipse cx="160" cy="200" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="160" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">≤</text>
+<ellipse cx="352" cy="200" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="352" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">&gt;</text>
+<line x1="256" y1="110" x2="160" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="256" y1="110" x2="352" y2="200" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">n! hojas posibles</text>
+<rect x="171" y="325" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="345" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">Ω(n log n)</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">altura mínima del árbol</text>
+</svg>

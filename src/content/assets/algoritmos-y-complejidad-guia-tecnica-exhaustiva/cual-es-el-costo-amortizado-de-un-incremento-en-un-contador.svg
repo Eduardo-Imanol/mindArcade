@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es el costo amortizado de un incremento en un contador binario?">
+<title>¿Cuál es el costo amortizado de un incremento en un contador binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="95.87" cy="395.51" rx="164.94" ry="164.94" fill="hsl(265 90% 58% / 0.197)"/>
+<ellipse cx="381.38" cy="160.14" rx="112.22" ry="112.22" fill="hsl(265 90% 58% / 0.24)"/>
+<ellipse cx="283.97" cy="195.42" rx="131.39" ry="131.39" fill="hsl(265 90% 58% / 0.215)"/>
+<ellipse cx="299.95" cy="469.83" rx="121.97" ry="121.97" fill="hsl(265 90% 58% / 0.165)"/>
+<rect x="90" y="180" width="48" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="114" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="148" y="180" width="48" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="172" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">0</text>
+<rect x="206" y="180" width="48" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="230" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="264" y="180" width="48" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="288" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">1</text>
+<line x1="256" y1="250" x2="256" y2="289.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#00ffcc"/>
+<rect x="156" y="310" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">amortizado 2</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">total menor que 2n</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo counting sort es peor que ordenar por comparaciones?">
+<title>¿Cuándo counting sort es peor que ordenar por comparaciones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="384.71" cy="245.06" rx="199.25" ry="199.25" fill="hsl(168 90% 58% / 0.22)"/>
+<ellipse cx="174.8" cy="125.79" rx="147.38" ry="147.38" fill="hsl(168 90% 58% / 0.169)"/>
+<ellipse cx="335.9" cy="70.69" rx="118.03" ry="118.03" fill="hsl(168 90% 58% / 0.167)"/>
+<ellipse cx="220.97" cy="188.63" rx="109.16" ry="109.16" fill="hsl(168 90% 58% / 0.178)"/>
+<rect x="60" y="160" width="170" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">k ≈ n</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">lineal</text>
+<rect x="287" y="160" width="170" height="130" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="301" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">k ≫ n</text>
+<text x="372" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">desperdicia memoria</text>
+<text x="256" y="365" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">el rango enorme domina</text>
+<rect x="141" y="405" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">vuelve a n log n</text>
+</svg>

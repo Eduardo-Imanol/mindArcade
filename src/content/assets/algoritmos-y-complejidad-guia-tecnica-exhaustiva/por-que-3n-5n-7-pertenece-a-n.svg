@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué 3n² + 5n + 7 pertenece a Θ(n²)?">
+<title>¿Por qué 3n² + 5n + 7 pertenece a Θ(n²)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="426.78" cy="45.18" rx="189.72" ry="189.72" fill="hsl(120 90% 58% / 0.166)"/>
+<ellipse cx="184.1" cy="50.46" rx="119.08" ry="119.08" fill="hsl(120 90% 58% / 0.213)"/>
+<ellipse cx="411.38" cy="4.87" rx="76.07" ry="76.07" fill="hsl(120 90% 58% / 0.21)"/>
+<ellipse cx="151.84" cy="451.92" rx="115.99" ry="115.99" fill="hsl(120 90% 58% / 0.197)"/>
+<rect x="50" y="169" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="100" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">3n²</text>
+<rect x="165" y="169" width="90" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="210" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">5n</text>
+<rect x="270" y="169" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="310" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">7</text>
+<line x1="256" y1="230" x2="256" y2="274.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,285 249.57,274.87 262.43,274.87" fill="#00ffcc"/>
+<rect x="186" y="295" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">Θ(n²)</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">entre 3n² y 15n²</text>
+</svg>

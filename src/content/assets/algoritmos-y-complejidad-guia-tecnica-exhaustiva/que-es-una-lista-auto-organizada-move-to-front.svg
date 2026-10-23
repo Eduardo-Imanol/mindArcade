@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una lista auto-organizada move-to-front?">
+<title>¿Qué es una lista auto-organizada move-to-front?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="183.98" cy="52.13" rx="167.38" ry="167.38" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="124.18" cy="147.28" rx="116.79" ry="116.79" fill="hsl(168 90% 58% / 0.214)"/>
+<ellipse cx="169.98" cy="398.65" rx="104.47" ry="104.47" fill="hsl(168 90% 58% / 0.224)"/>
+<ellipse cx="453.5" cy="82.32" rx="163.71" ry="163.71" fill="hsl(168 90% 58% / 0.21)"/>
+<rect x="75" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="110" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<rect x="165" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="200" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<rect x="255" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="290" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">C</text>
+<rect x="345" y="159" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="380" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">D</text>
+<line x1="380" y1="220" x2="120.68" y2="258.42" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="110,260 119.08,252.15 120.96,264.88" fill="#39ff14"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">D se mueve al frente</text>
+<rect x="161" y="355" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">2-competitiva</text>
+</svg>

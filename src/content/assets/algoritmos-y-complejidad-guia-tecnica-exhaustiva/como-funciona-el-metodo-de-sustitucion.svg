@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona el método de sustitución?">
+<title>¿Cómo funciona el método de sustitución?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="104.67" cy="317.49" rx="155.22" ry="155.22" fill="hsl(320 90% 58% / 0.172)"/>
+<ellipse cx="174.35" cy="489.03" rx="81.04" ry="81.04" fill="hsl(320 90% 58% / 0.151)"/>
+<ellipse cx="320.43" cy="326.59" rx="201.6" ry="201.6" fill="hsl(320 90% 58% / 0.233)"/>
+<ellipse cx="354.77" cy="2.87" rx="135.45" ry="135.45" fill="hsl(320 90% 58% / 0.15)"/>
+<rect x="60" y="150" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">adivinar</text>
+<line x1="218" y1="205" x2="281.2" y2="205" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="292,205 281.87,211.43 281.87,198.57" fill="#00ffcc"/>
+<rect x="300" y="150" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="314" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">inducir</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">ajusta constantes y n₀</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">no olvides los casos base</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la complejidad de bubble sort en el peor caso?">
+<title>¿Cuál es la complejidad de bubble sort en el peor caso?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="433.25" cy="211.01" rx="107.17" ry="107.17" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="427.45" cy="164.24" rx="74.9" ry="74.9" fill="hsl(265 90% 58% / 0.212)"/>
+<ellipse cx="293.64" cy="338.17" rx="124.53" ry="124.53" fill="hsl(265 90% 58% / 0.235)"/>
+<ellipse cx="256.24" cy="504.42" rx="186.09" ry="186.09" fill="hsl(265 90% 58% / 0.144)"/>
+<rect x="90" y="170" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="122" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="161" y="170" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="193" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="232" y="170" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="264" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="303" y="170" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="335" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">2</text>
+<line x1="190" y1="225" x2="349.2" y2="225" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="360,225 349.87,231.43 349.87,218.57" fill="#39ff14"/>
+<text x="256" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">el máximo sube al final</text>
+<rect x="90" y="320" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="122" y="343" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">1</text>
+<rect x="161" y="320" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="193" y="343" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="232" y="320" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="264" y="343" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="303" y="320" width="64" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="335" y="343" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">4</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">cada pasada fija uno</text>
+</svg>

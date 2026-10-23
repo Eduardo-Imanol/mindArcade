@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es el peor caso de quickselect?">
+<title>¿Cuál es el peor caso de quickselect?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="335.63" cy="443.46" rx="118.52" ry="118.52" fill="hsl(45 90% 58% / 0.203)"/>
+<ellipse cx="27.81" cy="399.88" rx="116.17" ry="116.17" fill="hsl(45 90% 58% / 0.195)"/>
+<ellipse cx="153.46" cy="148.38" rx="72.63" ry="72.63" fill="hsl(45 90% 58% / 0.24)"/>
+<ellipse cx="102.65" cy="5.18" rx="89.78" ry="89.78" fill="hsl(45 90% 58% / 0.153)"/>
+<ellipse cx="256" cy="95" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="95" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">n</text>
+<ellipse cx="256" cy="170" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">n−1</text>
+<ellipse cx="256" cy="245" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">n−2</text>
+<ellipse cx="256" cy="320" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">…</text>
+<line x1="256" y1="95" x2="256" y2="170" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="256" y1="170" x2="256" y2="245" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<line x1="256" y1="245" x2="256" y2="320" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="120" y="195" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">pivote extremo siempre</text>
+<rect x="330" y="220" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="390" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">O(n²)</text>
+</svg>

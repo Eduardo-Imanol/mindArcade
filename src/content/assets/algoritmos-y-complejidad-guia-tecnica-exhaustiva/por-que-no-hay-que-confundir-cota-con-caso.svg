@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué no hay que confundir cota con caso?">
+<title>¿Por qué no hay que confundir cota con caso?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="217.81" cy="97.14" rx="181.02" ry="181.02" fill="hsl(168 90% 58% / 0.194)"/>
+<ellipse cx="488.77" cy="360.32" rx="142.7" ry="142.7" fill="hsl(168 90% 58% / 0.175)"/>
+<ellipse cx="91.35" cy="19.43" rx="154.85" ry="154.85" fill="hsl(168 90% 58% / 0.197)"/>
+<ellipse cx="64.51" cy="14.01" rx="166.13" ry="166.13" fill="hsl(168 90% 58% / 0.186)"/>
+<rect x="65" y="150" width="165" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="79" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">O, Ω, Θ</text>
+<text x="147" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">funciones</text>
+<rect x="282" y="150" width="165" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="296" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">casos</text>
+<text x="364" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">cuál función</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">insertion: Θ(n) y Θ(n²)</text>
+</svg>

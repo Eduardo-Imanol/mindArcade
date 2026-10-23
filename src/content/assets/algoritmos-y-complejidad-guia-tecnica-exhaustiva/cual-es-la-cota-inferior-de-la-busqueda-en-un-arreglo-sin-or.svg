@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la cota inferior de la búsqueda en un arreglo sin ordenar?">
+<title>¿Cuál es la cota inferior de la búsqueda en un arreglo sin ordenar?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="134.08" cy="243.55" rx="89.82" ry="89.82" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="56.03" cy="500.87" rx="134.77" ry="134.77" fill="hsl(120 90% 58% / 0.22)"/>
+<ellipse cx="41.56" cy="112.22" rx="134.28" ry="134.28" fill="hsl(120 90% 58% / 0.142)"/>
+<ellipse cx="461.38" cy="1.41" rx="185.4" ry="185.4" fill="hsl(120 90% 58% / 0.168)"/>
+<rect x="90" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="144" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="198" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="252" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="306" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="360" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<line x1="258" y1="160" x2="258" y2="171.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="258,182 251.57,171.87 264.43,171.87" fill="#ffcc00"/>
+<rect x="196" y="280" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#ffcc00">Ω(n)</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">el adversario oculta el objetivo</text>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">la búsqueda lineal es óptima</text>
+</svg>

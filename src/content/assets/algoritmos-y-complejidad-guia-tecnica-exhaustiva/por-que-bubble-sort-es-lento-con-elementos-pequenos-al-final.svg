@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué bubble sort es lento con elementos pequeños al final?">
+<title>¿Por qué bubble sort es lento con elementos pequeños al final?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="148.65" cy="138.84" rx="79.33" ry="79.33" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="12.9" cy="252.58" rx="108.83" ry="108.83" fill="hsl(168 90% 58% / 0.189)"/>
+<ellipse cx="491.62" cy="154.59" rx="128.94" ry="128.94" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="160.76" cy="4.75" rx="204.21" ry="204.21" fill="hsl(168 90% 58% / 0.194)"/>
+<rect x="60" y="170" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="93" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">2</text>
+<rect x="133" y="170" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="166" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">3</text>
+<rect x="206" y="170" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="239" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">4</text>
+<rect x="279" y="170" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="312" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">5</text>
+<rect x="352" y="170" width="66" height="44" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="385" y="193" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">1</text>
+<line x1="410" y1="225" x2="140.56" y2="282.74" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="130,285 138.56,276.59 141.25,289.16" fill="#ffcc00"/>
+<text x="256" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">la tortuga avanza un paso</text>
+<rect x="191" y="355" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="25" font-weight="700" fill="#ffcc00">O(n²)</text>
+<text x="256" y="435" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">una pasada no basta</text>
+</svg>

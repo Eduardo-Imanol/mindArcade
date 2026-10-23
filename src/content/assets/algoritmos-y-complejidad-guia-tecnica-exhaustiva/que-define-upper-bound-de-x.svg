@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué define upper_bound de x?">
+<title>¿Qué define upper_bound de x?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="217.57" cy="479.09" rx="100.07" ry="100.07" fill="hsl(320 90% 58% / 0.206)"/>
+<ellipse cx="307.31" cy="134.94" rx="203.98" ry="203.98" fill="hsl(320 90% 58% / 0.209)"/>
+<ellipse cx="197.3" cy="416.58" rx="132.69" ry="132.69" fill="hsl(320 90% 58% / 0.185)"/>
+<ellipse cx="109.47" cy="459.5" rx="148.35" ry="148.35" fill="hsl(320 90% 58% / 0.216)"/>
+<rect x="70" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="124" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="178" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="232" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<rect x="286" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<rect x="340" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<line x1="310" y1="160" x2="310" y2="171.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="310,182 303.57,171.87 316.43,171.87" fill="#ffcc00"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">primer a[i] &gt; x</text>
+<text x="256" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">posición después de los iguales</text>
+<rect x="151" y="395" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">upper_bound</text>
+</svg>

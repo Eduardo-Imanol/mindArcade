@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es natural merge sort?">
+<title>¿Qué es natural merge sort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="136.95" cy="335.03" rx="204.05" ry="204.05" fill="hsl(168 90% 58% / 0.198)"/>
+<ellipse cx="404.76" cy="232.02" rx="195.19" ry="195.19" fill="hsl(168 90% 58% / 0.162)"/>
+<ellipse cx="163.79" cy="226.72" rx="91.26" ry="91.26" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="483.06" cy="401.02" rx="129.65" ry="129.65" fill="hsl(168 90% 58% / 0.2)"/>
+<rect x="60" y="180" width="70" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="95" y="212" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">run</text>
+<rect x="160" y="180" width="140" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="230" y="212" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">run</text>
+<rect x="260" y="180" width="55" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="287.5" y="212" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">run</text>
+<rect x="360" y="180" width="95" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="407.5" y="212" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">run</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">detecta tramos ya ordenados</text>
+<rect x="156" y="335" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">menos fusiones</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">aprovecha la entrada</text>
+</svg>

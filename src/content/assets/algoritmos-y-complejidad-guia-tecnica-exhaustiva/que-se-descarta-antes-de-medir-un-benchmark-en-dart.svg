@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué se descarta antes de medir un benchmark en Dart?">
+<title>¿Qué se descarta antes de medir un benchmark en Dart?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="347.52" cy="482.95" rx="128.59" ry="128.59" fill="hsl(168 90% 58% / 0.195)"/>
+<ellipse cx="285.75" cy="124.64" rx="97.07" ry="97.07" fill="hsl(168 90% 58% / 0.184)"/>
+<ellipse cx="451.61" cy="80.69" rx="173.29" ry="173.29" fill="hsl(168 90% 58% / 0.194)"/>
+<ellipse cx="444.91" cy="348.09" rx="80.71" ry="80.71" fill="hsl(168 90% 58% / 0.216)"/>
+<rect x="55" y="160" width="120" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">warm-up</text>
+<rect x="190" y="160" width="130" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="204" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">GC</text>
+<rect x="335" y="160" width="120" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="349" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">no usado</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">JIT y recolección contaminan</text>
+<rect x="166" y="360" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">medir estable</text>
+</svg>

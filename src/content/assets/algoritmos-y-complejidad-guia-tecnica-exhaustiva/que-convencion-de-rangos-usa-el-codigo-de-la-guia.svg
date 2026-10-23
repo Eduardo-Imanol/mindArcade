@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué convención de rangos usa el código de la guía?">
+<title>¿Qué convención de rangos usa el código de la guía?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="506.86" cy="208.44" rx="112.98" ry="112.98" fill="hsl(320 90% 58% / 0.146)"/>
+<ellipse cx="140.42" cy="224.75" rx="81.08" ry="81.08" fill="hsl(320 90% 58% / 0.214)"/>
+<ellipse cx="448.42" cy="38.58" rx="178.56" ry="178.56" fill="hsl(320 90% 58% / 0.153)"/>
+<ellipse cx="491.27" cy="95.64" rx="74.89" ry="74.89" fill="hsl(320 90% 58% / 0.188)"/>
+<text x="120" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="90" font-weight="700" fill="#00ffcc">[</text>
+<text x="392" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="90" font-weight="700" fill="#00ffcc">)</text>
+<rect x="150" y="229" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="190" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">lo</text>
+<rect x="282" y="229" width="80" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="322" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">hi</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">semiabierto</text>
+<text x="256" y="408" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">hi no incluido</text>
+</svg>

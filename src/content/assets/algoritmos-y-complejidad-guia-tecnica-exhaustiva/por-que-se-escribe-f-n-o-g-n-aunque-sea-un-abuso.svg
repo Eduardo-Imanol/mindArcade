@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué se escribe f(n) = O(g(n)) aunque sea un abuso?">
+<title>¿Por qué se escribe f(n) = O(g(n)) aunque sea un abuso?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="298.61" cy="356.36" rx="202.32" ry="202.32" fill="hsl(168 90% 58% / 0.184)"/>
+<ellipse cx="503.45" cy="330.56" rx="125.22" ry="125.22" fill="hsl(168 90% 58% / 0.148)"/>
+<ellipse cx="284.95" cy="377.75" rx="192.83" ry="192.83" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="487.69" cy="441.26" rx="183.06" ry="183.06" fill="hsl(168 90% 58% / 0.214)"/>
+<rect x="70" y="150" width="372" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">O(g) = conjunto</text>
+<rect x="130" y="289" width="120" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="190" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">f(n)</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" font-weight="700" fill="#f1f1f1">=</text>
+<rect x="262" y="289" width="120" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="322" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">O(g)</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">pertenencia o función anónima</text>
+</svg>

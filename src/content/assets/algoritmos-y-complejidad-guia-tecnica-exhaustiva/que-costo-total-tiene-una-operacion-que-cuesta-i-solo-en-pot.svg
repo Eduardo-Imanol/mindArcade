@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué costo total tiene una operación que cuesta i solo en potencias de 2?">
+<title>¿Qué costo total tiene una operación que cuesta i solo en potencias de 2?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="264.9" cy="424.41" rx="148.69" ry="148.69" fill="hsl(168 90% 58% / 0.155)"/>
+<ellipse cx="256.95" cy="378.73" rx="178.22" ry="178.22" fill="hsl(168 90% 58% / 0.16)"/>
+<ellipse cx="351.1" cy="511.6" rx="192.72" ry="192.72" fill="hsl(168 90% 58% / 0.162)"/>
+<ellipse cx="76.99" cy="351.62" rx="199.63" ry="199.63" fill="hsl(168 90% 58% / 0.169)"/>
+<rect x="75" y="169" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="110" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">i=1</text>
+<rect x="157" y="169" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="192" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">i=2</text>
+<rect x="239" y="169" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="274" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">i=4</text>
+<rect x="321" y="169" width="70" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="356" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">i=8</text>
+<line x1="256" y1="235" x2="256" y2="269.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 249.57,269.87 262.43,269.87" fill="#39ff14"/>
+<rect x="156" y="290" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">Σ 2ʲ &lt; 2n</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">total ≤ 3n</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">O(1) amortizado</text>
+</svg>

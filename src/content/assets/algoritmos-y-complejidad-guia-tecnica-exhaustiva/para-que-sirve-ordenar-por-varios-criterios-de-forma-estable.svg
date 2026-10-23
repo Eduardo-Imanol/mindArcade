@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Para qué sirve ordenar por varios criterios de forma estable?">
+<title>¿Para qué sirve ordenar por varios criterios de forma estable?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="222.07" cy="90.83" rx="139.15" ry="139.15" fill="hsl(265 90% 58% / 0.203)"/>
+<ellipse cx="460.51" cy="208.82" rx="113.76" ry="113.76" fill="hsl(265 90% 58% / 0.164)"/>
+<ellipse cx="315.4" cy="424.24" rx="168.03" ry="168.03" fill="hsl(265 90% 58% / 0.232)"/>
+<ellipse cx="299.21" cy="395.28" rx="97.87" ry="97.87" fill="hsl(265 90% 58% / 0.15)"/>
+<rect x="60" y="150" width="160" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">clave compuesta</text>
+<text x="140" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">depto, luego nombre</text>
+<line x1="230" y1="205" x2="274.2" y2="205" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="285,205 274.87,211.43 274.87,198.57" fill="#39ff14"/>
+<rect x="295" y="150" width="160" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="309" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">orden estable</text>
+<text x="375" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">resultado correcto</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">un solo paso</text>
+</svg>

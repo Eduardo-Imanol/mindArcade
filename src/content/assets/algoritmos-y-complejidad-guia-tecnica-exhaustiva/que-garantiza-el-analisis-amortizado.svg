@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza el análisis amortizado?">
+<title>¿Qué garantiza el análisis amortizado?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="464.46" cy="17.45" rx="107.48" ry="107.48" fill="hsl(120 90% 58% / 0.173)"/>
+<ellipse cx="484.79" cy="275.02" rx="163.5" ry="163.5" fill="hsl(120 90% 58% / 0.192)"/>
+<ellipse cx="108.69" cy="352.62" rx="93" ry="93" fill="hsl(120 90% 58% / 0.142)"/>
+<ellipse cx="364.34" cy="403.47" rx="111.01" ry="111.01" fill="hsl(120 90% 58% / 0.228)"/>
+<rect x="60" y="190" width="62" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<line x1="122" y1="220" x2="128.6" y2="220" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="134,220 128.93,223.21 128.93,216.79" fill="#8a7fb5"/>
+<rect x="136" y="190" width="62" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<line x1="198" y1="220" x2="204.6" y2="220" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="210,220 204.93,223.21 204.93,216.79" fill="#8a7fb5"/>
+<rect x="212" y="190" width="62" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<line x1="274" y1="220" x2="280.6" y2="220" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="286,220 280.93,223.21 280.93,216.79" fill="#8a7fb5"/>
+<rect x="288" y="190" width="62" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<line x1="350" y1="220" x2="356.6" y2="220" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="362,220 356.93,223.21 356.93,216.79" fill="#8a7fb5"/>
+<rect x="364" y="190" width="62" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<line x1="426" y1="220" x2="432.6" y2="220" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="438,220 432.93,223.21 432.93,216.79" fill="#8a7fb5"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#f1f1f1">secuencia completa</text>
+<rect x="151" y="355" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">peor caso total</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre complejidad polinomial y pseudo-polinomial?">
+<title>¿Qué diferencia hay entre complejidad polinomial y pseudo-polinomial?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="176.35" cy="298.04" rx="124.54" ry="124.54" fill="hsl(265 90% 58% / 0.152)"/>
+<ellipse cx="79" cy="185.45" rx="177.16" ry="177.16" fill="hsl(265 90% 58% / 0.153)"/>
+<ellipse cx="203.31" cy="33.13" rx="127.66" ry="127.66" fill="hsl(265 90% 58% / 0.235)"/>
+<ellipse cx="490.02" cy="416.69" rx="97.88" ry="97.88" fill="hsl(265 90% 58% / 0.226)"/>
+<rect x="55" y="150" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">polinomial</text>
+<text x="145" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">n elementos</text>
+<rect x="277" y="150" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="291" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">pseudo</text>
+<text x="367" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">valor W</text>
+<text x="367" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">pero log W bits</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">O(n·W) no es polinomial en bits</text>
+</svg>

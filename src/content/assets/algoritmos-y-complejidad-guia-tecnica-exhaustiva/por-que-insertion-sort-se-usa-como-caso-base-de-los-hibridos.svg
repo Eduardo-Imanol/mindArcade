@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué insertion sort se usa como caso base de los híbridos?">
+<title>¿Por qué insertion sort se usa como caso base de los híbridos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="474.6" cy="228.29" rx="185.08" ry="185.08" fill="hsl(168 90% 58% / 0.169)"/>
+<ellipse cx="480.85" cy="403.28" rx="148.86" ry="148.86" fill="hsl(168 90% 58% / 0.231)"/>
+<ellipse cx="121.38" cy="373.24" rx="135.08" ry="135.08" fill="hsl(168 90% 58% / 0.171)"/>
+<ellipse cx="437.72" cy="162.92" rx="115.62" ry="115.62" fill="hsl(168 90% 58% / 0.198)"/>
+<rect x="55" y="170" width="120" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">bloque</text>
+<rect x="195" y="170" width="120" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="209" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">bloque</text>
+<rect x="335" y="170" width="120" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="349" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">bloque</text>
+<line x1="256" y1="270" x2="256" y2="299.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,310 249.57,299.87 262.43,299.87" fill="#39ff14"/>
+<rect x="141" y="320" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#39ff14">ordenar y fusionar</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">bloques pequeños</text>
+</svg>

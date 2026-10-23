@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué latencias aproximadas tienen L1, RAM y un salto mal predicho?">
+<title>¿Qué latencias aproximadas tienen L1, RAM y un salto mal predicho?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="40.1" cy="109.72" rx="99.81" ry="99.81" fill="hsl(45 90% 58% / 0.203)"/>
+<ellipse cx="499.24" cy="393.94" rx="128.61" ry="128.61" fill="hsl(45 90% 58% / 0.195)"/>
+<ellipse cx="80.86" cy="221.31" rx="83.98" ry="83.98" fill="hsl(45 90% 58% / 0.212)"/>
+<ellipse cx="156.91" cy="45.1" rx="84.81" ry="84.81" fill="hsl(45 90% 58% / 0.219)"/>
+<rect x="55" y="150" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">L1</text>
+<text x="115" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">≈ 1 ns</text>
+<rect x="196" y="150" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="210" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">RAM</text>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">≈ 100 ns</text>
+<rect x="337" y="150" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="351" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">branch</text>
+<text x="397" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">≈ 15 ciclos</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">órdenes de magnitud distintos</text>
+<rect x="146" y="370" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">la memoria manda</text>
+</svg>

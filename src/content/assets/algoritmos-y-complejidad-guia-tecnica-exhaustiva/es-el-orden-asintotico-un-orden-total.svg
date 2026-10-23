@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Es el orden asintótico un orden total?">
+<title>¿Es el orden asintótico un orden total?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="504.21" cy="132.35" rx="83.44" ry="83.44" fill="hsl(120 90% 58% / 0.162)"/>
+<ellipse cx="268.56" cy="371.21" rx="116.48" ry="116.48" fill="hsl(120 90% 58% / 0.176)"/>
+<ellipse cx="166.48" cy="171.44" rx="109.81" ry="109.81" fill="hsl(120 90% 58% / 0.195)"/>
+<ellipse cx="194.73" cy="200.78" rx="150.41" ry="150.41" fill="hsl(120 90% 58% / 0.211)"/>
+<rect x="206" y="149" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">f(n)</text>
+<rect x="100" y="279" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="150" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">g(n)</text>
+<rect x="312" y="279" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="362" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">h(n)</text>
+<line x1="240" y1="195" x2="176.87" y2="271.66" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="170,280 171.48,268.09 181.4,276.27" fill="#8a7fb5"/>
+<line x1="272" y1="195" x2="335.13" y2="271.66" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="342,280 330.6,276.27 340.52,268.09" fill="#8a7fb5"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">hay funciones incomparables</text>
+</svg>

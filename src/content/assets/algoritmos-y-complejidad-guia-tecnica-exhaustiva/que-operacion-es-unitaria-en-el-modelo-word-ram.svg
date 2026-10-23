@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué operación es unitaria en el modelo word-RAM?">
+<title>¿Qué operación es unitaria en el modelo word-RAM?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="254.52" cy="183.55" rx="141.14" ry="141.14" fill="hsl(265 90% 58% / 0.164)"/>
+<ellipse cx="219.02" cy="303.62" rx="149.83" ry="149.83" fill="hsl(265 90% 58% / 0.204)"/>
+<ellipse cx="433.73" cy="432.47" rx="109.58" ry="109.58" fill="hsl(265 90% 58% / 0.203)"/>
+<ellipse cx="91.97" cy="356.12" rx="176.31" ry="176.31" fill="hsl(265 90% 58% / 0.234)"/>
+<rect x="140" y="120" width="232" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="154" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">word-RAM</text>
+<rect x="65" y="259" width="90" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="110" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">suma</text>
+<rect x="176" y="259" width="100" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="226" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">acceso</text>
+<rect x="296" y="259" width="120" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="356" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">comparar</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">palabras de w ≥ log n bits</text>
+<rect x="196" y="405" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">coste 1</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué combina introsort?">
+<title>¿Qué combina introsort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="364.52" cy="205.03" rx="115.66" ry="115.66" fill="hsl(168 90% 58% / 0.189)"/>
+<ellipse cx="350.39" cy="149.96" rx="128.57" ry="128.57" fill="hsl(168 90% 58% / 0.229)"/>
+<ellipse cx="493.12" cy="182.45" rx="75.36" ry="75.36" fill="hsl(168 90% 58% / 0.207)"/>
+<ellipse cx="372.89" cy="109.03" rx="144.55" ry="144.55" fill="hsl(168 90% 58% / 0.216)"/>
+<rect x="55" y="180" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">quicksort</text>
+<rect x="196" y="180" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="210" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">heap</text>
+<rect x="337" y="180" width="120" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="351" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">inserción</text>
+<line x1="256" y1="290" x2="256" y2="319.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,330 249.57,319.87 262.43,319.87" fill="#8a7fb5"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">profundidad límite → heap</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">bloques pequeños → inserción</text>
+</svg>

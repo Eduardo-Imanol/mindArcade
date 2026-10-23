@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué se elige para datos hostiles controlados por un atacante?">
+<title>¿Qué se elige para datos hostiles controlados por un atacante?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="35.91" cy="1.9" rx="110.2" ry="110.2" fill="hsl(45 90% 58% / 0.205)"/>
+<ellipse cx="88.04" cy="118.9" rx="97.08" ry="97.08" fill="hsl(45 90% 58% / 0.231)"/>
+<ellipse cx="147.32" cy="170.86" rx="119.64" ry="119.64" fill="hsl(45 90% 58% / 0.185)"/>
+<ellipse cx="240.47" cy="190.89" rx="91.86" ry="91.86" fill="hsl(45 90% 58% / 0.2)"/>
+<rect x="55" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">entrada hostil</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">pivotes predecibles</text>
+<rect x="277" y="160" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">aleatorizar</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">pivote aleatorio</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">o introsort con límite</text>
+<rect x="151" y="405" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">sin Θ(n²) fijo</text>
+</svg>

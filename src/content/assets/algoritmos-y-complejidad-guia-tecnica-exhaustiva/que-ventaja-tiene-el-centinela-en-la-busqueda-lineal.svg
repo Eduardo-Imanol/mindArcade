@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué ventaja tiene el centinela en la búsqueda lineal?">
+<title>¿Qué ventaja tiene el centinela en la búsqueda lineal?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="60.48" cy="326.55" rx="148.58" ry="148.58" fill="hsl(320 90% 58% / 0.174)"/>
+<ellipse cx="8.26" cy="10.18" rx="191.14" ry="191.14" fill="hsl(320 90% 58% / 0.214)"/>
+<ellipse cx="153.47" cy="506.99" rx="127.25" ry="127.25" fill="hsl(320 90% 58% / 0.227)"/>
+<ellipse cx="252.8" cy="408.15" rx="156.67" ry="156.67" fill="hsl(320 90% 58% / 0.197)"/>
+<rect x="70" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="124" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="178" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="232" y="190" width="48" height="46" rx="12" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-dasharray="9 8"/>
+<rect x="286" y="190" width="48" height="46" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<line x1="330" y1="160" x2="330" y2="171.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="330,182 323.57,171.87 336.43,171.87" fill="#ffcc00"/>
+<text x="330" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">objetivo al final</text>
+<rect x="146" y="280" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">1 comparación</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">se elimina el chequeo de límite</text>
+</svg>

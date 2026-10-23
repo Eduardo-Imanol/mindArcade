@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué propiedad tienen la suma y el producto de cotas?">
+<title>¿Qué propiedad tienen la suma y el producto de cotas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="109.17" cy="489.49" rx="145.2" ry="145.2" fill="hsl(120 90% 58% / 0.161)"/>
+<ellipse cx="448.88" cy="368.61" rx="197.8" ry="197.8" fill="hsl(120 90% 58% / 0.2)"/>
+<ellipse cx="58.07" cy="419.44" rx="140.06" ry="140.06" fill="hsl(120 90% 58% / 0.198)"/>
+<ellipse cx="392.45" cy="301.83" rx="198.38" ry="198.38" fill="hsl(120 90% 58% / 0.211)"/>
+<rect x="55" y="150" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">suma</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">O(max(f, g))</text>
+<rect x="277" y="150" width="180" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="291" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">producto</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">O(f·g)</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">fases y bucles anidados</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué solución tiene T(n) = 4T(n/2) + n² log n?">
+<title>¿Qué solución tiene T(n) = 4T(n/2) + n² log n?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="47.31" cy="82.74" rx="151.43" ry="151.43" fill="hsl(45 90% 58% / 0.203)"/>
+<ellipse cx="1.34" cy="396.09" rx="167.63" ry="167.63" fill="hsl(45 90% 58% / 0.211)"/>
+<ellipse cx="256.7" cy="367.28" rx="117.93" ry="117.93" fill="hsl(45 90% 58% / 0.181)"/>
+<ellipse cx="509.29" cy="15.01" rx="96.97" ry="96.97" fill="hsl(45 90% 58% / 0.215)"/>
+<rect x="70" y="150" width="372" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">T(n) = 4T(n/2) + n² log n</text>
+<rect x="60" y="250" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="150" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ff007f">a = 4, b = 2</text>
+<rect x="301" y="250" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="356" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ff007f">p = 2</text>
+<line x1="256" y1="300" x2="256" y2="329.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,340 249.57,329.87 262.43,329.87" fill="#39ff14"/>
+<rect x="146" y="350" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">Θ(n² log² n)</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">caso 2 extendido con k = 1</text>
+</svg>

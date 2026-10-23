@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo funciona la ordenación externa con runs?">
+<title>¿Cómo funciona la ordenación externa con runs?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="287.09" cy="270.84" rx="137.44" ry="137.44" fill="hsl(120 90% 58% / 0.172)"/>
+<ellipse cx="388.73" cy="320.18" rx="171.68" ry="171.68" fill="hsl(120 90% 58% / 0.163)"/>
+<ellipse cx="217.98" cy="271.74" rx="160.82" ry="160.82" fill="hsl(120 90% 58% / 0.155)"/>
+<ellipse cx="5.85" cy="271.82" rx="125.78" ry="125.78" fill="hsl(120 90% 58% / 0.194)"/>
+<rect x="60" y="140" width="118" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">run 1</text>
+<line x1="119" y1="218" x2="119" y2="251.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="119,262 112.57,251.87 125.43,251.87" fill="#8a7fb5"/>
+<rect x="192" y="140" width="118" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="206" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">run 2</text>
+<line x1="251" y1="218" x2="251" y2="251.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="251,262 244.57,251.87 257.43,251.87" fill="#8a7fb5"/>
+<rect x="324" y="140" width="118" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="338" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">run 3</text>
+<line x1="383" y1="218" x2="383" y2="251.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="383,262 376.57,251.87 389.43,251.87" fill="#8a7fb5"/>
+<rect x="90" y="270" width="332" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="104" y="288" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">fusión k vías</text>
+<text x="256" y="375" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">generar runs y fusionar</text>
+<rect x="166" y="410" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">≈ 2N de E/S</text>
+</svg>

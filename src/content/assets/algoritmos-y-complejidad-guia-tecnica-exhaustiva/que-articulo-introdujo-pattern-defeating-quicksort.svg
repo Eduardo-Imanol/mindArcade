@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué artículo introdujo pattern-defeating quicksort?">
+<title>¿Qué artículo introdujo pattern-defeating quicksort?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="75.2" cy="296.56" rx="73.83" ry="73.83" fill="hsl(265 90% 58% / 0.228)"/>
+<ellipse cx="481.6" cy="250.79" rx="162.44" ry="162.44" fill="hsl(265 90% 58% / 0.202)"/>
+<ellipse cx="91.33" cy="419.36" rx="185.35" ry="185.35" fill="hsl(265 90% 58% / 0.146)"/>
+<ellipse cx="506.39" cy="156.27" rx="138.25" ry="138.25" fill="hsl(265 90% 58% / 0.224)"/>
+<rect x="70" y="150" width="372" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Pattern-Defeating Quicksort</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">Orson Peters</text>
+<text x="256" y="345" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#39ff14">pdqsort</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">detecta patrones y evita el peor caso</text>
+</svg>
