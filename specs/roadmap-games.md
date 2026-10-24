@@ -57,12 +57,18 @@ Una función encapsula lógica reutilizable y evita repetir código.
 - Cada línea `- Q: ... | A: ... | E: easy|hard` → una carta (E opcional, default `easy`).
 - Token de imagen opcional al final: `| I: 🐶` (emoji) o `| I: https://…` (URL) → imagen de esa carta.
 - Líneas inválidas → se cuentan como errores y el resto se conserva.
-- Temas incluidos: `src/content/topics/*.md`. Temas personalizados: creados desde la UI (localStorage).
+- Temas incluidos: `src/content/topics/<categoria>/<archivo>.md` (spec-17). Los
+  documentos fuente originales viven en `src/content/sources/<categoria>/`. Temas
+  personalizados: creados desde la UI (localStorage).
+- El manifiesto `src/core/content/library.js` define categorías, módulos, orden y el
+  mapping `topicId → sourcePath`; el catálogo adjunta `categoryId`, `moduleId`,
+  `moduleTitle` y `sourcePath`. Los IDs de tema no cambian.
 
 ## Contenido
 
-- `src/content/topics/funciones-programacion.md` — tema integrado con 96 cartas; alimenta
-  los 8 juegos sin retocar código.
+- `src/content/topics/programacion/` — cuatro temas integrados: Funciones (Módulo 1)
+  y Estructuras, Algoritmos y Persistencia (Módulo 2); alimentan los 8 juegos sin
+  retocar código.
 - spec-12: el parser conserva la descripción completa del tema (sin recorte de 160
   caracteres) y el hub/tema muestran esa descripción íntegra.
 - Temas personalizados: `createdAt` persistido; los integrados reciben `addedAt` en el

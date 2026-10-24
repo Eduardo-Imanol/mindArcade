@@ -112,9 +112,47 @@ export function generate({ md = '', topicId = 'tema', assetsRoot, force = false 
   return { written, skipped };
 }
 
-export function resolveTopicPath(target) {
+export const TOPICS_DIR = path.join(ROOT, 'src/content/topics');
+
+export function findTopicFiles(id, topicsDir = TOPICS_DIR) {
+  if (!id || typeof id !== 'string') return [];
+  const base = path.resolve(topicsDir);
+  if (!fs.existsSync(base)) return [];
+  const wanted = `${id}.md`;
+  const matches = [];
+  const stack = [base];
+  while (stack.length > 0) {
+    const dir = stack.pop();
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const ent of entries) {
+      const full = path.join(dir, ent.name);
+      if (ent.isDirectory()) {
+        stack.push(full);
+        continue;
+      }
+      if (ent.isFile() && ent.name === wanted) matches.push(full);
+    }
+  }
+  return matches.sort();
+}
+
+export function resolveTopicPath(target, { topicsDir = TOPICS_DIR } = {}) {
   if (target.endsWith('.md')) return path.resolve(target);
-  return path.join(ROOT, 'src/content/topics', `${target}.md`);
+  const base = path.resolve(topicsDir);
+  const flat = path.join(base, `${target}.md`);
+  if (fs.existsSync(flat)) return flat;
+  const matches = findTopicFiles(target, base);
+  if (matches.length === 0) return flat;
+  if (matches.length > 1) {
+    const error = new Error(
+      `El ID de tema "${target}" es ambiguo: aparece ${matches.length} veces en ${base}:\n` +
+        matches.map((file) => `  - ${path.relative(ROOT, file)}`).join('\n')
+    );
+    error.code = 'AMBIGUOUS_TOPIC';
+    error.matches = matches;
+    throw error;
+  }
+  return matches[0];
 }
 
 function main(argv) {
@@ -125,9 +163,15 @@ function main(argv) {
     console.error('Uso: node scripts/generate-card-images.mjs <topicId|ruta.md> [--force]');
     process.exit(1);
   }
-  const mdPath = resolveTopicPath(target);
+  let mdPath;
+  try {
+    mdPath = resolveTopicPath(target);
+  } catch (error) {
+    console.error(error.message);
+    process.exit(1);
+  }
   if (!fs.existsSync(mdPath)) {
-    console.error(`No existe el tema: ${mdPath}`);
+    console.error(`No existe el tema "${target}" en ${TOPICS_DIR}`);
     process.exit(1);
   }
   const md = fs.readFileSync(mdPath, 'utf8');

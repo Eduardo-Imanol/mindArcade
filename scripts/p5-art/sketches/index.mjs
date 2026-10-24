@@ -22,6 +22,7 @@ import * as algoritmosOrdenacion from './algoritmos-ordenacion.mjs';
 import * as algoritmosSeleccion from './algoritmos-seleccion.mjs';
 import * as algoritmosDataset from './algoritmos-dataset.mjs';
 import * as algoritmosIngenieria from './algoritmos-ingenieria.mjs';
+import { ESTRUCTURAS_DATOS_SKETCHES } from './estructuras-datos.mjs';
 
 export const SKETCHES = {
   'que-es-una-funcion-en-dart': basics.queEsUnaFuncionEnDart,
@@ -419,4 +420,5 @@ export const SKETCHES = {
   'cuantas-comparaciones-exige-hallar-el-maximo-de-n-elementos': algoritmosIngenieria.cuantasComparacionesExigeHallarElMaximoDeNElementos,
   'que-libro-es-la-referencia-sobre-ordenacion-y-busqueda': algoritmosIngenieria.queLibroEsLaReferenciaSobreOrdenacionYBusqueda,
   'que-articulo-introdujo-pattern-defeating-quicksort': algoritmosIngenieria.queArticuloIntrodujoPatternDefeatingQuicksort,
+  ...ESTRUCTURAS_DATOS_SKETCHES,
 };

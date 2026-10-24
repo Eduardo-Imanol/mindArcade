@@ -18,6 +18,20 @@
 - `src/core/parser/` — Markdown/JSON → validated cards. Never throws on bad input;
   returns `{ questions, errors }`. It keeps the full topic description.
 - `src/core/content/` — built-in + custom topic catalog.
+  - `library.js` is the frozen, code-versioned manifest: categories
+    (`programacion`, `idiomas`, `universidad`, `personalizados`), modules, stable
+    order, `topicsForCategory`, and `SOURCE_BY_TOPIC` (topic id → source path).
+    It has no storage/glob imports.
+  - `catalog.js` loads built-in Markdown with a recursive
+    `content/topics/**/*.md` glob and attaches `categoryId`, `moduleId`,
+    `moduleTitle` and `sourcePath` (nullable) without changing the parser. Custom
+    topics always fall in `personalizados` with `sourcePath: null`.
+  - `sources.js` is a lazy `content/sources/**/*.md` registry consumed by the
+    source reader (spec-19); paths are normalized and traversal/absolute paths
+    are rejected.
+  - Physical content lives under `src/content/topics/<category>/` and
+    `src/content/sources/<category>/`; assets stay in
+    `src/content/assets/<topic-id>/` because card tokens resolve that path.
   - `topicMeta.js` persists `addedAt` in `sepect.topics.meta.v1`; `ensureTopicMeta`
     is called when the hub loads so built-in topics get their first-seen date.
   - `cover.js` exposes `topicCoverCard` (first card with an explicit image).
@@ -30,11 +44,13 @@
   Games receive `{ deck, selectCards, groups?, anchorTopicId?, topic?, onGrade, onExit }`
   and never know the topic domain. Games never touch storage.
 - `src/components/` — neon Button/Card Modal (Tailwind + tokens.css).
-- `src/views/` — `TopicsHub` (`#/`, search/sort/status + covers), `TopicView`
-  (`#/tema/:id`, full description + metrics + game tiles), `GameHost`
+- `src/views/` — `TopicsHub` (`#/`, category-first library with aggregated
+  progress + cover), `CategoryView` (`#/categoria/:id`, modules in manifest order
+  with their topics), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
+  full description + metrics + game tiles), `GameHost`
   (`#/tema/:id/juego/:gameId`, eligible deck + «Todo al día»), `Dashboard`
   (`#/progreso`, global/per-topic metrics + 14-day activity), `NotFound`.
-  Mobile-first touch targets ≥44px.
+  Mobile-first touch targets ≥44px; hash routes are frozen.
 
 ## Invariants
 - Games never touch storage directly; they return results, core persists.

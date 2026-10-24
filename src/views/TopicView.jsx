@@ -10,6 +10,8 @@ import { loadSrs } from '../core/repetition/srs.js';
 import { getTopicMetrics } from '../core/metrics/metrics.js';
 import { createStore } from '../core/storage/store.js';
 import { useStudyCardCounts } from './useStudyCardCounts.js';
+import { findCategory, findModule } from '../core/content/library.js';
+
 export default function TopicView({ topicId }) {
   const topics = useMemo(() => loadCatalog(), []);
   const games = useMemo(() => listGames(), []);
@@ -40,11 +42,25 @@ export default function TopicView({ topicId }) {
   const playableCount = availability.filter((entry) => entry.playable).length;
   const metrics = getTopicMetrics(topic, srs, history, now);
   const cover = topicCoverCard(topic) || { id: topic.id, front: topic.title };
+  const category = topic.categoryId ? findCategory(topic.categoryId) : null;
+  const module = topic.moduleId ? findModule(topic.moduleId) : null;
+  const backHref = category ? `#/categoria/${category.id}` : '#/';
 
   return (
     <main className="sepect-bg topic-page">
       <div className="topic-page__inner">
-        <a className="topic-back" href="#/">← Volver a temas</a>
+        <nav className="topic-breadcrumb" aria-label="Ruta de navegación">
+          <a className="topic-back" href={backHref}>← {category ? `Volver a ${category.title}` : 'Volver a biblioteca'}</a>
+          {category && module ? (
+            <p className="topic-breadcrumb__path">
+              {category.title} / {module.title} / <strong>{topic.title}</strong>
+            </p>
+          ) : category ? (
+            <p className="topic-breadcrumb__path">
+              {category.title} / <strong>{topic.title}</strong>
+            </p>
+          ) : null}
+        </nav>
 
         <header className="topic-header">
           <div className="topic-header__text">

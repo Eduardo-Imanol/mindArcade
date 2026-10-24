@@ -115,7 +115,7 @@ describe('design system gate (spec-13)', () => {
     expect(hub).not.toContain('const INPUT');
     expect(hub).not.toContain('const CONTROL');
     expect(hub).toContain('hub-field');
-    expect(hub).toContain('hub-select');
+    expect(hub).toContain('library-card');
   });
 
   it('announces gated games and pairs dashboard metrics by id (AC-20, AC-22)', () => {

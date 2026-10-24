@@ -66,15 +66,29 @@ function listSvgFiles(root, prefix = '') {
 
 function discoverTopics(topicsDir = TOPICS_DIR) {
   if (!fs.existsSync(topicsDir)) return [];
-  return fs
-    .readdirSync(topicsDir)
-    .filter((file) => file.endsWith('.md'))
-    .sort()
-    .map((file) => {
-      const md = fs.readFileSync(path.join(topicsDir, file), 'utf8');
-      const { topic, cards, errors } = parseTopic(md);
-      return { id: path.basename(file, '.md'), file, md, title: topic.title, cards, errors };
-    });
+  const files = [];
+  function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+        continue;
+      }
+      if (entry.isFile() && entry.name.endsWith('.md')) {
+        files.push(full);
+      }
+    }
+  }
+  walk(topicsDir);
+  files.sort();
+  return files.map((fullPath) => {
+    const md = fs.readFileSync(fullPath, 'utf8');
+    const { topic, cards, errors } = parseTopic(md);
+    const file = path.relative(topicsDir, fullPath);
+    return { id: path.basename(fullPath, '.md'), file, md, title: topic.title, cards, errors };
+  });
 }
 
 function findMissingImages(topics) {

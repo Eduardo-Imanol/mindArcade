@@ -8,7 +8,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseTopic } from '../src/core/parser/parser.js';
 import { hashSeed, renderSketch } from './p5-art/engine.mjs';
 import { SKETCHES } from './p5-art/sketches/index.mjs';
-import { planTargets, resolveTopicPath } from './generate-card-images.mjs';
+import { planTargets, resolveTopicPath, TOPICS_DIR } from './generate-card-images.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -47,9 +47,15 @@ function main(argv) {
     console.error('Uso: node scripts/generate-topic-art.mjs <topicId|ruta.md> [--force]');
     process.exit(1);
   }
-  const mdPath = resolveTopicPath(target);
+  let mdPath;
+  try {
+    mdPath = resolveTopicPath(target);
+  } catch (error) {
+    console.error(error.message);
+    process.exit(1);
+  }
   if (!fs.existsSync(mdPath)) {
-    console.error(`No existe el tema: ${mdPath}`);
+    console.error(`No existe el tema "${target}" en ${TOPICS_DIR}`);
     process.exit(1);
   }
   const md = fs.readFileSync(mdPath, 'utf8');

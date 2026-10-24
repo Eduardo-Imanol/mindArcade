@@ -2,10 +2,11 @@
 import { parseTopic } from '../parser/parser.js';
 import { slugify, uniqueId } from './slug.js';
 import { loadTopicMeta, normalizeDate } from './topicMeta.js';
+import { sourceForTopic, TOPIC_TO_MODULE } from './library.js';
 
 const KEY = 'sepect.topics.custom.v1';
 
-const BUILTIN = import.meta.glob('../../content/topics/*.md', {
+const BUILTIN = import.meta.glob('../../content/topics/**/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -17,6 +18,12 @@ export function loadBuiltinTopicMds() {
   return Object.entries(BUILTIN)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([, md]) => md);
+}
+
+export function loadBuiltinTopicEntries() {
+  return Object.entries(BUILTIN)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([path, md]) => ({ md, path }));
 }
 
 function ingest(md, source, titleHint, taken, images, meta = {}, createdAt) {
@@ -36,6 +43,25 @@ function ingest(md, source, titleHint, taken, images, meta = {}, createdAt) {
     images: images && typeof images === 'object' ? images : {},
   };
   if (addedAt) parsed.addedAt = addedAt;
+  // Adjuntar metadatos de biblioteca si existe
+  if (source === 'builtin') {
+    const mod = TOPIC_TO_MODULE[id];
+    if (mod) {
+      parsed.categoryId = mod.categoryId;
+      parsed.moduleId = mod.moduleId;
+      parsed.moduleTitle = mod.moduleTitle;
+    } else {
+      parsed.categoryId = 'personalizados';
+      parsed.moduleId = null;
+      parsed.moduleTitle = null;
+    }
+    parsed.sourcePath = sourceForTopic(id) || null;
+  } else if (source === 'custom') {
+    parsed.categoryId = 'personalizados';
+    parsed.moduleId = null;
+    parsed.moduleTitle = null;
+    parsed.sourcePath = null;
+  }
   return parsed;
 }
 

@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import TopicsHub from './TopicsHub.jsx';
-import { click, keydown, mount, setValue } from '../test/render.jsx';
+import { click, keydown, mount } from '../test/render.jsx';
 
 const readTokens = () =>
   fs.readFileSync(path.join(process.cwd(), 'src/ui/tokens.css'), 'utf8');
@@ -17,13 +17,10 @@ afterEach(() => {
 });
 
 describe('TopicsHub a11y (AC-11)', () => {
-  it('has one h1, native controls and accessible names for every control', () => {
+  it('has one h1 and accessible names for every native control', () => {
     const { container } = mount(<TopicsHub />);
     expect(container.querySelectorAll('h1')).toHaveLength(1);
-    expect(container.querySelector('h1').textContent).toBe('Tus temas');
-
-    const search = container.querySelector('#hub-search');
-    setValue(search, 'funciones');
+    expect(container.querySelector('h1').textContent).toBe('Biblioteca');
 
     const controls = [
       ...container.querySelectorAll('a[href], button, input:not([type="hidden"]), select'),
@@ -48,9 +45,9 @@ describe('TopicsHub a11y (AC-11)', () => {
     expect(container.querySelectorAll('h1')).toHaveLength(1);
   });
 
-  it('exposes progressbar semantics with values on each topic card', () => {
+  it('exposes progressbar semantics on each category card', () => {
     const { container } = mount(<TopicsHub />);
-    const bar = container.querySelector('a.topic-card-tile [role="progressbar"]');
+    const bar = container.querySelector('a.library-card [role="progressbar"]');
     expect(bar).toBeTruthy();
     expect(bar.getAttribute('aria-valuenow')).toMatch(/^\d+$/);
     expect(bar.getAttribute('aria-valuemin')).toBe('0');
@@ -117,26 +114,27 @@ describe('TopicsHub a11y (AC-11)', () => {
     expect(document.querySelector('[role="dialog"]')).toBeNull();
   });
 
-  it('styles focus, 44px targets, wrapping and reduced motion (AC-11)', () => {
+  it('styles library cards with focus, 44px targets, wrapping and reduced motion (AC-12)', () => {
     const css = readTokens();
-    expect(css).toMatch(/select:focus-visible/);
-    expect(css).toMatch(/summary:focus-visible/);
     expect(css).toMatch(/\.btn-neon\s*\{[^}]*min-height:\s*44px/);
-    expect(css).toMatch(/\.hub-search__clear\s*\{[^}]*min-height:\s*44px/);
-    expect(css).toMatch(/\.hub-control select\s*\{[^}]*min-height:\s*44px/);
-    expect(css).toMatch(/\.topic-card-tile__title\s*\{[^}]*overflow-wrap:\s*anywhere/);
-    expect(css).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*?\.topic-card-tile/);
+    expect(css).toMatch(/\.library-card\s*\{[^}]*min-height:\s*44px/);
+    expect(css).toMatch(/\.library-card__title\s*\{[^}]*overflow-wrap:\s*anywhere/);
+    expect(css).toMatch(/\.library-card__desc\s*\{[^}]*overflow-wrap:\s*anywhere/);
+    expect(css).toMatch(/a:focus-visible/);
+    expect(css).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*?\.library-card/);
   });
 
-  it('reflows at 360px without fixed-width controls (AC-11)', () => {
+  it('reflows the library grid at 360px without horizontal overflow (AC-12)', () => {
     const css = readTokens();
-    expect(css).toMatch(/\.hub-grid\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fill, minmax\(240px, 1fr\)\)/);
     expect(css).toMatch(
-      /@media \(max-width: 640px\)\s*\{\s*\.hub-controls\s*\{\s*grid-template-columns:\s*1fr;/
+      /\.library__grid\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fill, minmax\(min\(100%, 240px\), 1fr\)\)/
+    );
+    expect(css).toMatch(
+      /@media \(max-width: 479px\)\s*\{\s*\.library__grid,\s*\.module__grid\s*\{\s*grid-template-columns:\s*1fr;/
     );
     expect(css).toMatch(
       /@media \(max-width: 479px\)\s*\{\s*\.hub-header__actions\s*\{\s*width:\s*100%;/
     );
-    expect(css).not.toMatch(/\.hub-(grid|controls|search)[^{]*\{[^}]*width:\s*[4-9]\d{2}px/);
+    expect(css).not.toMatch(/\.library(__grid|-card)[^{]*\{[^}]*width:\s*[4-9]\d{2}px/);
   });
 });

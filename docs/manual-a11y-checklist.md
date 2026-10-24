@@ -20,16 +20,22 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 
 ## Hub (`#/`)
 - [ ] Tab reaches "Crear tema"; Enter opens the modal.
-- [ ] Every topic card is reachable and activable with Enter; visible focus ring.
+- [ ] Every category card is a native link reachable with Enter; visible focus ring.
 - [ ] No horizontal scroll at 360px; touch targets ≥44px.
-- [ ] (spec-12) Header shows "Tus temas"/"Progreso" and **not** "Sepect".
-- [ ] (spec-12) Search has a visible/accessible label and a clear control; typing filters
-      by title and description, ignoring case/accents.
-- [ ] (spec-12) Sort and status filters are native labelled controls; keyboard operable;
-      "Sin resultados" is announced when nothing matches.
-- [ ] (spec-12) Each topic card shows the cover (decorative `alt=""`), learned/pending
-      counts, progress bar with `role="progressbar"` + `aria-valuenow`, and days studied.
-- [ ] (spec-12) "Progreso" is reachable by keyboard and opens `#/progreso`.
+- [ ] (spec-17) Header shows "Biblioteca"/"Progreso" and **not** "Sepect".
+- [ ] (spec-17) Se ven las cuatro categorías: Programación, Idiomas, Universidad y Mis temas.
+      Idiomas/Universidad muestran «Próximamente» sin enlaces rotos.
+- [ ] (spec-17) Cada tarjeta con contenido muestra temas, cartas y una barra de progreso
+      con `role="progressbar"` + `aria-valuenow`; Mis temas refleja los temas custom.
+- [ ] (spec-17) "Progreso" es accesible por teclado y abre `#/progreso`.
+
+## Category view (`#/categoria/:id`)
+- [ ] (spec-17) La cabecera permite volver a la biblioteca con un enlace nativo.
+- [ ] (spec-17) Programación muestra Módulo 1 y Módulo 2 en orden; cada tema es un enlace
+      nativo a `#/tema/:id` con cartas, aprendidas y días de estudio.
+- [ ] (spec-17) Categoría desconocida → 404; categoría sin contenido → «Próximamente».
+- [ ] (spec-17) Sin scroll horizontal a 360px; foco visible y targets ≥44px.
+- [ ] (spec-17) `prefers-reduced-motion` desactiva las transiciones de las tarjetas.
 
 ## Create-topic modal
 - [ ] Paste MD → card preview appears; counts ("N cartas válidas · N líneas ignoradas") announced.
@@ -171,13 +177,13 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 - [ ] No horizontal scroll at 360px in hub, topic, game and error screens; `html`/`body`
       show the app background while overscrolling (iOS-style).
 - [ ] Error/404 screens (`NotFound`, GameHost guards) keep the h1→p→action rhythm.
-- [ ] Browser tab title follows the route (Temas / Progreso / tema / juego / 404).
+- [ ] Browser tab title follows the route (Biblioteca / Categoría / Progreso / tema / juego / 404).
 - [ ] Sound toggle in the header and in-game stay in sync; mute persists after reload.
 - [ ] `prefers-reduced-motion` → `.btn-neon` and modal transitions are instant.
 
 ## Spec-15 — PWA instalable + carátula
 - [ ] Hub: la carátula (`img.hub-cover`) aparece bajo la cabecera, con `alt` descriptivo, `width`/`height` 1200×630 y sin desplazamiento horizontal a 360px; no duplica el `h1` ni añade texto navegable.
-- [ ] La carátula no tapa ni desplaza los controles del hub en 360px ni en escritorio; el orden de tabulación sigue siendo cabecera → búsqueda → filtros → temas.
+- [ ] La carátula no tapa ni desplaza los controles del hub en 360px ni en escritorio; el orden de tabulación sigue siendo cabecera → acciones → categorías.
 - [ ] Con lector de pantalla, la carátula se anuncia como imagen con su descripción y no como texto suelto.
 - [ ] Chrome (escritorio y Android): aparece la opción «Instalar» con el icono propio del arcade (no el «N» de Netlify); el nombre instalado es «Sepect — Arcade de aprendizaje».
 - [ ] Instalado, la app abre a pantalla completa (`display: standalone`), arranca sin conexión y conserva la portada/carátula.

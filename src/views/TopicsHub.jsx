@@ -4,7 +4,6 @@ import Modal from '../components/Modal.jsx';
 import CardImage from '../components/CardImage.jsx';
 import ProgressBar from '../components/ProgressBar.jsx';
 import { loadCatalog, saveCustomTopic } from '../core/content/catalog.js';
-import { topicCoverCard } from '../core/content/cover.js';
 import { ensureTopicMeta } from '../core/content/topicMeta.js';
 import { parseTopic } from '../core/parser/parser.js';
 import { findEmoji } from '../core/content/image.js';
@@ -12,7 +11,8 @@ import { saveImage } from '../core/storage/images.js';
 import { slugify } from '../core/content/slug.js';
 import { loadSrs } from '../core/repetition/srs.js';
 import { createStore } from '../core/storage/store.js';
-import { filterAndSortTopics, SORT_OPTIONS, STATUS_OPTIONS } from './topics.js';
+import { CATEGORIES, topicsForCategory } from '../core/content/library.js';
+import { getTopicMetrics } from '../core/metrics/metrics.js';
 
 
 function CreateTopicForm({ onCreated, onCancel }) {
@@ -159,68 +159,53 @@ function CreateTopicForm({ onCreated, onCancel }) {
     </form>
   );
 }
-function TopicCard({ topic, metrics, cover }) {
-  const learned = metrics ? metrics.learned : 0;
-  const notLearned = metrics ? metrics.notLearned : topic.cards.length;
-  const days = metrics ? metrics.daysStudied : 0;
-  return (
-    <a
-      className="card-neon topic-card-tile"
-      href={`#/tema/${topic.id}`}
-      style={{ textDecoration: 'none', color: 'var(--text)', minHeight: 44 }}
-    >
-      <div className="topic-card-tile__media">
-        {cover ? <CardImage card={cover} fill className="topic-card-tile__img" /> : null}
-      </div>
-      <div className="topic-card-tile__body">
-        <h2 className="neon topic-card-tile__title">{topic.title}</h2>
-        <p className="topic-card-tile__count">
-          <strong>{topic.cards.length}</strong> cartas
-          {topic.source === 'custom' && ' · Personalizado'}
-        </p>
-        <ProgressBar value={metrics ? metrics.progress : 0} label={`Progreso de ${topic.title}`} />
-        <p className="topic-card-tile__stats">
-          {learned} aprendidas · {notLearned} por aprender
-        </p>
-        <p className="topic-card-tile__days">
-          {days === 0 ? 'Sin sesiones todavía' : `${days} día${days === 1 ? '' : 's'} de estudio`}
-        </p>
-      </div>
-    </a>
-  );
-}
+
 
 export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
   const [version, setVersion] = useState(0);
   const [creating, setCreating] = useState(false);
-  const [query, setQuery] = useState('');
-  const [sort, setSort] = useState('recent');
-  const [status, setStatus] = useState('all');
 
-  const topics = useMemo(() => ensureTopicMeta(loadTopics()), [loadTopics, version]);
+  const allTopics = useMemo(() => ensureTopicMeta(loadTopics()), [loadTopics, version]);
   const srs = useMemo(() => loadSrs(), [version]);
   const history = useMemo(() => createStore().load().history || [], [version]);
+  const now = Date.now();
 
-  const { topics: visible, metrics } = useMemo(
-    () =>
-      filterAndSortTopics(topics, {
-        query,
-        sort,
-        status,
-        srs,
-        history,
-        now: Date.now(),
-      }),
-    [topics, query, sort, status, srs, history]
-  );
+  const topicsById = useMemo(() => new Map(allTopics.map((t) => [t.id, t])), [allTopics]);
 
-  const hasFilters = query.trim() !== '' || status !== 'all';
+  const categoryCards = useMemo(() => {
+    return CATEGORIES.map((cat) => {
+      const moduleTopics = topicsForCategory(cat.id);
+      const topicIds = moduleTopics.map((m) => m.topicId);
+      const topics = topicIds.map((id) => topicsById.get(id)).filter(Boolean);
+      const customTopics = cat.id === 'personalizados' ? allTopics.filter((t) => t.source === 'custom') : [];
+      const list = cat.id === 'personalizados' ? customTopics : topics;
+      const totalCards = list.reduce((acc, t) => acc + (t.cards?.length || 0), 0);
+      let progressSum = 0;
+      let count = 0;
+      for (const t of list) {
+        const m = getTopicMetrics(t, srs, history, now);
+        progressSum += m.progress || 0;
+        count += 1;
+      }
+      const progress = count > 0 ? Math.round(progressSum / count) : 0;
+      return {
+        category: cat,
+        count: list.length,
+        totalCards,
+        progress,
+        hasContent: list.length > 0,
+      };
+    });
+  }, [allTopics, topicsById, srs, history, now]);
+
+  const hasAnyTopics = allTopics.length > 0;
+
   return (
     <main className="sepect-bg topic-page">
       <header className="hub-header">
         <div>
-          <h1 className="neon hub-title">Tus temas</h1>
-          <p className="hub-subtitle">Elige un tema y juega para memorizarlo.</p>
+          <h1 className="neon hub-title">Biblioteca</h1>
+          <p className="hub-subtitle">Elige una categoría y practica por módulos.</p>
         </div>
         <div className="hub-header__actions">
           <button className="btn-neon" type="button" onClick={() => setCreating(true)}>
@@ -241,7 +226,7 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
         decoding="async"
       />
 
-      {topics.length === 0 ? (
+      {hasAnyTopics === false ? (
         <div style={{ marginTop: 16 }}>
           <Card title="Aún no hay temas">
             <p>Pega tus notas en Markdown para crear tu primer tema.</p>
@@ -250,92 +235,49 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
             </button>
           </Card>
         </div>
-      ) : (
-        <>
-          <div className="hub-controls">
-            <div className="hub-search">
-              <span className="hub-search__icon" aria-hidden="true">🔍</span>
-              <input
-                id="hub-search"
-                type="search"
-                className="hub-field"
-                aria-label="Buscar temas"
-                placeholder="Buscar por título o descripción"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-              />
-              {query !== '' && (
-                <button
-                  className="btn-neon hub-search__clear"
-                  type="button"
-                  aria-label="Limpiar búsqueda"
-                  onClick={() => setQuery('')}
-                >
-                  ✕
-                </button>
-              )}
-            </div>
-            <label className="hub-control">
-              <span>Ordenar</span>
-              <select
-                className="hub-select"
-                aria-label="Ordenar temas"
-                value={sort}
-                onChange={(event) => setSort(event.target.value)}
-              >
-                {SORT_OPTIONS.map((option) => (
-                  <option key={option.id} value={option.id}>{option.label}</option>
-                ))}
-              </select>
-            </label>
-            <label className="hub-control">
-              <span>Estado</span>
-              <select
-                className="hub-select"
-                aria-label="Filtrar por estado"
-                value={status}
-                onChange={(event) => setStatus(event.target.value)}
-              >
-                {STATUS_OPTIONS.map((option) => (
-                  <option key={option.id} value={option.id}>{option.label}</option>
-                ))}
-              </select>
-            </label>
-          </div>
+      ) : null}
 
-          {visible.length === 0 ? (
-            <div style={{ marginTop: 16 }}>
-              <Card title="Sin resultados">
-                <p>No hay temas que coincidan con tu búsqueda o filtros.</p>
-                {hasFilters && (
-                  <button
-                    className="btn-neon"
-                    type="button"
-                    onClick={() => {
-                      setQuery('');
-                      setStatus('all');
-                    }}
-                  >
-                    Limpiar filtros
-                  </button>
-                )}
-              </Card>
-            </div>
-          ) : (
-            <ul className="hub-grid">
-              {visible.map((topic) => (
-                <li key={topic.id}>
-                  <TopicCard
-                    topic={topic}
-                    metrics={metrics[topic.id]}
-                    cover={topicCoverCard(topic)}
-                  />
+      <section className="library">
+        <ul className="library__grid">
+          {categoryCards.map((card) => {
+            const cat = card.category;
+            if (!card.hasContent && cat.id !== 'personalizados') {
+              return (
+                <li key={cat.id}>
+                  <Card className="library-card library-card--coming">
+                    <div className="library-card__header">
+                      <h2 className="library-card__title">{cat.title}</h2>
+                      {cat.description ? <p className="library-card__desc">{cat.description}</p> : null}
+                    </div>
+                    <span className="library-card__badge">Próximamente</span>
+                  </Card>
                 </li>
-              ))}
-            </ul>
-          )}
-        </>
-      )}
+              );
+            }
+            return (
+              <li key={cat.id}>
+                <a className="card-neon library-card" href={`#/categoria/${cat.id}`}>
+                  <div className="library-card__header">
+                    <h2 className="library-card__title">{cat.title}</h2>
+                    {cat.description ? <p className="library-card__desc">{cat.description}</p> : null}
+                  </div>
+                  <div className="library-card__meta">
+                    <span>{card.count} {card.count === 1 ? 'tema' : 'temas'}</span>
+                    <span>{card.totalCards} {card.totalCards === 1 ? 'carta' : 'cartas'}</span>
+                  </div>
+                  <div className="library-card__progress">
+                    <ProgressBar
+                      value={card.progress / 100}
+                      label={`Progreso de ${cat.title}`}
+                    />
+                    <span className="library-card__percent">Progreso {card.progress}%</span>
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
 
       <Modal open={creating} title="Crear tema" onClose={() => setCreating(false)}>
         <CreateTopicForm

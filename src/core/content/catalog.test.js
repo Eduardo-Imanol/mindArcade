@@ -41,6 +41,55 @@ describe('buildCatalog', () => {
   });
 });
 
+describe('library metadata (spec-17 T2)', () => {
+  const FIXTURE_UNLISTED = `# Tema fuera del manifiesto
+Tema de prueba sin entrada en library.js.
+
+- Q: ¿Qué es esto? | A: Un tema no listado | E: easy`;
+
+  it('built-in gets category, module and sourcePath', () => {
+    const [topic] = buildCatalog([FIXTURE_A]);
+    expect(topic.id).toBe('funciones-en-programacion');
+    expect(topic.categoryId).toBe('programacion');
+    expect(topic.moduleId).toBe('programacion-m1');
+    expect(topic.moduleTitle).toBe('Módulo 1: Funciones');
+    expect(topic.sourcePath).toBe('programacion/dart-funciones.md');
+  });
+
+  it('custom always goes to personalizados with null sourcePath', () => {
+    const [topic] = buildCatalog([], [{ title: 'Mi tema', md: FIXTURE_A }]);
+    expect(topic.source).toBe('custom');
+    expect(topic.categoryId).toBe('personalizados');
+    expect(topic.moduleId).toBeNull();
+    expect(topic.sourcePath).toBeNull();
+  });
+
+  it('unlisted built-in falls back safely', () => {
+    const [topic] = buildCatalog([FIXTURE_UNLISTED]);
+    expect(topic.id).toBe('tema-fuera-del-manifiesto');
+    expect(topic.categoryId).toBe('personalizados');
+    expect(topic.moduleId).toBeNull();
+    expect(topic.sourcePath).toBeNull();
+  });
+
+  it('loadCatalog loads the four nested built-ins with metadata', () => {
+    const builtins = loadCatalog().filter((t) => t.source === 'builtin');
+    expect(builtins.map((t) => t.id).sort()).toEqual(
+      [
+        'algoritmos-y-complejidad-guia-tecnica-exhaustiva',
+        'estructuras-de-datos',
+        'funciones-en-programacion',
+        'persistencia-local-pwas-y-offline-first',
+      ].sort()
+    );
+    for (const topic of builtins) {
+      expect(topic.categoryId).toBe('programacion');
+      expect(topic.moduleId === 'programacion-m1' || topic.moduleId === 'programacion-m2').toBe(true);
+      expect(topic.sourcePath.startsWith('programacion/')).toBe(true);
+    }
+  });
+});
+
 describe('custom topic persistence', () => {
   it('save → reload survives, keeps errors count, rejects 0 valid cards', () => {
     const bad = saveCustomTopic({ title: 'Vacío', md: 'sin preguntas' });

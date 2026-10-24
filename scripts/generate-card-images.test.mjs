@@ -2,7 +2,14 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
-import { generate, planTargets, renderSvg } from './generate-card-images.mjs';
+import {
+  TOPICS_DIR,
+  findTopicFiles,
+  generate,
+  planTargets,
+  renderSvg,
+  resolveTopicPath,
+} from './generate-card-images.mjs';
 import { parseTopic } from '../src/core/parser/parser.js';
 
 const FIXTURE_C = `# Animales
@@ -41,6 +48,59 @@ describe('renderSvg determinism', () => {
     const card = { id: 'book', front: 'book', back: 'libro', difficulty: 'easy' };
     expect(renderSvg(card)).toBe(renderSvg(card));
     expect(renderSvg(card)).toContain('<svg');
+  });
+});
+
+describe('recursive topic resolution (spec-17 T7)', () => {
+  const IDS = [
+    'algoritmos-y-complejidad-guia-tecnica-exhaustiva',
+    'estructuras-de-datos',
+    'funciones-programacion',
+    'persistencia-local-pwas-y-offline-first',
+  ];
+
+  it('resolves the four built-in topic ids in nested folders', () => {
+    for (const id of IDS) {
+      const resolved = resolveTopicPath(id);
+      expect(fs.existsSync(resolved), id).toBe(true);
+      expect(path.relative(TOPICS_DIR, resolved).split(path.sep)).toContain('programacion');
+      expect(path.basename(resolved)).toBe(`${id}.md`);
+    }
+  });
+
+  it('finds a fixture topic inside a nested folder', () => {
+    const root = tempRoot();
+    fs.mkdirSync(path.join(root, 'idiomas', 'a1'), { recursive: true });
+    const nested = path.join(root, 'idiomas', 'a1', 'saludos.md');
+    fs.writeFileSync(nested, '# Saludos\n- Q: hola | A: hello', 'utf8');
+
+    expect(findTopicFiles('saludos', root)).toEqual([nested]);
+    expect(resolveTopicPath('saludos', { topicsDir: root })).toBe(nested);
+  });
+
+  it('rejects an ambiguous id instead of choosing one file', () => {
+    const root = tempRoot();
+    fs.mkdirSync(path.join(root, 'programacion'), { recursive: true });
+    fs.mkdirSync(path.join(root, 'idiomas'), { recursive: true });
+    const first = path.join(root, 'programacion', 'dup.md');
+    const second = path.join(root, 'idiomas', 'dup.md');
+    fs.writeFileSync(first, '# Dup A\n- Q: a | A: b', 'utf8');
+    fs.writeFileSync(second, '# Dup B\n- Q: c | A: d', 'utf8');
+
+    expect(() => resolveTopicPath('dup', { topicsDir: root })).toThrow(/ambiguo/i);
+    try {
+      resolveTopicPath('dup', { topicsDir: root });
+    } catch (error) {
+      expect(error.code).toBe('AMBIGUOUS_TOPIC');
+      expect(error.matches.sort()).toEqual([first, second].sort());
+    }
+  });
+
+  it('returns the flat path when the id does not exist so main can report it', () => {
+    const root = tempRoot();
+    const missing = resolveTopicPath('no-existe', { topicsDir: root });
+    expect(missing).toBe(path.join(path.resolve(root), 'no-existe.md'));
+    expect(fs.existsSync(missing)).toBe(false);
   });
 });
 
