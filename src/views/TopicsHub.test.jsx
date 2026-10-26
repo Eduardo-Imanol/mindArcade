@@ -54,6 +54,19 @@ describe('TopicsHub (category-first, spec-17 T5)', () => {
     expect(container.textContent).toContain('Próximamente');
   });
 
+  it('shows one representative image per category', () => {
+    const { container } = mount(<TopicsHub />);
+    const images = [...container.querySelectorAll('img.library-card__media')];
+    expect(images).toHaveLength(4);
+    for (const image of images) {
+      expect(image.getAttribute('src')).toMatch(/\/categories\/(programacion|idiomas|universidad|personalizados)\.png$/);
+      expect(image.getAttribute('alt')).toBe('');
+      expect(image.getAttribute('width')).toBe('720');
+      expect(image.getAttribute('height')).toBe('405');
+      expect(image.getAttribute('loading')).toBe('lazy');
+    }
+  });
+
   it('create flow: paste fixture A → save → appears in Mis temas', () => {
     const { container } = mount(<TopicsHub />);
     click(byText(container, 'button', 'Crear tema'));

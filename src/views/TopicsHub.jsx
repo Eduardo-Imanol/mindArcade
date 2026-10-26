@@ -199,6 +199,8 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
   }, [allTopics, topicsById, srs, history, now]);
 
   const hasAnyTopics = allTopics.length > 0;
+  const categoryImage = (cat) =>
+    `${import.meta.env.BASE_URL || '/'}${cat.image || `categories/${cat.id}.png`}`;
 
   return (
     <main className="sepect-bg topic-page">
@@ -245,6 +247,15 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
               return (
                 <li key={cat.id}>
                   <Card className="library-card library-card--coming">
+                    <img
+                      className="library-card__media"
+                      src={categoryImage(cat)}
+                      alt=""
+                      width="720"
+                      height="405"
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div className="library-card__header">
                       <h2 className="library-card__title">{cat.title}</h2>
                       {cat.description ? <p className="library-card__desc">{cat.description}</p> : null}
@@ -257,6 +268,15 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
             return (
               <li key={cat.id}>
                 <a className="card-neon library-card" href={`#/categoria/${cat.id}`}>
+                  <img
+                    className="library-card__media"
+                    src={categoryImage(cat)}
+                    alt=""
+                    width="720"
+                    height="405"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="library-card__header">
                     <h2 className="library-card__title">{cat.title}</h2>
                     {cat.description ? <p className="library-card__desc">{cat.description}</p> : null}

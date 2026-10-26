@@ -20,8 +20,8 @@
 - `src/core/content/` — built-in + custom topic catalog.
   - `library.js` is the frozen, code-versioned manifest: categories
     (`programacion`, `idiomas`, `universidad`, `personalizados`), modules, stable
-    order, `topicsForCategory`, and `SOURCE_BY_TOPIC` (topic id → source path).
-    It has no storage/glob imports.
+    order, `topicsForCategory`, per-category `image` (`public/categories/<id>.png`)
+    and `SOURCE_BY_TOPIC` (topic id → source path). It has no storage/glob imports.
   - `catalog.js` loads built-in Markdown with a recursive
     `content/topics/**/*.md` glob and attaches `categoryId`, `moduleId`,
     `moduleTitle` and `sourcePath` (nullable) without changing the parser. Custom
@@ -45,8 +45,10 @@
   and never know the topic domain. Games never touch storage.
 - `src/components/` — neon Button/Card Modal (Tailwind + tokens.css).
 - `src/views/` — `TopicsHub` (`#/`, category-first library with aggregated
-  progress + cover), `CategoryView` (`#/categoria/:id`, modules in manifest order
-  with their topics), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
+  progress, representative category art + cover), `CategoryView`
+  (`#/categoria/:id`, modules in manifest order, collapsed by default with
+  `aria-expanded` toggles; search/sort/status filters switch to a flat topic list
+  without modules), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
   full description + metrics + game tiles), `GameHost`
   (`#/tema/:id/juego/:gameId`, eligible deck + «Todo al día»), `Dashboard`
   (`#/progreso`, global/per-topic metrics + 14-day activity), `NotFound`.

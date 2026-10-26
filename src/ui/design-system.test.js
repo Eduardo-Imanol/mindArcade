@@ -48,7 +48,7 @@ describe('design system gate (spec-13)', () => {
 
   it('gives the search field room for the clear button (AC-8)', () => {
     const css = read('src/ui/tokens.css');
-    const search = css.match(/#hub-search\s*{([^}]*)}/s)[1];
+    const search = css.match(/\.hub-search\s+\.hub-field\s*{([^}]*)}/s)[1];
     expect(search).toMatch(/padding-right:\s*(\d+)px/);
     expect(Number(search.match(/padding-right:\s*(\d+)px/)[1])).toBeGreaterThanOrEqual(44);
   });

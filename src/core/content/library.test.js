@@ -23,6 +23,11 @@ describe('library manifest (spec-17 T1)', () => {
       expect(c.id).toBeTypeOf('string');
       expect(c.title).toBeTypeOf('string');
       expect(c.order).toBeTypeOf('number');
+      expect(c.image).toBe(`categories/${c.id}.png`);
+      expect(
+        fs.existsSync(path.join(process.cwd(), 'public', c.image)),
+        c.image
+      ).toBe(true);
       expect(Object.isFrozen(c)).toBe(true);
       expect(Array.isArray(c.modules)).toBe(true);
     }

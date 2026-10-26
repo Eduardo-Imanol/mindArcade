@@ -4,6 +4,7 @@
 export const CATEGORIES = Object.freeze([
   Object.freeze({
     id: 'programacion',
+    image: 'categories/programacion.png',
     title: 'Programación',
     description: 'Fundamentos de Dart, estructuras, algoritmos y persistencia.',
     order: 1,
@@ -30,6 +31,7 @@ export const CATEGORIES = Object.freeze([
   }),
   Object.freeze({
     id: 'idiomas',
+    image: 'categories/idiomas.png',
     title: 'Idiomas',
     description: 'Vocabulario y gramática para practicar con juegos.',
     order: 2,
@@ -37,6 +39,7 @@ export const CATEGORIES = Object.freeze([
   }),
   Object.freeze({
     id: 'universidad',
+    image: 'categories/universidad.png',
     title: 'Universidad',
     description: 'Materias con teoría y ejercicios.',
     order: 3,
@@ -44,6 +47,7 @@ export const CATEGORIES = Object.freeze([
   }),
   Object.freeze({
     id: 'personalizados',
+    image: 'categories/personalizados.png',
     title: 'Mis temas',
     description: 'Temas creados por ti desde el hub.',
     order: 4,

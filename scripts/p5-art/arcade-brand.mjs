@@ -205,6 +205,52 @@ function drawUniversityScreen(canvas, screen) {
   fillCircle(canvas, capX + capW / 2 + capW * 0.26, capY + capH * 1.8, capW * 0.055, AMBER);
 }
 
+function drawPersonalScreen(canvas, screen) {
+  const cardW = screen.w * 0.46;
+  const cardH = screen.h * 0.58;
+  const cx = screen.x + screen.w / 2;
+  const cy = screen.y + screen.h * 0.54;
+  const colors = [CYAN, MAGENTA, AMBER];
+  for (let i = 2; i >= 0; i -= 1) {
+    const x = cx - cardW / 2 + (i - 1) * screen.w * 0.07;
+    const y = cy - cardH / 2 + (i - 1) * screen.h * 0.06;
+    const accent = colors[i];
+    fillRoundRect(canvas, x, y, cardW, cardH, cardW * 0.08, '#2a1148');
+    strokeRect(canvas, x, y, cardW, cardH, accent, Math.max(1, cardW * 0.025));
+    fillCircle(canvas, x + cardW * 0.25, y + cardH * 0.28, cardH * 0.1, accent);
+    fillRoundRect(
+      canvas,
+      x + cardW * 0.14,
+      y + cardH * 0.5,
+      cardW * 0.72,
+      cardH * 0.08,
+      cardH * 0.04,
+      MUTED
+    );
+    fillRoundRect(
+      canvas,
+      x + cardW * 0.14,
+      y + cardH * 0.66,
+      cardW * 0.5,
+      cardH * 0.08,
+      cardH * 0.04,
+      MUTED
+    );
+  }
+
+  const starX = screen.x + screen.w * 0.76;
+  const starY = screen.y + screen.h * 0.26;
+  const outer = screen.w * 0.09;
+  const inner = outer * 0.44;
+  const points = [];
+  for (let i = 0; i < 10; i += 1) {
+    const radius = i % 2 === 0 ? outer : inner;
+    const angle = -Math.PI / 2 + (i * Math.PI) / 5;
+    points.push([starX + Math.cos(angle) * radius, starY + Math.sin(angle) * radius]);
+  }
+  fillPolygon(canvas, points, AMBER);
+}
+
 /** Icono de la app: una máquina recreativa con serpiente en la pantalla. */
 export function drawIcon(canvas, { maskable = false } = {}) {
   verticalGradient(canvas, hexToRgb(BG2), hexToRgb(BG));
@@ -300,4 +346,50 @@ export function drawCover(canvas) {
   }
 
   scanlines(canvas, { alpha: 0.12, spacing: Math.max(3, Math.round(canvas.height / 130)) });
+}
+
+const CATEGORY_ART = {
+  programacion: { accent: CYAN, marquee: 'CODE', screen: drawCodeScreen },
+  idiomas: { accent: MAGENTA, marquee: 'IDIOMA', screen: drawLanguageScreen },
+  universidad: { accent: GREEN, marquee: 'UNIV', screen: drawUniversityScreen },
+  personalizados: { accent: AMBER, marquee: 'MIS TEMAS', screen: drawPersonalScreen },
+};
+
+/** Imagen representativa de una categoría: un gabinete arcade con su pantalla. */
+export function drawCategory(canvas, categoryId) {
+  const art = CATEGORY_ART[categoryId] || CATEGORY_ART.programacion;
+  const accentRgb = hexToRgb(art.accent);
+  verticalGradient(canvas, hexToRgb(BG2), hexToRgb(BG));
+  starField(canvas, { count: 46, seed: 17 });
+  radialGlow(canvas, canvas.width * 0.5, canvas.height * 0.45, canvas.width * 0.55, art.accent, 0.3);
+  radialGlow(
+    canvas,
+    canvas.width * 0.5,
+    canvas.height * 0.9,
+    canvas.width * 0.45,
+    art.accent,
+    0.16
+  );
+  perspectiveGrid(canvas, { horizon: canvas.height * 0.7, color: art.accent, alpha: 0.18, rows: 7 });
+
+  const cabH = canvas.height * 0.82;
+  const cabW = cabH * 0.8;
+  const cabX = (canvas.width - cabW) / 2;
+  const cabY = (canvas.height - cabH) / 2;
+  fillCircle(canvas, canvas.width * 0.5, canvas.height * 0.5, cabW * 0.62, [
+    accentRgb[0],
+    accentRgb[1],
+    accentRgb[2],
+    18,
+  ]);
+  const screen = drawCabinet(canvas, {
+    x: cabX,
+    y: cabY,
+    w: cabW,
+    h: cabH,
+    accent: art.accent,
+    marquee: art.marquee,
+  });
+  art.screen(canvas, screen);
+  scanlines(canvas, { alpha: 0.14, spacing: Math.max(2, Math.round(canvas.height / 110)) });
 }

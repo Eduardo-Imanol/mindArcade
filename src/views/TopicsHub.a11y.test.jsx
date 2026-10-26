@@ -120,6 +120,8 @@ describe('TopicsHub a11y (AC-11)', () => {
     expect(css).toMatch(/\.library-card\s*\{[^}]*min-height:\s*44px/);
     expect(css).toMatch(/\.library-card__title\s*\{[^}]*overflow-wrap:\s*anywhere/);
     expect(css).toMatch(/\.library-card__desc\s*\{[^}]*overflow-wrap:\s*anywhere/);
+    expect(css).toMatch(/\.library-card__media\s*\{[^}]*aspect-ratio:\s*16\s*\/\s*9/);
+    expect(css).toMatch(/\.library-card__media\s*\{[^}]*object-fit:\s*cover/);
     expect(css).toMatch(/a:focus-visible/);
     expect(css).toMatch(/@media \(prefers-reduced-motion: reduce\)[\s\S]*?\.library-card/);
   });

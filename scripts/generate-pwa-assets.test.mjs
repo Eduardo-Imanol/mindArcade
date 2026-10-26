@@ -3,9 +3,11 @@ import os from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
+  CATEGORY_TARGETS,
   COVER_TARGET,
   ICON_TARGETS,
   generatePwaAssets,
+  renderCategory,
   renderCover,
   renderIcon,
 } from './generate-pwa-assets.mjs';
@@ -40,11 +42,25 @@ describe('pwa assets (PNG) ', () => {
     expect(cover.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
     expect(readPNGSize(cover)).toEqual({ width: 1200, height: 630 });
     expect(cover.length).toBeLessThan(MAX_BYTES);
+
+    for (const target of CATEGORY_TARGETS) {
+      const png = renderCategory(target.category, target.width, target.height);
+      expect(png.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a');
+      expect(readPNGSize(png)).toEqual({ width: target.width, height: target.height });
+      expect(png.length, target.file).toBeLessThan(MAX_BYTES);
+    }
   });
 
   it('es determinista (mismo byte con la misma semilla)', () => {
     expect(renderIcon(192).equals(renderIcon(192))).toBe(true);
     expect(renderCover().equals(renderCover())).toBe(true);
+    for (const target of CATEGORY_TARGETS) {
+      expect(
+        renderCategory(target.category, target.width, target.height).equals(
+          renderCategory(target.category, target.width, target.height)
+        )
+      ).toBe(true);
+    }
   });
 
   it('mantiene el texto de la carátula dentro del lienzo', () => {
@@ -59,11 +75,15 @@ describe('pwa assets (PNG) ', () => {
     const root = tempRoot();
     const first = generatePwaAssets({ root, force: true });
     expect(first.written.sort()).toEqual(
-      [...ICON_TARGETS.map((target) => target.file), COVER_TARGET.file].sort()
+      [
+        ...ICON_TARGETS.map((target) => target.file),
+        COVER_TARGET.file,
+        ...CATEGORY_TARGETS.map((target) => target.file),
+      ].sort()
     );
     const second = generatePwaAssets({ root });
     expect(second.written).toEqual([]);
-    expect(second.skipped).toHaveLength(ICON_TARGETS.length + 1);
+    expect(second.skipped).toHaveLength(ICON_TARGETS.length + 1 + CATEGORY_TARGETS.length);
   });
 
   it('mantiene los assets versionados en public/ sincronizados con el generador', () => {
@@ -77,6 +97,15 @@ describe('pwa assets (PNG) ', () => {
     const coverFile = path.join(PUBLIC, COVER_TARGET.file);
     expect(fs.existsSync(coverFile)).toBe(true);
     expect(fs.readFileSync(coverFile).equals(renderCover())).toBe(true);
+
+    for (const target of CATEGORY_TARGETS) {
+      const file = path.join(PUBLIC, target.file);
+      expect(fs.existsSync(file), file).toBe(true);
+      expect(
+        fs.readFileSync(file).equals(renderCategory(target.category, target.width, target.height)),
+        file
+      ).toBe(true);
+    }
   });
 });
 
@@ -122,6 +151,9 @@ describe('service worker e index.html', () => {
     expect(sw).toContain("addEventListener('fetch'");
     expect(sw).toContain('./index.html');
     expect(sw).toContain('./manifest.webmanifest');
+    for (const target of CATEGORY_TARGETS) {
+      expect(sw).toContain(`./${target.file}`);
+    }
     expect(sw).toContain('caches.open');
     expect(sw).toContain('skipWaiting');
   });

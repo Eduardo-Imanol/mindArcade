@@ -2,8 +2,10 @@
 
 ## Active objective (single)
 spec-17 "biblioteca-categorias-modulos" — **T1–T9 implementados y documentados
-2026-10-24**; gates verdes (`npm test` 731/731, `npm run lint` 0, `npm run build`
-OK). Pendiente revisión humana del diff y archivo del plan de tareas.
+2026-10-24**, más un ajuste UX posterior solicitado por Eduardo sin spec:
+módulos plegables, búsqueda/filtros con lista plana e imágenes por categoría.
+Gates verdes (`npm test` 738/738, `npm run lint` 0, `npm run build` OK).
+Pendiente revisión humana del diff y archivo del plan de tareas.
 
 **Pendientes de firma (anteriores):** spec-12, spec-13, spec-14 y spec-15 siguen
 esperando aprobación humana del diff; spec-13 conserva T23 (sesión manual 360px +
@@ -41,6 +43,11 @@ Fases SDD para spec-17:
 - **T9 — docs y gates**: arquitectura/roadmap/MEMORY/FOCUS actualizados;
   `specs/spec-16-flashcards-decks.md` renombrado (tenía un `\n` literal);
   PNG PWA regenerados y sketches genéricos para `estructuras-de-datos`.
+- **Ajuste UX (sin spec)**: acordeones de módulo cerrados por defecto con
+  `aria-expanded`/`aria-controls` y panel `hidden`; búsqueda/orden/estado
+  reutilizados de `views/topics.js` con resultados planos sin módulos; Mis temas
+  en rejilla plana; imágenes 720×405 por categoría generadas con
+  `drawCategory` (`arcade-brand`) y servidas desde `public/categories/`.
 
 ## Decisions (spec-17)
 - **Category-first**: `#/` → categorías; `#/categoria/:id` → módulos y temas;
@@ -52,6 +59,12 @@ Fases SDD para spec-17:
 - **Manifiesto puro**: `library.js` congela categorías, módulos, orden y
   `SOURCE_BY_TOPIC`; no toca storage ni globs.
 - **Sin migraciones**: IDs de tema, rutas de juego, parser, SRS y XP intactos.
+- **Acordeón**: los módulos arrancan cerrados; «Abrir/Cerrar módulos» actúa sobre
+  todos y cada cabecera se pliega de forma independiente.
+- **Filtros planos**: cualquier búsqueda, estado distinto de «Todos» u orden
+  distinto de «Por módulos» oculta los módulos y muestra una rejilla plana.
+- **Imágenes de categoría**: PNG deterministas 720×405 en `public/categories/`;
+  `library.js` guarda la ruta y el hub las pinta decorativas (`alt=""`).
 
 ## Previous increments
 - spec-15 "pwa-arcade-cover" — implementada; pendiente T14 + firma.
@@ -61,6 +74,6 @@ Fases SDD para spec-17:
 - spec-11 "serpiente-significados" — cerrada técnicamente; 8 juegos available.
 
 ## Next atomic step
-Revisar el diff de spec-17, archivar/ajustar
-`specs/tasks-17-biblioteca-categorias-modulos.md` si el humano lo aprueba y
-continuar con `spec-18` (mazos de dominio y arcade).
+Revisar el diff de spec-17 + ajuste UX, decidir commit/push y archivar/ajustar
+`specs/tasks-17-biblioteca-categorias-modulos.md` si el humano lo aprueba.
+Después continuar con `spec-18` (mazos de dominio y arcade).

@@ -27,15 +27,24 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
       Idiomas/Universidad muestran «Próximamente» sin enlaces rotos.
 - [ ] (spec-17) Cada tarjeta con contenido muestra temas, cartas y una barra de progreso
       con `role="progressbar"` + `aria-valuenow`; Mis temas refleja los temas custom.
+- [ ] Cada tarjeta muestra una imagen representativa decorativa (`alt=""`) de 720×405,
+      sin romper la rejilla ni provocar scroll horizontal a 360px.
 - [ ] (spec-17) "Progreso" es accesible por teclado y abre `#/progreso`.
 
 ## Category view (`#/categoria/:id`)
 - [ ] (spec-17) La cabecera permite volver a la biblioteca con un enlace nativo.
-- [ ] (spec-17) Programación muestra Módulo 1 y Módulo 2 en orden; cada tema es un enlace
-      nativo a `#/tema/:id` con cartas, aprendidas y días de estudio.
-- [ ] (spec-17) Categoría desconocida → 404; categoría sin contenido → «Próximamente».
-- [ ] (spec-17) Sin scroll horizontal a 360px; foco visible y targets ≥44px.
-- [ ] (spec-17) `prefers-reduced-motion` desactiva las transiciones de las tarjetas.
+- [ ] (spec-17) Programación muestra Módulo 1 y Módulo 2 en orden; ambos empiezan
+      cerrados y cada cabecera es un botón con `aria-expanded` y `aria-controls`.
+- [ ] Cada módulo se abre/cierra con Enter o Espacio; «Abrir módulos»/«Cerrar módulos»
+      abre o cierra todos; el panel cerrado usa `hidden`.
+- [ ] Con un módulo abierto, cada tema es un enlace nativo a `#/tema/:id` con cartas,
+      aprendidas y días de estudio.
+- [ ] La búsqueda y los filtros (orden por recientes/antiguos/nombre/cartas/progreso y
+      estado; «Por módulos» es el orden inicial) muestran una lista plana sin módulos; «Limpiar filtros» restaura la vista.
+- [ ] Categoría desconocida → 404; categoría sin contenido → «Próximamente».
+- [ ] Mis temas lista los temas custom en una rejilla plana; vacío → CTA a la biblioteca.
+- [ ] Sin scroll horizontal a 360px; foco visible y targets ≥44px.
+- [ ] `prefers-reduced-motion` desactiva las transiciones de tarjetas y chevrons.
 
 ## Create-topic modal
 - [ ] Paste MD → card preview appears; counts ("N cartas válidas · N líneas ignoradas") announced.

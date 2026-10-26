@@ -1,7 +1,7 @@
 /* public/sw.js — service worker de Sepect (PWA instalable + uso sin conexión).
    Sin dependencias: precache del shell, cache-first para assets con hash,
    network-first para navegaciones y fallback al index cacheado. */
-const VERSION = 'sepect-sw-v1';
+const VERSION = 'sepect-sw-v2';
 const CACHE = `sepect-cache-${VERSION}`;
 const SHELL = [
   './',
@@ -12,6 +12,10 @@ const SHELL = [
   './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png',
   './cover/arcade-cover.png',
+  './categories/programacion.png',
+  './categories/idiomas.png',
+  './categories/universidad.png',
+  './categories/personalizados.png',
 ];
 
 self.addEventListener('install', (event) => {
