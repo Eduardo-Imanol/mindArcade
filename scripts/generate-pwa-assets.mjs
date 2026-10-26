@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { drawCategory, drawCover, drawIcon } from './p5-art/arcade-brand.mjs';
+import { CATEGORIES } from '../src/core/content/library.js';
 import { createCanvas, encodePNG } from './p5-art/raster.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,12 +20,12 @@ export const ICON_TARGETS = [
 
 export const COVER_TARGET = { file: 'cover/arcade-cover.png', width: 1200, height: 630 };
 
-export const CATEGORY_TARGETS = [
-  { category: 'programacion', file: 'categories/programacion.png', width: 720, height: 405 },
-  { category: 'idiomas', file: 'categories/idiomas.png', width: 720, height: 405 },
-  { category: 'universidad', file: 'categories/universidad.png', width: 720, height: 405 },
-  { category: 'personalizados', file: 'categories/personalizados.png', width: 720, height: 405 },
-];
+export const CATEGORY_TARGETS = CATEGORIES.map((category) => ({
+  category: category.id,
+  file: category.image || `categories/${category.id}.png`,
+  width: 720,
+  height: 405,
+}));
 
 export function renderIcon(size, { maskable = false } = {}) {
   const canvas = createCanvas(size, size);

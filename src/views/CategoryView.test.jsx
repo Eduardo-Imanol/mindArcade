@@ -118,6 +118,9 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
 
     expect(container.querySelectorAll('.module')).toHaveLength(0);
     expect(container.querySelector('.category__results-title').textContent).toBe('Resultados');
+    const count = container.querySelector('.category__results-count');
+    expect(count.getAttribute('role')).toBe('status');
+    expect(count.textContent).toBe('1 tema');
     const links = [...container.querySelectorAll('a.topic-card')];
     expect(links).toHaveLength(1);
     expect(links[0].getAttribute('href')).toBe(
@@ -145,6 +148,7 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     expect(container.querySelector('#category-search').value).toBe('');
     expect(container.querySelector('select[aria-label="Ordenar temas"]').value).toBe('modules');
     expect(container.querySelector('select[aria-label="Filtrar por estado"]').value).toBe('all');
+    expect(document.activeElement).toBe(container.querySelector('#category-search'));
   });
 
   it('Mis temas lists custom topics flat, without modules', () => {
@@ -160,6 +164,26 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     const link = container.querySelector('a.topic-card');
     expect(link.getAttribute('href')).toBe('#/tema/mi-tema');
     expect(link.textContent).toContain('Mi tema');
+
+    const sort = container.querySelector('select[aria-label="Ordenar temas"]');
+    expect(sort.value).toBe('recent');
+    expect([...sort.options].map((option) => option.textContent)).not.toContain('Por módulos');
+  });
+
+  it('falls back to Recientes on module-less categories and clears back to it', () => {
+    const result = saveCustomTopic({
+      title: 'Mi tema',
+      md: '# Mi tema\nUn tema propio.\n\n- Q: ¿Qué es? | A: Algo | E: easy',
+    });
+    expect(result.ok).toBe(true);
+
+    const { container } = mount(<CategoryView categoryId="personalizados" />);
+    const sort = container.querySelector('select[aria-label="Ordenar temas"]');
+    setValue(sort, 'name-asc');
+    expect(container.textContent).toContain('Limpiar filtros');
+    click(byText(container, 'button', 'Limpiar filtros'));
+    expect(container.querySelector('select[aria-label="Ordenar temas"]').value).toBe('recent');
+    expect(container.textContent).not.toContain('Limpiar filtros');
   });
 
   it('styles the accordion with 44px targets, focus and reduced motion (AC-12)', () => {

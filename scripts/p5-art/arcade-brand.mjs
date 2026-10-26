@@ -357,7 +357,8 @@ const CATEGORY_ART = {
 
 /** Imagen representativa de una categoría: un gabinete arcade con su pantalla. */
 export function drawCategory(canvas, categoryId) {
-  const art = CATEGORY_ART[categoryId] || CATEGORY_ART.programacion;
+  const art = CATEGORY_ART[categoryId];
+  if (!art) throw new Error(`Unknown category art: ${categoryId}`);
   const accentRgb = hexToRgb(art.accent);
   verticalGradient(canvas, hexToRgb(BG2), hexToRgb(BG));
   starField(canvas, { count: 46, seed: 17 });

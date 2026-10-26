@@ -43,12 +43,13 @@
   (`id, title, description?, art?, status, minCards, minTopics?, minCardsPerTopic?, load`).
   Games receive `{ deck, selectCards, groups?, anchorTopicId?, topic?, onGrade, onExit }`
   and never know the topic domain. Games never touch storage.
-- `src/components/` — neon Button/Card Modal (Tailwind + tokens.css).
+- `src/components/` — neon Button/Card Modal y `CategoryArt` (arte
+  representativo de categoría reutilizado por el hub).
 - `src/views/` — `TopicsHub` (`#/`, category-first library with aggregated
   progress, representative category art + cover), `CategoryView`
-  (`#/categoria/:id`, modules in manifest order, collapsed by default with
-  `aria-expanded` toggles; search/sort/status filters switch to a flat topic list
-  without modules), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
+  (`#/categoria/:id`, orquestada con piezas en `views/category/`: módulos en
+  orden de manifiesto, cerrados por defecto con `aria-expanded`; búsqueda,
+  orden y estado cambian a una lista plana sin módulos), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
   full description + metrics + game tiles), `GameHost`
   (`#/tema/:id/juego/:gameId`, eligible deck + «Todo al día»), `Dashboard`
   (`#/progreso`, global/per-topic metrics + 14-day activity), `NotFound`.

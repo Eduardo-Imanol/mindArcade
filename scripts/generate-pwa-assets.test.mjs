@@ -51,6 +51,10 @@ describe('pwa assets (PNG) ', () => {
     }
   });
 
+  it('falla si falta arte para una categoría', () => {
+    expect(() => renderCategory('sin-arte')).toThrow(/Unknown category art/);
+  });
+
   it('es determinista (mismo byte con la misma semilla)', () => {
     expect(renderIcon(192).equals(renderIcon(192))).toBe(true);
     expect(renderCover().equals(renderCover())).toBe(true);

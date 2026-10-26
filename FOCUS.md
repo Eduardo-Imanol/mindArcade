@@ -4,7 +4,7 @@
 spec-17 "biblioteca-categorias-modulos" — **T1–T9 implementados y documentados
 2026-10-24**, más un ajuste UX posterior solicitado por Eduardo sin spec:
 módulos plegables, búsqueda/filtros con lista plana e imágenes por categoría.
-Gates verdes (`npm test` 738/738, `npm run lint` 0, `npm run build` OK).
+Gates verdes (`npm test` 740/740, `npm run lint` 0, `npm run build` OK).
 Pendiente revisión humana del diff y archivo del plan de tareas.
 
 **Pendientes de firma (anteriores):** spec-12, spec-13, spec-14 y spec-15 siguen
@@ -48,6 +48,13 @@ Fases SDD para spec-17:
   reutilizados de `views/topics.js` con resultados planos sin módulos; Mis temas
   en rejilla plana; imágenes 720×405 por categoría generadas con
   `drawCategory` (`arcade-brand`) y servidas desde `public/categories/`.
+- **Pasada impeccable**: `CategoryView` se divide en `views/category/*`
+  (cabecera, controles, resultados, módulos y tarjetas); el arte del hub se
+  centraliza en `components/CategoryArt`; los targets del generador se derivan
+  de `CATEGORIES` y un arte ausente falla en vez de reutilizar Programación.
+  El contador de resultados es `role="status"` y «Limpiar filtros» devuelve el
+  foco a la búsqueda.
+- **Mis temas**: usa «Recientes» como orden inicial y no ofrece «Por módulos».
 
 ## Decisions (spec-17)
 - **Category-first**: `#/` → categorías; `#/categoria/:id` → módulos y temas;
@@ -61,8 +68,9 @@ Fases SDD para spec-17:
 - **Sin migraciones**: IDs de tema, rutas de juego, parser, SRS y XP intactos.
 - **Acordeón**: los módulos arrancan cerrados; «Abrir/Cerrar módulos» actúa sobre
   todos y cada cabecera se pliega de forma independiente.
-- **Filtros planos**: cualquier búsqueda, estado distinto de «Todos» u orden
-  distinto de «Por módulos» oculta los módulos y muestra una rejilla plana.
+- **Filtros planos**: en categorías con módulos, cualquier búsqueda, estado
+  distinto de «Todos» u orden distinto de «Por módulos» oculta los módulos y
+  muestra una rejilla plana. Mis temas usa «Recientes» por defecto.
 - **Imágenes de categoría**: PNG deterministas 720×405 en `public/categories/`;
   `library.js` guarda la ruta y el hub las pinta decorativas (`alt=""`).
 

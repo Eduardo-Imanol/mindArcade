@@ -40,7 +40,9 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 - [ ] Con un módulo abierto, cada tema es un enlace nativo a `#/tema/:id` con cartas,
       aprendidas y días de estudio.
 - [ ] La búsqueda y los filtros (orden por recientes/antiguos/nombre/cartas/progreso y
-      estado; «Por módulos» es el orden inicial) muestran una lista plana sin módulos; «Limpiar filtros» restaura la vista.
+      estado) muestran una lista plana sin módulos; en categorías con módulos
+      «Por módulos» es el orden inicial y «Limpiar filtros» restaura la vista.
+- [ ] Mis temas usa «Recientes» por defecto y no ofrece «Por módulos».
 - [ ] Categoría desconocida → 404; categoría sin contenido → «Próximamente».
 - [ ] Mis temas lista los temas custom en una rejilla plana; vacío → CTA a la biblioteca.
 - [ ] Sin scroll horizontal a 360px; foco visible y targets ≥44px.
