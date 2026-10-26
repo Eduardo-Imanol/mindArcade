@@ -1,60 +1,56 @@
 # FOCUS
 
 ## Active objective (single)
-spec-17 "biblioteca-categorias-modulos" — **T1–T9 implementados y documentados
-2026-10-24**, más un ajuste UX posterior solicitado por Eduardo sin spec:
-módulos plegables, búsqueda/filtros con lista plana e imágenes por categoría.
-Gates verdes (`npm test` 740/740, `npm run lint` 0, `npm run build` OK).
-Pendiente revisión humana del diff y archivo del plan de tareas.
+spec-19 "lector-fuente-tts" — **T1–T7 implementados** (2026-10-26): registro
+lazy de sources, parser Markdown seguro, TTS por secuencia con pausa/reanudación,
+`SourceReader` en `#/tema/:id/fuente`, enlace condicional desde `TopicView`, CSS
+y checklist a11y, docs y gates. Pendiente revisión humana del diff y firma.
 
-**Pendientes de firma (anteriores):** spec-12, spec-13, spec-14 y spec-15 siguen
-esperando aprobación humana del diff; spec-13 conserva T23 (sesión manual 360px +
-teclado) y spec-15 conserva T14 (instalar la PWA en Chrome).
+**Pendientes de firma (anteriores):** spec-12, spec-13, spec-14, spec-15 y
+spec-17 siguen esperando aprobación humana del diff; spec-13 conserva T23
+(sesión manual 360px + teclado) y spec-15 conserva T14 (instalar la PWA en Chrome).
 
 ## Current phase
-Fases SDD para spec-17:
+Fases SDD para spec-19:
 - F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; deps/infra/git-history
   requieren aprobación humana).
-- F2 ✅ `specs/spec-17-biblioteca-categorias-modulos.md` (firmada 2026-10-23).
-- F3 ✅ `specs/tasks-17-biblioteca-categorias-modulos.md` (T1–T9).
-- F4 ✅ T1–T6: manifiesto, contenido movido a carpetas por categoría, catálogo
-  recursivo, sources lazy, router `#/categoria/:id`, CategoryView, hub
-  category-first y breadcrumb en TopicView.
-- F5 ✅ T7–T8: resolución recursiva de topics en scripts con detección de IDs
-  ambiguos; CSS `.library-*` / `.category` / `.module-*` / `.topic-card` con
-  responsive 360 px, foco, 44 px y reduced-motion; tests de CategoryView y a11y
-  del hub actualizados.
-- F6 ✅ T9: docs sincronizados, `spec-16` renombrado, deuda preexistente de PNG y
-  sketches de `estructuras-de-datos` saldada, gates al 100%.
+- F2 ✅ `specs/spec-19-lector-fuente-tts.md` (firmada 2026-10-23).
+- F3 ✅ `specs/tasks-19-lector-fuente-tts.md` (T1–T7).
+- F4 ✅ T1–T3: sources lazy verificado, `markdown.js` + `MarkdownBlocks` y
+  `speakSequence` con pausa/reanudación/cancelación.
+- F5 ✅ T4–T5: `SourceReader` con estados y controles; router `#/…/fuente`,
+  título de documento y enlace condicional en `TopicView`.
+- F6 ✅ T6–T7 implementados: CSS responsive/a11y, `SourceReader.a11y.test.jsx`,
+  checklist manual, arquitectura/MEMORY/FOCUS y gates (manual + firma pendientes).
+  Pasada impeccable: `views/source/` (header/estado/modelo), `markdownInline.js`
+  y `audio/chunks.js`; archivos <200 líneas.
 
 ## Blockers
-- Revisión/aprobación humana del diff de spec-17 y de los incrementos anteriores.
+- Revisión/aprobación humana del diff de spec-19 y de los incrementos anteriores.
+- Verificación manual en navegador real (360 px + teclado + VoiceOver).
 - spec-15 T14 (verificación manual de instalación PWA) y spec-13 T23 (manual a11y).
 
-## Done this session (2026-10-24)
-- **T7 — scripts recursivos**: `findTopicFiles`/`resolveTopicPath` en
-  `scripts/generate-card-images.mjs` buscan `src/content/topics/**/<id>.md`;
-  error `AMBIGUOUS_TOPIC` con la lista de rutas si el ID aparece más de una vez;
-  `generate-topic-art.mjs` usa la misma resolución.
-- **T8 — CSS y a11y**: estilos nuevos para la biblioteca, categorías, módulos,
-  tarjetas de tema y breadcrumb; `Card` ya reenvía `className`/props y
-  `CategoryView` usa enlaces nativos con teclado; tests estáticos de rejilla,
-  foco, targets y reduced-motion.
-- **T9 — docs y gates**: arquitectura/roadmap/MEMORY/FOCUS actualizados;
-  `specs/spec-16-flashcards-decks.md` renombrado (tenía un `\n` literal);
-  PNG PWA regenerados y sketches genéricos para `estructuras-de-datos`.
-- **Ajuste UX (sin spec)**: acordeones de módulo cerrados por defecto con
-  `aria-expanded`/`aria-controls` y panel `hidden`; búsqueda/orden/estado
-  reutilizados de `views/topics.js` con resultados planos sin módulos; Mis temas
-  en rejilla plana; imágenes 720×405 por categoría generadas con
-  `drawCategory` (`arcade-brand`) y servidas desde `public/categories/`.
-- **Pasada impeccable**: `CategoryView` se divide en `views/category/*`
-  (cabecera, controles, resultados, módulos y tarjetas); el arte del hub se
-  centraliza en `components/CategoryArt`; los targets del generador se derivan
-  de `CATEGORIES` y un arte ausente falla en vez de reutilizar Programación.
-  El contador de resultados es `role="status"` y «Limpiar filtros» devuelve el
-  foco a la búsqueda.
-- **Mis temas**: usa «Recientes» como orden inicial y no ofrece «Por módulos».
+## Done this session (2026-10-26)
+- **T6 — CSS y a11y**: `.source-reader*` y `.md-*` con lectura cómoda,
+  `overflow-wrap`, code con `max-width:100%`/`overflow-x:auto`, targets ≥44 px,
+  foco visible y reduced-motion; nuevo test estático `SourceReader.a11y.test.jsx`
+  (semántica, estados aria-live, labels y contratos CSS) y sección del lector en
+  `docs/manual-a11y-checklist.md`.
+- **T7 — docs y gates**: arquitectura documenta `sources.js`, `markdown.js`,
+  `MarkdownBlocks`, `tts.js` y `SourceReader`; MEMORY/FOCUS sincronizados;
+  `npm test`, `npm run lint` y `npm run build` ejecutados.
+
+## Decisions (spec-19)
+- **Ruta**: `#/tema/:topicId/fuente`, título `Sepect — Fuente: <tema>`; el enlace
+  solo aparece con `sourcePath` resoluble.
+- **Lazy**: `sources.js` resuelve el Markdown al entrar en la vista; los cuatro
+  documentos no forman parte del bundle inicial.
+- **Render seguro**: `markdown.js` produce `Block[]` y `MarkdownBlocks` pinta
+  React elements; HTML crudo se muestra como texto, sin `dangerouslySetInnerHTML`.
+- **TTS**: `speakSequence` divide en ~200 caracteres, omite code blocks, respeta
+  el mute global y expone pause/resume/stop/cancel; `stopSpeech` al desmontar.
+- **Custom**: sin enlace y estado vacío claro en la ruta directa.
+- **Sin dependencias nuevas, red ni cambios en SRS/XP/juegos.**
 
 ## Decisions (spec-17)
 - **Category-first**: `#/` → categorías; `#/categoria/:id` → módulos y temas;
@@ -75,6 +71,9 @@ Fases SDD para spec-17:
   `library.js` guarda la ruta y el hub las pinta decorativas (`alt=""`).
 
 ## Previous increments
+- spec-17 "biblioteca-categorias-modulos" — T1–T9 + ajuste UX; pendiente firma.
+  Gates verdes (`npm test` 740/740, `npm run lint` 0, `npm run build` OK).
+  Category-first, módulos plegables, filtros planos e imágenes por categoría.
 - spec-15 "pwa-arcade-cover" — implementada; pendiente T14 + firma.
 - spec-14 "topic-content-pipeline" — implementación completa; pendiente firma.
 - spec-13 "impeccable-ui-retouch" — T1–T22 + T24; pendiente T23 y firma.
@@ -82,6 +81,6 @@ Fases SDD para spec-17:
 - spec-11 "serpiente-significados" — cerrada técnicamente; 8 juegos available.
 
 ## Next atomic step
-Revisar el diff de spec-17 + ajuste UX, decidir commit/push y archivar/ajustar
-`specs/tasks-17-biblioteca-categorias-modulos.md` si el humano lo aprueba.
-Después continuar con `spec-18` (mazos de dominio y arcade).
+Revisar el diff de spec-19, hacer la pasada manual 360 px + teclado + VoiceOver
+del lector y decidir commit/push. Después continuar con `spec-18` (mazos de
+dominio y arcade).

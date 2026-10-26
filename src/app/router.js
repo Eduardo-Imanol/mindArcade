@@ -16,6 +16,9 @@ export function parseHash(hash = '') {
     }
     if (parts[0] !== 'tema') return { view: 'notFound' };
     if (parts.length === 2) return { view: 'topic', topicId: parts[1] };
+    if (parts.length === 3 && parts[2] === 'fuente') {
+      return { view: 'source', topicId: parts[1] };
+    }
     if (parts.length === 4 && parts[2] === 'juego') {
       return { view: 'game', topicId: parts[1], gameId: parts[3] };
     }

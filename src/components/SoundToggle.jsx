@@ -1,5 +1,5 @@
 import React, { useSyncExternalStore } from 'react';
-import { isSupported } from '../core/audio/tts.js';
+import { isSupported, stopSpeech } from '../core/audio/tts.js';
 import {
   DEFAULT_SETTINGS,
   loadSettings,
@@ -17,7 +17,9 @@ export default function SoundToggle() {
   if (!isSupported()) return null;
 
   const toggle = () => {
-    saveSettings({ muted: !muted });
+    const next = !muted;
+    saveSettings({ muted: next });
+    if (next) stopSpeech();
   };
 
   return (

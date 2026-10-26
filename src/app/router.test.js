@@ -14,6 +14,13 @@ describe('parseHash', () => {
     expect(parseHash('#/progreso')).toEqual({ view: 'progress' });
     expect(parseHash('#/progreso/')).toEqual({ view: 'progress' });
   });
+  it('source reader route', () => {
+    expect(parseHash('#/tema/funciones/fuente')).toEqual({
+      view: 'source',
+      topicId: 'funciones',
+    });
+    expect(parseHash('#/tema/funciones/fuente/extra')).toEqual({ view: 'notFound' });
+  });
   it('game route', () => {
     expect(parseHash('#/tema/funciones/juego/flashcards')).toEqual({
       view: 'game',

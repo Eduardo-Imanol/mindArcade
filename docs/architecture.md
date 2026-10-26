@@ -28,13 +28,21 @@
     topics always fall in `personalizados` with `sourcePath: null`.
   - `sources.js` is a lazy `content/sources/**/*.md` registry consumed by the
     source reader (spec-19); paths are normalized and traversal/absolute paths
-    are rejected.
+    are rejected. Documents are not part of the initial bundle.
+  - `markdown.js` is a pure, zero-dependency Markdown parser that returns
+    `Block[]` (`heading | paragraph | list | code | blockquote | hr`) with safe
+    inline nodes; raw HTML is never interpreted and `blocksToSpeech` omits code.
+    `MarkdownBlocks` renders those blocks as React elements (no
+    `dangerouslySetInnerHTML`).
   - Physical content lives under `src/content/topics/<category>/` and
     `src/content/sources/<category>/`; assets stay in
     `src/content/assets/<topic-id>/` because card tokens resolve that path.
   - `topicMeta.js` persists `addedAt` in `sepect.topics.meta.v1`; `ensureTopicMeta`
     is called when the hub loads so built-in topics get their first-seen date.
   - `cover.js` exposes `topicCoverCard` (first card with an explicit image).
+- `src/core/audio/` — Web Speech API wrapper (`tts.js`), no audio assets and no
+  network. `speakSequence` chunks text (~200 chars), respects the global mute and
+  exposes `pause/resume/stop/cancel`; `stopSpeech()` runs on navigation/unmount.
 - `src/core/metrics/` — `getTopicMetrics`, `getGlobalMetrics`, `getActivity`,
   `bestStreak`, `GRADE_XP`; derived from catalog + SRS + history, UTC day keys, no
   side effects, no persistence.
@@ -51,8 +59,10 @@
   orden de manifiesto, cerrados por defecto con `aria-expanded`; búsqueda,
   orden y estado cambian a una lista plana sin módulos), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
   full description + metrics + game tiles), `GameHost`
-  (`#/tema/:id/juego/:gameId`, eligible deck + «Todo al día»), `Dashboard`
-  (`#/progreso`, global/per-topic metrics + 14-day activity), `NotFound`.
+  (`#/tema/:id/juego/:gameId`, eligible deck + «Todo al día»), `SourceReader`
+  (`#/tema/:id/fuente`, lazy Markdown reader with Leer/Pausar/Reanudar/Detener
+  and the global mute), `Dashboard` (`#/progreso`, global/per-topic metrics +
+  14-day activity), `NotFound`.
   Mobile-first touch targets ≥44px; hash routes are frozen.
 
 ## Invariants

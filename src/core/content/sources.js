@@ -8,40 +8,41 @@ const SOURCES = import.meta.glob('../../content/sources/**/*.md', {
 
 function resolveKey(input) {
   if (!input || typeof input !== 'string') return null;
-  let s = input.replace(/\\/g, '/');
-  if (s.includes('..') || s.startsWith('/')) return null;
+  let s = input.trim().replace(/\\/g, '/');
+  if (!s || s.includes('..') || s.startsWith('/') || s.startsWith('//')) return null;
   if (s.includes('content/sources/')) {
     const idx = s.indexOf('content/sources/');
     s = s.slice(idx + 'content/sources/'.length);
   } else if (s.startsWith('sources/')) {
     s = s.slice('sources/'.length);
   }
-  return s;
+  return s || null;
+}
+
+function findKey(key) {
+  for (const candidate of Object.keys(SOURCES)) {
+    const normalized = candidate.replace(/\\/g, '/');
+    if (normalized === key || normalized.endsWith('/' + key)) return candidate;
+  }
+  return null;
 }
 
 export function hasSource(path) {
   const key = resolveKey(path);
-  if (!key) return false;
-  for (const k of Object.keys(SOURCES)) {
-    if (k.endsWith('/' + key) || k.endsWith(key)) return true;
-  }
-  return false;
+  return key ? findKey(key) !== null : false;
 }
 
 export async function loadSource(path) {
   const key = resolveKey(path);
   if (!key) return null;
-  for (const [k, loader] of Object.entries(SOURCES)) {
-    if (k.endsWith('/' + key) || k.endsWith(key)) {
-      try {
-        const res = await loader();
-        return typeof res === 'string' ? res : (res && typeof res === 'object' && 'default' in res ? res.default : null);
-      } catch {
-        return null;
-      }
-    }
+  const found = findKey(key);
+  if (!found) return null;
+  try {
+    const res = await SOURCES[found]();
+    return typeof res === 'string' ? res : (res && typeof res === 'object' && 'default' in res ? res.default : null);
+  } catch {
+    return null;
   }
-  return null;
 }
 
 export function listSourceKeys() {

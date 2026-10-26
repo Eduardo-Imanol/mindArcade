@@ -21,5 +21,11 @@ describe('titleForRoute (AC-19)', () => {
     expect(titleForRoute({ view: 'game', topicId: 'x', gameId: 'no-existe' })).toBe(
       'Sepect — Juego'
     );
+    expect(
+      titleForRoute({ view: 'source', topicId: 'funciones-en-programacion' })
+    ).toBe('Sepect — Fuente: Funciones en Programación');
+    expect(titleForRoute({ view: 'source', topicId: 'no-existe' })).toBe(
+      'Sepect — Fuente no encontrada'
+    );
   });
 });

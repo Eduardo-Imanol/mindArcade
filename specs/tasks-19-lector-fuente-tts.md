@@ -32,14 +32,14 @@ Cadenas críticas:
 ## Tareas
 
 ### T1 — Verificar/extender el registro lazy de sources [depends: spec-17 T3]
-- [ ] **Deliverable:** verificar `src/core/content/sources.js` (creado en spec-17
+- [x] **Deliverable:** verificar `src/core/content/sources.js` (creado en spec-17
   T3) y extenderlo solo si falta algo, sin duplicarlo:
   - `hasSource(path)`, `loadSource(path)` → `Promise<string|null>`;
   - glob `**/*.md` sin `eager`;
   - normalización de `/`, rechazo de `..`/absolutos;
   - sin cargar documentos al importar;
   - una sola fuente de verdad para el registro.
-- [ ] **Tests:** `sources.test.js`:
+- [x] **Tests:** `sources.test.js`:
   - cuatro paths del manifiesto;
   - inexistente → `null`;
   - path traversal;
@@ -50,7 +50,7 @@ Cadenas críticas:
 - **Estimate:** S.
 
 ### T2 — Parser/renderer Markdown seguro [depends: T1]
-- [ ] **Deliverable:** `src/core/content/markdown.js`:
+- [x] **Deliverable:** `src/core/content/markdown.js`:
   - `parseSourceMarkdown(md)` → `Block[]`;
   - bloques: heading, paragraph, list, code, blockquote, hr;
   - inline: bold, italic, inline code; enlaces seguros;
@@ -58,9 +58,9 @@ Cadenas críticas:
   - `blocksToSpeech(blocks)` sin code blocks;
   - exporta helpers de bloques reutilizables por spec-21;
   - tolerancia a entradas inválidas.
-- [ ] **Deliverable:** `src/components/MarkdownBlocks.jsx` (o render en la vista):
+- [x] **Deliverable:** `src/components/MarkdownBlocks.jsx` (o render en la vista):
   - React elements, sin `dangerouslySetInnerHTML`.
-- [ ] **Tests:** `markdown.test.js`:
+- [x] **Tests:** `markdown.test.js`:
   - headings/parrafos/listas/citas/hr/code;
   - inline;
   - `<script>` como texto;
@@ -72,14 +72,14 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T3 — TTS con secuencia, pausa y reanudación [depends: none]
-- [ ] **Deliverable:** `src/core/audio/tts.js`:
+- [x] **Deliverable:** `src/core/audio/tts.js`:
   - conservar `speak`/`stopSpeech`/`isSupported`;
   - `pauseSpeech()`, `resumeSpeech()`, `isSpeechPaused()`;
   - `speakSequence(parts, { onEnd, onError })` con control
     `{ pause, resume, stop, cancel }`;
   - chunking ~200 caracteres por frase;
   - mute global y cancelación.
-- [ ] **Tests:** `tts.test.js`:
+- [x] **Tests:** `tts.test.js`:
   - secuencia ordenada;
   - pause/resume;
   - stop/cancel;
@@ -92,14 +92,14 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T4 — `SourceReader` [depends: T1, T2, T3]
-- [ ] **Deliverable:** `src/views/SourceReader.jsx`:
+- [x] **Deliverable:** `src/views/SourceReader.jsx`:
   - carga lazy, estados loading/error/empty;
   - render con `MarkdownBlocks`;
   - controles Leer/Pausar/Reanudar/Detener;
   - `aria-live` de estado;
   - `stopSpeech` al desmontar/navegar;
   - breadcrumb/vuelta al tema.
-- [ ] **Tests:** `SourceReader.test.jsx`:
+- [x] **Tests:** `SourceReader.test.jsx`:
   - source existente;
   - source ausente/custom;
   - loading/error;
@@ -112,15 +112,15 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T5 — Ruta y enlace desde TopicView [depends: T4]
-- [ ] **Deliverable:** `src/app/router.js`:
+- [x] **Deliverable:** `src/app/router.js`:
   - `#/tema/:id/fuente` → `{ view: 'source', topicId }`.
-- [ ] **Deliverable:** `src/app/App.jsx`:
+- [x] **Deliverable:** `src/app/App.jsx`:
   - render de `SourceReader`;
   - `titleForRoute` con el tema.
-- [ ] **Deliverable:** `src/views/TopicView.jsx`:
+- [x] **Deliverable:** `src/views/TopicView.jsx`:
   - enlace «Leer documento original» solo si `sourcePath`;
   - no romper juegos/métricas.
-- [ ] **Tests:** router/App/TopicView:
+- [x] **Tests:** router/App/TopicView:
   - parseHash;
   - deep link;
   - title;
@@ -132,19 +132,22 @@ Cadenas críticas:
 - **Estimate:** S.
 
 ### T6 — CSS y accesibilidad [depends: T4, T5]
-- [ ] **Deliverable:** `src/ui/tokens.css`:
+- [x] **Deliverable:** `src/ui/tokens.css`:
   - `.source-reader`, `.source-reader__doc`, headings, code, blockquote, listas;
   - lectura cómoda, `overflow-wrap`, sin scroll horizontal a 360 px;
   - foco visible, targets ≥44 px, reduced-motion.
-- [ ] **Verificación:** a11y estática y manual (teclado/VoiceOver).
+- [x] **Verificación estática:** `SourceReader.a11y.test.jsx` + sección del lector
+  en `docs/manual-a11y-checklist.md`.
+- [ ] **Verificación manual:** navegador real a 360 px, teclado y VoiceOver.
 - **AC cubiertos:** AC-11.
 - **Done when:** el documento largo es legible y navegable en móvil.
 - **Estimate:** S.
 
 ### T7 — Docs, gates y cierre [depends: T1–T6]
-- [ ] **Deliverable:** `docs/architecture.md`, `MEMORY.md`, `FOCUS.md` y
+- [x] **Deliverable:** `docs/architecture.md`, `MEMORY.md`, `FOCUS.md` y
   `docs/manual-a11y-checklist.md` con el lector/TTS.
-- [ ] **Gates:** `npm test`, `npm run lint`, `npm run build` al 100%.
+- [x] **Gates:** `npm test` 780/780, `npm run lint` 0, `npm run build` OK
+  (warning preexistente de chunk >500 kB).
 - [ ] **Cierre:** ACs, tasks y firma humana.
 - **AC cubiertos:** AC-12, AC-13 y DoD.
 - **Done when:** el lector no rompe rutas existentes ni el bundle lazy.
@@ -161,8 +164,8 @@ Cadenas críticas:
 
 ## Definition of Done
 
-- [ ] Cada AC tiene test o verificación manual registrada.
-- [ ] `npm test`, `npm run lint`, `npm run build` en verde.
-- [ ] Sin dependencias nuevas ni red.
+- [x] Cada AC tiene test o verificación manual registrada.
+- [x] `npm test` 780/780, `npm run lint` 0 y `npm run build` en verde.
+- [x] Sin dependencias nuevas ni red.
 - [ ] Diff revisado por humano.
-- [ ] `MEMORY.md` actualizado y `FOCUS.md` limpio.
+- [x] `MEMORY.md` actualizado y `FOCUS.md` limpio.

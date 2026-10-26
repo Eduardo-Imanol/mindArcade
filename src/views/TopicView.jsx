@@ -11,6 +11,7 @@ import { getTopicMetrics } from '../core/metrics/metrics.js';
 import { createStore } from '../core/storage/store.js';
 import { useStudyCardCounts } from './useStudyCardCounts.js';
 import { findCategory, findModule } from '../core/content/library.js';
+import { hasSource } from '../core/content/sources.js';
 
 export default function TopicView({ topicId }) {
   const topics = useMemo(() => loadCatalog(), []);
@@ -45,6 +46,7 @@ export default function TopicView({ topicId }) {
   const category = topic.categoryId ? findCategory(topic.categoryId) : null;
   const module = topic.moduleId ? findModule(topic.moduleId) : null;
   const backHref = category ? `#/categoria/${category.id}` : '#/';
+  const originalSource = topic.sourcePath && hasSource(topic.sourcePath) ? topic.sourcePath : null;
 
   return (
     <main className="sepect-bg topic-page">
@@ -69,6 +71,11 @@ export default function TopicView({ topicId }) {
           </div>
           <div className="topic-header__side">
             <span className="topic-cards">{topic.cards.length} cartas</span>
+            {originalSource ? (
+              <a className="btn-neon topic-source-link" href={`#/tema/${topic.id}/fuente`}>
+                Leer documento original
+              </a>
+            ) : null}
             <a className="btn-neon topic-progress-link" href="#/progreso">Progreso</a>
           </div>
         </header>

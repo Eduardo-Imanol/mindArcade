@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useRoute } from './router.js';
 import TopicsHub from '../views/TopicsHub.jsx';
 import TopicView from '../views/TopicView.jsx';
+import SourceReader from '../views/SourceReader.jsx';
 import GameHost from '../views/GameHost.jsx';
 import Dashboard from '../views/Dashboard.jsx';
 import NotFound from '../components/NotFound.jsx';
@@ -27,6 +28,10 @@ export function titleForRoute(route) {
     const topic = loadCatalog().find((entry) => entry.id === route.topicId);
     return topic ? `Sepect — ${topic.title}` : 'Sepect — Juego';
   }
+  if (route.view === 'source') {
+    const topic = loadCatalog().find((entry) => entry.id === route.topicId);
+    return topic ? `Sepect — Fuente: ${topic.title}` : 'Sepect — Fuente no encontrada';
+  }
   return 'Sepect — Biblioteca';
 }
 
@@ -40,6 +45,7 @@ export default function App() {
   if (route.view === 'progress') return <Dashboard />;
   if (route.view === 'category') return <CategoryView categoryId={route.categoryId} />;
   if (route.view === 'topic') return <TopicView topicId={route.topicId} />;
+  if (route.view === 'source') return <SourceReader topicId={route.topicId} />;
   if (route.view === 'game') return <GameHost topicId={route.topicId} gameId={route.gameId} />;
   if (route.view === 'notFound') return <NotFound />;
   return <TopicsHub />;

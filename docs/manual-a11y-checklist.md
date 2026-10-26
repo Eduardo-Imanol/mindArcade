@@ -5,9 +5,10 @@ Automated coverage lives in `Flashcards.a11y.test.jsx`, `Memorama.a11y.test.jsx`
 `LluviaMeteoros.a11y.test.jsx`, `ConectaPares.a11y.test.jsx`,
 `SerpienteSignificados.a11y.test.jsx`, `serpiente-significados.isolation.test.js`,
 `TopicsHub.test.jsx`, `TopicsHub.a11y.test.jsx`, `TopicView.test.jsx`,
-`TopicView.availability.test.jsx`, `TopicView.a11y.test.jsx`, `Dashboard.test.jsx`,
-`Dashboard.a11y.test.jsx`, `CardImage.test.jsx`, `tts.integration.test.jsx`,
-`design-system.test.js` (spec-13 gate) and `title.test.js`;
+`TopicView.availability.test.jsx`, `TopicView.a11y.test.jsx`, `SourceReader.test.jsx`,
+`SourceReader.a11y.test.jsx`, `Dashboard.test.jsx`, `Dashboard.a11y.test.jsx`,
+`CardImage.test.jsx`, `tts.integration.test.jsx`, `design-system.test.js` (spec-13 gate)
+and `title.test.js`;
 jsdom cannot measure layout, so this checklist is completed by a human on a real
 browser (Chrome/Firefox, touch + keyboard). The automated suites cover native
 controls/labels, `role="progressbar"` values, no `line-clamp`/ellipsis on the topic
@@ -69,6 +70,19 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 - [ ] (spec-12) With no eligible cards the view announces «Todo al día» and does not
       mount the game; the safe screen keeps "Volver al tema" reachable.
 - [ ] (spec-12) Direct URL with too few **eligible** cards shows the safe screen.
+
+## Source reader (`#/tema/:id/fuente`, spec-19)
+- [ ] Topic view shows "Leer documento original" only for built-in topics with a source; custom topics and missing sources show no link.
+- [ ] The reader opens by keyboard/Enter, updates the title to `Sepect — Fuente: <tema>`, and survives reload and Back.
+- [ ] Breadcrumb "Volver al tema" is a native link with a visible focus ring; one page `h1` names the topic.
+- [ ] The document renders headings, paragraphs, lists, quotes, rules and code blocks in order; no content is truncated.
+- [ ] Keyboard: Tab reaches Leer, Pausar, Reanudar, Detener and the global sound toggle; disabled buttons are skipped.
+- [ ] Screen reader announces the `aria-live` status ("Listo para leer", "Leyendo en voz alta", "Lectura en pausa", "Sonido silenciado") without repeats.
+- [ ] TTS reads headings, paragraphs and list items in order; code blocks are rendered but not spoken; long text finishes without truncation.
+- [ ] Pausar/Reanudar keeps the current fragment; Detener, mute, navigation and unmount cancel speech with no orphaned utterances.
+- [ ] With `speechSynthesis` unavailable the controls are hidden and an accessible notice remains; the document stays readable.
+- [ ] Loading, empty and error states are announced (`role="status"`/`role="alert"`) and keep the way back to the topic.
+- [ ] No horizontal scroll at 360px; long words wrap, code scrolls inside its block; targets ≥44px; `prefers-reduced-motion` disables the pulse/shimmer.
 
 ## Dashboard (`#/progreso`, spec-12)
 - [ ] Reachable from the hub and from a topic; the route survives reload.
