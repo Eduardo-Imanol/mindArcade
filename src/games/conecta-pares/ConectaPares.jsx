@@ -6,9 +6,13 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import ArcadeHud from '../../components/ArcadeHud.jsx';
+import DeckPicker from '../../components/DeckPicker.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
+import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
+import { getDeckAvailability } from '../availability.js';
 import {
   DEFAULT_PAIRS,
   MAX_PAIRS,

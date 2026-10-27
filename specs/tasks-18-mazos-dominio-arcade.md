@@ -43,7 +43,7 @@ Cadenas críticas:
 ## Fase A — Núcleo compartido
 
 ### T1 — `decks.js`: mazos y dominio [depends: none]
-- [ ] **Deliverable:** `src/core/repetition/decks.js`:
+- [x] **Deliverable:** `src/core/repetition/decks.js`:
   - `DECK_SIZE = 10`;
   - `buildDecks(cards, { size })` con todos los campos de spec-16 + `mastery` y
     `counts`;
@@ -52,7 +52,7 @@ Cadenas críticas:
     vacia`;
   - normalización de SRS inválido y `nextReview` NaN;
   - sin storage ni DOM.
-- [ ] **Tests:** `decks.test.js`:
+- [x] **Tests:** `decks.test.js`:
   - bloques 1–10, 11–20, último parcial;
   - `studied`/`pending`/`complete` sin regresión;
   - new/learning/learned/due;
@@ -67,14 +67,14 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T2 — `arcade.js`: reglas puras [depends: none]
-- [ ] **Deliverable:** `src/core/engine/arcade.js`:
+- [x] **Deliverable:** `src/core/engine/arcade.js`:
   - `ARCADE_LIVES = 3`, `BASE_POINTS = 100`, `STREAK_STEP = 10`,
     `STREAK_CAP = 100`, `LIFE_BONUS = 50`;
   - `createArcade()`, `arcadeHit(state)`, `arcadeMiss(state)`, `arcadeFinish(state)`;
   - estado `{ lives, score, streak, correct, wrong, over, completed }`;
   - helpers de puntuación y snapshot serializable;
   - sin storage ni DOM.
-- [ ] **Tests:** `arcade.test.js`:
+- [x] **Tests:** `arcade.test.js`:
   - inicio 3 vidas/0 score;
   - aciertos y racha con tope;
   - fallo reinicia racha y resta vida;
@@ -88,14 +88,14 @@ Cadenas críticas:
 - **Estimate:** S.
 
 ### T3 — Persistencia de récords [depends: T2]
-- [ ] **Deliverable:** `src/core/storage/arcade.js`:
+- [x] **Deliverable:** `src/core/storage/arcade.js`:
   - clave `sepect.arcade.v1`;
   - `loadArcadeRecords()`, `saveArcadeRecords()`, `recordArcadeRun(run)`,
     `bestFor(records, topicId, gameId, deckId)`;
   - sanitización de score/vidas/fechas/IDs;
   - máximo 20 runs por clave; JSON corrupto → `{}`;
   - cuota llena → `{ ok: false }` sin romper la partida.
-- [ ] **Tests:** `arcade.test.js` / `arcadeStore.test.js`:
+- [x] **Tests:** `arcade.test.js` / `arcadeStore.test.js`:
   - round-trip;
   - best y `isRecord`;
   - top 20;
@@ -108,17 +108,17 @@ Cadenas críticas:
 - **Estimate:** S.
 
 ### T4 — `DeckPicker` y `ArcadeHud` [depends: T1, T2]
-- [ ] **Deliverable:** `src/components/DeckPicker.jsx`:
+- [x] **Deliverable:** `src/components/DeckPicker.jsx`:
   - props `decks`, `selectedDeckId`, `onSelect`, `best`, `disabledReason`,
     `gameId`;
   - número, rango, estado, progreso, best y CTA;
   - teclado, `aria-pressed`, targets ≥44 px.
-- [ ] **Deliverable:** `src/components/ArcadeHud.jsx`:
+- [x] **Deliverable:** `src/components/ArcadeHud.jsx`:
   - vidas, puntuación, racha, mejor marca;
   - `aria-live` para cambios;
   - modo normal/arcade opcional.
-- [ ] **Deliverable:** estilos en `src/ui/tokens.css`.
-- [ ] **Tests:** `DeckPicker.test.jsx`, `ArcadeHud.test.jsx`:
+- [x] **Deliverable:** estilos en `src/ui/tokens.css`.
+- [x] **Tests:** `DeckPicker.test.jsx`, `ArcadeHud.test.jsx`:
   - estados vacío/no-aprendida/repasar/aprendida;
   - selección y disabled;
   - best;
@@ -129,18 +129,18 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T5 — `GameHost`, disponibilidad y persistencia [depends: T1, T2, T3, T4]
-- [ ] **Deliverable:** `src/views/GameHost.jsx`:
+- [x] **Deliverable:** `src/views/GameHost.jsx`:
   - construir `decks` con todas las cartas + SRS del tema;
   - pasar `decks`, `best`, `onArcadeEnd` a todos los juegos;
   - conservar `deck`, `groups`, `selectCards` legacy;
   - construir `allGroups` para Intruso con todas las cartas por tema;
   - persistir arcade y devolver `{ best, isRecord }`;
   - no gradúar ni puntuar desde el host.
-- [ ] **Deliverable:** `src/games/availability.js`:
+- [x] **Deliverable:** `src/games/availability.js`:
   - `getDeckAvailability(game, deck)` por mínimo;
   - modo mazo no bloquea por `allCaughtUp`;
   - conservar helpers legacy.
-- [ ] **Tests:** `GameHost.test.jsx`, `availability.test.js`:
+- [x] **Tests:** `GameHost.test.jsx`, `availability.test.js`:
   - decks completos, no elegibles;
   - best/onArcadeEnd;
   - mazo insuficiente;

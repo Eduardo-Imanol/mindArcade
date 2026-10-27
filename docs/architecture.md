@@ -60,8 +60,8 @@
   orden y estado cambian a una lista plana sin módulos), `TopicView` (`#/tema/:id`, breadcrumb category/module/topic,
   full description + metrics + game tiles), `GameHost`
   (`#/tema/:id/juego/:gameId`, eligible deck + «Todo al día»), `SourceReader`
-  (`#/tema/:id/fuente`, lazy Markdown reader with Leer/Pausar/Reanudar/Detener
-  and the global mute), `Dashboard` (`#/progreso`, global/per-topic metrics +
+  (`#/tema/:id/fuente`, lazy Markdown reader with Leer/Pausar/Reanudar/Detener,
+  automatic reading of the selected fragment and the global mute), `Dashboard` (`#/progreso`, global/per-topic metrics +
   14-day activity), `NotFound`.
   Mobile-first touch targets ≥44px; hash routes are frozen.
 

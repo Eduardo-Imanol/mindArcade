@@ -1,9 +1,13 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import ArcadeHud from '../../components/ArcadeHud.jsx';
 import CardImage from '../../components/CardImage.jsx';
+import DeckPicker from '../../components/DeckPicker.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { createEngine } from '../../core/engine/engine.js';
+import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js'; // eslint-disable-line no-unused-vars
+import { getDeckAvailability } from '../availability.js';
 import {
   DEFAULT_ROUNDS,
   DIFFICULTIES,
@@ -37,6 +41,13 @@ const RHYTHM_HELP = {
   survival: 'Tres vidas: cada fallo o tiempo agotado resta una.',
 };
 const SIZE_CLASS = { lg: 'lluvia-size-lg', md: 'lluvia-size-md', sm: 'lluvia-size-sm' };
+const GAME_ID = 'lluvia-meteoros';
+
+function disabledReasonFor(deck) {
+  const availability = getDeckAvailability({ id: GAME_ID, minCards: 4 }, deck);
+  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  return '';
+}
 
 function reduceMotionPreference() {
   if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return false;
@@ -53,8 +64,16 @@ function uniqueBackCount(deck) {
   return backs.size;
 }
 
-export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit } = {}) {
-  const deckList = useMemo(() => (Array.isArray(deck) ? deck : []), [deck]);
+export default function LluviaMeteoros({ deck = [], decks, best, selectCards, onGrade, onArcadeEnd, onExit, onBackToTopic } = {}) {
+  const hasDecks = Array.isArray(decks) && decks.length > 0;
+  const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
+  const [gameMode, setGameMode] = useState('normal');
+  const [arcade, setArcade] = useState(() => createArcade());
+  const [arcadeEnded, setArcadeEnded] = useState(false);
+  const [arcadeResult, setArcadeResult] = useState(null);
+  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+  const deckSource = hasDecks && selectedDeck ? selectedDeck.cards : deck;
+  const deckList = useMemo(() => (Array.isArray(deckSource) ? deckSource : []), [deckSource]);
   const backs = useMemo(() => uniqueBackCount(deckList), [deckList]);
   const canPlay = deckList.length >= MIN_CARDS && backs >= 3;
 
@@ -224,9 +243,9 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     const grade = state.lastGrade;
     if (grade && grade.seq > emitted.current) {
       emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade);
+      onGrade?.(grade.cardId, gameMode === 'arcade' ? (grade.grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade.grade);
     }
-  }, [state, onGrade]);
+  }, [state, onGrade, gameMode]);
 
   useEffect(() => {
     if (state.phase !== 'playing') return;
@@ -285,8 +304,24 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     if (round) speak(round.card.front);
   };
 
+  const endArcade = (finalArcade) => {
+    if (arcadeEnded) return;
+    const finished = arcadeFinish(finalArcade);
+    setArcadeEnded(true);
+    const run = {
+      score: finished.score,
+      correct: finished.correct,
+      wrong: finished.wrong,
+      lives: finished.lives,
+      completed: finished.completed,
+      deckId: selectedDeck?.id,
+    };
+    const result = onArcadeEnd?.(run);
+    setArcadeResult(result || { best: finished.score, isRecord: false });
+    setArcade(finished);
+  };
+
   const handleStart = () => {
-    const selected = (selectCards ? selectCards(rounds) : deckList.slice(0, rounds)) || [];
     emitted.current = 0;
     exiting.current = false;
     roundKeyRef.current = null;
@@ -295,13 +330,30 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     feedbackSpokenRef.current = -1;
     cancelFollowUpSpeech();
     stopSpeech();
+    setArcadeEnded(false);
+    setArcadeResult(null);
+    if (gameMode === 'arcade') {
+      setArcade(createArcade());
+      setRhythm('survival');
+    }
+    let selected = [];
+    if (hasDecks && selectedDeck) {
+      if (gameMode === 'arcade') {
+        selected = Array.isArray(selectedDeck.cards) ? selectedDeck.cards.slice() : [];
+      } else {
+        const count = Math.min(rounds, selectedDeck.cards.length);
+        selected = (selectCards ? selectCards(count) : selectedDeck.cards.slice(0, count)) || [];
+      }
+    } else {
+      selected = (selectCards ? selectCards(gameMode === 'arcade' ? deckList.length : rounds) : deckList.slice(0, gameMode === 'arcade' ? deckList.length : rounds)) || [];
+    }
     const next = reduce(createState(), {
       type: 'start',
       cards: selected,
-      deck: deckList,
-      rounds,
+      deck: hasDecks && selectedDeck ? selectedDeck.cards : deckList,
+      rounds: gameMode === 'arcade' ? selected.length : rounds,
       difficulty,
-      rhythm,
+      rhythm: gameMode === 'arcade' ? 'survival' : rhythm,
       random: Math.random,
     });
     setState(next);
@@ -320,7 +372,17 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     timeoutFiredRef.current = false;
     cancelFollowUpSpeech();
     stopSpeech();
+    setArcadeEnded(false);
+    setArcadeResult(null);
+    if (gameMode === 'arcade') {
+      setArcade(createArcade());
+      setRhythm('survival');
+    }
     setState(createState());
+    if (hasDecks || gameMode === 'arcade') {
+      handleStart();
+      return;
+    }
   };
 
   const handleChoose = (optionId) => {
@@ -383,12 +445,15 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     const grade = current.lastGrade;
     if (grade && grade.seq > emitted.current) {
       emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade);
+      onGrade?.(grade.cardId, gameMode === 'arcade' ? (grade.grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade.grade);
     }
     for (const entry of pendingCurrent(current)) {
-      onGrade?.(entry.cardId, entry.grade);
+      if (emitted.current >= entry.seq) continue;
+      emitted.current = entry.seq;
+      onGrade?.(entry.cardId, gameMode === 'arcade' ? (entry.grade === 'otra-vez' ? 'otra-vez' : 'facil') : entry.grade);
     }
-    onExit?.();
+    if (onBackToTopic) onBackToTopic();
+    else onExit?.();
   };
 
   useEffect(() => {
@@ -403,6 +468,14 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     document.addEventListener('visibilitychange', onVisibilityChange);
     return () => document.removeEventListener('visibilitychange', onVisibilityChange);
   }, []);
+
+  useEffect(() => {
+    if (gameMode !== 'arcade') return;
+    if (arcadeEnded) return;
+    if (arcade.over) {
+      endArcade(arcade);
+    }
+  }, [gameMode, arcade, arcadeEnded]);
 
   useEffect(() => {
     if (state.phase !== 'playing') return undefined;
@@ -422,7 +495,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [state.phase]);
 
-  if (!canPlay) {
+  if (!canPlay && !hasDecks) {
     return (
       <main className="sepect-bg lluvia-page" style={PAGE}>
         <div className="game-stage">
@@ -432,7 +505,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
             contenido al tema y vuelve a intentarlo.
           </p>
           <div className="lluvia-actions">
-            <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
+            <button className="btn-neon" type="button" onClick={onBackToTopic || onExit}>Volver al tema</button>
             <SoundToggle />
           </div>
         </div>
@@ -441,6 +514,36 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
   }
 
   if (state.phase === 'setup') {
+    if (hasDecks) {
+      const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id];
+      return (
+        <GameSetup
+          pageClassName="lluvia-page"
+          title="Lluvia de meteoros"
+          lead="Elige el significado correcto antes de que el meteoro caiga. En arcade, falla o tiempo agotado resta vida."
+          note={<>{decks.length} {decks.length === 1 ? 'mazo' : 'mazos'} de este tema.{selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}</>}
+          start={
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              <button className="btn-neon" type="button" onClick={() => { setGameMode('normal'); handleStart(); }}>Normal</button>
+              <button className="btn-neon" type="button" onClick={() => { setGameMode('arcade'); setRhythm('survival'); handleStart(); }}>Arcade · 3 vidas</button>
+            </div>
+          }
+          actions={
+            <>
+              <SoundToggle />
+              <button className="btn-neon game-setup__exit" type="button" onClick={onBackToTopic || onExit}>
+                Volver al tema
+              </button>
+            </>
+          }
+        >
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
+            <ArcadeHud arcade={arcade} best={bestForDeck} compact />
+          </div>
+          <DeckPicker decks={decks} selectedDeckId={selectedDeck?.id} onSelect={(id) => setSelectedDeckId(id)} best={best} disabledReason={(deckEntry) => disabledReasonFor(deckEntry)} gameId={GAME_ID} label="Elige tu mazo" />
+        </GameSetup>
+      );
+    }
     return (
       <GameSetup
         pageClassName="lluvia-page"
@@ -460,7 +563,7 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
         actions={
           <>
             <SoundToggle />
-            <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onBackToTopic || onExit}>
               Salir
             </button>
           </>
@@ -521,6 +624,28 @@ export default function LluviaMeteoros({ deck = [], selectCards, onGrade, onExit
   }
 
   if (state.phase === 'complete') {
+    if (gameMode === 'arcade' && (arcadeEnded || arcade.over)) {
+      return (
+        <main className="sepect-bg lluvia-page" style={PAGE}>
+          <div className="game-stage">
+            <h1 className="neon game-app-title">Arcade</h1>
+            <p role="status">
+              Puntuación {arcadeResult?.best ?? arcade.score} {arcadeResult?.isRecord ? '· ¡Nuevo récord!' : ''}
+              <br />
+              Vidas restantes {arcade.lives} · Aciertos {arcade.correct} · Fallos {arcade.wrong}
+              {selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}
+            </p>
+            <div className="lluvia-actions">
+              <button className="btn-neon" type="button" onClick={handleReplay}>Repetir</button>
+              <button className="btn-neon" type="button" onClick={() => { setState(createState()); setGameMode('normal'); }}>Elegir mazo</button>
+              <button className="btn-neon" type="button" onClick={onBackToTopic || onExit}>Volver al tema</button>
+              <SoundToggle />
+            </div>
+          </div>
+        </main>
+      );
+    }
+
     if (state.total === 0) {
       return (
         <main className="sepect-bg lluvia-page" style={PAGE}>

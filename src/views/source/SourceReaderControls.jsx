@@ -6,14 +6,22 @@ const STATUS_COPY = {
   paused: 'Lectura en pausa',
 };
 
+const SELECTION_COPY = {
+  speaking: 'Leyendo la selección',
+  paused: 'Selección en pausa',
+};
+
 export default function SourceReaderControls({
   supported,
   muted,
   status,
+  mode = 'document',
+  selection = '',
   onPlay,
   onPause,
   onResume,
   onStop,
+  onPlaySelection,
 }) {
   if (!supported) {
     return (
@@ -24,7 +32,9 @@ export default function SourceReaderControls({
   }
 
   const state = muted ? 'muted' : status;
-  const statusText = muted ? 'Sonido silenciado' : STATUS_COPY[status] || STATUS_COPY.idle;
+  const statusText = muted
+    ? 'Sonido silenciado'
+    : (mode === 'selection' && SELECTION_COPY[status]) || STATUS_COPY[status] || STATUS_COPY.idle;
 
   return (
     <section className="source-reader__tts card-neon" aria-label="Lectura en voz alta">
@@ -32,6 +42,9 @@ export default function SourceReaderControls({
         <p className="source-reader__tts-title">Escuchar documento</p>
         <p className="source-reader__tts-status" data-state={state} role="status" aria-live="polite">
           {statusText}
+        </p>
+        <p className="source-reader__tts-hint">
+          También puedes seleccionar un fragmento para escucharlo.
         </p>
       </div>
       <div className="source-reader__tts-actions">
@@ -41,7 +54,7 @@ export default function SourceReaderControls({
           onClick={onPlay}
           disabled={muted || status === 'speaking'}
           aria-label="Leer documento en voz alta"
-          aria-pressed={status === 'speaking'}
+          aria-pressed={status === 'speaking' && mode === 'document'}
         >
           Leer
         </button>
@@ -73,6 +86,27 @@ export default function SourceReaderControls({
           Detener
         </button>
       </div>
+      {selection ? (
+        <div className="source-reader__selection">
+          <p className="source-reader__selection-copy">
+            <span className="source-reader__selection-label">Selección</span>
+            <span>
+              {selection.length} {selection.length === 1 ? 'carácter' : 'caracteres'}
+            </span>
+          </p>
+          <button
+            className="btn-neon source-reader__btn"
+            type="button"
+            onClick={onPlaySelection}
+            onMouseDown={(event) => event.preventDefault()}
+            disabled={muted}
+            aria-label="Leer texto seleccionado"
+            aria-pressed={status === 'speaking' && mode === 'selection'}
+          >
+            Leer selección
+          </button>
+        </div>
+      ) : null}
     </section>
   );
 }

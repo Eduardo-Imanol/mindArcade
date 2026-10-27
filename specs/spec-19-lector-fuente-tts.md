@@ -3,7 +3,7 @@ feature: lector-fuente-tts
 status: signed
 owner: Eduardo
 created: 2026-10-23
-updated: 2026-10-23
+updated: 2026-10-26
 related_tasks: specs/tasks-19-lector-fuente-tts.md
 ---
 
@@ -51,6 +51,11 @@ related_tasks: specs/tasks-19-lector-fuente-tts.md
 7. **Sin dependencias nuevas**, sin red y sin cambios en SRS, XP, mazos o juegos.
 8. **Accesibilidad**: artículo con headings reales, orden de lectura correcto,
    controles ≥44 px, foco visible y sin scroll horizontal a 360 px.
+9. **Leer selección (addendum 2026-10-26)**: al seleccionar texto dentro del
+   documento, se lee automáticamente ese fragmento (~350 ms de debounce). Solo
+   cuenta la selección contenida en el artículo; se cancela con Detener, mute,
+   navegación o desmontaje. El botón «Leer selección» permite repetirla sin
+   volver a seleccionar. Sin `speechSynthesis` no hay lectura automática.
 
 ---
 
@@ -90,6 +95,10 @@ sin mirar la pantalla o reforzar la comprensión.
   utterances huérfanas. Pausar y reanudar conservan el fragmento actual.
 - [ ] AC-9: Si `speechSynthesis` no existe, la lectura se oculta con un aviso
   accesible; el documento sigue siendo legible.
+- [ ] AC-14: Seleccionar texto dentro del documento lo reproduce automáticamente
+  por TTS; «Leer selección» repite ese fragmento, Detener/mute/navegación lo
+  cancelan y una selección vacía no dispara audio. Sin `speechSynthesis` no hay
+  lectura automática. (Addendum solicitado por Eduardo, 2026-10-26).
 
 ### HU-3 — Seguridad, rendimiento y calidad
 **Como** mantenedor, **quiero** que el lector sea seguro y liviano, **para** no
@@ -129,6 +138,8 @@ introducir XSS ni inflar el bundle.
 | Bloque de código | Se renderiza, pero no se lee en TTS |
 | TTS no soportado | Controles ocultos + aviso; lectura visual intacta |
 | Mute activo | No se emite audio; controles coherentes |
+| Texto seleccionado | Se lee solo el fragmento seleccionado tras ~350 ms |
+| Selección fuera del artículo | No se lee |
 | Navegación durante lectura | `stopSpeech()` y limpieza |
 | `speechSynthesis.pause()` no disponible | Fallback: Detener/Leer desde el inicio |
 
@@ -149,6 +160,9 @@ SALIDA: string[] de fragmentos (sin code blocks)
 
 ENTRADA: speakSequence(parts, { onEnd, onError })
 SALIDA: control con pause/resume/stop/cancel
+
+ENTRADA: selección no vacía dentro del artículo
+SALIDA: lectura TTS del texto seleccionado + botón «Leer selección»
 ```
 
 **Tests mínimos:**
@@ -158,7 +172,7 @@ SALIDA: control con pause/resume/stop/cancel
 - `tts.test.js`: speak, sequence, pause/resume/stop, mute, cancelación, no
   disponibles, chunking.
 - `SourceReader.test.jsx`: loading/error/empty, render, controles, TTS, unmount,
-  source custom.
+  source custom, lectura automática de selección y repetición manual.
 - Router/App: `#/tema/:id/fuente`, title, notFound.
 - TopicView: enlace condicional.
 - A11y: headings, teclado, 360 px, `aria-live` sin ruido.
@@ -179,4 +193,5 @@ SALIDA: control con pause/resume/stop/cancel
 ## ✍️ Firma
 
 - [x] Spec revisada y firmada por humano: **Eduardo — 2026-10-23**
+- [x] Addendum AC-14 «leer selección» solicitado por Eduardo — 2026-10-26
 - [ ] `specs/tasks-19-lector-fuente-tts.md` revisado

@@ -432,7 +432,7 @@ describe('eating apples', () => {
     });
     const next = reduce(state, { type: 'step' });
     expect(next.phase).toBe('playing');
-    expect(next.lives).toBe(4);
+    expect(next.lives).toBe(2);
     expect(next.wrongEats).toBe(1);
     expect(next.streak).toBe(0);
     expect(next.snake).toHaveLength(2 + WRONG_GROWTH);
@@ -510,7 +510,7 @@ describe('self-collision and respawn', () => {
     });
     const next = reduce(state, { type: 'step' });
     expect(next.phase).toBe('playing');
-    expect(next.lives).toBe(4);
+    expect(next.lives).toBe(2);
     expect(next.snake).toHaveLength(2);
     expect(next.apples).toEqual(apples);
     expect(next.feedback).toMatchObject({ type: 'collision' });
@@ -673,7 +673,7 @@ describe('pendingCurrent and summarize', () => {
       length: 7,
       bestStreak: 3,
       xp: 35,
-      lives: 5,
+      lives: 3,
       mode: 'rounds',
     });
   });

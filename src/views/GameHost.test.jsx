@@ -784,7 +784,7 @@ describe('GameHost wiring', () => {
     const { container } = mount(<GameHost topicId={topic.id} gameId="intruso" />);
 
     expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('Te quedan 2 cartas por aprender o repasar');
+    expect(container.textContent).toContain('Necesitas al menos 3 cartas');
     expect(container.textContent).not.toContain('Cargando juego');
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
@@ -1114,7 +1114,7 @@ describe('GameHost wiring', () => {
     const { container } = mount(<GameHost topicId={topic.id} gameId="conecta-pares" />);
 
     expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('Te quedan 2 cartas por aprender o repasar');
+    expect(container.textContent).toContain('Necesitas al menos 3 cartas');
     expect(container.textContent).not.toContain('Cargando juego');
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
@@ -1271,7 +1271,7 @@ describe('GameHost wiring', () => {
     );
 
     expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('Te quedan 3 cartas por aprender o repasar');
+    expect(container.textContent).toContain('Necesitas al menos 4 cartas');
     expect(container.textContent).not.toContain('Cargando juego');
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
@@ -1314,7 +1314,7 @@ describe('GameHost wiring', () => {
     unmount();
   });
 
-  it('shows «Todo al día» and never mounts the game when nothing is eligible (AC-15)', () => {
+  it('offers deck play even when every card is learned and not due (AC-31)', async () => {
     const md = `# Tema Al Dia
 - Q: uno | A: one
 - Q: dos | A: two
@@ -1327,15 +1327,14 @@ describe('GameHost wiring', () => {
     for (const card of topic.cards) locked[card.id] = { reps: 3, nextReview: future };
     localStorage.setItem('sepect.srs.v1', JSON.stringify({ [topic.id]: locked }));
 
-    const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
-    expect(container.textContent).toContain('Todo al día');
-    expect(container.textContent).not.toContain('Cargando juego');
-    expect(container.textContent).not.toContain('Memorama');
-    expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
-    expect(findButton(container, 'Fácil · 4 parejas')).toBeUndefined();
+    const { container } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
+    await waitFor(() => findButton(container, 'Repasar mazo'));
+    expect(container.textContent).not.toContain('Todo al día');
+    expect(container.textContent).toContain('Mazo 1');
+    expect(container.textContent).toContain('Completado');
   });
 
-  it('blocks intruso when the other topic has no eligible cards (AC-20)', () => {
+  it('no longer gates intruso by SRS eligibility in deck mode (AC-31)', async () => {
     const { topic: other } = saveCustomTopic({ title: 'Tema Intruso Vacio', md: INTRUSO_OTHER_MD });
     const future = Date.now() + 30 * 86_400_000;
     const locked = {};
@@ -1344,9 +1343,10 @@ describe('GameHost wiring', () => {
     lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
 
     const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
-    expect(container.textContent).toContain('Juego no disponible');
-    expect(container.textContent).toContain('En mantenimiento');
-    expect(findButton(container, 'Empezar')).toBeUndefined();
+    await waitFor(() => container.textContent.includes('El intruso'));
+    expect(container.textContent).not.toContain('Juego no disponible');
+    expect(container.textContent).not.toContain('Todo al día');
+    expect(container.textContent).not.toContain('En mantenimiento');
   });
 
   it('builds intruso groups only from topics with enough eligible cards (AC-20)', async () => {

@@ -1,9 +1,19 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import ArcadeHud from '../../components/ArcadeHud.jsx';
 import CardImage from '../../components/CardImage.jsx';
+import DeckPicker from '../../components/DeckPicker.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { createEngine } from '../../core/engine/engine.js';
+import { arcadeHit, createArcade } from '../../core/engine/arcade.js';
+import { getDeckAvailability } from '../availability.js';
+
+function disabledReasonForSerpiente(deck) {
+  const availability = getDeckAvailability({ id: 'serpiente-significados', minCards: 6 }, deck);
+  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  return '';
+}
 import {
   DEFAULT_ROUNDS,
   DIFFICULTIES,
@@ -35,11 +45,13 @@ const ROUND_OPTIONS = Array.from(
 );
 const MIN_CARDS = 4;
 const APPLE_COLORS = ['#00ffcc', '#ff007f', '#ffd166'];
-const MODE_LABELS = { rounds: 'Rondas', survival: 'Supervivencia' };
+const MODE_LABELS = { rounds: 'Rondas', survival: 'Supervivencia', arcade: 'Arcade' };
 const MODE_HELP = {
   rounds: 'Ocho rondas por defecto. Cada acierto suma 100 puntos.',
   survival: `Come todo el mazo, hasta ${MAX_SURVIVAL_CARDS} cartas. Tu puntuación es la longitud final.`,
+  arcade: 'Mazo completo, 3 vidas. Manzana incorrecta o choque resta vida.',
 };
+const GAME_ID = 'serpiente-significados';
 const DIFFICULTY_LABELS = {
   tranquilo: 'Tranquilo',
   normal: 'Normal',
@@ -92,13 +104,30 @@ function announcementFor(state, card) {
   return `${label}: ${card.front}`;
 }
 
-export default function SerpienteSignificados({ deck = [], selectCards, onGrade, onExit } = {}) {
-  const deckList = useMemo(() => (Array.isArray(deck) ? deck : []), [deck]);
-  const backs = useMemo(() => uniqueBackCount(deckList), [deckList]);
-  const canPlay = deckList.length >= MIN_CARDS && backs >= 3;
+export default function SerpienteSignificados({
+  deck = [],
+  decks,
+  best,
+  selectCards,
+  onGrade,
+  onArcadeEnd: _onArcadeEnd,
+  onExit,
+  onBackToTopic,
+} = {}) {
+  const onArcadeEnd = _onArcadeEnd;
+  const hasDecks = Array.isArray(decks) && decks.length > 0;
+  const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
+  const [gameMode, setGameMode] = useState('normal');  
+  const [arcade, setArcade] = useState(() => createArcade());
+  const [_arcadeEnded, setArcadeEnded] = useState(false);
+  const [_arcadeResult, setArcadeResult] = useState(null);
+  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+  const deckSource = hasDecks && selectedDeck ? selectedDeck.cards : deck;
+  const deckList = useMemo(() => (Array.isArray(deckSource) ? deckSource : []), [deckSource]);
+  const canPlay = deckList.length >= MIN_CARDS;
 
-  const [mode, setMode] = useState('rounds');
   const [rounds, setRounds] = useState(DEFAULT_ROUNDS);
+  const [mode, setMode] = useState(MODES.rounds);
   const [difficulty, setDifficulty] = useState('normal');
   const [state, setState] = useState(() => createState());
 
@@ -300,17 +329,24 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
   };
 
   const handleStart = () => {
-    const count =
-      mode === 'survival' ? Math.min(deckList.length, MAX_SURVIVAL_CARDS) : rounds;
-    const pool = (selectCards ? selectCards(count) : deckList.slice(0, count)) || [];
     resetRuntime();
+    setArcadeEnded(false);
+    if (setArcadeResult) setArcadeResult(null);
+    if (gameMode === 'arcade') {
+      setArcade(createArcade());
+      setMode(MODES.survival);
+    }
+    const source = gameMode === 'arcade' && hasDecks && selectedDeck ? selectedDeck.cards : deckList;
+    const count =
+      gameMode === 'arcade' || mode === 'survival' ? Math.min(source.length, MAX_SURVIVAL_CARDS) : rounds;
+    const pool = (selectCards ? selectCards(count) : source.slice(0, count)) || [];
     const next = reduce(createState(), {
       type: 'start',
       cards: pool,
-      deck: deckList,
-      mode,
-      rounds,
-      difficulty,
+      deck: source,
+      mode: gameMode === 'arcade' ? MODES.survival : mode,
+      rounds: gameMode === 'arcade' ? pool.length : rounds,
+      difficulty: gameMode === 'arcade' ? 'normal' : difficulty,
       viewport: detectViewport(),
       random: Math.random,
     });
@@ -371,10 +407,10 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
     const grade = current.lastGrade;
     if (grade && grade.seq > emitted.current) {
       emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade);
+      onGrade?.(grade.cardId, gameMode === 'arcade' ? (grade.grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade.grade);
     }
     for (const entry of pendingCurrent(current)) {
-      onGrade?.(entry.cardId, entry.grade);
+      onGrade?.(entry.cardId, gameMode === 'arcade' ? (entry.grade === 'otra-vez' ? 'otra-vez' : 'facil') : entry.grade);
     }
     onExit?.();
   };
@@ -401,6 +437,7 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
   }
 
   if (state.phase === 'setup') {
+    const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id];
     return (
       <GameSetup
         pageClassName="serpiente-page"
@@ -409,8 +446,7 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
         lead="Dirige la serpiente y come la manzana con el significado de la pregunta. Cada manzana numerada tiene su significado en la leyenda."
         note={
           <>
-            {MODE_LABELS[mode]} · {available} cartas disponibles · tablero {previewSize}×
-            {previewSize} · {previewStep} ms por paso.
+            {gameMode === 'arcade' ? 'Arcade · 3 vidas' : MODE_LABELS[mode]} · {hasDecks && selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : `${available} cartas disponibles`} · tablero {previewSize}×{previewSize} · {previewStep} ms por paso.
           </>
         }
         start={
@@ -421,13 +457,25 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
         actions={
           <>
             <SoundToggle />
-            <button className="btn-neon game-setup__exit" type="button" onClick={handleExit}>
+            <button className="btn-neon game-setup__exit" type="button" onClick={onBackToTopic || onExit}>
               Salir
             </button>
           </>
         }
       >
         <div className="serpiente-setup">
+          {hasDecks && (
+            <>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+                <span>Modo</span>
+                <button type="button" className={`btn-neon${gameMode === 'normal' ? ' is-active' : ''}`} onClick={() => { setGameMode('normal'); setMode(MODES.rounds); }}>Normal</button>
+                <button type="button" className={`btn-neon${gameMode === 'arcade' ? ' is-active' : ''}`} onClick={() => { setGameMode('arcade'); setMode(MODES.survival); }}>Arcade</button>
+              </div>
+              {gameMode === 'arcade' && <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}><ArcadeHud arcade={arcade} best={bestForDeck} compact /></div>}
+              <DeckPicker decks={decks} selectedDeckId={selectedDeck?.id} onSelect={(id) => setSelectedDeckId(id)} best={best} disabledReason={(deckEntry) => disabledReasonForSerpiente(deckEntry)} gameId={GAME_ID} label="Elige tu mazo" />
+            </>
+          )}
+          {gameMode !== 'arcade' && (
           <fieldset className="serpiente-setup-fieldset">
             <legend>Modo</legend>
             <div className="serpiente-choice-row" role="group" aria-label="Modo">
@@ -445,7 +493,9 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
             </div>
             <p className="serpiente-note">{MODE_HELP[mode]}</p>
           </fieldset>
+          )}
 
+          {gameMode !== 'arcade' && (
           <fieldset className="serpiente-setup-fieldset">
             <legend>Dificultad</legend>
             <div className="serpiente-choice-row" role="group" aria-label="Dificultad">
@@ -463,6 +513,7 @@ export default function SerpienteSignificados({ deck = [], selectCards, onGrade,
             </div>
             <p className="serpiente-note">{DIFFICULTY_HELP[difficulty]}</p>
           </fieldset>
+          )}
 
           {mode === 'rounds' ? (
             <div className="serpiente-setup-row">

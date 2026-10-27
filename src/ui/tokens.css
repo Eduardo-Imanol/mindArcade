@@ -2391,7 +2391,37 @@ a.topic-card-tile:hover {
   background: var(--neon-magenta);
   box-shadow: 0 0 8px var(--neon-magenta);
 }
+.source-reader__tts-hint { margin: 6px 0 0; color: var(--text-dim); font-size: 12px; opacity: .8; }
 .source-reader__tts-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.source-reader__selection {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(179, 136, 255, .28);
+}
+.source-reader__selection-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--cyan-pale);
+  font-size: 13px;
+}
+.source-reader__selection-label {
+  padding: 2px 9px;
+  border: 1px solid rgba(0, 255, 204, .4);
+  border-radius: 999px;
+  color: var(--neon-cyan);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
 .source-reader__btn { min-height: 44px; }
 .source-reader__btn:disabled { opacity: .45; cursor: not-allowed; }
 .source-reader__btn:disabled:hover { border-color: var(--neon-magenta); color: inherit; box-shadow: 0 0 10px rgba(255, 0, 127, .35); }
@@ -2505,6 +2535,7 @@ a.topic-card-tile:hover {
   .source-reader__header-actions .btn-neon { width: 100%; }
   .source-reader__tts-actions { width: 100%; }
   .source-reader__tts-actions .source-reader__btn { flex: 1 1 140px; }
+  .source-reader__selection .source-reader__btn { flex: 1 1 100%; }
   .source-reader__doc { padding: 16px; }
   .md-heading--2 { font-size: clamp(19px, 5vw, 24px); }
 }
@@ -2515,4 +2546,183 @@ a.topic-card-tile:hover {
 @media (max-width: 479px) {
   .topic-header__side { flex-wrap: wrap; }
   .topic-source-link { flex: 1 1 100%; }
+}
+
+/* Shared deck picker + arcade HUD (spec-18) */
+.deck-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.deck-picker--empty {
+  margin: 0;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.deck-picker__deck {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 255, 204, .28);
+  border-radius: 14px;
+  background: rgba(15, 5, 29, .5);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease,
+    transform .15s ease;
+}
+.deck-picker__deck:hover:not(:disabled) {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 255, 204, .06);
+  transform: translateY(-1px);
+}
+.deck-picker__deck:active:not(:disabled) { transform: translateY(0); }
+.deck-picker__deck:focus-visible {
+  outline: 2px solid var(--neon-green);
+  outline-offset: 3px;
+}
+.deck-picker__deck.is-selected {
+  border-color: var(--neon-green);
+  background: rgba(57, 255, 20, .08);
+  box-shadow: 0 0 14px rgba(57, 255, 20, .26);
+}
+.deck-picker__deck.is-disabled {
+  border-color: rgba(241, 241, 241, .16);
+  background: rgba(15, 5, 29, .34);
+  color: var(--text-dim);
+  cursor: not-allowed;
+}
+.deck-picker__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.deck-picker__title { font-weight: 800; letter-spacing: .04em; }
+.deck-picker__status {
+  padding: 3px 8px;
+  border: 1px solid rgba(241, 241, 241, .22);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.deck-picker__status.is-aprendida {
+  border-color: rgba(57, 255, 20, .5);
+  color: var(--neon-green);
+}
+.deck-picker__status.is-repasar {
+  border-color: rgba(0, 255, 204, .5);
+  color: var(--neon-cyan);
+}
+.deck-picker__status.is-no-aprendida {
+  border-color: rgba(255, 0, 127, .5);
+  color: var(--neon-magenta);
+}
+.deck-picker__meta {
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.deck-picker__bar {
+  display: block;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(241, 241, 241, .1);
+}
+.deck-picker__bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--neon-violet), var(--neon-cyan), var(--neon-green));
+}
+.deck-picker__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+.deck-picker__best { color: var(--neon-cyan); font-weight: 700; }
+.deck-picker__cta { font-weight: 800; letter-spacing: .04em; color: var(--text); }
+.deck-picker__deck.is-disabled .deck-picker__cta {
+  color: var(--neon-magenta);
+  font-weight: 700;
+  letter-spacing: normal;
+}
+.arcade-hud {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border: 1px solid rgba(179, 136, 255, .4);
+  border-radius: 14px;
+  background: linear-gradient(140deg, rgba(42, 17, 72, .9), rgba(15, 5, 29, .9));
+  box-shadow: inset 0 1px 0 rgba(241, 241, 241, .05);
+}
+.arcade-hud__lives { display: flex; gap: 5px; align-items: center; }
+.arcade-hud__life {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255, 0, 127, .55);
+  border-radius: 50%;
+  background: transparent;
+}
+.arcade-hud__life.is-on {
+  background: var(--neon-magenta);
+  box-shadow: 0 0 10px rgba(255, 0, 127, .62);
+}
+.arcade-hud__stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.arcade-hud__stat { display: grid; gap: 2px; }
+.arcade-hud__stat dt {
+  color: var(--text-dim);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.arcade-hud__stat dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.arcade-hud__live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 479px) {
+  .arcade-hud { align-items: flex-start; }
+  .arcade-hud__stats { gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .deck-picker__deck { transition: none; }
+  .deck-picker__deck:hover:not(:disabled) { transform: none; }
 }

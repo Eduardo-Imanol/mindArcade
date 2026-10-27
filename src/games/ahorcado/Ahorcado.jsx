@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ArcadeHud from '../../components/ArcadeHud.jsx';
 import CardImage from '../../components/CardImage.jsx';
+import DeckPicker from '../../components/DeckPicker.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
+import { arcadeFinish, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
+import { getDeckAvailability } from '../availability.js';
 import { ALARM_MISTAKES, renderHangman } from './hangman-art.mjs';
 import {
   DEFAULT_ROUNDS,
@@ -20,8 +24,31 @@ import {
 const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
 const ROUND_OPTIONS = Array.from({ length: MAX_ROUNDS - MIN_ROUNDS + 1 }, (_, index) => MIN_ROUNDS + index);
 const XP_BY_GRADE = { facil: 10, dificil: 25, 'otra-vez': 0 };
+const GAME_ID = 'ahorcado';
 
-export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {}) {
+function disabledReasonFor(deck) {
+  const availability = getDeckAvailability({ id: GAME_ID, minCards: 3 }, deck);
+  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  return '';
+}
+
+export default function Ahorcado({
+  deck = [],
+  decks,
+  best,
+  selectCards,
+  onGrade,
+  onArcadeEnd,
+  onExit,
+  onBackToTopic,
+} = {}) {
+  const hasDecks = Array.isArray(decks) && decks.length > 0;
+  const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
+  const [gameMode, setGameMode] = useState('normal');
+  const [arcade, setArcade] = useState(() => createArcade());
+  const [arcadeEnded, setArcadeEnded] = useState(false);
+  const [arcadeResult, setArcadeResult] = useState(null);
+  const [wrongCount, setWrongCount] = useState(0);
   const [rounds, setRounds] = useState(DEFAULT_ROUNDS);
   const [state, setState] = useState(() => createState());
   const emitted = useRef(0);
@@ -29,20 +56,68 @@ export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {
 
   useEffect(() => () => stopSpeech(), []);
 
+  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+
   useEffect(() => {
     const grade = state.lastGrade;
     if (grade && grade.seq > emitted.current) {
       emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade);
+      onGrade?.(grade.cardId, gameMode === 'arcade' ? grade.grade : grade.grade);
     }
-  }, [state, onGrade]);
+  }, [state, onGrade, gameMode]);
+
+  const backToTopic = () => {
+    if (onBackToTopic) onBackToTopic();
+    else onExit?.();
+  };
+
+  const endArcade = (finalArcade) => {
+    if (arcadeEnded) return;
+    const finished = arcadeFinish(finalArcade);
+    setArcadeEnded(true);
+    const run = {
+      score: finished.score,
+      correct: finished.correct,
+      wrong: finished.wrong,
+      lives: finished.lives,
+      completed: finished.completed,
+      deckId: selectedDeck?.id,
+    };
+    const result = onArcadeEnd?.(run);
+    setArcadeResult(result || { best: finished.score, isRecord: false });
+    setArcade(finished);
+  };
 
   const guess = (letter) => {
     if (state.phase !== 'playing') return;
+    if (gameMode === 'arcade' && arcade.over) return;
+    const round = currentRound(state);
+    const word = round ? normalizeWord(round.card.back) : '';
+    const before = round ? round.mistakes : 0;
     const next = reduce(state, { type: 'guess', letter });
     if (next === state) return;
+    const nextRound = currentRound(next);
+    const after = nextRound ? nextRound.mistakes : before;
+    if (gameMode === 'arcade' && after > before) {
+      const missed = arcadeMiss(arcade);
+      setArcade(missed);
+      if (missed.over) {
+        endArcade(missed);
+      }
+    }
     setState(next);
-    if (next.phase === 'round-lost') speak(next.cards[next.roundIndex].front);
+    if (next.phase === 'round-lost') {
+      if (gameMode === 'arcade') {
+        const hasMistakes = (nextRound ? nextRound.mistakes : after) > 0 || after > before;
+        if (hasMistakes && !arcade.over) {
+          // miss already applied on mistake
+        }
+      }
+      speak(next.cards[next.roundIndex].front);
+    }
+    if (gameMode === 'arcade' && next.phase === 'complete' && !arcade.over) {
+      endArcade(arcadeFinish(arcade));
+    }
   };
 
   useEffect(() => {
@@ -177,18 +252,25 @@ export default function Ahorcado({ deck = [], selectCards, onGrade, onExit } = {
     announcement = `Ronda perdida. La palabra era ${round.target}`;
   }
 
+  if (gameMode === 'arcade' && arcade.over && !arcadeEnded) {
+    endArcade(arcade);
+  }
+
   return (
     <main className="sepect-bg ahorcado-page" style={PAGE}>
       <div className="game-stage">
-        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+        <header className="ahorcado-header">
           <p style={{ margin: 0 }}>
-            Ronda {round.index + 1} de {state.total} · {round.mistakes}/{MAX_MISTAKES} fallos
+            {hasDecks ? `Mazo ${selectedDeck.number} · ` : ''}
+            {gameMode === 'arcade' ? 'Arcade' : 'Normal'} · Ronda {round.index + 1} de {state.total}
+            {gameMode !== 'arcade' ? ` · Errores ${round.mistakes}/${MAX_MISTAKES}` : ''}
           </p>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+          <div className="ahorcado-actions" style={{ marginTop: 0 }}>
             <SoundToggle />
             <button className="btn-neon" type="button" onClick={handleExit}>Salir</button>
           </div>
         </header>
+        {gameMode === 'arcade' ? <ArcadeHud lives={arcade.lives} score={arcade.score} streak={arcade.streak} best={typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id]} /> : null}
 
         <div className="ahorcado-layout">
           <div

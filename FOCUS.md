@@ -1,7 +1,7 @@
 # FOCUS
 
 ## Active objective (single)
-spec-19 "lector-fuente-tts" — **T1–T7 implementados** (2026-10-26): registro
+spec-19 "lector-fuente-tts" — **T1–T8 implementados** (2026-10-26): registro
 lazy de sources, parser Markdown seguro, TTS por secuencia con pausa/reanudación,
 `SourceReader` en `#/tema/:id/fuente`, enlace condicional desde `TopicView`, CSS
 y checklist a11y, docs y gates. Pendiente revisión humana del diff y firma.
@@ -15,13 +15,14 @@ Fases SDD para spec-19:
 - F1 ✅ Guardarraíles vigentes (AGENTS.md; sin secrets; deps/infra/git-history
   requieren aprobación humana).
 - F2 ✅ `specs/spec-19-lector-fuente-tts.md` (firmada 2026-10-23).
-- F3 ✅ `specs/tasks-19-lector-fuente-tts.md` (T1–T7).
+- F3 ✅ `specs/tasks-19-lector-fuente-tts.md` (T1–T8).
 - F4 ✅ T1–T3: sources lazy verificado, `markdown.js` + `MarkdownBlocks` y
   `speakSequence` con pausa/reanudación/cancelación.
 - F5 ✅ T4–T5: `SourceReader` con estados y controles; router `#/…/fuente`,
   título de documento y enlace condicional en `TopicView`.
-- F6 ✅ T6–T7 implementados: CSS responsive/a11y, `SourceReader.a11y.test.jsx`,
+- F6 ✅ T6–T8 implementados: CSS responsive/a11y, `SourceReader.a11y.test.jsx`,
   checklist manual, arquitectura/MEMORY/FOCUS y gates (manual + firma pendientes).
+  T8: selección leída en TTS + «Leer selección» para repetir.
   Pasada impeccable: `views/source/` (header/estado/modelo), `markdownInline.js`
   y `audio/chunks.js`; archivos <200 líneas.
 

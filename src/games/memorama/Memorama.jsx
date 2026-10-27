@@ -1,49 +1,139 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ArcadeHud from '../../components/ArcadeHud.jsx';
 import CardImage from '../../components/CardImage.jsx';
+import DeckPicker from '../../components/DeckPicker.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
-import { isSupported, speak } from '../../core/audio/tts.js';
+import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
+import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
+import { getDeckAvailability } from '../availability.js';
 import { DIFFICULTIES, createState, pendingGrades, reduce } from './memorama.logic.js';
 
 const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
+const GAME_ID = 'memorama';
 
-export default function Memorama({ deck = [], selectCards, onGrade, onExit } = {}) {
+function disabledReasonFor(deck) {
+  const availability = getDeckAvailability({ id: GAME_ID, minCards: 2 }, deck);
+  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  return '';
+}
+
+export default function Memorama({
+  deck = [],
+  decks,
+  best,
+  selectCards,
+  onGrade,
+  onArcadeEnd,
+  onExit,
+  onBackToTopic,
+} = {}) {
+  const hasDecks = Array.isArray(decks) && decks.length > 0;
+  const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
+  const [gameMode, setGameMode] = useState('normal');
+  const [arcade, setArcade] = useState(() => createArcade());
+  const [arcadeEnded, setArcadeEnded] = useState(false);
+  const [arcadeResult, setArcadeResult] = useState(null);
   const [cards, setCards] = useState(null);
   const [state, setState] = useState(null);
   const emitted = useRef(0);
+
+  useEffect(() => () => stopSpeech(), []);
+
+  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+
+  const backToTopic = () => {
+    if (onBackToTopic) onBackToTopic();
+    else onExit?.();
+  };
+
+  const endArcade = (finalArcade) => {
+    if (arcadeEnded) return;
+    const finished = arcadeFinish(finalArcade);
+    setArcadeEnded(true);
+    const run = {
+      score: finished.score,
+      correct: finished.correct,
+      wrong: finished.wrong,
+      lives: finished.lives,
+      completed: finished.completed,
+      deckId: selectedDeck?.id,
+    };
+    const result = onArcadeEnd?.(run);
+    setArcadeResult(result || { best: finished.score, isRecord: false });
+    setArcade(finished);
+  };
 
   useEffect(() => {
     const match = state && state.lastMatch;
     if (match && match.seq > emitted.current) {
       emitted.current = match.seq;
-      onGrade?.(match.cardId, match.grade);
+      onGrade?.(match.cardId, gameMode === 'arcade' ? (match.grade === 'otra-vez' ? 'otra-vez' : 'facil') : match.grade);
     }
-  }, [state, onGrade]);
+  }, [state, onGrade, gameMode]);
 
-  const closePair = () => setState((prev) => reduce(prev, { type: 'close' }));
+  useEffect(() => {
+    if (gameMode !== 'arcade') return;
+    if (arcadeEnded) return;
+    if (state && state.mismatch && state.mismatch.seq && state.phase === 'mismatch') {
+      // mismatch will close via closePair but we can track
+    }
+  }, [gameMode, arcadeEnded, state]);
 
-  const choose = (option) => {
-    const requested = (selectCards ? selectCards(option.pairs) : deck.slice(0, option.pairs)) || [];
+  const closePair = () => {
+    if (gameMode === 'arcade' && state && state.phase === 'mismatch' && !arcade.over) {
+      const miss = arcadeMiss(arcade);
+      setArcade(miss);
+      if (miss.over) endArcade(miss);
+    }
+    setState((prev) => {
+      const next = reduce(prev, { type: 'close' });
+      if (gameMode === 'arcade' && next && next.complete && !arcade.over) {
+        endArcade(arcadeFinish(arcade));
+      }
+      return next;
+    });
+  };
+
+  const choose = (option = {}) => {
     emitted.current = 0;
+    setArcadeEnded(false);
+    setArcadeResult(null);
+    let requested = [];
+    if (hasDecks && selectedDeck) {
+      if (gameMode === 'arcade') {
+        requested = Array.isArray(selectedDeck.cards) ? selectedDeck.cards.slice(0, 10) : [];
+        setArcade(createArcade());
+      } else {
+        const pairs = Math.min(option.pairs || 10, selectedDeck.cards.length);
+        requested = (selectCards ? selectCards(pairs) : selectedDeck.cards.slice(0, pairs)) || [];
+      }
+    } else {
+      requested = (selectCards ? selectCards(option.pairs) : deck.slice(0, option.pairs)) || [];
+    }
     setCards(requested);
     setState(createState(requested, { random: Math.random }));
   };
 
   const flip = (index) => {
     if (!state) return;
+    if (gameMode === 'arcade' && arcade.over) return;
     const next = reduce(state, { type: 'flip', index });
     if (next === state) return;
     const tile = state.tiles[index];
     const wasRevealed = state.matched.includes(tile.cardId) || state.open.includes(index);
     setState(next);
     if (!wasRevealed) speak(tile.text);
+    if (gameMode === 'arcade' && next.phase === 'match' && next.lastMatch && next.lastMatch.seq !== state.lastMatch?.seq) {
+      setArcade((current) => arcadeHit(current));
+    }
   };
 
   const handleExit = () => {
     if (state) {
-      for (const entry of pendingGrades(state)) onGrade?.(entry.cardId, entry.grade);
+      for (const entry of pendingGrades(state)) onGrade?.(entry.cardId, gameMode === 'arcade' ? (entry.grade === 'otra-vez' ? 'otra-vez' : 'facil') : entry.grade);
     }
-    onExit?.();
+    backToTopic();
   };
 
   if (deck.length === 0) {

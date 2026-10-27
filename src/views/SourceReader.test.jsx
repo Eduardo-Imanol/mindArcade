@@ -1,6 +1,6 @@
 import React from 'react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { click, flush, mount, waitFor } from '../test/render.jsx';
+import { click, fire, flush, mount, waitFor } from '../test/render.jsx';
 import { saveCustomTopic } from '../core/content/catalog.js';
 import { saveSettings } from '../core/storage/settings.js';
 
@@ -64,6 +64,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+  window.getSelection?.().removeAllRanges();
   document.body.innerHTML = '';
   localStorage.clear();
   delete window.speechSynthesis;
@@ -177,6 +178,39 @@ describe('SourceReader TTS (spec-19 AC-5..AC-9)', () => {
       'Listo para leer'
     );
     expect(synth.speak).toHaveBeenCalledTimes(1);
+  });
+
+  it('reads the selected fragment automatically and can repeat it', async () => {
+    installSpeech();
+    const { container } = mount(<SourceReader topicId={BUILTIN} />);
+    await waitFor(() => container.querySelector('.source-reader__doc'));
+
+    const paragraph = [...container.querySelectorAll('.md-paragraph')].find((node) =>
+      node.textContent.includes('bloque de código con nombre')
+    );
+    expect(paragraph).toBeTruthy();
+
+    const range = document.createRange();
+    range.selectNodeContents(paragraph);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    fire(document, 'selectionchange');
+
+    await waitFor(() => synth.speak.mock.calls.length > 0);
+    expect(synth.speak.mock.calls.some(([utter]) => utter.text.includes('bloque de código con nombre'))).toBe(
+      true
+    );
+    expect(container.querySelector('.source-reader__tts-status').textContent).toBe(
+      'Leyendo la selección'
+    );
+
+    const repeat = byLabel(container, 'Leer texto seleccionado');
+    expect(repeat).toBeTruthy();
+    synth.speak.mockClear();
+    click(repeat);
+    expect(synth.speak).toHaveBeenCalled();
+    expect(synth.speak.mock.calls[0][0].text).toContain('bloque de código con nombre');
   });
 
   it('cancels speech on unmount', async () => {

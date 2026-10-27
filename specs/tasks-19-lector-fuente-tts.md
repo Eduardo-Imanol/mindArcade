@@ -143,10 +143,21 @@ Cadenas críticas:
 - **Done when:** el documento largo es legible y navegable en móvil.
 - **Estimate:** S.
 
-### T7 — Docs, gates y cierre [depends: T1–T6]
+### T8 — Leer selección [depends: T4]
+- [x] **Deliverable:** `SourceReader` detecta selección de texto dentro del
+  artículo y la lee automáticamente tras ~350 ms; `SourceReaderControls` muestra
+  «Leer selección» para repetirla. Respeta mute, Detener, navegación y desmontaje.
+- [x] **Tests:** `SourceReader.test.jsx` cubre lectura automática, estado
+  «Leyendo la selección» y repetición manual; a11y mantiene el `aria-live`.
+- **AC cubiertos:** AC-14 (addendum 2026-10-26).
+- **Contexto:** HU-2; extensión solicitada por Eduardo.
+- **Done when:** seleccionar un fragmento lo lee sin interferir con el documento.
+- **Estimate:** S.
+
+### T7 — Docs, gates y cierre [depends: T1–T6, T8]
 - [x] **Deliverable:** `docs/architecture.md`, `MEMORY.md`, `FOCUS.md` y
   `docs/manual-a11y-checklist.md` con el lector/TTS.
-- [x] **Gates:** `npm test` 780/780, `npm run lint` 0, `npm run build` OK
+- [x] **Gates:** `npm test` 781/781, `npm run lint` 0, `npm run build` OK
   (warning preexistente de chunk >500 kB).
 - [ ] **Cierre:** ACs, tasks y firma humana.
 - **AC cubiertos:** AC-12, AC-13 y DoD.
@@ -165,7 +176,7 @@ Cadenas críticas:
 ## Definition of Done
 
 - [x] Cada AC tiene test o verificación manual registrada.
-- [x] `npm test` 780/780, `npm run lint` 0 y `npm run build` en verde.
+- [x] `npm test` 781/781, `npm run lint` 0 y `npm run build` en verde.
 - [x] Sin dependencias nuevas ni red.
 - [ ] Diff revisado por humano.
 - [x] `MEMORY.md` actualizado y `FOCUS.md` limpio.

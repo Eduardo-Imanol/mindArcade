@@ -4,6 +4,7 @@ import NotFound from '../components/NotFound.jsx';
 import SourceReaderControls from './source/SourceReaderControls.jsx';
 import SourceReaderHeader from './source/SourceReaderHeader.jsx';
 import SourceReaderState from './source/SourceReaderState.jsx';
+import useSelectionSpeech from './source/useSelectionSpeech.js';
 import { documentStats } from './source/sourceReaderModel.js';
 import { loadCatalog } from '../core/content/catalog.js';
 import { blocksToSpeech, parseSourceMarkdown } from '../core/content/markdown.js';
@@ -30,7 +31,9 @@ export default function SourceReader({ topicId }) {
   const [reloadKey, setReloadKey] = useState(0);
   const [state, setState] = useState({ status: 'loading', blocks: [], message: '' });
   const [playback, setPlayback] = useState('idle');
+  const [mode, setMode] = useState('idle');
   const controlRef = useRef(null);
+  const docRef = useRef(null);
 
   useEffect(() => {
     let alive = true;
@@ -75,11 +78,50 @@ export default function SourceReader({ topicId }) {
 
   useEffect(() => () => stopSpeech(), [sourcePath]);
 
+  const startSequence = useCallback((parts, nextMode) => {
+    const control = speakSequence(parts, {
+      onEnd: () => {
+        controlRef.current = null;
+        setPlayback('idle');
+        setMode('idle');
+      },
+      onError: () => {
+        controlRef.current = null;
+        setPlayback('idle');
+        setMode('idle');
+      },
+    });
+    if (!control) {
+      setPlayback('idle');
+      setMode('idle');
+      return false;
+    }
+    controlRef.current = control;
+    setPlayback('speaking');
+    setMode(nextMode);
+    return true;
+  }, []);
+
+  const readSelectedText = useCallback(
+    (text) => startSequence([text], 'selection'),
+    [startSequence]
+  );
+
+  const { selection, playSelection, clearAutoReadTimer } = useSelectionSpeech({
+    docRef,
+    speechSupported,
+    muted,
+    onRead: readSelectedText,
+    resetKey: sourcePath,
+  });
+
   const stopPlayback = useCallback(() => {
+    clearAutoReadTimer();
     stopSpeech();
     controlRef.current = null;
     setPlayback('idle');
-  }, []);
+    setMode('idle');
+  }, [clearAutoReadTimer]);
 
   useEffect(() => {
     if (muted) stopPlayback();
@@ -88,23 +130,9 @@ export default function SourceReader({ topicId }) {
   const play = useCallback(() => {
     const parts = blocksToSpeech(state.blocks);
     if (!parts.length) return;
-    const control = speakSequence(parts, {
-      onEnd: () => {
-        controlRef.current = null;
-        setPlayback('idle');
-      },
-      onError: () => {
-        controlRef.current = null;
-        setPlayback('idle');
-      },
-    });
-    if (!control) {
-      setPlayback('idle');
-      return;
-    }
-    controlRef.current = control;
-    setPlayback('speaking');
-  }, [state.blocks]);
+    clearAutoReadTimer();
+    startSequence(parts, 'document');
+  }, [clearAutoReadTimer, startSequence, state.blocks]);
 
   const pause = useCallback(() => {
     if (controlRef.current?.pause()) setPlayback('paused');
@@ -135,12 +163,19 @@ export default function SourceReader({ topicId }) {
               supported={speechSupported}
               muted={muted}
               status={playback}
+              mode={mode}
+              selection={selection}
               onPlay={play}
               onPause={pause}
               onResume={resume}
               onStop={stopPlayback}
+              onPlaySelection={playSelection}
             />
-            <article className="source-reader__doc card-neon" aria-label={`Documento original de ${topic.title}`}>
+            <article
+              className="source-reader__doc card-neon"
+              aria-label={`Documento original de ${topic.title}`}
+              ref={docRef}
+            >
               <MarkdownBlocks blocks={state.blocks} />
             </article>
           </>

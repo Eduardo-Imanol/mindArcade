@@ -79,6 +79,7 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 - [ ] Keyboard: Tab reaches Leer, Pausar, Reanudar, Detener and the global sound toggle; disabled buttons are skipped.
 - [ ] Screen reader announces the `aria-live` status ("Listo para leer", "Leyendo en voz alta", "Lectura en pausa", "Sonido silenciado") without repeats.
 - [ ] TTS reads headings, paragraphs and list items in order; code blocks are rendered but not spoken; long text finishes without truncation.
+- [ ] Selecting text inside the document reads only that fragment after a short pause; «Leer selección» repeats it; Detener/mute/navigation cancel it; an empty selection emits no audio.
 - [ ] Pausar/Reanudar keeps the current fragment; Detener, mute, navigation and unmount cancel speech with no orphaned utterances.
 - [ ] With `speechSynthesis` unavailable the controls are hidden and an accessible notice remains; the document stays readable.
 - [ ] Loading, empty and error states are announced (`role="status"`/`role="alert"`) and keep the way back to the topic.

@@ -4,11 +4,12 @@ import { getGame } from '../games/registry.js';
 import { AVAILABILITY_REASONS, availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
 import { applyGrade, loadSrs, saveSrs } from '../core/repetition/srs.js';
-import { buildFlashcardDecks } from '../core/repetition/flashcardDecks.js';
+import { DECK_SIZE, buildDecks } from '../core/repetition/decks.js';
 import { selectStudyCards } from '../core/repetition/selectStudyCards.js';
 import { GRADE_XP } from '../core/metrics/metrics.js';
 import { awardXP, recordStreak } from '../core/storage/xp.js';
 import { createStore } from '../core/storage/store.js';
+import { bestFor, loadArcadeRecords, recordArcadeRun } from '../core/storage/arcade.js';
 import { navigate } from '../app/router.js';
 import { useStudyCardCounts } from './useStudyCardCounts.js';
 
@@ -31,15 +32,40 @@ export default function GameHost({ topicId, gameId }) {
   const profileRef = useRef(null);
   const [Component, setComponent] = useState(null);
   const [deck, setDeck] = useState(null);
-  const [decks, setDecks] = useState(null);
   const [groups, setGroups] = useState(null);
   const [selectCards, setSelectCards] = useState(null);
+  const [records, setRecords] = useState(() => loadArcadeRecords());
+
+  const cards = useMemo(() => (topic ? cardsWithOverrides(topic) : []), [topic]);
+  const topicSrs = useMemo(
+    () => (srs && typeof srs === 'object' ? srs[topic?.id] || {} : {}),
+    [srs, topic?.id]
+  );
+  const decks = useMemo(
+    () => (topic ? buildDecks(cards, topicSrs, { size: DECK_SIZE, now }) : []),
+    [topic, cards, topicSrs, now]
+  );
+  const allGroups = useMemo(
+    () =>
+      topics.map((entry) => ({
+        id: entry.id,
+        title: entry.title,
+        cards: cardsWithOverrides(entry),
+      })),
+    [topics]
+  );
+  const best = useMemo(() => {
+    if (!topic || !game) return {};
+    return Object.fromEntries(
+      decks.map((entry) => [entry.id, bestFor(records, topic.id, game.id, entry.id)])
+    );
+  }, [records, decks, topic, game]);
 
   const studyCardCounts = useStudyCardCounts(topics, srs);
 
   const availability = useMemo(
-    () => getGameAvailability(game, { topic, topics, studyCardCounts }),
-    [game, topic, topics, studyCardCounts]
+    () => getGameAvailability(game, { topic, topics, studyCardCounts, decks }),
+    [game, topic, topics, studyCardCounts, decks]
   );
 
   useEffect(() => {
@@ -51,7 +77,6 @@ export default function GameHost({ topicId, gameId }) {
       if (!active) return;
       profileRef.current = createStore().load();
       const liveSrs = srsRef.current || {};
-      const cards = cardsWithOverrides(topic);
       const minPerTopic = game.minCardsPerTopic || game.minCards || 1;
       const eligibleFor = (entry) => {
         const entryCards = cardsWithOverrides(entry);
@@ -71,7 +96,6 @@ export default function GameHost({ topicId, gameId }) {
       setDeck(
         selectStudyCards(cards, topicSrs || {}, { count: cards.length, now })
       );
-      setDecks(buildFlashcardDecks(cards, topicSrs || {}));
       setGroups(nextGroups);
       setSelectCards(() => (count) =>
         selectStudyCards(cards, (srsRef.current || {})[topic.id] || {}, { count, now })
@@ -81,7 +105,7 @@ export default function GameHost({ topicId, gameId }) {
     return () => {
       active = false;
     };
-  }, [topic, game, topics, availability.playable, now]);
+  }, [topic, game, topics, availability.playable, now, cards, topicSrs]);
 
   if (!topic) return <NotFound message={`Tema "${topicId}" no encontrado`} />;
 
@@ -127,7 +151,7 @@ export default function GameHost({ topicId, gameId }) {
     );
   }
 
-  if (!Component || deck === null || decks === null || groups === null || !selectCards) {
+  if (!Component || deck === null || groups === null || !selectCards) {
     return (
       <main className="sepect-bg topic-page game-loading-page">
         <div className="game-loading" role="status" aria-live="polite">
@@ -180,14 +204,24 @@ export default function GameHost({ topicId, gameId }) {
     return { gained: xp.gained, total: xp.total };
   };
 
+  const onArcadeEnd = (run = {}) => {
+    if (!topic || !game) return { best: 0, isRecord: false };
+    const result = recordArcadeRun({ ...run, topicId: topic.id, gameId: game.id });
+    if (result.ok) setRecords(result.records);
+    return { best: result.best, isRecord: Boolean(result.isRecord) };
+  };
+
   return (
     <Component
       deck={deck}
       decks={decks}
+      best={best}
       groups={groups}
+      allGroups={allGroups}
       anchorTopicId={topic.id}
       selectCards={selectCards}
       onGrade={onGrade}
+      onArcadeEnd={onArcadeEnd}
       onExit={() => navigate(`#/tema/${topic.id}`)}
     />
   );

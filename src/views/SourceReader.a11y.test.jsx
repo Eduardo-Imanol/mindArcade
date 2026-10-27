@@ -43,6 +43,7 @@ beforeEach(() => {
 });
 
 afterEach(() => {
+  window.getSelection?.().removeAllRanges();
   document.body.innerHTML = '';
   localStorage.clear();
   delete window.speechSynthesis;
