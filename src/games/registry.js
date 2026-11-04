@@ -77,10 +77,59 @@ const GAMES = [
     minCards: 4,
     load: () => import('./serpiente-significados/index.jsx'),
   }),
+  defineGame({
+    id: 'ordena-codigo',
+    title: 'Ordena el código',
+    description: 'Reconstruye la solución ordenando sus piezas.',
+    art: gameArtUrl('ordena-codigo') || undefined,
+    status: 'available',
+    minCards: 1,
+    categories: ['programacion'],
+    needsExercises: true,
+    minExercises: 2,
+    load: () => import('./ordena-codigo/index.jsx'),
+  }),
+  defineGame({
+    id: 'escribe-codigo',
+    title: 'Escribe el código',
+    description: 'Escribe una función y ejecútala contra los casos.',
+    art: gameArtUrl('escribe-codigo') || undefined,
+    status: 'available',
+    minCards: 1,
+    categories: ['programacion'],
+    needsExercises: true,
+    minExercises: 2,
+    load: () => import('./escribe-codigo/index.jsx'),
+  }),
+  defineGame({
+    id: 'completa-codigo',
+    title: 'Completa el código',
+    description: 'Rellena los espacios que faltan en el código.',
+    art: gameArtUrl('completa-codigo') || undefined,
+    status: 'available',
+    minCards: 1,
+    categories: ['programacion'],
+    needsExercises: true,
+    minExercises: 2,
+    load: () => import('./completa-codigo/index.jsx'),
+  }),
 ];
 
-export function listGames() {
-  return [...GAMES];
+export function isGameForCategory(game, categoryId) {
+  if (!game) return false;
+  const categories = Array.isArray(game.categories) ? game.categories : ['*'];
+  if (categories.includes('*')) return true;
+  const id = typeof categoryId === 'string' ? categoryId.trim() : '';
+  return id !== '' && categories.includes(id);
+}
+
+export function listGames({ categoryId } = {}) {
+  if (categoryId === undefined) return [...GAMES];
+  return GAMES.filter((game) => isGameForCategory(game, categoryId));
+}
+
+export function gamesForCategory(categoryId) {
+  return listGames({ categoryId });
 }
 
 export function getGame(id) {

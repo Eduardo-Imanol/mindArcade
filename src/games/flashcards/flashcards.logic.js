@@ -42,6 +42,31 @@ function activeDeck(state, deck) {
   return Array.isArray(state?.sessionDeck) ? state.sessionDeck : asDeck(deck);
 }
 
+export function shuffleCards(cards, random = Math.random) {
+  const list = [...asDeck(cards)];
+  for (let index = list.length - 1; index > 0; index -= 1) {
+    const swap = Math.floor(random() * (index + 1));
+    [list[index], list[swap]] = [list[swap], list[index]];
+  }
+  return list;
+}
+
+// Normal resumes ungraded cards (or reviews the whole deck when all are studied).
+// Arcade always plays the complete deck.
+export function sessionCardsFor(
+  deckEntry,
+  { mode = 'normal', review = false, random = Math.random } = {}
+) {
+  const cards = asDeck(deckEntry?.cards);
+  if (mode === 'arcade' || review) return shuffleCards(cards, random);
+  const studied = new Set(asDeck(deckEntry?.studiedIds));
+  const pending = cards.filter((card) => {
+    const id = card ? card.id : undefined;
+    return id === undefined || id === null || !studied.has(id);
+  });
+  return shuffleCards(pending.length > 0 ? pending : cards, random);
+}
+
 export function createState(deck = [], overrides = {}) {
   const list = asDeck(deck);
   const base = {

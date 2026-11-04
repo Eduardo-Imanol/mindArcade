@@ -48,7 +48,7 @@ export function rafHarness() {
   return {
     step(ms = 90, times = 1) {
       for (let index = 0; index < times; index += 1) {
-        if (baseline == null) baseline = performance.now();
+        if (baseline == null) baseline = Math.ceil(performance.now());
         baseline += ms;
         const callbacks = [...pending.values()];
         pending.clear();
@@ -115,7 +115,9 @@ const appleCell = (container, number) => {
 
 export const lives = (container) => {
   const node = container.querySelector('[aria-label^="Vidas:"]');
-  return Number(node.getAttribute('aria-label').match(/Vidas: (\d+) de/)[1]);
+  if (node) return Number(node.getAttribute('aria-label').match(/Vidas: (\d+) de/)[1]);
+  const live = container.querySelector('.arcade-hud__live');
+  return live ? Number(live.textContent.match(/Vidas (\d+) de/)[1]) : 0;
 };
 
 export const snakeLength = (container) =>

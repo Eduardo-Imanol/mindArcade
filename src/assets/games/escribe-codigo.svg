@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" width="512" height="320" role="img" aria-label="Escribe el código">
+<title>Escribe el código</title>
+<rect x="0" y="0" width="512" height="320" fill="#1a0b2e"/>
+<ellipse cx="245.31" cy="176.78" rx="150.93" ry="150.93" fill="hsl(265 90% 58% / 0.221)"/>
+<ellipse cx="64.44" cy="297.05" rx="100.02" ry="100.02" fill="hsl(265 90% 58% / 0.237)"/>
+<ellipse cx="450.07" cy="318.61" rx="126.03" ry="126.03" fill="hsl(265 90% 58% / 0.179)"/>
+<rect x="42" y="34" width="428" height="212" rx="14" fill="rgba(15, 5, 29, .92)" stroke="#00ffcc" stroke-width="2.5"/>
+<ellipse cx="64" cy="54" rx="4.5" ry="4.5" fill="#8a7fb5"/>
+<ellipse cx="84" cy="54" rx="4.5" ry="4.5" fill="#8a7fb5"/>
+<ellipse cx="104" cy="54" rx="4.5" ry="4.5" fill="#8a7fb5"/>
+<text x="66" y="88" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">function suma(a, b) {</text>
+<text x="66" y="122" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">  const total = a + b;</text>
+<text x="66" y="156" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">  return total;</text>
+<text x="66" y="190" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">}</text>
+<rect x="68" y="190" width="10" height="22" rx="2" fill="#39ff14"/>
+<rect x="309.62" y="186" width="148.76" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="384" y="206" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">✓ 3/3 casos</text>
+<text x="256" y="286" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">escribe y ejecuta</text>
+</svg>

@@ -157,15 +157,15 @@ Cadenas críticas:
 ## Fase B — Juego de referencia
 
 ### T6 — Flashcards con mazos compartidos [depends: T5]
-- [ ] **Deliverable:** `src/games/flashcards/Flashcards.jsx`:
+- [x] **Deliverable:** `src/games/flashcards/Flashcards.jsx`:
   - usar `DeckPicker` y `deckMastery`;
   - conservar setup, reanudación, repaso, resumen, TTS, legacy;
   - eliminar etiquetas locales divergentes;
   - en arcade, `Otra vez` resta vida; `Difícil/Fácil` aciertan;
   - no doble emisión.
-- [ ] **Deliverable:** `flashcards.logic.js` con `mode`/arcade si hace falta, sin
+- [x] **Deliverable:** `flashcards.logic.js` con `mode`/arcade si hace falta, sin
   duplicar `arcade.js`.
-- [ ] **Tests:** `Flashcards.test.jsx`, `Flashcards.a11y.test.jsx`,
+- [x] **Tests:** `Flashcards.test.jsx`, `Flashcards.a11y.test.jsx`,
   `flashcards.logic.test.js`, isolation:
   - picker/estado compartido;
   - arcade 3 vidas/score/fin;
@@ -182,47 +182,47 @@ Cadenas críticas:
 ## Fase C — Lote 1
 
 ### T7 — Quiz-significado [depends: T6]
-- [ ] **Deliverable:** `src/games/quiz-significado/QuizSignificado.jsx` + lógica:
+- [x] **Deliverable:** `src/games/quiz-significado/QuizSignificado.jsx` + lógica:
   - picker, mazo seleccionado, rondas capadas al mazo;
   - arcade 3 vidas, score, best, fin;
   - opción incorrecta = fallo;
   - grading por carta mostrada;
   - legado y TTS.
-- [ ] **Tests:** deck, arcade, gradings, a11y, isolation.
+- [x] **Tests:** deck, arcade, gradings, a11y, isolation.
 - **AC cubiertos:** AC-3, AC-7, AC-9, AC-17, AC-20, AC-23, AC-30.
 - **Done when:** no se inventan opciones fuera del mazo.
 - **Estimate:** M.
 
 ### T8 — Ahorcado [depends: T6]
-- [ ] **Deliverable:** `Ahorcado.jsx` + `ahorcado.logic.js`:
+- [x] **Deliverable:** `Ahorcado.jsx` + `ahorcado.logic.js`:
   - picker, mazo, rondas capadas;
   - arcade con 3 vidas globales; cada letra incorrecta resta vida;
   - carta resuelta sin fallos → `facil`; con fallos en arcade → `otra-vez`;
   - fin por vidas y resumen;
   - conservar teclado, pista, arte y TTS.
-- [ ] **Tests:** deck, arcade letra a letra, grading, fin, a11y, isolation.
+- [x] **Tests:** deck, arcade letra a letra, grading, fin, a11y, isolation.
 - **AC cubiertos:** AC-3, AC-9, AC-17, AC-18, AC-20, AC-25, AC-30.
 - **Done when:** el modo normal no cambia y arcade aplica la regla confirmada.
 - **Estimate:** M.
 
 ### T9 — Memorama [depends: T6]
-- [ ] **Deliverable:** `Memorama` + lógica:
+- [x] **Deliverable:** `Memorama` + lógica:
   - picker, 10 parejas, grid responsive;
   - arcade: pareja fallida = vida;
   - score por pareja, best, fin;
   - grading por carta.
-- [ ] **Tests:** 10 parejas, arcade, a11y, 360 px, isolation.
+- [x] **Tests:** 10 parejas, arcade, a11y, 360 px, isolation.
 - **AC cubiertos:** AC-3, AC-9, AC-17, AC-20, AC-24, AC-30.
 - **Done when:** 10 parejas caben sin scroll horizontal.
 - **Estimate:** M.
 
 ### T10 — Conecta pares [depends: T6]
-- [ ] **Deliverable:** `ConectaPares` + lógica:
+- [x] **Deliverable:** `ConectaPares` + lógica:
   - picker, mazo completo en tandas de hasta 8 parejas;
   - arcade: conexión incorrecta = vida;
   - score por conexión, best, fin;
   - no descartar cartas.
-- [ ] **Tests:** 10 cartas → 8+2, arcade, grading, a11y, isolation.
+- [x] **Tests:** 10 cartas → 8+2, arcade, grading, a11y, isolation.
 - **AC cubiertos:** AC-3, AC-7, AC-9, AC-17, AC-20, AC-28, AC-30.
 - **Done when:** todas las cartas del mazo se juegan.
 - **Estimate:** M.
@@ -232,36 +232,36 @@ Cadenas críticas:
 ## Fase D — Lote 2
 
 ### T11 — Intruso [depends: T6]
-- [ ] **Deliverable:** `Intruso` + lógica:
+- [x] **Deliverable:** `Intruso` + lógica:
   - mazo ancla + `allGroups` para distractores;
   - arcade 3 vidas; intruso incorrecto = fallo;
   - grading con `context.topicId` correcto;
   - sin otro tema → no disponible.
-- [ ] **Tests:** deck ancla, distractores, arcade, grading, a11y, isolation.
+- [x] **Tests:** deck ancla, distractores, arcade, grading, a11y, isolation.
 - **AC cubiertos:** AC-3, AC-7, AC-9, AC-17, AC-20, AC-26, AC-30.
 - **Done when:** no se usan cartas del mismo mazo como distractores inválidos.
 - **Estimate:** M.
 
 ### T12 — Lluvia de meteoros [depends: T6]
-- [ ] **Deliverable:** `LluviaMeteoros` + lógica:
+- [x] **Deliverable:** `LluviaMeteoros` + lógica:
   - picker, mazo;
   - unificar supervivencia/arcade en 3 vidas y mazo completo;
   - fallo/timeout = vida;
   - score/best/fin;
   - conservar ritmos/dificultad en normal.
-- [ ] **Tests:** deck, arcade, timeout, grading, a11y, isolation.
+- [x] **Tests:** deck, arcade, timeout, grading, a11y, isolation.
 - **AC cubiertos:** AC-3, AC-9, AC-13, AC-14, AC-17, AC-20, AC-27, AC-30.
 - **Done when:** no conviven dos sistemas de vidas.
 - **Estimate:** M.
 
 ### T13 — Serpiente de significados [depends: T6]
-- [ ] **Deliverable:** `SerpienteSignificados` + lógica:
+- [x] **Deliverable:** `SerpienteSignificados` + lógica:
   - picker, mazo;
   - `INITIAL_LIVES = 3` en supervivencia/arcade;
   - manzana incorrecta/choque = vida;
   - score/best/fin;
   - conservar tableros, dificultad, pausa y TTS.
-- [ ] **Tests:** 3 vidas, deck, arcade, score, a11y, isolation.
+- [x] **Tests:** 3 vidas, deck, arcade, score, a11y, isolation.
 - **AC cubiertos:** AC-3, AC-9, AC-13, AC-14, AC-17, AC-19, AC-20, AC-29, AC-30.
 - **Done when:** los tests de 5 vidas se actualizan a 3 sin pérdida de mecánica.
 - **Estimate:** M.
@@ -271,29 +271,35 @@ Cadenas críticas:
 ## Fase E — Integración y calidad
 
 ### T14 — Dominio cruzado y vista de tema [depends: T6–T13]
-- [ ] **Deliverable:** `TopicView`:
+- [x] **Deliverable:** `TopicView`:
   - resumen de mazos (no aprendidas/repasar/aprendidas) y mejor marca por juego,
     sin duplicar el picker;
   - enlaces a juegos con el mazo recordado o al menos al juego.
-- [ ] **Tests de integración:** jugar un mazo en un juego y ver el estado actualizado
+- [x] **Tests de integración:** jugar un mazo en un juego y ver el estado actualizado
   en Flashcards/TopicView; fallo → no aprendida; perfecto → repasar.
 - **AC cubiertos:** AC-9, AC-10, AC-11, AC-31.
 - **Done when:** el dominio es visible y consistente entre juegos.
 - **Estimate:** M.
 
 ### T15 — CSS, a11y y rendimiento [depends: T4–T14]
-- [ ] **Deliverable:** tokens de deck/arcade; 360 px; foco; teclado; reduced-motion;
+- [x] **Deliverable:** tokens de deck/arcade; 360 px; foco; teclado; reduced-motion;
   regiones live sin duplicados.
 - [ ] **Verificación:** checklist manual 360 px/VoiceOver; sin scroll horizontal.
-- [ ] **AC cubiertos:** AC-20, AC-21, AC-34.
+  Automatizado: `spec18-a11y.test.js`, `ArcadeSummary.test.jsx`,
+  `Ahorcado.decks.test.jsx`; falta la pasada humana 360/VoiceOver.
+- **AC cubiertos:** AC-20, AC-21, AC-34.
 - **Done when:** no hay regresiones visuales ni de foco.
 - **Estimate:** M.
 
 ### T16 — Docs, gates y cierre [depends: T1–T15]
-- [ ] **Deliverable:** docs/MEMORY/FOCUS/roadmap; decisiones de arcade y dominio.
-- [ ] **Gates:** `npm test`, `npm run lint`, `npm run build` al 100%.
+- [x] **Deliverable:** docs/MEMORY/FOCUS/roadmap; decisiones de arcade y dominio.
+- [x] **Gates:** `npm test`, `npm run lint`, `npm run build` al 100%.
 - [ ] **Cierre:** ACs, tasks y firma humana.
 - **AC cubiertos:** AC-31, AC-32, AC-33, AC-34 y DoD.
+- **Evidencia por AC:** T1 → AC-1/8; T2 → AC-13/14/15; T3 → AC-15/32;
+  T4 → AC-2/10/21; T5 → AC-4/5/6/12/31; T6–T13 → AC-3/7/9/10/11/17–30;
+  T14 → AC-9/10/11/31; T15 → AC-20/21/34; T16 → AC-33/34.
+  AC-21 queda pendiente de la pasada manual 360/VoiceOver.
 - **Done when:** los 8 juegos tienen mazo + arcade + tests verdes.
 - **Estimate:** M.
 
@@ -310,8 +316,9 @@ Cadenas críticas:
 
 ## Definition of Done
 
-- [ ] Cada AC tiene test o verificación manual registrada.
-- [ ] `npm test`, `npm run lint`, `npm run build` en verde.
-- [ ] Sin dependencias nuevas ni red.
+- [ ] Cada AC tiene test o verificación manual registrada (AC-21 pendiente de la
+  pasada manual 360/VoiceOver).
+- [x] `npm test`, `npm run lint`, `npm run build` en verde.
+- [x] Sin dependencias nuevas ni red.
 - [ ] Diff revisado por humano.
-- [ ] `MEMORY.md` actualizado y `FOCUS.md` limpio.
+- [x] `MEMORY.md` actualizado y `FOCUS.md` limpio.

@@ -55,7 +55,7 @@ export default function ArcadeHud({
           <dd>{currentBest}</dd>
         </div>
       </dl>
-      <p className="arcade-hud__live" role="status" aria-live="polite">
+      <p className="arcade-hud__live" role="status" aria-live="polite" aria-atomic="true">
         {summary}
       </p>
     </section>

@@ -69,7 +69,7 @@ describe('TopicView serpiente availability', () => {
     const gated = mount(<TopicView topicId={short.id} />);
     const gatedTile = tileFor(gated.container, 'Serpiente de significados');
     expect(gatedTile).toBeTruthy();
-    expect(gatedTile.textContent).toContain('Te quedan 3 cartas por aprender o repasar');
+    expect(gatedTile.textContent).toContain('Necesitas al menos 4 cartas');
     expect(gatedTile.querySelector('button[disabled]')).toBeTruthy();
     expect(
       gated.container.querySelector(
@@ -93,8 +93,8 @@ describe('TopicView serpiente availability', () => {
   });
 });
 
-describe('TopicView eligible counts', () => {
-  it('bases the gate on study-eligible cards, not on the topic total', () => {
+describe('TopicView deck availability (AC-31)', () => {
+  it('ignores SRS eligibility and gates each game by its deck minimum', () => {
     const ready = topic('listo', 'Listo', 6);
     catalog.topics = [ready];
     localStorage.setItem(
@@ -109,12 +109,13 @@ describe('TopicView eligible counts', () => {
 
     const { container, unmount } = mount(<TopicView topicId={ready.id} />);
     const tile = tileFor(container, 'Lluvia de meteoros');
-    expect(tile.textContent).toContain('Te quedan 4 cartas por aprender o repasar');
-    expect(tile.querySelector('button[disabled]')).toBeTruthy();
+    expect(tile.textContent).toContain('Jugar ahora');
+    expect(tile.querySelector('button[disabled]')).toBeNull();
+    expect(container.textContent).not.toContain('Te quedan');
     unmount();
   });
 
-  it('shows «Todo al día» when every card is learned and not due', () => {
+  it('keeps decks playable when every card is learned and not due', () => {
     const ready = topic('aldia', 'Al día', 4);
     catalog.topics = [ready];
     const future = Date.now() + 86_400_000;
@@ -123,8 +124,11 @@ describe('TopicView eligible counts', () => {
     localStorage.setItem('sepect.srs.v1', JSON.stringify({ aldia: locked }));
 
     const { container, unmount } = mount(<TopicView topicId={ready.id} />);
-    expect(container.textContent).toContain('Todo al día');
-    expect(container.querySelectorAll('a[href*="/juego/"]')).toHaveLength(0);
+    expect(container.textContent).not.toContain('Todo al día');
+    expect(container.querySelectorAll('a[href*="/juego/"]').length).toBeGreaterThan(0);
+    expect(tileFor(container, 'Lluvia de meteoros').textContent).toContain(
+      'Necesitas al menos 6 cartas'
+    );
     unmount();
   });
 });

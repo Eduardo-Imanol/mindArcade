@@ -4,8 +4,11 @@ import {
   buildTiles,
   createState,
   gradeFor,
+  pairOptionsFor,
   pendingGrades,
   reduce,
+  seenUnmatchedCardIds,
+  sessionCardsFor,
   unmatchedCardIds,
 } from './memorama.logic.js';
 
@@ -117,13 +120,20 @@ describe('memorama reducer', () => {
     expect(pendingGrades(state)).toEqual([]);
   });
 
-  it('lists unmatched cards as otra-vez for both faces (never found)', () => {
-    const state = run(
+  it('lists only seen unmatched cards as otra-vez (AC-12)', () => {
+    let state = createState(DECK, { random: PRESERVE });
+    expect(pendingGrades(state)).toEqual([]);
+
+    state = reduce(state, { type: 'flip', index: 2 });
+    expect(seenUnmatchedCardIds(state)).toEqual(['b']);
+    expect(pendingGrades(state)).toEqual([{ cardId: 'b', grade: 'otra-vez' }]);
+
+    state = run(
       [{ type: 'flip', index: 0 }, { type: 'flip', index: 1 }],
       createState(DECK, { random: PRESERVE })
     );
     expect(unmatchedCardIds(state)).toEqual(['b']);
-    expect(pendingGrades(state)).toEqual([{ cardId: 'b', grade: 'otra-vez' }]);
+    expect(pendingGrades(state)).toEqual([]);
   });
 
   it('empty deck is complete and reduce never throws', () => {
@@ -142,5 +152,24 @@ describe('memorama reducer', () => {
 
   it('exposes the signed difficulty ladder (4/6/8)', () => {
     expect(DIFFICULTIES.map((option) => option.pairs)).toEqual([4, 6, 8]);
+  });
+});
+
+describe('memorama decks (spec-18 T9)', () => {
+  it('offers pair options capped to the deck size', () => {
+    expect(pairOptionsFor(10).map((option) => option.pairs)).toEqual([4, 6, 8, 10]);
+    expect(pairOptionsFor(7).map((option) => option.pairs)).toEqual([4, 6, 7]);
+    expect(pairOptionsFor(5).map((option) => option.pairs)).toEqual([4, 5]);
+    expect(pairOptionsFor(4).map((option) => option.pairs)).toEqual([4]);
+    expect(pairOptionsFor(3)).toEqual([]);
+    expect(pairOptionsFor()).toEqual([]);
+  });
+
+  it('selects pairs only inside the deck and the full deck in arcade', () => {
+    const cards = Array.from({ length: 10 }, (_, index) => ({ id: `c${index}`, front: 'f', back: 'b' }));
+    expect(sessionCardsFor(cards, { mode: 'normal', pairs: 6 })).toHaveLength(6);
+    expect(sessionCardsFor(cards, { mode: 'normal', pairs: 99 })).toHaveLength(10);
+    expect(sessionCardsFor(cards, { mode: 'arcade', pairs: 4 })).toHaveLength(10);
+    expect(sessionCardsFor(cards, { mode: 'normal', pairs: 4 })[0].id).toBe('c0');
   });
 });

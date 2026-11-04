@@ -1,6 +1,6 @@
 import { baseBg } from './engine.mjs';
 import { AMBER, CYAN, GREEN, MAGENTA, MUTED, TEXT, hsl } from './palette.mjs';
-import { caption } from './primitives.mjs';
+import { badge, caption, varChip } from './primitives.mjs';
 
 function tile(p, x, y, w, h, { color = MUTED, text = '?', dashed = false, fill = 'rgba(26, 11, 46, .92)', size = 30 } = {}) {
   p.push();
@@ -213,6 +213,93 @@ export function serpienteSignificados(p) {
   caption(p, 'come el significado correcto', 256, 294, { color: GREEN, size: 19 });
 }
 
+export function ordenaCodigo(p) {
+  baseBg(p, { bubbles: 3, hue: 168 });
+  const pieces = ['return a + b;', '}', 'const total = a + b;', 'function suma(a, b) {'];
+  pieces.forEach((text, index) => {
+    const y = 44 + index * 54;
+    tile(p, 34, y, 206, 44, {
+      color: index === 0 ? GREEN : CYAN,
+      text,
+      size: 15,
+    });
+  });
+  p.arrow(254, 158, 292, 158, { color: MAGENTA, head: 10 });
+  p.push();
+  p.fill('rgba(57, 255, 20, .06)');
+  p.stroke(GREEN);
+  p.strokeWeight(2.5);
+  p.rect(306, 44, 176, 206, 12);
+  p.noStroke();
+  p.fill(TEXT);
+  const ordered = ['function suma(a, b) {', 'const total = a + b;', 'return a + b;', '}'];
+  ordered.forEach((text, index) => {
+    p.text(`${index + 1} ${text}`, 318, 74 + index * 46, { size: 13, align: 'start' });
+  });
+  p.pop();
+  caption(p, 'ordena las piezas', 256, 292, { color: GREEN, size: 20 });
+}
+
+export function escribeCodigo(p) {
+  baseBg(p, { bubbles: 3, hue: 265 });
+  p.push();
+  p.fill('rgba(15, 5, 29, .92)');
+  p.stroke(CYAN);
+  p.strokeWeight(2.5);
+  p.rect(42, 34, 428, 212, 14);
+  p.noStroke();
+  p.fill(MUTED);
+  p.circle(64, 54, 9);
+  p.circle(84, 54, 9);
+  p.circle(104, 54, 9);
+  p.fill(TEXT);
+  const lines = [
+    'function suma(a, b) {',
+    '  const total = a + b;',
+    '  return total;',
+    '}',
+  ];
+  lines.forEach((text, index) => {
+    p.text(text, 66, 88 + index * 34, { size: 17, align: 'start' });
+  });
+  p.fill(GREEN);
+  p.rect(68, 190, 10, 22, 2);
+  p.pop();
+  badge(p, 384, 206, '✓ 3/3 casos', { color: GREEN, size: 18 });
+  caption(p, 'escribe y ejecuta', 256, 286, { color: CYAN, size: 20 });
+}
+
+export function completaCodigo(p) {
+  baseBg(p, { bubbles: 3, hue: 320 });
+  const rows = [
+    ['function suma(a, b) {', CYAN],
+    ['  const total = ', MUTED],
+    ['  return ', MUTED],
+    ['}', CYAN],
+  ];
+  rows.forEach(([text], index) => {
+    const y = 40 + index * 48;
+    p.push();
+    p.noStroke();
+    p.fill(TEXT);
+    p.text(text, 46, y + 22, { size: 17, align: 'start' });
+    p.pop();
+    if (index === 1 || index === 2) {
+      tile(p, index === 1 ? 238 : 176, y + 2, 96, 30, {
+        color: MAGENTA,
+        text: index === 1 ? 'a + b' : 'total',
+        size: 15,
+      });
+    }
+    if (index === 0) tile(p, 340, y + 2, 96, 30, { color: MUTED, text: '?', size: 15 });
+  });
+  p.arrow(256, 236, 256, 210, { color: GREEN, head: 9 });
+  varChip(p, 150, 258, 'a + b', { color: MAGENTA, size: 17 });
+  varChip(p, 256, 258, 'total', { color: MAGENTA, size: 17 });
+  varChip(p, 362, 258, 'return', { color: MUTED, size: 17 });
+  caption(p, 'rellena los huecos', 256, 300, { color: MAGENTA, size: 19 });
+}
+
 export const GAME_SKETCHES = {
   flashcards,
   memorama,
@@ -222,4 +309,7 @@ export const GAME_SKETCHES = {
   'lluvia-meteoros': lluviaMeteoros,
   'conecta-pares': conectaPares,
   'serpiente-significados': serpienteSignificados,
+  'ordena-codigo': ordenaCodigo,
+  'escribe-codigo': escribeCodigo,
+  'completa-codigo': completaCodigo,
 };

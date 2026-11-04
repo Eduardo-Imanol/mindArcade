@@ -1,7 +1,8 @@
 export const MIN_PAIRS = 3;
 export const MAX_PAIRS = 10;
 export const DEFAULT_PAIRS = 8;
-export const PHASES = ['setup', 'playing', 'complete'];
+export const DECK_BATCH_SIZE = 8;
+export const PHASES = ['setup', 'playing', 'batch-complete', 'complete'];
 export const SIDES = ['question', 'meaning'];
 
 function shuffle(items, random) {
@@ -27,12 +28,16 @@ export function normalizeText(text = '') {
     .toLowerCase();
 }
 
-export function clampPairs(count) {
+function clampCount(count, min, max) {
   if (count === null || count === undefined) return DEFAULT_PAIRS;
   if (String(count).trim() === '') return DEFAULT_PAIRS;
   const value = Number(count);
   if (!Number.isFinite(value)) return DEFAULT_PAIRS;
-  return Math.min(MAX_PAIRS, Math.max(MIN_PAIRS, Math.trunc(value)));
+  return Math.min(max, Math.max(min, Math.trunc(value)));
+}
+
+export function clampPairs(count) {
+  return clampCount(count, MIN_PAIRS, MAX_PAIRS);
 }
 
 function validCard(card) {
@@ -64,11 +69,17 @@ function uniqueCards(cards) {
   return out;
 }
 
-export function buildSession({ cards = [], count = DEFAULT_PAIRS, random = Math.random } = {}) {
+export function buildSession({
+  cards = [],
+  count = DEFAULT_PAIRS,
+  random = Math.random,
+  minPairs = MIN_PAIRS,
+} = {}) {
+  const minimum = Math.max(1, Math.trunc(Number(minPairs)) || MIN_PAIRS);
   const unique = uniqueCards(cards);
-  if (unique.length < MIN_PAIRS) return { cards: [], left: [], right: [], total: 0 };
+  if (unique.length < minimum) return { cards: [], left: [], right: [], total: 0 };
 
-  const requested = clampPairs(count);
+  const requested = clampCount(count, minimum, MAX_PAIRS);
   const selected = unique.slice(0, Math.min(requested, unique.length));
   return {
     cards: selected,
@@ -76,6 +87,19 @@ export function buildSession({ cards = [], count = DEFAULT_PAIRS, random = Math.
     right: shuffle(selected, random),
     total: selected.length,
   };
+}
+
+export function buildDeckBatches(cards = [], { size = DECK_BATCH_SIZE } = {}) {
+  const unique = uniqueCards(cards);
+  const batchSize = Math.min(
+    MAX_PAIRS,
+    Math.max(1, Math.trunc(Number(size)) || DECK_BATCH_SIZE)
+  );
+  const batches = [];
+  for (let start = 0; start < unique.length; start += batchSize) {
+    batches.push(unique.slice(start, start + batchSize));
+  }
+  return batches;
 }
 
 export function createState() {
@@ -93,6 +117,12 @@ export function createState() {
     feedback: null,
     results: [],
     lastGrade: null,
+    lastMiss: null,
+    missSeq: 0,
+    batches: [],
+    batchIndex: 0,
+    batchCount: 0,
+    deckTotal: 0,
   };
 }
 
@@ -118,9 +148,11 @@ function resolveMatch(state, questionCardId) {
   const order = state.matched.length + 1;
   const matched = [...state.matched, { cardId: questionCardId, order }];
   const complete = matched.length >= state.total;
+  const moreBatches = complete && state.batchIndex + 1 < state.batchCount;
+  const phase = complete ? (moreBatches ? 'batch-complete' : 'complete') : 'playing';
   return {
     ...state,
-    phase: complete ? 'complete' : 'playing',
+    phase,
     selection: null,
     feedback: { type: 'correct', cardId: questionCardId },
     matched,
@@ -130,6 +162,7 @@ function resolveMatch(state, questionCardId) {
 }
 
 function resolveMiss(state, questionCardId, meaningCardId) {
+  const missSeq = (state.missSeq || 0) + 1;
   return {
     ...state,
     selection: null,
@@ -139,6 +172,8 @@ function resolveMiss(state, questionCardId, meaningCardId) {
       ...state.attemptsByCard,
       [questionCardId]: (state.attemptsByCard[questionCardId] || 0) + 1,
     },
+    lastMiss: { seq: missSeq, cardId: questionCardId, grade: 'otra-vez' },
+    missSeq,
   };
 }
 
@@ -146,12 +181,22 @@ export function reduce(state, action = {}) {
   if (!state) return state;
 
   if (action.type === 'start') {
-    const requested = clampPairs(action.count);
+    const hasBatches = Array.isArray(action.batches) && action.batches.length > 0;
+    const batches = hasBatches
+      ? action.batches.filter((batch) => Array.isArray(batch) && batch.length > 0)
+      : [];
+    const firstCards = hasBatches ? batches[0] || [] : action.cards;
+    const minPairs = hasBatches ? 1 : MIN_PAIRS;
+    const requested = hasBatches ? firstCards.length : clampPairs(action.count);
     const session = buildSession({
-      cards: action.cards,
+      cards: firstCards,
       count: requested,
       random: action.random || Math.random,
+      minPairs,
     });
+    const deckTotal = hasBatches
+      ? batches.reduce((sum, batch) => sum + batch.length, 0)
+      : session.total;
     const base = {
       ...createState(),
       requested,
@@ -159,9 +204,44 @@ export function reduce(state, action = {}) {
       cards: session.cards,
       left: session.left,
       right: session.right,
+      batches,
+      batchCount: hasBatches ? batches.length : 0,
+      batchIndex: 0,
+      deckTotal,
     };
-    if (session.total < MIN_PAIRS) return base;
+    if (session.total < minPairs) return base;
     return { ...base, phase: 'playing' };
+  }
+
+  if (action.type === 'nextBatch') {
+    if (state.phase !== 'batch-complete') return state;
+    const nextIndex = state.batchIndex + 1;
+    const cards = state.batches[nextIndex];
+    if (!Array.isArray(cards) || cards.length === 0) {
+      return { ...state, phase: 'complete' };
+    }
+    const session = buildSession({
+      cards,
+      count: cards.length,
+      random: action.random || Math.random,
+      minPairs: 1,
+    });
+    if (session.total === 0) return { ...state, phase: 'complete' };
+    return {
+      ...state,
+      phase: 'playing',
+      batchIndex: nextIndex,
+      total: session.total,
+      cards: session.cards,
+      left: session.left,
+      right: session.right,
+      selection: null,
+      matched: [],
+      attemptsByCard: {},
+      feedback: null,
+      lastGrade: null,
+      lastMiss: null,
+    };
   }
 
   if (action.type === 'reset') return createState();
@@ -205,10 +285,10 @@ export function pendingGrades(state) {
 }
 
 export function summarize(state) {
-  const total = (state && state.total) || 0;
-  const matched = (state && state.matched ? state.matched.length : 0) || 0;
-  const errors = (state && state.errors) || 0;
+  const total = Number(state?.deckTotal ?? state?.total) || 0;
   const results = (state && state.results) || [];
+  const matched = results.length;
+  const errors = (state && state.errors) || 0;
   const firstTry = results.filter((result) => result.grade === 'facil').length;
   const xp = firstTry * 10 + (matched - firstTry) * 25;
   return { total, matched, errors, firstTry, xp };

@@ -1,21 +1,56 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import CardImage from '../../components/CardImage.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
+import ProgressBar from '../../components/ProgressBar.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
-import { getDeckAvailability } from '../availability.js';
-import { DIFFICULTIES, createState, pendingGrades, reduce } from './memorama.logic.js';
+import { DECK_MASTERY_LABELS } from '../../core/repetition/decks.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
+import {
+  DIFFICULTIES,
+  createState,
+  pairOptionsFor,
+  pendingGrades,
+  reduce,
+  sessionCardsFor,
+} from './memorama.logic.js';
 
-const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
+const PAGE = {
+  minHeight: '100vh',
+  width: '100%',
+  maxWidth: '100%',
+  padding: '16px clamp(16px, 4vw, 32px)',
+};
 const GAME_ID = 'memorama';
+const MIN_CARDS = 4;
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Elige parejas' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
 
 function disabledReasonFor(deck) {
-  const availability = getDeckAvailability({ id: GAME_ID, minCards: 2 }, deck);
-  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  const availability = getDeckAvailability(
+    { id: GAME_ID, status: 'available', minCards: MIN_CARDS },
+    deck
+  );
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
   return '';
+}
+
+function setupNoteFor(deck, mode, pairs, best) {
+  if (!deck) return 'Elige un mazo para empezar.';
+  const status = DECK_MASTERY_LABELS[deck.mastery] || DECK_MASTERY_LABELS.empty;
+  const total = Array.isArray(deck.cards) ? deck.cards.length : 0;
+  if (mode === 'arcade') return `${status} · ${total} parejas · 3 vidas · Mejor marca ${best}`;
+  return `${status} · ${pairs} de ${total} parejas · Mejor marca ${best}`;
 }
 
 export default function Memorama({
@@ -27,128 +62,218 @@ export default function Memorama({
   onArcadeEnd,
   onExit,
   onBackToTopic,
+  random = Math.random,
 } = {}) {
   const hasDecks = Array.isArray(decks) && decks.length > 0;
   const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
   const [gameMode, setGameMode] = useState('normal');
+  const [pairs, setPairs] = useState(10);
   const [arcade, setArcade] = useState(() => createArcade());
   const [arcadeEnded, setArcadeEnded] = useState(false);
   const [arcadeResult, setArcadeResult] = useState(null);
   const [cards, setCards] = useState(null);
   const [state, setState] = useState(null);
-  const emitted = useRef(0);
+  const graded = useRef(new Set());
+  const ended = useRef(false);
+  const exited = useRef(false);
 
   useEffect(() => () => stopSpeech(), []);
 
-  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+  const selectedDeck = hasDecks
+    ? decks.find((entry) => entry.id === selectedDeckId) || decks[0]
+    : null;
+  const selectedDeckCards = Array.isArray(selectedDeck?.cards) ? selectedDeck.cards : [];
+  const pairOptions = hasDecks ? pairOptionsFor(selectedDeckCards.length) : [];
+  const maxPairs = pairOptions.length
+    ? pairOptions[pairOptions.length - 1].pairs
+    : selectedDeckCards.length;
+  const effectivePairs = hasDecks ? Math.max(1, Math.min(pairs, maxPairs)) : pairs;
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const deckReason = hasDecks && selectedDeck ? disabledReasonFor(selectedDeck) : '';
 
   const backToTopic = () => {
     if (onBackToTopic) onBackToTopic();
     else onExit?.();
   };
 
-  const endArcade = (finalArcade) => {
-    if (arcadeEnded) return;
+  const gradeCard = (cardId, grade) => {
+    if (cardId === undefined || cardId === null) return;
+    const key = String(cardId);
+    if (graded.current.has(key)) return;
+    graded.current.add(key);
+    const mapped = gameMode === 'arcade' && grade !== 'otra-vez' ? 'facil' : grade;
+    onGrade?.(cardId, mapped);
+  };
+
+  const gradePending = (snapshot) => {
+    for (const entry of pendingGrades(snapshot)) gradeCard(entry.cardId, entry.grade);
+  };
+
+  useEffect(() => {
+    const match = state && state.lastMatch;
+    if (!match) return;
+    gradeCard(match.cardId, match.grade);
+  }, [state, gameMode, onGrade]);
+
+  const resetSession = () => {
+    graded.current = new Set();
+    ended.current = false;
+    exited.current = false;
+    setArcade(createArcade());
+    setArcadeEnded(false);
+    setArcadeResult(null);
+  };
+
+  const endArcade = (finalArcade, snapshot) => {
+    if (ended.current) return;
+    ended.current = true;
     const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
     setArcadeEnded(true);
-    const run = {
+    gradePending(snapshot);
+    const result = onArcadeEnd?.({
       score: finished.score,
       correct: finished.correct,
       wrong: finished.wrong,
       lives: finished.lives,
       completed: finished.completed,
       deckId: selectedDeck?.id,
-    };
-    const result = onArcadeEnd?.(run);
+    });
     setArcadeResult(result || { best: finished.score, isRecord: false });
-    setArcade(finished);
   };
 
-  useEffect(() => {
-    const match = state && state.lastMatch;
-    if (match && match.seq > emitted.current) {
-      emitted.current = match.seq;
-      onGrade?.(match.cardId, gameMode === 'arcade' ? (match.grade === 'otra-vez' ? 'otra-vez' : 'facil') : match.grade);
-    }
-  }, [state, onGrade, gameMode]);
-
-  useEffect(() => {
-    if (gameMode !== 'arcade') return;
-    if (arcadeEnded) return;
-    if (state && state.mismatch && state.mismatch.seq && state.phase === 'mismatch') {
-      // mismatch will close via closePair but we can track
-    }
-  }, [gameMode, arcadeEnded, state]);
-
-  const closePair = () => {
-    if (gameMode === 'arcade' && state && state.phase === 'mismatch' && !arcade.over) {
-      const miss = arcadeMiss(arcade);
-      setArcade(miss);
-      if (miss.over) endArcade(miss);
-    }
-    setState((prev) => {
-      const next = reduce(prev, { type: 'close' });
-      if (gameMode === 'arcade' && next && next.complete && !arcade.over) {
-        endArcade(arcadeFinish(arcade));
-      }
-      return next;
+  const startGame = () => {
+    if (!selectedDeck) return;
+    const requested = sessionCardsFor(selectedDeckCards, {
+      mode: gameMode,
+      pairs: effectivePairs,
     });
+    if (requested.length === 0) return;
+    resetSession();
+    setCards(requested);
+    setState(createState(requested, { random }));
   };
 
   const choose = (option = {}) => {
-    emitted.current = 0;
-    setArcadeEnded(false);
-    setArcadeResult(null);
-    let requested = [];
-    if (hasDecks && selectedDeck) {
-      if (gameMode === 'arcade') {
-        requested = Array.isArray(selectedDeck.cards) ? selectedDeck.cards.slice(0, 10) : [];
-        setArcade(createArcade());
-      } else {
-        const pairs = Math.min(option.pairs || 10, selectedDeck.cards.length);
-        requested = (selectCards ? selectCards(pairs) : selectedDeck.cards.slice(0, pairs)) || [];
-      }
-    } else {
-      requested = (selectCards ? selectCards(option.pairs) : deck.slice(0, option.pairs)) || [];
-    }
+    resetSession();
+    const requested = (selectCards ? selectCards(option.pairs) : deck.slice(0, option.pairs)) || [];
     setCards(requested);
-    setState(createState(requested, { random: Math.random }));
+    setState(createState(requested, { random }));
   };
 
   const flip = (index) => {
     if (!state) return;
-    if (gameMode === 'arcade' && arcade.over) return;
+    if (gameMode === 'arcade' && (arcade.over || ended.current)) return;
     const next = reduce(state, { type: 'flip', index });
     if (next === state) return;
     const tile = state.tiles[index];
     const wasRevealed = state.matched.includes(tile.cardId) || state.open.includes(index);
     setState(next);
     if (!wasRevealed) speak(tile.text);
-    if (gameMode === 'arcade' && next.phase === 'match' && next.lastMatch && next.lastMatch.seq !== state.lastMatch?.seq) {
-      setArcade((current) => arcadeHit(current));
+    if (gameMode !== 'arcade') return;
+    if (!next.lastMatch || next.lastMatch.seq === state.lastMatch?.seq) return;
+    const nextArcade = arcadeHit(arcade);
+    setArcade(nextArcade);
+    if (next.complete) endArcade(arcadeFinish(nextArcade), next);
+  };
+
+  const closePair = () => {
+    if (!state || !state.locked) return;
+    let nextArcade = arcade;
+    if (gameMode === 'arcade') {
+      nextArcade = arcadeMiss(arcade);
+      setArcade(nextArcade);
     }
+    const next = reduce(state, { type: 'close' });
+    setState(next);
+    if (gameMode === 'arcade' && nextArcade.over) endArcade(nextArcade, next);
   };
 
   const handleExit = () => {
-    if (state) {
-      for (const entry of pendingGrades(state)) onGrade?.(entry.cardId, gameMode === 'arcade' ? (entry.grade === 'otra-vez' ? 'otra-vez' : 'facil') : entry.grade);
-    }
+    if (exited.current) return;
+    exited.current = true;
+    if (state) gradePending(state);
     backToTopic();
   };
 
-  if (deck.length === 0) {
+  const handleReplay = () => {
+    resetSession();
+    setCards(null);
+    setState(null);
+  };
+
+  if (hasDecks ? !selectedDeck || selectedDeckCards.length === 0 : deck.length === 0) {
     return (
       <main className="sepect-bg memorama-page" style={PAGE}>
         <div className="game-stage">
           <h1 className="neon game-app-title">Memorama</h1>
           <p>Este tema no tiene cartas suficientes todavía.</p>
-          <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
+          <button className="btn-neon" type="button" onClick={backToTopic}>
+            Volver al tema
+          </button>
         </div>
       </main>
     );
   }
 
   if (!state) {
+    if (hasDecks) {
+      const startDisabled =
+        !selectedDeck || Boolean(deckReason) || selectedDeckCards.length < MIN_CARDS;
+      return (
+        <GameSetup
+          pageClassName="memorama-page"
+          title="Memorama"
+          eyebrow="Configura tu partida"
+          lead="Empareja cada término con su significado. Arcade usa el mazo completo y tres vidas."
+          note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · cada pareja fallida resta una vida en arcade.`}
+          start={
+            <button className="btn-neon" type="button" onClick={startGame} disabled={startDisabled}>
+              Empezar
+            </button>
+          }
+          actions={
+            <>
+              <SoundToggle />
+              <button className="btn-neon game-setup__exit" type="button" onClick={onExit}>
+                Salir
+              </button>
+            </>
+          }
+        >
+          <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
+          <DeckPicker
+            decks={decks}
+            selectedDeckId={selectedDeck?.id}
+            onSelect={(id) => setSelectedDeckId(id)}
+            best={best}
+            disabledReason={(entry) => disabledReasonFor(entry)}
+            gameId={GAME_ID}
+            label="Elige tu mazo"
+          />
+          {gameMode === 'normal' ? (
+            <div className="memorama-pairs">
+              <label htmlFor="memorama-pairs">Parejas</label>
+              <select
+                id="memorama-pairs"
+                value={effectivePairs}
+                onChange={(event) => setPairs(Number(event.target.value))}
+              >
+                {pairOptions.map((option) => (
+                  <option key={option.id} value={option.pairs}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+          <p className="memorama-note" role="status">
+            {setupNoteFor(selectedDeck, gameMode, effectivePairs, bestForDeck)}
+          </p>
+        </GameSetup>
+      );
+    }
+
     return (
       <GameSetup
         pageClassName="memorama-page"
@@ -175,36 +300,100 @@ export default function Memorama({
     );
   }
 
-  if (state.complete) {
+  if (gameMode === 'arcade' && arcadeEnded) {
+    const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+    const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
     return (
       <main className="sepect-bg memorama-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon game-app-title">Sesión completada</h1>
-          <p role="status">{state.matched.length} pares encontrados</p>
-          <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
-            {isSupported() && (
-              <button
-                className="btn-neon"
-                type="button"
-                onClick={() => speak(`Sesión completada. ${state.matched.length} pares encontrados.`)}
-                aria-label="Escuchar resumen"
-              >
-                🔊 Resumen
+          <ArcadeSummary
+            score={arcade.score}
+            best={resultBest}
+            isRecord={isRecord}
+            lives={arcade.lives}
+            correct={arcade.correct}
+            wrong={arcade.wrong}
+            completed={arcade.completed}
+            deckLabel={
+              selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : undefined
+            }
+            actions={
+              <>
+                <button className="btn-neon" type="button" onClick={startGame} autoFocus>
+                  Repetir
+                </button>
+                <button
+                  className="btn-neon"
+                  type="button"
+                  onClick={() => {
+                    resetSession();
+                    setCards(null);
+                    setState(null);
+                  }}
+                >
+                  Elegir mazo
+                </button>
+                <button className="btn-neon" type="button" onClick={backToTopic}>
+                  Volver al tema
+                </button>
+                <SoundToggle />
+              </>
+            }
+          />
+        </div>
+      </main>
+    );
+  }
+
+  if (state.complete) {
+    const totalPairs = state.matched.length;
+    return (
+      <main className="sepect-bg memorama-page" style={PAGE}>
+        <div className="game-stage">
+          <section className="result-panel" aria-labelledby="memorama-summary-title">
+            <p className="result-panel__eyebrow">Sesión completada</p>
+            <h1 id="memorama-summary-title" className="neon game-app-title">
+              Sesión completada
+            </h1>
+            <p className="result-panel__live" role="status">
+              {totalPairs} pares encontrados
+            </p>
+            <dl className="result-panel__stats">
+              <div className="result-panel__stat">
+                <dt>Parejas</dt>
+                <dd>
+                  {totalPairs}/{state.pairs}
+                </dd>
+              </div>
+              {selectedDeck ? (
+                <div className="result-panel__stat result-panel__stat--wide">
+                  <dt>Mazo</dt>
+                  <dd>
+                    {selectedDeck.number} · {selectedDeck.label}
+                  </dd>
+                </div>
+              ) : null}
+            </dl>
+            <div className="result-panel__actions">
+              {isSupported() && (
+                <button
+                  className="btn-neon"
+                  type="button"
+                  onClick={() => speak(`Sesión completada. ${totalPairs} pares encontrados.`)}
+                  aria-label="Escuchar resumen"
+                >
+                  🔊 Resumen
+                </button>
+              )}
+              <button className="btn-neon" type="button" onClick={handleReplay}>
+                Jugar de nuevo
               </button>
-            )}
-            <button
-              className="btn-neon"
-              type="button"
-              onClick={() => {
-                setCards(null);
-                setState(null);
-              }}
-            >
-              Jugar de nuevo
-            </button>
-            <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
-            <SoundToggle />
-          </div>
+              <button className="btn-neon" type="button" onClick={backToTopic}>
+                Volver al tema
+              </button>
+              <SoundToggle />
+            </div>
+          </section>
         </div>
       </main>
     );
@@ -218,23 +407,58 @@ export default function Memorama({
 
   const openTiles = state.open.map((index) => state.tiles[index]);
   const infoKey = openTiles.length ? openTiles.map((tile) => tile.key).join('|') : 'empty';
+  const progress = state.pairs > 0 ? state.matched.length / state.pairs : 0;
 
   return (
     <main className="sepect-bg memorama-page" style={PAGE}>
-      <div className="game-stage">
-        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
-          <p style={{ margin: 0 }}>{state.matched.length} / {state.pairs} pares</p>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+      <div className="game-stage memorama-session">
+        <header className="game-session-header">
+          <div className="game-session-header__text">
+            <p className="game-session-header__eyebrow">
+              {hasDecks ? `Mazo ${selectedDeck.number}` : 'Memorama'} ·{' '}
+              {gameMode === 'arcade' ? 'Arcade' : 'Normal'}
+            </p>
+            <p className="game-session-progress__text">
+              {state.matched.length} / {state.pairs} parejas
+            </p>
+          </div>
+          <div className="game-session-header__actions">
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={handleExit}>Salir</button>
+            <button className="btn-neon" type="button" onClick={handleExit}>
+              Salir
+            </button>
           </div>
         </header>
-        <p aria-live="polite" role="status" style={{ minHeight: 20 }}>{announcement}</p>
+
+        {gameMode === 'arcade' ? (
+          <ArcadeHud
+            lives={arcade.lives}
+            score={arcade.score}
+            streak={arcade.streak}
+            best={bestForDeck}
+          />
+        ) : null}
+
+        <div className="game-session-progress">
+          <ProgressBar
+            value={progress}
+            label={`Parejas encontradas: ${state.matched.length} de ${state.pairs}`}
+          />
+        </div>
+
+        <p aria-live="polite" role="status" style={{ minHeight: 20 }}>
+          {announcement}
+        </p>
+
         <div className="memorama-board">
           {state.tiles.map((tile, index) => {
             const matched = state.matched.includes(tile.cardId);
             const revealed = matched || state.open.includes(index);
-            const card = cards.find((entry) => entry.id === tile.cardId) || { id: tile.cardId, front: tile.text };
+            const card =
+              cards.find((entry) => entry.id === tile.cardId) || {
+                id: tile.cardId,
+                front: tile.text,
+              };
             const faceLabel = tile.face === 'front' ? 'Término' : 'Significado';
             const label = matched
               ? `${faceLabel}: ${tile.text}. Emparejada`
@@ -260,7 +484,9 @@ export default function Memorama({
                       <CardImage card={card} size={56} />
                     </span>
                   </span>
-                  <span className="memorama-tile__cover" aria-hidden="true">?</span>
+                  <span className="memorama-tile__cover" aria-hidden="true">
+                    ?
+                  </span>
                 </button>
                 {revealed && isSupported() && (
                   <button
@@ -283,7 +509,9 @@ export default function Memorama({
             <div className="memorama-info__inner" key={infoKey}>
               {openTiles.map((tile) => (
                 <div className="memorama-info__entry" key={tile.key}>
-                  <span className="memorama-info__label">{tile.face === 'front' ? 'Término' : 'Significado'}</span>
+                  <span className="memorama-info__label">
+                    {tile.face === 'front' ? 'Término' : 'Significado'}
+                  </span>
                   <p className="memorama-info__text">{tile.text}</p>
                 </div>
               ))}

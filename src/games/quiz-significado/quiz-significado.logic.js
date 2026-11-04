@@ -5,8 +5,8 @@ export const DEFAULT_ROUNDS = 10;
 export const MAX_ATTEMPTS = 2;
 export const PHASES = ['setup', 'playing', 'answered', 'complete'];
 
-function shuffle(items, random) {
-  const out = [...items];
+export function shuffleCards(items, random = Math.random) {
+  const out = Array.isArray(items) ? [...items] : [];
   for (let i = out.length - 1; i > 0; i -= 1) {
     const j = Math.floor(random() * (i + 1));
     const swap = out[i];
@@ -14,6 +14,24 @@ function shuffle(items, random) {
     out[j] = swap;
   }
   return out;
+}
+
+export function roundsForDeck(deckSize) {
+  const size = Number(deckSize);
+  const max = Math.min(MAX_ROUNDS, Number.isFinite(size) ? Math.max(0, Math.floor(size)) : 0);
+  if (max < MIN_ROUNDS) return [];
+  return Array.from({ length: max - MIN_ROUNDS + 1 }, (_, index) => MIN_ROUNDS + index);
+}
+
+// Normal caps rounds to the deck; arcade ignores rounds and plays every card.
+export function sessionCardsFor(
+  cards,
+  { mode = 'normal', rounds = DEFAULT_ROUNDS, random = Math.random } = {}
+) {
+  const list = shuffleCards(cards, random);
+  if (mode === 'arcade') return list;
+  const count = Math.min(clampRounds(rounds), list.length);
+  return list.slice(0, count);
 }
 
 function clampRounds(rounds) {
@@ -50,11 +68,11 @@ export function buildQuestion(correctCard, deck = [], random = Math.random) {
     distractors.push(card);
   }
 
-  const options = [correctCard, ...shuffle(distractors, random).slice(0, 3)].map((card) => ({
+  const options = [correctCard, ...shuffleCards(distractors, random).slice(0, 3)].map((card) => ({
     card,
     correct: card.id === correctCard.id,
   }));
-  return { card: correctCard, options: shuffle(options, random) };
+  return { card: correctCard, options: shuffleCards(options, random) };
 }
 
 export function createState() {
@@ -92,7 +110,8 @@ export function reduce(state, action = {}) {
       ? action.cards.filter((card) => card && card.id != null)
       : [];
     const deck = Array.isArray(action.deck) ? action.deck : cards;
-    const requested = clampRounds(action.rounds);
+    const requested =
+      action.mode === 'arcade' ? cards.length : clampRounds(action.rounds);
     const total = Math.min(requested, cards.length);
     const base = { ...createState(), requested, deck };
     if (total === 0) return { ...base, phase: 'complete' };
@@ -137,6 +156,19 @@ export function reduce(state, action = {}) {
       });
     }
     return { ...state, wrongOptionIds: nextWrong, chosenOptionId: action.optionId };
+  }
+
+  if (action.type === 'fail') {
+    if (state.phase !== 'playing') return state;
+    const question = state.questions[state.roundIndex];
+    if (!question) return state;
+    const wrongOptionIds = [...(state.wrongOptionIds || [])];
+    return resolveRound(state, question, {
+      grade: 'otra-vez',
+      attempts: Math.max(1, wrongOptionIds.length + 1),
+      wrongOptionIds,
+      chosenOptionId: null,
+    });
   }
 
   if (action.type === 'next') {
@@ -187,6 +219,18 @@ export function pendingGrades(state) {
     }
   }
   return pending;
+}
+
+// Only the card currently on screen may be graded on exit (spec-18 AC-12).
+export function unresolvedCurrent(state) {
+  if (!state || state.phase !== 'playing' || !Array.isArray(state.questions)) return null;
+  const question = state.questions[state.roundIndex];
+  if (!question || !question.card) return null;
+  return {
+    cardId: question.card.id,
+    grade: 'otra-vez',
+    seq: (state.results || []).length + 1,
+  };
 }
 
 export function summarize(state) {

@@ -7,13 +7,21 @@ Automated coverage lives in `Flashcards.a11y.test.jsx`, `Memorama.a11y.test.jsx`
 `TopicsHub.test.jsx`, `TopicsHub.a11y.test.jsx`, `TopicView.test.jsx`,
 `TopicView.availability.test.jsx`, `TopicView.a11y.test.jsx`, `SourceReader.test.jsx`,
 `SourceReader.a11y.test.jsx`, `Dashboard.test.jsx`, `Dashboard.a11y.test.jsx`,
-`CardImage.test.jsx`, `tts.integration.test.jsx`, `design-system.test.js` (spec-13 gate)
-and `title.test.js`;
+`SettingsView.test.jsx`, `SettingsView.a11y.test.jsx`, `routes.integration.test.jsx`,
+`CardImage.test.jsx`, `tts.integration.test.jsx`, `design-system.test.js`
+(spec-13 gate) and `title.test.js`;
 jsdom cannot measure layout, so this checklist is completed by a human on a real
 browser (Chrome/Firefox, touch + keyboard). The automated suites cover native
 controls/labels, `role="progressbar"` values, no `line-clamp`/ellipsis on the topic
 description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 360 px no-horizontal-scroll contract is checked here manually plus CSS regexes.
+
+> Estado spec-23 (2026-11-03): los gates automáticos (`npm test` 1067/1067,
+> `npm run lint` 0, `npm run build` OK) y la matriz de rutas/juegos/storage están en
+> verde. **Falta la pasada manual real** de las secciones «Configuración»,
+> «Integración spec-23», «Screen reader pass» y las pendientes de specs 13/18/19/22
+> (teclado físico + VoiceOver/NVDA a 360 px). Hasta entonces el programa no se
+> declara cerrado.
 
 ## Setup
 - [ ] `npm run dev`, open at 360×640 (DevTools device mode) then 1280×800.
@@ -67,9 +75,25 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
       or topic description is rendered inside the tile.
 - [ ] (spec-12) The cover is decorative (`alt=""`); status text is not conveyed by color
       alone ("Jugar ahora", "Próximamente", "Necesitas N cartas").
-- [ ] (spec-12) With no eligible cards the view announces «Todo al día» and does not
-      mount the game; the safe screen keeps "Volver al tema" reachable.
-- [ ] (spec-12) Direct URL with too few **eligible** cards shows the safe screen.
+- [ ] (spec-18) Con mazos, «Todo al día» ya no bloquea: los juegos siguen abiertos y
+      solo los mazos por debajo del mínimo quedan deshabilitados.
+- [ ] Direct URL with fewer cards than the game minimum shows the safe screen.
+
+## Spec-18 — Mazos, dominio y arcade
+- [ ] Topic view: «Mazos del tema» muestra el número de mazos/cartas y los contadores
+      No aprendida / Repasar / Aprendida; «Ver detalle» se abre con Enter/Espacio y
+      lista cada mazo con rango, estado y progreso. No hay un selector duplicado.
+- [ ] Topic view: «Mejor marca por juego» solo lista juegos con récord, enlaza al juego
+      y se actualiza al volver de una partida arcade; sin récords muestra el vacío.
+- [ ] Cada setup muestra Modo (Normal/Arcade) y el DeckPicker compartido; teclado
+      Tab/Enter/Espacio, `aria-pressed` y objetivos ≥44 px.
+- [ ] El HUD arcade anuncia vidas/puntuación/racha/mejor una sola vez; el feedback del
+      juego no repite el texto de vidas.
+- [ ] El resumen arcade anuncia puntuación, récord, vidas, aciertos, fallos y mazo una
+      vez; el foco arranca en «Repetir mazo» y las acciones son alcanzables.
+- [ ] 360 px: sin scroll horizontal en el resumen de mazos, el DeckPicker, el HUD ni el
+      resumen arcade; las etiquetas largas envuelven sin ellipsis.
+- [ ] `prefers-reduced-motion` → transiciones de mazos, modo y récords instantáneas.
 
 ## Source reader (`#/tema/:id/fuente`, spec-19)
 - [ ] Topic view shows "Leer documento original" only for built-in topics with a source; custom topics and missing sources show no link.
@@ -84,6 +108,28 @@ description, 44 px target CSS, focus-visible and `prefers-reduced-motion`; the
 - [ ] With `speechSynthesis` unavailable the controls are hidden and an accessible notice remains; the document stays readable.
 - [ ] Loading, empty and error states are announced (`role="status"`/`role="alert"`) and keep the way back to the topic.
 - [ ] No horizontal scroll at 360px; long words wrap, code scrolls inside its block; targets ≥44px; `prefers-reduced-motion` disables the pulse/shimmer.
+
+## Configuración (`#/configuracion`, spec-23)
+- [ ] Se llega desde «Configuración» en la biblioteca y por URL directa; recarga y Back
+      conservan la ruta y el título `Sepect — Configuración`.
+- [ ] Orden de tabulación: sonido → resumen → «Volver a la biblioteca» → «Abrir progreso»;
+      foco visible en todos los controles.
+- [ ] El resumen de almacenamiento es solo lectura (temas, cartas, sesiones, XP, racha y
+      última actividad); no cambia ninguna key ni el progreso al abrir/recargar.
+- [ ] Sin scroll horizontal a 360 px; los datos largos envuelven y los enlaces miden ≥44 px.
+- [ ] Con lector de pantalla se anuncian un `h1` y dos secciones («Sonido» y
+      «Datos locales»), sin `aria-live` ruidoso.
+- [ ] `prefers-reduced-motion` no añade animaciones nuevas.
+
+## Integración spec-23 (todas las rutas)
+- [ ] Las 8 rutas (`#/`, categoría, tema, fuente, juego, progreso, configuración y
+      personalizados) abren por deep link, sobreviven recarga y Back.
+- [ ] A 360 px ninguna ruta provoca scroll horizontal; los bloques de código de la
+      fuente hacen scroll interno y las etiquetas largas envuelven.
+- [ ] Un juego de programación abierto desde un tema de otra categoría muestra la
+      pantalla segura y no carga el juego.
+- [ ] Los 11 juegos conservan TTS/mute, pausa en pestaña oculta y no dejan listeners,
+      iframes ni voz al navegar fuera.
 
 ## Dashboard (`#/progreso`, spec-12)
 - [ ] Reachable from the hub and from a topic; the route survives reload.

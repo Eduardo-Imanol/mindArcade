@@ -95,7 +95,7 @@ function appleAt(x, y, overrides = {}) {
 describe('serpiente-significados constants', () => {
   it('exposes the signed session constants', () => {
     expect(DEFAULT_ROUNDS).toBe(8);
-    expect(INITIAL_LIVES).toBe(5);
+    expect(INITIAL_LIVES).toBe(3);
     expect(APPLES).toBe(3);
     expect(WRONG_GROWTH).toBe(3);
     expect(FEEDBACK_MS).toBe(1400);
@@ -308,7 +308,7 @@ describe('createSnake and spawnRound', () => {
 });
 
 describe('reduce start / direction / step', () => {
-  it('starts a session with 5 lives, 3 apples and a centered snake', () => {
+  it('starts a session with 3 lives, 3 apples and a centered snake', () => {
     const state = reduce(createState(), {
       type: 'start',
       cards: DECK,
@@ -321,7 +321,7 @@ describe('reduce start / direction / step', () => {
     });
     expect(state.phase).toBe('playing');
     expect(state.total).toBe(8);
-    expect(state.lives).toBe(5);
+    expect(state.lives).toBe(3);
     expect(state.snake).toHaveLength(2);
     expect(state.apples).toHaveLength(3);
     expect(state.cards[0].id).toBe('a');

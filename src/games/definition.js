@@ -26,6 +26,25 @@ function positiveInt(value, field) {
   return number;
 }
 
+function categoriesList(value) {
+  if (value === undefined) return Object.freeze(['*']);
+  if (!Array.isArray(value) || value.length === 0) {
+    throw new TypeError('defineGame: "categories" debe ser un array de strings no vacío');
+  }
+  const seen = new Set();
+  const categories = [];
+  for (const entry of value) {
+    if (typeof entry !== 'string' || entry.trim() === '') {
+      throw new TypeError('defineGame: "categories" solo admite strings no vacíos');
+    }
+    const id = entry.trim();
+    if (seen.has(id)) continue;
+    seen.add(id);
+    categories.push(id);
+  }
+  return Object.freeze(categories);
+}
+
 export function defineGame(spec = {}) {
   if (!spec || typeof spec !== 'object' || Array.isArray(spec)) {
     throw new TypeError('defineGame: la definición debe ser un objeto');
@@ -43,11 +62,21 @@ export function defineGame(spec = {}) {
     throw new TypeError(`defineGame: status inválido "${game.status}"`);
   }
   game.minCards = positiveInt(spec.minCards, 'minCards');
+  game.categories = categoriesList(spec.categories);
   if (spec.minTopics !== undefined) {
     game.minTopics = positiveInt(spec.minTopics, 'minTopics');
   }
   if (spec.minCardsPerTopic !== undefined) {
     game.minCardsPerTopic = positiveInt(spec.minCardsPerTopic, 'minCardsPerTopic');
+  }
+  if (spec.needsExercises !== undefined) {
+    if (typeof spec.needsExercises !== 'boolean') {
+      throw new TypeError('defineGame: "needsExercises" debe ser un booleano');
+    }
+    game.needsExercises = spec.needsExercises;
+  }
+  if (spec.minExercises !== undefined) {
+    game.minExercises = positiveInt(spec.minExercises, 'minExercises');
   }
   if (typeof spec.load !== 'function') {
     throw new TypeError('defineGame: "load" debe ser una función');

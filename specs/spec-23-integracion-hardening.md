@@ -85,26 +85,39 @@ funcionando, **para** poder publicar sin deuda oculta.
 - [ ] AC-1: Las specs 17–22 están firmadas, implementadas y sus tasks cerradas; se
   respetó el orden por fases (17 → 19 → 18 → 20 ∥ 22 → 21). `spec-16` está
   renombrada/cerrada.
-- [ ] AC-2: Matriz de rutas verde: `#/`, `#/categoria/:id`, `#/tema/:id`,
+  *Firmadas, implementadas y en el orden correcto; `spec-16` cerrada. Las tasks de
+  17/18/19/21 conservan ítems manuales/DoD y falta la firma humana del diff, así que
+  el AC permanece abierto hasta ese cierre humano.*
+- [x] AC-2: Matriz de rutas verde: `#/`, `#/categoria/:id`, `#/tema/:id`,
   `#/tema/:id/fuente`, `#/tema/:id/juego/:gameId`, `#/progreso`,
   `#/configuracion` y `#/personalizados`; deep link, recarga y atrás funcionan.
-- [ ] AC-3: Matriz de juegos verde: los 11 juegos (8 existentes, incluido Ahorcado, +
+  Evidencia: `docs/evidence/spec-23-integracion-hardening.md` (T2) y
+  `src/app/routes.integration.test.jsx`.
+- [x] AC-3: Matriz de juegos verde: los 11 juegos (8 existentes, incluido Ahorcado, +
   3 de código) con mazos, dominio, arcade, récords, TTS/mute y «Próximamente» donde
   corresponde. Los juegos de código comparten los 6 ejercicios universales del mazo,
   permiten dificultad 2/4/6 y reflejan el nivel de ejercicios completado.
-- [ ] AC-4: Sin colisiones de storage ni pérdida de progreso al actualizar desde una
+  Evidencia: T3 (36 files / 243 tests focalizados verdes).
+- [x] AC-4: Sin colisiones de storage ni pérdida de progreso al actualizar desde una
   versión previa; `sepect.exercises.v1` convive con SRS/arcade sin duplicar dominio;
   cuota llena/errores no rompen la app; custom topics siguen funcionando sin source.
-- [ ] AC-5: El bundle inicial no incluye documents/exercises; el lector y los juegos
+  Evidencia: `src/core/storage/integration.test.js` y T2.
+- [x] AC-5: El bundle inicial no incluye documents/exercises; el lector y los juegos
   de código cargan lazy. No hay regresiones de 60 fps, pausa en hidden ni memoria.
+  Evidencia: medición de build en T4 (marcadores únicos solo en chunks lazy).
 - [ ] AC-6: A11y: navegación completa por teclado, foco visible, headings, labels,
   `aria-live` sin ruido, contraste y 360 px sin scroll horizontal en las vistas
   nuevas. TTS/mute consistente.
-- [ ] AC-7: `npm test`, `npm run lint` y `npm run build` pasan al 100%; sin
+  *Automático en verde (checklist ampliado + `SettingsView.a11y.test.jsx` +
+  360/1440 medidos); la pasada manual real con teclado/VoiceOver sigue pendiente de
+  humano.*
+- [x] AC-7: `npm test`, `npm run lint` y `npm run build` pasan al 100%; sin
   dependencias nuevas, sin red para progreso/XP/historial y sin secretos.
-- [ ] AC-8: `docs/architecture.md`, `docs/testing.md`, `docs/manual-a11y-checklist.md`,
+  Evidencia: `npm test` 1067/1067 (123 files), lint 0, build OK (warning
+  preexistente de chunk).
+- [x] AC-8: `docs/architecture.md`, `docs/testing.md`, `docs/manual-a11y-checklist.md`,
   `MEMORY.md` y `FOCUS.md` reflejan el estado final; no quedan TODOs de las specs.
-- [ ] AC-9: Cualquier bug encontrado tiene test de regresión y se corrige en la spec
+- [x] AC-9: Cualquier bug encontrado tiene test de regresión y se corrige en la spec
   de origen; spec-23 no introduce lógica de producto nueva.
 
 ---
@@ -167,6 +180,19 @@ Dispositivos: 360, 768, desktop; teclado; VoiceOver
 - Publicación/deploy (solo se deja listo).
 
 ---
+
+## ✅ Cierre técnico (2026-11-03)
+
+- T1–T4 verificados; T5 (docs y gates) completado.
+- `docs/architecture.md`, `docs/testing.md`, `docs/security.md`,
+  `docs/manual-a11y-checklist.md`, `MEMORY.md` y `FOCUS.md` reflejan el estado
+  final (`docs/evidence/spec-23-integracion-hardening.md`).
+- Gates: `npm test` **1067/1067** (123 files), `npm run lint` **0**,
+  `npm run build` **OK** (solo warning preexistente de chunk >500 kB).
+- Sin dependencias nuevas, sin red para progreso/XP/historial y sin secretos.
+- **Pendiente para declarar el programa terminado:** pasada manual real
+  teclado/VoiceOver a 360 px (AC-6) y firma humana de los diffs de specs 12–22
+  (AC-1). El código queda listo para esa revisión.
 
 ## ✍️ Firma
 

@@ -1,20 +1,18 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import CardImage from '../../components/CardImage.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { createEngine } from '../../core/engine/engine.js';
-import { arcadeHit, createArcade } from '../../core/engine/arcade.js';
-import { getDeckAvailability } from '../availability.js';
-
-function disabledReasonForSerpiente(deck) {
-  const availability = getDeckAvailability({ id: 'serpiente-significados', minCards: 6 }, deck);
-  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
-  return '';
-}
+import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
 import {
+  APPLES,
   DEFAULT_ROUNDS,
   DIFFICULTIES,
   FEEDBACK_MS,
@@ -27,10 +25,10 @@ import {
   boardSizeFor,
   createState,
   currentCard,
-  normalizeBack,
   pendingCurrent,
   reduce,
   summarize,
+  uniqueBackCount,
 } from './serpiente-significados.logic.js';
 
 const PAGE = {
@@ -44,6 +42,12 @@ const ROUND_OPTIONS = Array.from(
   (_, index) => MIN_ROUNDS + index
 );
 const MIN_CARDS = 4;
+const GAME_ID = 'serpiente-significados';
+const GAME_DEF = { id: GAME_ID, status: 'available', minCards: MIN_CARDS };
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Rondas o supervivencia a tu ritmo' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
 const APPLE_COLORS = ['#00ffcc', '#ff007f', '#ffd166'];
 const MODE_LABELS = { rounds: 'Rondas', survival: 'Supervivencia', arcade: 'Arcade' };
 const MODE_HELP = {
@@ -51,17 +55,30 @@ const MODE_HELP = {
   survival: `Come todo el mazo, hasta ${MAX_SURVIVAL_CARDS} cartas. Tu puntuación es la longitud final.`,
   arcade: 'Mazo completo, 3 vidas. Manzana incorrecta o choque resta vida.',
 };
-const GAME_ID = 'serpiente-significados';
 const DIFFICULTY_LABELS = {
   tranquilo: 'Tranquilo',
   normal: 'Normal',
   arcade: 'Arcade',
+};
+const DECK_DIFFICULTY_LABELS = {
+  tranquilo: 'Tranquilo',
+  normal: 'Normal',
+  arcade: 'Rápido',
 };
 const DIFFICULTY_HELP = {
   tranquilo: `${STEP_MS.tranquilo} ms por paso.`,
   normal: `${STEP_MS.normal} ms por paso.`,
   arcade: `${STEP_MS.arcade} ms por paso.`,
 };
+
+function disabledReasonFor(deck) {
+  const availability = getDeckAvailability(GAME_DEF, deck);
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
+  if (uniqueBackCount(deck?.cards) < APPLES) return 'Necesitas al menos 3 significados distintos';
+  return '';
+}
 
 function detectViewport() {
   if (typeof window === 'undefined') return 'desktop';
@@ -71,17 +88,7 @@ function detectViewport() {
   return (window.innerWidth || 1024) < 768 ? 'mobile' : 'desktop';
 }
 
-function uniqueBackCount(deck) {
-  const backs = new Set();
-  for (const card of Array.isArray(deck) ? deck : []) {
-    if (!card || card.id == null || String(card.id).trim() === '') continue;
-    const back = normalizeBack(card.back);
-    if (back) backs.add(back);
-  }
-  return backs.size;
-}
-
-function announcementFor(state, card) {
+function announcementFor(state, card, arcade = false) {
   const feedback = state.feedback;
   if (feedback) {
     if (feedback.type === 'correct') {
@@ -89,10 +96,12 @@ function announcementFor(state, card) {
       return `¡Correcto! La manzana ${feedback.number} era «${feedback.back}».${points}`;
     }
     if (feedback.type === 'wrong') {
-      return `Incorrecto. La manzana ${feedback.number} era «${feedback.back}». Pierdes una vida. Vidas: ${state.lives} de ${INITIAL_LIVES}.`;
+      const lives = arcade ? '' : ` Vidas: ${state.lives} de ${INITIAL_LIVES}.`;
+      return `Incorrecto. La manzana ${feedback.number} era «${feedback.back}». Pierdes una vida.${lives}`;
     }
     if (feedback.type === 'collision') {
-      return `¡Choque! Pierdes una vida. Vidas: ${state.lives} de ${INITIAL_LIVES}.`;
+      const lives = arcade ? '' : ` Vidas: ${state.lives} de ${INITIAL_LIVES}.`;
+      return `¡Choque! Pierdes una vida.${lives}`;
     }
   }
   if (state.phase === 'paused') return 'Partida en pausa.';
@@ -110,31 +119,47 @@ export default function SerpienteSignificados({
   best,
   selectCards,
   onGrade,
-  onArcadeEnd: _onArcadeEnd,
+  onArcadeEnd,
   onExit,
   onBackToTopic,
 } = {}) {
-  const onArcadeEnd = _onArcadeEnd;
   const hasDecks = Array.isArray(decks) && decks.length > 0;
   const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
-  const [gameMode, setGameMode] = useState('normal');  
+  const [gameMode, setGameMode] = useState('normal');
   const [arcade, setArcade] = useState(() => createArcade());
-  const [_arcadeEnded, setArcadeEnded] = useState(false);
-  const [_arcadeResult, setArcadeResult] = useState(null);
+  const [arcadeEnded, setArcadeEnded] = useState(false);
+  const [arcadeResult, setArcadeResult] = useState(null);
   const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
-  const deckSource = hasDecks && selectedDeck ? selectedDeck.cards : deck;
+  const selectedDeckCards = Array.isArray(selectedDeck?.cards) ? selectedDeck.cards : [];
+  const deckSource = hasDecks ? selectedDeckCards : deck;
   const deckList = useMemo(() => (Array.isArray(deckSource) ? deckSource : []), [deckSource]);
-  const canPlay = deckList.length >= MIN_CARDS;
+  const canPlay = deckList.length >= MIN_CARDS && uniqueBackCount(deckList) >= APPLES;
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const deckReason = hasDecks && selectedDeck ? disabledReasonFor(selectedDeck) : '';
+  const startDisabled =
+    !selectedDeck ||
+    Boolean(deckReason) ||
+    selectedDeckCards.length < MIN_CARDS ||
+    uniqueBackCount(selectedDeckCards) < APPLES;
 
   const [rounds, setRounds] = useState(DEFAULT_ROUNDS);
-  const [mode, setMode] = useState(MODES.rounds);
+  const [mode, setMode] = useState('rounds');
   const [difficulty, setDifficulty] = useState('normal');
   const [state, setState] = useState(() => createState());
+  const effectiveRounds = hasDecks
+    ? Math.max(MIN_ROUNDS, Math.min(rounds, selectedDeckCards.length))
+    : rounds;
+  const deckRoundOptions = useMemo(
+    () => ROUND_OPTIONS.filter((option) => option <= selectedDeckCards.length),
+    [selectedDeckCards.length]
+  );
 
   const stateRef = useRef(state);
   stateRef.current = state;
   const emitted = useRef(0);
   const exiting = useRef(false);
+  const endedRef = useRef(false);
+  const arcadeFeedbackRef = useRef(0);
 
   const engineRef = useRef(null);
   const onTickRef = useRef(null);
@@ -284,8 +309,42 @@ export default function SerpienteSignificados({
     const grade = state.lastGrade;
     if (!grade || grade.seq <= emitted.current) return;
     emitted.current = grade.seq;
-    onGrade?.(grade.cardId, grade.grade);
-  }, [state.lastGrade, onGrade]);
+    const mapped = gameMode === 'arcade' && grade.grade !== 'otra-vez' ? 'facil' : grade.grade;
+    onGrade?.(grade.cardId, mapped);
+  }, [state.lastGrade, onGrade, gameMode]);
+
+  useEffect(() => {
+    if (gameMode !== 'arcade') return;
+    const feedback = state.feedback;
+    let nextArcade = arcade;
+    let changed = false;
+    if (feedback && feedback.seq > arcadeFeedbackRef.current) {
+      arcadeFeedbackRef.current = feedback.seq;
+      if (feedback.type === 'correct') {
+        nextArcade = arcadeHit(arcade);
+        changed = true;
+      } else if (feedback.type === 'wrong' || feedback.type === 'collision') {
+        nextArcade = arcadeMiss(arcade);
+        changed = true;
+      } else if (
+        feedback.type === 'gameover' &&
+        (feedback.cause === 'wrong' || feedback.cause === 'collision')
+      ) {
+        nextArcade = arcadeMiss(arcade);
+        changed = true;
+      }
+    }
+
+    if (
+      !endedRef.current &&
+      state.total > 0 &&
+      (state.phase === 'gameover' || state.phase === 'complete')
+    ) {
+      endArcade(arcadeFinish(nextArcade));
+      return;
+    }
+    if (changed) setArcade(nextArcade);
+  }, [state, gameMode, arcade]);
 
   useEffect(() => {
     if (state.phase !== 'playing' && state.phase !== 'resolved') return;
@@ -319,34 +378,64 @@ export default function SerpienteSignificados({
   const resetRuntime = () => {
     emitted.current = 0;
     exiting.current = false;
+    endedRef.current = false;
+    arcadeFeedbackRef.current = 0;
     roundKeyRef.current = -1;
     resolvedKeyRef.current = -1;
     stepAccumulatorRef.current = 0;
     feedbackAccumulatorRef.current = 0;
     spokenRoundRef.current = -1;
     feedbackSpokenRef.current = -1;
+    setArcade(createArcade());
+    setArcadeEnded(false);
+    setArcadeResult(null);
     stopSpeech();
+  };
+
+  const endArcade = (finalArcade) => {
+    if (endedRef.current) return;
+    endedRef.current = true;
+    const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
+    setArcadeEnded(true);
+    const result = onArcadeEnd?.({
+      score: finished.score,
+      correct: finished.correct,
+      wrong: finished.wrong,
+      lives: finished.lives,
+      completed: finished.completed,
+      deckId: selectedDeck?.id,
+    });
+    setArcadeResult(result || { best: finished.score, isRecord: false });
   };
 
   const handleStart = () => {
     resetRuntime();
-    setArcadeEnded(false);
-    if (setArcadeResult) setArcadeResult(null);
-    if (gameMode === 'arcade') {
-      setArcade(createArcade());
-      setMode(MODES.survival);
+    const arcadeMode = gameMode === 'arcade';
+    const source = hasDecks && selectedDeck ? selectedDeckCards : deckList;
+    let pool;
+    if (hasDecks && selectedDeck) {
+      if (arcadeMode) {
+        pool = selectedDeckCards.slice();
+      } else if (mode === 'survival') {
+        pool = selectedDeckCards.slice(0, Math.min(source.length, MAX_SURVIVAL_CARDS));
+      } else {
+        pool = selectedDeckCards.slice(0, Math.min(effectiveRounds, source.length));
+      }
+    } else {
+      const count =
+        arcadeMode || mode === 'survival'
+          ? Math.min(source.length, MAX_SURVIVAL_CARDS)
+          : rounds;
+      pool = (selectCards ? selectCards(count) : source.slice(0, count)) || [];
     }
-    const source = gameMode === 'arcade' && hasDecks && selectedDeck ? selectedDeck.cards : deckList;
-    const count =
-      gameMode === 'arcade' || mode === 'survival' ? Math.min(source.length, MAX_SURVIVAL_CARDS) : rounds;
-    const pool = (selectCards ? selectCards(count) : source.slice(0, count)) || [];
     const next = reduce(createState(), {
       type: 'start',
       cards: pool,
       deck: source,
-      mode: gameMode === 'arcade' ? MODES.survival : mode,
-      rounds: gameMode === 'arcade' ? pool.length : rounds,
-      difficulty: gameMode === 'arcade' ? 'normal' : difficulty,
+      mode: arcadeMode ? 'survival' : mode,
+      rounds: arcadeMode ? pool.length : hasDecks && mode === 'rounds' ? effectiveRounds : rounds,
+      difficulty,
       viewport: detectViewport(),
       random: Math.random,
     });
@@ -361,6 +450,10 @@ export default function SerpienteSignificados({
   };
 
   const handleReplay = () => {
+    if (gameMode === 'arcade') {
+      handleStart();
+      return;
+    }
     resetRuntime();
     setState(createState());
   };
@@ -404,13 +497,15 @@ export default function SerpienteSignificados({
     engineRef.current?.stop();
     stopSpeech();
     const current = stateRef.current;
+    const mapGrade = (value) =>
+      gameMode === 'arcade' && value !== 'otra-vez' ? 'facil' : value;
     const grade = current.lastGrade;
     if (grade && grade.seq > emitted.current) {
       emitted.current = grade.seq;
-      onGrade?.(grade.cardId, gameMode === 'arcade' ? (grade.grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade.grade);
+      onGrade?.(grade.cardId, mapGrade(grade.grade));
     }
     for (const entry of pendingCurrent(current)) {
-      onGrade?.(entry.cardId, gameMode === 'arcade' ? (entry.grade === 'otra-vez' ? 'otra-vez' : 'facil') : entry.grade);
+      onGrade?.(entry.cardId, mapGrade(entry.grade));
     }
     onExit?.();
   };
@@ -437,18 +532,116 @@ export default function SerpienteSignificados({
   }
 
   if (state.phase === 'setup') {
-    const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id];
+    if (hasDecks) {
+      const deckNote = selectedDeck
+        ? gameMode === 'arcade'
+          ? `Mazo ${selectedDeck.number} completo · ${selectedDeckCards.length} cartas · 3 vidas · Mejor marca ${bestForDeck}`
+          : mode === 'survival'
+            ? `Supervivencia · ${Math.min(selectedDeckCards.length, MAX_SURVIVAL_CARDS)} cartas · ${INITIAL_LIVES} vidas · Mejor marca ${bestForDeck}`
+            : `${effectiveRounds} de ${selectedDeckCards.length} cartas · Mejor marca ${bestForDeck}`
+        : 'Elige un mazo para empezar.';
+      return (
+        <GameSetup
+          pageClassName="serpiente-page"
+          title="Serpiente de significados"
+          titleClassName="serpiente-title"
+          lead="Dirige la serpiente y come la manzana con el significado de la pregunta. Cada mazo es un bloque de 10 cartas."
+          note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · tablero ${previewSize}×${previewSize} · ${previewStep} ms por paso.`}
+          start={
+            <button className="btn-neon" type="button" onClick={handleStart} disabled={startDisabled}>
+              Empezar
+            </button>
+          }
+          actions={
+            <>
+              <SoundToggle />
+              <button className="btn-neon game-setup__exit" type="button" onClick={onBackToTopic || onExit}>
+                Volver al tema
+              </button>
+            </>
+          }
+        >
+          <div className="serpiente-setup">
+            <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
+            <DeckPicker
+              decks={decks}
+              selectedDeckId={selectedDeck?.id}
+              onSelect={(id) => setSelectedDeckId(id)}
+              best={best}
+              disabledReason={(deckEntry) => disabledReasonFor(deckEntry)}
+              gameId={GAME_ID}
+              label="Elige tu mazo"
+            />
+            <fieldset className="serpiente-setup-fieldset">
+              <legend>Dificultad</legend>
+              <div className="serpiente-choice-row" role="group" aria-label="Dificultad">
+                {DIFFICULTIES.map((value) => (
+                  <button
+                    key={value}
+                    className={`serpiente-choice${difficulty === value ? ' is-selected' : ''}`}
+                    type="button"
+                    aria-pressed={difficulty === value}
+                    onClick={() => setDifficulty(value)}
+                  >
+                    {DECK_DIFFICULTY_LABELS[value]}
+                  </button>
+                ))}
+              </div>
+              <p className="serpiente-note">{DIFFICULTY_HELP[difficulty]}</p>
+            </fieldset>
+
+            {gameMode === 'normal' ? (
+              <fieldset className="serpiente-setup-fieldset">
+                <legend>Modo</legend>
+                <div className="serpiente-choice-row" role="group" aria-label="Modo">
+                  {MODES.map((value) => (
+                    <button
+                      key={value}
+                      className={`serpiente-choice${mode === value ? ' is-selected' : ''}`}
+                      type="button"
+                      aria-pressed={mode === value}
+                      onClick={() => setMode(value)}
+                    >
+                      {MODE_LABELS[value]}
+                    </button>
+                  ))}
+                </div>
+                <p className="serpiente-note">{MODE_HELP[mode]}</p>
+              </fieldset>
+            ) : null}
+
+            {gameMode === 'normal' && mode === 'rounds' ? (
+              <div className="serpiente-setup-row">
+                <label htmlFor="serpiente-rounds">Rondas</label>
+                <select
+                  id="serpiente-rounds"
+                  value={effectiveRounds}
+                  onChange={(event) => setRounds(Number(event.target.value))}
+                >
+                  {deckRoundOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ) : null}
+
+            <p className="serpiente-note" role="status">
+              {deckNote}
+            </p>
+          </div>
+        </GameSetup>
+      );
+    }
+
     return (
       <GameSetup
         pageClassName="serpiente-page"
         title="Serpiente de significados"
         titleClassName="serpiente-title"
         lead="Dirige la serpiente y come la manzana con el significado de la pregunta. Cada manzana numerada tiene su significado en la leyenda."
-        note={
-          <>
-            {gameMode === 'arcade' ? 'Arcade · 3 vidas' : MODE_LABELS[mode]} · {hasDecks && selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : `${available} cartas disponibles`} · tablero {previewSize}×{previewSize} · {previewStep} ms por paso.
-          </>
-        }
+        note={`${MODE_LABELS[mode]} · ${available} cartas disponibles · tablero ${previewSize}×${previewSize} · ${previewStep} ms por paso.`}
         start={
           <button className="btn-neon" type="button" onClick={handleStart}>
             Empezar
@@ -464,18 +657,6 @@ export default function SerpienteSignificados({
         }
       >
         <div className="serpiente-setup">
-          {hasDecks && (
-            <>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-                <span>Modo</span>
-                <button type="button" className={`btn-neon${gameMode === 'normal' ? ' is-active' : ''}`} onClick={() => { setGameMode('normal'); setMode(MODES.rounds); }}>Normal</button>
-                <button type="button" className={`btn-neon${gameMode === 'arcade' ? ' is-active' : ''}`} onClick={() => { setGameMode('arcade'); setMode(MODES.survival); }}>Arcade</button>
-              </div>
-              {gameMode === 'arcade' && <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}><ArcadeHud arcade={arcade} best={bestForDeck} compact /></div>}
-              <DeckPicker decks={decks} selectedDeckId={selectedDeck?.id} onSelect={(id) => setSelectedDeckId(id)} best={best} disabledReason={(deckEntry) => disabledReasonForSerpiente(deckEntry)} gameId={GAME_ID} label="Elige tu mazo" />
-            </>
-          )}
-          {gameMode !== 'arcade' && (
           <fieldset className="serpiente-setup-fieldset">
             <legend>Modo</legend>
             <div className="serpiente-choice-row" role="group" aria-label="Modo">
@@ -493,9 +674,7 @@ export default function SerpienteSignificados({
             </div>
             <p className="serpiente-note">{MODE_HELP[mode]}</p>
           </fieldset>
-          )}
 
-          {gameMode !== 'arcade' && (
           <fieldset className="serpiente-setup-fieldset">
             <legend>Dificultad</legend>
             <div className="serpiente-choice-row" role="group" aria-label="Dificultad">
@@ -513,7 +692,6 @@ export default function SerpienteSignificados({
             </div>
             <p className="serpiente-note">{DIFFICULTY_HELP[difficulty]}</p>
           </fieldset>
-          )}
 
           {mode === 'rounds' ? (
             <div className="serpiente-setup-row">
@@ -532,7 +710,7 @@ export default function SerpienteSignificados({
             </div>
           ) : (
             <p className="serpiente-note">
-              La partida sigue hasta comer todo el mazo o perder las 5 vidas.
+              La partida sigue hasta comer todo el mazo o perder las {INITIAL_LIVES} vidas.
             </p>
           )}
         </div>
@@ -559,6 +737,50 @@ export default function SerpienteSignificados({
               </button>
               <SoundToggle />
             </div>
+          </div>
+        </main>
+      );
+    }
+
+    if (gameMode === 'arcade' && arcadeEnded) {
+      const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+      const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
+      return (
+        <main className="sepect-bg serpiente-page" style={PAGE}>
+          <div className="game-stage">
+            <ArcadeSummary
+              score={arcade.score}
+              best={resultBest}
+              isRecord={isRecord}
+              lives={arcade.lives}
+              correct={arcade.correct}
+              wrong={arcade.wrong}
+              completed={arcade.completed}
+              deckLabel={
+                selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : undefined
+              }
+              actions={
+                <>
+                  <button className="btn-neon" type="button" onClick={handleStart} autoFocus>
+                    Repetir
+                  </button>
+                  <button
+                    className="btn-neon"
+                    type="button"
+                    onClick={() => {
+                      resetRuntime();
+                      setState(createState());
+                    }}
+                  >
+                    Elegir mazo
+                  </button>
+                  <button className="btn-neon" type="button" onClick={handleExit}>
+                    Volver al tema
+                  </button>
+                  <SoundToggle />
+                </>
+              }
+            />
           </div>
         </main>
       );
@@ -633,7 +855,7 @@ export default function SerpienteSignificados({
       ? `Ronda ${state.roundIndex + 1} de ${state.total}`
       : `Carta ${state.roundIndex + 1} de ${state.total}`;
   const scoreLabel = state.mode === 'rounds' ? state.score : state.snake.length;
-  const announcement = announcementFor(state, card);
+  const announcement = announcementFor(state, card, gameMode === 'arcade');
   const feedbackClass = state.feedback
     ? ` is-${state.feedback.type === 'gameover' ? 'wrong' : state.feedback.type}`
     : '';
@@ -643,21 +865,30 @@ export default function SerpienteSignificados({
       <div className="game-stage">
         <header className="serpiente-header">
           <p className="serpiente-round">{roundLabel}</p>
-          <div className="serpiente-hud">
-            <span className="serpiente-mode">{MODE_LABELS[state.mode]}</span>
-            <span>
-              <strong>{scoreLabel}</strong> {state.mode === 'rounds' ? 'puntos' : 'de largo'}
-            </span>
-            <span>
-              Racha <strong>{state.streak}</strong>
-            </span>
-            <span aria-label={`Vidas: ${state.lives} de ${INITIAL_LIVES}`}>
-              <span aria-hidden="true">{'♥'.repeat(state.lives) || '—'}</span>{' '}
-              <span aria-hidden="true">
-                Vidas: {state.lives}/{INITIAL_LIVES}
+          {gameMode === 'arcade' ? (
+            <ArcadeHud
+              lives={arcade.lives}
+              score={arcade.score}
+              streak={arcade.streak}
+              best={bestForDeck}
+            />
+          ) : (
+            <div className="serpiente-hud">
+              <span className="serpiente-mode">{MODE_LABELS[state.mode]}</span>
+              <span>
+                <strong>{scoreLabel}</strong> {state.mode === 'rounds' ? 'puntos' : 'de largo'}
               </span>
-            </span>
-          </div>
+              <span>
+                Racha <strong>{state.streak}</strong>
+              </span>
+              <span aria-label={`Vidas: ${state.lives} de ${INITIAL_LIVES}`}>
+                <span aria-hidden="true">{'♥'.repeat(state.lives) || '—'}</span>{' '}
+                <span aria-hidden="true">
+                  Vidas: {state.lives}/{INITIAL_LIVES}
+                </span>
+              </span>
+            </div>
+          )}
           <div className="serpiente-actions serpiente-actions--header">
             <SoundToggle />
             <button
@@ -843,8 +1074,9 @@ export default function SerpienteSignificados({
                 Partida en pausa
               </h2>
               <p>
-                {roundLabel} · {scoreLabel}{' '}
-                {state.mode === 'rounds' ? 'puntos' : 'de largo'}
+                {gameMode === 'arcade'
+                  ? `Puntuación ${arcade.score}`
+                  : `${roundLabel} · ${scoreLabel} ${state.mode === 'rounds' ? 'puntos' : 'de largo'}`}
               </p>
               <p>El movimiento y la serpiente están detenidos.</p>
               <div className="serpiente-actions">

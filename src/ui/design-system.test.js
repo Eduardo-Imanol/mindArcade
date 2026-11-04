@@ -92,11 +92,12 @@ describe('design system gate (spec-13)', () => {
       expect(code, view).toContain('ProgressBar.jsx');
       expect(code, view).not.toMatch(/function ProgressBar\(/);
     }
-    for (const view of ['TopicView', 'GameHost']) {
-      const code = read(`src/views/${view}.jsx`);
-      expect(code, view).toContain('useStudyCardCounts');
-      expect(code, view).not.toMatch(/counts\[entry\.id\]\s*=/);
-    }
+    const gameHost = read('src/views/GameHost.jsx');
+    expect(gameHost).toContain('useStudyCardCounts');
+    expect(gameHost).not.toMatch(/counts\[entry\.id\]\s*=/);
+    const topicView = read('src/views/TopicView.jsx');
+    expect(topicView).toContain('buildTopicDecks');
+    expect(topicView).toContain('DeckOverview');
     expect(fs.existsSync(path.join(process.cwd(), 'src/views/useStudyCardCounts.js'))).toBe(true);
   });
 

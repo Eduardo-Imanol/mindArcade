@@ -11,6 +11,10 @@ export function parseHash(hash = '') {
       .map((part) => decodeURIComponent(part));
     if (parts.length === 0) return { view: 'hub' };
     if (parts.length === 1 && parts[0] === 'progreso') return { view: 'progress' };
+    if (parts.length === 1 && parts[0] === 'configuracion') return { view: 'settings' };
+    if (parts.length === 1 && parts[0] === 'personalizados') {
+      return { view: 'category', categoryId: 'personalizados' };
+    }
     if (parts.length === 2 && parts[0] === 'categoria') {
       return { view: 'category', categoryId: parts[1] };
     }

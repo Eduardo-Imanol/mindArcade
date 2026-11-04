@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import NotFound from '../components/NotFound.jsx';
-import { getGame } from '../games/registry.js';
-import { AVAILABILITY_REASONS, availabilityMessage, getGameAvailability } from '../games/availability.js';
+import { getGame, isGameForCategory } from '../games/registry.js';
+import { availabilityMessage, getGameAvailability } from '../games/availability.js';
 import { loadCatalog } from '../core/content/catalog.js';
+import { findCategory } from '../core/content/library.js';
 import { applyGrade, loadSrs, saveSrs } from '../core/repetition/srs.js';
 import { DECK_SIZE, buildDecks } from '../core/repetition/decks.js';
 import { selectStudyCards } from '../core/repetition/selectStudyCards.js';
@@ -10,6 +11,13 @@ import { GRADE_XP } from '../core/metrics/metrics.js';
 import { awardXP, recordStreak } from '../core/storage/xp.js';
 import { createStore } from '../core/storage/store.js';
 import { bestFor, loadArcadeRecords, recordArcadeRun } from '../core/storage/arcade.js';
+import {
+  loadExerciseProgress,
+  recordExerciseResult,
+} from '../core/storage/exercises.js';
+import { parseExercisesMarkdown } from '../core/exercises/parse.js';
+import { validateExercises } from '../core/exercises/schema.js';
+import { hasExercises as hasExerciseManifest, loadExercises } from '../content/exercises/index.js';
 import { navigate } from '../app/router.js';
 import { useStudyCardCounts } from './useStudyCardCounts.js';
 
@@ -27,7 +35,7 @@ export default function GameHost({ topicId, gameId }) {
   const topic = topics.find((entry) => entry.id === topicId);
   const game = useMemo(() => getGame(gameId), [gameId]);
   const [now] = useState(() => Date.now());
-  const srs = useMemo(() => loadSrs(), []);
+  const [srs, setSrs] = useState(() => loadSrs());
   const srsRef = useRef(srs);
   const profileRef = useRef(null);
   const [Component, setComponent] = useState(null);
@@ -35,6 +43,8 @@ export default function GameHost({ topicId, gameId }) {
   const [groups, setGroups] = useState(null);
   const [selectCards, setSelectCards] = useState(null);
   const [records, setRecords] = useState(() => loadArcadeRecords());
+  const [exerciseDoc, setExerciseDoc] = useState(undefined);
+  const [exerciseProgress, setExerciseProgress] = useState(() => loadExerciseProgress());
 
   const cards = useMemo(() => (topic ? cardsWithOverrides(topic) : []), [topic]);
   const topicSrs = useMemo(
@@ -44,6 +54,10 @@ export default function GameHost({ topicId, gameId }) {
   const decks = useMemo(
     () => (topic ? buildDecks(cards, topicSrs, { size: DECK_SIZE, now }) : []),
     [topic, cards, topicSrs, now]
+  );
+  const exerciseDecks = useMemo(
+    () => (topic ? buildDecks(cards, {}, { size: DECK_SIZE, now }) : []),
+    [topic, cards, now]
   );
   const allGroups = useMemo(
     () =>
@@ -62,14 +76,83 @@ export default function GameHost({ topicId, gameId }) {
   }, [records, decks, topic, game]);
 
   const studyCardCounts = useStudyCardCounts(topics, srs);
-
-  const availability = useMemo(
-    () => getGameAvailability(game, { topic, topics, studyCardCounts, decks }),
-    [game, topic, topics, studyCardCounts, decks]
+  const exerciseManifest = useMemo(
+    () => (topicId ? hasExerciseManifest(topicId) : false),
+    [topicId]
   );
 
+  const availability = useMemo(
+    () =>
+      getGameAvailability(game, {
+        topic,
+        topics,
+        studyCardCounts,
+        decks,
+        hasExercises: exerciseManifest,
+      }),
+    [game, topic, topics, studyCardCounts, decks, exerciseManifest]
+  );
+  const categoryAllowed = isGameForCategory(game, topic?.categoryId);
+
   useEffect(() => {
-    if (!topic || !game || !availability.playable || typeof game.load !== 'function') {
+    if (!game?.needsExercises) {
+      setExerciseDoc(undefined);
+      return undefined;
+    }
+    if (!topic || !categoryAllowed || !exerciseManifest) {
+      setExerciseDoc(null);
+      return undefined;
+    }
+    let active = true;
+    setExerciseDoc(undefined);
+    loadExercises(topic.id)
+      .then((md) => {
+        if (!active) return;
+        if (typeof md !== 'string') {
+          setExerciseDoc({
+            topicId: topic.id,
+            decks: [],
+            errors: ['No se pudieron cargar los ejercicios.'],
+          });
+          return;
+        }
+        const parsed = parseExercisesMarkdown(md, { topicId: topic.id });
+        const validation = validateExercises(topic.id, parsed, {
+          cards,
+          decks: exerciseDecks,
+        });
+        const errors = [...parsed.errors, ...validation.errors];
+        const minExercises = Number(game.minExercises) > 0 ? Number(game.minExercises) : 2;
+        const playable = parsed.decks.some(
+          (deck) =>
+            Array.isArray(deck.exercises) && deck.exercises.length >= minExercises
+        );
+        if (!playable) {
+          errors.push(`Cada mazo necesita al menos ${minExercises} ejercicios`);
+        }
+        setExerciseDoc({ ...parsed, errors });
+      })
+      .catch(() => {
+        if (!active) return;
+        setExerciseDoc({
+          topicId: topic.id,
+          decks: [],
+          errors: ['No se pudieron cargar los ejercicios.'],
+        });
+      });
+    return () => {
+      active = false;
+    };
+  }, [game, topic, categoryAllowed, exerciseManifest, cards, exerciseDecks]);
+
+  useEffect(() => {
+    if (
+      !topic ||
+      !game ||
+      !categoryAllowed ||
+      !availability.playable ||
+      typeof game.load !== 'function'
+    ) {
       return undefined;
     }
     let active = true;
@@ -105,7 +188,7 @@ export default function GameHost({ topicId, gameId }) {
     return () => {
       active = false;
     };
-  }, [topic, game, topics, availability.playable, now, cards, topicSrs]);
+  }, [topic, game, topics, categoryAllowed, availability.playable, now, cards, topicSrs]);
 
   if (!topic) return <NotFound message={`Tema "${topicId}" no encontrado`} />;
 
@@ -121,22 +204,30 @@ export default function GameHost({ topicId, gameId }) {
     );
   }
 
+  if (!categoryAllowed) {
+    const gameCategory = game.categories
+      .filter((id) => id !== '*')
+      .map((id) => findCategory(id)?.title || id)
+      .join(', ');
+    const topicCategory = topic.categoryId
+      ? findCategory(topic.categoryId)?.title || topic.categoryId
+      : 'otra categoría';
+
+    return (
+      <main className="sepect-bg topic-page error-page">
+        <h1 className="neon game-app-title">Juego no disponible para esta categoría</h1>
+        <p>
+          «{game.title}» solo está disponible en {gameCategory}. Este tema pertenece a{' '}
+          {topicCategory}.
+        </p>
+        <a className="btn-neon" href={`#/tema/${topic.id}`}>
+          Volver a {topic.title}
+        </a>
+      </main>
+    );
+  }
+
   if (!availability.playable) {
-    if (availability.reason === AVAILABILITY_REASONS.allCaughtUp) {
-      return (
-        <main className="sepect-bg topic-page error-page">
-          <h1 className="neon game-app-title">Todo al día</h1>
-          <p>No tienes cartas por aprender o repasar en este tema ahora mismo.</p>
-          <p>Repasarás automáticamente cuando cada carta venza.</p>
-          <a
-            className="btn-neon"
-            href={`#/tema/${topic.id}`}
-          >
-            Volver al tema
-          </a>
-        </main>
-      );
-    }
     return (
       <main className="sepect-bg topic-page error-page">
         <h1 className="neon game-app-title">Juego no disponible</h1>
@@ -183,6 +274,7 @@ export default function GameHost({ topicId, gameId }) {
 
     const nextSrs = applyGrade(srsRef.current || {}, targetTopicId, cardId, grade, now);
     srsRef.current = nextSrs;
+    setSrs(nextSrs);
     saveSrs(nextSrs);
 
     const xp = awardXP(profileRef.current || {}, {
@@ -211,6 +303,15 @@ export default function GameHost({ topicId, gameId }) {
     return { best: result.best, isRecord: Boolean(result.isRecord) };
   };
 
+  const onExerciseResult = (run = {}) => {
+    if (!topic) return;
+    const result = recordExerciseResult({
+      ...run,
+      topicId: run.topicId || topic.id,
+    });
+    setExerciseProgress(result.progress);
+  };
+
   return (
     <Component
       deck={deck}
@@ -220,6 +321,10 @@ export default function GameHost({ topicId, gameId }) {
       allGroups={allGroups}
       anchorTopicId={topic.id}
       selectCards={selectCards}
+      topic={topic}
+      exercises={game.needsExercises ? exerciseDoc : undefined}
+      exerciseProgress={exerciseProgress}
+      onExerciseResult={onExerciseResult}
       onGrade={onGrade}
       onArcadeEnd={onArcadeEnd}
       onExit={() => navigate(`#/tema/${topic.id}`)}

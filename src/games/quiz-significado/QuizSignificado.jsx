@@ -1,32 +1,62 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import CardImage from '../../components/CardImage.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
-import { getDeckAvailability } from '../availability.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
 import {
   DEFAULT_ROUNDS,
   MAX_ROUNDS,
   MIN_ROUNDS,
   createState,
   currentQuestion,
-  pendingGrades,
   reduce,
+  roundsForDeck,
+  sessionCardsFor,
   summarize,
+  unresolvedCurrent,
 } from './quiz-significado.logic.js';
 
-const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
-const ROUND_OPTIONS = Array.from({ length: MAX_ROUNDS - MIN_ROUNDS + 1 }, (_, index) => MIN_ROUNDS + index);
+const PAGE = {
+  minHeight: '100vh',
+  width: '100%',
+  maxWidth: '100%',
+  padding: '16px clamp(16px, 4vw, 32px)',
+};
+const LEGACY_ROUNDS = Array.from(
+  { length: MAX_ROUNDS - MIN_ROUNDS + 1 },
+  (_, index) => MIN_ROUNDS + index
+);
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Rondas a tu ritmo' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
 const XP_BY_GRADE = { facil: 10, dificil: 25, 'otra-vez': 0 };
 const GAME_ID = 'quiz-significado';
 
 function disabledReasonFor(deck) {
-  const availability = getDeckAvailability({ id: GAME_ID, minCards: 4 }, deck);
-  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  const availability = getDeckAvailability(
+    { id: GAME_ID, status: 'available', minCards: 4 },
+    deck
+  );
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
   return '';
+}
+
+function deckRoundsNote(deck, mode, rounds, best) {
+  if (!deck) return 'Elige un mazo para empezar.';
+  const total = Number(deck.counts?.total ?? deck.total) || 0;
+  const bestText = `Mejor marca ${best}`;
+  if (mode === 'arcade') return `Mazo completo: ${total} preguntas · 3 vidas · ${bestText}`;
+  return `${rounds} de ${total} cartas del mazo · ${bestText}`;
 }
 
 export default function QuizSignificado({
@@ -38,6 +68,7 @@ export default function QuizSignificado({
   onArcadeEnd,
   onExit,
   onBackToTopic,
+  random = Math.random,
 } = {}) {
   const hasDecks = Array.isArray(decks) && decks.length > 0;
   const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
@@ -49,27 +80,50 @@ export default function QuizSignificado({
   const [state, setState] = useState(() => createState());
   const emitted = useRef(0);
   const exiting = useRef(false);
+  const endedRef = useRef(false);
 
   useEffect(() => () => stopSpeech(), []);
 
-  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+  const selectedDeck = hasDecks
+    ? decks.find((entry) => entry.id === selectedDeckId) || decks[0]
+    : null;
+  const selectedDeckCards = Array.isArray(selectedDeck?.cards) ? selectedDeck.cards : [];
+  const maxDeckRounds = Math.min(MAX_ROUNDS, selectedDeckCards.length);
+  const roundOptions = hasDecks ? roundsForDeck(selectedDeckCards.length) : LEGACY_ROUNDS;
+  const effectiveRounds = hasDecks
+    ? Math.max(MIN_ROUNDS, Math.min(rounds, maxDeckRounds))
+    : rounds;
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const deckReason = hasDecks ? disabledReasonFor(selectedDeck) : '';
 
   useEffect(() => {
     const grade = state.lastGrade;
-    if (grade && grade.seq > emitted.current) {
-      emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade);
-    }
-  }, [state, onGrade]);
+    if (!grade || grade.seq <= emitted.current) return;
+    emitted.current = grade.seq;
+    const mapped =
+      gameMode === 'arcade' && grade.grade !== 'otra-vez' ? 'facil' : grade.grade;
+    onGrade?.(grade.cardId, mapped);
+  }, [state.lastGrade, gameMode, onGrade]);
 
   const backToTopic = () => {
     if (onBackToTopic) onBackToTopic();
     else onExit?.();
   };
 
+  const resetSession = () => {
+    emitted.current = 0;
+    exiting.current = false;
+    endedRef.current = false;
+    setArcade(createArcade());
+    setArcadeEnded(false);
+    setArcadeResult(null);
+  };
+
   const endArcade = (finalArcade) => {
-    if (arcadeEnded) return;
+    if (endedRef.current) return;
+    endedRef.current = true;
     const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
     setArcadeEnded(true);
     const run = {
       score: finished.score,
@@ -81,58 +135,45 @@ export default function QuizSignificado({
     };
     const result = onArcadeEnd?.(run);
     setArcadeResult(result || { best: finished.score, isRecord: false });
-    setArcade(finished);
   };
 
   const handleStart = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    setArcadeEnded(false);
-    setArcadeResult(null);
+    resetSession();
     let requested = [];
+    let questionDeck = deck;
     if (hasDecks && selectedDeck) {
-      if (gameMode === 'arcade') {
-        requested = Array.isArray(selectedDeck.cards) ? selectedDeck.cards : [];
-        setArcade(createArcade());
-      } else {
-        const count = Math.min(rounds, selectedDeck.cards.length);
-        requested = (selectCards ? selectCards(count) : selectedDeck.cards.slice(0, count)) || [];
-      }
+      requested = sessionCardsFor(selectedDeckCards, {
+        mode: gameMode,
+        rounds: effectiveRounds,
+        random,
+      });
+      questionDeck = selectedDeckCards;
     } else {
       requested = (selectCards ? selectCards(rounds) : deck.slice(0, rounds)) || [];
     }
     const next = reduce(createState(), {
       type: 'start',
-      rounds: gameMode === 'arcade' ? requested.length : rounds,
+      mode: gameMode,
+      rounds: gameMode === 'arcade' ? requested.length : hasDecks ? effectiveRounds : rounds,
       cards: requested,
-      deck: hasDecks && selectedDeck ? selectedDeck.cards : deck,
-      random: Math.random,
+      deck: questionDeck,
+      random,
     });
     setState(next);
     if (next.phase === 'playing' && next.questions[0]) speak(next.questions[0].card.front);
   };
 
   const handleReplay = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    setArcadeEnded(false);
-    setArcadeResult(null);
-    if (gameMode === 'arcade' && hasDecks && selectedDeck) {
-      setGameMode('arcade');
-      setArcade(createArcade());
+    if (gameMode === 'arcade') {
       handleStart();
       return;
     }
+    resetSession();
     setState(createState());
   };
 
   const handleChooseDeck = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    setGameMode('normal');
-    setArcade(createArcade());
-    setArcadeEnded(false);
-    setArcadeResult(null);
+    resetSession();
     setState(createState());
   };
 
@@ -143,27 +184,29 @@ export default function QuizSignificado({
     const option = round ? round.options.find((entry) => entry.card.id === optionId) : null;
     if (!option) return;
     const wasCorrect = Boolean(option.correct);
+    let next = reduce(state, { type: 'choose', optionId });
+    if (next === state) return;
+
     let nextArcade = arcade;
     if (gameMode === 'arcade') {
-      if (wasCorrect) nextArcade = arcadeHit(arcade);
-      else nextArcade = arcadeMiss(arcade);
+      nextArcade = wasCorrect ? arcadeHit(arcade) : arcadeMiss(arcade);
+      if (!wasCorrect && nextArcade.over) next = reduce(next, { type: 'fail' });
       setArcade(nextArcade);
     }
-    const next = reduce(state, { type: 'choose', optionId });
-    if (next === state) return;
+
     setState(next);
     speak(option.card.back);
-    if (gameMode === 'arcade' && !wasCorrect && arcadeMiss(arcade).over) {
-      endArcade(arcadeMiss(arcade));
-    }
+    if (gameMode === 'arcade' && nextArcade.over) endArcade(nextArcade);
   };
 
   const handleNext = () => {
     const next = reduce(state, { type: 'next' });
     if (next === state) return;
     setState(next);
-    if (next.phase === 'playing' && next.questions[next.roundIndex]) speak(next.questions[next.roundIndex].card.front);
-    if (gameMode === 'arcade' && next.phase === 'complete' && !arcade.over) {
+    if (next.phase === 'playing' && next.questions[next.roundIndex]) {
+      speak(next.questions[next.roundIndex].card.front);
+    }
+    if (gameMode === 'arcade' && next.phase === 'complete') {
       endArcade(arcadeFinish(arcade));
     }
   };
@@ -171,17 +214,12 @@ export default function QuizSignificado({
   const handleExit = () => {
     if (exiting.current) return;
     exiting.current = true;
-    const grade = state.lastGrade;
-    if (grade && grade.seq > emitted.current) {
-      emitted.current = grade.seq;
-      onGrade?.(grade.cardId, gameMode === 'arcade' ? 'facil' : grade.grade);
+    const current = unresolvedCurrent(state);
+    if (current && current.seq > emitted.current) {
+      emitted.current = current.seq;
+      onGrade?.(current.cardId, 'otra-vez');
     }
-    for (const entry of pendingGrades(state)) {
-      if (emitted.current >= entry.seq) continue;
-      emitted.current = entry.seq;
-      onGrade?.(entry.cardId, gameMode === 'arcade' ? (entry.grade === 'otra-vez' ? 'otra-vez' : 'facil') : entry.grade);
-    }
-    onExit?.();
+    backToTopic();
   };
 
   if (hasDecks ? decks.length === 0 : deck.length === 0) {
@@ -190,30 +228,34 @@ export default function QuizSignificado({
         <div className="game-stage">
           <h1 className="neon game-app-title">Elige el significado</h1>
           <p>Este tema no tiene cartas suficientes todavía.</p>
-          <button className="btn-neon" type="button" onClick={backToTopic}>Volver al tema</button>
+          <button className="btn-neon" type="button" onClick={backToTopic}>
+            Volver al tema
+          </button>
         </div>
       </main>
     );
   }
 
   if (state.phase === 'setup') {
-    const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id];
     if (hasDecks) {
+      const startDisabled =
+        !selectedDeck || Boolean(deckReason) || selectedDeckCards.length < MIN_ROUNDS;
       return (
         <GameSetup
           pageClassName="quiz-page"
           title="Elige el significado"
-          lead="Lee el término y elige su significado entre cuatro opciones. Usa mazos de 10 cartas."
-          note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema.`}
+          eyebrow="Configura tu partida"
+          lead="Lee el término y elige su significado entre cuatro opciones. Cada mazo es un bloque de 10 cartas."
+          note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · las opciones salen siempre del mazo elegido.`}
           start={
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <button className="btn-neon" type="button" onClick={() => { setGameMode('normal'); handleStart(); }}>
-                Normal
-              </button>
-              <button className="btn-neon" type="button" onClick={() => { setGameMode('arcade'); handleStart(); }}>
-                Arcade · 3 vidas
-              </button>
-            </div>
+            <button
+              className="btn-neon"
+              type="button"
+              onClick={handleStart}
+              disabled={startDisabled}
+            >
+              Empezar
+            </button>
           }
           actions={
             <>
@@ -224,27 +266,35 @@ export default function QuizSignificado({
             </>
           }
         >
+          <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
           <DeckPicker
             decks={decks}
             selectedDeckId={selectedDeck?.id}
             onSelect={(id) => setSelectedDeckId(id)}
             best={best}
-            disabledReason={(deck) => disabledReasonFor(deck)}
+            disabledReason={(entry) => disabledReasonFor(entry)}
             gameId={GAME_ID}
             label="Elige tu mazo"
           />
-          {!gameMode || gameMode === 'normal' ? (
+          {gameMode === 'normal' ? (
             <div className="quiz-setup">
               <label htmlFor="quiz-rounds">Rondas</label>
-              <select id="quiz-rounds" value={rounds} onChange={(event) => setRounds(Number(event.target.value))}>
-                {ROUND_OPTIONS.map((option) => (
-                  <option key={option} value={option}>{option}</option>
+              <select
+                id="quiz-rounds"
+                value={effectiveRounds}
+                onChange={(event) => setRounds(Number(event.target.value))}
+              >
+                {roundOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
             </div>
-          ) : (
-            <p role="status">Arcade usa el mazo completo. Mejor marca: {bestForDeck || 0}</p>
-          )}
+          ) : null}
+          <p className="quiz-note" role="status">
+            {deckRoundsNote(selectedDeck, gameMode, effectiveRounds, bestForDeck)}
+          </p>
         </GameSetup>
       );
     }
@@ -271,9 +321,15 @@ export default function QuizSignificado({
       >
         <div className="quiz-setup">
           <label htmlFor="quiz-rounds">Rondas</label>
-          <select id="quiz-rounds" value={rounds} onChange={(event) => setRounds(Number(event.target.value))}>
-            {ROUND_OPTIONS.map((option) => (
-              <option key={option} value={option}>{option}</option>
+          <select
+            id="quiz-rounds"
+            value={rounds}
+            onChange={(event) => setRounds(Number(event.target.value))}
+          >
+            {LEGACY_ROUNDS.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
             ))}
           </select>
         </div>
@@ -281,32 +337,46 @@ export default function QuizSignificado({
     );
   }
 
+  if (gameMode === 'arcade' && arcadeEnded) {
+    const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+    const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
+    return (
+      <main className="sepect-bg quiz-page" style={PAGE}>
+        <div className="game-stage">
+          <ArcadeSummary
+            score={arcade.score}
+            best={resultBest}
+            isRecord={isRecord}
+            lives={arcade.lives}
+            correct={arcade.correct}
+            wrong={arcade.wrong}
+            completed={arcade.completed}
+            deckLabel={
+              hasDecks && selectedDeck
+                ? `Mazo ${selectedDeck.number} (${selectedDeck.label})`
+                : undefined
+            }
+            actions={
+              <>
+                <button className="btn-neon" type="button" onClick={handleReplay} autoFocus>
+                  Repetir
+                </button>
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+                <button className="btn-neon" type="button" onClick={backToTopic}>
+                  Volver al tema
+                </button>
+                <SoundToggle />
+              </>
+            }
+          />
+        </div>
+      </main>
+    );
+  }
+
   if (state.phase === 'complete') {
-    if (gameMode === 'arcade' && !arcadeEnded && state.total > 0) {
-      endArcade(arcadeFinish(arcade));
-    }
-    if (gameMode === 'arcade' && arcadeEnded) {
-      const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id] || 0;
-      const isRecord = arcadeResult?.isRecord || arcade.score > bestForDeck;
-      return (
-        <main className="sepect-bg quiz-page" style={PAGE}>
-          <div className="game-stage">
-            <h1 className="neon game-app-title">Arcade terminado</h1>
-            <p role="status">
-              Puntuación {arcade.score} · Aciertos {arcade.correct} · Fallos {arcade.wrong} · Vidas restantes {arcade.lives}
-            </p>
-            <p role="status">{isRecord ? '¡Nuevo récord!' : `Mejor marca: ${Math.max(bestForDeck, arcade.score)}`}</p>
-            {hasDecks && selectedDeck ? <p>Mazo {selectedDeck.number} ({selectedDeck.label})</p> : null}
-            <div className="quiz-actions">
-              <button className="btn-neon" type="button" onClick={handleReplay}>Repetir</button>
-              <button className="btn-neon" type="button" onClick={handleChooseDeck}>Elegir mazo</button>
-              <button className="btn-neon" type="button" onClick={backToTopic}>Volver al tema</button>
-              <SoundToggle />
-            </div>
-          </div>
-        </main>
-      );
-    }
     if (state.total === 0) {
       return (
         <main className="sepect-bg quiz-page" style={PAGE}>
@@ -314,8 +384,12 @@ export default function QuizSignificado({
             <h1 className="neon game-app-title">Sin preguntas disponibles</h1>
             <p>No hay cartas disponibles para esta sesión.</p>
             <div className="quiz-actions">
-              <button className="btn-neon" type="button" onClick={handleReplay}>Elegir rondas</button>
-              <button className="btn-neon" type="button" onClick={backToTopic}>Volver al tema</button>
+              <button className="btn-neon" type="button" onClick={handleReplay}>
+                Elegir rondas
+              </button>
+              <button className="btn-neon" type="button" onClick={backToTopic}>
+                Volver al tema
+              </button>
               <SoundToggle />
             </div>
           </div>
@@ -324,21 +398,61 @@ export default function QuizSignificado({
     }
 
     const stats = summarize(state);
-    const gained = state.results.reduce((sum, result) => sum + (XP_BY_GRADE[result.grade] || 0), 0);
+    const gained = state.results.reduce(
+      (sum, result) => sum + (XP_BY_GRADE[result.grade] || 0),
+      0
+    );
     return (
       <main className="sepect-bg quiz-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon game-app-title">Sesión completada</h1>
-          <p role="status">
-            {stats.firstTry} de {stats.total} aciertos al primer intento · {stats.fails} fallos · +{gained} XP
-          </p>
-          {hasDecks && selectedDeck ? <p>Mazo {selectedDeck.number} ({selectedDeck.label})</p> : null}
-          <div className="quiz-actions">
-            <button className="btn-neon" type="button" onClick={handleReplay}>Jugar de nuevo</button>
-            {hasDecks ? <button className="btn-neon" type="button" onClick={handleChooseDeck}>Elegir mazo</button> : null}
-            <button className="btn-neon" type="button" onClick={backToTopic}>Volver al tema</button>
-            <SoundToggle />
-          </div>
+          <section className="result-panel" aria-labelledby="quiz-summary-title">
+            <p className="result-panel__eyebrow">Sesión completada</p>
+            <h1 id="quiz-summary-title" className="neon game-app-title">
+              Sesión completada
+            </h1>
+            <p className="result-panel__live" role="status">
+              {stats.firstTry} de {stats.total} aciertos al primer intento · {stats.fails} fallos ·
+              +{gained} XP
+            </p>
+            <dl className="result-panel__stats">
+              <div className="result-panel__stat">
+                <dt>Primer intento</dt>
+                <dd>
+                  {stats.firstTry}/{stats.total}
+                </dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>Fallos</dt>
+                <dd>{stats.fails}</dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>XP</dt>
+                <dd>+{gained}</dd>
+              </div>
+              {hasDecks && selectedDeck ? (
+                <div className="result-panel__stat result-panel__stat--wide">
+                  <dt>Mazo</dt>
+                  <dd>
+                    {selectedDeck.number} · {selectedDeck.label}
+                  </dd>
+                </div>
+              ) : null}
+            </dl>
+            <div className="result-panel__actions">
+              <button className="btn-neon" type="button" onClick={handleReplay}>
+                Jugar de nuevo
+              </button>
+              {hasDecks ? (
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+              ) : null}
+              <button className="btn-neon" type="button" onClick={backToTopic}>
+                Volver al tema
+              </button>
+              <SoundToggle />
+            </div>
+          </section>
         </div>
       </main>
     );
@@ -351,7 +465,9 @@ export default function QuizSignificado({
         <div className="game-stage">
           <h1 className="neon game-app-title">Elige el significado</h1>
           <p>No hay preguntas disponibles.</p>
-          <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
+          <button className="btn-neon" type="button" onClick={handleExit}>
+            Volver al tema
+          </button>
         </div>
       </main>
     );
@@ -368,25 +484,36 @@ export default function QuizSignificado({
       : `Incorrecto. La respuesta correcta es «${round.card.back}»`;
   }
 
-  if (gameMode === 'arcade' && arcade.over && !arcadeEnded) {
-    endArcade(arcade);
-  }
-
   return (
     <main className="sepect-bg quiz-page" style={PAGE}>
       <div className="game-stage">
-        <header className="quiz-header">
-          <p style={{ margin: 0 }}>
-            {hasDecks ? `Mazo ${selectedDeck.number} · ` : ''}
-            {gameMode === 'arcade' ? 'Arcade' : 'Normal'} · Pregunta {round.index + 1} de {state.total}
-            {gameMode !== 'arcade' ? ` · ${round.attempts} fallos` : ''}
-          </p>
-          <div className="quiz-actions" style={{ marginTop: 0 }}>
+        <header className="game-session-header">
+          <div className="game-session-header__text">
+            <p className="game-session-header__eyebrow">
+              {hasDecks ? `Mazo ${selectedDeck.number}` : 'Quiz'} ·{' '}
+              {gameMode === 'arcade' ? 'Arcade' : 'Normal'}
+            </p>
+            <p className="game-session-progress__text">
+              Pregunta {round.index + 1} de {state.total}
+              {gameMode !== 'arcade' ? ` · ${round.attempts} fallos` : ''}
+            </p>
+          </div>
+          <div className="game-session-header__actions">
             <SoundToggle />
-            <button className="btn-neon" type="button" onClick={handleExit}>Salir</button>
+            <button className="btn-neon" type="button" onClick={handleExit}>
+              Salir
+            </button>
           </div>
         </header>
-        {gameMode === 'arcade' ? <ArcadeHud lives={arcade.lives} score={arcade.score} streak={arcade.streak} best={typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id]} /> : null}
+
+        {gameMode === 'arcade' ? (
+          <ArcadeHud
+            lives={arcade.lives}
+            score={arcade.score}
+            streak={arcade.streak}
+            best={bestForDeck}
+          />
+        ) : null}
 
         <div className="card-neon quiz-question">
           <span className="quiz-question__label">Elige el significado de</span>
@@ -427,12 +554,15 @@ export default function QuizSignificado({
           })}
         </div>
 
-        <p className="quiz-status" role="status" aria-live="polite">{announcement}</p>
+        <p className="quiz-status" role="status" aria-live="polite">
+          {announcement}
+        </p>
 
         {answered && (
           <div className="card-neon quiz-feedback">
             <p style={{ margin: 0 }}>
-              {round.won ? '¡Acertaste!' : 'La respuesta correcta es:'} <strong>{round.card.back}</strong>
+              {round.won ? '¡Acertaste!' : 'La respuesta correcta es:'}{' '}
+              <strong>{round.card.back}</strong>
             </p>
             {isSupported() && (
               <button

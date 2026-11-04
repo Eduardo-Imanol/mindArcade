@@ -16,6 +16,9 @@ import {
   pendingGrades,
   reduce,
   revealedIndices,
+  roundsForDeck,
+  sessionCardsFor,
+  unresolvedCurrent,
 } from './ahorcado.logic.js';
 
 const PRESERVE = () => 0.999999;
@@ -239,6 +242,49 @@ describe('ahorcado reducer', () => {
     const snapshot = JSON.parse(JSON.stringify(state));
     guess(state, 'S');
     expect(state).toEqual(snapshot);
+  });
+});
+
+describe('ahorcado decks (spec-18 T8)', () => {
+  it('caps round options to the deck size between 3 and 10', () => {
+    expect(roundsForDeck(10)).toEqual([3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(roundsForDeck(5)).toEqual([3, 4, 5]);
+    expect(roundsForDeck(3)).toEqual([3]);
+    expect(roundsForDeck(2)).toEqual([]);
+    expect(roundsForDeck(99)).toEqual([3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(roundsForDeck()).toEqual([]);
+  });
+
+  it('selects only cards inside the deck and the full deck in arcade', () => {
+    const cards = DECK.slice(0, 5);
+    expect(sessionCardsFor(cards, { mode: 'normal', rounds: 4 }).map((card) => card.id)).toEqual([
+      'a',
+      'b',
+      'c',
+      'd',
+    ]);
+    expect(sessionCardsFor(cards, { mode: 'arcade', rounds: 3 })).toHaveLength(5);
+    expect(cards.map((card) => card.id)).toEqual(['a', 'b', 'c', 'd', 'e']);
+  });
+
+  it('grades only the current card on exit and resolves it as otra-vez', () => {
+    expect(unresolvedCurrent(createState())).toBeNull();
+    let state = start(DECK.slice(0, 2), 3);
+    expect(unresolvedCurrent(state)).toEqual({ cardId: 'a', grade: 'otra-vez', seq: 1 });
+
+    state = play(state, ['S', 'O', 'L']);
+    expect(state.phase).toBe('round-won');
+    expect(unresolvedCurrent(state)).toBeNull();
+  });
+
+  it('fails the current round without guessing all letters', () => {
+    let state = start(DECK.slice(0, 1), 3);
+    state = play(state, ['X', 'S']);
+    const failed = reduce(state, { type: 'fail' });
+    expect(failed.phase).toBe('round-lost');
+    expect(failed.lastGrade).toEqual({ seq: 1, cardId: 'a', grade: 'otra-vez' });
+    expect(failed.results[0].mistakes).toBe(1);
+    expect(reduce(failed, { type: 'fail' })).toBe(failed);
   });
 });
 

@@ -11,6 +11,7 @@ describe('titleForRoute (AC-19)', () => {
       'Sepect — Categoría no encontrada'
     );
     expect(titleForRoute({ view: 'progress' })).toBe('Sepect — Progreso');
+    expect(titleForRoute({ view: 'settings' })).toBe('Sepect — Configuración');
     expect(titleForRoute({ view: 'notFound' })).toBe('Sepect — 404');
     expect(titleForRoute({ view: 'topic', topicId: 'no-existe' })).toBe(
       'Sepect — Tema no encontrado'

@@ -96,13 +96,15 @@ describe('Memorama flip logic (AC-5, AC-6)', () => {
     view.unmount();
   });
 
-  it('exiting grades never-found cards as otra-vez and calls onExit', () => {
+  it('exiting grades only the shown cards as otra-vez and calls onExit (AC-12)', () => {
     const onGrade = vi.fn(() => ({}));
     const onExit = vi.fn();
     const view = mount(<Memorama deck={DECK} onGrade={onGrade} onExit={onExit} />);
     start(view.container);
+    click(tile(view.container, 'a', 'front'));
+    click(tile(view.container, 'b', 'front'));
     click(buttonByText(view.container, 'Salir'));
-    expect(onGrade).toHaveBeenCalledTimes(4);
+    expect(onGrade.mock.calls.map(([cardId]) => cardId).sort()).toEqual(['a', 'b']);
     expect(onGrade.mock.calls.every(([, grade]) => grade === 'otra-vez')).toBe(true);
     expect(onExit).toHaveBeenCalled();
     view.unmount();

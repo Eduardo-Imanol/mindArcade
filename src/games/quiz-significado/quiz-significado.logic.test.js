@@ -12,7 +12,10 @@ import {
   normalizeBack,
   pendingGrades,
   reduce,
+  roundsForDeck,
+  sessionCardsFor,
   summarize,
+  unresolvedCurrent,
 } from './quiz-significado.logic.js';
 
 const PRESERVE = () => 0.999999;
@@ -276,5 +279,77 @@ describe('quiz-significado constants', () => {
     expect(PHASES).toEqual(['setup', 'playing', 'answered', 'complete']);
     expect(MAX_ATTEMPTS).toBe(2);
     expect([MIN_ROUNDS, MAX_ROUNDS, DEFAULT_ROUNDS]).toEqual([3, 10, 10]);
+  });
+});
+
+describe('quiz deck sessions (spec-18 T7)', () => {
+  it('offers rounds from 3 up to the deck size, capped at 10', () => {
+    expect(roundsForDeck(10)).toEqual([3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(roundsForDeck(5)).toEqual([3, 4, 5]);
+    expect(roundsForDeck(3)).toEqual([3]);
+    expect(roundsForDeck(2)).toEqual([]);
+    expect(roundsForDeck('4')).toEqual([3, 4]);
+    expect(roundsForDeck(12)).toEqual([3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(roundsForDeck(Number.NaN)).toEqual([]);
+  });
+
+  it('caps normal sessions to the deck and sends every card in arcade', () => {
+    const normal = sessionCardsFor(DECK, { rounds: 3, random: PRESERVE });
+    expect(normal.map((card) => card.id)).toEqual(['a', 'b', 'c']);
+
+    const capped = sessionCardsFor(DECK, { rounds: 99, random: PRESERVE });
+    expect(capped).toHaveLength(DECK.length);
+
+    const arcade = sessionCardsFor(DECK, { mode: 'arcade', rounds: 3, random: PRESERVE });
+    expect(arcade.map((card) => card.id)).toEqual(DECK.map((card) => card.id));
+
+    const before = DECK.map((card) => card.id);
+    sessionCardsFor(DECK, { mode: 'arcade', random: () => 0 });
+    expect(DECK.map((card) => card.id)).toEqual(before);
+  });
+
+  it('starts arcade with the complete deck regardless of the round clamp', () => {
+    const state = reduce(createState(), {
+      type: 'start',
+      mode: 'arcade',
+      rounds: 3,
+      cards: DECK,
+      deck: DECK,
+      random: PRESERVE,
+    });
+    expect(state.phase).toBe('playing');
+    expect(state.requested).toBe(DECK.length);
+    expect(state.total).toBe(DECK.length);
+  });
+
+  it('tracks only the unresolved current card for exit grading (AC-12)', () => {
+    let state = start(DECK.slice(0, 3), 3);
+    expect(unresolvedCurrent(state)).toEqual({ cardId: 'a', grade: 'otra-vez', seq: 1 });
+
+    state = choose(state, 'a');
+    expect(unresolvedCurrent(state)).toBeNull();
+
+    state = reduce(state, { type: 'next' });
+    expect(unresolvedCurrent(state)).toEqual({ cardId: 'b', grade: 'otra-vez', seq: 2 });
+
+    state = choose(state, 'b');
+    expect(unresolvedCurrent(state)).toBeNull();
+    state = reduce(state, { type: 'next' });
+    state = choose(state, 'c');
+    state = reduce(state, { type: 'next' });
+    expect(state.phase).toBe('complete');
+    expect(unresolvedCurrent(state)).toBeNull();
+    expect(unresolvedCurrent(createState())).toBeNull();
+    expect(unresolvedCurrent(undefined)).toBeNull();
+  });
+
+  it('fail resolves the current round as otra-vez exactly once', () => {
+    let state = start(DECK.slice(0, 2), 2);
+    state = reduce(state, { type: 'fail' });
+    expect(state.phase).toBe('answered');
+    expect(state.results).toEqual([{ seq: 1, cardId: 'a', grade: 'otra-vez', attempts: 1 }]);
+    expect(state.lastGrade).toEqual({ seq: 1, cardId: 'a', grade: 'otra-vez' });
+    expect(reduce(state, { type: 'fail' })).toBe(state);
+    expect(reduce(createState(), { type: 'fail' })).toEqual(createState());
   });
 });

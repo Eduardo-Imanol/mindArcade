@@ -215,6 +215,9 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
           <a className="btn-neon hub-progress-link" href="#/progreso">
             Progreso
           </a>
+          <a className="btn-neon hub-settings-link" href="#/configuracion">
+            Configuración
+          </a>
         </div>
       </header>
 

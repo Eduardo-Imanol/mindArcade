@@ -163,7 +163,7 @@ describe('quiz-significado round semantics (AC-4, AC-5, AC-7, AC-9)', () => {
     view.unmount();
   });
 
-  it('exiting mid-session grades unresolved rounds as otra-vez exactly once', () => {
+  it('exiting mid-session grades only the visible card exactly once (AC-12)', () => {
     const onGrade = vi.fn(() => ({}));
     const onExit = vi.fn();
     const view = mountGame({ onGrade, onExit });
@@ -177,7 +177,6 @@ describe('quiz-significado round semantics (AC-4, AC-5, AC-7, AC-9)', () => {
     expect(onGrade.mock.calls).toEqual([
       ['a', 'facil'],
       ['b', 'otra-vez'],
-      ['c', 'otra-vez'],
     ]);
     view.unmount();
   });

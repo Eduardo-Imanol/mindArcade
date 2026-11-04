@@ -1,13 +1,18 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import CardImage from '../../components/CardImage.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
+import ProgressBar from '../../components/ProgressBar.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
-import { getDeckAvailability } from '../availability.js';
-import { createState, reduce } from './flashcards.logic.js';
+import { DECK_MASTERY_LABELS } from '../../core/repetition/decks.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
+import { createState, reduce, sessionCardsFor } from './flashcards.logic.js';
 
 const GRADES = [
   { id: 'otra-vez', label: 'Otra vez' },
@@ -15,36 +20,51 @@ const GRADES = [
   { id: 'facil', label: 'Fácil' },
 ];
 
-const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Pendientes o repaso' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
+
+const PAGE = {
+  minHeight: '100vh',
+  width: '100%',
+  maxWidth: '100%',
+  padding: '16px clamp(16px, 4vw, 32px)',
+};
 const GAME_ID = 'flashcards';
 
-function shuffleCards(cards, random) {
-  const list = Array.isArray(cards) ? [...cards] : [];
-  for (let index = list.length - 1; index > 0; index -= 1) {
-    const swap = Math.floor(random() * (index + 1));
-    [list[index], list[swap]] = [list[swap], list[index]];
-  }
-  return list;
-}
-
-function deckSummary(deckEntry) {
-  if (!deckEntry) return { label: 'Sin mazos', cta: 'Elegir mazo' };
-  const mastered = deckEntry.mastery === 'aprendida';
-  const reviewing = deckEntry.mastery === 'repasar';
-  const newDeck = deckEntry.mastery === 'no-aprendida';
-  if (mastered) return { label: 'Aprendida', cta: 'Repasar mazo' };
-  if (reviewing) return { label: 'Repasar', cta: 'Repasar mazo' };
-  if (newDeck) return { label: 'No aprendida', cta: 'Empezar mazo' };
-  if (deckEntry.complete) return { label: 'Completado', cta: 'Repasar mazo' };
-  if (deckEntry.studied > 0 && deckEntry.pending > 0) return { label: 'En curso', cta: 'Reanudar mazo' };
-  if (deckEntry.studied > 0) return { label: 'Completado', cta: 'Repasar mazo' };
-  return { label: 'Sin empezar', cta: 'Empezar mazo' };
-}
-
 function disabledReasonFor(deck) {
-  const availability = getDeckAvailability({ id: GAME_ID, minCards: 1 }, deck);
-  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  const availability = getDeckAvailability(
+    { id: GAME_ID, status: 'available', minCards: 1 },
+    deck
+  );
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
   return '';
+}
+
+function startLabelFor(deck, mode) {
+  if (!deck) return 'Elegir mazo';
+  if (mode === 'arcade') return 'Jugar arcade';
+  if (deck.pending > 0) return deck.studied > 0 ? 'Reanudar mazo' : 'Empezar mazo';
+  return 'Repasar mazo';
+}
+
+function setupHintFor(deck, mode, best) {
+  if (!deck) return 'Elige un mazo para empezar.';
+  const status = DECK_MASTERY_LABELS[deck.mastery] || DECK_MASTERY_LABELS.empty;
+  const total = Number(deck.counts?.total ?? deck.total) || 0;
+  const learned = Number(deck.counts?.learned) || 0;
+  const due = Number(deck.counts?.due) || 0;
+  const pending = Number(deck.pending) || 0;
+  const session =
+    mode === 'arcade'
+      ? `${total} ${total === 1 ? 'carta' : 'cartas'} · 3 vidas`
+      : pending > 0
+        ? `${pending} ${pending === 1 ? 'carta pendiente' : 'cartas pendientes'}`
+        : `repaso completo de ${total} ${total === 1 ? 'carta' : 'cartas'}`;
+  return `${status} · ${learned}/${total} aprendidas · ${due} vencidas · ${session} · Mejor marca ${best}`;
 }
 
 export default function Flashcards({
@@ -70,12 +90,15 @@ export default function Flashcards({
   );
   const emittedRef = useRef(new Set());
   const exitingRef = useRef(false);
+  const endedRef = useRef(false);
 
   useEffect(() => () => stopSpeech(), []);
 
   const selectedDeck = hasDecks
     ? decks.find((entry) => entry.id === selectedDeckId) || decks[0]
     : null;
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const disabledReason = disabledReasonFor(selectedDeck);
 
   useEffect(() => {
     if (state.phase === 'setup' || state.complete || arcade.over) return undefined;
@@ -91,73 +114,39 @@ export default function Flashcards({
     return () => document.removeEventListener('keydown', onKey);
   }, [state.complete, state.phase, arcade.over]);
 
-  const beginDeck = (deckEntry, { review = false } = {}) => {
-    if (!deckEntry) return;
-    const source = Array.isArray(deckEntry.cards) ? deckEntry.cards : [];
-    emittedRef.current = new Set();
-    exitingRef.current = false;
-    setSelectedDeckId(deckEntry.id);
-    setArcadeEnded(false);
-    setArcadeResult(null);
-    if (gameMode === 'arcade') {
-      setArcade(createArcade());
-    }
-    dispatch({
-      type: 'start',
-      deck: shuffleCards(source, random),
-      phase: 'playing',
-      mode: gameMode === 'arcade' ? 'arcade' : review ? 'review' : 'resume',
-    });
-  };
-
   const backToTopic = () => {
     if (onBackToTopic) onBackToTopic();
     else onExit?.();
   };
 
-  const handleReset = () => {
+  const resetSession = () => {
     emittedRef.current = new Set();
     exitingRef.current = false;
-    setArcadeEnded(false);
-    setArcadeResult(null);
-    if (gameMode === 'arcade') {
-      setArcade(createArcade());
-      if (hasDecks && selectedDeck) {
-        dispatch({
-          type: 'start',
-          deck: shuffleCards(selectedDeck.cards, random),
-          phase: 'playing',
-          mode: 'arcade',
-        });
-        return;
-      }
-    }
-    if (hasDecks && selectedDeck) beginDeck(selectedDeck, { review: true });
-    else dispatch({ type: 'reset' });
-  };
-
-  const handleChooseDeck = () => {
-    emittedRef.current = new Set();
-    exitingRef.current = false;
-    setGameMode('normal');
+    endedRef.current = false;
     setArcade(createArcade());
     setArcadeEnded(false);
     setArcadeResult(null);
-    dispatch({ type: 'start', deck: [], phase: 'setup' });
   };
 
-  const handleExit = () => {
-    if (exitingRef.current) return;
-    exitingRef.current = true;
-    backToTopic();
+  const startDeck = (deckEntry, { review = false } = {}) => {
+    if (!deckEntry) return;
+    const cards = sessionCardsFor(deckEntry, { mode: gameMode, review, random });
+    if (cards.length === 0) return;
+    resetSession();
+    setSelectedDeckId(deckEntry.id);
+    dispatch({
+      type: 'start',
+      deck: cards,
+      phase: 'playing',
+      mode: gameMode === 'arcade' ? 'arcade' : review ? 'review' : 'resume',
+    });
   };
-
-  const activeDeck = hasDecks ? state.sessionDeck : deck;
-  const card = activeDeck[state.index];
 
   const endArcade = (finalArcade) => {
-    if (arcadeEnded) return;
+    if (endedRef.current) return;
+    endedRef.current = true;
     const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
     setArcadeEnded(true);
     const run = {
       score: finished.score,
@@ -169,68 +158,85 @@ export default function Flashcards({
     };
     const result = onArcadeEnd?.(run);
     setArcadeResult(result || { best: finished.score, isRecord: false });
-    setArcade(finished);
   };
+
+  useEffect(() => {
+    if (gameMode !== 'arcade' || !hasDecks) return;
+    if (state.phase === 'setup' || endedRef.current) return;
+    if (arcade.over) {
+      endArcade(arcade);
+      return;
+    }
+    if (state.complete) endArcade(arcadeFinish(arcade));
+  }, [arcade, gameMode, hasDecks, state.complete, state.phase]);
+
+  const handleReplay = () => {
+    if (hasDecks && selectedDeck) {
+      startDeck(selectedDeck, { review: true });
+      return;
+    }
+    resetSession();
+    dispatch({ type: 'reset' });
+  };
+
+  const handleChooseDeck = () => {
+    resetSession();
+    dispatch({ type: 'start', deck: [], phase: 'setup' });
+  };
+
+  const handleExit = () => {
+    if (exitingRef.current) return;
+    exitingRef.current = true;
+    backToTopic();
+  };
+
+  const activeDeck = hasDecks ? state.sessionDeck : deck;
+  const card = activeDeck[state.index];
+  const modeLabel = gameMode === 'arcade' ? 'Arcade' : 'Normal';
 
   const handleGrade = (grade) => {
     if (!card) return;
     if (gameMode === 'arcade' && arcade.over) return;
-    const key = String(card.id);
+    const key = String(card.id ?? state.index);
     if (emittedRef.current.has(key)) return;
     emittedRef.current.add(key);
 
     let nextArcade = arcade;
     if (gameMode === 'arcade') {
-      if (grade === 'otra-vez') {
-        nextArcade = arcadeMiss(arcade);
-      } else {
-        nextArcade = arcadeHit(arcade);
-      }
+      nextArcade = grade === 'otra-vez' ? arcadeMiss(arcade) : arcadeHit(arcade);
       setArcade(nextArcade);
     }
 
-    const gradeToEmit = gameMode === 'arcade' ? (grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade;
+    const gradeToEmit =
+      gameMode === 'arcade' ? (grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade;
     const result = onGrade?.(card.id, gradeToEmit);
-    dispatch({ type: 'grade', grade: gradeToEmit, cardId: card.id, gained: result?.gained });
-
-    if (gameMode === 'arcade' && arcadeMiss(arcade).lives !== arcade.lives && arcadeMiss(arcade).over) {
-      // miss just caused over
-    }
+    dispatch({
+      type: 'grade',
+      grade: gradeToEmit,
+      cardId: card.id,
+      gained: result?.gained,
+    });
   };
 
-  useEffect(() => {
-    if (gameMode !== 'arcade') return;
-    if (arcadeEnded) return;
-    if (arcade.over) {
-      endArcade(arcade);
-      return;
-    }
-    if (hasDecks && selectedDeck && state.complete) {
-      const finished = arcadeFinish(arcade);
-      if (!finished.completed) return;
-      endArcade(finished);
-    }
-  }, [gameMode, arcade, arcadeEnded, state.complete, hasDecks, selectedDeck]);
-
   if (hasDecks && state.phase === 'setup') {
-    const summary = deckSummary(selectedDeck);
-    const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id];
+    const reason = disabledReason;
+    const startDisabled = !selectedDeck || Boolean(reason);
     return (
       <GameSetup
         pageClassName="flashcards-page"
         title="Flashcards"
         eyebrow="Elige tu mazo"
-        lead="Estudia las cartas en bloques de 10. Tu progreso se guarda con la repetición espaciada."
-        note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · el mazo se usa completo en partida.`}
+        lead="Estudia un bloque de 10 cartas. Tu progreso viaja con el SRS y se comparte con todos los juegos."
+        note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · el mazo se juega completo en arcade.`}
         start={
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            <button className="btn-neon" type="button" onClick={() => { setGameMode('normal'); if (selectedDeck) beginDeck(selectedDeck); }}>
-              Normal · {summary.cta}
-            </button>
-            <button className="btn-neon" type="button" onClick={() => { setGameMode('arcade'); if (selectedDeck) beginDeck(selectedDeck); }}>
-              Arcade · 3 vidas
-            </button>
-          </div>
+          <button
+            className="btn-neon"
+            type="button"
+            onClick={() => startDeck(selectedDeck)}
+            disabled={startDisabled}
+          >
+            {startLabelFor(selectedDeck, gameMode)}
+          </button>
         }
         actions={
           <>
@@ -241,25 +247,24 @@ export default function Flashcards({
           </>
         }
       >
+        <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
         <DeckPicker
           decks={decks}
           selectedDeckId={selectedDeck?.id}
           onSelect={(id) => setSelectedDeckId(id)}
           best={best}
-          disabledReason={(deck) => disabledReasonFor(deck)}
+          disabledReason={(entry) => disabledReasonFor(entry)}
           gameId={GAME_ID}
           label="Elige tu mazo"
         />
         <p className="flashcards-setup__hint" role="status">
-          {selectedDeck
-            ? `Mazo ${selectedDeck.number} seleccionado: ${summary.label.toLowerCase()}. Mejor marca arcade: ${bestForDeck || 0}`
-            : 'Elige un mazo para empezar.'}
+          {setupHintFor(selectedDeck, gameMode, bestForDeck)}
         </p>
       </GameSetup>
     );
   }
 
-  if (hasDecks && !selectedDeck) {
+  if (!hasDecks && activeDeck.length === 0) {
     return (
       <main className="sepect-bg flashcards-page" style={PAGE}>
         <div className="game-stage">
@@ -273,9 +278,9 @@ export default function Flashcards({
     );
   }
 
-  if (activeDeck.length === 0) {
+  if (hasDecks && (!selectedDeck || activeDeck.length === 0)) {
     return (
-      <main className="sepect-bg" style={PAGE}>
+      <main className="sepect-bg flashcards-page" style={PAGE}>
         <div className="game-stage">
           <h1 className="neon game-app-title">Flashcards</h1>
           <p>Este tema no tiene cartas todavía.</p>
@@ -288,68 +293,98 @@ export default function Flashcards({
   }
 
   if (gameMode === 'arcade' && arcadeEnded) {
-    const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id] || 0;
-    const isRecord = arcadeResult?.isRecord || arcade.score > bestForDeck;
+    const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+    const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
     return (
       <main className="sepect-bg flashcards-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon game-app-title">Arcade terminado</h1>
-          <p role="status">
-            Puntuación {arcade.score} · Aciertos {arcade.correct} · Fallos {arcade.wrong} · Vidas restantes {arcade.lives}
-          </p>
-          <p role="status">{isRecord ? '¡Nuevo récord!' : `Mejor marca: ${Math.max(bestForDeck, arcade.score)}`}</p>
-          {hasDecks ? <p>Mazo {selectedDeck.number} ({selectedDeck.label})</p> : null}
-          <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
-            <button className="btn-neon" type="button" onClick={handleReset}>
-              Repetir
-            </button>
-            <button className="btn-neon" type="button" onClick={handleChooseDeck}>
-              Elegir mazo
-            </button>
-            <button className="btn-neon" type="button" onClick={handleExit}>
-              Volver al tema
-            </button>
-            <SoundToggle />
-          </div>
+          <ArcadeSummary
+            score={arcade.score}
+            best={resultBest}
+            isRecord={isRecord}
+            lives={arcade.lives}
+            correct={arcade.correct}
+            wrong={arcade.wrong}
+            completed={arcade.completed}
+            deckLabel={hasDecks ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : undefined}
+            actions={
+              <>
+                <button className="btn-neon" type="button" onClick={handleReplay} autoFocus>
+                  Repetir
+                </button>
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+                <button className="btn-neon" type="button" onClick={handleExit}>
+                  Volver al tema
+                </button>
+                <SoundToggle />
+              </>
+            }
+          />
         </div>
       </main>
     );
   }
 
   if (state.complete && gameMode !== 'arcade') {
-    const nextDeck = hasDecks ? decks.find((entry) => entry.number === selectedDeck.number + 1) : null;
+    const nextDeck = hasDecks
+      ? decks.find((entry) => entry.number === selectedDeck.number + 1)
+      : null;
     return (
       <main className="sepect-bg flashcards-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon game-app-title">Sesión completada</h1>
-          {hasDecks ? (
-            <p role="status">
-              Mazo {selectedDeck.number} ({selectedDeck.label}) completado · {state.correct} correctas · {state.wrong} fallos · +{state.gained} XP
-            </p>
-          ) : (
-            <p role="status">
+          <section className="result-panel" aria-labelledby="flashcards-summary-title">
+            <p className="result-panel__eyebrow">Sesión completada</p>
+            <h1 id="flashcards-summary-title" className="neon game-app-title">
+              {hasDecks ? `Mazo ${selectedDeck.number} completado` : 'Sesión completada'}
+            </h1>
+            <p className="result-panel__live" role="status">
+              {hasDecks ? `Mazo ${selectedDeck.number} (${selectedDeck.label}) · ` : ''}
               {state.correct} correctas · {state.wrong} fallos · +{state.gained} XP
             </p>
-          )}
-          <div style={{ display: 'flex', gap: 8, marginTop: 16, flexWrap: 'wrap' }}>
-            {hasDecks && nextDeck ? (
-              <button className="btn-neon" type="button" onClick={() => beginDeck(nextDeck)}>
-                Siguiente mazo
+            <dl className="result-panel__stats">
+              <div className="result-panel__stat">
+                <dt>Aciertos</dt>
+                <dd>{state.correct}</dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>Fallos</dt>
+                <dd>{state.wrong}</dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>XP</dt>
+                <dd>+{state.gained}</dd>
+              </div>
+              {hasDecks ? (
+                <div className="result-panel__stat result-panel__stat--wide">
+                  <dt>Mazo</dt>
+                  <dd>
+                    {selectedDeck.number} · {selectedDeck.label}
+                  </dd>
+                </div>
+              ) : null}
+            </dl>
+            <div className="result-panel__actions">
+              {hasDecks && nextDeck ? (
+                <button className="btn-neon" type="button" onClick={() => startDeck(nextDeck)}>
+                  Siguiente mazo
+                </button>
+              ) : null}
+              <button className="btn-neon" type="button" onClick={handleReplay}>
+                {hasDecks ? 'Repetir mazo' : 'Repasar de nuevo'}
               </button>
-            ) : null}
-            <button className="btn-neon" type="button" onClick={handleReset}>
-              {hasDecks ? 'Repetir mazo' : 'Repasar de nuevo'}
-            </button>
-            {hasDecks ? (
-              <button className="btn-neon" type="button" onClick={handleChooseDeck}>
-                Elegir mazo
+              {hasDecks ? (
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+              ) : null}
+              <button className="btn-neon" type="button" onClick={handleExit}>
+                Volver al tema
               </button>
-            ) : null}
-            <button className="btn-neon" type="button" onClick={handleExit}>
-              Volver al tema
-            </button>
-            <SoundToggle />
-          </div>
+              <SoundToggle />
+            </div>
+          </section>
         </div>
       </main>
     );
@@ -357,75 +392,108 @@ export default function Flashcards({
 
   return (
     <main className="sepect-bg flashcards-page" style={PAGE}>
-      <div className="game-stage">
-        <h1 className="neon game-app-title" style={{ margin: '0 0 8px' }}>
-          Flashcards
-        </h1>
-        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-          <p style={{ margin: 0 }}>
-            {hasDecks ? `Mazo ${selectedDeck.number} · ` : ''}
-            {gameMode === 'arcade' ? 'Arcade' : 'Normal'} · Carta {state.index + 1} de {activeDeck.length}
-          </p>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+      <div className="game-stage flashcards-session">
+        <header className="game-session-header">
+          <div className="game-session-header__text">
+            <p className="game-session-header__eyebrow">
+              {hasDecks ? `Mazo ${selectedDeck.number}` : 'Flashcards'} · {modeLabel}
+            </p>
+            <h1 className="neon game-app-title">Flashcards</h1>
+          </div>
+          <div className="game-session-header__actions">
             <SoundToggle />
             <button className="btn-neon" type="button" onClick={handleExit}>
               Salir
             </button>
           </div>
         </header>
+
         {gameMode === 'arcade' ? (
-          <ArcadeHud lives={arcade.lives} score={arcade.score} streak={arcade.streak} best={typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id]} />
+          <ArcadeHud
+            lives={arcade.lives}
+            score={arcade.score}
+            streak={arcade.streak}
+            best={bestForDeck}
+          />
         ) : null}
+
+        <div className="game-session-progress">
+          <ProgressBar
+            value={(state.index + 1) / activeDeck.length}
+            label={`Progreso del mazo: carta ${state.index + 1} de ${activeDeck.length}`}
+          />
+          <p className="game-session-progress__text">
+            Carta {state.index + 1} de {activeDeck.length}
+          </p>
+        </div>
+
         <button
           type="button"
-          className="card-neon"
+          className="card-neon flashcards-card"
           onClick={() => dispatch({ type: 'flip' })}
-          aria-label={`Carta ${state.index + 1} de ${activeDeck.length}: ${card.front}. ${state.flipped ? 'Mostrando significado' : 'Pulsa para voltear'}`}
-          style={{
-            width: '100%',
-            marginTop: 12,
-            padding: 16,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 12,
-            cursor: 'pointer',
-            textAlign: 'center',
-          }}
+          aria-label={`Carta ${state.index + 1} de ${activeDeck.length}: ${card.front}. ${
+            state.flipped ? 'Mostrando significado' : 'Pulsa para voltear'
+          }`}
         >
           <CardImage card={card} size={128} fill />
-          <span style={{ fontSize: 20, fontWeight: 700 }}>{card.front}</span>
-          {state.flipped ? <span aria-live="polite">{card.back}</span> : null}
+          <span className="flashcards-card__front">{card.front}</span>
+          {state.flipped ? (
+            <span className="flashcards-card__back" aria-live="polite">
+              {card.back}
+            </span>
+          ) : (
+            <span className="flashcards-card__hint">Pulsa para ver el significado</span>
+          )}
         </button>
-        {isSupported() ? (
-          <button
-            className="btn-neon"
-            type="button"
-            style={{ marginTop: 8 }}
-            aria-label="Escuchar la carta"
-            onClick={() => speak(state.flipped ? `${card.front}. ${card.back}` : card.front)}
-          >
-            Escuchar
-          </button>
-        ) : null}
-        <p style={{ opacity: 0.75, fontSize: 13 }}>
+
+        <div className="flashcards-tools">
+          {isSupported() ? (
+            <button
+              className="btn-neon"
+              type="button"
+              aria-label="Escuchar la carta"
+              onClick={() => speak(state.flipped ? `${card.front}. ${card.back}` : card.front)}
+            >
+              🔊 Escuchar
+            </button>
+          ) : null}
+        </div>
+
+        <p className="flashcards-help">
           Toca la carta o pulsa Espacio/Enter para voltear · dificultad: {card.difficulty}
         </p>
+
         {state.flipped ? (
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <div className="flashcards-grades" role="group" aria-label="Califica la carta">
             {GRADES.map((grade) => (
-              <button key={grade.id} className="btn-neon" type="button" onClick={() => handleGrade(grade.id)}>
-                {grade.id === 'otra-vez' ? 'Otra vez' : grade.id === 'dificil' ? 'Difícil' : 'Fácil'}
+              <button
+                key={grade.id}
+                className="btn-neon"
+                type="button"
+                onClick={() => handleGrade(grade.id)}
+              >
+                {grade.label}
               </button>
             ))}
           </div>
         ) : null}
+
         {gameMode !== 'arcade' ? (
-          <nav style={{ display: 'flex', gap: 8, marginTop: 12 }} aria-label="Navegación de cartas">
-            <button className="btn-neon" type="button" onClick={() => dispatch({ type: 'prev' })} disabled={state.index === 0}>
+          <nav className="flashcards-nav" aria-label="Navegación de cartas">
+            <button
+              className="btn-neon"
+              type="button"
+              onClick={() => dispatch({ type: 'prev' })}
+              disabled={state.index === 0}
+            >
               Anterior
             </button>
-            <button className="btn-neon" type="button" onClick={() => dispatch({ type: 'next' })} disabled={state.index >= activeDeck.length - 1}>
+            <button
+              className="btn-neon"
+              type="button"
+              onClick={() => dispatch({ type: 'next' })}
+              disabled={state.index >= activeDeck.length - 1}
+            >
               Siguiente
             </button>
           </nav>

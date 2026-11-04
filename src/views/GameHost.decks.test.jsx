@@ -23,6 +23,7 @@ vi.mock('../games/registry.js', () => ({
     };
   },
   listGames: () => [],
+  isGameForCategory: () => true,
 }));
 
 import GameHost from './GameHost.jsx';

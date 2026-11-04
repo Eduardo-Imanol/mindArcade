@@ -5,6 +5,7 @@ import TopicView from '../views/TopicView.jsx';
 import SourceReader from '../views/SourceReader.jsx';
 import GameHost from '../views/GameHost.jsx';
 import Dashboard from '../views/Dashboard.jsx';
+import SettingsView from '../views/SettingsView.jsx';
 import NotFound from '../components/NotFound.jsx';
 import CategoryView from '../views/CategoryView.jsx';
 import { loadCatalog } from '../core/content/catalog.js';
@@ -13,6 +14,7 @@ import { findCategory } from '../core/content/library.js';
 
 export function titleForRoute(route) {
   if (route.view === 'progress') return 'Sepect — Progreso';
+  if (route.view === 'settings') return 'Sepect — Configuración';
   if (route.view === 'notFound') return 'Sepect — 404';
   if (route.view === 'category') {
     const cat = findCategory(route.categoryId);
@@ -43,6 +45,7 @@ export default function App() {
   }, [route]);
 
   if (route.view === 'progress') return <Dashboard />;
+  if (route.view === 'settings') return <SettingsView />;
   if (route.view === 'category') return <CategoryView categoryId={route.categoryId} />;
   if (route.view === 'topic') return <TopicView topicId={route.topicId} />;
   if (route.view === 'source') return <SourceReader topicId={route.topicId} />;

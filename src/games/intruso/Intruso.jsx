@@ -1,12 +1,16 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import CardImage from '../../components/CardImage.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
-import { getDeckAvailability } from '../availability.js';
+import { DECK_MASTERY_LABELS } from '../../core/repetition/decks.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
 import {
   DEFAULT_ROUNDS,
   MAX_ROUNDS,
@@ -18,19 +22,47 @@ import {
   summarize,
 } from './intruso.logic.js';
 
-const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
-const ROUND_OPTIONS = Array.from({ length: MAX_ROUNDS - MIN_ROUNDS + 1 }, (_, index) => MIN_ROUNDS + index);
-const XP_BY_GRADE = { facil: 10, 'otra-vez': 0 };
+const PAGE = {
+  minHeight: '100vh',
+  width: '100%',
+  maxWidth: '100%',
+  padding: '16px clamp(16px, 4vw, 32px)',
+};
 const GAME_ID = 'intruso';
+const ROUND_OPTIONS = Array.from(
+  { length: MAX_ROUNDS - MIN_ROUNDS + 1 },
+  (_, index) => MIN_ROUNDS + index
+);
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Rondas a tu ritmo' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
+const XP_BY_GRADE = { facil: 10, 'otra-vez': 0 };
 
 function disabledReasonFor(deck) {
-  const availability = getDeckAvailability({ id: GAME_ID, minCards: 3 }, deck);
-  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  const availability = getDeckAvailability(
+    { id: GAME_ID, status: 'available', minCards: MIN_ROUNDS },
+    deck
+  );
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
   return '';
 }
 
 function promptFor(anchor) {
   return `¿Cuál no pertenece al tema «${anchor?.title || 'actual'}»?`;
+}
+
+function setupNoteFor(deck, mode, rounds, best, others) {
+  if (!deck) return 'Elige un mazo para empezar.';
+  const status = DECK_MASTERY_LABELS[deck.mastery] || DECK_MASTERY_LABELS.vacia;
+  const total = Number(deck.total ?? deck.cards?.length) || 0;
+  const topics = `${others} ${others === 1 ? 'tema' : 'temas'} como intruso`;
+  if (mode === 'arcade') {
+    return `${status} · mazo completo: ${total} rondas · 3 vidas · ${topics} · Mejor marca ${best}`;
+  }
+  return `${status} · ${rounds} de ${total} rondas · ${topics} · Mejor marca ${best}`;
 }
 
 export default function Intruso({
@@ -44,152 +76,219 @@ export default function Intruso({
   onArcadeEnd,
   onExit,
   onBackToTopic,
+  random = Math.random,
 } = {}) {
   const hasDecks = Array.isArray(decks) && decks.length > 0;
-  const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
+  const [selectedDeckId, setSelectedDeckId] = useState(() =>
+    hasDecks ? decks[0].id : null
+  );
   const [gameMode, setGameMode] = useState('normal');
+  const [rounds, setRounds] = useState(DEFAULT_ROUNDS);
   const [arcade, setArcade] = useState(() => createArcade());
   const [arcadeEnded, setArcadeEnded] = useState(false);
   const [arcadeResult, setArcadeResult] = useState(null);
-  const [rounds, setRounds] = useState(DEFAULT_ROUNDS);
   const [state, setState] = useState(() => createState());
-  const emitted = useRef(0);
+  const emitted = useRef(new Set());
   const exiting = useRef(false);
+  const endedRef = useRef(false);
+  const summaryHeadingRef = useRef(null);
 
-  const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
+  const selectedDeck = hasDecks
+    ? decks.find((entry) => entry.id === selectedDeckId) || decks[0]
+    : null;
+  const selectedDeckCards = Array.isArray(selectedDeck?.cards) ? selectedDeck.cards : [];
+  const maxDeckRounds = Math.min(MAX_ROUNDS, selectedDeckCards.length);
+  const roundOptions = hasDecks
+    ? Array.from(
+        { length: Math.max(0, maxDeckRounds - MIN_ROUNDS + 1) },
+        (_, index) => MIN_ROUNDS + index
+      )
+    : ROUND_OPTIONS;
+  const effectiveRounds = hasDecks
+    ? Math.max(MIN_ROUNDS, Math.min(rounds, maxDeckRounds || MIN_ROUNDS))
+    : rounds;
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const deckReason = hasDecks && selectedDeck ? disabledReasonFor(selectedDeck) : '';
 
-  const anchorFromGroups = useMemo(
-    () => (Array.isArray(groups) ? groups.find((group) => group.id === anchorTopicId) : null),
-    [groups, anchorTopicId]
-  );
-  const anchorCards = hasDecks && selectedDeck ? selectedDeck.cards : deck;
-  const anchor = useMemo(
-    () => {
-      if (anchorFromGroups) {
-        return { ...anchorFromGroups, cards: anchorCards };
-      }
-      if (anchorTopicId) {
-        return { id: anchorTopicId, title: anchorTopicId, cards: anchorCards };
-      }
-      return null;
-    },
-    [anchorFromGroups, anchorTopicId, anchorCards]
-  );
-  const othersSource = Array.isArray(allGroups) && allGroups.length > 0 ? allGroups : groups;
+  const anchorFromGroups = useMemo(() => {
+    const sources = [groups, allGroups];
+    for (const source of sources) {
+      if (!Array.isArray(source)) continue;
+      const found = source.find((group) => group && group.id === anchorTopicId);
+      if (found) return found;
+    }
+    return null;
+  }, [groups, allGroups, anchorTopicId]);
+  const anchorCards =
+    hasDecks && selectedDeck ? selectedDeckCards : anchorFromGroups?.cards || deck;
+  const anchor = useMemo(() => {
+    if (anchorFromGroups) {
+      return { ...anchorFromGroups, cards: anchorCards };
+    }
+    if (anchorTopicId) {
+      return { id: anchorTopicId, title: anchorTopicId, cards: anchorCards };
+    }
+    return null;
+  }, [anchorFromGroups, anchorTopicId, anchorCards]);
+  const othersSource =
+    Array.isArray(allGroups) && allGroups.length > 0 ? allGroups : groups;
   const others = useMemo(
     () =>
       (Array.isArray(othersSource) ? othersSource : []).filter(
-        (group) => group.id !== anchorTopicId && Array.isArray(group.cards) && group.cards.length > 0
+        (group) =>
+          group &&
+          group.id !== anchorTopicId &&
+          Array.isArray(group.cards) &&
+          group.cards.length > 0
       ),
     [othersSource, anchorTopicId]
   );
-  const canPlay = !!anchor && Array.isArray(anchor.cards) && anchor.cards.length >= MIN_ROUNDS && others.length > 0;
+  const canPlay =
+    !!anchor &&
+    others.length > 0 &&
+    (hasDecks || (Array.isArray(anchor.cards) && anchor.cards.length >= MIN_ROUNDS));
 
   useEffect(() => () => stopSpeech(), []);
 
+  const backToTopic = () => {
+    if (onBackToTopic) onBackToTopic();
+    else onExit?.();
+  };
+
+  const gradeCard = (cardId, grade, topicId) => {
+    if (cardId === undefined || cardId === null) return;
+    const key = `${topicId ?? ''}:${cardId}`;
+    if (emitted.current.has(key)) return;
+    emitted.current.add(key);
+    const mapped =
+      gameMode === 'arcade' && grade !== 'otra-vez' ? 'facil' : grade;
+    onGrade?.(cardId, mapped, { topicId });
+  };
+
   useEffect(() => {
     const grade = state.lastGrade;
-    if (grade && grade.seq > emitted.current) {
-      emitted.current = grade.seq;
-      onGrade?.(grade.cardId, gameMode === 'arcade' ? (grade.grade === 'otra-vez' ? 'otra-vez' : 'facil') : grade.grade, { topicId: grade.topicId });
-    }
-  }, [state, onGrade, gameMode]);
+    if (!grade) return;
+    gradeCard(grade.cardId, grade.grade, grade.topicId);
+  }, [state.lastGrade, gameMode, onGrade]);
 
-  const handleStart = () => {
-    emitted.current = 0;
+  const resetSession = () => {
+    emitted.current = new Set();
     exiting.current = false;
+    endedRef.current = false;
+    setArcade(createArcade());
     setArcadeEnded(false);
     setArcadeResult(null);
-    const startGroups = hasDecks && selectedDeck
-      ? [{ id: anchorTopicId || selectedDeck.id, title: anchor?.title || anchorTopicId || '', cards: selectedDeck.cards }, ...others]
-      : groups;
-    const next = reduce(createState(), {
-      type: 'start',
-      groups: startGroups,
-      anchorTopicId: anchorTopicId || (hasDecks && selectedDeck ? selectedDeck.id : undefined),
-      rounds: gameMode === 'arcade' ? Math.min(rounds, selectedDeck?.cards?.length || rounds) : rounds,
-      random: Math.random,
-    });
-    if (gameMode === 'arcade') {
-      setArcade(createArcade());
-    }
-    setState(next);
-    if (next.phase === 'playing') speak(promptFor(anchor));
-  };
-
-  const handleReplay = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    setState(createState());
-  };
-
-  const handleChoose = (optionKey) => {
-    if (state.phase !== 'playing') return;
-    if (gameMode === 'arcade' && arcade.over) return;
-    const round = currentRound(state);
-    const option = round ? round.options.find((entry) => entry.key === optionKey) : null;
-    if (!option) return;
-    const next = reduce(state, { type: 'choose', optionKey });
-    if (next === state) return;
-    if (gameMode === 'arcade') {
-      if (option.correct) {
-        setArcade((current) => arcadeHit(current));
-      } else {
-        const miss = arcadeMiss(arcade);
-        setArcade(miss);
-        if (miss.over) {
-          // will finish after state updates
-        }
-      }
-    }
-    setState(next);
-    speak(option.card.back);
   };
 
   const endArcade = (finalArcade) => {
-    if (arcadeEnded) return;
+    if (endedRef.current) return;
+    endedRef.current = true;
     const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
     setArcadeEnded(true);
-    const run = {
+    const result = onArcadeEnd?.({
       score: finished.score,
       correct: finished.correct,
       wrong: finished.wrong,
       lives: finished.lives,
       completed: finished.completed,
       deckId: selectedDeck?.id,
-    };
-    const result = onArcadeEnd?.(run);
+    });
     setArcadeResult(result || { best: finished.score, isRecord: false });
-    setArcade(finished);
+  };
+
+  const handleStart = () => {
+    resetSession();
+    if (hasDecks && selectedDeck) {
+      if (deckReason || selectedDeckCards.length < MIN_ROUNDS || !canPlay) return;
+      const anchorId = anchorTopicId || selectedDeck.id;
+      const startGroups = [
+        {
+          id: anchorId,
+          title: anchor?.title || selectedDeck.label,
+          cards: selectedDeckCards,
+        },
+        ...others,
+      ];
+      const requested =
+        gameMode === 'arcade' ? selectedDeckCards.length : effectiveRounds;
+      const next = reduce(createState(), {
+        type: 'start',
+        groups: startGroups,
+        anchorTopicId: anchorId,
+        rounds: requested,
+        random,
+      });
+      setState(next);
+      if (next.phase === 'playing') speak(promptFor(anchor));
+      return;
+    }
+    const next = reduce(createState(), {
+      type: 'start',
+      groups,
+      anchorTopicId,
+      rounds,
+      random,
+    });
+    setState(next);
+    if (next.phase === 'playing') speak(promptFor(anchor));
+  };
+
+  const handleReplay = () => {
+    if (gameMode === 'arcade') {
+      handleStart();
+      return;
+    }
+    resetSession();
+    setState(createState());
+  };
+
+  const handleChooseDeck = () => {
+    resetSession();
+    setState(createState());
+  };
+
+  const handleChoose = (optionKey) => {
+    if (state.phase !== 'playing') return;
+    if (gameMode === 'arcade' && (arcade.over || arcadeEnded)) return;
+    const round = currentRound(state);
+    const option = round
+      ? round.options.find((entry) => entry.key === optionKey)
+      : null;
+    if (!option) return;
+    const next = reduce(state, { type: 'choose', optionKey });
+    if (next === state) return;
+    setState(next);
+    speak(option.card.back);
+    if (gameMode !== 'arcade') return;
+    if (option.correct) {
+      setArcade(arcadeHit(arcade));
+      return;
+    }
+    const nextArcade = arcadeMiss(arcade);
+    setArcade(nextArcade);
+    if (nextArcade.over) endArcade(nextArcade);
   };
 
   const handleNext = () => {
-    if (gameMode === 'arcade') {
-      if (arcade.over && !arcadeEnded) {
-        endArcade(arcade);
-      }
-    }
+    if (gameMode === 'arcade' && arcadeEnded) return;
     const next = reduce(state, { type: 'next' });
     if (next === state) return;
-    if (gameMode === 'arcade' && next.phase === 'complete' && !arcade.over && !arcadeEnded) {
-      endArcade(arcade);
-    }
     setState(next);
+    if (gameMode === 'arcade' && next.phase === 'complete') {
+      endArcade(arcadeFinish(arcade));
+    }
     if (next.phase === 'playing') speak(promptFor(anchor));
   };
 
   const handleExit = () => {
     if (exiting.current) return;
     exiting.current = true;
-    const grade = state.lastGrade;
-    if (grade && grade.seq > emitted.current) {
-      emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade, { topicId: grade.topicId });
-    }
+    stopSpeech();
     for (const entry of pendingCurrent(state)) {
-      onGrade?.(entry.cardId, entry.grade, { topicId: entry.topicId });
+      gradeCard(entry.cardId, entry.grade, entry.topicId);
     }
-    onExit?.();
+    backToTopic();
   };
 
   if (!canPlay) {
@@ -199,7 +298,9 @@ export default function Intruso({
           <h1 className="neon game-app-title">El intruso</h1>
           <p>Este juego necesita al menos dos temas con 3 cartas cada uno.</p>
           <div className="intruso-actions">
-            <button className="btn-neon" type="button" onClick={onExit}>Volver al tema</button>
+            <button className="btn-neon" type="button" onClick={backToTopic}>
+              Volver al tema
+            </button>
             <SoundToggle />
           </div>
         </div>
@@ -208,6 +309,77 @@ export default function Intruso({
   }
 
   if (state.phase === 'setup') {
+    if (hasDecks) {
+      const startDisabled =
+        !selectedDeck ||
+        Boolean(deckReason) ||
+        selectedDeckCards.length < MIN_ROUNDS;
+      return (
+        <GameSetup
+          pageClassName="intruso-page"
+          title="El intruso"
+          eyebrow="Configura tu partida"
+          lead="Tres significados son del tema actual; uno es de otro tema. Toca el que no pertenece. En arcade cada fallo resta una vida."
+          note={
+            <>
+              Tema ancla: <strong>{anchor?.title || anchorTopicId}</strong> · {others.length}{' '}
+              tema{others.length === 1 ? '' : 's'} disponible
+              {others.length === 1 ? '' : 's'} como intruso.
+              {selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}
+            </>
+          }
+          start={
+            <button
+              className="btn-neon"
+              type="button"
+              onClick={handleStart}
+              disabled={startDisabled}
+            >
+              Empezar
+            </button>
+          }
+          actions={
+            <>
+              <SoundToggle />
+              <button className="btn-neon game-setup__exit" type="button" onClick={handleExit}>
+                Salir
+              </button>
+            </>
+          }
+        >
+          <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
+          <DeckPicker
+            decks={decks}
+            selectedDeckId={selectedDeck?.id}
+            onSelect={(id) => setSelectedDeckId(id)}
+            best={best}
+            disabledReason={(entry) => disabledReasonFor(entry)}
+            gameId={GAME_ID}
+            label="Elige tu mazo"
+          />
+          {gameMode === 'normal' ? (
+            <div className="intruso-setup">
+              <label htmlFor="intruso-rounds">Rondas</label>
+              <select
+                id="intruso-rounds"
+                value={effectiveRounds}
+                onChange={(event) => setRounds(Number(event.target.value))}
+              >
+                {roundOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+          <p className="intruso-note" role="status">
+            {setupNoteFor(selectedDeck, gameMode, effectiveRounds, bestForDeck, others.length)}
+          </p>
+        </GameSetup>
+      );
+    }
+
     return (
       <GameSetup
         pageClassName="intruso-page"
@@ -217,7 +389,6 @@ export default function Intruso({
           <>
             Tema ancla: <strong>{anchor?.title || anchorTopicId}</strong> · {others.length} tema
             {others.length === 1 ? '' : 's'} disponible{others.length === 1 ? '' : 's'} como intruso.
-            {hasDecks && selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}
           </>
         }
         start={
@@ -228,75 +399,66 @@ export default function Intruso({
         actions={
           <>
             <SoundToggle />
-            <button className="btn-neon game-setup__exit" type="button" onClick={onBackToTopic || onExit}>
+            <button className="btn-neon game-setup__exit" type="button" onClick={handleExit}>
               Salir
             </button>
           </>
         }
       >
-        {hasDecks && (
-          <>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-              <span>Modo</span>
-              <button type="button" className={`btn-neon${gameMode === 'normal' ? ' is-active' : ''}`} onClick={() => setGameMode('normal')}>Normal</button>
-              <button type="button" className={`btn-neon${gameMode === 'arcade' ? ' is-active' : ''}`} onClick={() => setGameMode('arcade')}>Arcade</button>
-            </div>
-            {gameMode === 'arcade' && (
-              <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-                <ArcadeHud arcade={arcade} best={best && selectedDeck ? best[selectedDeck.id] : best} compact />
-              </div>
-            )}
-            <DeckPicker
-              decks={decks}
-              selectedDeckId={selectedDeck?.id}
-              onSelect={(id) => setSelectedDeckId(id)}
-              best={best}
-              disabledReason={(deckEntry) => disabledReasonFor(deckEntry)}
-              gameId={GAME_ID}
-              label="Elige tu mazo"
-            />
-          </>
-        )}
-        {gameMode === 'normal' && (
-          <div className="intruso-setup">
-            <label htmlFor="intruso-rounds">Rondas</label>
-            <select
-              id="intruso-rounds"
-              value={rounds}
-              onChange={(event) => setRounds(Number(event.target.value))}
-            >
-              {ROUND_OPTIONS.map((option) => (
-                <option key={option} value={option}>{option}</option>
-              ))}
-            </select>
-          </div>
-        )}
+        <div className="intruso-setup">
+          <label htmlFor="intruso-rounds">Rondas</label>
+          <select
+            id="intruso-rounds"
+            value={rounds}
+            onChange={(event) => setRounds(Number(event.target.value))}
+          >
+            {ROUND_OPTIONS.map((option) => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+        </div>
       </GameSetup>
     );
   }
 
-  if (state.phase === 'complete') {
-    if (gameMode === 'arcade' && arcadeEnded && arcadeResult) {
-      return (
-        <main className="sepect-bg intruso-page" style={PAGE}>
-          <div className="game-stage">
-            <h1 className="neon game-app-title">Arcade</h1>
-            <p role="status">
-              Puntuación {arcadeResult.best ?? arcade.score} {arcadeResult.isRecord ? '· ¡Nuevo récord!' : ''}<br />
-              Vidas restantes {arcade.lives} · Aciertos {arcade.correct} · Fallos {arcade.wrong}
-              {selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}
-            </p>
-            <div className="intruso-actions">
-              <button className="btn-neon" type="button" onClick={() => { setState(createState()); setArcadeEnded(false); setArcadeResult(null); setArcade(createArcade()); }}>Repetir</button>
-              <button className="btn-neon" type="button" onClick={() => { setState(createState()); }}>Elegir mazo</button>
-              <button className="btn-neon" type="button" onClick={onBackToTopic || onExit}>Volver al tema</button>
-              <SoundToggle />
-            </div>
-          </div>
-        </main>
-      );
-    }
+  if (gameMode === 'arcade' && arcadeEnded) {
+    const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+    const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
+    return (
+      <main className="sepect-bg intruso-page" style={PAGE}>
+        <div className="game-stage">
+          <ArcadeSummary
+            score={arcade.score}
+            best={resultBest}
+            isRecord={isRecord}
+            lives={arcade.lives}
+            correct={arcade.correct}
+            wrong={arcade.wrong}
+            completed={arcade.completed}
+            deckLabel={
+              selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : undefined
+            }
+            actions={
+              <>
+                <button className="btn-neon" type="button" onClick={handleStart} autoFocus>
+                  Repetir
+                </button>
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+                <button className="btn-neon" type="button" onClick={backToTopic}>
+                  Volver al tema
+                </button>
+                <SoundToggle />
+              </>
+            }
+          />
+        </div>
+      </main>
+    );
+  }
 
+  if (state.phase === 'complete') {
     if (state.total === 0) {
       return (
         <main className="sepect-bg intruso-page" style={PAGE}>
@@ -304,8 +466,12 @@ export default function Intruso({
             <h1 className="neon game-app-title">Sin rondas disponibles</h1>
             <p>No hay suficientes significados únicos para armar el set. Agrega cartas o temas.</p>
             <div className="intruso-actions">
-              <button className="btn-neon" type="button" onClick={handleReplay}>Elegir rondas</button>
-              <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
+              <button className="btn-neon" type="button" onClick={hasDecks ? handleChooseDeck : handleReplay}>
+                {hasDecks ? 'Elegir mazo' : 'Elegir rondas'}
+              </button>
+              <button className="btn-neon" type="button" onClick={handleExit}>
+                Volver al tema
+              </button>
               <SoundToggle />
             </div>
           </div>
@@ -314,19 +480,65 @@ export default function Intruso({
     }
 
     const stats = summarize(state);
-    const gained = state.results.reduce((sum, result) => sum + (XP_BY_GRADE[result.grade] || 0), 0);
+    const gained = state.results.reduce(
+      (sum, result) => sum + (XP_BY_GRADE[result.grade] || 0),
+      0
+    );
     return (
       <main className="sepect-bg intruso-page" style={PAGE}>
         <div className="game-stage">
-          <h1 className="neon game-app-title">Sesión completada</h1>
-          <p role="status">
-            {stats.correct} de {stats.total} aciertos · {stats.fails} fallos · +{gained} XP
-          </p>
-          <div className="intruso-actions">
-            <button className="btn-neon" type="button" onClick={handleReplay}>Jugar de nuevo</button>
-            <button className="btn-neon" type="button" onClick={handleExit}>Volver al tema</button>
-            <SoundToggle />
-          </div>
+          <section className="result-panel" aria-labelledby="intruso-summary-title">
+            <p className="result-panel__eyebrow">Sesión completada</p>
+            <h1
+              id="intruso-summary-title"
+              className="neon game-app-title"
+              ref={summaryHeadingRef}
+              tabIndex={-1}
+            >
+              Sesión completada
+            </h1>
+            <p className="result-panel__live" role="status">
+              {stats.correct} de {stats.total} aciertos · {stats.fails} fallos · +{gained} XP
+            </p>
+            <dl className="result-panel__stats">
+              <div className="result-panel__stat">
+                <dt>Aciertos</dt>
+                <dd>
+                  {stats.correct}/{stats.total}
+                </dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>Fallos</dt>
+                <dd>{stats.fails}</dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>XP</dt>
+                <dd>+{gained}</dd>
+              </div>
+              {hasDecks && selectedDeck ? (
+                <div className="result-panel__stat result-panel__stat--wide">
+                  <dt>Mazo</dt>
+                  <dd>
+                    {selectedDeck.number} · {selectedDeck.label}
+                  </dd>
+                </div>
+              ) : null}
+            </dl>
+            <div className="result-panel__actions">
+              <button className="btn-neon" type="button" onClick={handleReplay}>
+                Jugar de nuevo
+              </button>
+              {hasDecks ? (
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+              ) : null}
+              <button className="btn-neon" type="button" onClick={handleExit}>
+                Volver al tema
+              </button>
+              <SoundToggle />
+            </div>
+          </section>
         </div>
       </main>
     );
@@ -357,14 +569,30 @@ export default function Intruso({
   return (
     <main className="sepect-bg intruso-page" style={PAGE}>
       <div className="game-stage">
-        <header className="intruso-header">
-          <p style={{ margin: 0 }}>Ronda {round.index + 1} de {round.total}{hasDecks && selectedDeck ? ` · Mazo ${selectedDeck.number}` : ''}</p>
-          <div className="intruso-actions" style={{ marginTop: 0 }}>
-            {gameMode === 'arcade' && <ArcadeHud arcade={arcade} best={best && selectedDeck ? best[selectedDeck.id] : best} compact />}
+        <header className="intruso-header game-session-header">
+          <div className="game-session-header__text">
+            <p className="game-session-header__eyebrow">
+              {hasDecks && selectedDeck ? `Mazo ${selectedDeck.number}` : 'Intruso'} ·{' '}
+              {gameMode === 'arcade' ? 'Arcade' : 'Normal'}
+            </p>
+            <p style={{ margin: 0 }}>
+              Ronda {round.index + 1} de {round.total}
+            </p>
+          </div>
+          <div className="intruso-actions game-session-header__actions" style={{ marginTop: 0 }}>
             <SoundToggle />
             <button className="btn-neon" type="button" onClick={handleExit}>Salir</button>
           </div>
         </header>
+
+        {gameMode === 'arcade' ? (
+          <ArcadeHud
+            lives={arcade.lives}
+            score={arcade.score}
+            streak={arcade.streak}
+            best={bestForDeck}
+          />
+        ) : null}
 
         <div className="card-neon intruso-prompt">
           <span className="intruso-prompt__label">Encuentra el intruso</span>
@@ -405,7 +633,6 @@ export default function Intruso({
         </div>
 
         <p className="intruso-status" role="status" aria-live="polite">{announcement}</p>
-        {gameMode === 'arcade' && <p className="intruso-status" aria-live="polite">Vidas: {arcade.lives} · Puntuación: {arcade.score}</p>}
 
         {answered && (
           <div className="card-neon intruso-feedback">

@@ -52,28 +52,28 @@ related_tasks: specs/tasks-20-juegos-por-categoria.md
 tema, **para** no entrar a juegos que no tienen sentido para ese contenido.
 
 **Criterios de aceptación:**
-- [ ] AC-1: `defineGame` acepta `categories` opcional:
+- [x] AC-1: `defineGame` acepta `categories` opcional:
   - ausente → `['*']`;
   - array no vacío de strings no vacíos, sin duplicados;
   - valores inválidos lanzan `TypeError` con mensaje claro;
   - el objeto sigue congelado.
-- [ ] AC-2: `listGames()` conserva el orden y devuelve todos los juegos registrados
+- [x] AC-2: `listGames()` conserva el orden y devuelve todos los juegos registrados
   (8 en esta spec; 11 tras spec-21). Con `categoryId`, filtra por `'*'` o por la
   categoría; sin categoría, no filtra.
-- [ ] AC-3: Los 8 juegos actuales no cambian de comportamiento ni de orden. Los
+- [x] AC-3: Los 8 juegos actuales no cambian de comportamiento ni de orden. Los
   juegos nuevos se registrarán con `categories: ['programacion']` y no aparecerán en
   Idiomas/Universidad. Los ejercicios universales y su disponibilidad se integran en
   spec-21.
-- [ ] AC-4: `TopicView` usa la categoría del tema (spec-17) y muestra solo los juegos
+- [x] AC-4: `TopicView` usa la categoría del tema (spec-17) y muestra solo los juegos
   aplicables; el contador y el estado vacío son coherentes. Un tema custom
   (`personalizados`) ve los juegos globales.
-- [ ] AC-5: `GameHost` rechaza un juego no aplicable a la categoría del tema con un
+- [x] AC-5: `GameHost` rechaza un juego no aplicable a la categoría del tema con un
   mensaje claro y un enlace de vuelta, sin importar el módulo del juego.
-- [ ] AC-6: Una categoría sin juegos propios sigue viendo los globales; si en el
+- [x] AC-6: Una categoría sin juegos propios sigue viendo los globales; si en el
   futuro no hay ninguno, se muestra un estado vacío, no una rejilla rota.
-- [ ] AC-7: La vista sigue siendo accesible (teclado, foco, 360 px) y no se rompen
+- [x] AC-7: La vista sigue siendo accesible (teclado, foco, 360 px) y no se rompen
   los tests de disponibilidad, título ni rutas.
-- [ ] AC-8: `npm test`, `npm run lint` y `npm run build` pasan al 100%; sin
+- [x] AC-8: `npm test`, `npm run lint` y `npm run build` pasan al 100%; sin
   dependencias nuevas, sin red y sin cambios en la mecánica/SRS/XP.
 
 ---

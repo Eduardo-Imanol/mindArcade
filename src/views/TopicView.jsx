@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import DeckOverview from '../components/DeckOverview.jsx';
 import NotFound from '../components/NotFound.jsx';
 import CardImage from '../components/CardImage.jsx';
 import ProgressBar from '../components/ProgressBar.jsx';
@@ -8,18 +9,22 @@ import { loadCatalog } from '../core/content/catalog.js';
 import { topicCoverCard } from '../core/content/cover.js';
 import { loadSrs } from '../core/repetition/srs.js';
 import { getTopicMetrics } from '../core/metrics/metrics.js';
+import { loadArcadeRecords } from '../core/storage/arcade.js';
 import { createStore } from '../core/storage/store.js';
-import { useStudyCardCounts } from './useStudyCardCounts.js';
 import { findCategory, findModule } from '../core/content/library.js';
 import { hasSource } from '../core/content/sources.js';
+import { hasExercises as hasExerciseManifest } from '../content/exercises/index.js';
+import { bestRecordsByGame, buildTopicDecks } from './topicDecks.js';
 
 export default function TopicView({ topicId }) {
   const topics = useMemo(() => loadCatalog(), []);
-  const games = useMemo(() => listGames(), []);
+  const topic = topics.find((entry) => entry.id === topicId);
+  const categoryId = topic?.categoryId;
+  const games = useMemo(() => listGames({ categoryId }), [categoryId]);
   const srs = useMemo(() => loadSrs(), []);
+  const records = useMemo(() => loadArcadeRecords(), []);
   const history = useMemo(() => createStore().load().history || [], []);
   const now = useMemo(() => Date.now(), []);
-  const studyCardCounts = useStudyCardCounts(topics, srs);
   const gameArt = useMemo(
     () =>
       Object.fromEntries(
@@ -30,7 +35,22 @@ export default function TopicView({ topicId }) {
       ),
     [games]
   );
-  const topic = topics.find((entry) => entry.id === topicId);
+  const topicSrs = useMemo(
+    () => (srs && typeof srs === 'object' ? srs[topic?.id] || {} : {}),
+    [srs, topic?.id]
+  );
+  const decks = useMemo(
+    () => (topic ? buildTopicDecks(topic, topicSrs, now) : []),
+    [topic, topicSrs, now]
+  );
+  const bestRecords = useMemo(
+    () => (topic ? bestRecordsByGame(records, topic.id, games, decks) : []),
+    [records, topic, games, decks]
+  );
+  const exerciseManifest = useMemo(
+    () => (topic ? hasExerciseManifest(topic.id) : false),
+    [topic]
+  );
 
   if (!topic) {
     return <NotFound message={`Tema "${topicId}" no encontrado`} />;
@@ -38,7 +58,12 @@ export default function TopicView({ topicId }) {
 
   const availability = games.map((game) => ({
     game,
-    ...getGameAvailability(game, { topic, topics, studyCardCounts }),
+    ...getGameAvailability(game, {
+      topic,
+      topics,
+      decks,
+      hasExercises: exerciseManifest,
+    }),
   }));
   const playableCount = availability.filter((entry) => entry.playable).length;
   const metrics = getTopicMetrics(topic, srs, history, now);
@@ -93,58 +118,69 @@ export default function TopicView({ topicId }) {
           </p>
         </section>
 
+        <DeckOverview decks={decks} bestRecords={bestRecords} topicId={topic.id} />
+
         <div className="topic-games__head">
           <h2 className="neon topic-games__title">Elige un juego</h2>
-          <span className="topic-games__count">
-            {playableCount} de {games.length} disponibles
-          </span>
+          {games.length > 0 ? (
+            <span className="topic-games__count">
+              {playableCount} de {games.length} disponibles
+            </span>
+          ) : null}
         </div>
 
-        <ul className="game-grid">
-          {availability.map(({ game, playable, ...state }) => {
-            const content = (
-              <>
-                <div className="game-tile__media">
-                  <CardImage
-                    image={gameArt[game.id]}
-                    card={cover}
-                    alt=""
-                    fill
-                    className="game-tile__img"
-                  />
-                </div>
-                <div className="game-tile__body">
-                  <h3 className="game-tile__title">{game.title}</h3>
-                  <p className="game-tile__cta" id={`game-availability-${game.id}`}>
-                    {playable ? 'Jugar ahora →' : availabilityMessage(state)}
-                  </p>
-                </div>
-              </>
-            );
+        {games.length > 0 ? (
+          <ul className="game-grid">
+            {availability.map(({ game, playable, ...state }) => {
+              const content = (
+                <>
+                  <div className="game-tile__media">
+                    <CardImage
+                      image={gameArt[game.id]}
+                      card={cover}
+                      alt=""
+                      fill
+                      className="game-tile__img"
+                    />
+                  </div>
+                  <div className="game-tile__body">
+                    <h3 className="game-tile__title">{game.title}</h3>
+                    <p className="game-tile__cta" id={`game-availability-${game.id}`}>
+                      {playable ? 'Jugar ahora →' : availabilityMessage(state)}
+                    </p>
+                  </div>
+                </>
+              );
 
-            return (
-              <li key={game.id} className="game-grid__item">
-                {playable ? (
-                  <a
-                    className="card-neon game-tile"
-                    href={`#/tema/${topic.id}/juego/${game.id}`}
-                  >
-                    {content}
-                  </a>
-                ) : (
-                  <button
-                    className="card-neon game-tile game-tile--disabled"
-                    type="button"
-                    disabled
-                    aria-describedby={`game-availability-${game.id}`}
-                  >
-                    {content}
-                  </button>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+              return (
+                <li key={game.id} className="game-grid__item">
+                  {playable ? (
+                    <a
+                      className="card-neon game-tile"
+                      href={`#/tema/${topic.id}/juego/${game.id}`}
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <button
+                      className="card-neon game-tile game-tile--disabled"
+                      type="button"
+                      disabled
+                      aria-describedby={`game-availability-${game.id}`}
+                    >
+                      {content}
+                    </button>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <div className="topic-games__empty" role="status">
+            <p>Aún no hay juegos disponibles para esta categoría.</p>
+            <a className="btn-neon" href="#/">Explorar la biblioteca</a>
+          </div>
+        )}
       </div>
     </main>
   );

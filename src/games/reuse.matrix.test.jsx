@@ -60,10 +60,13 @@ async function mountGame(game, deck) {
   return mount(<Component {...propsFor(game, deck)} />);
 }
 
-describe('game reuse matrix — 8 games × 2 topic decks (AC-29)', () => {
-  it('every game reaches its setup or game screen with the programming deck', async () => {
+const CARD_GAMES = listGames().filter((game) => !game.needsExercises);
+
+describe('game reuse matrix — 8 card games × 2 topic decks (AC-29)', () => {
+  it('every card game reaches its setup or game screen with the programming deck', async () => {
     expect(PROGRAMMING).toHaveLength(6);
-    for (const game of listGames()) {
+    expect(CARD_GAMES).toHaveLength(8);
+    for (const game of CARD_GAMES) {
       const view = await mountGame(game, PROGRAMMING);
       const heading = view.container.querySelector('h1');
       expect(heading, `${game.id}: sin pantalla inicial`).toBeTruthy();
@@ -72,9 +75,9 @@ describe('game reuse matrix — 8 games × 2 topic decks (AC-29)', () => {
     }
   });
 
-  it('every game reaches its setup or game screen with the languages deck', async () => {
+  it('every card game reaches its setup or game screen with the languages deck', async () => {
     expect(LANGUAGES).toHaveLength(6);
-    for (const game of listGames()) {
+    for (const game of CARD_GAMES) {
       const view = await mountGame(game, LANGUAGES);
       const heading = view.container.querySelector('h1');
       expect(heading, `${game.id}: sin pantalla inicial`).toBeTruthy();

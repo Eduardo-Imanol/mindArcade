@@ -1,13 +1,16 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import CardImage from '../../components/CardImage.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { createEngine } from '../../core/engine/engine.js';
-import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js'; // eslint-disable-line no-unused-vars
-import { getDeckAvailability } from '../availability.js';
+import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
 import {
   DEFAULT_ROUNDS,
   DIFFICULTIES,
@@ -28,7 +31,13 @@ import {
 const PAGE = { minHeight: '100vh', width: '100%', maxWidth: '100%', padding: '16px clamp(16px, 4vw, 32px)' };
 const ROUND_OPTIONS = Array.from({ length: MAX_ROUNDS - MIN_ROUNDS + 1 }, (_, index) => MIN_ROUNDS + index);
 const MIN_CARDS = 6;
+const GAME_DEF = { id: 'lluvia-meteoros', status: 'available', minCards: MIN_CARDS };
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Elige rondas, ritmo y dificultad' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
 const DIFFICULTY_LABELS = { tranquilo: 'Tranquilo', normal: 'Normal', arcade: 'Arcade' };
+const DECK_DIFFICULTY_LABELS = { tranquilo: 'Tranquilo', normal: 'Normal', arcade: 'Rápido' };
 const DIFFICULTY_HELP = {
   tranquilo: 'El meteoro cae un 25 % más lento.',
   normal: 'Velocidad equilibrada.',
@@ -44,8 +53,11 @@ const SIZE_CLASS = { lg: 'lluvia-size-lg', md: 'lluvia-size-md', sm: 'lluvia-siz
 const GAME_ID = 'lluvia-meteoros';
 
 function disabledReasonFor(deck) {
-  const availability = getDeckAvailability({ id: GAME_ID, minCards: 4 }, deck);
-  if (!availability.playable && availability.reason === 'min-cards') return availability.message;
+  const availability = getDeckAvailability(GAME_DEF, deck);
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
+  if (uniqueBackCount(deck?.cards) < 3) return 'Necesitas al menos 3 significados distintos';
   return '';
 }
 
@@ -64,7 +76,17 @@ function uniqueBackCount(deck) {
   return backs.size;
 }
 
-export default function LluviaMeteoros({ deck = [], decks, best, selectCards, onGrade, onArcadeEnd, onExit, onBackToTopic } = {}) {
+export default function LluviaMeteoros({
+  deck = [],
+  decks,
+  best,
+  selectCards,
+  onGrade,
+  onArcadeEnd,
+  onExit,
+  onBackToTopic,
+  random = Math.random,
+} = {}) {
   const hasDecks = Array.isArray(decks) && decks.length > 0;
   const [selectedDeckId, setSelectedDeckId] = useState(() => (hasDecks ? decks[0].id : null));
   const [gameMode, setGameMode] = useState('normal');
@@ -72,10 +94,15 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
   const [arcadeEnded, setArcadeEnded] = useState(false);
   const [arcadeResult, setArcadeResult] = useState(null);
   const selectedDeck = hasDecks ? decks.find((entry) => entry.id === selectedDeckId) || decks[0] : null;
-  const deckSource = hasDecks && selectedDeck ? selectedDeck.cards : deck;
+  const selectedDeckCards = Array.isArray(selectedDeck?.cards) ? selectedDeck.cards : [];
+  const deckSource = hasDecks ? selectedDeckCards : deck;
   const deckList = useMemo(() => (Array.isArray(deckSource) ? deckSource : []), [deckSource]);
   const backs = useMemo(() => uniqueBackCount(deckList), [deckList]);
   const canPlay = deckList.length >= MIN_CARDS && backs >= 3;
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const deckReason = hasDecks && selectedDeck ? disabledReasonFor(selectedDeck) : '';
+  const startDisabled =
+    !selectedDeck || Boolean(deckReason) || selectedDeckCards.length < MIN_CARDS || backs < 3;
 
   const [rounds, setRounds] = useState(DEFAULT_ROUNDS);
   const [difficulty, setDifficulty] = useState('normal');
@@ -88,6 +115,17 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
   stateRef.current = state;
   const emitted = useRef(0);
   const exiting = useRef(false);
+  const endedRef = useRef(false);
+  const arcadeSeqRef = useRef(0);
+
+  const effectiveRhythm = RHYTHMS.includes(rhythm) ? rhythm : 'manual';
+  const deckRoundOptions = useMemo(
+    () => ROUND_OPTIONS.filter((option) => option <= deckList.length),
+    [deckList.length]
+  );
+  const effectiveRounds = hasDecks
+    ? Math.max(MIN_ROUNDS, Math.min(rounds, deckList.length))
+    : rounds;
 
   const engineRef = useRef(null);
   const onTickRef = useRef(null);
@@ -304,9 +342,30 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
     if (round) speak(round.card.front);
   };
 
+  const resetSession = () => {
+    emitted.current = 0;
+    exiting.current = false;
+    endedRef.current = false;
+    arcadeSeqRef.current = 0;
+    roundKeyRef.current = null;
+    feedbackSeqRef.current = -1;
+    feedbackRemainingRef.current = 0;
+    feedbackSpokenRef.current = -1;
+    elapsedRef.current = 0;
+    progressRef.current = 0;
+    timeoutFiredRef.current = false;
+    cancelFollowUpSpeech();
+    stopSpeech();
+    setArcade(createArcade());
+    setArcadeEnded(false);
+    setArcadeResult(null);
+  };
+
   const endArcade = (finalArcade) => {
-    if (arcadeEnded) return;
+    if (endedRef.current) return;
+    endedRef.current = true;
     const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
     setArcadeEnded(true);
     const run = {
       score: finished.score,
@@ -318,76 +377,56 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
     };
     const result = onArcadeEnd?.(run);
     setArcadeResult(result || { best: finished.score, isRecord: false });
-    setArcade(finished);
   };
 
   const handleStart = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    roundKeyRef.current = null;
-    feedbackSeqRef.current = -1;
-    feedbackRemainingRef.current = 0;
-    feedbackSpokenRef.current = -1;
-    cancelFollowUpSpeech();
-    stopSpeech();
-    setArcadeEnded(false);
-    setArcadeResult(null);
-    if (gameMode === 'arcade') {
-      setArcade(createArcade());
-      setRhythm('survival');
-    }
+    resetSession();
+    const arcadeMode = gameMode === 'arcade';
     let selected = [];
+    let sessionDeck = deckList;
     if (hasDecks && selectedDeck) {
-      if (gameMode === 'arcade') {
-        selected = Array.isArray(selectedDeck.cards) ? selectedDeck.cards.slice() : [];
+      sessionDeck = selectedDeckCards;
+      if (arcadeMode || effectiveRhythm === 'survival') {
+        selected = selectedDeckCards.slice();
       } else {
-        const count = Math.min(rounds, selectedDeck.cards.length);
-        selected = (selectCards ? selectCards(count) : selectedDeck.cards.slice(0, count)) || [];
+        const count = Math.min(effectiveRounds, selectedDeckCards.length);
+        selected = selectedDeckCards.slice(0, count);
       }
     } else {
-      selected = (selectCards ? selectCards(gameMode === 'arcade' ? deckList.length : rounds) : deckList.slice(0, gameMode === 'arcade' ? deckList.length : rounds)) || [];
+      const count = arcadeMode ? deckList.length : rounds;
+      selected = (selectCards ? selectCards(count) : deckList.slice(0, count)) || [];
     }
     const next = reduce(createState(), {
       type: 'start',
       cards: selected,
-      deck: hasDecks && selectedDeck ? selectedDeck.cards : deckList,
-      rounds: gameMode === 'arcade' ? selected.length : rounds,
+      deck: sessionDeck,
+      rounds:
+        arcadeMode || (hasDecks && effectiveRhythm === 'survival')
+          ? selected.length
+          : hasDecks
+            ? effectiveRounds
+            : rounds,
       difficulty,
-      rhythm: gameMode === 'arcade' ? 'survival' : rhythm,
-      random: Math.random,
+      rhythm: arcadeMode ? 'survival' : effectiveRhythm,
+      random,
     });
     setState(next);
     beginRoundSpeech(next);
   };
 
   const handleReplay = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    roundKeyRef.current = null;
-    feedbackSeqRef.current = -1;
-    feedbackRemainingRef.current = 0;
-    feedbackSpokenRef.current = -1;
-    elapsedRef.current = 0;
-    progressRef.current = 0;
-    timeoutFiredRef.current = false;
-    cancelFollowUpSpeech();
-    stopSpeech();
-    setArcadeEnded(false);
-    setArcadeResult(null);
     if (gameMode === 'arcade') {
-      setArcade(createArcade());
-      setRhythm('survival');
-    }
-    setState(createState());
-    if (hasDecks || gameMode === 'arcade') {
       handleStart();
       return;
     }
+    resetSession();
+    setState(createState());
   };
 
   const handleChoose = (optionId) => {
     const current = stateRef.current;
     if (!current || current.phase !== 'playing') return;
+    if (gameMode === 'arcade' && (arcade.over || endedRef.current)) return;
     const round = currentRound(current);
     const option = round ? round.options.find((entry) => entry.id === optionId) : null;
     if (!option) return;
@@ -470,12 +509,20 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
   }, []);
 
   useEffect(() => {
+    const grade = state.lastGrade;
+    if (!grade || grade.seq <= arcadeSeqRef.current) return;
+    arcadeSeqRef.current = grade.seq;
     if (gameMode !== 'arcade') return;
-    if (arcadeEnded) return;
-    if (arcade.over) {
-      endArcade(arcade);
-    }
-  }, [gameMode, arcade, arcadeEnded]);
+    const nextArcade = grade.grade === 'otra-vez' ? arcadeMiss(arcade) : arcadeHit(arcade);
+    setArcade(nextArcade);
+    if (nextArcade.over) endArcade(nextArcade);
+  }, [state.lastGrade, gameMode, arcade]);
+
+  useEffect(() => {
+    if (gameMode !== 'arcade' || state.phase !== 'complete' || state.total === 0) return;
+    if (endedRef.current) return;
+    endArcade(arcadeFinish(arcade));
+  }, [gameMode, state.phase, state.total, arcade]);
 
   useEffect(() => {
     if (state.phase !== 'playing') return undefined;
@@ -515,18 +562,24 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
 
   if (state.phase === 'setup') {
     if (hasDecks) {
-      const bestForDeck = typeof best === 'function' ? best(selectedDeck?.id) : best?.[selectedDeck?.id];
+      const difficultyLabels = DECK_DIFFICULTY_LABELS;
+      const deckNote = selectedDeck
+        ? gameMode === 'arcade'
+          ? `Mazo ${selectedDeck.number} completo · ${selectedDeckCards.length} meteoros · 3 vidas · Mejor marca ${bestForDeck}`
+          : effectiveRhythm === 'survival'
+            ? `Supervivencia · ${selectedDeckCards.length} meteoros · 3 vidas · Mejor marca ${bestForDeck}`
+            : `${effectiveRounds} de ${selectedDeckCards.length} cartas del mazo · Mejor marca ${bestForDeck}`
+        : 'Elige un mazo para empezar.';
       return (
         <GameSetup
           pageClassName="lluvia-page"
           title="Lluvia de meteoros"
-          lead="Elige el significado correcto antes de que el meteoro caiga. En arcade, falla o tiempo agotado resta vida."
-          note={<>{decks.length} {decks.length === 1 ? 'mazo' : 'mazos'} de este tema.{selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}</>}
+          lead="Elige el significado correcto antes de que el meteoro caiga. Cada mazo es un bloque de 10 cartas."
+          note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · en arcade, fallar o agotar el tiempo resta una vida.`}
           start={
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              <button className="btn-neon" type="button" onClick={() => { setGameMode('normal'); handleStart(); }}>Normal</button>
-              <button className="btn-neon" type="button" onClick={() => { setGameMode('arcade'); setRhythm('survival'); handleStart(); }}>Arcade · 3 vidas</button>
-            </div>
+            <button className="btn-neon" type="button" onClick={handleStart} disabled={startDisabled}>
+              Empezar
+            </button>
           }
           actions={
             <>
@@ -537,10 +590,73 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
             </>
           }
         >
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
-            <ArcadeHud arcade={arcade} best={bestForDeck} compact />
-          </div>
-          <DeckPicker decks={decks} selectedDeckId={selectedDeck?.id} onSelect={(id) => setSelectedDeckId(id)} best={best} disabledReason={(deckEntry) => disabledReasonFor(deckEntry)} gameId={GAME_ID} label="Elige tu mazo" />
+          <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
+          <DeckPicker
+            decks={decks}
+            selectedDeckId={selectedDeck?.id}
+            onSelect={(id) => setSelectedDeckId(id)}
+            best={best}
+            disabledReason={(deckEntry) => disabledReasonFor(deckEntry)}
+            gameId={GAME_ID}
+            label="Elige tu mazo"
+          />
+          <fieldset className="lluvia-setup-fieldset">
+            <legend>Dificultad</legend>
+            <div className="lluvia-choice-row" role="group" aria-label="Dificultad">
+              {DIFFICULTIES.map((value) => (
+                <button
+                  key={value}
+                  className={`lluvia-choice${difficulty === value ? ' is-selected' : ''}`}
+                  type="button"
+                  aria-pressed={difficulty === value}
+                  onClick={() => setDifficulty(value)}
+                >
+                  {difficultyLabels[value]}
+                </button>
+              ))}
+            </div>
+            <p className="lluvia-note">{DIFFICULTY_HELP[difficulty]}</p>
+          </fieldset>
+
+          {gameMode === 'normal' ? (
+            <>
+              <fieldset className="lluvia-setup-fieldset">
+                <legend>Ritmo</legend>
+                <div className="lluvia-choice-row" role="group" aria-label="Ritmo">
+                  {RHYTHMS.map((value) => (
+                    <button
+                      key={value}
+                      className={`lluvia-choice${rhythm === value ? ' is-selected' : ''}`}
+                      type="button"
+                      aria-pressed={rhythm === value}
+                      onClick={() => setRhythm(value)}
+                    >
+                      {RHYTHM_LABELS[value]}
+                    </button>
+                  ))}
+                </div>
+                <p className="lluvia-note">{RHYTHM_HELP[rhythm]}</p>
+              </fieldset>
+
+              <div className="lluvia-setup-row">
+                <label htmlFor="lluvia-rounds">Rondas</label>
+                <select
+                  id="lluvia-rounds"
+                  value={effectiveRounds}
+                  onChange={(event) => setRounds(Number(event.target.value))}
+                >
+                  {deckRoundOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </>
+          ) : null}
+          <p className="lluvia-note" role="status">
+            {deckNote}
+          </p>
         </GameSetup>
       );
     }
@@ -623,29 +739,51 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
     );
   }
 
-  if (state.phase === 'complete') {
-    if (gameMode === 'arcade' && (arcadeEnded || arcade.over)) {
-      return (
-        <main className="sepect-bg lluvia-page" style={PAGE}>
-          <div className="game-stage">
-            <h1 className="neon game-app-title">Arcade</h1>
-            <p role="status">
-              Puntuación {arcadeResult?.best ?? arcade.score} {arcadeResult?.isRecord ? '· ¡Nuevo récord!' : ''}
-              <br />
-              Vidas restantes {arcade.lives} · Aciertos {arcade.correct} · Fallos {arcade.wrong}
-              {selectedDeck ? <> · Mazo {selectedDeck.number} ({selectedDeck.label})</> : null}
-            </p>
-            <div className="lluvia-actions">
-              <button className="btn-neon" type="button" onClick={handleReplay}>Repetir</button>
-              <button className="btn-neon" type="button" onClick={() => { setState(createState()); setGameMode('normal'); }}>Elegir mazo</button>
-              <button className="btn-neon" type="button" onClick={onBackToTopic || onExit}>Volver al tema</button>
-              <SoundToggle />
-            </div>
-          </div>
-        </main>
-      );
-    }
+  if (gameMode === 'arcade' && arcadeEnded) {
+    const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+    const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
+    return (
+      <main className="sepect-bg lluvia-page" style={PAGE}>
+        <div className="game-stage">
+          <ArcadeSummary
+            score={arcade.score}
+            best={resultBest}
+            isRecord={isRecord}
+            lives={arcade.lives}
+            correct={arcade.correct}
+            wrong={arcade.wrong}
+            completed={arcade.completed}
+            deckLabel={
+              selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : undefined
+            }
+            actions={
+              <>
+                <button className="btn-neon" type="button" onClick={handleReplay} autoFocus>
+                  Repetir
+                </button>
+                <button
+                  className="btn-neon"
+                  type="button"
+                  onClick={() => {
+                    resetSession();
+                    setState(createState());
+                  }}
+                >
+                  Elegir mazo
+                </button>
+                <button className="btn-neon" type="button" onClick={onBackToTopic || onExit}>
+                  Volver al tema
+                </button>
+                <SoundToggle />
+              </>
+            }
+          />
+        </div>
+      </main>
+    );
+  }
 
+  if (state.phase === 'complete') {
     if (state.total === 0) {
       return (
         <main className="sepect-bg lluvia-page" style={PAGE}>
@@ -696,7 +834,8 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
           <h1 className="neon game-app-title">Partida en pausa</h1>
           <div className="card-neon lluvia-pause">
             <p style={{ margin: 0 }}>
-              Meteoro {state.roundIndex + 1} de {state.total} · {state.score} puntos
+              Meteoro {state.roundIndex + 1} de {state.total} ·{' '}
+              {gameMode === 'arcade' ? arcade.score : state.score} puntos
             </p>
             <p style={{ margin: 0 }}>El tiempo y el meteoro están detenidos.</p>
             <div className="lluvia-actions" style={{ marginTop: 0 }}>
@@ -754,15 +893,17 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
       <div className="game-stage">
         <header className="lluvia-header">
           <p style={{ margin: 0 }}>Meteoro {round.index + 1} de {round.total}</p>
-          <div className="lluvia-hud">
-            <span><strong>{state.score}</strong> puntos</span>
-            <span>Racha <strong>{state.streak}</strong></span>
-            {state.rhythm === 'survival' && (
-              <span aria-label={`Vidas: ${state.lives} de ${LIVES}`}>
-                <span aria-hidden="true">{'♥'.repeat(state.lives) || '—'}</span> {state.lives}/{LIVES}
-              </span>
-            )}
-          </div>
+          {gameMode !== 'arcade' ? (
+            <div className="lluvia-hud">
+              <span><strong>{state.score}</strong> puntos</span>
+              <span>Racha <strong>{state.streak}</strong></span>
+              {state.rhythm === 'survival' && (
+                <span aria-label={`Vidas: ${state.lives} de ${LIVES}`}>
+                  <span aria-hidden="true">{'♥'.repeat(state.lives) || '—'}</span> {state.lives}/{LIVES}
+                </span>
+              )}
+            </div>
+          ) : null}
           <div className="lluvia-actions" style={{ marginTop: 0 }}>
             <SoundToggle />
             <button
@@ -776,6 +917,15 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
             <button className="btn-neon" type="button" onClick={handleExit}>Salir</button>
           </div>
         </header>
+
+        {gameMode === 'arcade' ? (
+          <ArcadeHud
+            lives={arcade.lives}
+            score={arcade.score}
+            streak={arcade.streak}
+            best={bestForDeck}
+          />
+        ) : null}
 
         {radar && (
           <div className="card-neon lluvia-radar">
@@ -859,10 +1009,12 @@ export default function LluviaMeteoros({ deck = [], decks, best, selectCards, on
               <span className="lluvia-feedback__icon" aria-hidden="true">
                 {round.won ? '✓' : '✗'}
               </span>{' '}
-              {round.won ? '¡Acertaste!' : timeout ? 'Se acabó el tiempo.' : 'Fallaste.'}{' '}
+              {round.won ? '¡Acertaste!' : timeout ? 'Se acabó el tiempo.' : 'Fallaste.'}
               {round.won
-                ? `+${result ? result.points : 0} puntos`
-                : `La respuesta correcta era «${correctOption ? correctOption.back : round.card.back}».`}
+                ? gameMode === 'arcade'
+                  ? ''
+                  : ` +${result ? result.points : 0} puntos`
+                : ` La respuesta correcta era «${correctOption ? correctOption.back : round.card.back}».`}
             </p>
             {isSupported() && (
               <button

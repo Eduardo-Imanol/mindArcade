@@ -5,6 +5,27 @@ export const DIFFICULTIES = [
   { id: 'dificil', label: 'Difícil', pairs: 8 },
 ];
 
+const PAIR_STEPS = [4, 6, 8, 10];
+
+export function pairOptionsFor(deckSize) {
+  const size = Math.max(0, Math.floor(Number(deckSize) || 0));
+  if (size < PAIR_STEPS[0]) return [];
+  const max = Math.min(size, PAIR_STEPS[PAIR_STEPS.length - 1]);
+  const steps = [...PAIR_STEPS.filter((pairs) => pairs < max), max];
+  return steps.map((pairs) => ({
+    id: `pairs-${pairs}`,
+    label: `${pairs} parejas`,
+    pairs,
+  }));
+}
+
+export function sessionCardsFor(cards, { mode = 'normal', pairs = 10 } = {}) {
+  const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+  if (mode === 'arcade') return [...list];
+  const count = Math.max(1, Math.floor(Number(pairs) || 1));
+  return list.slice(0, Math.min(count, list.length));
+}
+
 function shuffle(items, random) {
   const out = [...items];
   for (let i = out.length - 1; i > 0; i -= 1) {
@@ -31,6 +52,7 @@ export function createState(cards = [], { random = Math.random } = {}) {
     tiles: buildTiles(cards, random),
     open: [],
     matched: [],
+    seen: [],
     attempts: {},
     locked: false,
     complete: pairs === 0,
@@ -53,8 +75,20 @@ export function unmatchedCardIds(state) {
   return ids;
 }
 
+export function seenUnmatchedCardIds(state) {
+  const matched = new Set((state && state.matched) || []);
+  const seen = new Set((state && state.seen) || []);
+  const ids = [];
+  for (const tile of (state && state.tiles) || []) {
+    if (seen.has(tile.cardId) && !matched.has(tile.cardId) && !ids.includes(tile.cardId)) {
+      ids.push(tile.cardId);
+    }
+  }
+  return ids;
+}
+
 export function pendingGrades(state) {
-  return unmatchedCardIds(state).map((cardId) => ({ cardId, grade: 'otra-vez' }));
+  return seenUnmatchedCardIds(state).map((cardId) => ({ cardId, grade: 'otra-vez' }));
 }
 
 export function reduce(state, action = {}) {
@@ -75,8 +109,9 @@ export function reduce(state, action = {}) {
   if (state.matched.includes(tile.cardId)) return state;
   if (state.open.length >= 2) return state;
 
+  const seen = state.seen.includes(tile.cardId) ? state.seen : [...state.seen, tile.cardId];
   const open = [...state.open, index];
-  if (open.length < 2) return { ...state, open };
+  if (open.length < 2) return { ...state, open, seen };
 
   const first = state.tiles[open[0]];
   if (first.cardId === tile.cardId) {
@@ -85,6 +120,7 @@ export function reduce(state, action = {}) {
       ...state,
       open: [],
       matched,
+      seen,
       complete: matched.length === state.pairs,
       lastMatch: {
         seq: ((state.lastMatch && state.lastMatch.seq) || 0) + 1,
@@ -99,5 +135,5 @@ export function reduce(state, action = {}) {
     [first.cardId]: (state.attempts[first.cardId] || 0) + 1,
     [tile.cardId]: (state.attempts[tile.cardId] || 0) + 1,
   };
-  return { ...state, open, attempts, locked: true };
+  return { ...state, open, seen, attempts, locked: true };
 }

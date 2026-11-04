@@ -41,6 +41,22 @@ al terminar se actualiza este roadmap (status `available`) y se abre la siguient
 > firma humana del diff) es el incremento de métricas, selección espaciada, hub y
 > dashboard; no añade juegos.
 
+## Incremento transversal spec-18 — mazos, dominio y arcade (implementado; cierre pendiente)
+
+- Todos los juegos reciben además `decks`, `best` y `onArcadeEnd` por props; sin
+  `decks` conservan el contrato legacy (`deck`/`selectCards`).
+- El setup muestra `DeckPicker` + `GameModeSwitch`; la partida usa solo el mazo
+  seleccionado (todas sus cartas, aunque estén aprendidas o no vencidas).
+- El dominio `No aprendida / Repasar / Aprendida` se deriva del SRS compartido
+  (`sepect.srs.v1`); no hay una clave de dominio paralela.
+- Arcade: 3 vidas, puntuación `100 + min(100, 10 * racha)`, bonus `50 * vidas` al
+  completar y récords por `topicId:gameId:deckId` en `sepect.arcade.v1`.
+- La disponibilidad se evalúa por mazo con `game.minCards`; «Todo al día» ya no
+  bloquea el repaso. Intruso usa el mazo ancla + otros temas; Conecta juega el mazo
+  completo en tandas de hasta 8 parejas.
+- Tests: suites `*.decks.test.jsx` por juego, core `decks/arcade/arcadeStore`,
+  `DeckPicker`/`ArcadeHud`, `GameHost`, `TopicView.decks` y `spec18-a11y`.
+
 ## Contenido de temas (formato MD canónico)
 
 ```md

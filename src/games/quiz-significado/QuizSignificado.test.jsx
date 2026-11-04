@@ -85,7 +85,7 @@ describe('quiz-significado component flow', () => {
     view.unmount();
   });
 
-  it('exiting mid-session emits otra-vez for every unresolved round exactly once', () => {
+  it('exiting mid-session grades only the card on screen (AC-12)', () => {
     const onGrade = vi.fn(() => ({}));
     const onExit = vi.fn();
     const view = mount(
@@ -105,7 +105,6 @@ describe('quiz-significado component flow', () => {
     expect(onGrade.mock.calls).toEqual([
       ['a', 'facil'],
       ['b', 'otra-vez'],
-      ['c', 'otra-vez'],
     ]);
     view.unmount();
   });

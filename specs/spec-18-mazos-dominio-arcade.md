@@ -80,26 +80,26 @@ related_tasks: specs/tasks-18-mazos-dominio-arcade.md
 practicar un bloque concreto sin mezclar todo el tema.
 
 **Criterios de aceptación:**
-- [ ] AC-1: `buildDecks(cards, { size = 10 })` devuelve bloques consecutivos con
+- [x] AC-1: `buildDecks(cards, { size = 10 })` devuelve bloques consecutivos con
   `{ id, number, label, from, to, cards, total, studied, studiedIds, pending,
   complete, mastery, counts }`. `buildFlashcardDecks` sigue exportado como alias
   compatible. El último mazo parcial se calcula correctamente.
-- [ ] AC-2: Los 8 juegos actuales muestran `DeckPicker` en su setup cuando reciben
+- [x] AC-2: Los 8 juegos actuales muestran `DeckPicker` en su setup cuando reciben
   `decks`. El picker muestra número, rango, cartas, estado de dominio, progreso
   estudiado, mejor marca del juego para ese mazo y CTA. La selección es accesible por
   teclado y `aria-pressed`.
-- [ ] AC-3: La partida usa únicamente `selectedDeck.cards`; no se mezclan cartas de
+- [x] AC-3: La partida usa únicamente `selectedDeck.cards`; no se mezclan cartas de
   otros mazos ni se completa con cartas externas. El barajado se limita al mazo.
-- [ ] AC-4: Un mazo con menos cartas que `game.minCards` se deshabilita con un motivo
+- [x] AC-4: Un mazo con menos cartas que `game.minCards` se deshabilita con un motivo
   claro; el juego sigue disponible si otro mazo cumple el mínimo. Flashcards siempre
   admite cualquier mazo no vacío.
-- [ ] AC-5: Sin `decks`, cada juego conserva su comportamiento legacy (`deck`,
+- [x] AC-5: Sin `decks`, cada juego conserva su comportamiento legacy (`deck`,
   `selectCards`) y sus tests actuales. Con `decks`, `deck`/`selectCards` no alteran
   la composición del mazo.
-- [ ] AC-6: `GameHost` construye los mazos con **todas** las cartas del tema (con
+- [x] AC-6: `GameHost` construye los mazos con **todas** las cartas del tema (con
   overrides de imagen) y el SRS del tema, y pasa `decks` a todos los juegos. No se
   filtran cartas no vencidas para armar mazos.
-- [ ] AC-7: El juego de Intruso usa el mazo seleccionado como ancla y un pool de
+- [x] AC-7: El juego de Intruso usa el mazo seleccionado como ancla y un pool de
   distractores de otros temas; sin otro tema disponible sigue no disponible. Conecta
   procesa el mazo completo en tandas de máximo 8 parejas, sin descartar cartas.
 
@@ -109,20 +109,20 @@ juegos, **para** saber qué mazo está aprendido, cuál debo repasar y cuál no 
 empezado.
 
 **Criterios de aceptación:**
-- [ ] AC-8: `deckMastery(deck, srsTopic, now)` es puro y devuelve
+- [x] AC-8: `deckMastery(deck, srsTopic, now)` es puro y devuelve
   `{ status: 'no-aprendida'|'repasar'|'aprendida'|'vacia', counts: { new, learning,
   learned, due, studied, pending, total } }` con la regla de la decisión 5.
-- [ ] AC-9: Todos los juegos gradúan cada carta mostrada. Una partida perfecta con
+- [x] AC-9: Todos los juegos gradúan cada carta mostrada. Una partida perfecta con
   cartas nuevas deja el mazo en `Repasar`; si todas las cartas alcanzan `learned` y
   ninguna queda vencida, el mazo pasa a `Aprendida`. Un fallo deja al menos una carta
   en `reps === 0`, por lo que el mazo pasa a `No aprendida`.
-- [ ] AC-10: Flashcards y el `DeckPicker` de todos los juegos muestran las mismas
+- [x] AC-10: Flashcards y el `DeckPicker` de todos los juegos muestran las mismas
   etiquetas `No aprendida / Repasar / Aprendida` y los mismos conteos para el mismo
   mazo. El estado se actualiza tras gradúar sin recargar la página.
-- [ ] AC-11: Los resultados de otros juegos se reflejan en Flashcards porque comparten
+- [x] AC-11: Los resultados de otros juegos se reflejan en Flashcards porque comparten
   SRS; no se crea una clave de dominio paralela. La mejor puntuación del mazo se
   muestra junto al estado, pero no altera el dominio.
-- [ ] AC-12: Una carta se gradúa como máximo una vez por sesión. Salir a mitad no
+- [x] AC-12: Una carta se gradúa como máximo una vez por sesión. Salir a mitad no
   emite `otra-vez` por cartas no mostradas; en arcade, el fallo que agota la última
   vida sí gradúa la carta implicada.
 
@@ -131,21 +131,21 @@ empezado.
 competir contra mi mejor marca y reaccionar a cada error.
 
 **Criterios de aceptación:**
-- [ ] AC-13: El setup de cada juego ofrece `Normal` y `Arcade` cuando recibe `decks`.
+- [x] AC-13: El setup de cada juego ofrece `Normal` y `Arcade` cuando recibe `decks`.
   En Arcade se muestran vidas (3), puntuación y mejor marca; el selector de rondas se
   oculta o se ignora y se juega el mazo completo. En los juegos de código, Arcade usa
   el set de 2/4/6 ejercicios elegido por dificultad, no el mazo completo de cartas.
-- [ ] AC-14: La partida arcade termina cuando las vidas llegan a 0 o cuando se agota
+- [x] AC-14: La partida arcade termina cuando las vidas llegan a 0 o cuando se agota
   el mazo. Con 0 vidas no hay bonus de vidas; al completar el mazo se suman
   `50 * vidas restantes`.
-- [ ] AC-15: La puntuación es `100 + min(100, 10 * racha)` por acierto; un fallo
+- [x] AC-15: La puntuación es `100 + min(100, 10 * racha)` por acierto; un fallo
   reinicia la racha. La mejor marca y las últimas 20 partidas se guardan por
   `topicId:gameId:deckId` en `sepect.arcade.v1`, con datos inválidos descartados.
-- [ ] AC-16: El resumen arcade muestra puntuación, ¿nuevo récord?, vidas restantes,
+- [x] AC-16: El resumen arcade muestra puntuación, ¿nuevo récord?, vidas restantes,
   aciertos/fallos, mazo y acciones «Repetir», «Elegir mazo» y «Volver al tema».
   `GameHost` persiste el resultado mediante `onArcadeEnd` y devuelve
   `{ best, isRecord }`.
-- [ ] AC-17: Reglas de vida por juego:
+- [x] AC-17: Reglas de vida por juego:
   - Flashcards: `Otra vez`.
   - Quiz-significado: opción incorrecta.
   - Memorama: pareja no coincidente.
@@ -154,13 +154,13 @@ competir contra mi mejor marca y reaccionar a cada error.
   - Lluvia de meteoros: respuesta incorrecta o tiempo agotado.
   - Conecta pares: conexión incorrecta.
   - Serpiente: manzana incorrecta o choque.
-- [ ] AC-18: En Ahorcado arcade, cada letra incorrecta resta una vida. Si la palabra
+- [x] AC-18: En Ahorcado arcade, cada letra incorrecta resta una vida. Si la palabra
   se resuelve tras haber perdido alguna vida, la carta se gradúa `otra-vez`; si se
   resuelve sin fallos, `facil`. La partida conserva el teclado y el TTS.
-- [ ] AC-19: En Serpiente, la supervivencia y el arcade usan 3 vidas. Los tests de
+- [x] AC-19: En Serpiente, la supervivencia y el arcade usan 3 vidas. Los tests de
   `INITIAL_LIVES` y de fin por vidas se actualizan; el modo Rondas conserva su lógica
   sin vidas.
-- [ ] AC-20: Arcade respeta el mute global y el TTS existente. Los cambios de vida,
+- [x] AC-20: Arcade respeta el mute global y el TTS existente. Los cambios de vida,
   puntuación y fin se anuncian en una región `aria-live` sin duplicar el texto.
 - [ ] AC-21: El HUD y el resumen son operables con teclado, foco visible, targets
   ≥44 px, sin scroll horizontal a 360 px y con `prefers-reduced-motion` respetado.
@@ -170,24 +170,24 @@ competir contra mi mejor marca y reaccionar a cada error.
 vez, **para** no duplicar lógica ni romper sus mecánicas.
 
 **Criterios de aceptación:**
-- [ ] AC-22: Flashcards usa `buildDecks`/`deckMastery` compartidos y conserva setup,
+- [x] AC-22: Flashcards usa `buildDecks`/`deckMastery` compartidos y conserva setup,
   reanudación, repaso, resumen, TTS y legacy. Su estado de mazo ya no usa etiquetas
   locales incompatibles.
-- [ ] AC-23: Quiz-significado usa el mazo para preguntas y opciones; no inventa
+- [x] AC-23: Quiz-significado usa el mazo para preguntas y opciones; no inventa
   opciones fuera del mazo. En arcade, una opción incorrecta resta vida.
-- [ ] AC-24: Memorama usa las cartas del mazo; el tablero se adapta a 10 parejas sin
+- [x] AC-24: Memorama usa las cartas del mazo; el tablero se adapta a 10 parejas sin
   desbordar a 360 px; una pareja fallida resta vida en arcade.
-- [ ] AC-25: Ahorcado usa el mazo para las rondas y el mínimo de 3 cartas por mazo;
+- [x] AC-25: Ahorcado usa el mazo para las rondas y el mínimo de 3 cartas por mazo;
   arcade usa las reglas de AC-18.
-- [ ] AC-26: Intruso usa el mazo ancla y distractores de otros temas; no mezcla cartas
+- [x] AC-26: Intruso usa el mazo ancla y distractores de otros temas; no mezcla cartas
   del futuro mazo del tema ancla. La partida se bloquea si no hay otro tema.
-- [ ] AC-27: Lluvia usa el mazo para las rondas; el modo supervivencia existente se
+- [x] AC-27: Lluvia usa el mazo para las rondas; el modo supervivencia existente se
   alinea con arcade (3 vidas, mazo completo) sin duplicar dos sistemas de vidas.
-- [ ] AC-28: Conecta usa el mazo completo en tandas de hasta 8 parejas; una conexión
+- [x] AC-28: Conecta usa el mazo completo en tandas de hasta 8 parejas; una conexión
   incorrecta resta vida en arcade y no se pierden cartas del mazo.
-- [ ] AC-29: Serpiente usa el mazo, conserva sus manzanas/leyenda y aplica las reglas
+- [x] AC-29: Serpiente usa el mazo, conserva sus manzanas/leyenda y aplica las reglas
   de AC-19.
-- [ ] AC-30: Todos los juegos siguen sin importar storage, router ni parser; reciben
+- [x] AC-30: Todos los juegos siguen sin importar storage, router ni parser; reciben
   datos y callbacks por props. Los tests de aislamiento se actualizan solo por el
   contrato aditivo.
 
@@ -196,16 +196,16 @@ vez, **para** no duplicar lógica ni romper sus mecánicas.
 perder progreso ni jugabilidad.
 
 **Criterios de aceptación:**
-- [ ] AC-31: El gate «Todo al día» ya no impide jugar un mazo; la vista de tema y el
+- [x] AC-31: El gate «Todo al día» ya no impide jugar un mazo; la vista de tema y el
   setup ofrecen repaso. El gate de mínimo por mazo sigue activo. Los tests de
   `availability`, `TopicView` y `GameHost` se actualizan.
-- [ ] AC-32: `sepect.srs.v1`, `sepect.profile.v1`, XP, rachas e historial se conservan.
+- [x] AC-32: `sepect.srs.v1`, `sepect.profile.v1`, XP, rachas e historial se conservan.
   `sepect.arcade.v1` es la única clave nueva de esta spec y tolera JSON corrupto o
   cuota llena. El progreso de ejercicios de código usa `sepect.exercises.v1`
   (spec-21) sin tocar SRS ni arcade.
-- [ ] AC-33: `npm test`, `npm run lint` y `npm run build` pasan al 100%; no hay
+- [x] AC-33: `npm test`, `npm run lint` y `npm run build` pasan al 100%; no hay
   warnings nuevos.
-- [ ] AC-34: Sin dependencias nuevas y sin llamadas de red para progreso, XP,
+- [x] AC-34: Sin dependencias nuevas y sin llamadas de red para progreso, XP,
   historial, mazos o récords.
 
 ---

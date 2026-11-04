@@ -1,7 +1,12 @@
 # spec-16 — Flashcards por mazos
 
-> Estado: 🟡 draft (pendiente de firma). Creado el 2026-10-22 por opencode tras confirmación explícita del usuario.
-> Incremento: Flashcards con selección de mazos fijos de 10 cartas en orden de contenido, barra de progreso por mazo y modo estudio/resumen sin romper el resto de juegos.
+> Estado: ✅ Cerrada — absorbida por `spec-18` (2026-10-31). Creada el 2026-10-22 por opencode tras confirmación explícita del usuario.
+> Incremento original: Flashcards con selección de mazos fijos de 10 cartas en orden de contenido, barra de progreso por mazo y modo estudio/resumen sin romper el resto de juegos.
+>
+> **Cierre (spec-23 T1):** el archivo ya tiene el nombre correcto (sin el sufijo literal `\n`).
+> La funcionalidad se implementó y amplió en `spec-18` (mazos, dominio compartido y
+> Arcade); este documento queda como histórico y no tiene tasks propias. La evidencia
+> vive en `specs/tasks-18-mazos-dominio-arcade.md` y `docs/evidence/spec-23-integracion-hardening.md`.
 
 ## Objetivo
 Añadir una pantalla de selección de mazos a Flashcards (bloques consecutivos de 10), barajado solo dentro del mazo seleccionado, progreso derivado del SRS existente («calificada al menos una vez»), comportamiento de reanudación/repaso/completado y resumen al finalizar. No se añade ninguna clave nueva a localStorage.

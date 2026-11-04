@@ -109,6 +109,42 @@ describe('game availability gate', () => {
     expect(getGameAvailability(null).reason).toBe(AVAILABILITY_REASONS.soon);
   });
 
+  it('keeps exercise games upcoming without a manifest', () => {
+    const game = {
+      status: 'available',
+      minCards: 1,
+      needsExercises: true,
+      minExercises: 2,
+    };
+    const result = getGameAvailability(game, {
+      topic: topic('funciones', 10),
+      decks: [],
+      hasExercises: false,
+    });
+    expect(result).toMatchObject({
+      playable: false,
+      reason: AVAILABILITY_REASONS.soon,
+      needsExercises: true,
+      minExercises: 2,
+    });
+    expect(availabilityMessage(result)).toBe('Próximamente');
+  });
+
+  it('unlocks exercise games when the topic has a manifest', () => {
+    const game = {
+      status: 'available',
+      minCards: 1,
+      needsExercises: true,
+      minExercises: 2,
+    };
+    const result = getGameAvailability(game, {
+      topic: topic('funciones', 10),
+      hasExercises: true,
+    });
+    expect(result.playable).toBe(true);
+    expect(result.reason).toBe(AVAILABILITY_REASONS.ok);
+  });
+
   it('switches to eligible counts when studyCardCounts is provided', () => {
     const result = getGameAvailability(
       { status: 'available', minCards: 4 },

@@ -33,13 +33,12 @@ describe('TopicView', () => {
     expect(container.textContent).toContain('Tema Demo');
     expect(container.textContent).toContain('2 cartas');
 
-    const items = container.querySelectorAll('li');
+    const items = container.querySelectorAll('.game-grid__item');
     expect(items).toHaveLength(8);
     expect(container.textContent).toContain('Flashcards');
     expect(
-      container.textContent.match(/Te quedan 2 cartas por aprender o repasar/g)
+      container.textContent.match(/Necesitas al menos \d+ cartas/g)
     ).toHaveLength(7);
-    expect(container.textContent).not.toContain('Necesitas al menos');
     expect(container.textContent).not.toContain('Próximamente');
 
     const links = [...container.querySelectorAll('a[href*="/juego/"]')];
@@ -75,10 +74,10 @@ describe('TopicView', () => {
     );
     expect(container.textContent).not.toContain('Próximamente');
     expect(container.querySelectorAll('button[disabled]')).toHaveLength(1);
-    const lluviaTile = [...container.querySelectorAll('li')].find((item) =>
+    const lluviaTile = [...container.querySelectorAll('.game-grid__item')].find((item) =>
       item.textContent.includes('Lluvia de meteoros')
     );
-    expect(lluviaTile.textContent).toContain('Te quedan 4 cartas por aprender o repasar');
+    expect(lluviaTile.textContent).toContain('Necesitas al menos 6 cartas');
   });
 
   it('enables lluvia-meteoros with at least 6 cards', () => {

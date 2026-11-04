@@ -14,6 +14,18 @@ describe('parseHash', () => {
     expect(parseHash('#/progreso')).toEqual({ view: 'progress' });
     expect(parseHash('#/progreso/')).toEqual({ view: 'progress' });
   });
+  it('settings and personalizados aliases (spec-23 AC-2)', () => {
+    expect(parseHash('#/configuracion')).toEqual({ view: 'settings' });
+    expect(parseHash('#/configuracion/')).toEqual({ view: 'settings' });
+    expect(parseHash('#/personalizados')).toEqual({
+      view: 'category',
+      categoryId: 'personalizados',
+    });
+    expect(parseHash('#/personalizados/')).toEqual({
+      view: 'category',
+      categoryId: 'personalizados',
+    });
+  });
   it('source reader route', () => {
     expect(parseHash('#/tema/funciones/fuente')).toEqual({
       view: 'source',

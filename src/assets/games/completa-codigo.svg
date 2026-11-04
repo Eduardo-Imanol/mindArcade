@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" width="512" height="320" role="img" aria-label="Completa el código">
+<title>Completa el código</title>
+<rect x="0" y="0" width="512" height="320" fill="#1a0b2e"/>
+<ellipse cx="41.16" cy="3.76" rx="183.55" ry="183.55" fill="hsl(320 90% 58% / 0.163)"/>
+<ellipse cx="390.34" cy="48.43" rx="115.24" ry="115.24" fill="hsl(320 90% 58% / 0.224)"/>
+<ellipse cx="66.9" cy="234.96" rx="162.12" ry="162.12" fill="hsl(320 90% 58% / 0.201)"/>
+<text x="46" y="62" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">function suma(a, b) {</text>
+<rect x="340" y="42" width="96" height="30" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="388" y="57" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">?</text>
+<text x="46" y="110" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">  const total = </text>
+<rect x="238" y="90" width="96" height="30" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">a + b</text>
+<text x="46" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">  return </text>
+<rect x="176" y="138" width="96" height="30" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="224" y="153" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">total</text>
+<text x="46" y="206" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">}</text>
+<line x1="256" y1="236" x2="256" y2="218.1" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,210 260.82,217.6 251.18,217.6" fill="#39ff14"/>
+<rect x="111" y="237" width="78" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="150" y="258" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">a + b</text>
+<rect x="217" y="237" width="78" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="258" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">total</text>
+<rect x="323" y="237" width="78" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="362" y="258" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">return</text>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ff007f">rellena los huecos</text>
+</svg>

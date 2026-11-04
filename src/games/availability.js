@@ -88,9 +88,24 @@ export function getDeckSetAvailability(game, decks = []) {
   };
 }
 
-export function getGameAvailability(game, { topic, topics = [], studyCardCounts, decks } = {}) {
+export function getGameAvailability(
+  game,
+  { topic, topics = [], studyCardCounts, decks, hasExercises } = {}
+) {
   if (!game || game.status !== 'available') {
     return { playable: false, reason: AVAILABILITY_REASONS.soon };
+  }
+
+  if (game.needsExercises === true) {
+    const minExercises = positiveInt(game.minExercises) || 2;
+    if (hasExercises !== true) {
+      return {
+        playable: false,
+        reason: AVAILABILITY_REASONS.soon,
+        needsExercises: true,
+        minExercises,
+      };
+    }
   }
 
   // Deck mode: every deck carries all topic cards, so SRS eligibility and the

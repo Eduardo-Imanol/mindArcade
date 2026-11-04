@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { getGame, listGames } from './registry.js';
+import { gamesForCategory, getGame, isGameForCategory, listGames } from './registry.js';
 
 describe('games registry', () => {
-  it('eight games available, unknown id null', () => {
+  it('eleven games available, unknown id null', () => {
     expect(getGame('flashcards').status).toBe('available');
     expect(getGame('memorama').status).toBe('available');
     expect(getGame('ahorcado').status).toBe('available');
@@ -11,6 +11,9 @@ describe('games registry', () => {
     expect(getGame('lluvia-meteoros').status).toBe('available');
     expect(getGame('conecta-pares').status).toBe('available');
     expect(getGame('serpiente-significados').status).toBe('available');
+    expect(getGame('ordena-codigo').status).toBe('available');
+    expect(getGame('escribe-codigo').status).toBe('available');
+    expect(getGame('completa-codigo').status).toBe('available');
     expect(getGame('nope')).toBeNull();
   });
   it('memorama load() resolves a default component', async () => {
@@ -60,13 +63,13 @@ describe('games registry', () => {
     const module = await game.load();
     expect(typeof module.default).toBe('function');
   });
-  it('catalog exposes exactly 8 available games and no upcoming ones', () => {
+  it('catalog exposes exactly 11 available games and no upcoming ones', () => {
     const games = listGames();
-    expect(games).toHaveLength(8);
-    expect(games.filter((game) => game.status === 'available')).toHaveLength(8);
+    expect(games).toHaveLength(11);
+    expect(games.filter((game) => game.status === 'available')).toHaveLength(11);
     expect(games.filter((game) => game.status === 'soon')).toHaveLength(0);
   });
-  it('catalog is the full ordered list of 8 stable ids', () => {
+  it('catalog is the full ordered list of 11 stable ids', () => {
     const ids = listGames().map((game) => game.id);
     expect(ids).toEqual([
       'flashcards',
@@ -77,7 +80,21 @@ describe('games registry', () => {
       'lluvia-meteoros',
       'conecta-pares',
       'serpiente-significados',
+      'ordena-codigo',
+      'escribe-codigo',
+      'completa-codigo',
     ]);
+  });
+  it('registers the three code games with the exercise contract', async () => {
+    for (const id of ['ordena-codigo', 'escribe-codigo', 'completa-codigo']) {
+      const game = getGame(id);
+      expect(game.categories).toEqual(['programacion']);
+      expect(game.needsExercises).toBe(true);
+      expect(game.minExercises).toBe(2);
+      expect(game.minCards).toBe(1);
+      const module = await game.load();
+      expect(typeof module.default).toBe('function');
+    }
   });
   it('every game exposes load()', () => {
     for (const game of listGames()) {
@@ -95,5 +112,67 @@ describe('games registry', () => {
   it('getGame returns the very same frozen instance as listGames', () => {
     const flashcards = listGames().find((game) => game.id === 'flashcards');
     expect(getGame('flashcards')).toBe(flashcards);
+  });
+});
+
+describe('category scope (spec-20)', () => {
+  const categoryIds = ['programacion', 'idiomas', 'universidad', 'personalizados', 'no-existe'];
+
+  const globalIds = listGames()
+    .filter((game) => game.categories.includes('*'))
+    .map((game) => game.id);
+  const codingIds = listGames()
+    .filter((game) => game.categories.includes('programacion'))
+    .map((game) => game.id);
+
+  it('registers the 8 legacy games as global and the 3 code games as programming', () => {
+    expect(globalIds).toHaveLength(8);
+    expect(codingIds).toEqual(['ordena-codigo', 'escribe-codigo', 'completa-codigo']);
+    for (const id of globalIds) {
+      expect(getGame(id).categories).toEqual(['*']);
+      expect(Object.isFrozen(getGame(id).categories)).toBe(true);
+    }
+  });
+
+  it('keeps every global game for every category and adds code games to programming', () => {
+    for (const categoryId of categoryIds) {
+      const expected =
+        categoryId === 'programacion' ? [...globalIds, ...codingIds] : globalIds;
+      expect(listGames({ categoryId }).map((game) => game.id)).toEqual(expected);
+      expect(gamesForCategory(categoryId).map((game) => game.id)).toEqual(expected);
+    }
+  });
+
+  it('listGames() without options is unchanged and returns a fresh array', () => {
+    const games = listGames();
+    games.pop();
+    expect(listGames()).toHaveLength(11);
+    expect(listGames({})).toHaveLength(11);
+  });
+
+  it('isGameForCategory matches globals and exact categories', () => {
+    const globalGame = getGame('flashcards');
+    const codingGame = { categories: ['programacion'] };
+    expect(isGameForCategory(globalGame, 'idiomas')).toBe(true);
+    expect(isGameForCategory(globalGame, 'no-existe')).toBe(true);
+    expect(isGameForCategory(codingGame, 'programacion')).toBe(true);
+    expect(isGameForCategory(codingGame, ' programacion ')).toBe(true);
+    expect(isGameForCategory(codingGame, 'idiomas')).toBe(false);
+    expect(isGameForCategory(codingGame, 'no-existe')).toBe(false);
+    expect(isGameForCategory(codingGame, '')).toBe(false);
+    expect(isGameForCategory(codingGame)).toBe(false);
+    expect(isGameForCategory(null, 'idiomas')).toBe(false);
+  });
+
+  it('treats entries without categories as legacy globals', () => {
+    expect(isGameForCategory({ id: 'legacy' }, 'universidad')).toBe(true);
+  });
+
+  it('does not mutate the catalog or the games when filtering', () => {
+    const before = listGames();
+    listGames({ categoryId: 'programacion' });
+    gamesForCategory('idiomas');
+    expect(listGames()).toEqual(before);
+    expect(Object.isFrozen(getGame('flashcards'))).toBe(true);
   });
 });

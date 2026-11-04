@@ -47,7 +47,7 @@ Cadenas críticas:
 ## Fase A — Contrato, formato y progreso
 
 ### T1 — Parser Markdown, esquema, validador y manifiesto [depends: none]
-- [ ] **Deliverable:** `src/core/exercises/parse.js`:
+- [x] **Deliverable:** `src/core/exercises/parse.js`:
   - `parseExercisesMarkdown(md, { topicId })` → `{ topicId, decks, errors }`;
   - reutiliza el parser de bloques de spec-19 (`src/core/content/markdown.js`) sin
     dependencias nuevas;
@@ -58,7 +58,7 @@ Cadenas críticas:
   - deriva `pieces` de las líneas de `solution` cuando no se declaren, con IDs
     únicos y estables;
   - errores acumulados, sin lanzar excepciones.
-- [ ] **Deliverable:** `src/core/exercises/schema.js`:
+- [x] **Deliverable:** `src/core/exercises/schema.js`:
   - tipos `Exercise`, `ExerciseDeck`, `ExerciseDocument`;
   - `validateExercises(topicId, data, { cards, decks })` → `{ ok, errors }`;
   - 10 mazos, 6 ejercicios universales por mazo, IDs únicos, `cardIds` del mazo;
@@ -67,17 +67,17 @@ Cadenas críticas:
   - piezas con IDs únicos reconstruyen la solución; plantilla + blanks coincide con
     la solución normalizada; blanks con IDs únicos y respuesta no vacía;
   - `functionName` identificador seguro; `cases` no vacíos.
-- [ ] **Deliverable:** `src/core/exercises/select.js`:
+- [x] **Deliverable:** `src/core/exercises/select.js`:
   - `EXERCISE_COUNTS = { facil: 2, medio: 4, dificil: 6 }`;
   - `selectExercises(data, deckNumber, { count, progress })` con pendientes primero;
   - `countExercises(data, deckNumber)`;
   - `exercisesForDifficulty(data, deckNumber, difficulty, progress)`;
   - `hasExerciseDocument(topicId)`.
-- [ ] **Deliverable:** `src/content/exercises/index.js`:
+- [x] **Deliverable:** `src/content/exercises/index.js`:
   - glob lazy de `**/*.md` con `?raw`;
   - `hasExercises(topicId)`, `loadExercises(topicId)`;
   - normalización/validación de path.
-- [ ] **Tests:** `exercises.test.js`:
+- [x] **Tests:** `exercises.test.js`:
   - documento mínimo válido;
   - falta de mazo/ejercicio/campo;
   - carta futura/otro mazo;
@@ -86,14 +86,15 @@ Cadenas críticas:
   - path traversal;
   - `null` para tema sin manifiesto;
   - 6 ejercicios sin reparto 2/2/2.
-- **AC cubiertos:** AC-1, AC-2, AC-3, AC-4, AC-5, AC-6.
+- **AC parciales:** AC-2, AC-3 y AC-4 (contrato, schema y manifiesto con fixtures). AC-1/AC-5 dependen del contenido (T9–T18) y AC-6 de la integración en los 3 juegos (T19).
 - **Contexto:** spec §Decisiones 1–3 y formato Markdown; `buildDecks`.
+- **Nota:** T1 valida el contrato con fixtures generadas; el documento real de 60 ejercicios se entrega en T9–T18.
 - **Done when:** el contenido se puede validar antes de publicarse y no hay tipos de
   ejercicio que limiten los juegos.
 - **Estimate:** L.
 
 ### T2 — Progreso de ejercicios: estados, nivel y storage [depends: T1]
-- [ ] **Deliverable:** `src/core/exercises/mastery.js`:
+- [x] **Deliverable:** `src/core/exercises/mastery.js`:
   - `exerciseStatus(entry)` → `no-intentado | en-progreso | aprendido`;
   - `deckExerciseMastery(deckNumber, exercises, progress)` →
     `{ status: no-iniciado|en-progreso|completado, done, total, learnedIds }`;
@@ -101,7 +102,7 @@ Cadenas críticas:
     → progreso nuevo;
   - `pendingFirst(exercises, progress)` para la selección 2/4/6;
   - puro, sin storage ni DOM.
-- [ ] **Deliverable:** `src/core/storage/exercises.js`:
+- [x] **Deliverable:** `src/core/storage/exercises.js`:
   - clave `sepect.exercises.v1`;
   - `loadExerciseProgress()`, `saveExerciseProgress()`,
     `recordExerciseResult(run)`;
@@ -110,14 +111,14 @@ Cadenas críticas:
   - sanitización de IDs/fechas/booleanos; JSON corrupto → `{}`; cuota llena →
     `{ ok: false }` sin romper la partida;
   - no toca `sepect.srs.v1`.
-- [ ] **Tests:** `exerciseProgress.test.js` y `exerciseStore.test.js`:
+- [x] **Tests:** `exerciseProgress.test.js` y `exerciseStore.test.js`:
   - estados y transiciones;
   - `aprendido` solo con acierto;
   - nivel completado con 6/6 y no antes;
   - selección 2/4/6 con pendientes primero;
   - round-trip, corrupción, cuota, aislamiento de SRS;
   - completar los 6 en distintos juegos/sesiones.
-- **AC cubiertos:** AC-19, AC-20, AC-21, AC-22, AC-23.
+- **AC parciales:** AC-19 y AC-20 (modelo puro y persistencia). AC-21–AC-23 se cierran en T5 (UI, selección y grading).
 - **Contexto:** spec §Decisiones 4–7; `store.js` como referencia de cuota.
 - **Done when:** el nivel de ejercicios puede calcularse y persistirse sin duplicar
   el dominio de cartas.
@@ -128,7 +129,7 @@ Cadenas críticas:
 ## Fase B — Ejecución, editor y shell
 
 ### T3 — Sandbox de ejecución [depends: none]
-- [ ] **Deliverable:** `src/core/code/sandbox.js`:
+- [x] **Deliverable:** `src/core/code/sandbox.js`:
   - `buildSandboxHtml()` con CSP;
   - `runCode({ code, functionName, cases, timeoutMs = 2000 })` crea/reutiliza un
     iframe con `sandbox="allow-scripts"` y `srcdoc`;
@@ -136,7 +137,7 @@ Cadenas críticas:
   - timeout, cleanup y errores de sintaxis;
   - comparación profunda JSON;
   - fallback `{ ok: false, error: 'sandbox-unavailable' }` sin iframe.
-- [ ] **Tests:** `sandbox.test.js`:
+- [x] **Tests:** `sandbox.test.js`:
   - HTML/CSP e inyección de `</script>`/HTML;
   - éxito/fallo de casos;
   - error de sintaxis;
@@ -150,12 +151,12 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T4 — Editor de código [depends: T3]
-- [ ] **Deliverable:** `src/components/CodeEditor.jsx`:
+- [x] **Deliverable:** `src/components/CodeEditor.jsx`:
   - textarea + números de línea;
   - tab → 2 espacios, `Ctrl/Cmd+Enter`;
   - `aria-label`, monoespaciado, sin dependencias;
   - valor/onChange controlados.
-- [ ] **Tests:** `CodeEditor.test.jsx`:
+- [x] **Tests:** `CodeEditor.test.jsx`:
   - escritura;
   - tab;
   - atajo;
@@ -167,7 +168,7 @@ Cadenas críticas:
 - **Estimate:** S.
 
 ### T5 — Shell común de juegos de código [depends: T1–T4]
-- [ ] **Deliverable:** `src/games/code-common/CodeGameShell.jsx`:
+- [x] **Deliverable:** `src/games/code-common/CodeGameShell.jsx`:
   - `GameSetup` + `DeckPicker` + dificultad 2/4/6 + modo Normal/Arcade;
   - TTS del prompt, mute global;
   - índice de ejercicios seleccionados, feedback, resumen;
@@ -177,11 +178,11 @@ Cadenas críticas:
   - arcade 3 vidas + `onArcadeEnd` con el set 2/4/6;
   - reintento normal sin vidas;
   - estados loading/error/vacío.
-- [ ] **Deliverable:** `src/games/code-common/useCodeSession.js`:
+- [x] **Deliverable:** `src/games/code-common/useCodeSession.js`:
   - selección de mazo/dificultad/ejercicio, aciertos, vidas, fin;
   - `onExerciseResult` y `onGrade` una vez por carta/sesión;
   - sin imports de storage/router/parser.
-- [ ] **Tests:** `CodeGameShell.test.jsx`:
+- [x] **Tests:** `CodeGameShell.test.jsx`:
   - deck picker y dificultad 2/4/6;
   - normal/arcade;
   - TTS/mute;
@@ -201,13 +202,13 @@ Cadenas críticas:
 ## Fase C — Mecánicas de los tres juegos
 
 ### T6 — Juego Ordena el código [depends: T5]
-- [ ] **Deliverable:** `src/games/ordena-codigo/OrdenaCodigo.jsx`:
+- [x] **Deliverable:** `src/games/ordena-codigo/OrdenaCodigo.jsx`:
   - banco/zonas, añadir/quitar, subir/bajar;
   - toque/clic/teclado;
   - comprobar por orden de IDs de `pieces`;
   - feedback + orden correcto si falla;
   - TTS.
-- [ ] **Tests:** `OrdenaCodigo.test.jsx`:
+- [x] **Tests:** `OrdenaCodigo.test.jsx`:
   - cualquier ejercicio del mazo, no solo un tipo;
   - orden correcto/incorrecto;
   - líneas duplicadas con IDs únicos; IDs de pieza duplicados rechazados;
@@ -220,13 +221,13 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T7 — Juego Completa el código [depends: T5]
-- [ ] **Deliverable:** `src/games/completa-codigo/CompletaCodigo.jsx`:
+- [x] **Deliverable:** `src/games/completa-codigo/CompletaCodigo.jsx`:
   - render de `template` con inputs en `{{blank-id}}`;
   - validación trim + alternativas;
   - feedback por blank;
   - teclado/foco;
   - TTS.
-- [ ] **Tests:** `CompletaCodigo.test.jsx`:
+- [x] **Tests:** `CompletaCodigo.test.jsx`:
   - cualquier ejercicio del mazo;
   - parseo de marcadores;
   - acierto/error/alternativas;
@@ -240,13 +241,13 @@ Cadenas críticas:
 - **Estimate:** M.
 
 ### T8 — Juego Escribe el código [depends: T5, T3, T4]
-- [ ] **Deliverable:** `src/games/escribe-codigo/EscribeCodigo.jsx`:
+- [x] **Deliverable:** `src/games/escribe-codigo/EscribeCodigo.jsx`:
   - prompt/starter/editor/ejecutar;
   - sandbox inyectable;
   - resultados por caso;
   - reintento normal;
   - TTS.
-- [ ] **Tests:** `EscribeCodigo.test.jsx`:
+- [x] **Tests:** `EscribeCodigo.test.jsx`:
   - cualquier ejercicio del mazo;
   - todos pasan;
   - fallo parcial;
@@ -275,64 +276,64 @@ Cadenas críticas:
 > `funciones-programacion.md`.
 
 ### T9 — Contenido Funciones: mazo 1 [depends: T1]
-- [ ] **Deliverable:** 6 ejercicios del mazo 1 en
+- [x] **Deliverable:** 6 ejercicios del mazo 1 en
   `src/content/exercises/programacion/funciones-en-programacion.md`.
-- [ ] **Validación:** `validateExercises` OK; `cardIds` del mazo; conceptos sin
+- [x] **Validación:** `validateExercises` OK; `cardIds` del mazo; conceptos sin
   futuros; sin dependencia de tipo. La apertura en los 3 juegos se valida en T19.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T10 — Contenido Funciones: mazo 2 [depends: T1, T9]
-- [ ] **Deliverable:** 6 ejercicios del mazo 2.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 2.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T11 — Contenido Funciones: mazo 3 [depends: T10]
-- [ ] **Deliverable:** 6 ejercicios del mazo 3.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 3.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T12 — Contenido Funciones: mazo 4 [depends: T11]
-- [ ] **Deliverable:** 6 ejercicios del mazo 4.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 4.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T13 — Contenido Funciones: mazo 5 [depends: T12]
-- [ ] **Deliverable:** 6 ejercicios del mazo 5.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 5.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T14 — Contenido Funciones: mazo 6 [depends: T13]
-- [ ] **Deliverable:** 6 ejercicios del mazo 6.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 6.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T15 — Contenido Funciones: mazo 7 [depends: T14]
-- [ ] **Deliverable:** 6 ejercicios del mazo 7.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 7.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T16 — Contenido Funciones: mazo 8 [depends: T15]
-- [ ] **Deliverable:** 6 ejercicios del mazo 8.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 8.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T17 — Contenido Funciones: mazo 9 [depends: T16]
-- [ ] **Deliverable:** 6 ejercicios del mazo 9.
-- [ ] **Validación:** ídem.
+- [x] **Deliverable:** 6 ejercicios del mazo 9.
+- [x] **Validación:** ídem.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Estimate:** L.
 
 ### T18 — Contenido Funciones: mazo 10 y cierre de contenido [depends: T17]
-- [ ] **Deliverable:** 6 ejercicios del mazo 10; documento completo (60).
-- [ ] **Validación:** `validateExercises` sobre los 10 mazos; revisión final;
+- [x] **Deliverable:** 6 ejercicios del mazo 10; documento completo (60).
+- [x] **Validación:** `validateExercises` sobre los 10 mazos; revisión final;
   `functions-exercises.test.js` completo.
 - **AC cubiertos:** AC-1, AC-2, AC-3, AC-5, AC-6.
 - **Done when:** los 60 ejercicios validan y quedan listos para la comprobación
@@ -344,23 +345,23 @@ Cadenas críticas:
 ## Fase E — Integración, UI y accesibilidad
 
 ### T19 — Registro, disponibilidad, GameHost y TopicView [depends: T5–T18]
-- [ ] **Deliverable:** `src/games/definition.js`:
+- [x] **Deliverable:** `src/games/definition.js`:
   - `needsExercises?: boolean` (default `false`) y `minExercises?: number`
     (default `2`), validados.
-- [ ] **Deliverable:** `src/games/ordena-codigo/index.js`,
+- [x] **Deliverable:** `src/games/ordena-codigo/index.js`,
   `escribe-codigo/index.js`, `completa-codigo/index.js`:
   - `defineGame` con `categories: ['programacion']`, `needsExercises: true`,
     `minExercises: 2`, `minCards: 1`, `load`.
-- [ ] **Deliverable:** `src/games/registry.js` y `availability.js`:
+- [x] **Deliverable:** `src/games/registry.js` y `availability.js`:
   - 3 juegos de programación;
   - disponibilidad por `hasExercises` + `minExercises`; dificultad alta deshabilitada
     si el mazo no alcanza.
-- [ ] **Deliverable:** `src/views/TopicView.jsx`/`GameHost.jsx`:
+- [x] **Deliverable:** `src/views/TopicView.jsx`/`GameHost.jsx`:
   - «Próximamente» sin ejercicios;
   - carga lazy y props `exercises`, `exerciseProgress`, `onExerciseResult`,
     `topic`, `deck`, `onGrade`, `onArcadeEnd`;
   - mazo sin ejercicios/dificultad deshabilitado.
-- [ ] **Tests:** registry/availability/TopicView/GameHost:
+- [x] **Tests:** registry/availability/TopicView/GameHost:
   - 3 juegos en programación;
   - otros temas;
   - tema sin manifiesto;
@@ -374,11 +375,11 @@ Cadenas críticas:
 - **Estimate:** L.
 
 ### T20 — CSS, accesibilidad, TTS y progreso visible [depends: T19]
-- [ ] **Deliverable:** `src/ui/tokens.css`:
+- [x] **Deliverable:** `src/ui/tokens.css`:
   - `.code-game`, editor, piezas, blanks, feedback, resumen, dificultad, progreso
     `X/6` y estado «Nivel completado»;
   - targets ≥44 px, foco visible, reduced-motion, 360 px sin overflow.
-- [ ] **Verificación:** teclado, VoiceOver, contraste; TTS/mute en los 3; progreso
+- [x] **Verificación:** teclado, VoiceOver, contraste; TTS/mute en los 3; progreso
   visible en setup (junto al picker) y resumen.
 - **AC cubiertos:** AC-10, AC-13, AC-18, AC-21, AC-27.
 - **Done when:** la experiencia es usable en móvil y lector de pantalla.
@@ -389,11 +390,11 @@ Cadenas críticas:
 ## Fase F — Docs, gates y cierre
 
 ### T21 — Docs, gates y cierre [depends: T1–T20]
-- [ ] **Deliverable:** `docs/architecture.md`, `MEMORY.md`, `FOCUS.md`,
+- [x] **Deliverable:** `docs/architecture.md`, `MEMORY.md`, `FOCUS.md`,
   `docs/testing.md` con formato Markdown de ejercicios, progreso
   `sepect.exercises.v1` y sandbox.
-- [ ] **Gates:** `npm test`, `npm run lint`, `npm run build` al 100%.
-- [ ] **Cierre:** ACs, tasks, firma y revisión de contenido.
+- [x] **Gates:** `npm test`, `npm run lint` y `npm run build` al 100%.
+- [x] **Cierre:** ACs, tasks, firma y revisión de contenido.
 - **AC cubiertos:** AC-28 y DoD.
 - **Done when:** todo en verde y sin deps nuevas.
 - **Estimate:** S.

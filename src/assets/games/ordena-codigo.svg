@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" width="512" height="320" role="img" aria-label="Ordena el código">
+<title>Ordena el código</title>
+<rect x="0" y="0" width="512" height="320" fill="#1a0b2e"/>
+<ellipse cx="200.16" cy="91.02" rx="131.16" ry="131.16" fill="hsl(168 90% 58% / 0.148)"/>
+<ellipse cx="195.34" cy="18.79" rx="102.19" ry="102.19" fill="hsl(168 90% 58% / 0.237)"/>
+<ellipse cx="152.28" cy="312.52" rx="204.31" ry="204.31" fill="hsl(168 90% 58% / 0.17)"/>
+<rect x="34" y="44" width="206" height="44" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="137" y="66" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">return a + b;</text>
+<rect x="34" y="98" width="206" height="44" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="137" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">}</text>
+<rect x="34" y="152" width="206" height="44" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="137" y="174" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">const total = a + b;</text>
+<rect x="34" y="206" width="206" height="44" rx="12" fill="rgba(26, 11, 46, .92)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="137" y="228" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">function suma(a, b) {</text>
+<line x1="254" y1="158" x2="283" y2="158" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="292,158 283.56,163.36 283.56,152.64" fill="#ff007f"/>
+<rect x="306" y="44" width="176" height="206" rx="12" fill="rgba(57, 255, 20, .06)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="318" y="74" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">1 function suma(a, b) {</text>
+<text x="318" y="120" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">2 const total = a + b;</text>
+<text x="318" y="166" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">3 return a + b;</text>
+<text x="318" y="212" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">4 }</text>
+<text x="256" y="292" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">ordena las piezas</text>
+</svg>

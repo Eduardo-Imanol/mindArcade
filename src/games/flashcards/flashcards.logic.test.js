@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createState, reduce } from './flashcards.logic.js';
+import { createState, reduce, sessionCardsFor, shuffleCards } from './flashcards.logic.js';
 
 const DECK = [{ id: 'a' }, { id: 'b' }];
 
@@ -116,5 +116,46 @@ describe('flashcards deck session reducer', () => {
     const state = reduce(createState(DECK), { type: 'complete' }, DECK);
     expect(state).toMatchObject({ complete: true, flipped: false, correct: 0, wrong: 0 });
     expect(state.gradedIds.size).toBe(0);
+  });
+});
+
+describe('flashcards deck sessions (spec-18 T6)', () => {
+  const PRESERVE = () => 0.999999;
+  const ENTRY = {
+    cards: [
+      { id: 'a', front: 'uno', back: 'one' },
+      { id: 'b', front: 'dos', back: 'two' },
+      { id: 'c', front: 'tres', back: 'three' },
+    ],
+    studiedIds: ['a'],
+  };
+
+  it('normal resumes only ungraded cards and reviews the whole deck when studied', () => {
+    const pending = sessionCardsFor(ENTRY, { random: PRESERVE });
+    expect(pending.map((card) => card.id)).toEqual(['b', 'c']);
+
+    const studied = { ...ENTRY, studiedIds: ['a', 'b', 'c'] };
+    const review = sessionCardsFor(studied, { random: PRESERVE });
+    expect(review.map((card) => card.id)).toEqual(['a', 'b', 'c']);
+  });
+
+  it('normal review and arcade always play the complete deck', () => {
+    expect(sessionCardsFor(ENTRY, { mode: 'normal', review: true, random: PRESERVE })).toHaveLength(3);
+    expect(sessionCardsFor(ENTRY, { mode: 'arcade', random: PRESERVE })).toHaveLength(3);
+  });
+
+  it('shuffles a copy and never mutates the deck entry', () => {
+    const before = ENTRY.cards.map((card) => card.id);
+    const shuffled = shuffleCards(ENTRY.cards, () => 0);
+    expect(ENTRY.cards.map((card) => card.id)).toEqual(before);
+    expect(shuffled).not.toBe(ENTRY.cards);
+
+    sessionCardsFor(ENTRY, { mode: 'arcade', random: () => 0 });
+    expect(ENTRY.cards.map((card) => card.id)).toEqual(before);
+  });
+
+  it('handles missing deck entries without throwing', () => {
+    expect(sessionCardsFor(undefined)).toEqual([]);
+    expect(sessionCardsFor({ cards: null }, { mode: 'arcade' })).toEqual([]);
   });
 });

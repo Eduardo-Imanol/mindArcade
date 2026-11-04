@@ -7,16 +7,22 @@ import React, {
   useState,
 } from 'react';
 import ArcadeHud from '../../components/ArcadeHud.jsx';
+import ArcadeSummary from '../../components/ArcadeSummary.jsx';
 import DeckPicker from '../../components/DeckPicker.jsx';
+import GameModeSwitch from '../../components/GameModeSwitch.jsx';
 import GameSetup from '../../components/GameSetup.jsx';
 import SoundToggle from '../../components/SoundToggle.jsx';
 import { isSupported, speak, stopSpeech } from '../../core/audio/tts.js';
 import { arcadeFinish, arcadeHit, arcadeMiss, createArcade } from '../../core/engine/arcade.js';
-import { getDeckAvailability } from '../availability.js';
+import { DECK_MASTERY_LABELS } from '../../core/repetition/decks.js';
+import { availabilityMessage, getDeckAvailability } from '../availability.js';
+import { bestScoreFor } from '../best.js';
 import {
+  DECK_BATCH_SIZE,
   DEFAULT_PAIRS,
   MAX_PAIRS,
   MIN_PAIRS,
+  buildDeckBatches,
   buildSession,
   createState,
   pendingGrades,
@@ -24,7 +30,11 @@ import {
   summarize,
 } from './conecta-pares.logic.js';
 
-
+const GAME_ID = 'conecta-pares';
+const MODE_OPTIONS = [
+  { id: 'normal', label: 'Normal', hint: 'Tandas a tu ritmo' },
+  { id: 'arcade', label: 'Arcade', hint: '3 vidas · mazo completo' },
+];
 const PAIR_COLORS = [
   '#00ffcc',
   '#ff007f',
@@ -68,24 +78,87 @@ function cardLabel(side, index, total, card, order) {
   return `${prefix} ${index + 1} de ${total}: ${text}${connected}`;
 }
 
-export default function ConectaPares({ deck = [], selectCards, onGrade, onExit } = {}) {
-  const available = useMemo(
+function disabledReasonFor(deck) {
+  const availability = getDeckAvailability(
+    { id: GAME_ID, status: 'available', minCards: MIN_PAIRS },
+    deck
+  );
+  if (!availability.playable && availability.reason === 'min-cards') {
+    return availabilityMessage(availability);
+  }
+  return '';
+}
+
+function setupNoteFor(deck, mode, batchSize, best) {
+  if (!deck) return 'Elige un mazo para empezar.';
+  const status = DECK_MASTERY_LABELS[deck.mastery] || DECK_MASTERY_LABELS.vacia;
+  const total = Number(deck.total ?? deck.cards?.length) || 0;
+  if (mode === 'arcade') {
+    return `${status} · ${total} pares · 3 vidas · Mejor marca ${best}`;
+  }
+  return `${status} · tandas de hasta ${batchSize} pares · Mejor marca ${best}`;
+}
+
+export default function ConectaPares({
+  deck = [],
+  decks,
+  best,
+  selectCards,
+  onGrade,
+  onArcadeEnd,
+  onExit,
+  onBackToTopic,
+  random = Math.random,
+} = {}) {
+  const hasDecks = Array.isArray(decks) && decks.length > 0;
+  const legacyAvailable = useMemo(
     () => buildSession({ cards: deck, count: MAX_PAIRS, random: () => 0 }).total,
     [deck]
   );
-  const [requested, setRequested] = useState(() =>
-    Math.min(DEFAULT_PAIRS, Math.max(MIN_PAIRS, available))
+  const [selectedDeckId, setSelectedDeckId] = useState(() =>
+    hasDecks ? decks[0].id : null
   );
+  const [gameMode, setGameMode] = useState('normal');
+  const [requested, setRequested] = useState(() =>
+    Math.min(DEFAULT_PAIRS, Math.max(MIN_PAIRS, legacyAvailable))
+  );
+  const [batchSize, setBatchSize] = useState(DECK_BATCH_SIZE);
   const [state, setState] = useState(() => createState());
   const [startFailed, setStartFailed] = useState(false);
+  const [arcade, setArcade] = useState(() => createArcade());
+  const [arcadeEnded, setArcadeEnded] = useState(false);
+  const [arcadeResult, setArcadeResult] = useState(null);
   const [lines, setLines] = useState([]);
-  const emitted = useRef(0);
+  const emitted = useRef(new Set());
   const exiting = useRef(false);
+  const endedRef = useRef(false);
   const boardRef = useRef(null);
   const cardRefs = useRef(new Map());
   const matchedRef = useRef(state.matched);
   const previousMatched = useRef(0);
+  const previousBatch = useRef(0);
   const summaryHeadingRef = useRef(null);
+  const batchHeadingRef = useRef(null);
+
+  const selectedDeck = hasDecks
+    ? decks.find((entry) => entry.id === selectedDeckId) || decks[0]
+    : null;
+  const selectedDeckCards = Array.isArray(selectedDeck?.cards) ? selectedDeck.cards : [];
+  const deckAvailable = useMemo(
+    () => buildSession({ cards: selectedDeckCards, count: MAX_PAIRS, random: () => 0 }).total,
+    [selectedDeckCards]
+  );
+  const maxBatch = Math.min(DECK_BATCH_SIZE, deckAvailable);
+  const batchOptions = Array.from(
+    { length: Math.max(0, maxBatch - MIN_PAIRS + 1) },
+    (_, index) => MIN_PAIRS + index
+  );
+  const effectiveBatchSize = Math.max(
+    MIN_PAIRS,
+    Math.min(batchSize, maxBatch || MIN_PAIRS)
+  );
+  const bestForDeck = bestScoreFor(best, selectedDeck?.id);
+  const deckReason = hasDecks && selectedDeck ? disabledReasonFor(selectedDeck) : '';
 
   matchedRef.current = state.matched;
 
@@ -100,22 +173,68 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
 
   useEffect(() => () => stopSpeech(), []);
 
+  const backToTopic = useCallback(() => {
+    if (onBackToTopic) onBackToTopic();
+    else onExit?.();
+  }, [onBackToTopic, onExit]);
+
+  const gradeCard = useCallback(
+    (cardId, grade) => {
+      if (cardId === undefined || cardId === null) return;
+      const key = String(cardId);
+      if (emitted.current.has(key)) return;
+      emitted.current.add(key);
+      const mapped =
+        gameMode === 'arcade' && grade !== 'otra-vez' ? 'facil' : grade;
+      onGrade?.(cardId, mapped);
+    },
+    [gameMode, onGrade]
+  );
+
+  const gradePending = useCallback(
+    (snapshot) => {
+      for (const entry of pendingGrades(snapshot)) {
+        gradeCard(entry.cardId, entry.grade);
+      }
+    },
+    [gradeCard]
+  );
+
   useEffect(() => {
     const grade = state.lastGrade;
-    if (grade && grade.seq > emitted.current) {
-      emitted.current = grade.seq;
-      onGrade?.(grade.cardId, grade.grade);
-    }
-  }, [state.lastGrade, onGrade]);
+    if (grade) gradeCard(grade.cardId, grade.grade);
+  }, [state.lastGrade, gradeCard]);
+
+  useEffect(() => {
+    const miss = state.lastMiss;
+    if (gameMode === 'arcade' && miss) gradeCard(miss.cardId, miss.grade);
+  }, [state.lastMiss, gameMode, gradeCard]);
 
   useLayoutEffect(() => {
     if (state.phase === 'complete') {
       summaryHeadingRef.current?.focus();
       previousMatched.current = state.matched.length;
+      previousBatch.current = state.batchIndex;
+      return;
+    }
+    if (state.phase === 'batch-complete') {
+      batchHeadingRef.current?.focus();
+      previousMatched.current = state.matched.length;
+      previousBatch.current = state.batchIndex;
       return;
     }
     if (state.phase !== 'playing') {
       previousMatched.current = state.matched.length;
+      previousBatch.current = state.batchIndex;
+      return;
+    }
+    if (state.batchIndex !== previousBatch.current) {
+      previousBatch.current = state.batchIndex;
+      previousMatched.current = state.matched.length;
+      const first = state.left.find(
+        (card) => !state.matched.some((entry) => entry.cardId === card.id)
+      );
+      if (first) cardRefs.current.get(`question:${first.id}`)?.focus();
       return;
     }
     if (state.matched.length > previousMatched.current) {
@@ -131,7 +250,7 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
       }
     }
     previousMatched.current = state.matched.length;
-  }, [state.phase, state.matched, state.left]);
+  }, [state.phase, state.matched, state.left, state.batchIndex]);
 
   useEffect(() => {
     const onKeyDown = (event) => {
@@ -200,41 +319,113 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
     };
   }, [recalculate, state.phase]);
 
-  const handleStart = () => {
-    const count = requested;
-    const pool = (selectCards ? selectCards(count) : deck.slice(0, count)) || [];
-    emitted.current = 0;
+  const resetSession = () => {
+    emitted.current = new Set();
     exiting.current = false;
+    endedRef.current = false;
+    setArcade(createArcade());
+    setArcadeEnded(false);
+    setArcadeResult(null);
     setLines([]);
+  };
+
+  const endArcade = (finalArcade, snapshot) => {
+    if (endedRef.current) return;
+    endedRef.current = true;
+    const finished = arcadeFinish(finalArcade);
+    setArcade(finished);
+    setArcadeEnded(true);
+    if (snapshot) gradePending(snapshot);
+    const result = onArcadeEnd?.({
+      score: finished.score,
+      correct: finished.correct,
+      wrong: finished.wrong,
+      lives: finished.lives,
+      completed: finished.completed,
+      deckId: selectedDeck?.id,
+    });
+    setArcadeResult(result || { best: finished.score, isRecord: false });
+  };
+
+  const startSession = () => {
+    resetSession();
+    setStartFailed(false);
+    if (hasDecks && selectedDeck) {
+      if (deckReason || selectedDeckCards.length < MIN_PAIRS) {
+        setStartFailed(true);
+        return;
+      }
+      const size = gameMode === 'arcade' ? DECK_BATCH_SIZE : effectiveBatchSize;
+      const next = reduce(createState(), {
+        type: 'start',
+        batches: buildDeckBatches(selectedDeckCards, { size }),
+        random,
+      });
+      setState(next);
+      setStartFailed(next.phase !== 'playing');
+      return;
+    }
+    const pool = (selectCards ? selectCards(requested) : deck.slice(0, requested)) || [];
     const next = reduce(createState(), {
       type: 'start',
-      count,
+      count: requested,
       cards: pool,
-      random: Math.random,
+      random,
     });
     setState(next);
     setStartFailed(next.phase !== 'playing');
   };
 
   const handleReplay = () => {
-    emitted.current = 0;
-    exiting.current = false;
-    setLines([]);
+    if (gameMode === 'arcade') {
+      startSession();
+      return;
+    }
+    resetSession();
     setStartFailed(false);
     setState(createState());
   };
 
+  const handleChooseDeck = () => {
+    resetSession();
+    setStartFailed(false);
+    setState(createState());
+  };
+
+  const handleNextBatch = () => {
+    const next = reduce(state, { type: 'nextBatch', random });
+    if (next === state) return;
+    setLines([]);
+    setState(next);
+  };
+
   const handleSelect = (side, cardId) => {
+    if (gameMode === 'arcade' && (arcade.over || arcadeEnded)) return;
     const next = reduce(state, { type: 'select', side, cardId });
     if (next === state) return;
+    const matched = next.matched.length > state.matched.length;
+    const missed = next.errors > state.errors;
     setState(next);
     const card = cardById.get(cardId);
-    if (!card) return;
-    if (next.feedback?.type === 'correct') {
-      const matchedCard = cardById.get(next.feedback.cardId);
-      if (matchedCard) speak(`${matchedCard.front}. ${matchedCard.back}`);
-    } else if (next.selection || next.feedback?.type === 'wrong') {
-      speak(side === 'question' ? card.front : card.back);
+    if (card) {
+      if (next.feedback?.type === 'correct') {
+        const matchedCard = cardById.get(next.feedback.cardId);
+        if (matchedCard) speak(`${matchedCard.front}. ${matchedCard.back}`);
+      } else if (next.selection || next.feedback?.type === 'wrong') {
+        speak(side === 'question' ? card.front : card.back);
+      }
+    }
+    if (gameMode !== 'arcade') return;
+    if (matched) {
+      const nextArcade = arcadeHit(arcade);
+      setArcade(nextArcade);
+      if (next.phase === 'complete') {
+        endArcade(arcadeFinish(nextArcade), next);
+      }
+    } else if (missed) {
+      const nextArcade = arcadeMiss(arcade);
+      setArcade(nextArcade);
+      if (nextArcade.over) endArcade(nextArcade, next);
     }
   };
 
@@ -242,18 +433,11 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
     if (exiting.current) return;
     exiting.current = true;
     stopSpeech();
-    if (state.phase === 'playing') {
-      const grade = state.lastGrade;
-      if (grade && grade.seq > emitted.current) {
-        emitted.current = grade.seq;
-        onGrade?.(grade.cardId, grade.grade);
-      }
-      for (const entry of pendingGrades(state)) onGrade?.(entry.cardId, entry.grade);
-    }
-    onExit?.();
+    if (state.phase === 'playing') gradePending(state);
+    backToTopic();
   };
 
-  if (available < MIN_PAIRS || startFailed) {
+  if (!hasDecks && (legacyAvailable < MIN_PAIRS || startFailed)) {
     return (
       <main className="sepect-bg conecta-page topic-page">
         <div className="game-stage">
@@ -262,7 +446,7 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
             Necesitas al menos 3 pares únicos de pregunta y significado para jugar este tema.
           </p>
           <div className="conecta-actions">
-            {startFailed && available >= MIN_PAIRS && (
+            {startFailed && legacyAvailable >= MIN_PAIRS && (
               <button className="btn-neon" type="button" onClick={handleReplay}>
                 Elegir pares
               </button>
@@ -277,9 +461,93 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
     );
   }
 
+  if (startFailed) {
+    return (
+      <main className="sepect-bg conecta-page topic-page">
+        <div className="game-stage">
+          <h1 className="neon game-app-title">Conecta pregunta–significado</h1>
+          <p>El mazo elegido no tiene pares suficientes para jugar.</p>
+          <div className="conecta-actions">
+            <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+              Elegir mazo
+            </button>
+            <button className="btn-neon" type="button" onClick={handleExit}>
+              Volver al tema
+            </button>
+            <SoundToggle />
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   if (state.phase === 'setup') {
+    if (hasDecks) {
+      const startDisabled =
+        !selectedDeck ||
+        Boolean(deckReason) ||
+        selectedDeckCards.length < MIN_PAIRS;
+      return (
+        <GameSetup
+          pageClassName="conecta-page topic-page"
+          title="Conecta pregunta–significado"
+          eyebrow="Configura tu partida"
+          lead="Une cada pregunta con su significado tocando ambas columnas. En arcade el mazo completo se juega con tres vidas."
+          note={`${decks.length} ${decks.length === 1 ? 'mazo' : 'mazos'} de este tema · las tandas nunca descartan cartas.`}
+          start={
+            <button
+              className="btn-neon"
+              type="button"
+              onClick={startSession}
+              disabled={startDisabled}
+            >
+              Empezar
+            </button>
+          }
+          actions={
+            <>
+              <SoundToggle />
+              <button className="btn-neon game-setup__exit" type="button" onClick={handleExit}>
+                Salir
+              </button>
+            </>
+          }
+        >
+          <GameModeSwitch mode={gameMode} onChange={setGameMode} options={MODE_OPTIONS} />
+          <DeckPicker
+            decks={decks}
+            selectedDeckId={selectedDeck?.id}
+            onSelect={(id) => setSelectedDeckId(id)}
+            best={best}
+            disabledReason={(entry) => disabledReasonFor(entry)}
+            gameId={GAME_ID}
+            label="Elige tu mazo"
+          />
+          {gameMode === 'normal' && batchOptions.length > 0 ? (
+            <div className="conecta-setup">
+              <label htmlFor="conecta-batch">Parejas por tanda</label>
+              <select
+                id="conecta-batch"
+                value={effectiveBatchSize}
+                onChange={(event) => setBatchSize(Number(event.target.value))}
+              >
+                {batchOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+          <p className="conecta-note" role="status">
+            {setupNoteFor(selectedDeck, gameMode, effectiveBatchSize, bestForDeck)}
+          </p>
+        </GameSetup>
+      );
+    }
+
     const pairOptions = Array.from(
-      { length: Math.min(MAX_PAIRS, available) - MIN_PAIRS + 1 },
+      { length: Math.min(MAX_PAIRS, legacyAvailable) - MIN_PAIRS + 1 },
       (_, index) => MIN_PAIRS + index
     );
     return (
@@ -287,9 +555,9 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
         pageClassName="conecta-page topic-page"
         title="Conecta pregunta–significado"
         lead="Une cada pregunta con su significado tocando ambas columnas."
-        note={`${available} pares únicos disponibles en este tema.`}
+        note={`${legacyAvailable} pares únicos disponibles en este tema.`}
         start={
-          <button className="btn-neon" type="button" onClick={handleStart}>
+          <button className="btn-neon" type="button" onClick={startSession}>
             Empezar
           </button>
         }
@@ -306,7 +574,7 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
           <label htmlFor="conecta-pairs">Pares</label>
           <select
             id="conecta-pairs"
-            value={Math.min(requested, Math.min(MAX_PAIRS, available))}
+            value={Math.min(requested, Math.min(MAX_PAIRS, legacyAvailable))}
             onChange={(event) => setRequested(Number(event.target.value))}
           >
             {pairOptions.map((option) => (
@@ -315,6 +583,86 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
           </select>
         </div>
       </GameSetup>
+    );
+  }
+
+  if (gameMode === 'arcade' && arcadeEnded) {
+    const resultBest = Number(arcadeResult?.best ?? Math.max(bestForDeck, arcade.score));
+    const isRecord = Boolean(arcadeResult?.isRecord ?? arcade.score > bestForDeck);
+    return (
+      <main className="sepect-bg conecta-page topic-page">
+        <div className="game-stage">
+          <ArcadeSummary
+            score={arcade.score}
+            best={resultBest}
+            isRecord={isRecord}
+            lives={arcade.lives}
+            correct={arcade.correct}
+            wrong={arcade.wrong}
+            completed={arcade.completed}
+            deckLabel={
+              selectedDeck ? `Mazo ${selectedDeck.number} (${selectedDeck.label})` : undefined
+            }
+            actions={
+              <>
+                <button className="btn-neon" type="button" onClick={startSession} autoFocus>
+                  Repetir
+                </button>
+                <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                  Elegir mazo
+                </button>
+                <button className="btn-neon" type="button" onClick={backToTopic}>
+                  Volver al tema
+                </button>
+                <SoundToggle />
+              </>
+            }
+          />
+        </div>
+      </main>
+    );
+  }
+
+  if (state.phase === 'batch-complete') {
+    return (
+      <main className="sepect-bg conecta-page topic-page">
+        <div className="game-stage">
+          <section className="result-panel" aria-labelledby="conecta-batch-title">
+            <p className="result-panel__eyebrow">Mazo {selectedDeck?.number}</p>
+            <h1
+              id="conecta-batch-title"
+              className="neon game-app-title"
+              ref={batchHeadingRef}
+              tabIndex={-1}
+            >
+              Tanda completada
+            </h1>
+            <p className="result-panel__live" role="status">
+              Tanda {state.batchIndex + 1} de {state.batchCount} completada. Quedan{' '}
+              {Math.max(0, state.batchCount - state.batchIndex - 1)} tandas.
+            </p>
+            <dl className="result-panel__stats">
+              <div className="result-panel__stat">
+                <dt>Pares de la tanda</dt>
+                <dd>{state.matched.length}</dd>
+              </div>
+              <div className="result-panel__stat">
+                <dt>Errores</dt>
+                <dd>{state.errors}</dd>
+              </div>
+            </dl>
+            <div className="result-panel__actions">
+              <button className="btn-neon" type="button" onClick={handleNextBatch} autoFocus>
+                Siguiente tanda
+              </button>
+              <button className="btn-neon" type="button" onClick={handleExit}>
+                Salir
+              </button>
+              <SoundToggle />
+            </div>
+          </section>
+        </div>
+      </main>
     );
   }
 
@@ -344,7 +692,12 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
             <button className="btn-neon" type="button" onClick={handleReplay}>
               Jugar de nuevo
             </button>
-            <button className="btn-neon" type="button" onClick={handleExit}>
+            {hasDecks ? (
+              <button className="btn-neon" type="button" onClick={handleChooseDeck}>
+                Elegir mazo
+              </button>
+            ) : null}
+            <button className="btn-neon" type="button" onClick={backToTopic}>
               Volver al tema
             </button>
             <SoundToggle />
@@ -421,18 +774,35 @@ export default function ConectaPares({ deck = [], selectCards, onGrade, onExit }
   return (
     <main className="sepect-bg conecta-page topic-page">
       <div className="game-stage">
-        <header className="conecta-header">
-          <p className="conecta-progress">
-            Pares {state.matched.length} de {state.total} · {state.errors}{' '}
-            {state.errors === 1 ? 'error' : 'errores'}
-          </p>
-          <div className="conecta-actions" style={{ marginTop: 0 }}>
+        <header className="conecta-header game-session-header">
+          <div className="game-session-header__text">
+            <p className="game-session-header__eyebrow">
+              {hasDecks && selectedDeck
+                ? `Mazo ${selectedDeck.number} · Tanda ${state.batchIndex + 1} de ${state.batchCount}`
+                : 'Conecta'}{' '}
+              · {gameMode === 'arcade' ? 'Arcade' : 'Normal'}
+            </p>
+            <p className="conecta-progress">
+              Pares {state.matched.length} de {state.total} · {state.errors}{' '}
+              {state.errors === 1 ? 'error' : 'errores'}
+            </p>
+          </div>
+          <div className="conecta-actions game-session-header__actions" style={{ marginTop: 0 }}>
             <SoundToggle />
             <button className="btn-neon" type="button" onClick={handleExit}>
               Salir
             </button>
           </div>
         </header>
+
+        {gameMode === 'arcade' ? (
+          <ArcadeHud
+            lives={arcade.lives}
+            score={arcade.score}
+            streak={arcade.streak}
+            best={bestForDeck}
+          />
+        ) : null}
 
         <p className="conecta-status" role="status" aria-live="polite">
           {announcement}

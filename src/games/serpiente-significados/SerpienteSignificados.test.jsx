@@ -102,7 +102,7 @@ describe('serpiente-significados setup', () => {
     expect(view.container.textContent).toContain('Ronda 1 de 8');
     expect(view.container.querySelectorAll('.serpiente-legend__row')).toHaveLength(3);
     expect(view.container.querySelectorAll('.serpiente-apple')).toHaveLength(3);
-    expect(view.container.querySelector('[aria-label="Vidas: 5 de 5"]')).toBeTruthy();
+    expect(view.container.querySelector('[aria-label="Vidas: 3 de 3"]')).toBeTruthy();
     expect(snakeLength(view.container)).toBe(2);
     view.unmount();
   });
@@ -223,7 +223,7 @@ describe('serpiente-significados session flow', () => {
       .map((node) => node.textContent)
       .find((back) => back !== DECK[0].back);
     eatBack(view.container, harness, wrongBack);
-    expect(lives(view.container)).toBe(4);
+    expect(lives(view.container)).toBe(2);
     expect(snakeLength(view.container)).toBe(5);
     expect(status(view.container).textContent).toContain('Incorrecto');
     expect(
@@ -256,7 +256,7 @@ describe('serpiente-significados session flow', () => {
     expect(snakeLength(view.container)).toBe(6);
 
     forceSelfCollision(view.container, harness);
-    expect(lives(view.container)).toBe(3);
+    expect(lives(view.container)).toBe(1);
     expect(snakeLength(view.container)).toBe(2);
     expect(view.container.textContent).toContain('Ronda 2 de 4');
     expect(status(view.container).textContent).toContain('¡Choque!');

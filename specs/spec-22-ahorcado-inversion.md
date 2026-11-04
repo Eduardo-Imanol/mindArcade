@@ -55,23 +55,23 @@ related_tasks: specs/tasks-22-ahorcado-inversion.md
 pista debajo, **para** intentar recordar antes de mirar la ayuda.
 
 **Criterios de aceptación:**
-- [ ] AC-1: A 360, 768 y desktop, la palabra/slots aparece **arriba** y la pista
+- [x] AC-1: A 360, 768 y desktop, la palabra/slots aparece **arriba** y la pista
   **debajo**, con separación visible y sin solaparse. Evidencia: captura before/after
   y `getBoundingClientRect()` con `word.top < hint.top`. El cambio es obligatorio.
-- [ ] AC-2: La pista conserva su contenido y estilo; no se elimina ni se oculta. El
+- [x] AC-2: La pista conserva su contenido y estilo; no se elimina ni se oculta. El
   estado de intentos/vidas sigue visible y cerca de la pista.
-- [ ] AC-3: El orden del DOM coincide con el visual: palabra → pista → intentos →
+- [x] AC-3: El orden del DOM coincide con el visual: palabra → pista → intentos →
   teclado; el arte decorativo puede intercalarse y no cuenta para el orden semántico.
   La pista tiene label accesible y la palabra mantiene su `aria-live` sin anuncios
   duplicados.
-- [ ] AC-4: La mecánica no cambia: letras correctas/incorrectas, `MAX_MISTAKES`,
+- [x] AC-4: La mecánica no cambia: letras correctas/incorrectas, `MAX_MISTAKES`,
   vidas de arcade, grados `facil`/`otra-vez`, score y récord siguen igual.
-- [ ] AC-5: El botón de TTS y el mute global siguen funcionando; el orden no altera
+- [x] AC-5: El botón de TTS y el mute global siguen funcionando; el orden no altera
   la lectura en voz alta.
-- [ ] AC-6: No se acepta no-op: el orden final del DOM y el visual debe ser
+- [x] AC-6: No se acepta no-op: el orden final del DOM y el visual debe ser
   palabra → pista → intentos → teclado, aunque una medición previa sugiera que ya
   estaba correcto.
-- [ ] AC-7: `npm test`, `npm run lint` y `npm run build` pasan al 100%; sin
+- [x] AC-7: `npm test`, `npm run lint` y `npm run build` pasan al 100%; sin
   dependencias nuevas ni red.
 
 ---

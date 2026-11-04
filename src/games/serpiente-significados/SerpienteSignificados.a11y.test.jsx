@@ -119,10 +119,10 @@ describe('serpiente-significados game semantics (AC-14, AC-17)', () => {
     expect(board.getAttribute('aria-label')).toContain('Tablero de la serpiente');
     expect(board.hasAttribute('tabindex')).toBe(false);
 
-    expect(view.container.querySelector('[aria-label="Vidas: 5 de 5"]')).toBeTruthy();
+    expect(view.container.querySelector('[aria-label="Vidas: 3 de 3"]')).toBeTruthy();
     expect(view.container.querySelector('.serpiente-mode').textContent).toBe('Rondas');
     expect(
-      view.container.querySelector('[aria-label="Vidas: 5 de 5"] [aria-hidden="true"]')
+      view.container.querySelector('[aria-label="Vidas: 3 de 3"] [aria-hidden="true"]')
     ).toBeTruthy();
 
     const legend = view.container.querySelector('.serpiente-legend');

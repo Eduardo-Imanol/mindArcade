@@ -76,7 +76,7 @@ const QUIZ_MD = `# Tema Quiz
 - Q: dos | A: two
 - Q: tres | A: three
 - Q: cuatro | A: four`;
-const QUIZ_BACK = { uno: 'one', dos: 'two', tres: 'three', cuatro: 'four' };
+const QUIZ_BACK = { uno: 'one', dos: 'two', tres: 'three', cuatro: 'four', cinco: 'five', seis: 'six' };
 
 const findButton = (container, text) =>
   [...container.querySelectorAll('button')].find((button) => button.textContent === text);
@@ -135,12 +135,8 @@ const INTRUSO_OTHER_MD = `# Tema Intruso
 - Q: beta | A: significado beta
 - Q: gamma | A: significado gamma
 - Q: delta | A: significado delta`;
-const INTRUSO_OTHER_BACKS = [
-  'significado alfa',
-  'significado beta',
-  'significado gamma',
-  'significado delta',
-];
+const INTRUSO_ANCHOR = loadCatalog().find((entry) => entry.id === INTRUSO_ANCHOR_ID);
+const INTRUSO_ANCHOR_BACKS = new Set(INTRUSO_ANCHOR.cards.map((card) => card.back));
 
 const startIntruso = (container, rounds) => {
   const select = container.querySelector('#intruso-rounds');
@@ -207,7 +203,7 @@ const conectaQuestions = (container) => [
 ];
 
 const startConecta = (container, pairs) => {
-  const select = container.querySelector('#conecta-pairs');
+  const select = container.querySelector('#conecta-batch');
   const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set;
   setter.call(select, String(pairs));
   fire(select, 'change');
@@ -223,9 +219,9 @@ const intrusoOptions = (container) => [...container.querySelectorAll('.intruso-o
 const intrusoBack = (button) =>
   (button.getAttribute('aria-label') || '').replace(/^Opción \d+: /, '');
 const intrusoIntruderOption = (container) =>
-  intrusoOptions(container).find((button) => INTRUSO_OTHER_BACKS.includes(intrusoBack(button)));
+  intrusoOptions(container).find((button) => !INTRUSO_ANCHOR_BACKS.has(intrusoBack(button)));
 const intrusoBaseOption = (container) =>
-  intrusoOptions(container).find((button) => !INTRUSO_OTHER_BACKS.includes(intrusoBack(button)));
+  intrusoOptions(container).find((button) => INTRUSO_ANCHOR_BACKS.has(intrusoBack(button)));
 
 // El catálogo built-in puede crecer (N temas): se bloquean los built-in distintos
 // del ancla para que estos tests dependan solo de los topics que ellos crean.
@@ -288,6 +284,31 @@ describe('GameHost wiring', () => {
     expect(window.location.hash).toBe(`#/tema/${topic.id}`);
   });
 
+  it('flashcards deck mastery updates after grading without reload (AC-10)', async () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0.999999);
+    const md = `# Tema Dominio Vivo
+- Q: uno | A: one
+- Q: dos | A: two
+- Q: tres | A: three
+- Q: cuatro | A: four`;
+    const { topic } = saveCustomTopic({ title: 'Tema Dominio Vivo', md });
+    const { container } = mount(<GameHost topicId={topic.id} gameId="flashcards" />);
+    await waitFor(() => findButton(container, 'Empezar mazo'));
+    expect(container.textContent).toContain('No aprendida');
+
+    click(findButton(container, 'Empezar mazo'));
+    for (let index = 0; index < 4; index += 1) {
+      click(container.querySelector('.card-neon'));
+      click(findButton(container, 'Fácil'));
+    }
+
+    await waitFor(() => container.textContent.includes('Mazo 1 completado'));
+    click(findButton(container, 'Elegir mazo'));
+    await waitFor(() => container.textContent.includes('Repasar'));
+    expect(container.textContent).toContain('4 de 4 estudiadas');
+    expect(container.textContent).not.toContain('No aprendida');
+  });
+
   it('unknown game → fallback screen with link home, unknown topic → 404', () => {
     const { topic } = saveCustomTopic({ title: 'Tema GameHost', md: FIXTURE_A });
     const badGame = mount(<GameHost topicId={topic.id} gameId="nope" />);
@@ -339,7 +360,7 @@ describe('GameHost wiring', () => {
     expect(container.querySelector('span[role="img"]').textContent).toBe('🦴');
   });
 
-  it('memorama receives selectCards with unlearned-first selection (AC-3)', async () => {
+  it('memorama plays the selected deck regardless of SRS state (AC-3, AC-5)', async () => {
     const md = `# Tema Seleccion
 - Q: uno | A: one
 - Q: dos | A: two
@@ -363,15 +384,14 @@ describe('GameHost wiring', () => {
     );
 
     const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
-    await waitFor(() => container.textContent.includes('Memorama'));
-    click(findButton(container, 'Fácil · 4 parejas'));
+    await waitFor(() => findButton(container, 'Empezar'));
+    expect(container.textContent).toContain('Mazo 1');
+    click(findButton(container, 'Empezar'));
 
     const ids = new Set(
       [...container.querySelectorAll('.memorama-tile')].map((tile) => tile.dataset.cardId)
     );
-    expect(ids).toEqual(new Set(['tres', 'cuatro', 'cinco', 'seis']));
-    expect(ids.has('uno')).toBe(false);
-    expect(ids.has('dos')).toBe(false);
+    expect(ids).toEqual(new Set(['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis']));
   });
 
   it('memorama grading persists SRS + XP + history via the existing onGrade path', async () => {
@@ -382,8 +402,8 @@ describe('GameHost wiring', () => {
 - Q: cuatro | A: four`;
     const { topic } = saveCustomTopic({ title: 'Tema Memorama', md });
     const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
-    await waitFor(() => container.textContent.includes('Memorama'));
-    click(findButton(container, 'Fácil · 4 parejas'));
+    await waitFor(() => findButton(container, 'Empezar'));
+    click(findButton(container, 'Empezar'));
 
     const front = container.querySelector('.memorama-tile[data-face="front"]');
     const cardId = front.dataset.cardId;
@@ -402,7 +422,7 @@ describe('GameHost wiring', () => {
     expect(profile.history[0]).toMatchObject({ topicId: topic.id, cardId, grade: 'facil' });
   });
 
-  it('memorama exit grades unmatched cards as otra-vez and persists them (AC-6)', async () => {
+  it('memorama exit grades only the visible unmatched card as otra-vez (AC-12)', async () => {
     const md = `# Tema Sin Parejas
 - Q: uno | A: one
 - Q: dos | A: two
@@ -410,22 +430,25 @@ describe('GameHost wiring', () => {
 - Q: cuatro | A: four`;
     const { topic } = saveCustomTopic({ title: 'Tema Sin Parejas', md });
     const { container } = mount(<GameHost topicId={topic.id} gameId="memorama" />);
-    await waitFor(() => container.textContent.includes('Memorama'));
-    click(findButton(container, 'Fácil · 4 parejas'));
+    await waitFor(() => findButton(container, 'Empezar'));
+    click(findButton(container, 'Empezar'));
 
+    const tile = container.querySelector('.memorama-tile');
+    const cardId = tile.dataset.cardId;
+    click(tile);
     click(findButton(container, 'Salir'));
 
     const graded = loadSrs()[topic.id];
-    expect(Object.keys(graded).sort()).toEqual(['cuatro', 'dos', 'tres', 'uno']);
-    expect(Object.values(graded).every((entry) => entry.reps === 0)).toBe(true);
+    expect(Object.keys(graded)).toEqual([cardId]);
+    expect(graded[cardId].reps).toBe(0);
 
     const profile = createStore().load();
     expect(profile.xp).toBe(0);
-    expect(profile.history).toHaveLength(4);
-    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+    expect(profile.history).toHaveLength(1);
+    expect(profile.history[0]).toMatchObject({ topicId: topic.id, cardId, grade: 'otra-vez' });
   });
 
-  it('ahorcado receives selectCards with unlearned-first selection (AC-3)', async () => {
+  it('ahorcado plays the selected deck regardless of SRS state (AC-3, AC-5)', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Ahorcado', md: AHORCADO_MD });
     const now = Date.now();
     localStorage.setItem(
@@ -436,22 +459,26 @@ describe('GameHost wiring', () => {
 
     const { container } = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
     await waitFor(() => findButton(container, 'Empezar'));
+    expect(container.textContent).toContain('Mazo 1');
     startAhorcado(container, 3);
+
+    const solved = solveAhorcadoRound(container, 0);
+    click(findButton(container, 'Siguiente ronda'));
+    const visible = currentAhorcadoCard(container);
     click(findButton(container, 'Salir'));
 
     const graded = loadSrs()[topic.id];
-    expect(Object.keys(graded).sort()).toEqual(['luna', 'mar', 'perro', 'sol']);
-    expect(graded.luna.reps).toBe(0);
-    expect(graded.mar.reps).toBe(0);
-    expect(graded.perro.reps).toBe(0);
+    expect(graded[solved.id].reps).toBe(1);
+    expect(graded[visible.id].reps).toBe(0);
+    expect(Object.keys(graded).sort()).toEqual([solved.id, visible.id, 'sol'].sort());
     expect(graded.sol).toEqual({ reps: 3, nextReview: now + 1_000 });
     expect(graded.gato).toBeUndefined();
     expect(graded.flor).toBeUndefined();
 
     const profile = createStore().load();
-    expect(profile.xp).toBe(0);
-    expect(profile.history.map((entry) => entry.cardId).sort()).toEqual(['luna', 'mar', 'perro']);
-    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+    expect(profile.xp).toBe(10);
+    expect(profile.history.map(({ cardId }) => cardId)).toEqual([solved.id, visible.id]);
+    expect(profile.history.map(({ grade }) => grade)).toEqual(['facil', 'otra-vez']);
   });
 
   it('ahorcado grades facil/dificil/otra-vez and persists SRS + XP + history across reload (AC-9)', async () => {
@@ -498,33 +525,30 @@ describe('GameHost wiring', () => {
     expect(createStore().load()).toEqual(profileBefore);
   });
 
-  it('ahorcado exit mid-session grades unresolved rounds as otra-vez (AC-10)', async () => {
+  it('ahorcado exit mid-session grades only the visible round as otra-vez (AC-12)', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Ahorcado', md: AHORCADO_MD });
     const { container } = mount(<GameHost topicId={topic.id} gameId="ahorcado" />);
     await waitFor(() => findButton(container, 'Empezar'));
     startAhorcado(container, 4);
 
-    const card = solveAhorcadoRound(container, 0);
-    expect(findButton(container, 'Siguiente ronda')).toBeTruthy();
-    click(findButton(container, 'Salir'));
+    const solved = solveAhorcadoRound(container, 0);
+    click(findButton(container, 'Siguiente ronda'));
+    const visible = currentAhorcadoCard(container);
     click(findButton(container, 'Salir'));
 
     const graded = loadSrs()[topic.id];
-    expect(graded[card.id].reps).toBe(1);
-    const pending = Object.keys(graded).filter((cardId) => cardId !== card.id);
-    expect(pending).toHaveLength(3);
-    expect(pending.every((cardId) => graded[cardId].reps === 0)).toBe(true);
+    expect(graded[solved.id].reps).toBe(1);
+    expect(graded[visible.id].reps).toBe(0);
+    expect(Object.keys(graded).sort()).toEqual([solved.id, visible.id].sort());
 
     const profile = createStore().load();
     expect(profile.xp).toBe(10);
-    expect(profile.history).toHaveLength(4);
-    expect(profile.history[0]).toMatchObject({ cardId: card.id, grade: 'facil' });
-    expect(
-      profile.history.slice(1).every((entry) => entry.grade === 'otra-vez')
-    ).toBe(true);
+    expect(profile.history).toHaveLength(2);
+    expect(profile.history[0]).toMatchObject({ cardId: solved.id, grade: 'facil' });
+    expect(profile.history[1]).toMatchObject({ cardId: visible.id, grade: 'otra-vez' });
   });
 
-  it('quiz-significado receives selectCards with unlearned-first selection (AC-3)', async () => {
+  it('quiz-significado plays the full deck even when cards are learned (AC-3, AC-5)', async () => {
     const md = `# Tema Seleccion Quiz
 - Q: uno | A: one
 - Q: dos | A: two
@@ -534,15 +558,12 @@ describe('GameHost wiring', () => {
 - Q: seis | A: six`;
     const { topic } = saveCustomTopic({ title: 'Tema Seleccion Quiz', md });
     const now = Date.now();
-    const learned = {
-      uno: { reps: 3, nextReview: now },
-      dos: { reps: 4, nextReview: now },
-    };
     localStorage.setItem(
       'sepect.srs.v1',
       JSON.stringify({
         [topic.id]: {
-          ...learned,
+          uno: { reps: 3, nextReview: now },
+          dos: { reps: 4, nextReview: now },
           tres: { reps: 1, nextReview: now + 1_000_000 },
           cuatro: { reps: 1, nextReview: now + 1_000_000 },
           cinco: { reps: 1, nextReview: now + 1_000_000 },
@@ -553,23 +574,24 @@ describe('GameHost wiring', () => {
 
     const { container } = mount(<GameHost topicId={topic.id} gameId="quiz-significado" />);
     await waitFor(() => findButton(container, 'Empezar'));
-    startQuiz(container, 3);
-    click(findButton(container, 'Salir'));
+    expect(container.textContent).toContain('Mazo 1');
+    startQuiz(container, 6);
+
+    const played = [];
+    for (let round = 0; round < 6; round += 1) {
+      played.push(quizFront(container));
+      click(quizCorrect(container));
+      click(findButton(container, round === 5 ? 'Ver resumen' : 'Siguiente'));
+    }
+
+    expect(container.textContent).toContain('Sesión completada');
+    expect(new Set(played)).toEqual(new Set(['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis']));
 
     const profile = createStore().load();
-    expect(profile.xp).toBe(0);
-    expect(profile.history).toHaveLength(3);
-    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
-    const selectedIds = profile.history.map(({ cardId }) => cardId);
-    expect(new Set(selectedIds).size).toBe(3);
-    expect(selectedIds.every((cardId) => ['tres', 'cuatro', 'cinco', 'seis'].includes(cardId))).toBe(
-      true
-    );
-
+    expect(profile.xp).toBe(60);
+    expect(profile.history).toHaveLength(6);
     const graded = loadSrs()[topic.id];
-    expect(graded.uno).toEqual(learned.uno);
-    expect(graded.dos).toEqual(learned.dos);
-    for (const cardId of selectedIds) expect(graded[cardId].reps).toBe(0);
+    for (const cardId of played) expect(graded[cardId]).toBeTruthy();
   });
 
   it('quiz-significado grades facil/dificil/otra-vez and persists SRS + XP + history across reload', async () => {
@@ -628,7 +650,7 @@ describe('GameHost wiring', () => {
     expect(createStore().load()).toEqual(profileBefore);
   });
 
-  it('quiz-significado exit mid-session persists pending otra-vez without re-emitting resolved rounds', async () => {
+  it('quiz-significado exit mid-session grades only the visible card (AC-12)', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Quiz', md: QUIZ_MD });
     const { container } = mount(<GameHost topicId={topic.id} gameId="quiz-significado" />);
     await waitFor(() => findButton(container, 'Empezar'));
@@ -644,37 +666,29 @@ describe('GameHost wiring', () => {
     click(findButton(container, 'Salir'));
 
     const graded = loadSrs()[topic.id];
-    expect(Object.keys(graded)).toHaveLength(3);
+    expect(Object.keys(graded)).toHaveLength(2);
     expect(graded[resolvedIds[0]].reps).toBe(1);
     const pending = Object.keys(graded).filter((cardId) => cardId !== resolvedIds[0]);
-    expect(pending).toHaveLength(2);
-    expect(pending.every((cardId) => graded[cardId].reps === 0)).toBe(true);
+    expect(pending).toHaveLength(1);
+    expect(graded[pending[0]].reps).toBe(0);
 
     const profile = createStore().load();
     expect(profile.xp).toBe(10);
-    expect(profile.history).toHaveLength(3);
+    expect(profile.history).toHaveLength(2);
     expect(profile.history[0]).toMatchObject({ cardId: resolvedIds[0], grade: 'facil' });
-    expect(profile.history.slice(1).every((entry) => entry.grade === 'otra-vez')).toBe(true);
+    expect(profile.history[1]).toMatchObject({ cardId: pending[0], grade: 'otra-vez' });
   });
 
-  it('intruso receives the anchor plus eligible topics with image overrides', async () => {
-    saveCustomTopic({
-      title: 'Tema Intruso',
-      md: INTRUSO_OTHER_MD,
-      images: {
-        alfa: { kind: 'emoji', value: '🦴' },
-        beta: { kind: 'emoji', value: '🦴' },
-        gamma: { kind: 'emoji', value: '🦴' },
-        delta: { kind: 'emoji', value: '🦴' },
-      },
-    });
-    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
+  it('intruso receives the anchor deck and every catalog topic as intruder source', async () => {
+    saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
 
     const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
     await waitFor(() => findButton(container, 'Empezar'));
     expect(container.textContent).toContain('Tema ancla:');
     expect(container.textContent).toContain('Funciones en Programación');
-    expect(container.textContent).toContain('1 tema disponible como intruso');
+    expect(container.textContent).toContain(
+      `${loadCatalog().length - 1} temas disponibles como intruso`
+    );
 
     startIntruso(container, 3);
     expect(container.textContent).toContain(
@@ -682,30 +696,20 @@ describe('GameHost wiring', () => {
     );
     expect(intrusoOptions(container)).toHaveLength(4);
     expect(intrusoBaseOption(container)).toBeTruthy();
-    expect(intrusoIntruderOption(container).textContent).toContain('🦴');
+    expect(intrusoIntruderOption(container)).toBeTruthy();
   });
 
   it('intruso grades facil/otra-vez under the intruder topic and persists across reload', async () => {
-    const { topic } = saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
-    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
+    saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
     const { container, unmount } = mount(
       <GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />
     );
     await waitFor(() => findButton(container, 'Empezar'));
     startIntruso(container, 3);
 
-    const played = [];
     for (let round = 0; round < 3; round += 1) {
-      const intruder = intrusoIntruderOption(container);
-      const back = intrusoBack(intruder);
-      const card = topic.cards.find((entry) => entry.back === back);
-      if (round === 1) {
-        click(intrusoBaseOption(container));
-        played.push({ id: card.id, grade: 'otra-vez' });
-      } else {
-        click(intruder);
-        played.push({ id: card.id, grade: 'facil' });
-      }
+      if (round === 1) click(intrusoBaseOption(container));
+      else click(intrusoIntruderOption(container));
       click(findButton(container, round === 2 ? 'Ver resumen' : 'Siguiente'));
     }
 
@@ -716,15 +720,17 @@ describe('GameHost wiring', () => {
     const profileBefore = createStore().load();
     expect(profileBefore.xp).toBe(20);
     expect(profileBefore.history).toHaveLength(3);
-    expect(
-      profileBefore.history.map(({ topicId, cardId, grade }) => ({ topicId, cardId, grade }))
-    ).toEqual(
-      played.map(({ id, grade }) => ({ topicId: topic.id, cardId: id, grade }))
-    );
-    expect(new Set(played.map(({ id }) => id)).size).toBe(3);
-    for (const card of played) {
-      expect(srsBefore[topic.id][card.id]).toMatchObject({
-        reps: card.grade === 'otra-vez' ? 0 : 1,
+    const played = profileBefore.history.map(({ topicId, cardId, grade }) => ({
+      topicId,
+      cardId,
+      grade,
+    }));
+    expect(played.map(({ grade }) => grade)).toEqual(['facil', 'otra-vez', 'facil']);
+    expect(played.every(({ topicId }) => topicId !== INTRUSO_ANCHOR_ID)).toBe(true);
+    expect(new Set(played.map(({ cardId }) => cardId)).size).toBe(3);
+    for (const entry of played) {
+      expect(srsBefore[entry.topicId][entry.cardId]).toMatchObject({
+        reps: entry.grade === 'otra-vez' ? 0 : 1,
       });
     }
     expect(srsBefore[INTRUSO_ANCHOR_ID]).toBeUndefined();
@@ -740,40 +746,29 @@ describe('GameHost wiring', () => {
   });
 
   it('intruso exit mid-round grades only the current intruder as otra-vez', async () => {
-    const { topic } = saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
-    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
+    saveCustomTopic({ title: 'Tema Intruso', md: INTRUSO_OTHER_MD });
     const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
     await waitFor(() => findButton(container, 'Empezar'));
     startIntruso(container, 3);
 
-    const resolvedIntruder = intrusoIntruderOption(container);
-    const resolvedCard = topic.cards.find(
-      (entry) => entry.back === intrusoBack(resolvedIntruder)
-    );
-    click(resolvedIntruder);
+    click(intrusoIntruderOption(container));
     click(findButton(container, 'Siguiente'));
     click(findButton(container, 'Salir'));
-
-    const graded = loadSrs()[topic.id];
-    expect(Object.keys(graded)).toHaveLength(2);
-    expect(graded[resolvedCard.id].reps).toBe(1);
-    const pending = Object.keys(graded).filter((cardId) => cardId !== resolvedCard.id);
-    expect(pending).toHaveLength(1);
-    expect(graded[pending[0]].reps).toBe(0);
 
     const profile = createStore().load();
     expect(profile.xp).toBe(10);
     expect(profile.history).toHaveLength(2);
-    expect(profile.history[0]).toMatchObject({
-      topicId: topic.id,
-      cardId: resolvedCard.id,
-      grade: 'facil',
-    });
-    expect(profile.history[1]).toMatchObject({
-      topicId: topic.id,
-      cardId: pending[0],
-      grade: 'otra-vez',
-    });
+    expect(profile.history[0].grade).toBe('facil');
+    expect(profile.history[1].grade).toBe('otra-vez');
+    expect(profile.history.every(({ topicId }) => topicId !== INTRUSO_ANCHOR_ID)).toBe(true);
+    expect(new Set(profile.history.map(({ cardId }) => cardId)).size).toBe(2);
+
+    const graded = loadSrs();
+    for (const entry of profile.history) {
+      expect(graded[entry.topicId][entry.cardId]).toMatchObject({
+        reps: entry.grade === 'otra-vez' ? 0 : 1,
+      });
+    }
   });
 
   it('intruso direct URL below minCards shows the safe gate without loading the game', () => {
@@ -811,7 +806,7 @@ describe('GameHost wiring', () => {
     unmount();
   });
 
-  it('lluvia-meteoros receives selectCards with unlearned-first selection (AC-19)', async () => {
+  it('lluvia-meteoros plays the selected deck regardless of SRS state (AC-3, AC-5)', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Lluvia Seleccion', md: LLUVIA_MD });
     const now = Date.now();
     const learned = {
@@ -839,13 +834,11 @@ describe('GameHost wiring', () => {
     }
 
     expect(container.textContent).toContain('Sesión completada');
-    expect(played).toEqual(['cuatro', 'cinco', 'seis']);
+    expect(played).toEqual(['uno', 'dos', 'tres']);
 
     const graded = loadSrs()[topic.id];
-    expect(graded.uno).toEqual(learned.uno);
-    expect(graded.dos).toEqual(learned.dos);
-    expect(graded.tres).toBeUndefined();
-    for (const cardId of played) expect(graded[cardId].reps).toBe(1);
+    expect(graded.tres).toMatchObject({ reps: 1, interval: 1, ease: 2.65 });
+    for (const cardId of played) expect(graded[cardId]).toBeDefined();
 
     const profile = createStore().load();
     expect(profile.xp).toBe(30);
@@ -1062,7 +1055,7 @@ describe('GameHost wiring', () => {
     unmount();
   });
 
-  it('conecta-pares receives the chosen pair count from selectCards with unlearned-first selection', async () => {
+  it('conecta-pares plays every deck card including learned ones (AC-6, AC-31)', async () => {
     const { topic } = saveCustomTopic({
       title: 'Tema Conecta Seleccion',
       md: CONECTA_SIX_MD,
@@ -1082,26 +1075,19 @@ describe('GameHost wiring', () => {
       <GameHost topicId={topic.id} gameId="conecta-pares" />
     );
     await waitFor(() => findButton(container, 'Empezar'));
-    startConecta(container, 3);
+    startConecta(container, 6);
 
-    expect(conectaQuestions(container)).toHaveLength(3);
+    expect(conectaQuestions(container)).toHaveLength(6);
     click(findButton(container, 'Salir'));
 
     const profile = createStore().load();
     expect(profile.xp).toBe(0);
-    expect(profile.history).toHaveLength(3);
+    expect(profile.history).toHaveLength(6);
     expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
     const selectedIds = profile.history.map(({ cardId }) => cardId);
-    expect(new Set(selectedIds).size).toBe(3);
-    expect(selectedIds).not.toContain('uno');
-    expect(selectedIds).not.toContain('dos');
-    expect(selectedIds.every((cardId) => ['tres', 'cuatro', 'cinco', 'seis'].includes(cardId))).toBe(
-      true
-    );
+    expect(new Set(selectedIds)).toEqual(new Set(['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis']));
 
     const graded = loadSrs()[topic.id];
-    expect(graded.uno).toEqual(learned.uno);
-    expect(graded.dos).toEqual(learned.dos);
     for (const cardId of selectedIds) expect(graded[cardId].reps).toBe(0);
     unmount();
   });
@@ -1119,7 +1105,7 @@ describe('GameHost wiring', () => {
     expect(container.querySelector(`a[href="#/tema/${topic.id}"]`)).toBeTruthy();
     expect(findButton(container, 'Empezar')).toBeUndefined();
   });
-  it('serpiente-significados loads through GameHost, selects unlearned cards and persists facil', async () => {
+  it('serpiente-significados loads through GameHost, uses the deck order and persists facil', async () => {
     const { topic } = saveCustomTopic({ title: 'Tema Serpiente', md: SERPIENTE_MD });
     const now = Date.now();
     const learned = {
@@ -1138,12 +1124,11 @@ describe('GameHost wiring', () => {
     expect(container.textContent).toContain('Ronda 1 de 4');
 
     const card = serpienteCard(topic, container);
-    expect(['tres', 'cuatro', 'cinco', 'seis']).toContain(card.id);
+    expect(card.id).toBe('uno');
     eatBack(container, harness, card.back);
 
     const graded = loadSrs()[topic.id];
-    expect(graded[card.id]).toMatchObject({ reps: 1, interval: 1, ease: 2.65 });
-    expect(graded.uno).toEqual(learned.uno);
+    expect(graded[card.id].reps).toBeGreaterThan(learned.uno.reps);
     expect(graded.dos).toEqual(learned.dos);
     const profile = createStore().load();
     expect(profile.xp).toBe(10);
@@ -1156,7 +1141,7 @@ describe('GameHost wiring', () => {
 
     click(findButton(container, 'Salir'));
     expect(window.location.hash).toBe(`#/tema/${topic.id}`);
-    expect(Object.keys(loadSrs()[topic.id]).sort()).toEqual(['dos', 'uno', card.id].sort());
+    expect(Object.keys(loadSrs()[topic.id]).sort()).toEqual(['dos', 'uno'].sort());
     expect(createStore().load().history).toHaveLength(1);
     unmount();
 
@@ -1180,7 +1165,7 @@ describe('GameHost wiring', () => {
 
     const first = serpienteCard(topic, container);
     eatBack(container, harness, wrongSerpienteBack(container, first.back));
-    expect(lives(container)).toBe(4);
+    expect(lives(container)).toBe(2);
     eatBack(container, harness, first.back);
 
     const firstGraded = loadSrs()[topic.id][first.id];
@@ -1235,16 +1220,10 @@ describe('GameHost wiring', () => {
     const second = serpienteCard(topic, container);
     expect(second.id).not.toBe(first.id);
     forceSelfCollision(container, harness);
-    expect(lives(container)).toBe(3);
+    expect(lives(container)).toBe(1);
 
     const wrongA = wrongSerpienteBack(container, second.back);
     eatBack(container, harness, wrongA);
-    expect(lives(container)).toBe(2);
-    forceSelfCollision(container, harness);
-    expect(lives(container)).toBe(1);
-
-    const wrongB = wrongSerpienteBack(container, second.back, [wrongA]);
-    eatBack(container, harness, wrongB);
     expect(container.textContent).toContain('Partida terminada');
 
     const graded = loadSrs()[topic.id];
@@ -1277,7 +1256,7 @@ describe('GameHost wiring', () => {
     expect(findButton(container, 'Empezar')).toBeUndefined();
   });
 
-  it('offers unlearned plus only due learned cards, never not-due ones (AC-14)', async () => {
+  it('plays the deck in order and grades only the current card on exit (AC-31)', async () => {
     const md = `# Tema Elegibles
 - Q: aaa | A: uno
 - Q: bbb | A: dos
@@ -1304,13 +1283,15 @@ describe('GameHost wiring', () => {
 
     const profile = createStore().load();
     const selected = profile.history.map((entry) => entry.cardId);
-    expect(profile.history).toHaveLength(3);
-    expect(new Set(selected)).toEqual(new Set(['aaa', 'bbb', 'ddd']));
-    expect(profile.history.every((entry) => entry.grade === 'otra-vez')).toBe(true);
+    expect(profile.history).toHaveLength(1);
+    expect(selected).toEqual(['aaa']);
+    expect(profile.history[0].grade).toBe('otra-vez');
 
     const graded = loadSrs()[topic.id];
+    expect(graded.aaa.reps).toBe(0);
+    expect(graded.bbb).toMatchObject({ reps: 4, nextReview: now - 1000 });
     expect(graded.ccc).toMatchObject({ reps: 3, nextReview: now + 60_000 });
-    for (const cardId of selected) expect(graded[cardId].reps).toBe(0);
+    expect(graded.ddd).toBeUndefined();
     unmount();
   });
 
@@ -1331,7 +1312,7 @@ describe('GameHost wiring', () => {
     await waitFor(() => findButton(container, 'Repasar mazo'));
     expect(container.textContent).not.toContain('Todo al día');
     expect(container.textContent).toContain('Mazo 1');
-    expect(container.textContent).toContain('Completado');
+    expect(container.textContent).toContain('Aprendida');
   });
 
   it('no longer gates intruso by SRS eligibility in deck mode (AC-31)', async () => {
@@ -1349,25 +1330,16 @@ describe('GameHost wiring', () => {
     expect(container.textContent).not.toContain('En mantenimiento');
   });
 
-  it('builds intruso groups only from topics with enough eligible cards (AC-20)', async () => {
+  it('uses every catalog topic as intruder source in deck mode (AC-26)', async () => {
     saveCustomTopic({ title: 'Tema Listo Intruso', md: INTRUSO_OTHER_MD });
-    const { topic: short } = saveCustomTopic({ title: 'Tema Corto Intruso', md: INTRUSO_OTHER_MD });
-    const future = Date.now() + 30 * 86_400_000;
-    localStorage.setItem(
-      'sepect.srs.v1',
-      JSON.stringify({
-        [short.id]: {
-          alfa: { reps: 3, nextReview: future },
-          beta: { reps: 3, nextReview: future },
-        },
-      })
-    );
-    lockOtherBuiltinTopics(INTRUSO_ANCHOR_ID);
+    saveCustomTopic({ title: 'Tema Corto Intruso', md: INTRUSO_OTHER_MD });
+    const total = loadCatalog().length;
 
     const { container } = mount(<GameHost topicId={INTRUSO_ANCHOR_ID} gameId="intruso" />);
     await waitFor(() => findButton(container, 'Empezar'));
-    expect(container.textContent).toContain('1 tema disponible como intruso');
-    expect(container.textContent).not.toContain('2 temas disponibles como intruso');
+    expect(container.textContent).toContain(
+      `${total - 1} temas disponibles como intruso`
+    );
   });
 
 });

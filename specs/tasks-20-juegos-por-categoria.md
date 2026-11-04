@@ -23,12 +23,12 @@ T1 defineGame.categories
 ## Tareas
 
 ### T1 — `defineGame.categories` [depends: none]
-- [ ] **Deliverable:** `src/games/definition.js`:
+- [x] **Deliverable:** `src/games/definition.js`:
   - `categories?: string[]`, default `['*']`;
   - valida array no vacío, strings no vacíos, deduplica;
   - `TypeError` claro;
   - mantiene `Object.freeze`.
-- [ ] **Tests:** `definition.test.js`:
+- [x] **Tests:** `definition.test.js`:
   - default global;
   - válidos;
   - vacío/string/objeto/null;
@@ -40,12 +40,12 @@ T1 defineGame.categories
 - **Estimate:** S.
 
 ### T2 — Filtro del registry [depends: T1]
-- [ ] **Deliverable:** `src/games/registry.js`:
+- [x] **Deliverable:** `src/games/registry.js`:
   - `listGames({ categoryId } = {})` compatible con `listGames()`;
   - `gamesForCategory(categoryId)`;
   - `isGameForCategory(game, categoryId)`;
   - orden estable.
-- [ ] **Tests:** `registry.test.js`:
+- [x] **Tests:** `registry.test.js`:
   - 8 globales;
   - programación;
   - idiomas/universidad;
@@ -57,30 +57,32 @@ T1 defineGame.categories
 - **Estimate:** S.
 
 ### T3 — TopicView y GameHost [depends: T2]
-- [ ] **Deliverable:** `src/views/TopicView.jsx`:
+- [x] **Deliverable:** `src/views/TopicView.jsx`:
   - filtrar por `topic.categoryId`;
   - contador/estado vacío;
   - no romper disponibilidad ni enlaces.
-- [ ] **Deliverable:** `src/views/GameHost.jsx`:
+- [x] **Deliverable:** `src/views/GameHost.jsx`:
   - validar `isGameForCategory`;
   - mensaje/NotFound sin importar el módulo;
   - conservar ruta.
-- [ ] **Tests:** `TopicView.test.jsx`, `GameHost.test.jsx`:
+- [x] **Tests:** `TopicView.test.jsx`, `GameHost.test.jsx`:
   - programación con globales + nuevos;
   - idiomas sin nuevos;
   - custom con globales;
   - mismatch;
   - a11y/360 px.
+  - Implementados en `TopicView.category.test.jsx` y `GameHost.category.test.jsx`
+    (los fixtures de los tests existentes cubren globales/360 px).
 - **AC cubiertos:** AC-4, AC-5, AC-6, AC-7.
 - **Contexto:** spec §Decisión 5–6.
 - **Done when:** no se puede abrir un juego de otra categoría por URL.
 - **Estimate:** M.
 
 ### T4 — Docs, gates y cierre [depends: T1–T3]
-- [ ] **Deliverable:** `docs/architecture.md`/`MEMORY.md`/`FOCUS.md` con el alcance
+- [x] **Deliverable:** `docs/architecture.md`/`MEMORY.md`/`FOCUS.md` con el alcance
   por categoría.
-- [ ] **Gates:** `npm test`, `npm run lint`, `npm run build` al 100%.
-- [ ] **Cierre:** ACs, tasks y firma humana.
+- [x] **Gates:** `npm test` 930/930, `npm run lint` 0, `npm run build` OK.
+- [ ] **Cierre:** ACs, tasks y firma humana (pendiente de revisión manual).
 - **AC cubiertos:** AC-8 y DoD.
 - **Done when:** registry y vistas verdes, sin deps nuevas.
 - **Estimate:** S.
@@ -96,8 +98,9 @@ T1 defineGame.categories
 
 ## Definition of Done
 
-- [ ] Cada AC tiene test o verificación manual registrada.
-- [ ] `npm test`, `npm run lint`, `npm run build` en verde.
-- [ ] Sin dependencias nuevas ni red.
+- [x] Cada AC tiene test o verificación manual registrada (AC-7: tests estáticos
+  de a11y/360 px; pasada humana pendiente).
+- [x] `npm test` 930/930, `npm run lint` 0, `npm run build` en verde.
+- [x] Sin dependencias nuevas ni red.
 - [ ] Diff revisado por humano.
-- [ ] `MEMORY.md` actualizado y `FOCUS.md` limpio.
+- [x] `MEMORY.md` actualizado y `FOCUS.md` limpio.

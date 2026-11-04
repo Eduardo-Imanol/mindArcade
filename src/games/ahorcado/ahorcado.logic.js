@@ -63,6 +63,19 @@ function clampRounds(rounds) {
   return Math.min(MAX_ROUNDS, Math.max(MIN_ROUNDS, safe));
 }
 
+export function roundsForDeck(deckSize) {
+  const size = Number(deckSize);
+  const max = Math.min(MAX_ROUNDS, Number.isFinite(size) ? Math.max(0, Math.floor(size)) : 0);
+  if (max < MIN_ROUNDS) return [];
+  return Array.from({ length: max - MIN_ROUNDS + 1 }, (_, index) => MIN_ROUNDS + index);
+}
+
+export function sessionCardsFor(cards, { mode = 'normal', rounds = DEFAULT_ROUNDS } = {}) {
+  const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+  if (mode === 'arcade') return [...list];
+  return list.slice(0, Math.min(clampRounds(rounds), list.length));
+}
+
 export function createState() {
   return {
     phase: 'setup',
@@ -123,6 +136,13 @@ export function reduce(state, action = {}) {
     return { ...state, usedLetters };
   }
 
+  if (action.type === 'fail') {
+    if (state.phase !== 'playing') return state;
+    const card = currentCard(state);
+    if (!card) return state;
+    return resolve(state, { lost: true, mistakes: mistakeCount(state.usedLetters, card.front) });
+  }
+
   if (action.type === 'next') {
     if (state.phase !== 'round-won' && state.phase !== 'round-lost') return state;
     if (state.roundIndex + 1 >= state.total) return { ...state, phase: 'complete' };
@@ -157,4 +177,16 @@ export function pendingGrades(state) {
     if (card) pending.push({ cardId: card.id, grade: 'otra-vez' });
   }
   return pending;
+}
+
+// Only the card on screen may be graded on exit (spec-18 AC-12).
+export function unresolvedCurrent(state) {
+  if (!state || state.phase !== 'playing') return null;
+  const card = currentCard(state);
+  if (!card) return null;
+  return {
+    cardId: card.id,
+    grade: 'otra-vez',
+    seq: (Array.isArray(state.results) ? state.results.length : 0) + 1,
+  };
 }
