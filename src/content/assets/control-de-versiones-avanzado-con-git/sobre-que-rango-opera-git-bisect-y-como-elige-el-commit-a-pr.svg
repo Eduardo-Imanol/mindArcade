@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Sobre qué rango opera git bisect y cómo elige el commit a probar?">
+<title>¿Sobre qué rango opera git bisect y cómo elige el commit a probar?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="506.94" cy="467.49" rx="140.24" ry="140.24" fill="hsl(320 90% 58% / 0.177)"/>
+<ellipse cx="15.86" cy="212.88" rx="156.01" ry="156.01" fill="hsl(320 90% 58% / 0.233)"/>
+<ellipse cx="488.95" cy="164.34" rx="112.25" ry="112.25" fill="hsl(320 90% 58% / 0.205)"/>
+<ellipse cx="425.29" cy="313.45" rx="142.36" ry="142.36" fill="hsl(320 90% 58% / 0.182)"/>
+<ellipse cx="80" cy="180" rx="17" ry="17" fill="#39ff14"/>
+<text x="80" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">g</text>
+<ellipse cx="170" cy="180" rx="17" ry="17" fill="#00ffcc"/>
+<text x="170" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">?</text>
+<ellipse cx="260" cy="180" rx="17" ry="17" fill="#00ffcc"/>
+<text x="260" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">?</text>
+<ellipse cx="350" cy="180" rx="17" ry="17" fill="#00ffcc"/>
+<text x="350" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">?</text>
+<ellipse cx="440" cy="180" rx="17" ry="17" fill="#ff007f"/>
+<text x="440" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">b</text>
+<line x1="256" y1="230" x2="256" y2="264.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,275 249.57,264.87 262.43,264.87" fill="#ffcc00"/>
+<rect x="136" y="285" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="305" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">prueba el punto medio</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">bisect old..new reduce a la mitad</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">good/bad recortan el rango</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significan las etiquetas Sólido, Plausible y Popular?">
+<title>¿Qué significan las etiquetas Sólido, Plausible y Popular?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="440.61" cy="495.49" rx="197.74" ry="197.74" fill="hsl(120 90% 58% / 0.146)"/>
+<ellipse cx="51.88" cy="270.4" rx="108.14" ry="108.14" fill="hsl(120 90% 58% / 0.157)"/>
+<ellipse cx="363.48" cy="66.62" rx="79.96" ry="79.96" fill="hsl(120 90% 58% / 0.188)"/>
+<ellipse cx="110.51" cy="475.52" rx="158.92" ry="158.92" fill="hsl(120 90% 58% / 0.222)"/>
+<rect x="60" y="110" width="170" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="68" y1="118" x2="222" y2="118" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="145" y="138" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">Sólido</text>
+<text x="350" y="134" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">replicado en varios estudios</text>
+<rect x="60" y="190" width="170" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="68" y1="198" x2="222" y2="198" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="145" y="218" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">Plausible</text>
+<text x="350" y="214" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">mechanismo creíble, evidencia parcial</text>
+<rect x="60" y="270" width="170" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="68" y1="278" x2="222" y2="278" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="145" y="298" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">Popular</text>
+<text x="350" y="294" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">creencia difundida, sin respaldo</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">cada afirmación llega etiquetada</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">tú decides cuánto apostar</text>
+</svg>

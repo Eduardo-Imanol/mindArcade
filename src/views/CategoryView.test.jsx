@@ -35,22 +35,29 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     expect(container.querySelector('a[href="#/"]')).toBeTruthy();
   });
 
-  it('empty Mis temas invites the user back to the library', () => {
+  it('Mis temas shows the built-in personal topic even without customs', () => {
     const { container } = mount(<CategoryView categoryId="personalizados" />);
-    expect(container.textContent).toContain('Aún no tienes temas');
-    expect(container.querySelector('a.btn-neon[href="#/"]')).toBeTruthy();
+    expect(container.textContent).not.toContain('Aún no tienes temas');
+    expect(container.textContent).toContain('Arquitectura de la Atracción y Calibración Social');
+    const link = container.querySelector('a.topic-card');
+    expect(link.getAttribute('href')).toBe('#/tema/arquitectura-de-la-atraccion-y-calibracion-social');
   });
 
-  it('Programación shows Módulo 1 and Módulo 2 in order, collapsed by default', () => {
+  it('Programación shows Módulo 1, 2 and 3 in order, collapsed by default', () => {
     const { container } = mount(<CategoryView categoryId="programacion" />);
     const modules = [...container.querySelectorAll('.module')];
-    expect(modules).toHaveLength(2);
+    expect(modules).toHaveLength(3);
     expect(modules[0].querySelector('.module__title').textContent).toContain('Módulo 1');
     expect(modules[1].querySelector('.module__title').textContent).toContain('Módulo 2');
+    expect(modules[2].querySelector('.module__title').textContent).toContain('Módulo 3');
 
     const toggles = [...container.querySelectorAll('.module__toggle')];
-    expect(toggles.map((button) => button.getAttribute('aria-expanded'))).toEqual(['false', 'false']);
-    expect(container.querySelectorAll('.module__panel[hidden]')).toHaveLength(2);
+    expect(toggles.map((button) => button.getAttribute('aria-expanded'))).toEqual([
+      'false',
+      'false',
+      'false',
+    ]);
+    expect(container.querySelectorAll('.module__panel[hidden]')).toHaveLength(3);
     expect(container.querySelectorAll('.module__panel:not([hidden]) a.topic-card')).toHaveLength(0);
   });
 
@@ -75,7 +82,7 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     const { container } = mount(<CategoryView categoryId="programacion" />);
     openAll(container);
     expect(byText(container, 'button', 'Cerrar módulos')).toBeTruthy();
-    expect(container.querySelectorAll('.module__panel:not([hidden])')).toHaveLength(2);
+    expect(container.querySelectorAll('.module__panel:not([hidden])')).toHaveLength(3);
 
     click(byText(container, 'button', 'Cerrar módulos'));
     expect(byText(container, 'button', 'Abrir módulos')).toBeTruthy();
@@ -86,7 +93,7 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     const { container } = mount(<CategoryView categoryId="programacion" />);
     openAll(container);
     const links = [...container.querySelectorAll('a.topic-card')];
-    expect(links).toHaveLength(4);
+    expect(links).toHaveLength(5);
     for (const link of links) {
       expect(link.getAttribute('href')).toMatch(/^#\/tema\//);
       expect(link.textContent.trim().length).toBeGreaterThan(0);
@@ -128,7 +135,7 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     );
 
     setValue(container.querySelector('#category-search'), '');
-    expect(container.querySelectorAll('.module')).toHaveLength(2);
+    expect(container.querySelectorAll('.module')).toHaveLength(3);
     expect(container.querySelector('.category__results')).toBeNull();
   });
 
@@ -144,14 +151,14 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     expect(container.textContent).toContain('Sin resultados');
 
     click(byText(container, 'button', 'Limpiar filtros'));
-    expect(container.querySelectorAll('.module')).toHaveLength(2);
+    expect(container.querySelectorAll('.module')).toHaveLength(3);
     expect(container.querySelector('#category-search').value).toBe('');
     expect(container.querySelector('select[aria-label="Ordenar temas"]').value).toBe('modules');
     expect(container.querySelector('select[aria-label="Filtrar por estado"]').value).toBe('all');
     expect(document.activeElement).toBe(container.querySelector('#category-search'));
   });
 
-  it('Mis temas lists custom topics flat, without modules', () => {
+  it('Mis temas lists built-in and custom topics flat, without modules', () => {
     const result = saveCustomTopic({
       title: 'Mi tema',
       md: '# Mi tema\nUn tema propio.\n\n- Q: ¿Qué es? | A: Algo | E: easy',
@@ -161,9 +168,13 @@ describe('CategoryView (spec-17 T4, a11y T8)', () => {
     const { container } = mount(<CategoryView categoryId="personalizados" />);
     expect(container.querySelectorAll('.module')).toHaveLength(0);
     expect(container.querySelector('.category__results-title').textContent).toBe('Temas');
-    const link = container.querySelector('a.topic-card');
-    expect(link.getAttribute('href')).toBe('#/tema/mi-tema');
-    expect(link.textContent).toContain('Mi tema');
+    const links = [...container.querySelectorAll('a.topic-card')];
+    expect(links).toHaveLength(2);
+    const hrefs = links.map((link) => link.getAttribute('href'));
+    expect(hrefs).toContain('#/tema/mi-tema');
+    expect(hrefs).toContain('#/tema/arquitectura-de-la-atraccion-y-calibracion-social');
+    const customLink = links.find((link) => link.getAttribute('href') === '#/tema/mi-tema');
+    expect(customLink.textContent).toContain('Mi tema');
 
     const sort = container.querySelector('select[aria-label="Ordenar temas"]');
     expect(sort.value).toBe('recent');

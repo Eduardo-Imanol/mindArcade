@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se reducen los conflictos en origen?">
+<title>¿Cómo se reducen los conflictos en origen?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="16.96" cy="174.86" rx="154.34" ry="154.34" fill="hsl(120 90% 58% / 0.213)"/>
+<ellipse cx="197.77" cy="184.01" rx="117.42" ry="117.42" fill="hsl(120 90% 58% / 0.222)"/>
+<ellipse cx="465.58" cy="97.13" rx="151.31" ry="151.31" fill="hsl(120 90% 58% / 0.228)"/>
+<ellipse cx="205.01" cy="420.58" rx="196.09" ry="196.09" fill="hsl(120 90% 58% / 0.164)"/>
+<rect x="96" y="110" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">series cortas de commits</text>
+<rect x="96" y="190" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">tocar menos archivos por PR</text>
+<rect x="96" y="270" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">squash para integrar</text>
+<rect x="96" y="350" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">auto-merge tras push del destino</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">el conflicto se evita antes del merge</text>
+</svg>

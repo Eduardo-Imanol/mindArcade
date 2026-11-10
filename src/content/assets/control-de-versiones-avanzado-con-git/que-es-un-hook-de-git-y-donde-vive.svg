@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un hook de Git y dónde vive?">
+<title>¿Qué es un hook de Git y dónde vive?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="442.8" cy="0.86" rx="136" ry="136" fill="hsl(168 90% 58% / 0.17)"/>
+<ellipse cx="352.3" cy="486.53" rx="129.65" ry="129.65" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="184.55" cy="459.78" rx="72.81" ry="72.81" fill="hsl(168 90% 58% / 0.167)"/>
+<ellipse cx="266.49" cy="315.98" rx="173.91" ry="173.91" fill="hsl(168 90% 58% / 0.235)"/>
+<rect x="70" y="110" width="372" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">.git/hooks/</text>
+<rect x="95" y="189" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="170" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">pre-commit</text>
+<rect x="265" y="189" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="340" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">commit-msg</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">ejecutables que Git lanza solos</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">el output decides tú, el momento decide Git</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es REA y cómo se distribuye?">
+<title>¿Qué es REA y cómo se distribuye?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="311.8" cy="261.42" rx="93.45" ry="93.45" fill="hsl(265 90% 58% / 0.233)"/>
+<ellipse cx="74.31" cy="300.44" rx="159.64" ry="159.64" fill="hsl(265 90% 58% / 0.221)"/>
+<ellipse cx="227.67" cy="303.14" rx="101.49" ry="101.49" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="246.87" cy="238.45" rx="85.14" ry="85.14" fill="hsl(265 90% 58% / 0.151)"/>
+<rect x="191" y="85" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#b388ff" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="34" font-weight="700" fill="#b388ff">REA</text>
+<text x="256" y="165" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">ingeniería inversa con agentes</text>
+<rect x="100" y="240" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="150" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">npm</text>
+<rect x="206" y="240" width="100" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">npx</text>
+<rect x="297" y="240" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="362" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">GitHub</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">JS puro · sin binarios propios</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">los motores los aporta cada host</text>
+</svg>

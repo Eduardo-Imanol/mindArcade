@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo decide REA si un argumento denota una dirección o un símbolo?">
+<title>¿Cómo decide REA si un argumento denota una dirección o un símbolo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="255.34" cy="200.78" rx="193.07" ry="193.07" fill="hsl(320 90% 58% / 0.216)"/>
+<ellipse cx="46.69" cy="257.23" rx="81.13" ry="81.13" fill="hsl(320 90% 58% / 0.189)"/>
+<ellipse cx="42.32" cy="97.21" rx="79.85" ry="79.85" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="148.47" cy="115.9" rx="177.55" ry="177.55" fill="hsl(320 90% 58% / 0.179)"/>
+<rect x="126" y="90" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">arg: &quot;0x1000f8&quot;</text>
+<line x1="256" y1="132" x2="256" y2="169.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,180 249.57,169.87 262.43,169.87" fill="#ffcc00"/>
+<rect x="106" y="190" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">¿hex completo ⇒ dirección?</text>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">si un símbolo casa: gana el símbolo</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">_main mejor que 0x1000040</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">REA resuelve por contexto</text>
+</svg>

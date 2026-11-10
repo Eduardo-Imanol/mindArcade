@@ -33,9 +33,10 @@ describe('TopicsHub (category-first, spec-17 T5)', () => {
     expect(container.querySelector('a[href="#/progreso"]')?.textContent).toBe('Progreso');
   });
 
-  it('shows four categories', () => {
+  it('shows five categories', () => {
     const { container } = mount(<TopicsHub />);
     expect(container.textContent).toContain('Programación');
+    expect(container.textContent).toContain('IA');
     expect(container.textContent).toContain('Idiomas');
     expect(container.textContent).toContain('Universidad');
     expect(container.textContent).toContain('Mis temas');
@@ -45,8 +46,16 @@ describe('TopicsHub (category-first, spec-17 T5)', () => {
     const { container } = mount(<TopicsHub />);
     const link = container.querySelector('a[href="#/categoria/programacion"]');
     expect(link).toBeTruthy();
-    expect(link.textContent).toContain('4 temas');
-    expect(link.textContent).toContain('565 cartas');
+    expect(link.textContent).toContain('5 temas');
+    expect(link.textContent).toContain('677 cartas');
+  });
+
+  it('IA links to category route with counts', () => {
+    const { container } = mount(<TopicsHub />);
+    const link = container.querySelector('a[href="#/categoria/ia"]');
+    expect(link).toBeTruthy();
+    expect(link.textContent).toContain('1 tema');
+    expect(link.textContent).toContain('28 cartas');
   });
 
   it('Idiomas and Universidad show Próximamente', () => {
@@ -57,9 +66,11 @@ describe('TopicsHub (category-first, spec-17 T5)', () => {
   it('shows one representative image per category', () => {
     const { container } = mount(<TopicsHub />);
     const images = [...container.querySelectorAll('img.library-card__media')];
-    expect(images).toHaveLength(4);
+    expect(images).toHaveLength(5);
     for (const image of images) {
-      expect(image.getAttribute('src')).toMatch(/\/categories\/(programacion|idiomas|universidad|personalizados)\.png$/);
+      expect(image.getAttribute('src')).toMatch(
+        /\/categories\/(programacion|ia|idiomas|universidad|personalizados)\.png$/
+      );
       expect(image.getAttribute('alt')).toBe('');
       expect(image.getAttribute('width')).toBe('720');
       expect(image.getAttribute('height')).toBe('405');
@@ -82,8 +93,8 @@ describe('TopicsHub (category-first, spec-17 T5)', () => {
     expect(stored[0].md).toBe(FIXTURE_A);
 
     expect(container.textContent).toContain('Mis temas');
-    expect(container.textContent).toContain('1 tema');
-    expect(container.textContent).toContain('3 cartas');
+    expect(container.textContent).toContain('2 temas');
+    expect(container.textContent).toContain('51 cartas');
   });
 
   it('rejects 0 valid cards with message and persists nothing', () => {

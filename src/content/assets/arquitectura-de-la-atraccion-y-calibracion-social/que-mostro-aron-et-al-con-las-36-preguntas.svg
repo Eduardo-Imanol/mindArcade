@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué mostró Aron et al. con las 36 preguntas?">
+<title>¿Qué mostró Aron et al. con las 36 preguntas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="227.32" cy="49.44" rx="134.28" ry="134.28" fill="hsl(120 90% 58% / 0.187)"/>
+<ellipse cx="94.7" cy="426.9" rx="185.78" ry="185.78" fill="hsl(120 90% 58% / 0.144)"/>
+<ellipse cx="302.96" cy="111.75" rx="113.81" ry="113.81" fill="hsl(120 90% 58% / 0.149)"/>
+<ellipse cx="305.78" cy="123.93" rx="103.93" ry="103.93" fill="hsl(120 90% 58% / 0.214)"/>
+<rect x="141" y="85" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">36 preguntas</text>
+<text x="256" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">escalada de intimidad mutua,</text>
+<text x="256" y="213" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">en tandas de vulnerabilidad creciente</text>
+<rect x="86" y="280" width="340" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">cercanía acelerada en laboratorio</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">no es hechizo: es reciprocity sostenida</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">el sustento: auto-divulgación progresiva</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué falla en la conversación formulario y qué la reemplaza?">
+<title>¿Qué falla en la conversación formulario y qué la reemplaza?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="210.06" cy="484.02" rx="100.85" ry="100.85" fill="hsl(168 90% 58% / 0.225)"/>
+<ellipse cx="161.01" cy="126.59" rx="152.56" ry="152.56" fill="hsl(168 90% 58% / 0.238)"/>
+<ellipse cx="446.31" cy="313.39" rx="202.2" ry="202.2" fill="hsl(168 90% 58% / 0.216)"/>
+<ellipse cx="99.53" cy="34.76" rx="75.18" ry="75.18" fill="hsl(168 90% 58% / 0.159)"/>
+<rect x="55" y="120" width="190" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="69" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">formulario</text>
+<text x="150" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">&quot;¿estudias o</text>
+<text x="150" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">trabajas?&quot;</text>
+<text x="150" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">encuesta sin</text>
+<text x="150" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">escucha</text>
+<rect x="267" y="120" width="190" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="281" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">reemplazo</text>
+<text x="362" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">curiosidad real</text>
+<text x="362" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">por lo que dice</text>
+<text x="362" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">anclar y</text>
+<text x="362" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">profundizar</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">las respuestas importan por la pregunta</text>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">que hacen después</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">la diferencia es la intención</text>
+</svg>

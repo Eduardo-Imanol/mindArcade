@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo es máxima la activación dopaminérgica sostenida y qué refuerza eso?">
+<title>¿Cuándo es máxima la activación dopaminérgica sostenida y qué refuerza eso?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="379.74" cy="71.9" rx="88.2" ry="88.2" fill="hsl(168 90% 58% / 0.188)"/>
+<ellipse cx="5.47" cy="503.55" rx="137.01" ry="137.01" fill="hsl(168 90% 58% / 0.188)"/>
+<ellipse cx="238.56" cy="8.31" rx="120.31" ry="120.31" fill="hsl(168 90% 58% / 0.166)"/>
+<ellipse cx="214.68" cy="51.63" rx="189.83" ry="189.83" fill="hsl(168 90% 58% / 0.149)"/>
+<rect x="116" y="85" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ff007f">50 % de probabilidad</text>
+<text x="256" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">la incertidumbre máxima sostiene el tirón</text>
+<text x="256" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">y refuerza la aproximación</text>
+<rect x="126" y="280" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">refuerzo intermitente</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">sirve para explicar, no para jugar</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">con la cabeza de otro</text>
+</svg>

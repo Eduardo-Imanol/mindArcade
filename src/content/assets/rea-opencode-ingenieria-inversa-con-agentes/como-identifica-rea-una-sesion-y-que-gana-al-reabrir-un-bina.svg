@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo identifica REA una sesión y qué gana al reabrir un binario?">
+<title>¿Cómo identifica REA una sesión y qué gana al reabrir un binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="433.13" cy="204.55" rx="108.02" ry="108.02" fill="hsl(120 90% 58% / 0.229)"/>
+<ellipse cx="40.49" cy="486.54" rx="74.81" ry="74.81" fill="hsl(120 90% 58% / 0.205)"/>
+<ellipse cx="353.7" cy="338.08" rx="151.88" ry="151.88" fill="hsl(120 90% 58% / 0.175)"/>
+<ellipse cx="507.18" cy="480.85" rx="73.43" ry="73.43" fill="hsl(120 90% 58% / 0.194)"/>
+<rect x="126" y="94" width="260" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sha256(artefacto)</text>
+<line x1="256" y1="140" x2="256" y2="174.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,185 249.57,174.87 262.43,174.87" fill="#00ffcc"/>
+<rect x="106" y="190" width="300" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="120" y="208" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#b388ff">.rea/sesiones/&lt;hash&gt;</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">reabrir = continuar donde ibas</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">nombres, notas y marcas persisten</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">nada se pierde entre corridas</text>
+</svg>

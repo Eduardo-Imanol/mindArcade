@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza la paridad entre el CLI rea y el servidor MCP?">
+<title>¿Qué garantiza la paridad entre el CLI rea y el servidor MCP?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="338.73" cy="450.81" rx="73.11" ry="73.11" fill="hsl(320 90% 58% / 0.167)"/>
+<ellipse cx="486.13" cy="154.05" rx="170.15" ry="170.15" fill="hsl(320 90% 58% / 0.15)"/>
+<ellipse cx="401.01" cy="252.23" rx="79.81" ry="79.81" fill="hsl(320 90% 58% / 0.179)"/>
+<ellipse cx="318.97" cy="175.25" rx="168.97" ry="168.97" fill="hsl(320 90% 58% / 0.211)"/>
+<rect x="55" y="120" width="190" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">CLI rea</text>
+<text x="150" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">analyze --json</text>
+<text x="150" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">misma salida</text>
+<rect x="267" y="120" width="190" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="281" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#b388ff">servidor MCP</text>
+<text x="362" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">tools → json</text>
+<text x="362" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">idéntica</text>
+<line x1="248" y1="220" x2="253.2" y2="220" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="264,220 253.87,226.43 253.87,213.57" fill="#39ff14"/>
+<rect x="111" y="360" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">un contrato, dos fachadas</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">los scripts no mienten al agente</text>
+</svg>

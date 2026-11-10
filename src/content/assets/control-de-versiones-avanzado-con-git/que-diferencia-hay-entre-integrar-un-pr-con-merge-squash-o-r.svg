@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia hay entre integrar un PR con merge, squash o rebase?">
+<title>¿Qué diferencia hay entre integrar un PR con merge, squash o rebase?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="360.1" cy="266.76" rx="124.9" ry="124.9" fill="hsl(320 90% 58% / 0.218)"/>
+<ellipse cx="305.96" cy="499.61" rx="99.78" ry="99.78" fill="hsl(320 90% 58% / 0.145)"/>
+<ellipse cx="286.56" cy="289.39" rx="81.21" ry="81.21" fill="hsl(320 90% 58% / 0.154)"/>
+<ellipse cx="110.44" cy="3.36" rx="185.67" ry="185.67" fill="hsl(320 90% 58% / 0.152)"/>
+<rect x="60" y="120" width="120" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="68" y1="128" x2="172" y2="128" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="120" y="154" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">merge</text>
+<text x="120" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#f1f1f1">mantiene todos los commits</text>
+<ellipse cx="100" cy="280" rx="4" ry="4" fill="#39ff14"/>
+<ellipse cx="120" cy="280" rx="4" ry="4" fill="#39ff14"/>
+<ellipse cx="140" cy="280" rx="4" ry="4" fill="#39ff14"/>
+<rect x="192" y="120" width="120" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="200" y1="128" x2="304" y2="128" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="252" y="154" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">squash</text>
+<text x="252" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#f1f1f1">1 commit por PR</text>
+<ellipse cx="232" cy="280" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="252" cy="280" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="272" cy="280" rx="4" ry="4" fill="#00ffcc"/>
+<rect x="324" y="120" width="120" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="332" y1="128" x2="436" y2="128" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="384" y="154" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">rebase</text>
+<text x="384" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#f1f1f1">series sin nodo de unión</text>
+<ellipse cx="364" cy="280" rx="4" ry="4" fill="#ffcc00"/>
+<ellipse cx="384" cy="280" rx="4" ry="4" fill="#ffcc00"/>
+<ellipse cx="404" cy="280" rx="4" ry="4" fill="#ffcc00"/>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">mismo contenido final</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">distinto historial para leer y bisectar</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">elige una política de equipo</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué pasos construyen la seguridad ganada?">
+<title>¿Qué pasos construyen la seguridad ganada?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="87.65" cy="72.44" rx="160.34" ry="160.34" fill="hsl(265 90% 58% / 0.197)"/>
+<ellipse cx="216.04" cy="454.74" rx="170.11" ry="170.11" fill="hsl(265 90% 58% / 0.175)"/>
+<ellipse cx="8.28" cy="142.53" rx="95.46" ry="95.46" fill="hsl(265 90% 58% / 0.226)"/>
+<ellipse cx="231.72" cy="426.36" rx="198.97" ry="198.97" fill="hsl(265 90% 58% / 0.178)"/>
+<rect x="50" y="110" width="200" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="58" y1="118" x2="242" y2="118" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="150" y="138" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">1 · presencia estable</text>
+<text x="370" y="134" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">llegar y quedarse</text>
+<rect x="50" y="200" width="200" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="58" y1="208" x2="242" y2="208" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="150" y="228" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">2 · coherencia</text>
+<text x="370" y="224" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">decir y hacer lo mismo</text>
+<rect x="50" y="290" width="200" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="58" y1="298" x2="242" y2="298" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="150" y="318" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">3 · apertura gradual</text>
+<text x="370" y="314" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">mostrar sin inundar</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">seguridad ganada ≠ declarada</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">el tiempo la prueba, no las palabras</text>
+</svg>

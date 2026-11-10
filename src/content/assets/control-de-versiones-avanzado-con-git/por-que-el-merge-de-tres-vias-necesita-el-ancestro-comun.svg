@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el merge de tres vías necesita el ancestro común?">
+<title>¿Por qué el merge de tres vías necesita el ancestro común?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="306.7" cy="204.15" rx="84.7" ry="84.7" fill="hsl(120 90% 58% / 0.237)"/>
+<ellipse cx="121.85" cy="143.9" rx="96.62" ry="96.62" fill="hsl(120 90% 58% / 0.227)"/>
+<ellipse cx="406.58" cy="85.61" rx="97.47" ry="97.47" fill="hsl(120 90% 58% / 0.187)"/>
+<ellipse cx="124.18" cy="389.49" rx="166.91" ry="166.91" fill="hsl(120 90% 58% / 0.162)"/>
+<ellipse cx="256" cy="120" rx="34" ry="34" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">base</text>
+<ellipse cx="150" cy="260" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<ellipse cx="362" cy="260" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="362" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="230" y1="146" x2="176.18" y2="223.14" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="170,232 170.52,220.01 181.07,227.37" fill="#8a7fb5"/>
+<line x1="282" y1="146" x2="335.82" y2="223.14" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="342,232 330.93,227.37 341.48,220.01" fill="#8a7fb5"/>
+<line x1="180" y1="260" x2="311.2" y2="260" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="322,260 311.87,266.43 311.87,253.57" fill="#39ff14"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#f1f1f1">sin base no se sabe</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">qué lado cambió cada línea</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">diff(base→A) + diff(base→B) fusionados</text>
+</svg>

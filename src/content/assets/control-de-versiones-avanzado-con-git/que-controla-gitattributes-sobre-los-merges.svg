@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué controla .gitattributes sobre los merges?">
+<title>¿Qué controla .gitattributes sobre los merges?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="100.44" cy="409.6" rx="149.72" ry="149.72" fill="hsl(168 90% 58% / 0.213)"/>
+<ellipse cx="4.54" cy="37.24" rx="184.5" ry="184.5" fill="hsl(168 90% 58% / 0.216)"/>
+<ellipse cx="424.9" cy="134.23" rx="116.52" ry="116.52" fill="hsl(168 90% 58% / 0.175)"/>
+<ellipse cx="453.34" cy="464.3" rx="118.57" ry="118.57" fill="hsl(168 90% 58% / 0.141)"/>
+<rect x="70" y="110" width="372" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">.gitattributes</text>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">*.lock merge=nosuchdriver</text>
+<text x="256" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">ours · union · custom driver</text>
+<rect x="101" y="300" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">decide por ruta y por extensión</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">plock.lock nunca entra en merge</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">viaja con el repo, sin config local</text>
+</svg>

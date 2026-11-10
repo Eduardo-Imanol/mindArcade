@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se rescatan commits hechos en detached HEAD?">
+<title>¿Cómo se rescatan commits hechos en detached HEAD?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="493.21" cy="70.27" rx="193.64" ry="193.64" fill="hsl(45 90% 58% / 0.236)"/>
+<ellipse cx="484.5" cy="102.12" rx="75.19" ry="75.19" fill="hsl(45 90% 58% / 0.214)"/>
+<ellipse cx="102.98" cy="44.37" rx="187.44" ry="187.44" fill="hsl(45 90% 58% / 0.208)"/>
+<ellipse cx="383.88" cy="198.28" rx="202.7" ry="202.7" fill="hsl(45 90% 58% / 0.19)"/>
+<rect x="161" y="90" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">HEAD suelto</text>
+<line x1="256" y1="132" x2="256" y2="164.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,175 249.57,164.87 262.43,164.87" fill="#ffcc00"/>
+<rect x="90" y="180" width="332" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="98" y1="188" x2="414" y2="188" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="206" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">commits sin rama</text>
+<line x1="256" y1="228" x2="256" y2="259.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,270 249.57,259.87 262.43,259.87" fill="#39ff14"/>
+<rect x="116" y="280" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#39ff14">branch rescate &lt;sha&gt;</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">reflog los encuentra por fecha</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">HEAD@{2} suele bastar</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">antes de que expiren (90 días)</text>
+</svg>

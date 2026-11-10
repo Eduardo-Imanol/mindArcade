@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué el grafo de commits de Git no puede tener ciclos?">
+<title>¿Por qué el grafo de commits de Git no puede tener ciclos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="280.94" cy="127.87" rx="84" ry="84" fill="hsl(265 90% 58% / 0.236)"/>
+<ellipse cx="370.03" cy="162.91" rx="178.4" ry="178.4" fill="hsl(265 90% 58% / 0.239)"/>
+<ellipse cx="237.85" cy="71.26" rx="168.72" ry="168.72" fill="hsl(265 90% 58% / 0.2)"/>
+<ellipse cx="21.88" cy="126.69" rx="153.7" ry="153.7" fill="hsl(265 90% 58% / 0.207)"/>
+<line x1="256" y1="160" x2="328.54" y2="285.65" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="333.94,295 323.31,289.44 334.44,283.01" fill="#ff007f"/>
+<line x1="333.94" y1="295" x2="188.86" y2="295" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="178.06,295 188.19,288.57 188.19,301.43" fill="#ff007f"/>
+<line x1="178.06" y1="295" x2="250.6" y2="169.35" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,160 256.5,171.99 245.37,165.56" fill="#ff007f"/>
+<line x1="236" y1="230" x2="276" y2="270" stroke="#ff007f" stroke-width="6" stroke-linecap="round"/>
+<line x1="276" y1="230" x2="236" y2="290" stroke="#ff007f" stroke-width="6" stroke-linecap="round"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">el tiempo no da vueltas</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">hash de hijo → hash de padre</text>
+</svg>

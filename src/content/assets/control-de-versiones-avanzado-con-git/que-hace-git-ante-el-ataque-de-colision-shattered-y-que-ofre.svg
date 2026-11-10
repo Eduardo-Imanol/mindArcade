@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace Git ante el ataque de colisión SHAttered y qué ofrece SHA-256?">
+<title>¿Qué hace Git ante el ataque de colisión SHAttered y qué ofrece SHA-256?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="168.28" cy="261.3" rx="137.28" ry="137.28" fill="hsl(320 90% 58% / 0.186)"/>
+<ellipse cx="397.1" cy="154.23" rx="204.01" ry="204.01" fill="hsl(320 90% 58% / 0.162)"/>
+<ellipse cx="291.72" cy="412.7" rx="157.52" ry="157.52" fill="hsl(320 90% 58% / 0.221)"/>
+<ellipse cx="444.08" cy="440.3" rx="91.96" ry="91.96" fill="hsl(320 90% 58% / 0.216)"/>
+<rect x="60" y="140" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="74" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">SHA-1</text>
+<text x="150" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">SHAttered</text>
+<text x="150" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">colisión 2017</text>
+<rect x="272" y="140" width="180" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">SHA-256</text>
+<text x="362" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">sin colisiones</text>
+<text x="362" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">conocidas</text>
+<rect x="91" y="340" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">detección de colisión + hardening</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">sha256 como objeto nuevo del repositorio</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un merge commit y qué es el primer padre?">
+<title>¿Qué es un merge commit y qué es el primer padre?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="221.75" cy="142.7" rx="126.82" ry="126.82" fill="hsl(320 90% 58% / 0.24)"/>
+<ellipse cx="92.73" cy="164.26" rx="186.07" ry="186.07" fill="hsl(320 90% 58% / 0.217)"/>
+<ellipse cx="100.86" cy="445.9" rx="111.62" ry="111.62" fill="hsl(320 90% 58% / 0.163)"/>
+<ellipse cx="453.33" cy="159.51" rx="170.88" ry="170.88" fill="hsl(320 90% 58% / 0.224)"/>
+<ellipse cx="150" cy="160" rx="34" ry="34" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="160" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">main</text>
+<ellipse cx="362" cy="160" rx="34" ry="34" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="362" y="160" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">feat</text>
+<ellipse cx="256" cy="320" rx="40" ry="40" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">merge</text>
+<line x1="170" y1="190" x2="224.44" y2="280.74" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="230,290 219.27,284.62 230.3,278" fill="#00ffcc"/>
+<line x1="342" y1="190" x2="287.56" y2="280.74" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="282,290 281.7,278 292.73,284.62" fill="#ff007f"/>
+<rect x="100" y="240" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="165" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">1.er padre</text>
+<rect x="283" y="240" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="348" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">2.º padre</text>
+<text x="150" y="95" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">HEAD^1</text>
+<text x="362" y="95" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">HEAD^2</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">dos o más padres</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué modelo usa REA con Hopper y qué cuidado exige?">
+<title>¿Qué modelo usa REA con Hopper y qué cuidado exige?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="108.74" cy="156.64" rx="109.39" ry="109.39" fill="hsl(320 90% 58% / 0.185)"/>
+<ellipse cx="398.01" cy="135.26" rx="89.16" ry="89.16" fill="hsl(320 90% 58% / 0.171)"/>
+<ellipse cx="210.42" cy="447.98" rx="185.49" ry="185.49" fill="hsl(320 90% 58% / 0.236)"/>
+<ellipse cx="135.65" cy="249.26" rx="149.71" ry="149.71" fill="hsl(320 90% 58% / 0.182)"/>
+<rect x="60" y="120" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Hopper</text>
+<text x="135" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">en tu Mac</text>
+<rect x="302" y="120" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="316" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">macOS 14+</text>
+<text x="377" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">SDK actual</text>
+<line x1="214" y1="175" x2="285.2" y2="175" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,175 285.87,181.43 285.87,168.57" fill="#ffcc00"/>
+<rect x="121" y="280" width="270" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">importa y exporta XML</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">rename dentro, REA lee desde fuera</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">no pidas rendimiento de puentes</text>
+</svg>

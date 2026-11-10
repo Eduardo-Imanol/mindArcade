@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué caracteriza una postura de alta confianza?">
+<title>¿Qué caracteriza una postura de alta confianza?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="64.65" cy="462.07" rx="95.28" ry="95.28" fill="hsl(168 90% 58% / 0.229)"/>
+<ellipse cx="416.9" cy="485.13" rx="193.04" ry="193.04" fill="hsl(168 90% 58% / 0.16)"/>
+<ellipse cx="173.22" cy="148.73" rx="78.64" ry="78.64" fill="hsl(168 90% 58% / 0.234)"/>
+<ellipse cx="336.17" cy="81.3" rx="167.15" ry="167.15" fill="hsl(168 90% 58% / 0.16)"/>
+<rect x="91" y="95" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">abierta: sin brazos cruzados</text>
+<rect x="91" y="171" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="191" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">asimétrica, no rígida</text>
+<rect x="91" y="247" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="267" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">lenta y sin sacudidas</text>
+<rect x="91" y="323" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="343" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">ocupar el espacio propio</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">relajado ≠ despatarrado</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">cómodo en el propio cuerpo</text>
+</svg>

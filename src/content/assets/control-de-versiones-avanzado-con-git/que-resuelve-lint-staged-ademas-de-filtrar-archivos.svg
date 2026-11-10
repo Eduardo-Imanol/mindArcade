@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué resuelve lint-staged además de filtrar archivos?">
+<title>¿Qué resuelve lint-staged además de filtrar archivos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="254.28" cy="353.9" rx="100.26" ry="100.26" fill="hsl(265 90% 58% / 0.177)"/>
+<ellipse cx="448.05" cy="118.76" rx="149.5" ry="149.5" fill="hsl(265 90% 58% / 0.205)"/>
+<ellipse cx="277.03" cy="410.36" rx="177.89" ry="177.89" fill="hsl(265 90% 58% / 0.2)"/>
+<ellipse cx="0.19" cy="375.44" rx="125.44" ry="125.44" fill="hsl(265 90% 58% / 0.236)"/>
+<rect x="146" y="90" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">lint-staged</text>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">reaplica formato en un solo commit</text>
+<ellipse cx="107.5" cy="200" rx="4" ry="4" fill="#ffcc00"/>
+<ellipse cx="115" cy="200" rx="4" ry="4" fill="#ffcc00"/>
+<ellipse cx="122.5" cy="200" rx="4" ry="4" fill="#ffcc00"/>
+<text x="256" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">-a en prettier, sin sorpresas</text>
+<ellipse cx="107.5" cy="255" rx="4" ry="4" fill="#39ff14"/>
+<ellipse cx="115" cy="255" rx="4" ry="4" fill="#39ff14"/>
+<ellipse cx="122.5" cy="255" rx="4" ry="4" fill="#39ff14"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">backups: aborta sin perder staged</text>
+<ellipse cx="107.5" cy="310" rx="4" ry="4" fill="#ff007f"/>
+<ellipse cx="115" cy="310" rx="4" ry="4" fill="#ff007f"/>
+<ellipse cx="122.5" cy="310" rx="4" ry="4" fill="#ff007f"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">solo toca los archivos en la zona media</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">staged = zona media</text>
+</svg>

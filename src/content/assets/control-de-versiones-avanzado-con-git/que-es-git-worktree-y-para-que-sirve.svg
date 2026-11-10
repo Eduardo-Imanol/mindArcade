@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es git worktree y para qué sirve?">
+<title>¿Qué es git worktree y para qué sirve?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="324.94" cy="85.01" rx="153.63" ry="153.63" fill="hsl(320 90% 58% / 0.22)"/>
+<ellipse cx="359.32" cy="19.86" rx="103.57" ry="103.57" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="83.77" cy="471.47" rx="81.56" ry="81.56" fill="hsl(320 90% 58% / 0.208)"/>
+<ellipse cx="46.95" cy="27.76" rx="199.52" ry="199.52" fill="hsl(320 90% 58% / 0.167)"/>
+<rect x="70" y="120" width="372" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">.git (compartido)</text>
+<line x1="150" y1="205" x2="150" y2="234.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="150,245 143.57,234.87 156.43,234.87" fill="#00ffcc"/>
+<line x1="256" y1="205" x2="256" y2="234.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,245 249.57,234.87 262.43,234.87" fill="#00ffcc"/>
+<line x1="362" y1="205" x2="362" y2="234.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="362,245 355.57,234.87 368.43,234.87" fill="#00ffcc"/>
+<rect x="60" y="250" width="170" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="268" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">worktree main</text>
+<rect x="250" y="250" width="170" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="264" y="268" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">worktree feat</text>
+<rect x="385" y="270" width="110" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="440" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#ffcc00">sin stash</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">dos ramas vivas en carpetas distintas</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">cero clon extra, cero copia de objetos</text>
+</svg>

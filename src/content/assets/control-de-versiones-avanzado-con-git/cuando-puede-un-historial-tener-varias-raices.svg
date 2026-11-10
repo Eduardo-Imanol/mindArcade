@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo puede un historial tener varias raíces?">
+<title>¿Cuándo puede un historial tener varias raíces?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="495.44" cy="213.01" rx="189.9" ry="189.9" fill="hsl(265 90% 58% / 0.234)"/>
+<ellipse cx="171.06" cy="134.73" rx="174.61" ry="174.61" fill="hsl(265 90% 58% / 0.177)"/>
+<ellipse cx="187.67" cy="415.56" rx="98.83" ry="98.83" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="353.2" cy="29.86" rx="132.93" ry="132.93" fill="hsl(265 90% 58% / 0.2)"/>
+<ellipse cx="130" cy="400" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="130" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">r1</text>
+<ellipse cx="382" cy="400" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="382" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">r2</text>
+<ellipse cx="130" cy="280" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">a</text>
+<ellipse cx="382" cy="280" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="382" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">b</text>
+<ellipse cx="256" cy="170" rx="38" ry="38" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">merge</text>
+<line x1="130" y1="368" x2="130" y2="320.8" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="130,310 136.43,320.13 123.57,320.13" fill="#8a7fb5"/>
+<line x1="382" y1="368" x2="382" y2="320.8" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="382,310 388.43,320.13 375.57,320.13" fill="#8a7fb5"/>
+<line x1="148" y1="255" x2="219.36" y2="201.48" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="228,195 223.75,206.22 216.04,195.94" fill="#8a7fb5"/>
+<line x1="364" y1="255" x2="292.64" y2="201.48" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="284,195 295.96,195.94 288.25,206.22" fill="#8a7fb5"/>
+<rect x="151" y="70" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="90" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">raíces múltiples</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">merge de historias sin padre común</text>
+</svg>

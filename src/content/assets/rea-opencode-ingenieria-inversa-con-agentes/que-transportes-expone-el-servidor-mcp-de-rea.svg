@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué transportes expone el servidor MCP de REA?">
+<title>¿Qué transportes expone el servidor MCP de REA?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="139.77" cy="17.98" rx="75.81" ry="75.81" fill="hsl(120 90% 58% / 0.197)"/>
+<ellipse cx="41.43" cy="110.53" rx="135.79" ry="135.79" fill="hsl(120 90% 58% / 0.236)"/>
+<ellipse cx="407.24" cy="222.4" rx="136.27" ry="136.27" fill="hsl(120 90% 58% / 0.142)"/>
+<ellipse cx="246.37" cy="290.03" rx="166.86" ry="166.86" fill="hsl(120 90% 58% / 0.168)"/>
+<rect x="70" y="110" width="372" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="84" y="128" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#b388ff">servidor MCP de REA</text>
+<line x1="180" y1="215" x2="180" y2="254.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="180,265 173.57,254.87 186.43,254.87" fill="#00ffcc"/>
+<line x1="332" y1="215" x2="332" y2="254.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="332,265 325.57,254.87 338.43,254.87" fill="#ff007f"/>
+<rect x="60" y="270" width="240" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="288" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">stdio</text>
+<text x="180" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">proceso hijo</text>
+<rect x="320" y="270" width="132" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="334" y="288" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">HTTP</text>
+<text x="386" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">remoto</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">streamable http / SSE heredado</text>
+</svg>

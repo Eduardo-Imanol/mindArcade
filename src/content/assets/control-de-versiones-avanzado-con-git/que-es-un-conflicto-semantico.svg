@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un conflicto semántico?">
+<title>¿Qué es un conflicto semántico?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="351.06" cy="393.26" rx="102.08" ry="102.08" fill="hsl(168 90% 58% / 0.198)"/>
+<ellipse cx="83.98" cy="215.74" rx="201.22" ry="201.22" fill="hsl(168 90% 58% / 0.211)"/>
+<ellipse cx="472.68" cy="255.11" rx="84.01" ry="84.01" fill="hsl(168 90% 58% / 0.177)"/>
+<ellipse cx="461.87" cy="132.26" rx="110.96" ry="110.96" fill="hsl(168 90% 58% / 0.228)"/>
+<rect x="60" y="130" width="180" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">A renombra</text>
+<text x="150" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">llama()</text>
+<rect x="272" y="130" width="180" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">B borra</text>
+<text x="362" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">llama()</text>
+<rect x="111" y="290" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">merge limpio, build rota</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">los textos casan, el código no compila</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">solo lo detectan tests y compilación</text>
+</svg>

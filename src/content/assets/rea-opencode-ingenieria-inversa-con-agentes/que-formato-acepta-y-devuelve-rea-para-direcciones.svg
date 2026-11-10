@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué formato acepta y devuelve REA para direcciones?">
+<title>¿Qué formato acepta y devuelve REA para direcciones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="217.47" cy="277.13" rx="136.13" ry="136.13" fill="hsl(320 90% 58% / 0.185)"/>
+<ellipse cx="212.66" cy="303.06" rx="111.19" ry="111.19" fill="hsl(320 90% 58% / 0.204)"/>
+<ellipse cx="281.61" cy="177.5" rx="86.5" ry="86.5" fill="hsl(320 90% 58% / 0.177)"/>
+<ellipse cx="18.81" cy="332.63" rx="138.32" ry="138.32" fill="hsl(320 90% 58% / 0.15)"/>
+<rect x="131" y="90" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">0xdeadbeef</text>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">también decimal &quot;3735928559&quot;</text>
+<line x1="256" y1="200" x2="256" y2="239.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,250 249.57,239.87 262.43,239.87" fill="#39ff14"/>
+<rect x="126" y="260" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">devuelve hex sin 0x</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">big-endian, minúsculas, sin ceros de más</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">un solo dialecto para todo</text>
+</svg>

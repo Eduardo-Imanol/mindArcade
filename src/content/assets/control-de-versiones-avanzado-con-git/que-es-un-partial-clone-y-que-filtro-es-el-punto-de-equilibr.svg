@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un partial clone y qué filtro es el punto de equilibrio?">
+<title>¿Qué es un partial clone y qué filtro es el punto de equilibrio?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="63.15" cy="288.14" rx="77.14" ry="77.14" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="124.46" cy="255.25" rx="119.21" ry="119.21" fill="hsl(265 90% 58% / 0.217)"/>
+<ellipse cx="188.43" cy="128.52" rx="95.19" ry="95.19" fill="hsl(265 90% 58% / 0.213)"/>
+<ellipse cx="213.7" cy="391.96" rx="109.26" ry="109.26" fill="hsl(265 90% 58% / 0.219)"/>
+<rect x="101" y="85" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#00ffcc">--filter=blob:none</text>
+<text x="256" y="165" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">trae trees + commits</text>
+<text x="256" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">y blobs solo al checkout</text>
+<rect x="106" y="280" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">blob:limit=1m como plan B</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">monorepo navegable, bytes a demanda</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">promisor remote: la red paga la visita</text>
+</svg>

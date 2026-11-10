@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son los packfiles y su compresión delta?">
+<title>¿Qué son los packfiles y su compresión delta?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="430.38" cy="183.21" rx="74.36" ry="74.36" fill="hsl(320 90% 58% / 0.235)"/>
+<ellipse cx="124.85" cy="32.05" rx="109.16" ry="109.16" fill="hsl(320 90% 58% / 0.162)"/>
+<ellipse cx="487.76" cy="214.46" rx="120.13" ry="120.13" fill="hsl(320 90% 58% / 0.218)"/>
+<ellipse cx="190.6" cy="38.31" rx="178.81" ry="178.81" fill="hsl(320 90% 58% / 0.201)"/>
+<rect x="60" y="120" width="160" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sueltos</text>
+<text x="140" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">zlib por objeto</text>
+<line x1="232" y1="180" x2="269.2" y2="180" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,180 269.87,186.43 269.87,173.57" fill="#39ff14"/>
+<rect x="286" y="120" width="166" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="300" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">pack</text>
+<text x="369" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">deltas + base</text>
+<rect x="121" y="290" width="270" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">objetos similares → deltas</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">repack en push/fetch y gc</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">decenas de versiones, pocos bytes</text>
+</svg>

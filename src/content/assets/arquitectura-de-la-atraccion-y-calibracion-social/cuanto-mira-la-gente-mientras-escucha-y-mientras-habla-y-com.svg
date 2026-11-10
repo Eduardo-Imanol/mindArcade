@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuánto mira la gente mientras escucha y mientras habla, y cómo se sostiene el contacto?">
+<title>¿Cuánto mira la gente mientras escucha y mientras habla, y cómo se sostiene el contacto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="126.48" cy="126.46" rx="126.15" ry="126.15" fill="hsl(320 90% 58% / 0.159)"/>
+<ellipse cx="227.2" cy="244.06" rx="202.96" ry="202.96" fill="hsl(320 90% 58% / 0.184)"/>
+<ellipse cx="354.59" cy="454.41" rx="84.58" ry="84.58" fill="hsl(320 90% 58% / 0.209)"/>
+<ellipse cx="267.27" cy="200.33" rx="178.47" ry="178.47" fill="hsl(320 90% 58% / 0.229)"/>
+<rect x="60" y="130" width="170" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">escuchando</text>
+<text x="145" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">~70-80 %</text>
+<text x="145" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">del tiempo</text>
+<rect x="282" y="130" width="170" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="296" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">hablando</text>
+<text x="367" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">~40-50 %</text>
+<text x="367" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">del tiempo</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">2-3 s por mirada; más mirando que fijando</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">romper y volver: respirar</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">conversación ≠ duelo de miradas</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se pagina una observación grande en REA?">
+<title>¿Cómo se pagina una observación grande en REA?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="333.5" cy="490.6" rx="111.45" ry="111.45" fill="hsl(120 90% 58% / 0.155)"/>
+<ellipse cx="100.27" cy="218.86" rx="166.4" ry="166.4" fill="hsl(120 90% 58% / 0.192)"/>
+<ellipse cx="231.2" cy="297.52" rx="184.08" ry="184.08" fill="hsl(120 90% 58% / 0.203)"/>
+<ellipse cx="30.71" cy="3.06" rx="149.11" ry="149.11" fill="hsl(120 90% 58% / 0.215)"/>
+<rect x="70" y="120" width="372" height="60" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="78" y1="128" x2="434" y2="128" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="154" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">observación de 40 KB</text>
+<line x1="256" y1="185" x2="256" y2="219.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,230 249.57,219.87 262.43,219.87" fill="#ffcc00"/>
+<rect x="70" y="235" width="170" height="50" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="78" y1="243" x2="232" y2="243" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="155" y="264" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">página 1</text>
+<rect x="272" y="235" width="170" height="50" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="280" y1="243" x2="434" y2="243" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="357" y="264" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">página 2</text>
+<rect x="70" y="295" width="170" height="50" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="78" y1="303" x2="232" y2="303" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="155" y="324" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">página 3</text>
+<rect x="272" y="295" width="170" height="50" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#8a7fb5" stroke-width="2"/>
+<line x1="280" y1="303" x2="434" y2="303" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="357" y="324" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">...</text>
+<rect x="146" y="400" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">cursor.nextPage</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">ventana de contexto intacta</text>
+</svg>

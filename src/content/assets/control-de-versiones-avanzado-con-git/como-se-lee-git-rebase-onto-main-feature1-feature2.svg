@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se lee git rebase --onto main feature1 feature2?">
+<title>¿Cómo se lee git rebase --onto main feature1 feature2?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="404.17" cy="371.59" rx="111.58" ry="111.58" fill="hsl(320 90% 58% / 0.144)"/>
+<ellipse cx="228.95" cy="233.89" rx="198.61" ry="198.61" fill="hsl(320 90% 58% / 0.178)"/>
+<ellipse cx="254.99" cy="152.64" rx="122.67" ry="122.67" fill="hsl(320 90% 58% / 0.175)"/>
+<ellipse cx="37.84" cy="247.67" rx="180.14" ry="180.14" fill="hsl(320 90% 58% / 0.157)"/>
+<ellipse cx="256" cy="110" rx="40" ry="40" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">main</text>
+<ellipse cx="110" cy="260" rx="34" ry="34" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="110" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">f1</text>
+<ellipse cx="256" cy="260" rx="34" ry="34" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">f2</text>
+<ellipse cx="400" cy="260" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="400" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">nuevo</text>
+<line x1="256" y1="150" x2="148.82" y2="225.77" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="140,232 144.56,220.9 151.99,231.4" fill="#8a7fb5"/>
+<line x1="256" y1="150" x2="256" y2="221.2" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,232 249.57,221.87 262.43,221.87" fill="#8a7fb5"/>
+<line x1="256" y1="150" x2="370.99" y2="226.04" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="380,232 368,231.77 375.1,221.05" fill="#ffcc00"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">nuevo = f2 sin f1, sobre main</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">abandonar el tronco viejo</text>
+<text x="400" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">nuevo</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">f2</text>
+<text x="110" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">f1</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">transplante de una serie a otra base</text>
+</svg>

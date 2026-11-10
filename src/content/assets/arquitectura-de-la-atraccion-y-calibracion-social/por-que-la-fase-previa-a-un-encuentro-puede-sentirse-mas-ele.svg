@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué la fase previa a un encuentro puede sentirse más eléctrica que el encuentro?">
+<title>¿Por qué la fase previa a un encuentro puede sentirse más eléctrica que el encuentro?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="239.89" cy="452.09" rx="122.72" ry="122.72" fill="hsl(45 90% 58% / 0.166)"/>
+<ellipse cx="451.88" cy="366.51" rx="99.48" ry="99.48" fill="hsl(45 90% 58% / 0.193)"/>
+<ellipse cx="378.01" cy="418.93" rx="96.02" ry="96.02" fill="hsl(45 90% 58% / 0.198)"/>
+<ellipse cx="219.71" cy="41.74" rx="192.57" ry="192.57" fill="hsl(45 90% 58% / 0.178)"/>
+<polyline points="60,150 190,320 320,240 430,160" fill="none" stroke="#ff007f" stroke-width="4"/>
+<ellipse cx="60" cy="150" rx="8" ry="8" fill="#8a7fb5"/>
+<ellipse cx="190" cy="320" rx="8" ry="8" fill="#ff007f"/>
+<ellipse cx="320" cy="240" rx="8" ry="8" fill="#8a7fb5"/>
+<ellipse cx="430" cy="160" rx="8" ry="8" fill="#8a7fb5"/>
+<text x="60" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">citas</text>
+<text x="430" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">mensajes</text>
+<rect x="131" y="410" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">pico de anticipación</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">querer &gt; gustar antes del premio</text>
+</svg>

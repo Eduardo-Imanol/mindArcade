@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué problema resuelve un algoritmo de diff?">
+<title>¿Qué problema resuelve un algoritmo de diff?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="91.26" cy="320.06" rx="83.13" ry="83.13" fill="hsl(265 90% 58% / 0.146)"/>
+<ellipse cx="217.63" cy="429.23" rx="188.02" ry="188.02" fill="hsl(265 90% 58% / 0.21)"/>
+<ellipse cx="236.71" cy="119.85" rx="171.41" ry="171.41" fill="hsl(265 90% 58% / 0.164)"/>
+<ellipse cx="302.59" cy="478.8" rx="80.13" ry="80.13" fill="hsl(265 90% 58% / 0.221)"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">A: x b c y</text>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">B: x d c y</text>
+<rect x="171" y="240" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">- b   + d</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mínimos borra/inserta</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">que convierten A en B</text>
+<ellipse cx="202.5" cy="450" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="255" cy="450" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="307.5" cy="450" rx="4" ry="4" fill="#00ffcc"/>
+</svg>

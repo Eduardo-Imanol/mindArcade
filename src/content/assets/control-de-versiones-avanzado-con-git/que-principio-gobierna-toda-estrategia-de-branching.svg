@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué principio gobierna toda estrategia de branching?">
+<title>¿Qué principio gobierna toda estrategia de branching?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="139.43" cy="70.51" rx="166.05" ry="166.05" fill="hsl(168 90% 58% / 0.21)"/>
+<ellipse cx="340.99" cy="265.27" rx="85.02" ry="85.02" fill="hsl(168 90% 58% / 0.153)"/>
+<ellipse cx="483.5" cy="183.14" rx="147.12" ry="147.12" fill="hsl(168 90% 58% / 0.232)"/>
+<ellipse cx="10.31" cy="389.58" rx="177.8" ry="177.8" fill="hsl(168 90% 58% / 0.22)"/>
+<rect x="66" y="90" width="380" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">integrar pronto y en piezas pequeñas</text>
+<line x1="256" y1="132" x2="256" y2="169.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,180 249.57,169.87 262.43,169.87" fill="#ffcc00"/>
+<rect x="136" y="200" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">menos divergencia</text>
+<rect x="136" y="270" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">menos conflictos</text>
+<rect x="136" y="340" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">menos WIP perdido</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">todo lo demás es estilo</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">el modelo sirve al flujo, no al revés</text>
+</svg>

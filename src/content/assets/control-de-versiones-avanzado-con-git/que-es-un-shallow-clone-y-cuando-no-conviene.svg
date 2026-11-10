@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es un shallow clone y cuándo no conviene?">
+<title>¿Qué es un shallow clone y cuándo no conviene?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="62.65" cy="226.51" rx="95.84" ry="95.84" fill="hsl(45 90% 58% / 0.209)"/>
+<ellipse cx="45.97" cy="446.95" rx="131.79" ry="131.79" fill="hsl(45 90% 58% / 0.235)"/>
+<ellipse cx="387.91" cy="255.33" rx="119.42" ry="119.42" fill="hsl(45 90% 58% / 0.161)"/>
+<ellipse cx="377.1" cy="265.57" rx="79.76" ry="79.76" fill="hsl(45 90% 58% / 0.14)"/>
+<line x1="80" y1="250" x2="432" y2="250" stroke="#39ff14" stroke-width="5" stroke-linecap="round"/>
+<line x1="80" y1="320" x2="432" y2="320" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"/>
+<rect x="171" y="180" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#39ff14">--depth 1</text>
+<text x="256" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">profundidad de historia</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">arriba: visible · abajo: ausente</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">CI y docs lo aman</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">blame/bisect/log requieren unfull</text>
+</svg>

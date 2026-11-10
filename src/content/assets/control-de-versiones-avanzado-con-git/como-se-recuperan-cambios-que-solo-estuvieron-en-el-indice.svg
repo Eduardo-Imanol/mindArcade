@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se recuperan cambios que solo estuvieron en el índice?">
+<title>¿Cómo se recuperan cambios que solo estuvieron en el índice?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="86.65" cy="189.08" rx="171.05" ry="171.05" fill="hsl(168 90% 58% / 0.18)"/>
+<ellipse cx="201.22" cy="401.36" rx="117.3" ry="117.3" fill="hsl(168 90% 58% / 0.185)"/>
+<ellipse cx="26.31" cy="170.61" rx="164.72" ry="164.72" fill="hsl(168 90% 58% / 0.171)"/>
+<ellipse cx="216.69" cy="332.87" rx="192.63" ry="192.63" fill="hsl(168 90% 58% / 0.201)"/>
+<rect x="101" y="90" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">git add . (nunca commit)</text>
+<line x1="256" y1="132" x2="256" y2="164.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,175 249.57,164.87 262.43,164.87" fill="#ffcc00"/>
+<rect x="106" y="180" width="300" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="120" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">git fsck --lost-found</text>
+<line x1="256" y1="265" x2="256" y2="294.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,305 249.57,294.87 262.43,294.87" fill="#00ffcc"/>
+<rect x="116" y="315" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="335" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">dangling blob → rescata</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">el add ya calculó el hash</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">el objeto existe aunque nadie lo cite</text>
+</svg>

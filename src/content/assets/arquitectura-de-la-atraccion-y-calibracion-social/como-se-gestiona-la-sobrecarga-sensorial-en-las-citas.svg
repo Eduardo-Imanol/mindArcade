@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se gestiona la sobrecarga sensorial en las citas?">
+<title>¿Cómo se gestiona la sobrecarga sensorial en las citas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="444.96" cy="229.63" rx="165.53" ry="165.53" fill="hsl(320 90% 58% / 0.17)"/>
+<ellipse cx="344.88" cy="429.71" rx="124.33" ry="124.33" fill="hsl(320 90% 58% / 0.143)"/>
+<ellipse cx="311.04" cy="79.08" rx="161.63" ry="161.63" fill="hsl(320 90% 58% / 0.214)"/>
+<ellipse cx="437.39" cy="404.42" rx="132.47" ry="132.47" fill="hsl(320 90% 58% / 0.182)"/>
+<rect x="116" y="85" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">ambiente sensorial</text>
+<rect x="101" y="175" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#00ffcc">sitio tranquilo, luz suave</text>
+<rect x="101" y="245" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">pasear en vez de ruido</text>
+<rect x="101" y="315" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="335" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">avisar y pausar sin culpa</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">regular el ambiente regula la interacción</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">batería social finita</text>
+</svg>

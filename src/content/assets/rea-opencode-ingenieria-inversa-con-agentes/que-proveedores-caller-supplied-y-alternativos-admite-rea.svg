@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué proveedores caller-supplied y alternativos admite REA?">
+<title>¿Qué proveedores caller-supplied y alternativos admite REA?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="182.24" cy="271.53" rx="90.92" ry="90.92" fill="hsl(320 90% 58% / 0.16)"/>
+<ellipse cx="270.56" cy="131.77" rx="177.55" ry="177.55" fill="hsl(320 90% 58% / 0.235)"/>
+<ellipse cx="474.25" cy="244.05" rx="143.56" ry="143.56" fill="hsl(320 90% 58% / 0.222)"/>
+<ellipse cx="175.82" cy="4.64" rx="149.5" ry="149.5" fill="hsl(320 90% 58% / 0.225)"/>
+<rect x="60" y="120" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">caller</text>
+<text x="135" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">tú pasas el</text>
+<text x="135" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">resultado</text>
+<rect x="302" y="120" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="316" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#b388ff">alternativo</text>
+<text x="377" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">REA fabrica</text>
+<text x="377" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">un proveedor</text>
+<rect x="106" y="280" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">inyección de dependencias</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">tests con dobles, prod con motor</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">sin acoplarse a un solo engine</text>
+</svg>

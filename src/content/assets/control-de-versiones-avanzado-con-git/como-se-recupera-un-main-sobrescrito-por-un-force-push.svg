@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se recupera un main sobrescrito por un force-push?">
+<title>¿Cómo se recupera un main sobrescrito por un force-push?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="246.99" cy="111.21" rx="197.66" ry="197.66" fill="hsl(120 90% 58% / 0.207)"/>
+<ellipse cx="390.6" cy="77.05" rx="151.67" ry="151.67" fill="hsl(120 90% 58% / 0.181)"/>
+<ellipse cx="137.55" cy="481.13" rx="88.41" ry="88.41" fill="hsl(120 90% 58% / 0.189)"/>
+<ellipse cx="277.39" cy="185.05" rx="101.91" ry="101.91" fill="hsl(120 90% 58% / 0.16)"/>
+<rect x="91" y="85" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">force-push ajeno sobre main</text>
+<line x1="256" y1="127" x2="256" y2="159.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,170 249.57,159.87 262.43,159.87" fill="#ff007f"/>
+<rect x="111" y="180" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">ORIG_HEAD en el remoto</text>
+<line x1="256" y1="222" x2="256" y2="254.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,265 249.57,254.87 262.43,254.87" fill="#00ffcc"/>
+<rect x="136" y="275" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="295" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">reflog del servidor</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">quien puede empujar puede deshacer</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">y proteger la rama para que no repita</text>
+</svg>

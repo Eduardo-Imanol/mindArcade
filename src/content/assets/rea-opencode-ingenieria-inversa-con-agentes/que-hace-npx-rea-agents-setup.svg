@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace npx rea-agents setup?">
+<title>¿Qué hace npx rea-agents setup?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="193.55" cy="246.21" rx="75.07" ry="75.07" fill="hsl(265 90% 58% / 0.145)"/>
+<ellipse cx="473.75" cy="219.52" rx="78.77" ry="78.77" fill="hsl(265 90% 58% / 0.168)"/>
+<ellipse cx="117.38" cy="42.18" rx="148.96" ry="148.96" fill="hsl(265 90% 58% / 0.171)"/>
+<ellipse cx="214.64" cy="121.93" rx="199.92" ry="199.92" fill="hsl(265 90% 58% / 0.222)"/>
+<rect x="96" y="82" width="320" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">npx rea-agents setup</text>
+<line x1="256" y1="140" x2="256" y2="174.2" stroke="#b388ff" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,185 249.57,174.87 262.43,174.87" fill="#b388ff"/>
+<rect x="111" y="195" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">detecta el host</text>
+<rect x="111" y="265" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#b388ff" stroke-width="2"/>
+<text x="256" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#b388ff">instala skill + agente</text>
+<rect x="111" y="335" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="355" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">deja todo wired a MCP</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">OpenCode, Claude y amigos</text>
+</svg>

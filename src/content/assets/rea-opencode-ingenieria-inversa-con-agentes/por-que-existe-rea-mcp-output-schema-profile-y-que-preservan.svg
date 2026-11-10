@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué existe REA_MCP_OUTPUT_SCHEMA_PROFILE y qué preservan ambos perfiles?">
+<title>¿Por qué existe REA_MCP_OUTPUT_SCHEMA_PROFILE y qué preservan ambos perfiles?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="93.68" cy="120.85" rx="79.72" ry="79.72" fill="hsl(168 90% 58% / 0.189)"/>
+<ellipse cx="253.75" cy="175.91" rx="76.03" ry="76.03" fill="hsl(168 90% 58% / 0.145)"/>
+<ellipse cx="369.15" cy="378.91" rx="80.39" ry="80.39" fill="hsl(168 90% 58% / 0.229)"/>
+<ellipse cx="464.43" cy="147.51" rx="74.98" ry="74.98" fill="hsl(168 90% 58% / 0.205)"/>
+<rect x="81" y="89" width="350" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#b388ff" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">REA_MCP_OUTPUT_SCHEMA_PROFILE</text>
+<text x="256" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">moldea la respuesta</text>
+<rect x="116" y="230" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">resumen para el modelo</text>
+<rect x="126" y="300" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">detalle para scripts</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">ambos preservan la semántica del JSON</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">la forma cambia, el sentido no</text>
+</svg>

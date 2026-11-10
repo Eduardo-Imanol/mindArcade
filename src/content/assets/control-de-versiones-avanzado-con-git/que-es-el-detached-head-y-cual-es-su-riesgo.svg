@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el detached HEAD y cuál es su riesgo?">
+<title>¿Qué es el detached HEAD y cuál es su riesgo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="246.43" cy="38.64" rx="184.01" ry="184.01" fill="hsl(45 90% 58% / 0.189)"/>
+<ellipse cx="210.78" cy="469.76" rx="171.41" ry="171.41" fill="hsl(45 90% 58% / 0.146)"/>
+<ellipse cx="219.21" cy="85.35" rx="157.36" ry="157.36" fill="hsl(45 90% 58% / 0.146)"/>
+<ellipse cx="218.8" cy="82.09" rx="153.25" ry="153.25" fill="hsl(45 90% 58% / 0.159)"/>
+<rect x="191" y="90" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#ffcc00">HEAD</text>
+<line x1="256" y1="132" x2="256" y2="164.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,175 249.57,164.87 262.43,164.87" fill="#ffcc00"/>
+<line x1="256" y1="175" x2="178.86" y2="228.82" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="170,235 174.63,223.93 181.99,234.48" fill="#ffcc00"/>
+<rect x="75" y="229" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">main</text>
+<ellipse cx="256" cy="250" rx="40" ry="40" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">commit</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">HEAD suelto</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">los commits sin rama los barre la gc</text>
+<rect x="126" y="420" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">rescata con branch/switch</text>
+</svg>

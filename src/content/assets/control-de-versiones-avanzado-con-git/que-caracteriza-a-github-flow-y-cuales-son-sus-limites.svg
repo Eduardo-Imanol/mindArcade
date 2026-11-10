@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué caracteriza a GitHub Flow y cuáles son sus límites?">
+<title>¿Qué caracteriza a GitHub Flow y cuáles son sus límites?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="209.43" cy="364.84" rx="151.31" ry="151.31" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="172.39" cy="35.05" rx="126.85" ry="126.85" fill="hsl(265 90% 58% / 0.154)"/>
+<ellipse cx="89.59" cy="186.18" rx="123.43" ry="123.43" fill="hsl(265 90% 58% / 0.181)"/>
+<ellipse cx="45.8" cy="287.53" rx="153.21" ry="153.21" fill="hsl(265 90% 58% / 0.215)"/>
+<ellipse cx="256" cy="120" rx="40" ry="40" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">main</text>
+<ellipse cx="140" cy="280" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="140" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">rama</text>
+<ellipse cx="372" cy="280" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="372" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">rama</text>
+<line x1="286" y1="145" x2="173.09" y2="244.85" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="165,252 168.33,240.47 176.85,250.1" fill="#8a7fb5"/>
+<line x1="226" y1="145" x2="338.91" y2="244.85" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="347,252 335.15,250.1 343.67,240.47" fill="#8a7fb5"/>
+<rect x="91" y="340" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">branch → PR → review → deploy</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">límite: main siempre desplegable</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">sin flags, requiere feature completa</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿En qué consiste el problema de la doble empatía?">
+<title>¿En qué consiste el problema de la doble empatía?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="457.06" cy="193.38" rx="144.52" ry="144.52" fill="hsl(168 90% 58% / 0.204)"/>
+<ellipse cx="398.36" cy="257.48" rx="163.9" ry="163.9" fill="hsl(168 90% 58% / 0.194)"/>
+<ellipse cx="108" cy="363.43" rx="173.69" ry="173.69" fill="hsl(168 90% 58% / 0.194)"/>
+<ellipse cx="438.83" cy="322.17" rx="127.82" ry="127.82" fill="hsl(168 90% 58% / 0.146)"/>
+<ellipse cx="150" cy="200" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<ellipse cx="362" cy="200" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="362" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="190" y1="200" x2="311.2" y2="200" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="322,200 311.87,206.43 311.87,193.57" fill="#ff007f"/>
+<rect x="71" y="100" width="370" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#ff007f">empatía rota en ambos sentidos</text>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">ni A entiende a B ni B a A</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">el puente se construye desde los dos lados</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">compartir experiencia ≥ teorizar</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué principios rigen la vulnerabilidad calibrada?">
+<title>¿Qué principios rigen la vulnerabilidad calibrada?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="67.64" cy="239.91" rx="82.89" ry="82.89" fill="hsl(45 90% 58% / 0.144)"/>
+<ellipse cx="115.17" cy="133.34" rx="156.86" ry="156.86" fill="hsl(45 90% 58% / 0.207)"/>
+<ellipse cx="39.21" cy="404.35" rx="145.99" ry="145.99" fill="hsl(45 90% 58% / 0.217)"/>
+<ellipse cx="256.67" cy="179.57" rx="103.03" ry="103.03" fill="hsl(45 90% 58% / 0.157)"/>
+<rect x="50" y="110" width="170" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="58" y1="118" x2="212" y2="118" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="135" y="138" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">proporcional</text>
+<text x="350" y="134" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">según lo que el otro comparte</text>
+<rect x="50" y="200" width="170" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="58" y1="208" x2="212" y2="208" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="135" y="228" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">funcional</text>
+<text x="350" y="224" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">explica conducta, no la exhibe</text>
+<rect x="50" y="290" width="170" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="58" y1="298" x2="212" y2="298" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="135" y="318" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">reversible</text>
+<text x="350" y="314" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">sin herida ni chantaje</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">&quot;me costó venir&quot; ≠ trauma completo</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" fill="#8a7fb5">demasiado pronto asusta; nunca, enfría</text>
+</svg>

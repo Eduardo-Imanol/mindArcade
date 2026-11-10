@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace realmente git rebase con los commits?">
+<title>¿Qué hace realmente git rebase con los commits?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="20.42" cy="261.69" rx="84.91" ry="84.91" fill="hsl(168 90% 58% / 0.208)"/>
+<ellipse cx="44.32" cy="344.26" rx="146.14" ry="146.14" fill="hsl(168 90% 58% / 0.17)"/>
+<ellipse cx="436.43" cy="16.96" rx="87.95" ry="87.95" fill="hsl(168 90% 58% / 0.179)"/>
+<ellipse cx="311.37" cy="379.48" rx="177.42" ry="177.42" fill="hsl(168 90% 58% / 0.202)"/>
+<rect x="60" y="130" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="138" x2="212" y2="138" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="140" y="153" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">c1</text>
+<rect x="60" y="175" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="183" x2="212" y2="183" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="140" y="198" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">c2</text>
+<rect x="60" y="220" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="228" x2="212" y2="228" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="140" y="243" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">c3</text>
+<line x1="110" y1="260" x2="110" y2="289.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="110,300 103.57,289.87 116.43,289.87" fill="#ffcc00"/>
+<rect x="60" y="320" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="68" y1="328" x2="212" y2="328" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="140" y="343" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">c&apos;</text>
+<rect x="60" y="365" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="68" y1="373" x2="212" y2="373" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="140" y="388" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">c&apos;</text>
+<rect x="60" y="410" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="68" y1="418" x2="212" y2="418" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="140" y="433" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">c&apos;</text>
+<rect x="255" y="155" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="370" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">copia + re-aplica</text>
+<line x1="226" y1="175" x2="282.1" y2="319.93" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="286,330 276.35,322.87 288.34,318.23" fill="#39ff14"/>
+<rect x="292" y="310" width="160" height="38" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="300" y1="318" x2="444" y2="318" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="372" y="333" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">main</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">commits nuevos, no movidos</text>
+</svg>

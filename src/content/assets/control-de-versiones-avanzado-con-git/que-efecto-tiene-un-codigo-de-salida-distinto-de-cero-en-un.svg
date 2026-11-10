@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué efecto tiene un código de salida distinto de cero en un hook pre?">
+<title>¿Qué efecto tiene un código de salida distinto de cero en un hook pre?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="93.23" cy="167.74" rx="101.16" ry="101.16" fill="hsl(45 90% 58% / 0.17)"/>
+<ellipse cx="268.14" cy="343.86" rx="79.42" ry="79.42" fill="hsl(45 90% 58% / 0.148)"/>
+<ellipse cx="341.32" cy="433.13" rx="83.82" ry="83.82" fill="hsl(45 90% 58% / 0.171)"/>
+<ellipse cx="346.29" cy="5.09" rx="127.69" ry="127.69" fill="hsl(45 90% 58% / 0.223)"/>
+<rect x="111" y="90" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ff007f">pre-commit → exit 1</text>
+<line x1="256" y1="132" x2="256" y2="169.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,180 249.57,169.87 262.43,169.87" fill="#ff007f"/>
+<rect x="136" y="190" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">commit cancelado</text>
+<line x1="256" y1="232" x2="256" y2="269.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,280 249.57,269.87 262.43,269.87" fill="#ffcc00"/>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">pre-receive → push rechazado</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">el código de salida es la interfaz</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">stdin/stdout completan el contrato</text>
+</svg>

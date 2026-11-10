@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo pueden diff y merge saltar directorios enteros sin leerlos?">
+<title>¿Cómo pueden diff y merge saltar directorios enteros sin leerlos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="310.83" cy="365.1" rx="146.88" ry="146.88" fill="hsl(120 90% 58% / 0.235)"/>
+<ellipse cx="255.51" cy="303.73" rx="169.26" ry="169.26" fill="hsl(120 90% 58% / 0.214)"/>
+<ellipse cx="460.26" cy="95.07" rx="74.2" ry="74.2" fill="hsl(120 90% 58% / 0.215)"/>
+<ellipse cx="299.01" cy="383.02" rx="93.84" ry="93.84" fill="hsl(120 90% 58% / 0.199)"/>
+<rect x="70" y="130" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="84" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">tree A</text>
+<text x="150" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">hash 9f2a</text>
+<rect x="282" y="130" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="296" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">tree B</text>
+<text x="362" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">hash 9f2a</text>
+<rect x="141" y="250" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">hash igual ⇒ saltar</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">subárbol intacto: cero lecturas</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">diff y merge podan el DAG por contenido</text>
+<ellipse cx="207.5" cy="460" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="255" cy="460" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="302.5" cy="460" rx="4" ry="4" fill="#00ffcc"/>
+</svg>

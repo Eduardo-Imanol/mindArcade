@@ -27,6 +27,29 @@ export const CATEGORIES = Object.freeze([
           'persistencia-local-pwas-y-offline-first',
         ]),
       }),
+      Object.freeze({
+        id: 'programacion-m3',
+        title: 'Módulo 3: Git y Control de Versiones',
+        description: 'Grafos y objetos, diff, merge, rebase, hooks, branching y monorepos.',
+        order: 3,
+        topicIds: Object.freeze(['control-de-versiones-avanzado-con-git']),
+      }),
+    ]),
+  }),
+  Object.freeze({
+    id: 'ia',
+    image: 'categories/ia.png',
+    title: 'IA',
+    description: 'Agentes, protocolo MCP e ingeniería inversa asistida.',
+    order: 2,
+    modules: Object.freeze([
+      Object.freeze({
+        id: 'ia-m1',
+        title: 'Módulo 1: Programación de IA',
+        description: 'Agentes en la terminal, servidores MCP y análisis de binarios con REA.',
+        order: 1,
+        topicIds: Object.freeze(['rea-opencode-ingenieria-inversa-con-agentes']),
+      }),
     ]),
   }),
   Object.freeze({
@@ -34,7 +57,7 @@ export const CATEGORIES = Object.freeze([
     image: 'categories/idiomas.png',
     title: 'Idiomas',
     description: 'Vocabulario y gramática para practicar con juegos.',
-    order: 2,
+    order: 3,
     modules: Object.freeze([]),
   }),
   Object.freeze({
@@ -42,7 +65,7 @@ export const CATEGORIES = Object.freeze([
     image: 'categories/universidad.png',
     title: 'Universidad',
     description: 'Materias con teoría y ejercicios.',
-    order: 3,
+    order: 4,
     modules: Object.freeze([]),
   }),
   Object.freeze({
@@ -50,7 +73,7 @@ export const CATEGORIES = Object.freeze([
     image: 'categories/personalizados.png',
     title: 'Mis temas',
     description: 'Temas creados por ti desde el hub.',
-    order: 4,
+    order: 5,
     modules: Object.freeze([]),
   }),
 ]);
@@ -63,6 +86,10 @@ export const SOURCE_BY_TOPIC = Object.freeze({
     'programacion/algoritmos-y-complejidad-guia-tecnica-exhaustiva.md',
   'persistencia-local-pwas-y-offline-first':
     'programacion/persistencia-local-pwas-offline-first.md',
+  'control-de-versiones-avanzado-con-git': 'programacion/control-de-versiones-avanzado-con-git.md',
+  'rea-opencode-ingenieria-inversa-con-agentes': 'ia/rea-opencode-ingenieria-inversa-con-agentes.md',
+  'arquitectura-de-la-atraccion-y-calibracion-social':
+    'personalizados/arquitectura-de-la-atraccion-y-calibracion-social.md',
 });
 
 function freezeMap(map) {

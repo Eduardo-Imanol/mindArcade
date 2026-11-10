@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué los hooks no se clonan y cómo se distribuyen?">
+<title>¿Por qué los hooks no se clonan y cómo se distribuyen?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="468.4" cy="151.79" rx="137.74" ry="137.74" fill="hsl(168 90% 58% / 0.176)"/>
+<ellipse cx="214.5" cy="196.64" rx="83.87" ry="83.87" fill="hsl(168 90% 58% / 0.184)"/>
+<ellipse cx="494.41" cy="436.6" rx="121.21" ry="121.21" fill="hsl(168 90% 58% / 0.161)"/>
+<ellipse cx="133.87" cy="443.59" rx="194.43" ry="194.43" fill="hsl(168 90% 58% / 0.231)"/>
+<rect x="60" y="120" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">.git/hooks</text>
+<text x="135" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">no viaja</text>
+<rect x="302" y="120" width="150" height="100" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="316" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">repo compartido</text>
+<text x="377" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">sí viaja</text>
+<rect x="106" y="280" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">core.hooksPath → gestionado</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">husky / pre-commit / npx install</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">hooks con dependencias, versionados</text>
+</svg>

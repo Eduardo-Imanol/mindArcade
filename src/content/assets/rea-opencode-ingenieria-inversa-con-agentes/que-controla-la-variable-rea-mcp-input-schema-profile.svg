@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué controla la variable REA_MCP_INPUT_SCHEMA_PROFILE?">
+<title>¿Qué controla la variable REA_MCP_INPUT_SCHEMA_PROFILE?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="324.58" cy="237.4" rx="104.09" ry="104.09" fill="hsl(168 90% 58% / 0.158)"/>
+<ellipse cx="450.34" cy="203.62" rx="166.31" ry="166.31" fill="hsl(168 90% 58% / 0.221)"/>
+<ellipse cx="484.17" cy="201.4" rx="143.42" ry="143.42" fill="hsl(168 90% 58% / 0.209)"/>
+<ellipse cx="57.29" cy="110.14" rx="84.56" ry="84.56" fill="hsl(168 90% 58% / 0.182)"/>
+<rect x="81" y="99" width="350" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#b388ff" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">REA_MCP_INPUT_SCHEMA_PROFILE</text>
+<line x1="256" y1="145" x2="256" y2="179.2" stroke="#b388ff" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,190 249.57,179.87 262.43,179.87" fill="#b388ff"/>
+<rect x="126" y="200" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">qué espera el servidor</text>
+<rect x="116" y="270" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">estrito · esquema cerrado</text>
+<rect x="116" y="340" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">relajado · esquema abierto</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">valida argumentos de cada tool</text>
+</svg>

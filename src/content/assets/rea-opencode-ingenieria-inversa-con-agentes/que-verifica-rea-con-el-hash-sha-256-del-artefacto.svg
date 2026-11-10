@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué verifica REA con el hash SHA-256 del artefacto?">
+<title>¿Qué verifica REA con el hash SHA-256 del artefacto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="246.33" cy="70.1" rx="153.82" ry="153.82" fill="hsl(45 90% 58% / 0.178)"/>
+<ellipse cx="76.35" cy="198.91" rx="180.03" ry="180.03" fill="hsl(45 90% 58% / 0.171)"/>
+<ellipse cx="230.72" cy="413.25" rx="145.3" ry="145.3" fill="hsl(45 90% 58% / 0.149)"/>
+<ellipse cx="343.79" cy="232.92" rx="119.31" ry="119.31" fill="hsl(45 90% 58% / 0.164)"/>
+<rect x="166" y="90" width="180" height="60" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">sha256</text>
+<line x1="256" y1="152" x2="256" y2="189.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,200 249.57,189.87 262.43,189.87" fill="#00ffcc"/>
+<rect x="101" y="210" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">no hay binario alternativo</text>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">cada sesión recuerda el hash</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">y re-verifica al reabrir</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">evidencia ligada al artefacto exacto</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es una referencia en Git y por qué crear ramas es O(1)?">
+<title>¿Qué es una referencia en Git y por qué crear ramas es O(1)?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="127.77" cy="331.54" rx="147.7" ry="147.7" fill="hsl(45 90% 58% / 0.187)"/>
+<ellipse cx="54.24" cy="399.27" rx="143.68" ry="143.68" fill="hsl(45 90% 58% / 0.183)"/>
+<ellipse cx="179.44" cy="99.28" rx="170.82" ry="170.82" fill="hsl(45 90% 58% / 0.227)"/>
+<ellipse cx="152.92" cy="25.75" rx="92.97" ry="92.97" fill="hsl(45 90% 58% / 0.158)"/>
+<rect x="156" y="109" width="200" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">refs/heads/feat</text>
+<line x1="256" y1="155" x2="256" y2="199.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,210 249.57,199.87 262.43,199.87" fill="#00ffcc"/>
+<ellipse cx="256" cy="250" rx="40" ry="40" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">commit</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">un archivo de 41 bytes</text>
+<rect x="96" y="390" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">crear rama = escribir puntero</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">sin copiar historial</text>
+</svg>

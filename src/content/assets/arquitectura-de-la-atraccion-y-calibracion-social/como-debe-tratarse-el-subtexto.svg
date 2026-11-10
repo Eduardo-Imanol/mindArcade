@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo debe tratarse el subtexto?">
+<title>¿Cómo debe tratarse el subtexto?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="505.22" cy="472.97" rx="89.51" ry="89.51" fill="hsl(320 90% 58% / 0.223)"/>
+<ellipse cx="318.13" cy="161.33" rx="94.96" ry="94.96" fill="hsl(320 90% 58% / 0.186)"/>
+<ellipse cx="168.2" cy="402.12" rx="112.57" ry="112.57" fill="hsl(320 90% 58% / 0.214)"/>
+<ellipse cx="171.19" cy="318.91" rx="203.25" ry="203.25" fill="hsl(320 90% 58% / 0.147)"/>
+<rect x="166" y="85" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#00ffcc">subtexto</text>
+<line x1="256" y1="127" x2="256" y2="164.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,175 249.57,164.87 262.43,164.87" fill="#39ff14"/>
+<rect x="121" y="185" width="270" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="205" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">traducirlo a explícito</text>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">preguntar en vez de adivinar</text>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">&quot;¿qué quieres decir con…?&quot;</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">los malentendidos se previenen preguntando</text>
+</svg>

@@ -178,7 +178,10 @@ export default function TopicsHub({ loadTopics = loadCatalog } = {}) {
       const moduleTopics = topicsForCategory(cat.id);
       const topicIds = moduleTopics.map((m) => m.topicId);
       const topics = topicIds.map((id) => topicsById.get(id)).filter(Boolean);
-      const customTopics = cat.id === 'personalizados' ? allTopics.filter((t) => t.source === 'custom') : [];
+      const customTopics =
+        cat.id === 'personalizados'
+          ? allTopics.filter((t) => t.categoryId === 'personalizados')
+          : [];
       const list = cat.id === 'personalizados' ? customTopics : topics;
       const totalCards = list.reduce((acc, t) => acc + (t.cards?.length || 0), 0);
       let progressSum = 0;

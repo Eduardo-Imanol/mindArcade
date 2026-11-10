@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se escala el tacto de forma segura?">
+<title>¿Cómo se escala el tacto de forma segura?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="127.15" cy="24.15" rx="197.13" ry="197.13" fill="hsl(120 90% 58% / 0.15)"/>
+<ellipse cx="234.18" cy="413.17" rx="138.23" ry="138.23" fill="hsl(120 90% 58% / 0.175)"/>
+<ellipse cx="356.86" cy="233.67" rx="100.01" ry="100.01" fill="hsl(120 90% 58% / 0.16)"/>
+<ellipse cx="9.51" cy="188.07" rx="114.85" ry="114.85" fill="hsl(120 90% 58% / 0.189)"/>
+<rect x="50" y="110" width="190" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="58" y1="118" x2="232" y2="118" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="145" y="138" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">brazo/hombro</text>
+<text x="370" y="134" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">neutro, breve</text>
+<rect x="50" y="200" width="190" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="58" y1="208" x2="232" y2="208" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="145" y="228" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">espalda media</text>
+<text x="370" y="224" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">al despedirse</text>
+<rect x="50" y="290" width="190" height="48" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="58" y1="298" x2="232" y2="298" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="145" y="318" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">codo → mano</text>
+<text x="370" y="314" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">ya hay reciprocidad</text>
+<rect x="116" y="380" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">leer IOI antes de subir</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">la mano espera invitación</text>
+</svg>

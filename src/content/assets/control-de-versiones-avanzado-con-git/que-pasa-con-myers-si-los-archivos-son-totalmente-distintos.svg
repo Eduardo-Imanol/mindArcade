@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué pasa con Myers si los archivos son totalmente distintos?">
+<title>¿Qué pasa con Myers si los archivos son totalmente distintos?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="380.15" cy="73.14" rx="202.64" ry="202.64" fill="hsl(265 90% 58% / 0.163)"/>
+<ellipse cx="166.71" cy="353.83" rx="197.57" ry="197.57" fill="hsl(265 90% 58% / 0.152)"/>
+<ellipse cx="265.08" cy="98.19" rx="140.4" ry="140.4" fill="hsl(265 90% 58% / 0.156)"/>
+<ellipse cx="348.59" cy="43.41" rx="186.73" ry="186.73" fill="hsl(265 90% 58% / 0.217)"/>
+<rect x="60" y="130" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">A</text>
+<rect x="272" y="130" width="180" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="148" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">B</text>
+<line x1="246" y1="185" x2="255.2" y2="185" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="266,185 255.87,191.43 255.87,178.57" fill="#ff007f"/>
+<rect x="181" y="290" width="150" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">D ≈ N+M</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">el grafo se llena: coste cuadrático</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">Git cae a heurísticas ante lo distinto</text>
+</svg>

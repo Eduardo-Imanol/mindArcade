@@ -5,6 +5,7 @@ export const CYAN = '#00ffcc';
 export const MAGENTA = '#ff007f';
 export const GREEN = '#39ff14';
 export const AMBER = '#ffcc00';
+export const VIOLET = '#b388ff';
 export const TEXT = '#f1f1f1';
 export const MUTED = '#8a7fb5';
 

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué propiedades da el almacenamiento direccionable por contenido?">
+<title>¿Qué propiedades da el almacenamiento direccionable por contenido?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="30.06" cy="208.61" rx="189.41" ry="189.41" fill="hsl(168 90% 58% / 0.223)"/>
+<ellipse cx="158.19" cy="47.57" rx="142.24" ry="142.24" fill="hsl(168 90% 58% / 0.228)"/>
+<ellipse cx="101.96" cy="193.2" rx="80.16" ry="80.16" fill="hsl(168 90% 58% / 0.205)"/>
+<ellipse cx="270.35" cy="186.12" rx="167.65" ry="167.65" fill="hsl(168 90% 58% / 0.197)"/>
+<rect x="146" y="109" width="220" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sha256(...)</text>
+<line x1="256" y1="160" x2="256" y2="204.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,215 249.57,204.87 262.43,204.87" fill="#00ffcc"/>
+<rect x="106" y="220" width="300" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="120" y="238" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">contenido</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">mismo hash ⇒ mismo contenido</text>
+<rect x="111" y="395" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="415" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">integridad + deduplicación</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">la dirección ES el contenido</text>
+</svg>

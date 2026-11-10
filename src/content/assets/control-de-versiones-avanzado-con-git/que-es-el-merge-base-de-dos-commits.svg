@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es el merge base de dos commits?">
+<title>¿Qué es el merge base de dos commits?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="273.3" cy="353.7" rx="167.33" ry="167.33" fill="hsl(168 90% 58% / 0.157)"/>
+<ellipse cx="248.02" cy="168.92" rx="85.26" ry="85.26" fill="hsl(168 90% 58% / 0.207)"/>
+<ellipse cx="51.77" cy="436.38" rx="189.13" ry="189.13" fill="hsl(168 90% 58% / 0.16)"/>
+<ellipse cx="121.97" cy="301" rx="197.97" ry="197.97" fill="hsl(168 90% 58% / 0.151)"/>
+<ellipse cx="256" cy="140" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">base</text>
+<ellipse cx="150" cy="290" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<ellipse cx="362" cy="290" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="362" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="225" y1="168" x2="175.54" y2="250.73" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="170,260 169.68,248 180.72,254.6" fill="#8a7fb5"/>
+<line x1="287" y1="168" x2="336.46" y2="250.73" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="342,260 331.28,254.6 342.32,248" fill="#8a7fb5"/>
+<rect x="91" y="380" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">ancestro común más reciente</text>
+<text x="256" y="455" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">punto de partida del merge de tres vías</text>
+</svg>

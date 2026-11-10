@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué artículo original describe el algoritmo de diff de Git?">
+<title>¿Qué artículo original describe el algoritmo de diff de Git?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="126.32" cy="277.13" rx="77.22" ry="77.22" fill="hsl(120 90% 58% / 0.172)"/>
+<ellipse cx="299.25" cy="361.99" rx="127.31" ry="127.31" fill="hsl(120 90% 58% / 0.145)"/>
+<ellipse cx="330.74" cy="44.11" rx="195.79" ry="195.79" fill="hsl(120 90% 58% / 0.153)"/>
+<ellipse cx="234.11" cy="18.34" rx="94.64" ry="94.64" fill="hsl(120 90% 58% / 0.194)"/>
+<rect x="71" y="100" width="370" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">An O(ND) Difference Algorithm</text>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">Eugene W. Myers, 1986</text>
+<text x="256" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">Algorithmica</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">la base de diff, y también de RNA</text>
+<text x="256" y="365" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">(alineamiento de secuencias)</text>
+<ellipse cx="202.5" cy="450" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="255" cy="450" rx="4" ry="4" fill="#00ffcc"/>
+<ellipse cx="307.5" cy="450" rx="4" ry="4" fill="#00ffcc"/>
+</svg>

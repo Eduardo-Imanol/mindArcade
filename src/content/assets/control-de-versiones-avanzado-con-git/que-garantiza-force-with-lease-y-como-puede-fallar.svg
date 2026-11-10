@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué garantiza --force-with-lease y cómo puede fallar?">
+<title>¿Qué garantiza --force-with-lease y cómo puede fallar?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="163.48" cy="149.66" rx="162.94" ry="162.94" fill="hsl(45 90% 58% / 0.16)"/>
+<ellipse cx="427.95" cy="265.28" rx="170.64" ry="170.64" fill="hsl(45 90% 58% / 0.176)"/>
+<ellipse cx="234.17" cy="40.15" rx="191.09" ry="191.09" fill="hsl(45 90% 58% / 0.234)"/>
+<ellipse cx="166.55" cy="213" rx="72.76" ry="72.76" fill="hsl(45 90% 58% / 0.212)"/>
+<rect x="106" y="90" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">--force-with-lease</text>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">solo fuerza si el remoto</text>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">sigue donde tú lo dejaste</text>
+<rect x="111" y="280" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">cierra la ventana de carrera</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">falla si: fetch previo aparte</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">o prefijos del gestor de credenciales</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">una comprobación, no un candado eterno</text>
+</svg>

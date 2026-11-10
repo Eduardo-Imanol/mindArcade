@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo mapean los Conventional Commits a versiones SemVer?">
+<title>¿Cómo mapean los Conventional Commits a versiones SemVer?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="431.85" cy="457.98" rx="139.09" ry="139.09" fill="hsl(45 90% 58% / 0.159)"/>
+<ellipse cx="479.27" cy="276.45" rx="175.34" ry="175.34" fill="hsl(45 90% 58% / 0.184)"/>
+<ellipse cx="314.74" cy="334.54" rx="138.95" ry="138.95" fill="hsl(45 90% 58% / 0.225)"/>
+<ellipse cx="181.89" cy="79.87" rx="128.5" ry="128.5" fill="hsl(45 90% 58% / 0.232)"/>
+<rect x="75" y="109" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="130" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">feat</text>
+<rect x="75" y="199" width="110" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="130" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">fix</text>
+<rect x="55" y="289" width="150" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="130" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">BREAKING</text>
+<line x1="190" y1="130" x2="231.57" y2="163.25" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="240,170 228.07,168.69 236.11,158.65" fill="#00ffcc"/>
+<line x1="190" y1="220" x2="229.2" y2="220" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="240,220 229.87,226.43 229.87,213.57" fill="#39ff14"/>
+<line x1="210" y1="310" x2="233.52" y2="278.64" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="240,270 239.06,281.96 228.78,274.25" fill="#ff007f"/>
+<rect x="260" y="150" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="330" y="170" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">MINOR</text>
+<rect x="260" y="200" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="330" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">PATCH</text>
+<rect x="260" y="250" width="140" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="330" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">MAJOR</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">semver desde el historial</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">release automático sin adivinar</text>
+</svg>

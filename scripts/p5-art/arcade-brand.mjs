@@ -12,7 +12,7 @@ import {
   strokeRect,
 } from './raster.mjs';
 import { drawText, textWidth } from './pixel-font.mjs';
-import { AMBER, BG, BG2, CYAN, GREEN, MAGENTA, MUTED, TEXT } from './palette.mjs';
+import { AMBER, BG, BG2, CYAN, GREEN, MAGENTA, MUTED, TEXT, VIOLET } from './palette.mjs';
 
 const SCREEN_BG = '#050a18';
 
@@ -251,6 +251,31 @@ function drawPersonalScreen(canvas, screen) {
   fillPolygon(canvas, points, AMBER);
 }
 
+function drawAiScreen(canvas, screen) {
+  const layers = [3, 4, 2];
+  const pad = screen.w * 0.24;
+  const stepX = (screen.w - pad * 2) / (layers.length - 1);
+  const nodes = layers.map((count, li) => {
+    const x = screen.x + pad + li * stepX;
+    const gapY = screen.h / (count + 1);
+    return Array.from({ length: count }, (_, i) => [x, screen.y + gapY * (i + 1)]);
+  });
+  for (let l = 0; l < nodes.length - 1; l += 1) {
+    for (const [x1, y1] of nodes[l]) {
+      for (const [x2, y2] of nodes[l + 1]) {
+        strokeLine(canvas, x1, y1, x2, y2, MUTED, 1);
+      }
+    }
+  }
+  nodes.forEach((layer, li) => {
+    const r = Math.max(2, screen.h * 0.06);
+    for (const [x, y] of layer) {
+      fillCircle(canvas, x, y, r, li === 1 ? TEXT : VIOLET);
+      fillCircle(canvas, x, y, r * 0.42, '#0f051d');
+    }
+  });
+}
+
 /** Icono de la app: una máquina recreativa con serpiente en la pantalla. */
 export function drawIcon(canvas, { maskable = false } = {}) {
   verticalGradient(canvas, hexToRgb(BG2), hexToRgb(BG));
@@ -350,6 +375,7 @@ export function drawCover(canvas) {
 
 const CATEGORY_ART = {
   programacion: { accent: CYAN, marquee: 'CODE', screen: drawCodeScreen },
+  ia: { accent: VIOLET, marquee: 'IA', screen: drawAiScreen },
   idiomas: { accent: MAGENTA, marquee: 'IDIOMA', screen: drawLanguageScreen },
   universidad: { accent: GREEN, marquee: 'UNIV', screen: drawUniversityScreen },
   personalizados: { accent: AMBER, marquee: 'MIS TEMAS', screen: drawPersonalScreen },

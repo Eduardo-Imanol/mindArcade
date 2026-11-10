@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se transplantan solo tus commits tras una reescritura ajena?">
+<title>¿Cómo se transplantan solo tus commits tras una reescritura ajena?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="170.52" cy="52.81" rx="154.29" ry="154.29" fill="hsl(120 90% 58% / 0.236)"/>
+<ellipse cx="459.92" cy="457.61" rx="161.79" ry="161.79" fill="hsl(120 90% 58% / 0.158)"/>
+<ellipse cx="508.79" cy="197.85" rx="187.41" ry="187.41" fill="hsl(120 90% 58% / 0.214)"/>
+<ellipse cx="384.43" cy="419.74" rx="167.18" ry="167.18" fill="hsl(120 90% 58% / 0.209)"/>
+<rect x="131" y="85" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">rebase --onto</text>
+<text x="256" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">1. reposiciona la base nueva</text>
+<text x="256" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">2. toma solo lo tuyo</text>
+<text x="256" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">3. salta lo ya integrado</text>
+<rect x="111" y="320" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">sin duplicar trabajo ajeno</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">cherry-pick de muchos de golpe</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">upstream nuevo</text>
+</svg>

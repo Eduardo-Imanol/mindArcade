@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué etapas guarda el índice para un archivo en conflicto de merge?">
+<title>¿Qué etapas guarda el índice para un archivo en conflicto de merge?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="439.77" cy="432.46" rx="194.62" ry="194.62" fill="hsl(120 90% 58% / 0.231)"/>
+<ellipse cx="26.92" cy="96.8" rx="78.95" ry="78.95" fill="hsl(120 90% 58% / 0.221)"/>
+<ellipse cx="491.49" cy="66.32" rx="194.12" ry="194.12" fill="hsl(120 90% 58% / 0.182)"/>
+<ellipse cx="484.44" cy="176.03" rx="161.99" ry="161.99" fill="hsl(120 90% 58% / 0.192)"/>
+<rect x="90" y="100" width="332" height="250" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="104" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">index en conflicto</text>
+<rect x="115" y="150" width="282" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#8a7fb5" stroke-width="2"/>
+<line x1="123" y1="158" x2="389" y2="158" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="176" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">etapa 1 · base</text>
+<rect x="115" y="202" width="282" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="123" y1="210" x2="389" y2="210" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="228" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">etapa 2 · ours</text>
+<rect x="115" y="254" width="282" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="123" y1="262" x2="389" y2="262" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">etapa 3 · theirs</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">tres entradas, misma ruta</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">ls-files -u las lista</text>
+</svg>

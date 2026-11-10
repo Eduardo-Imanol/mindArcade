@@ -13,6 +13,7 @@ const SHELL = [
   './icons/apple-touch-icon.png',
   './cover/arcade-cover.png',
   './categories/programacion.png',
+  './categories/ia.png',
   './categories/idiomas.png',
   './categories/universidad.png',
   './categories/personalizados.png',

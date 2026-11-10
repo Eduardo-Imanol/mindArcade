@@ -116,7 +116,14 @@ describe('games registry', () => {
 });
 
 describe('category scope (spec-20)', () => {
-  const categoryIds = ['programacion', 'idiomas', 'universidad', 'personalizados', 'no-existe'];
+  const categoryIds = [
+    'programacion',
+    'ia',
+    'idiomas',
+    'universidad',
+    'personalizados',
+    'no-existe',
+  ];
 
   const globalIds = listGames()
     .filter((game) => game.categories.includes('*'))

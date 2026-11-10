@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es la compostura y qué la sabotea?">
+<title>¿Qué es la compostura y qué la sabotea?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="17.02" cy="277.46" rx="168.1" ry="168.1" fill="hsl(45 90% 58% / 0.234)"/>
+<ellipse cx="392.82" cy="29.61" rx="127.45" ry="127.45" fill="hsl(45 90% 58% / 0.141)"/>
+<ellipse cx="184.91" cy="34.1" rx="113.61" ry="113.61" fill="hsl(45 90% 58% / 0.167)"/>
+<ellipse cx="348.47" cy="331.78" rx="185.28" ry="185.28" fill="hsl(45 90% 58% / 0.219)"/>
+<rect x="60" y="120" width="160" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">compostura</text>
+<text x="140" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">estado calmado y</text>
+<text x="140" y="222" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">presente bajo</text>
+<text x="140" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">presión</text>
+<rect x="292" y="120" width="160" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="306" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">la sabotea</text>
+<text x="372" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">ansia de resultado</text>
+<text x="372" y="222" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">vigilar cada</text>
+<text x="372" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">reacción ajena</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">se nota en voz y manos</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">respirar y soltar la meta</text>
+</svg>

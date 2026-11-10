@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué límites aplican a las búsquedas regex de REA?">
+<title>¿Qué límites aplican a las búsquedas regex de REA?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="114.59" cy="462.69" rx="136.99" ry="136.99" fill="hsl(45 90% 58% / 0.17)"/>
+<ellipse cx="73.04" cy="56.69" rx="162.47" ry="162.47" fill="hsl(45 90% 58% / 0.202)"/>
+<ellipse cx="468.32" cy="384.41" rx="135.65" ry="135.65" fill="hsl(45 90% 58% / 0.229)"/>
+<ellipse cx="378.74" cy="85.46" rx="190.77" ry="190.77" fill="hsl(45 90% 58% / 0.216)"/>
+<rect x="116" y="85" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">regex sobre bytes</text>
+<rect x="141" y="170" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">tope de resultados</text>
+<rect x="141" y="240" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">tope de contexto</text>
+<rect x="141" y="310" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">timeout de cómputo</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">límites explícitos, nunca cuelgues</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">paginar es la respuesta</text>
+</svg>

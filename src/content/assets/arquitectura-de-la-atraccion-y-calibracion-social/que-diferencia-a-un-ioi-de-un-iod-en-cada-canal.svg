@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué diferencia a un IOI de un IOD en cada canal?">
+<title>¿Qué diferencia a un IOI de un IOD en cada canal?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="398.62" cy="476.64" rx="120.04" ry="120.04" fill="hsl(120 90% 58% / 0.234)"/>
+<ellipse cx="420.61" cy="46.21" rx="156.63" ry="156.63" fill="hsl(120 90% 58% / 0.206)"/>
+<ellipse cx="159.16" cy="411.53" rx="197.56" ry="197.56" fill="hsl(120 90% 58% / 0.213)"/>
+<ellipse cx="414.26" cy="390.24" rx="114.93" ry="114.93" fill="hsl(120 90% 58% / 0.22)"/>
+<text x="140" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">se acerca</text>
+<text x="380" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">se aleja</text>
+<text x="140" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">preguntas</text>
+<text x="380" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">respuestas cortas</text>
+<text x="140" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">te toca</text>
+<text x="380" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">cruza brazos</text>
+<text x="140" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">te busca otra vez</text>
+<text x="380" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">mirada al móvil</text>
+<rect x="111" y="70" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="90" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">interés ✓ · desinterés ✗</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">juntos y sostenidos, no sueltos</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">una señal aislada no es patrón</text>
+</svg>

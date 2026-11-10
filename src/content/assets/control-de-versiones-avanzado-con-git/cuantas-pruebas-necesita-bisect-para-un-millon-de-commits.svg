@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuántas pruebas necesita bisect para un millón de commits?">
+<title>¿Cuántas pruebas necesita bisect para un millón de commits?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="79.45" cy="342.17" rx="79.04" ry="79.04" fill="hsl(45 90% 58% / 0.224)"/>
+<ellipse cx="212.26" cy="296.85" rx="139.79" ry="139.79" fill="hsl(45 90% 58% / 0.15)"/>
+<ellipse cx="396.76" cy="45.09" rx="108.45" ry="108.45" fill="hsl(45 90% 58% / 0.197)"/>
+<ellipse cx="171.15" cy="283.78" rx="75.37" ry="75.37" fill="hsl(45 90% 58% / 0.2)"/>
+<rect x="106" y="100" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#00ffcc">2²⁰ = 1.048.576</text>
+<line x1="256" y1="145" x2="256" y2="184.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,195 249.57,184.87 262.43,184.87" fill="#00ffcc"/>
+<rect x="136" y="205" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="225" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" font-weight="700" fill="#39ff14">≈ 20 pruebas</text>
+<text x="256" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">búsqueda binaria sobre commits</text>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">log₂ del rango</text>
+<ellipse cx="202.5" cy="450" rx="4" ry="4" fill="#39ff14"/>
+<ellipse cx="255" cy="450" rx="4" ry="4" fill="#39ff14"/>
+<ellipse cx="307.5" cy="450" rx="4" ry="4" fill="#39ff14"/>
+</svg>

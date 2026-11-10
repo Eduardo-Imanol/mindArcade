@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué referencias temporales crea Git en operaciones peligrosas?">
+<title>¿Qué referencias temporales crea Git en operaciones peligrosas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="355.39" cy="38.84" rx="150.29" ry="150.29" fill="hsl(320 90% 58% / 0.171)"/>
+<ellipse cx="42.61" cy="77.08" rx="154.28" ry="154.28" fill="hsl(320 90% 58% / 0.199)"/>
+<ellipse cx="306.85" cy="466.29" rx="127.67" ry="127.67" fill="hsl(320 90% 58% / 0.213)"/>
+<ellipse cx="172.38" cy="476.6" rx="136.29" ry="136.29" fill="hsl(320 90% 58% / 0.163)"/>
+<rect x="101" y="90" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">rebase · merge · cherry-pick</text>
+<line x1="256" y1="132" x2="256" y2="169.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,180 249.57,169.87 262.43,169.87" fill="#ffcc00"/>
+<rect x="80" y="185" width="352" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="94" y="203" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">refs/original, REBASE_HEAD, MERGE_HEAD</text>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">chekpoints para abortar y deshacer</text>
+<rect x="116" y="380" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">--abort te devuelve a casa</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">viven lo justo para la operación</text>
+</svg>

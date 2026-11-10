@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué objetos nuevos crea un commit que edita un solo archivo en src/util.go?">
+<title>¿Qué objetos nuevos crea un commit que edita un solo archivo en src/util.go?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="416.68" cy="34.41" rx="182.24" ry="182.24" fill="hsl(265 90% 58% / 0.201)"/>
+<ellipse cx="109.03" cy="134.77" rx="118.62" ry="118.62" fill="hsl(265 90% 58% / 0.234)"/>
+<ellipse cx="321.84" cy="224.81" rx="76.69" ry="76.69" fill="hsl(265 90% 58% / 0.15)"/>
+<ellipse cx="471.89" cy="450.65" rx="76.84" ry="76.84" fill="hsl(265 90% 58% / 0.177)"/>
+<rect x="161" y="89" width="190" height="42" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">edita util.go</text>
+<line x1="256" y1="135" x2="149.76" y2="185.37" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="140,190 146.4,179.85 151.91,191.47" fill="#00ffcc"/>
+<line x1="256" y1="135" x2="256" y2="179.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,190 249.57,179.87 262.43,179.87" fill="#00ffcc"/>
+<line x1="256" y1="135" x2="362.24" y2="185.37" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="372,190 360.09,191.47 365.6,179.85" fill="#00ffcc"/>
+<rect x="60" y="195" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="213" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">blob</text>
+<text x="140" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">nuevo</text>
+<rect x="176" y="195" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="190" y="213" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">tree src</text>
+<text x="256" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">nuevo</text>
+<rect x="292" y="195" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="306" y="213" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">commit</text>
+<text x="372" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">nuevo</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">raíz y trees no tocados se reutilizan</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">3 objetos nuevos, 0 duplicados</text>
+</svg>

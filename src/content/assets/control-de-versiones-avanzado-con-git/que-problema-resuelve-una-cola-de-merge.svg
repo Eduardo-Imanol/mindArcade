@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué problema resuelve una cola de merge?">
+<title>¿Qué problema resuelve una cola de merge?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="274.86" cy="12.86" rx="106.87" ry="106.87" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="79.1" cy="121.3" rx="111.42" ry="111.42" fill="hsl(265 90% 58% / 0.198)"/>
+<ellipse cx="450.31" cy="209.41" rx="201.01" ry="201.01" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="334.4" cy="478.37" rx="175.38" ry="175.38" fill="hsl(265 90% 58% / 0.207)"/>
+<rect x="60" y="105" width="200" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="113" x2="252" y2="113" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="131" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">PR-7 ok</text>
+<rect x="60" y="165" width="200" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="68" y1="173" x2="252" y2="173" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="191" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">PR-8 falla</text>
+<rect x="60" y="225" width="200" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="233" x2="252" y2="233" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="251" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">PR-9 espera</text>
+<rect x="60" y="285" width="200" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="293" x2="252" y2="293" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="311" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">PR-10 espera</text>
+<line x1="266" y1="200" x2="305.2" y2="200" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="316,200 305.87,206.43 305.87,193.57" fill="#ffcc00"/>
+<rect x="325" y="130" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="390" y="150" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#ffcc00">re-test sobre el</text>
+<rect x="330" y="190" width="120" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="390" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#ffcc00">trunk unido</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">merge serial: verde de verdad</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">sin carriles paralelos que chocan</text>
+</svg>

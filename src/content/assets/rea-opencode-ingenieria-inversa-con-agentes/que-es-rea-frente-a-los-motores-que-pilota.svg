@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es REA frente a los motores que pilota?">
+<title>¿Qué es REA frente a los motores que pilota?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="73.8" cy="275.42" rx="186.15" ry="186.15" fill="hsl(265 90% 58% / 0.235)"/>
+<ellipse cx="168.9" cy="218.3" rx="129.34" ry="129.34" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="322.7" cy="163.67" rx="192.01" ry="192.01" fill="hsl(265 90% 58% / 0.228)"/>
+<ellipse cx="315.6" cy="197.28" rx="148.04" ry="148.04" fill="hsl(265 90% 58% / 0.181)"/>
+<rect x="60" y="120" width="150" height="110" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="74" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#b388ff">REA</text>
+<text x="135" y="195" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">coordina</text>
+<rect x="302" y="105" width="150" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="316" y="123" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Ghidra</text>
+<rect x="302" y="175" width="150" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="316" y="193" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">IDA</text>
+<rect x="302" y="245" width="150" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="316" y="263" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">LLDB</text>
+<rect x="302" y="315" width="150" height="60" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="316" y="333" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">radare2</text>
+<line x1="214" y1="175" x2="286.29" y2="139.73" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,135 289.71,145.22 284.07,133.66" fill="#8a7fb5"/>
+<line x1="214" y1="175" x2="285.86" y2="201.29" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,205 284.28,207.56 288.69,195.48" fill="#8a7fb5"/>
+<line x1="214" y1="175" x2="289.15" y2="266.65" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,275 284.6,271.24 294.55,263.09" fill="#8a7fb5"/>
+<line x1="214" y1="175" x2="291.31" y2="335.27" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="296,345 285.81,338.67 297.39,333.08" fill="#8a7fb5"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">director de orquesta, no motor</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">contrato uniforme sobre engines distintos</text>
+</svg>

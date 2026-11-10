@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significan HEAD~3 y HEAD^2 como revisiones?">
+<title>¿Qué significan HEAD~3 y HEAD^2 como revisiones?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="445.25" cy="26.52" rx="119.24" ry="119.24" fill="hsl(120 90% 58% / 0.197)"/>
+<ellipse cx="414.56" cy="377.25" rx="193.45" ry="193.45" fill="hsl(120 90% 58% / 0.234)"/>
+<ellipse cx="400.21" cy="227.82" rx="111.33" ry="111.33" fill="hsl(120 90% 58% / 0.229)"/>
+<ellipse cx="75.44" cy="122.58" rx="98.57" ry="98.57" fill="hsl(120 90% 58% / 0.21)"/>
+<ellipse cx="256" cy="140" rx="38" ry="38" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">HEAD</text>
+<ellipse cx="150" cy="260" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">p</text>
+<ellipse cx="256" cy="260" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">pp</text>
+<ellipse cx="362" cy="260" rx="30" ry="30" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="362" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">m</text>
+<line x1="232" y1="162" x2="172.41" y2="225.15" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="165,233 167.28,221.22 176.63,230.04" fill="#00ffcc"/>
+<line x1="256" y1="178" x2="256" y2="219.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,230 249.57,219.87 262.43,219.87" fill="#00ffcc"/>
+<line x1="280" y1="162" x2="337.71" y2="225.03" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="345,233 333.42,229.87 342.9,221.19" fill="#ff007f"/>
+<rect x="45" y="350" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="110" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">HEAD^2</text>
+<rect x="215" y="350" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="280" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">HEAD~3</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">^ recorre padres, ~ el primer padre</text>
+</svg>

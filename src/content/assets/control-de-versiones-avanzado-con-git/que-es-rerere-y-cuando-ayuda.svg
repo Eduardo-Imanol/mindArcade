@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué es rerere y cuándo ayuda?">
+<title>¿Qué es rerere y cuándo ayuda?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="190.05" cy="146.35" rx="190.9" ry="190.9" fill="hsl(320 90% 58% / 0.165)"/>
+<ellipse cx="215.48" cy="44.13" rx="107.29" ry="107.29" fill="hsl(320 90% 58% / 0.162)"/>
+<ellipse cx="420.65" cy="18.41" rx="131.28" ry="131.28" fill="hsl(320 90% 58% / 0.152)"/>
+<ellipse cx="427.02" cy="316.94" rx="124.69" ry="124.69" fill="hsl(320 90% 58% / 0.195)"/>
+<rect x="86" y="90" width="340" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#00ffcc">reuse recorded resolution</text>
+<rect x="90" y="180" width="332" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="98" y1="188" x2="414" y2="188" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="206" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">conflicto visto en rebase</text>
+<line x1="256" y1="226" x2="256" y2="254.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,265 249.57,254.87 262.43,254.87" fill="#39ff14"/>
+<rect x="90" y="270" width="332" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="98" y1="278" x2="414" y2="278" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="296" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">misma resolución repetida</text>
+<rect x="91" y="370" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">merge tras rebase: se auto-resuelve</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">rerere.enabled = true</text>
+</svg>

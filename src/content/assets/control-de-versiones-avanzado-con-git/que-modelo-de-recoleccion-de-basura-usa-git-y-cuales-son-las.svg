@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué modelo de recolección de basura usa Git y cuáles son las raíces?">
+<title>¿Qué modelo de recolección de basura usa Git y cuáles son las raíces?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="167.32" cy="77.9" rx="109.08" ry="109.08" fill="hsl(45 90% 58% / 0.2)"/>
+<ellipse cx="267.02" cy="53.36" rx="83" ry="83" fill="hsl(45 90% 58% / 0.219)"/>
+<ellipse cx="242.17" cy="364.61" rx="85.2" ry="85.2" fill="hsl(45 90% 58% / 0.19)"/>
+<ellipse cx="243.67" cy="206.53" rx="101.55" ry="101.55" fill="hsl(45 90% 58% / 0.209)"/>
+<rect x="191" y="100" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">refs</text>
+<rect x="191" y="170" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">HEAD</text>
+<rect x="191" y="240" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">index</text>
+<rect x="191" y="310" width="130" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">reflog</text>
+<line x1="256" y1="400" x2="256" y2="360.8" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,350 262.43,360.13 249.57,360.13" fill="#8a7fb5"/>
+<rect x="121" y="405" width="270" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#8a7fb5" stroke-width="2"/>
+<text x="256" y="425" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">alcance desde las raíces</text>
+<text x="256" y="480" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">lo inalcanzable es basura potencial</text>
+</svg>

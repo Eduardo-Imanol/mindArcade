@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué añade Git sobre el Myers puro?">
+<title>¿Qué añade Git sobre el Myers puro?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="151.11" cy="450.19" rx="92.24" ry="92.24" fill="hsl(120 90% 58% / 0.195)"/>
+<ellipse cx="217.09" cy="419.95" rx="173.58" ry="173.58" fill="hsl(120 90% 58% / 0.209)"/>
+<ellipse cx="307.32" cy="343.95" rx="195.62" ry="195.62" fill="hsl(120 90% 58% / 0.231)"/>
+<ellipse cx="192.46" cy="62.71" rx="157.75" ry="157.75" fill="hsl(120 90% 58% / 0.238)"/>
+<rect x="126" y="85" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">Myers + heurísticas</text>
+<rect x="101" y="160" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">recorte de prefijo/sufijo</text>
+<rect x="101" y="240" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">líneas en blanco y anclajes</text>
+<rect x="101" y="320" width="310" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">límite de coste (XDL_MAX_COST)</text>
+<text x="256" y="450" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">la salida sigue siendo mínima</text>
+</svg>

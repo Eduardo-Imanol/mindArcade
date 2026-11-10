@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué libro de referencia gratuita cubre Git y sus interioridades?">
+<title>¿Qué libro de referencia gratuita cubre Git y sus interioridades?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="338.36" cy="34.02" rx="75.66" ry="75.66" fill="hsl(168 90% 58% / 0.176)"/>
+<ellipse cx="454.53" cy="344.88" rx="98.76" ry="98.76" fill="hsl(168 90% 58% / 0.17)"/>
+<ellipse cx="280.96" cy="101.76" rx="199.29" ry="199.29" fill="hsl(168 90% 58% / 0.226)"/>
+<ellipse cx="161.67" cy="238.08" rx="108.46" ry="108.46" fill="hsl(168 90% 58% / 0.212)"/>
+<rect x="90" y="150" width="332" height="180" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="104" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">Pro Git</text>
+<text x="256" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">Apress · gratis en PDF/ePub</text>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">2.ª edición, capítulo 10: interioridades</text>
+<rect x="136" y="380" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">git-scm.com/book</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">plumbing y porcelana dentro</text>
+</svg>

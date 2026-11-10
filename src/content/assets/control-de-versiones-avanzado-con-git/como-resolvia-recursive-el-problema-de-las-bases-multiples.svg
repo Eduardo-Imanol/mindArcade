@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo resolvía recursive el problema de las bases múltiples?">
+<title>¿Cómo resolvía recursive el problema de las bases múltiples?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="87.33" cy="228.12" rx="168.28" ry="168.28" fill="hsl(120 90% 58% / 0.195)"/>
+<ellipse cx="228.48" cy="452.99" rx="87.43" ry="87.43" fill="hsl(120 90% 58% / 0.214)"/>
+<ellipse cx="59.16" cy="324.89" rx="122.31" ry="122.31" fill="hsl(120 90% 58% / 0.207)"/>
+<ellipse cx="353.89" cy="333.38" rx="122.51" ry="122.51" fill="hsl(120 90% 58% / 0.227)"/>
+<ellipse cx="256" cy="130" rx="46" ry="46" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">bases b1+b2</text>
+<line x1="256" y1="178" x2="256" y2="204.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,215 249.57,204.87 262.43,204.87" fill="#ffcc00"/>
+<rect x="131" y="225" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="245" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">merge virtual b1×b2</text>
+<line x1="256" y1="267" x2="256" y2="289.2" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,300 249.57,289.87 262.43,289.87" fill="#00ffcc"/>
+<rect x="116" y="310" width="280" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">usa el resultado como base</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">crear una base sintética</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">ort lo hace mejor y más barato</text>
+</svg>

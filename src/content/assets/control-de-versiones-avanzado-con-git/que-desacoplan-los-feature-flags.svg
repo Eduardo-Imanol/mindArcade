@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué desacoplan los feature flags?">
+<title>¿Qué desacoplan los feature flags?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="94.35" cy="170.15" rx="140.63" ry="140.63" fill="hsl(45 90% 58% / 0.212)"/>
+<ellipse cx="227.71" cy="343.07" rx="134.53" ry="134.53" fill="hsl(45 90% 58% / 0.185)"/>
+<ellipse cx="82.84" cy="426.28" rx="119.21" ry="119.21" fill="hsl(45 90% 58% / 0.157)"/>
+<ellipse cx="77.42" cy="425.81" rx="72.14" ry="72.14" fill="hsl(45 90% 58% / 0.184)"/>
+<rect x="80" y="120" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="94" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">deploy</text>
+<rect x="272" y="120" width="160" height="90" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="286" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">release</text>
+<line x1="246" y1="165" x2="255.2" y2="165" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="266,165 255.87,171.43 255.87,158.57" fill="#00ffcc"/>
+<rect x="126" y="260" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="280" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">desplegar ≠ liberar</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">el código llega apagado</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">y se enciende sin rehacer main</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">merge sin esperar al 100 %</text>
+</svg>

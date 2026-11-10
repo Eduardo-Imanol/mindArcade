@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué tareas ejecuta git gc?">
+<title>¿Qué tareas ejecuta git gc?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="134.15" cy="56.78" rx="117.07" ry="117.07" fill="hsl(265 90% 58% / 0.236)"/>
+<ellipse cx="103.23" cy="378.83" rx="162.63" ry="162.63" fill="hsl(265 90% 58% / 0.169)"/>
+<ellipse cx="412.02" cy="221.9" rx="167.29" ry="167.29" fill="hsl(265 90% 58% / 0.199)"/>
+<ellipse cx="54.59" cy="369.73" rx="152.72" ry="152.72" fill="hsl(265 90% 58% / 0.234)"/>
+<rect x="111" y="110" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="130" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">repack → packfiles</text>
+<rect x="111" y="190" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="210" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">poda reflog y sueltos</text>
+<rect x="111" y="270" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">commit-graph + bitmaps</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">cuidado con gc.pruneExpire</text>
+<text x="256" y="480" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">2 semanas por defecto</text>
+</svg>

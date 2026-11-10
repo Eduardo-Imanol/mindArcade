@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la única escritura que REA aplica sobre un binario?">
+<title>¿Cuál es la única escritura que REA aplica sobre un binario?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="71.06" cy="131.46" rx="132.98" ry="132.98" fill="hsl(168 90% 58% / 0.192)"/>
+<ellipse cx="323.92" cy="332.83" rx="87.13" ry="87.13" fill="hsl(168 90% 58% / 0.179)"/>
+<ellipse cx="492.52" cy="446.53" rx="188.04" ry="188.04" fill="hsl(168 90% 58% / 0.226)"/>
+<ellipse cx="340.79" cy="160.66" rx="167.66" ry="167.66" fill="hsl(168 90% 58% / 0.197)"/>
+<rect x="70" y="120" width="372" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="84" y="138" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">binario del proyecto</text>
+<rect x="86" y="290" width="340" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">única excepción: flags de seguimiento</text>
+<text x="256" y="380" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">bytes del análisis: intactos</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">el hash lo demuestra</text>
+</svg>

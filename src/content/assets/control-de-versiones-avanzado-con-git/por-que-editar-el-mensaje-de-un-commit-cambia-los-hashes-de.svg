@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Por qué editar el mensaje de un commit cambia los hashes de sus descendientes?">
+<title>¿Por qué editar el mensaje de un commit cambia los hashes de sus descendientes?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="392.73" cy="140.87" rx="174.02" ry="174.02" fill="hsl(45 90% 58% / 0.162)"/>
+<ellipse cx="52.93" cy="324.63" rx="166.16" ry="166.16" fill="hsl(45 90% 58% / 0.142)"/>
+<ellipse cx="278.98" cy="63.36" rx="162.38" ry="162.38" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="363.82" cy="266.56" rx="87.74" ry="87.74" fill="hsl(45 90% 58% / 0.214)"/>
+<rect x="90" y="110" width="140" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="98" y1="118" x2="222" y2="118" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="134" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">A</text>
+<rect x="90" y="158" width="140" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="98" y1="166" x2="222" y2="166" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="182" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">B editado</text>
+<rect x="90" y="206" width="140" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="98" y1="214" x2="222" y2="214" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">C</text>
+<rect x="90" y="254" width="140" height="40" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="98" y1="262" x2="222" y2="262" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="278" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">D</text>
+<line x1="160" y1="130" x2="171.65" y2="165.73" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175,176 165.75,168.36 177.97,164.37" fill="#8a7fb5"/>
+<line x1="160" y1="178" x2="171.65" y2="213.73" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175,224 165.75,216.36 177.97,212.37" fill="#8a7fb5"/>
+<line x1="160" y1="226" x2="171.65" y2="261.73" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175,272 165.75,264.36 177.97,260.37" fill="#8a7fb5"/>
+<rect x="235" y="155" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="330" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">hash(B) cambia</text>
+<line x1="240" y1="175" x2="269.2" y2="175" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,175 269.87,181.43 269.87,168.57" fill="#ff007f"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">los hijos apuntan al padre nuevo</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">todo el linaje re-hashea</text>
+</svg>

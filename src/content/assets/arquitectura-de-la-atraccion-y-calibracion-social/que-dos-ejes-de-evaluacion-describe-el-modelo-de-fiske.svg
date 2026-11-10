@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué dos ejes de evaluación describe el modelo de Fiske?">
+<title>¿Qué dos ejes de evaluación describe el modelo de Fiske?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="284.44" cy="391.23" rx="91.04" ry="91.04" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="308.41" cy="413.24" rx="132.04" ry="132.04" fill="hsl(265 90% 58% / 0.173)"/>
+<ellipse cx="276.79" cy="281.12" rx="75.37" ry="75.37" fill="hsl(265 90% 58% / 0.194)"/>
+<ellipse cx="102.56" cy="378.7" rx="119.98" ry="119.98" fill="hsl(265 90% 58% / 0.218)"/>
+<line x1="120" y1="256" x2="392" y2="256" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<line x1="256" y1="120" x2="256" y2="392" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<text x="400" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">calidez</text>
+<text x="262" y="115" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">competencia</text>
+<rect x="255" y="160" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="350" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">querido + capaz</text>
+<rect x="75" y="310" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="160" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ff007f">frío + inepto</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#f1f1f1">cualquier impresión se lee en estos dos ejes</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">(SCM de Fiske)</text>
+</svg>

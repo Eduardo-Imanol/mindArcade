@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué formato validan las herramientas de Conventional Commits?">
+<title>¿Qué formato validan las herramientas de Conventional Commits?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="66.87" cy="445.17" rx="126.37" ry="126.37" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="216.82" cy="413.46" rx="189.35" ry="189.35" fill="hsl(265 90% 58% / 0.167)"/>
+<ellipse cx="274.05" cy="405.74" rx="140.48" ry="140.48" fill="hsl(265 90% 58% / 0.2)"/>
+<ellipse cx="433.98" cy="344.67" rx="179.79" ry="179.79" fill="hsl(265 90% 58% / 0.195)"/>
+<rect x="86" y="90" width="340" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#00ffcc">feat(parser): detecta EOF</text>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">tipo(ámbito): descripción</text>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">cuerpo y BREAKING CHANGE!</text>
+<rect x="111" y="290" width="290" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="310" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">commitlint valida el patrón</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">feat · fix · docs · refactor · chore</text>
+<text x="256" y="460" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">commit-msg es el guardián</text>
+</svg>

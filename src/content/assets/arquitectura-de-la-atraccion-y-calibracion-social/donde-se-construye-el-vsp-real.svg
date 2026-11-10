@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Dónde se construye el VSP real?">
+<title>¿Dónde se construye el VSP real?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="312.93" cy="459.5" rx="113.01" ry="113.01" fill="hsl(265 90% 58% / 0.202)"/>
+<ellipse cx="388.82" cy="293.07" rx="101.54" ry="101.54" fill="hsl(265 90% 58% / 0.164)"/>
+<ellipse cx="238.4" cy="85.39" rx="105.75" ry="105.75" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="494.73" cy="442.04" rx="110.01" ry="110.01" fill="hsl(265 90% 58% / 0.206)"/>
+<rect x="161" y="85" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">VSP real</text>
+<text x="256" y="175" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">se construye en la relación:</text>
+<text x="256" y="215" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">pertenecer a alguien/grupo</text>
+<text x="256" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">que responde cuando importas</text>
+<rect x="76" y="330" width="360" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#ff007f">afirmaciones frente al espejo: no</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">evidencia interpersonal &gt; mantra</text>
+</svg>

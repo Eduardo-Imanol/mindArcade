@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué presupuestos duros tiene trace_native_values?">
+<title>¿Qué presupuestos duros tiene trace_native_values?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="40.8" cy="334.95" rx="99.64" ry="99.64" fill="hsl(45 90% 58% / 0.221)"/>
+<ellipse cx="149.63" cy="45.18" rx="202.06" ry="202.06" fill="hsl(45 90% 58% / 0.185)"/>
+<ellipse cx="197.36" cy="251.34" rx="119.42" ry="119.42" fill="hsl(45 90% 58% / 0.183)"/>
+<ellipse cx="324.18" cy="235.76" rx="72.88" ry="72.88" fill="hsl(45 90% 58% / 0.176)"/>
+<rect x="91" y="82" width="330" height="56" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">trace_native_values</text>
+<rect x="146" y="200" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">límite de saltos</text>
+<rect x="146" y="270" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="290" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">límite de tiempo</text>
+<rect x="146" y="340" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ffcc00">límite de nodos</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">el grafo de datos no explota el agente</text>
+<text x="256" y="475" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#8a7fb5">aborta y reporta lo alcanzado</text>
+</svg>

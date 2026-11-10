@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué activa Scalar de una sola vez?">
+<title>¿Qué activa Scalar de una sola vez?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="194.82" cy="274.6" rx="117.62" ry="117.62" fill="hsl(265 90% 58% / 0.205)"/>
+<ellipse cx="436.41" cy="226.82" rx="150" ry="150" fill="hsl(265 90% 58% / 0.188)"/>
+<ellipse cx="256.7" cy="209.24" rx="179.34" ry="179.34" fill="hsl(265 90% 58% / 0.182)"/>
+<ellipse cx="57.84" cy="204.11" rx="115.7" ry="115.7" fill="hsl(265 90% 58% / 0.218)"/>
+<rect x="91" y="90" width="330" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#00ffcc">scalar clone / register</text>
+<rect x="96" y="165" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="185" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">partial clone blob:none</text>
+<rect x="96" y="231" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="251" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">sparse cone + sparse-index</text>
+<rect x="96" y="297" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="317" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#ffcc00">fsmonitor + untrackedCache</text>
+<rect x="96" y="363" width="320" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="383" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#39ff14">commit-graph + prefetch</text>
+<text x="256" y="470" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#8a7fb5">todo lo bueno, encendido por defecto</text>
+</svg>

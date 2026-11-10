@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hooks se ejecutan durante un git commit y en qué orden?">
+<title>¿Qué hooks se ejecutan durante un git commit y en qué orden?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="272.44" cy="510.01" rx="178.24" ry="178.24" fill="hsl(320 90% 58% / 0.22)"/>
+<ellipse cx="33.83" cy="320.33" rx="159.24" ry="159.24" fill="hsl(320 90% 58% / 0.184)"/>
+<ellipse cx="249.38" cy="341.79" rx="178.38" ry="178.38" fill="hsl(320 90% 58% / 0.22)"/>
+<ellipse cx="3.28" cy="395.64" rx="167.47" ry="167.47" fill="hsl(320 90% 58% / 0.154)"/>
+<rect x="60" y="110" width="250" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#00ffcc" stroke-width="2"/>
+<line x1="68" y1="118" x2="302" y2="118" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<text x="185" y="136" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">pre-commit</text>
+<text x="420" y="132" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">lint rápido</text>
+<rect x="60" y="180" width="250" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ff007f" stroke-width="2"/>
+<line x1="68" y1="188" x2="302" y2="188" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<text x="185" y="206" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">prepare-commit-msg</text>
+<text x="420" y="202" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">plantilla</text>
+<rect x="60" y="250" width="250" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#ffcc00" stroke-width="2"/>
+<line x1="68" y1="258" x2="302" y2="258" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<text x="185" y="276" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">commit-msg</text>
+<text x="420" y="272" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">valida mensaje</text>
+<rect x="60" y="320" width="250" height="44" rx="8" fill="rgba(0, 255, 204, 0.07)" stroke="#39ff14" stroke-width="2"/>
+<line x1="68" y1="328" x2="302" y2="328" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<text x="185" y="346" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">post-commit</text>
+<text x="420" y="342" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">notifica</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">el orden no es negociable</text>
+</svg>

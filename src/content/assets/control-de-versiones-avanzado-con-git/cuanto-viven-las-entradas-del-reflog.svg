@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuánto viven las entradas del reflog?">
+<title>¿Cuánto viven las entradas del reflog?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="400.75" cy="473.43" rx="194.13" ry="194.13" fill="hsl(45 90% 58% / 0.174)"/>
+<ellipse cx="496.81" cy="345.5" rx="88.7" ry="88.7" fill="hsl(45 90% 58% / 0.171)"/>
+<ellipse cx="254.9" cy="492.78" rx="82.15" ry="82.15" fill="hsl(45 90% 58% / 0.151)"/>
+<ellipse cx="376.51" cy="285.71" rx="175.83" ry="175.83" fill="hsl(45 90% 58% / 0.21)"/>
+<rect x="106" y="90" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">90 días · HEAD</text>
+<rect x="106" y="170" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="190" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ff007f">30 días · ramas remotas</text>
+<rect x="136" y="250" width="240" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">reflogExpire</text>
+<text x="256" y="350" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">tras expirar, la gc puede borrar</text>
+<text x="256" y="390" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">lo huérfano para siempre</text>
+<text x="256" y="465" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">recuperar = antes de que expire</text>
+</svg>

@@ -72,20 +72,36 @@ Tema de prueba sin entrada en library.js.
     expect(topic.sourcePath).toBeNull();
   });
 
-  it('loadCatalog loads the four nested built-ins with metadata', () => {
+  it('loadCatalog loads the seven nested built-ins with metadata', () => {
     const builtins = loadCatalog().filter((t) => t.source === 'builtin');
     expect(builtins.map((t) => t.id).sort()).toEqual(
       [
         'algoritmos-y-complejidad-guia-tecnica-exhaustiva',
+        'arquitectura-de-la-atraccion-y-calibracion-social',
+        'control-de-versiones-avanzado-con-git',
         'estructuras-de-datos',
         'funciones-en-programacion',
         'persistencia-local-pwas-y-offline-first',
+        'rea-opencode-ingenieria-inversa-con-agentes',
       ].sort()
     );
     for (const topic of builtins) {
-      expect(topic.categoryId).toBe('programacion');
-      expect(topic.moduleId === 'programacion-m1' || topic.moduleId === 'programacion-m2').toBe(true);
-      expect(topic.sourcePath.startsWith('programacion/')).toBe(true);
+      if (topic.id === 'arquitectura-de-la-atraccion-y-calibracion-social') {
+        expect(topic.categoryId).toBe('personalizados');
+        expect(topic.moduleId).toBeNull();
+        expect(topic.sourcePath).toBe(
+          'personalizados/arquitectura-de-la-atraccion-y-calibracion-social.md'
+        );
+      } else if (topic.id === 'rea-opencode-ingenieria-inversa-con-agentes') {
+        expect(topic.categoryId).toBe('ia');
+        expect(topic.moduleId).toBe('ia-m1');
+        expect(topic.moduleTitle).toBe('Módulo 1: Programación de IA');
+        expect(topic.sourcePath).toBe('ia/rea-opencode-ingenieria-inversa-con-agentes.md');
+      } else {
+        expect(topic.categoryId).toBe('programacion');
+        expect(['programacion-m1', 'programacion-m2', 'programacion-m3']).toContain(topic.moduleId);
+        expect(topic.sourcePath.startsWith('programacion/')).toBe(true);
+      }
     }
   });
 });
