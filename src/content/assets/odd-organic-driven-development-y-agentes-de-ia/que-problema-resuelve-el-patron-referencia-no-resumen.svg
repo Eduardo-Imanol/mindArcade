@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué problema resuelve el patrón referencia, no resumen?">
+<title>¿Qué problema resuelve el patrón referencia, no resumen?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="368.04" cy="448.37" rx="88.46" ry="88.46" fill="hsl(265 90% 58% / 0.174)"/>
+<ellipse cx="74.97" cy="373.26" rx="130.67" ry="130.67" fill="hsl(265 90% 58% / 0.203)"/>
+<ellipse cx="427" cy="149.98" rx="79.08" ry="79.08" fill="hsl(265 90% 58% / 0.16)"/>
+<ellipse cx="292.46" cy="495.76" rx="138.6" ry="138.6" fill="hsl(265 90% 58% / 0.164)"/>
+<rect x="48" y="180" width="160" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="62" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">ruta e IDs</text>
+<line x1="212" y1="255" x2="289.2" y2="255" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,255 289.87,261.43 289.87,248.57" fill="#39ff14"/>
+<rect x="304" y="180" width="160" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="318" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">sin resumen</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">traspaso</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué formato tiene la pregunta autorizada por ODD?">
+<title>¿Qué formato tiene la pregunta autorizada por ODD?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="460.76" cy="318.77" rx="137.99" ry="137.99" fill="hsl(265 90% 58% / 0.216)"/>
+<ellipse cx="18.89" cy="472.18" rx="189.78" ry="189.78" fill="hsl(265 90% 58% / 0.158)"/>
+<ellipse cx="508.07" cy="15.36" rx="178.4" ry="178.4" fill="hsl(265 90% 58% / 0.223)"/>
+<ellipse cx="454.14" cy="66.02" rx="201.45" ry="201.45" fill="hsl(265 90% 58% / 0.146)"/>
+<ellipse cx="90" cy="200" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="90" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">1</text>
+<line x1="90" y1="235" x2="90" y2="275" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="90" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">contexto</text>
+<ellipse cx="200" cy="200" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="200" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">2</text>
+<line x1="200" y1="235" x2="200" y2="275" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="200" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">opciones</text>
+<ellipse cx="310" cy="200" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="310" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">3</text>
+<line x1="310" y1="235" x2="310" y2="275" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="310" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">defecto</text>
+<ellipse cx="420" cy="200" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="420" y="200" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">4</text>
+<line x1="420" y1="235" x2="420" y2="275" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="420" y="315" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">coste</text>
+</svg>

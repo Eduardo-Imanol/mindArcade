@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace el paso 2, explorar en proporción?">
+<title>¿Qué hace el paso 2, explorar en proporción?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="274.81" cy="33.1" rx="172.47" ry="172.47" fill="hsl(265 90% 58% / 0.163)"/>
+<ellipse cx="114.36" cy="346.7" rx="104.48" ry="104.48" fill="hsl(265 90% 58% / 0.238)"/>
+<ellipse cx="76.43" cy="231.35" rx="192.15" ry="192.15" fill="hsl(265 90% 58% / 0.161)"/>
+<ellipse cx="329.47" cy="255.43" rx="120.73" ry="120.73" fill="hsl(265 90% 58% / 0.236)"/>
+<rect x="96" y="84" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">leer</text>
+<line x1="256" y1="158" x2="256" y2="207.2" stroke="#b388ff" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,218 249.57,207.87 262.43,207.87" fill="#b388ff"/>
+<rect x="96" y="220" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="256" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">tests</text>
+<line x1="256" y1="294" x2="256" y2="343.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,354 249.57,343.87 262.43,343.87" fill="#39ff14"/>
+<rect x="96" y="356" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="392" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">línea base</text>
+</svg>

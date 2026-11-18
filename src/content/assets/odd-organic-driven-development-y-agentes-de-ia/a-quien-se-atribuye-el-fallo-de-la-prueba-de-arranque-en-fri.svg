@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿A quién se atribuye el fallo de la prueba de arranque en frío?">
+<title>¿A quién se atribuye el fallo de la prueba de arranque en frío?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="353.95" cy="148.91" rx="82.89" ry="82.89" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="363.84" cy="83.16" rx="183.19" ry="183.19" fill="hsl(265 90% 58% / 0.169)"/>
+<ellipse cx="205.99" cy="406.44" rx="84.18" ry="84.18" fill="hsl(265 90% 58% / 0.188)"/>
+<ellipse cx="302.49" cy="164.11" rx="142.6" ry="142.6" fill="hsl(265 90% 58% / 0.142)"/>
+<ellipse cx="150" cy="256" rx="44" ry="44" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="150" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">A</text>
+<ellipse cx="362" cy="256" rx="44" ry="44" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="362" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="198" y1="225" x2="301.2" y2="225" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="312,225 301.87,231.43 301.87,218.57" fill="#39ff14"/>
+<line x1="312" y1="287" x2="208.8" y2="287" stroke="#b388ff" stroke-width="2" stroke-linecap="round"/>
+<polygon points="198,287 208.13,280.57 208.13,293.43" fill="#b388ff"/>
+<text x="150" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">fallo</text>
+<text x="362" y="360" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">documento</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">no agente</text>
+</svg>

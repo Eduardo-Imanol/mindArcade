@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué son los huecos rellenados en silencio por un agente?">
+<title>¿Qué son los huecos rellenados en silencio por un agente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="353.79" cy="424.46" rx="200.71" ry="200.71" fill="hsl(265 90% 58% / 0.208)"/>
+<ellipse cx="489.19" cy="286.19" rx="112.49" ry="112.49" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="200.24" cy="291" rx="166.64" ry="166.64" fill="hsl(265 90% 58% / 0.14)"/>
+<ellipse cx="29.23" cy="354.63" rx="119.94" ry="119.94" fill="hsl(265 90% 58% / 0.194)"/>
+<rect x="106" y="120" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="140" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#ffcc00">ambigüedad</text>
+<line x1="256" y1="175" x2="256" y2="229.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,240 249.57,229.87 262.43,229.87" fill="#ffcc00"/>
+<rect x="106" y="265" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="285" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ff007f">supuesto oculto</text>
+<line x1="256" y1="320" x2="256" y2="359.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,370 249.57,359.87 262.43,359.87" fill="#ff007f"/>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">producción</text>
+</svg>

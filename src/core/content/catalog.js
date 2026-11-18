@@ -112,12 +112,33 @@ export function saveCustomTopics(list = []) {
   }
 }
 
+let builtinCatalogCache = null;
+
+function loadCachedBuiltins() {
+  if (!builtinCatalogCache) {
+    builtinCatalogCache = buildCatalog(loadBuiltinTopicMds(), []);
+  }
+  return builtinCatalogCache;
+}
+
+function cloneBuiltin(entry, meta) {
+  const cloned = {
+    ...entry,
+    cards: entry.cards.map((card) => ({ ...card })),
+    images: { ...entry.images },
+  };
+  const addedAt = normalizeDate(meta[entry.id]?.addedAt);
+  if (addedAt) cloned.addedAt = addedAt;
+  else delete cloned.addedAt;
+  return cloned;
+}
+
 export function saveCustomTopic({ title = '', md = '', images = {} } = {}) {
   const parsed = parseTopic(md);
   if (parsed.cards.length === 0) {
     return { ok: false, error: 'No se encontraron preguntas válidas' };
   }
-  const builtin = buildCatalog(loadBuiltinTopicMds(), []);
+  const builtin = loadCachedBuiltins();
   const custom = loadCustomTopics();
   const taken = [...builtin.map((t) => t.id), ...custom.map((t) => t.id)];
   const id = uniqueId(slugify(title || parsed.topic.title), taken);
@@ -149,5 +170,15 @@ export function saveCustomTopic({ title = '', md = '', images = {} } = {}) {
 }
 
 export function loadCatalog() {
-  return buildCatalog(loadBuiltinTopicMds(), loadCustomTopics(), loadTopicMeta());
+  const meta = loadTopicMeta();
+  const safeMeta = meta && typeof meta === 'object' && !Array.isArray(meta) ? meta : {};
+  const builtins = loadCachedBuiltins().map((entry) => cloneBuiltin(entry, safeMeta));
+  const taken = new Set(builtins.map((entry) => entry.id));
+  const topics = [...builtins];
+  for (const entry of loadCustomTopics()) {
+    if (!entry) continue;
+    const topic = ingest(entry.md, 'custom', entry.title, taken, entry.images, safeMeta, entry.createdAt);
+    if (topic) topics.push(topic);
+  }
+  return topics;
 }

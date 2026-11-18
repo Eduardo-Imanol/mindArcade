@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se retoma una sesión cortada a mitad de tarea?">
+<title>¿Cómo se retoma una sesión cortada a mitad de tarea?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="500.86" cy="345.63" rx="75.28" ry="75.28" fill="hsl(265 90% 58% / 0.181)"/>
+<ellipse cx="286.73" cy="285.86" rx="102.9" ry="102.9" fill="hsl(265 90% 58% / 0.153)"/>
+<ellipse cx="37.58" cy="236.48" rx="123.01" ry="123.01" fill="hsl(265 90% 58% / 0.239)"/>
+<ellipse cx="33.55" cy="471.94" rx="104.75" ry="104.75" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="110" cy="125" rx="11" ry="11" fill="#00ffcc"/>
+<text x="140" y="125" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">git status</text>
+<ellipse cx="110" cy="220" rx="11" ry="11" fill="#b388ff"/>
+<text x="140" y="220" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">git diff</text>
+<ellipse cx="110" cy="315" rx="11" ry="11" fill="#39ff14"/>
+<text x="140" y="315" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">Siguiente paso</text>
+<ellipse cx="110" cy="410" rx="11" ry="11" fill="#ff007f"/>
+</svg>

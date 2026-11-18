@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué se revisa el día 7 de la adopción?">
+<title>¿Qué se revisa el día 7 de la adopción?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="126.73" cy="69.02" rx="82.61" ry="82.61" fill="hsl(265 90% 58% / 0.141)"/>
+<ellipse cx="462.12" cy="458.67" rx="145.64" ry="145.64" fill="hsl(265 90% 58% / 0.223)"/>
+<ellipse cx="447.3" cy="250.77" rx="187.59" ry="187.59" fill="hsl(265 90% 58% / 0.161)"/>
+<ellipse cx="333.89" cy="159.4" rx="180.16" ry="180.16" fill="hsl(265 90% 58% / 0.211)"/>
+<ellipse cx="110" cy="125" rx="11" ry="11" fill="#00ffcc"/>
+<text x="140" y="125" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">clasificación</text>
+<ellipse cx="110" cy="220" rx="11" ry="11" fill="#b388ff"/>
+<text x="140" y="220" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">pregunta sobró</text>
+<ellipse cx="110" cy="315" rx="11" ry="11" fill="#39ff14"/>
+<text x="140" y="315" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">quitar una</text>
+<ellipse cx="110" cy="410" rx="11" ry="11" fill="#ff007f"/>
+<text x="140" y="410" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">añadir una</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace el paso 5, Plan-First?">
+<title>¿Qué hace el paso 5, Plan-First?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="438.84" cy="262.71" rx="132.65" ry="132.65" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="173.93" cy="380.13" rx="166.2" ry="166.2" fill="hsl(265 90% 58% / 0.188)"/>
+<ellipse cx="225.32" cy="479.67" rx="83.44" ry="83.44" fill="hsl(265 90% 58% / 0.203)"/>
+<ellipse cx="474.8" cy="387.32" rx="141.24" ry="141.24" fill="hsl(265 90% 58% / 0.162)"/>
+<rect x="96" y="84" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">tarea grande</text>
+<line x1="256" y1="158" x2="256" y2="207.2" stroke="#b388ff" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,218 249.57,207.87 262.43,207.87" fill="#b388ff"/>
+<rect x="96" y="220" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="256" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">documento</text>
+<line x1="256" y1="294" x2="256" y2="343.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,354 249.57,343.87 262.43,343.87" fill="#39ff14"/>
+<rect x="96" y="356" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="392" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">anuncio</text>
+</svg>

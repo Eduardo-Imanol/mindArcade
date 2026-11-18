@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se ordenan las rebanadas?">
+<title>¿Cómo se ordenan las rebanadas?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="376.6" cy="269.63" rx="125.55" ry="125.55" fill="hsl(265 90% 58% / 0.144)"/>
+<ellipse cx="456.34" cy="112.96" rx="164.91" ry="164.91" fill="hsl(265 90% 58% / 0.207)"/>
+<ellipse cx="469.53" cy="6.57" rx="103.53" ry="103.53" fill="hsl(265 90% 58% / 0.192)"/>
+<ellipse cx="162.46" cy="243.42" rx="92.75" ry="92.75" fill="hsl(265 90% 58% / 0.203)"/>
+<rect x="96" y="84" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">esqueleto</text>
+<line x1="256" y1="158" x2="256" y2="207.2" stroke="#b388ff" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,218 249.57,207.87 262.43,207.87" fill="#b388ff"/>
+<rect x="96" y="220" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="256" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">riesgo</text>
+<line x1="256" y1="294" x2="256" y2="343.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="256,354 249.57,343.87 262.43,343.87" fill="#39ff14"/>
+<rect x="96" y="356" width="320" height="72" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="256" y="392" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">cosmético</text>
+</svg>

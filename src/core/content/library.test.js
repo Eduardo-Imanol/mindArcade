@@ -50,12 +50,15 @@ describe('library manifest (spec-17 T1)', () => {
     expect(prog.modules[2].topicIds).toEqual(['control-de-versiones-avanzado-con-git']);
   });
 
-  it('ia has one module with the REA topic', () => {
+  it('ia has one module with the REA and ODD topics', () => {
     const ia = CATEGORY_BY_ID.ia;
     expect(ia.title).toBe('IA');
     expect(ia.modules).toHaveLength(1);
     expect(ia.modules[0].id).toBe('ia-m1');
-    expect(ia.modules[0].topicIds).toEqual(['rea-opencode-ingenieria-inversa-con-agentes']);
+    expect(ia.modules[0].topicIds).toEqual([
+      'rea-opencode-ingenieria-inversa-con-agentes',
+      'odd-organic-driven-development-y-agentes-de-ia',
+    ]);
   });
 
   it('no duplicate topics across modules', () => {
@@ -66,7 +69,7 @@ describe('library manifest (spec-17 T1)', () => {
       }
     }
     expect(new Set(all).size).toBe(all.length);
-    expect(all.length).toBe(6);
+    expect(all.length).toBe(7);
   });
 
   it('built-ins map to existing nested source files', () => {
@@ -81,7 +84,7 @@ describe('library manifest (spec-17 T1)', () => {
         expect(moduleTopics).toContain(tid);
       }
     }
-    expect(Object.keys(SOURCE_BY_TOPIC)).toHaveLength(7);
+    expect(Object.keys(SOURCE_BY_TOPIC)).toHaveLength(8);
     const topicFiles = fs.readdirSync(path.join(root, 'src/content/topics/programacion'));
     expect(topicFiles.sort()).toEqual(
       [
@@ -92,7 +95,8 @@ describe('library manifest (spec-17 T1)', () => {
         'persistencia-local-pwas-y-offline-first.md',
       ].sort()
     );
-    expect(fs.readdirSync(path.join(root, 'src/content/topics/ia'))).toEqual([
+    expect(fs.readdirSync(path.join(root, 'src/content/topics/ia')).sort()).toEqual([
+      'odd-organic-driven-development-y-agentes-de-ia.md',
       'rea-opencode-ingenieria-inversa-con-agentes.md',
     ]);
     expect(fs.readdirSync(path.join(root, 'src/content/topics/personalizados'))).toEqual([
@@ -109,6 +113,9 @@ describe('library manifest (spec-17 T1)', () => {
     expect(sourceForTopic('rea-opencode-ingenieria-inversa-con-agentes')).toBe(
       'ia/rea-opencode-ingenieria-inversa-con-agentes.md'
     );
+    expect(sourceForTopic('odd-organic-driven-development-y-agentes-de-ia')).toBe(
+      'ia/odd-desarrollo-organico-con-agentes.md'
+    );
     expect(sourceForTopic('arquitectura-de-la-atraccion-y-calibracion-social')).toBe(
       'personalizados/arquitectura-de-la-atraccion-y-calibracion-social.md'
     );
@@ -118,6 +125,11 @@ describe('library manifest (spec-17 T1)', () => {
     expect(ia).toEqual([
       {
         topicId: 'rea-opencode-ingenieria-inversa-con-agentes',
+        moduleId: 'ia-m1',
+        moduleTitle: 'Módulo 1: Programación de IA',
+      },
+      {
+        topicId: 'odd-organic-driven-development-y-agentes-de-ia',
         moduleId: 'ia-m1',
         moduleTitle: 'Módulo 1: Programación de IA',
       },

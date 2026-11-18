@@ -48,7 +48,10 @@ export const CATEGORIES = Object.freeze([
         title: 'Módulo 1: Programación de IA',
         description: 'Agentes en la terminal, servidores MCP y análisis de binarios con REA.',
         order: 1,
-        topicIds: Object.freeze(['rea-opencode-ingenieria-inversa-con-agentes']),
+        topicIds: Object.freeze([
+          'rea-opencode-ingenieria-inversa-con-agentes',
+          'odd-organic-driven-development-y-agentes-de-ia',
+        ]),
       }),
     ]),
   }),
@@ -88,6 +91,7 @@ export const SOURCE_BY_TOPIC = Object.freeze({
     'programacion/persistencia-local-pwas-offline-first.md',
   'control-de-versiones-avanzado-con-git': 'programacion/control-de-versiones-avanzado-con-git.md',
   'rea-opencode-ingenieria-inversa-con-agentes': 'ia/rea-opencode-ingenieria-inversa-con-agentes.md',
+  'odd-organic-driven-development-y-agentes-de-ia': 'ia/odd-desarrollo-organico-con-agentes.md',
   'arquitectura-de-la-atraccion-y-calibracion-social':
     'personalizados/arquitectura-de-la-atraccion-y-calibracion-social.md',
 });

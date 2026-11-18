@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué historia tuvo ODD frente a SDD en Gentle-AI?">
+<title>¿Qué historia tuvo ODD frente a SDD en Gentle-AI?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="411.8" cy="382.99" rx="125.51" ry="125.51" fill="hsl(265 90% 58% / 0.2)"/>
+<ellipse cx="101.63" cy="251.89" rx="150.7" ry="150.7" fill="hsl(265 90% 58% / 0.227)"/>
+<ellipse cx="49.91" cy="308.65" rx="107.76" ry="107.76" fill="hsl(265 90% 58% / 0.17)"/>
+<ellipse cx="392.09" cy="467.54" rx="202.44" ry="202.44" fill="hsl(265 90% 58% / 0.141)"/>
+<line x1="70" y1="256" x2="442" y2="256" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="92" cy="256" rx="26" ry="26" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="92" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">1</text>
+<text x="92" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">OpenSpec</text>
+<ellipse cx="200" cy="256" rx="26" ry="26" fill="rgba(57, 255, 20, 0.1)" stroke="#b388ff" stroke-width="2.5"/>
+<text x="200" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">2</text>
+<text x="200" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">serie 3.x</text>
+<ellipse cx="308" cy="256" rx="26" ry="26" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="308" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">3</text>
+<text x="308" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">v4.0.0</text>
+<ellipse cx="420" cy="256" rx="26" ry="26" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="420" y="256" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">4</text>
+<text x="420" y="330" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="#f1f1f1">1 oct 2026</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué caracteriza un buen prompt de protocolo?">
+<title>¿Qué caracteriza un buen prompt de protocolo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="158.61" cy="95.05" rx="108.28" ry="108.28" fill="hsl(265 90% 58% / 0.238)"/>
+<ellipse cx="120.6" cy="124.38" rx="86.22" ry="86.22" fill="hsl(265 90% 58% / 0.229)"/>
+<ellipse cx="50.4" cy="232.09" rx="162.56" ry="162.56" fill="hsl(265 90% 58% / 0.228)"/>
+<ellipse cx="416.15" cy="34.72" rx="164.84" ry="164.84" fill="hsl(265 90% 58% / 0.181)"/>
+<ellipse cx="110" cy="125" rx="11" ry="11" fill="#00ffcc"/>
+<text x="140" y="125" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">positivo</text>
+<ellipse cx="110" cy="220" rx="11" ry="11" fill="#b388ff"/>
+<text x="140" y="220" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">formato</text>
+<ellipse cx="110" cy="315" rx="11" ry="11" fill="#39ff14"/>
+<text x="140" y="315" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">parada</text>
+<ellipse cx="110" cy="410" rx="11" ry="11" fill="#ff007f"/>
+<text x="140" y="410" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">referencias</text>
+</svg>

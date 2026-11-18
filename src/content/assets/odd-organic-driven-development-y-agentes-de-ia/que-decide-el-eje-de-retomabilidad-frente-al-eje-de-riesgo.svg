@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué decide el eje de retomabilidad frente al eje de riesgo?">
+<title>¿Qué decide el eje de retomabilidad frente al eje de riesgo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="151.55" cy="259.11" rx="186.58" ry="186.58" fill="hsl(265 90% 58% / 0.175)"/>
+<ellipse cx="406.22" cy="487.84" rx="180.86" ry="180.86" fill="hsl(265 90% 58% / 0.156)"/>
+<ellipse cx="47.75" cy="420.17" rx="87.3" ry="87.3" fill="hsl(265 90% 58% / 0.151)"/>
+<ellipse cx="404.81" cy="127.87" rx="146.81" ry="146.81" fill="hsl(265 90% 58% / 0.189)"/>
+<rect x="48" y="150" width="190" height="190" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="62" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">retomabilidad</text>
+<rect x="274" y="150" width="190" height="190" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="288" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">riesgo</text>
+<line x1="240" y1="245" x2="261.2" y2="245" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="272,245 261.87,251.43 261.87,238.57" fill="#39ff14"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">documento o verificación</text>
+</svg>

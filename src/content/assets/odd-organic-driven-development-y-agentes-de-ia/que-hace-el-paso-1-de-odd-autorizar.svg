@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué hace el paso 1 de ODD, autorizar?">
+<title>¿Qué hace el paso 1 de ODD, autorizar?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="232.14" cy="161.62" rx="134.11" ry="134.11" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="312.64" cy="504.4" rx="78.04" ry="78.04" fill="hsl(265 90% 58% / 0.18)"/>
+<ellipse cx="140.56" cy="174.84" rx="128.5" ry="128.5" fill="hsl(265 90% 58% / 0.237)"/>
+<ellipse cx="362.81" cy="96.81" rx="102.3" ry="102.3" fill="hsl(265 90% 58% / 0.212)"/>
+<polygon points="256,95 398,180 256,265 114,180" fill="rgba(255, 204, 0, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">¿cambio?</text>
+<line x1="190" y1="258" x2="150.72" y2="320.84" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="145,330 144.92,318 155.82,324.82" fill="#00ffcc"/>
+<line x1="322" y1="258" x2="361.28" y2="320.84" stroke="#ff007f" stroke-width="2" stroke-linecap="round"/>
+<polygon points="367,330 356.18,324.82 367.08,318" fill="#ff007f"/>
+<rect x="65" y="350" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="145" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#00ffcc">consulta</text>
+<rect x="287" y="350" width="160" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="367" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#ff007f">cambio</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se regula el presupuesto de lectura en el paso 2?">
+<title>¿Cómo se regula el presupuesto de lectura en el paso 2?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="502.95" cy="131.74" rx="146.75" ry="146.75" fill="hsl(265 90% 58% / 0.218)"/>
+<ellipse cx="153.14" cy="350.74" rx="136" ry="136" fill="hsl(265 90% 58% / 0.219)"/>
+<ellipse cx="394.88" cy="322.6" rx="164.58" ry="164.58" fill="hsl(265 90% 58% / 0.149)"/>
+<ellipse cx="295.89" cy="372.68" rx="137.82" ry="137.82" fill="hsl(265 90% 58% / 0.18)"/>
+<line x1="90" y1="140" x2="422" y2="140" stroke="#8a7fb5" stroke-width="12" stroke-linecap="round"/>
+<line x1="90" y1="140" x2="200" y2="140" stroke="#00ffcc" stroke-width="12" stroke-linecap="round"/>
+<text x="256" y="106" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">proporción</text>
+<line x1="90" y1="256" x2="422" y2="256" stroke="#8a7fb5" stroke-width="12" stroke-linecap="round"/>
+<line x1="90" y1="256" x2="275" y2="256" stroke="#b388ff" stroke-width="12" stroke-linecap="round"/>
+<text x="256" y="222" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">contexto</text>
+<line x1="90" y1="372" x2="422" y2="372" stroke="#8a7fb5" stroke-width="12" stroke-linecap="round"/>
+<line x1="90" y1="372" x2="350" y2="372" stroke="#39ff14" stroke-width="12" stroke-linecap="round"/>
+<text x="256" y="338" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">delegar</text>
+</svg>

@@ -54,8 +54,8 @@ describe('TopicsHub (category-first, spec-17 T5)', () => {
     const { container } = mount(<TopicsHub />);
     const link = container.querySelector('a[href="#/categoria/ia"]');
     expect(link).toBeTruthy();
-    expect(link.textContent).toContain('1 tema');
-    expect(link.textContent).toContain('28 cartas');
+    expect(link.textContent).toContain('2 temas');
+    expect(link.textContent).toContain('103 cartas');
   });
 
   it('Idiomas and Universidad show Próximamente', () => {

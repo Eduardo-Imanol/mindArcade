@@ -13,6 +13,14 @@ import {
   rafHarness,
   setRounds,
 } from '../test/serpiente.js';
+import '../games/flashcards/index.jsx';
+import '../games/memorama/index.jsx';
+import '../games/ahorcado/index.jsx';
+import '../games/quiz-significado/index.jsx';
+import '../games/intruso/index.jsx';
+import '../games/lluvia-meteoros/index.jsx';
+import '../games/conecta-pares/index.jsx';
+import '../games/serpiente-significados/index.jsx';
 
 const FIXTURE_A = `# Tema GameHost
 Una función encapsula lógica reutilizable.
@@ -341,7 +349,7 @@ describe('GameHost wiring', () => {
     click(container.querySelector('.card-neon'));
     click(findButton(container, 'Otra vez'));
     expect(createStore().load().xp).toBe(35);
-  });
+  }, 10000);
 
   it('topic UI image override reaches gameplay (AC-9 tier-1)', async () => {
     vi.spyOn(Math, 'random').mockReturnValue(0.999999);

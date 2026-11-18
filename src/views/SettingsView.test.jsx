@@ -95,7 +95,7 @@ describe('SettingsView (spec-23 AC-2)', () => {
       row.querySelector('dd').textContent,
     ]);
     expect(facts).toEqual([
-      ['Temas', '7'],
+      ['Temas', '8'],
       ['Cartas aprendidas', `1 / ${totalCards}`],
       ['Ejercicios aprendidos', '2'],
       ['Rondas arcade', '2'],

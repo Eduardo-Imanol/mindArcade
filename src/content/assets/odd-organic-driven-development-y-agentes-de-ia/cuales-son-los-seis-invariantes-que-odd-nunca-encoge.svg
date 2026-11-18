@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuáles son los seis invariantes que ODD nunca encoge?">
+<title>¿Cuáles son los seis invariantes que ODD nunca encoge?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="371.13" cy="407.96" rx="101.16" ry="101.16" fill="hsl(265 90% 58% / 0.179)"/>
+<ellipse cx="73.2" cy="87.48" rx="198.47" ry="198.47" fill="hsl(265 90% 58% / 0.189)"/>
+<ellipse cx="249.07" cy="23.8" rx="138.07" ry="138.07" fill="hsl(265 90% 58% / 0.215)"/>
+<ellipse cx="254.48" cy="94.51" rx="138.04" ry="138.04" fill="hsl(265 90% 58% / 0.172)"/>
+<ellipse cx="110" cy="125" rx="11" ry="11" fill="#00ffcc"/>
+<text x="140" y="125" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">pregunta</text>
+<ellipse cx="110" cy="220" rx="11" ry="11" fill="#b388ff"/>
+<text x="140" y="220" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">explorar</text>
+<ellipse cx="110" cy="315" rx="11" ry="11" fill="#39ff14"/>
+<text x="140" y="315" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">literal</text>
+<ellipse cx="110" cy="410" rx="11" ry="11" fill="#ff007f"/>
+<text x="140" y="410" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">evidencia</text>
+</svg>

@@ -72,7 +72,7 @@ Tema de prueba sin entrada en library.js.
     expect(topic.sourcePath).toBeNull();
   });
 
-  it('loadCatalog loads the seven nested built-ins with metadata', () => {
+  it('loadCatalog loads the eight nested built-ins with metadata', () => {
     const builtins = loadCatalog().filter((t) => t.source === 'builtin');
     expect(builtins.map((t) => t.id).sort()).toEqual(
       [
@@ -81,6 +81,7 @@ Tema de prueba sin entrada en library.js.
         'control-de-versiones-avanzado-con-git',
         'estructuras-de-datos',
         'funciones-en-programacion',
+        'odd-organic-driven-development-y-agentes-de-ia',
         'persistencia-local-pwas-y-offline-first',
         'rea-opencode-ingenieria-inversa-con-agentes',
       ].sort()
@@ -92,6 +93,11 @@ Tema de prueba sin entrada en library.js.
         expect(topic.sourcePath).toBe(
           'personalizados/arquitectura-de-la-atraccion-y-calibracion-social.md'
         );
+      } else if (topic.id === 'odd-organic-driven-development-y-agentes-de-ia') {
+        expect(topic.categoryId).toBe('ia');
+        expect(topic.moduleId).toBe('ia-m1');
+        expect(topic.moduleTitle).toBe('Módulo 1: Programación de IA');
+        expect(topic.sourcePath).toBe('ia/odd-desarrollo-organico-con-agentes.md');
       } else if (topic.id === 'rea-opencode-ingenieria-inversa-con-agentes') {
         expect(topic.categoryId).toBe('ia');
         expect(topic.moduleId).toBe('ia-m1');

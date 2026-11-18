@@ -41,7 +41,7 @@ afterEach(() => {
 describe('GameHost exercise integration (spec-21 T19)', () => {
   it('loads the lazy document, validates the deck and passes exercise props', async () => {
     mount(<GameHost topicId={TOPIC_ID} gameId="codigo-test" />);
-    await waitFor(() => fake.props);
+    await waitFor(() => fake.props?.exercises);
 
     expect(fake.props.exercises).toBeTruthy();
     expect(fake.props.exercises.errors).toEqual([]);

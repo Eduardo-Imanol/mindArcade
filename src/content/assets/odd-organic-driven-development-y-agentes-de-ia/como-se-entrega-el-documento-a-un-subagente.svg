@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se entrega el documento a un subagente?">
+<title>¿Cómo se entrega el documento a un subagente?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="395.47" cy="413.17" rx="86.7" ry="86.7" fill="hsl(265 90% 58% / 0.204)"/>
+<ellipse cx="365.27" cy="456.8" rx="170.71" ry="170.71" fill="hsl(265 90% 58% / 0.178)"/>
+<ellipse cx="464.93" cy="178.49" rx="97.95" ry="97.95" fill="hsl(265 90% 58% / 0.156)"/>
+<ellipse cx="338.31" cy="390.29" rx="150.06" ry="150.06" fill="hsl(265 90% 58% / 0.225)"/>
+<rect x="48" y="180" width="160" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="62" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">documento</text>
+<line x1="212" y1="255" x2="289.2" y2="255" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,255 289.87,261.43 289.87,248.57" fill="#39ff14"/>
+<rect x="304" y="180" width="160" height="150" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="318" y="198" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">ruta + IDs</text>
+<text x="256" y="400" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">subagente</text>
+</svg>

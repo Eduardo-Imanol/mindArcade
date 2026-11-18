@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué lectura recomienda la guía de los benchmarks de Gentle-AI?">
+<title>¿Qué lectura recomienda la guía de los benchmarks de Gentle-AI?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="343.34" cy="386.92" rx="182.89" ry="182.89" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="63.99" cy="305.16" rx="147.93" ry="147.93" fill="hsl(265 90% 58% / 0.211)"/>
+<ellipse cx="39.58" cy="339.36" rx="167.74" ry="167.74" fill="hsl(265 90% 58% / 0.171)"/>
+<ellipse cx="496.95" cy="215.36" rx="90.25" ry="90.25" fill="hsl(265 90% 58% / 0.166)"/>
+<rect x="55" y="140" width="180" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#00ffcc">bajo riesgo</text>
+<rect x="277" y="140" width="180" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="291" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#ff007f">alto riesgo</text>
+<line x1="256" y1="150" x2="256" y2="330" stroke="#8a7fb5" stroke-width="2" stroke-linecap="round"/>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">una ejecución</text>
+</svg>

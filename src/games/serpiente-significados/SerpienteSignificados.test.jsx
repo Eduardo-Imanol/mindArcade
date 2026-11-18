@@ -65,6 +65,7 @@ const mountGame = (props = {}) =>
   );
 
 afterEach(() => {
+  vi.restoreAllMocks();
   vi.unstubAllGlobals();
   vi.useRealTimers();
   Object.defineProperty(document, 'hidden', { value: false, configurable: true });
@@ -159,6 +160,7 @@ describe('serpiente-significados setup', () => {
   });
 
   it('dispatches at most one step per animation tick', () => {
+    const random = vi.spyOn(Math, 'random').mockReturnValue(0);
     const harness = rafHarness();
     const view = mountGame();
     startGame(view.container, { rounds: 4 });
@@ -169,6 +171,7 @@ describe('serpiente-significados setup', () => {
     harness.step(100, 2);
     expect(headCell(view.container)).toEqual({ x: start.x + 2, y: start.y });
     view.unmount();
+    random.mockRestore();
   });
 
   it('uses a 15x15 board and the D-pad on mobile', () => {
