@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se forma la inversión con &quot;Never&quot; al inicio de una oración?">
+<title>¿Cómo se forma la inversión con &quot;Never&quot; al inicio de una oración?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="363.56" cy="82.03" rx="146.58" ry="146.58" fill="hsl(120 90% 58% / 0.193)"/>
+<ellipse cx="55.33" cy="382.71" rx="83.92" ry="83.92" fill="hsl(120 90% 58% / 0.145)"/>
+<ellipse cx="209.04" cy="173.45" rx="122.59" ry="122.59" fill="hsl(120 90% 58% / 0.153)"/>
+<ellipse cx="113.74" cy="372.24" rx="173.17" ry="173.17" fill="hsl(120 90% 58% / 0.203)"/>
+<rect x="60" y="170" width="392" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="188" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">normal</text>
+<text x="256" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">I have never seen...</text>
+<rect x="60" y="290" width="392" height="80" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="74" y="308" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">inversión</text>
+<text x="256" y="340" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">Never have I seen...</text>
+<line x1="170" y1="255" x2="170" y2="274.2" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="170,285 163.57,274.87 176.43,274.87" fill="#ffcc00"/>
+<line x1="280" y1="285" x2="280" y2="265.8" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280,255 286.43,265.13 273.57,265.13" fill="#ffcc00"/>
+<rect x="106" y="90" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">Never + aux + sujeto</text>
+</svg>

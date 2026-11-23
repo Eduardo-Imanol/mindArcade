@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la palabra &quot;straightforward&quot;?">
+<title>¿Qué significa la palabra &quot;straightforward&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="49.86" cy="141.54" rx="137.47" ry="137.47" fill="hsl(320 90% 58% / 0.186)"/>
+<ellipse cx="113.47" cy="385.73" rx="161.88" ry="161.88" fill="hsl(320 90% 58% / 0.141)"/>
+<ellipse cx="161.27" cy="241.06" rx="172.07" ry="172.07" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="394.2" cy="215.42" rx="92.97" ry="92.97" fill="hsl(320 90% 58% / 0.155)"/>
+<line x1="80" y1="330" x2="421.2" y2="330" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="432,330 421.87,336.43 421.87,323.57" fill="#39ff14"/>
+<polyline points="80,250 180,180 280,270 360,190 432,250" fill="none" stroke="#ff007f" stroke-width="3"/>
+<rect x="131" y="90" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">straightforward</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">directo y sencillo</text>
+</svg>

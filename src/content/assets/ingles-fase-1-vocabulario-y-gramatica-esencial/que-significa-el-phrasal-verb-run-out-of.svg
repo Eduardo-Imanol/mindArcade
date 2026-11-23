@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa el phrasal verb &quot;run out of&quot;?">
+<title>¿Qué significa el phrasal verb &quot;run out of&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="282.42" cy="121.02" rx="183.71" ry="183.71" fill="hsl(265 90% 58% / 0.22)"/>
+<ellipse cx="328.52" cy="78.96" rx="120.87" ry="120.87" fill="hsl(265 90% 58% / 0.174)"/>
+<ellipse cx="356.47" cy="323.53" rx="120.04" ry="120.04" fill="hsl(265 90% 58% / 0.166)"/>
+<ellipse cx="317.66" cy="470.22" rx="118.08" ry="118.08" fill="hsl(265 90% 58% / 0.208)"/>
+<rect x="176" y="150" width="160" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="190" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">coffee</text>
+<rect x="186" y="290" width="140" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="256" y="325" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">vacío</text>
+<rect x="186" y="170" width="140" height="120" rx="12" fill="none" stroke="#8a7fb5" stroke-width="2.5"/>
+<line x1="256" y1="120" x2="256" y2="139.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="256,150 249.57,139.87 262.43,139.87" fill="#ff007f"/>
+<rect x="156" y="410" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">run out of</text>
+</svg>

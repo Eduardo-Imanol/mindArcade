@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la palabra &quot;resilient&quot;?">
+<title>¿Qué significa la palabra &quot;resilient&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="309.34" cy="264.43" rx="103.78" ry="103.78" fill="hsl(265 90% 58% / 0.218)"/>
+<ellipse cx="229.2" cy="483.73" rx="87.25" ry="87.25" fill="hsl(265 90% 58% / 0.18)"/>
+<ellipse cx="23.78" cy="407.3" rx="139.84" ry="139.84" fill="hsl(265 90% 58% / 0.229)"/>
+<ellipse cx="434.71" cy="180.75" rx="198.61" ry="198.61" fill="hsl(265 90% 58% / 0.145)"/>
+<line x1="80" y1="360" x2="432" y2="360" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<polyline points="100,200 170,360 240,240 310,360 380,280" fill="none" stroke="#39ff14" stroke-width="5"/>
+<line x1="380" y1="280" x2="405.17" y2="229.66" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<polygon points="410,220 411.22,231.94 399.72,226.19" fill="#00ffcc"/>
+<rect x="161" y="90" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#39ff14">resilient</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">cae y se recupera</text>
+</svg>

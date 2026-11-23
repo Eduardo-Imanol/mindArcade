@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué expresa la expresión &quot;the ball is in your court&quot;?">
+<title>¿Qué expresa la expresión &quot;the ball is in your court&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="266.84" cy="463.03" rx="115.32" ry="115.32" fill="hsl(168 90% 58% / 0.145)"/>
+<ellipse cx="80.33" cy="38.06" rx="166.36" ry="166.36" fill="hsl(168 90% 58% / 0.206)"/>
+<ellipse cx="238.76" cy="305.44" rx="153.01" ry="153.01" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="335.73" cy="442.17" rx="173.63" ry="173.63" fill="hsl(168 90% 58% / 0.176)"/>
+<rect x="60" y="160" width="170" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="74" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">yo</text>
+<rect x="282" y="160" width="170" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="296" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">tú</text>
+<ellipse cx="350" cy="260" rx="25" ry="25" fill="none" stroke="#f1f1f1" stroke-width="2"/>
+<ellipse cx="350" cy="260" rx="26" ry="26" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="350" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">ball</text>
+<line x1="210" y1="260" x2="289.2" y2="260" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="300,260 289.87,266.43 289.87,253.57" fill="#39ff14"/>
+<rect x="156" y="90" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">your court</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">te toca decidir</text>
+</svg>

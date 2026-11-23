@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la expresión &quot;cut corners&quot;?">
+<title>¿Qué significa la expresión &quot;cut corners&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="292.27" cy="485.47" rx="118.27" ry="118.27" fill="hsl(320 90% 58% / 0.195)"/>
+<ellipse cx="321.8" cy="376.98" rx="156.78" ry="156.78" fill="hsl(320 90% 58% / 0.191)"/>
+<ellipse cx="207.54" cy="192.81" rx="176.76" ry="176.76" fill="hsl(320 90% 58% / 0.189)"/>
+<ellipse cx="499.03" cy="44.81" rx="167.48" ry="167.48" fill="hsl(320 90% 58% / 0.21)"/>
+<rect x="70" y="170" width="372" height="220" rx="12" fill="none" stroke="#8a7fb5" stroke-width="2.5" stroke-dasharray="9 8"/>
+<line x1="100" y1="340" x2="412" y2="340" stroke="#39ff14" stroke-width="4" stroke-linecap="round"/>
+<line x1="100" y1="340" x2="256" y2="220" stroke="#ff007f" stroke-width="4" stroke-linecap="round"/>
+<line x1="256" y1="220" x2="412" y2="340" stroke="#ff007f" stroke-width="4" stroke-linecap="round"/>
+<rect x="146" y="100" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="120" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ff007f">cut corners</text>
+<text x="256" y="370" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">camino completo</text>
+<text x="256" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ff007f">atajo arriesgado</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">escatimar calidad</text>
+</svg>

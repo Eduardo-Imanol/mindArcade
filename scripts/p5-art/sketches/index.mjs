@@ -37,6 +37,7 @@ import * as atraccionFundamentos from './atraccion-fundamentos.mjs';
 import * as atraccionVsp from './atraccion-vsp.mjs';
 import * as atraccionNoVerbal from './atraccion-no-verbal.mjs';
 import { ODD_AGENTES_SKETCHES } from './odd-agentes.mjs';
+import { INGLES_FASE1_SKETCHES } from './ingles-fase1.mjs';
 
 export const SKETCHES = {
   'que-es-una-funcion-en-dart': basics.queEsUnaFuncionEnDart,
@@ -637,4 +638,5 @@ export const SKETCHES = {
   'cuando-funciona-el-teasing-y-por-que-se-descarta-el-negging': atraccionNoVerbal.cuandoFuncionaElTeasingYPorQueSeDescartaElNegging,
   ...ESTRUCTURAS_DATOS_SKETCHES,
   ...ODD_AGENTES_SKETCHES,
+  ...INGLES_FASE1_SKETCHES,
 };

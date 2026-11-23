@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la diferencia entre &quot;sensible&quot; y &quot;sensitive&quot; en inglés?">
+<title>¿Cuál es la diferencia entre &quot;sensible&quot; y &quot;sensitive&quot; en inglés?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="349.83" cy="46.58" rx="135.85" ry="135.85" fill="hsl(265 90% 58% / 0.232)"/>
+<ellipse cx="40.9" cy="258.19" rx="182.59" ry="182.59" fill="hsl(265 90% 58% / 0.171)"/>
+<ellipse cx="408.48" cy="346.45" rx="91.82" ry="91.82" fill="hsl(265 90% 58% / 0.214)"/>
+<ellipse cx="195.63" cy="505.32" rx="170.29" ry="170.29" fill="hsl(265 90% 58% / 0.219)"/>
+<rect x="55" y="150" width="185" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">sensible</text>
+<text x="147" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sensato</text>
+<text x="147" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">razonable</text>
+<rect x="272" y="150" width="185" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="286" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">sensitive</text>
+<text x="364" y="235" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">sensible</text>
+<text x="364" y="275" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">delicado</text>
+<rect x="156" y="90" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">falso amigo</text>
+</svg>

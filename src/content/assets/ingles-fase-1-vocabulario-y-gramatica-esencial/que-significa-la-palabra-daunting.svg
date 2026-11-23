@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la palabra &quot;daunting&quot;?">
+<title>¿Qué significa la palabra &quot;daunting&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="444.65" cy="309.32" rx="128.25" ry="128.25" fill="hsl(265 90% 58% / 0.207)"/>
+<ellipse cx="504.05" cy="511.07" rx="134.19" ry="134.19" fill="hsl(265 90% 58% / 0.155)"/>
+<ellipse cx="227.08" cy="308.95" rx="170.52" ry="170.52" fill="hsl(265 90% 58% / 0.193)"/>
+<ellipse cx="328.35" cy="318.43" rx="124.43" ry="124.43" fill="hsl(265 90% 58% / 0.174)"/>
+<rect x="110" y="260" width="292" height="140" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="124" y="278" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">inicio</text>
+<rect x="170" y="100" width="172" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="184" y="118" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">reto</text>
+<text x="256" y="165" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">parece enorme</text>
+<line x1="256" y1="255" x2="256" y2="235.8" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="256,225 262.43,235.13 249.57,235.13" fill="#ffcc00"/>
+<rect x="171" y="410" width="170" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">daunting</text>
+</svg>

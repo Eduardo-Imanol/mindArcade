@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué expresa la expresión &quot;to be in the same boat&quot;?">
+<title>¿Qué expresa la expresión &quot;to be in the same boat&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="384.19" cy="66.87" rx="140.72" ry="140.72" fill="hsl(45 90% 58% / 0.144)"/>
+<ellipse cx="253.34" cy="336" rx="153.51" ry="153.51" fill="hsl(45 90% 58% / 0.175)"/>
+<ellipse cx="426.25" cy="66.69" rx="136.72" ry="136.72" fill="hsl(45 90% 58% / 0.144)"/>
+<ellipse cx="410.98" cy="248.3" rx="116.44" ry="116.44" fill="hsl(45 90% 58% / 0.199)"/>
+<line x1="90" y1="300" x2="150" y2="360" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+<line x1="150" y1="360" x2="362" y2="360" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+<line x1="362" y1="360" x2="422" y2="300" stroke="#00ffcc" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="210" cy="270" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="210" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<ellipse cx="302" cy="270" rx="28" ry="28" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="302" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="80" y1="370" x2="432" y2="370" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<rect x="156" y="90" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">same boat</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">misma situación difícil</text>
+</svg>

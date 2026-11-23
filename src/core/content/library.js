@@ -61,7 +61,15 @@ export const CATEGORIES = Object.freeze([
     title: 'Idiomas',
     description: 'Vocabulario y gramática para practicar con juegos.',
     order: 3,
-    modules: Object.freeze([]),
+    modules: Object.freeze([
+      Object.freeze({
+        id: 'idiomas-m1',
+        title: 'Módulo 1: Inglés — Fase 1',
+        description: 'Vocabulario, phrasal verbs, gramática y falsos amigos en mazos de repaso.',
+        order: 1,
+        topicIds: Object.freeze(['ingles-fase-1-vocabulario-y-gramatica-esencial']),
+      }),
+    ]),
   }),
   Object.freeze({
     id: 'universidad',
@@ -94,6 +102,8 @@ export const SOURCE_BY_TOPIC = Object.freeze({
   'odd-organic-driven-development-y-agentes-de-ia': 'ia/odd-desarrollo-organico-con-agentes.md',
   'arquitectura-de-la-atraccion-y-calibracion-social':
     'personalizados/arquitectura-de-la-atraccion-y-calibracion-social.md',
+  'ingles-fase-1-vocabulario-y-gramatica-esencial':
+    'idiomas/ingles-fase-1-vocabulario-y-gramatica-esencial.md',
 });
 
 function freezeMap(map) {

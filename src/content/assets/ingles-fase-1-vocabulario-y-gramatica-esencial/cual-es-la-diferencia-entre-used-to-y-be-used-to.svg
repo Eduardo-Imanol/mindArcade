@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la diferencia entre &quot;used to&quot; y &quot;be used to&quot;?">
+<title>¿Cuál es la diferencia entre &quot;used to&quot; y &quot;be used to&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="135.17" cy="383.82" rx="181.61" ry="181.61" fill="hsl(265 90% 58% / 0.229)"/>
+<ellipse cx="96.69" cy="142.54" rx="155.58" ry="155.58" fill="hsl(265 90% 58% / 0.176)"/>
+<ellipse cx="254.42" cy="117.69" rx="142.52" ry="142.52" fill="hsl(265 90% 58% / 0.168)"/>
+<ellipse cx="252.18" cy="500.81" rx="202.49" ry="202.49" fill="hsl(265 90% 58% / 0.217)"/>
+<rect x="55" y="140" width="185" height="210" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">used to</text>
+<text x="147" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">hábito pasado</text>
+<text x="147" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">ya no ocurre</text>
+<rect x="272" y="140" width="185" height="210" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="286" y="158" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">be used to</text>
+<text x="364" y="230" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">acostumbrado</text>
+<text x="364" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">ahora es normal</text>
+<rect x="141" y="90" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">pasado vs hábito</text>
+</svg>

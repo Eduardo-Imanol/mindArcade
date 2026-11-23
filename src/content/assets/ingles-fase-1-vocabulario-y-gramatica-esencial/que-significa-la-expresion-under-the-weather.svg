@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la expresión &quot;under the weather&quot;?">
+<title>¿Qué significa la expresión &quot;under the weather&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="59.35" cy="404.04" rx="92.34" ry="92.34" fill="hsl(168 90% 58% / 0.165)"/>
+<ellipse cx="103.03" cy="283.11" rx="173.63" ry="173.63" fill="hsl(168 90% 58% / 0.234)"/>
+<ellipse cx="158.55" cy="28.25" rx="132.73" ry="132.73" fill="hsl(168 90% 58% / 0.156)"/>
+<ellipse cx="316.38" cy="206.58" rx="138.5" ry="138.5" fill="hsl(168 90% 58% / 0.148)"/>
+<ellipse cx="256" cy="300" rx="42" ry="42" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#f1f1f1">me</text>
+<ellipse cx="256" cy="170" rx="70" ry="35" fill="none" stroke="#8a7fb5" stroke-width="4"/>
+<line x1="220" y1="210" x2="212" y2="240" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<line x1="245" y1="210" x2="237" y2="240" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<line x1="270" y1="210" x2="262" y2="240" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<line x1="295" y1="210" x2="287" y2="240" stroke="#00ffcc" stroke-width="2" stroke-linecap="round"/>
+<rect x="126" y="90" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">under the weather</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">sentirse mal</text>
+</svg>

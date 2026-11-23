@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la diferencia entre &quot;actually&quot; y &quot;currently&quot; en inglés?">
+<title>¿Cuál es la diferencia entre &quot;actually&quot; y &quot;currently&quot; en inglés?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="282.98" cy="349.46" rx="118.76" ry="118.76" fill="hsl(45 90% 58% / 0.214)"/>
+<ellipse cx="400.2" cy="112.19" rx="202.53" ry="202.53" fill="hsl(45 90% 58% / 0.205)"/>
+<ellipse cx="312.52" cy="212.58" rx="101.96" ry="101.96" fill="hsl(45 90% 58% / 0.158)"/>
+<ellipse cx="288.24" cy="246.26" rx="150.94" ry="150.94" fill="hsl(45 90% 58% / 0.159)"/>
+<rect x="55" y="150" width="185" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">actually</text>
+<text x="147" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">en realidad</text>
+<rect x="272" y="150" width="185" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">currently</text>
+<text x="364" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">actualmente</text>
+<line x1="240" y1="150" x2="272" y2="350" stroke="#ffcc00" stroke-width="5" stroke-linecap="round"/>
+<line x1="272" y1="150" x2="240" y2="350" stroke="#ffcc00" stroke-width="5" stroke-linecap="round"/>
+<rect x="156" y="90" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ffcc00">falso amigo</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">no significan lo mismo</text>
+</svg>
