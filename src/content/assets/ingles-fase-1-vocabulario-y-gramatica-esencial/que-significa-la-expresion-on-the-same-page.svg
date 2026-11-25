@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la expresión &quot;on the same page&quot;?">
+<title>¿Qué significa la expresión &quot;on the same page&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="397.71" cy="110.64" rx="118.93" ry="118.93" fill="hsl(265 90% 58% / 0.201)"/>
+<ellipse cx="414.61" cy="277.89" rx="130.37" ry="130.37" fill="hsl(265 90% 58% / 0.201)"/>
+<ellipse cx="134.57" cy="387.11" rx="142.47" ry="142.47" fill="hsl(265 90% 58% / 0.208)"/>
+<ellipse cx="292.5" cy="184.84" rx="185.18" ry="185.18" fill="hsl(265 90% 58% / 0.194)"/>
+<rect x="55" y="175" width="180" height="145" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="69" y="193" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">A</text>
+<rect x="277" y="175" width="180" height="145" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="291" y="193" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">B</text>
+<line x1="115" y1="355" x2="397" y2="355" stroke="#39ff14" stroke-width="6" stroke-linecap="round"/>
+<rect x="131" y="90" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#39ff14">on the same page</text>
+<text x="256" y="410" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">misma sintonía</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la palabra &quot;reluctant&quot;?">
+<title>¿Qué significa la palabra &quot;reluctant&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="315.22" cy="458.67" rx="140.36" ry="140.36" fill="hsl(320 90% 58% / 0.184)"/>
+<ellipse cx="485.48" cy="347.52" rx="173.48" ry="173.48" fill="hsl(320 90% 58% / 0.219)"/>
+<ellipse cx="360.06" cy="135.27" rx="130.66" ry="130.66" fill="hsl(320 90% 58% / 0.213)"/>
+<ellipse cx="208.98" cy="494.8" rx="106.67" ry="106.67" fill="hsl(320 90% 58% / 0.18)"/>
+<ellipse cx="130" cy="260" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">él</text>
+<rect x="300" y="200" width="150" height="120" rx="12" fill="none" stroke="#ff007f" stroke-width="2.5"/>
+<text x="375" y="260" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#f1f1f1">admitir</text>
+<line x1="175" y1="260" x2="279.2" y2="260" stroke="#ffcc00" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="290,260 279.87,266.43 279.87,253.57" fill="#ffcc00"/>
+<line x1="205" y1="170" x2="235" y2="200" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<line x1="235" y1="170" x2="205" y2="200" stroke="#ff007f" stroke-width="5" stroke-linecap="round"/>
+<rect x="161" y="90" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" fill="#ffcc00">reluctant</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">reacio, poco dispuesto</text>
+</svg>

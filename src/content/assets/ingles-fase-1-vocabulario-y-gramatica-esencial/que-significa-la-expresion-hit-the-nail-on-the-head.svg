@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la expresión &quot;hit the nail on the head&quot;?">
+<title>¿Qué significa la expresión &quot;hit the nail on the head&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="338.49" cy="290.47" rx="153.74" ry="153.74" fill="hsl(265 90% 58% / 0.148)"/>
+<ellipse cx="261.06" cy="418.94" rx="174" ry="174" fill="hsl(265 90% 58% / 0.212)"/>
+<ellipse cx="309.96" cy="379.76" rx="199.24" ry="199.24" fill="hsl(265 90% 58% / 0.171)"/>
+<ellipse cx="6.25" cy="291.58" rx="155.34" ry="155.34" fill="hsl(265 90% 58% / 0.188)"/>
+<line x1="256" y1="285" x2="256" y2="390" stroke="#8a7fb5" stroke-width="10" stroke-linecap="round"/>
+<ellipse cx="256" cy="265" rx="29" ry="29" fill="rgba(57, 255, 20, 0.15)" stroke="#39ff14" stroke-width="3"/>
+<line x1="110" y1="150" x2="219.59" y2="238.23" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="228,245 216.08,243.65 224.14,233.64" fill="#ffcc00"/>
+<rect x="106" y="90" width="300" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#39ff14">hit the nail on the head</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#8a7fb5">dar en el clavo</text>
+</svg>

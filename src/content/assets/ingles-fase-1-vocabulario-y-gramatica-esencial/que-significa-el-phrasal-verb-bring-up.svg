@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa el phrasal verb &quot;bring up&quot;?">
+<title>¿Qué significa el phrasal verb &quot;bring up&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="499.24" cy="410.93" rx="200.29" ry="200.29" fill="hsl(168 90% 58% / 0.159)"/>
+<ellipse cx="348.92" cy="310.12" rx="119.54" ry="119.54" fill="hsl(168 90% 58% / 0.175)"/>
+<ellipse cx="454.22" cy="303.5" rx="83.42" ry="83.42" fill="hsl(168 90% 58% / 0.201)"/>
+<ellipse cx="465.42" cy="421.67" rx="109.42" ry="109.42" fill="hsl(168 90% 58% / 0.239)"/>
+<rect x="80" y="240" width="180" height="120" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<text x="94" y="258" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#8a7fb5">charla</text>
+<rect x="310" y="155" width="110" height="50" rx="10" fill="rgba(255, 0, 127, 0.1)" stroke="#00ffcc" stroke-width="2"/>
+<text x="365" y="180" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">tema</text>
+<line x1="265" y1="275" x2="308.72" y2="213.79" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="315,205 314.34,216.98 303.88,209.51" fill="#39ff14"/>
+<rect x="166" y="90" width="180" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">bring up</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">sacar un tema en la conversación</text>
+</svg>

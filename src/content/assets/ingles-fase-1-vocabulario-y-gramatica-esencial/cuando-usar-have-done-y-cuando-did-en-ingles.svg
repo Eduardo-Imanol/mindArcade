@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuándo usar &quot;have done&quot; y cuándo &quot;did&quot; en inglés?">
+<title>¿Cuándo usar &quot;have done&quot; y cuándo &quot;did&quot; en inglés?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="21.44" cy="84.28" rx="130.27" ry="130.27" fill="hsl(320 90% 58% / 0.201)"/>
+<ellipse cx="290.31" cy="120.5" rx="173.64" ry="173.64" fill="hsl(320 90% 58% / 0.154)"/>
+<ellipse cx="455.76" cy="420.49" rx="99.69" ry="99.69" fill="hsl(320 90% 58% / 0.145)"/>
+<ellipse cx="147.04" cy="108.49" rx="89.25" ry="89.25" fill="hsl(320 90% 58% / 0.201)"/>
+<rect x="55" y="160" width="185" height="190" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">have done</text>
+<text x="147" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">sigue vivo</text>
+<line x1="147" y1="320" x2="147" y2="359.2" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="147,370 140.57,359.87 153.43,359.87" fill="#39ff14"/>
+<rect x="272" y="160" width="185" height="190" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">did</text>
+<text x="364" y="255" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">pasado cerrado</text>
+<line x1="315" y1="355" x2="413" y2="355" stroke="#ff007f" stroke-width="6" stroke-linecap="round"/>
+<rect x="131" y="85" width="250" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">have done vs did</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">abierto vs cerrado</text>
+</svg>

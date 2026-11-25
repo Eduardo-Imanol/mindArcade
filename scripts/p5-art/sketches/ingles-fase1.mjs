@@ -359,6 +359,242 @@ function embarrassedVsPregnant(p) {
   caption(p, 'embarazada ≠ embarrassed', 256, 430, { color: MUTED, size: 18 });
 }
 
+function getAlongWith(p) {
+  baseBg(p);
+  treeNode(p, 150, 250, 'yo', { r: 38, color: CYAN, size: 20 });
+  treeNode(p, 362, 250, 'compañeros', { r: 46, color: GREEN, size: 15 });
+  p.arrow(195, 250, 310, 250, { color: GREEN });
+  badge(p, 256, 110, 'get along with', { color: GREEN, size: 20, w: 230 });
+  caption(p, 'llevarse bien con alguien', 256, 430, { color: MUTED, size: 19 });
+}
+
+function hitTheNailOnTheHead(p) {
+  baseBg(p);
+  p.line(256, 285, 256, 390, { color: MUTED, weight: 10 });
+  p.push();
+  p.fill('rgba(57, 255, 20, 0.15)');
+  p.stroke(GREEN);
+  p.strokeWeight(3);
+  p.circle(256, 265, 58);
+  p.pop();
+  p.arrow(110, 150, 228, 245, { color: AMBER, weight: 4 });
+  badge(p, 256, 110, 'hit the nail on the head', { color: GREEN, size: 17, w: 300 });
+  caption(p, 'dar en el clavo', 256, 440, { color: MUTED, size: 21 });
+}
+
+function reluctant(p) {
+  baseBg(p);
+  treeNode(p, 130, 260, 'él', { r: 36, color: CYAN, size: 20 });
+  dashRect(p, 300, 200, 150, 120, { color: MAGENTA });
+  caption(p, 'admitir', 375, 260, { color: TEXT, size: 19 });
+  p.arrow(175, 260, 290, 260, { color: AMBER, dashed: true });
+  p.push();
+  p.stroke(MAGENTA);
+  p.strokeWeight(5);
+  p.line(205, 170, 235, 200);
+  p.line(235, 170, 205, 200);
+  p.pop();
+  badge(p, 256, 110, 'reluctant', { color: AMBER, size: 24, w: 190 });
+  caption(p, 'reacio, poco dispuesto', 256, 430, { color: MUTED, size: 19 });
+}
+
+function mixedConditional(p) {
+  baseBg(p);
+  fnPill(p, 150, 220, 'If + past perfect', { w: 220, h: 62, color: MAGENTA, size: 17 });
+  fnPill(p, 362, 320, 'would + infinitivo', { w: 230, h: 62, color: GREEN, size: 16 });
+  p.arrow(255, 245, 275, 300, { color: AMBER });
+  badge(p, 256, 110, 'mixed conditional', { color: AMBER, size: 19, w: 260 });
+  caption(p, 'pasado que afecta al presente', 256, 440, { color: MUTED, size: 18 });
+}
+
+function bringUp(p) {
+  baseBg(p);
+  box(p, 80, 240, 180, 120, { color: MUTED, label: 'charla' });
+  varChip(p, 365, 180, 'tema', { w: 110, h: 50, color: CYAN, size: 20 });
+  p.arrow(265, 275, 315, 205, { color: GREEN, dashed: true });
+  badge(p, 256, 110, 'bring up', { color: GREEN, size: 23, w: 180 });
+  caption(p, 'sacar un tema en la conversación', 256, 440, { color: MUTED, size: 18 });
+}
+
+function costAnArmAndALeg(p) {
+  baseBg(p);
+  box(p, 146, 200, 220, 140, { color: MAGENTA, label: 'precio' });
+  caption(p, 'carísimo', 256, 275, { color: TEXT, size: 24 });
+  p.push();
+  p.stroke(AMBER);
+  p.strokeWeight(5);
+  p.line(120, 120, 160, 160);
+  p.line(160, 120, 120, 160);
+  p.pop();
+  badge(p, 286, 110, 'cost an arm and a leg', { color: AMBER, size: 17, w: 300 });
+  caption(p, 'costar un ojo de la cara', 256, 430, { color: MUTED, size: 19 });
+}
+
+function tedious(p) {
+  baseBg(p);
+  for (let i = 0; i < 3; i += 1) {
+    const y = 180 + i * 78;
+    box(p, 166, y, 180, 60, { color: MUTED });
+    p.line(188, y + 20, 324, y + 20, { color: CYAN, weight: 2 });
+    p.line(188, y + 38, 290, y + 38, { color: CYAN, weight: 2 });
+  }
+  dots(p, 180, 445, 332, { color: AMBER });
+  badge(p, 256, 110, 'tedious', { color: AMBER, size: 24, w: 170 });
+  caption(p, 'formularios sin fin', 256, 415, { color: MUTED, size: 18 });
+}
+
+function sayVsTell(p) {
+  baseBg(p);
+  box(p, 55, 160, 185, 200, { color: GREEN, label: 'tell' });
+  caption(p, 'tell me', 147, 250, { color: TEXT, size: 22 });
+  box(p, 272, 160, 185, 200, { color: MAGENTA, label: 'say' });
+  caption(p, 'say to me', 364, 250, { color: TEXT, size: 20 });
+  badge(p, 256, 110, 'say vs tell', { color: AMBER, size: 21, w: 200 });
+  caption(p, 'nunca "say me"', 256, 420, { color: AMBER, size: 19 });
+}
+
+function figureOut(p) {
+  baseBg(p);
+  dashRect(p, 70, 180, 160, 170, { color: MUTED });
+  caption(p, '?', 150, 225, { color: AMBER, size: 30 });
+  caption(p, 'app', 150, 280, { color: TEXT, size: 24 });
+  p.arrow(240, 265, 300, 265, { color: GREEN });
+  treeNode(p, 365, 265, '!', { r: 46, color: GREEN, size: 30 });
+  badge(p, 256, 110, 'figure out', { color: GREEN, size: 23, w: 190 });
+  caption(p, 'descifrar o resolver', 256, 440, { color: MUTED, size: 19 });
+}
+
+function exitVsSuccess(p) {
+  baseBg(p);
+  box(p, 55, 160, 185, 200, { color: CYAN, label: 'exit' });
+  caption(p, 'salida', 147, 255, { color: TEXT, size: 22 });
+  box(p, 272, 160, 185, 200, { color: MAGENTA, label: 'success' });
+  caption(p, 'éxito', 364, 255, { color: TEXT, size: 22 });
+  p.push();
+  p.stroke(AMBER);
+  p.strokeWeight(5);
+  p.line(238, 160, 274, 360);
+  p.line(274, 160, 238, 360);
+  p.pop();
+  badge(p, 256, 110, 'falso amigo', { color: AMBER, size: 22, w: 200 });
+  caption(p, 'exit es salida, no éxito', 256, 430, { color: MUTED, size: 18 });
+}
+
+function runOutOfMilk(p) {
+  baseBg(p);
+  box(p, 176, 150, 160, 220, { color: CYAN, label: 'milk' });
+  dashRect(p, 186, 240, 140, 120, { color: MAGENTA });
+  caption(p, 'sin leche', 256, 300, { color: TEXT, size: 20 });
+  p.arrow(256, 110, 256, 145, { color: MAGENTA, dashed: true });
+  badge(p, 256, 440, 'run out of', { color: MAGENTA, size: 22, w: 190 });
+}
+
+function breakTheIce(p) {
+  baseBg(p);
+  treeNode(p, 130, 270, 'A', { r: 38, color: CYAN, size: 22 });
+  treeNode(p, 382, 270, 'B', { r: 38, color: GREEN, size: 22 });
+  p.line(180, 270, 330, 270, { color: MUTED, weight: 3 });
+  p.push();
+  p.stroke(AMBER);
+  p.strokeWeight(6);
+  p.line(238, 242, 274, 298);
+  p.line(274, 242, 238, 298);
+  p.pop();
+  badge(p, 256, 110, 'break the ice', { color: AMBER, size: 21, w: 220 });
+  caption(p, 'romper el hielo', 256, 430, { color: MUTED, size: 20 });
+}
+
+function overwhelmingWork(p) {
+  baseBg(p);
+  box(p, 96, 170, 140, 70, { color: MUTED });
+  box(p, 276, 170, 140, 70, { color: MUTED });
+  box(p, 186, 260, 140, 70, { color: MAGENTA, label: 'work' });
+  p.arrow(166, 215, 210, 255, { color: AMBER });
+  p.arrow(346, 215, 302, 255, { color: AMBER });
+  badge(p, 256, 110, 'overwhelming', { color: AMBER, size: 21, w: 230 });
+  caption(p, 'carga abrumadora', 256, 430, { color: MUTED, size: 20 });
+}
+
+function presentPerfectVsPastSimple(p) {
+  baseBg(p);
+  box(p, 55, 160, 185, 190, { color: GREEN, label: 'have done' });
+  caption(p, 'sigue vivo', 147, 255, { color: TEXT, size: 18 });
+  p.arrow(147, 320, 147, 370, { color: GREEN });
+  box(p, 272, 160, 185, 190, { color: MAGENTA, label: 'did' });
+  caption(p, 'pasado cerrado', 364, 255, { color: TEXT, size: 17 });
+  p.line(315, 355, 413, 355, { color: MAGENTA, weight: 6 });
+  badge(p, 256, 105, 'have done vs did', { color: AMBER, size: 18, w: 250 });
+  caption(p, 'abierto vs cerrado', 256, 445, { color: MUTED, size: 18 });
+}
+
+function cameAcrossPhoto(p) {
+  baseBg(p);
+  treeNode(p, 130, 265, 'yo', { r: 36, color: CYAN, size: 20 });
+  dashRect(p, 300, 195, 150, 140, { color: MAGENTA });
+  caption(p, 'foto', 375, 265, { color: TEXT, size: 22 });
+  p.arrow(175, 265, 290, 265, { color: GREEN, dashed: true });
+  badge(p, 256, 110, 'came across', { color: GREEN, size: 22, w: 210 });
+  caption(p, 'encuentro casual', 256, 430, { color: MUTED, size: 19 });
+}
+
+function onTheSamePage(p) {
+  baseBg(p);
+  box(p, 55, 175, 180, 145, { color: CYAN, label: 'A' });
+  box(p, 277, 175, 180, 145, { color: CYAN, label: 'B' });
+  p.line(115, 355, 397, 355, { color: GREEN, weight: 6 });
+  badge(p, 256, 110, 'on the same page', { color: GREEN, size: 18, w: 250 });
+  caption(p, 'misma sintonía', 256, 410, { color: MUTED, size: 20 });
+}
+
+function insightful(p) {
+  baseBg(p);
+  treeNode(p, 170, 270, 'idea', { r: 50, color: CYAN, size: 18 });
+  p.arrow(230, 245, 315, 190, { color: GREEN });
+  p.line(340, 150, 340, 220, { color: AMBER, weight: 4 });
+  p.line(305, 185, 375, 185, { color: AMBER, weight: 4 });
+  p.line(314, 159, 366, 211, { color: AMBER, weight: 3 });
+  p.line(366, 159, 314, 211, { color: AMBER, weight: 3 });
+  badge(p, 256, 105, 'insightful', { color: GREEN, size: 23, w: 190 });
+  caption(p, 'perspicaz y profundo', 256, 440, { color: MUTED, size: 19 });
+}
+
+function theMoreTheMore(p) {
+  baseBg(p);
+  p.line(80, 400, 432, 400, { color: MUTED, weight: 3 });
+  p.arrow(120, 360, 210, 260, { color: GREEN, weight: 4 });
+  p.arrow(290, 360, 380, 260, { color: AMBER, weight: 4 });
+  treeNode(p, 210, 240, '+', { r: 32, color: GREEN, size: 26 });
+  treeNode(p, 380, 240, '+', { r: 32, color: AMBER, size: 26 });
+  badge(p, 256, 105, 'the more, the more', { color: AMBER, size: 18, w: 270 });
+  caption(p, 'más práctica, mejor resultado', 256, 445, { color: MUTED, size: 17 });
+}
+
+function setUp(p) {
+  baseBg(p);
+  treeNode(p, 130, 270, 'él', { r: 36, color: CYAN, size: 20 });
+  p.arrow(175, 270, 240, 270, { color: GREEN });
+  box(p, 250, 190, 200, 160, { color: GREEN, label: 'negocio' });
+  caption(p, 'abierto', 350, 285, { color: TEXT, size: 20 });
+  badge(p, 256, 110, 'set up', { color: GREEN, size: 23, w: 160 });
+  caption(p, 'montar o establecer', 256, 440, { color: MUTED, size: 19 });
+}
+
+function actuallyNotCurrently(p) {
+  baseBg(p);
+  box(p, 55, 160, 185, 200, { color: GREEN, label: 'actually' });
+  caption(p, 'en realidad', 147, 255, { color: TEXT, size: 19 });
+  box(p, 272, 160, 185, 200, { color: MAGENTA, label: 'currently' });
+  caption(p, 'actualmente', 364, 255, { color: TEXT, size: 19 });
+  p.push();
+  p.stroke(AMBER);
+  p.strokeWeight(5);
+  p.line(238, 160, 274, 360);
+  p.line(274, 160, 238, 360);
+  p.pop();
+  badge(p, 256, 110, 'falso amigo', { color: AMBER, size: 22, w: 200 });
+  caption(p, 'actually no es actualmente', 256, 430, { color: MUTED, size: 17 });
+}
+
 export const INGLES_FASE1_SKETCHES = {
   'que-significa-el-phrasal-verb-get-out-of-doing-something': getOutOfDoingSomething,
   'que-expresa-la-expresion-to-be-in-the-same-boat': toBeInTheSameBoat,
@@ -390,4 +626,24 @@ export const INGLES_FASE1_SKETCHES = {
   'que-expresa-la-estructura-have-something-done': haveSomethingDone,
   'que-significa-el-phrasal-verb-pick-up-cuando-se-refiere-a-ap': pickUpNatural,
   'cual-es-la-diferencia-entre-embarrassed-y-pregnant-en-ingles': embarrassedVsPregnant,
+  'que-significa-el-phrasal-verb-get-along-with': getAlongWith,
+  'que-significa-la-expresion-hit-the-nail-on-the-head': hitTheNailOnTheHead,
+  'que-significa-la-palabra-reluctant': reluctant,
+  'como-se-forma-el-mixed-conditional-y-que-expresa': mixedConditional,
+  'que-significa-el-phrasal-verb-bring-up': bringUp,
+  'que-significa-la-expresion-cost-an-arm-and-a-leg': costAnArmAndALeg,
+  'que-significa-la-palabra-tedious': tedious,
+  'cual-es-la-diferencia-entre-say-y-tell-en-ingles': sayVsTell,
+  'que-significa-el-phrasal-verb-figure-out': figureOut,
+  'cual-es-la-diferencia-entre-exit-y-success-en-ingles': exitVsSuccess,
+  'que-significa-we-ve-run-out-of-milk': runOutOfMilk,
+  'que-significa-la-expresion-break-the-ice': breakTheIce,
+  'como-se-usa-overwhelming-para-describir-una-carga-de-trabajo': overwhelmingWork,
+  'cuando-usar-have-done-y-cuando-did-en-ingles': presentPerfectVsPastSimple,
+  'que-significa-i-came-across-an-old-photo-yesterday': cameAcrossPhoto,
+  'que-significa-la-expresion-on-the-same-page': onTheSamePage,
+  'que-significa-la-palabra-insightful': insightful,
+  'como-se-usa-la-estructura-the-more-the-more': theMoreTheMore,
+  'que-significa-el-phrasal-verb-set-up': setUp,
+  'que-significa-actually-en-actually-i-don-t-like-coffee': actuallyNotCurrently,
 };

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se usa &quot;overwhelming&quot; para describir una carga de trabajo?">
+<title>¿Cómo se usa &quot;overwhelming&quot; para describir una carga de trabajo?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="293.2" cy="390.09" rx="92.81" ry="92.81" fill="hsl(168 90% 58% / 0.218)"/>
+<ellipse cx="369.56" cy="362.97" rx="127.41" ry="127.41" fill="hsl(168 90% 58% / 0.217)"/>
+<ellipse cx="287.81" cy="93.59" rx="167.13" ry="167.13" fill="hsl(168 90% 58% / 0.174)"/>
+<ellipse cx="68.76" cy="466.17" rx="125.97" ry="125.97" fill="hsl(168 90% 58% / 0.196)"/>
+<rect x="96" y="170" width="140" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="276" y="170" width="140" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#8a7fb5" stroke-width="2.5"/>
+<rect x="186" y="260" width="140" height="70" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="200" y="278" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">work</text>
+<line x1="166" y1="215" x2="202.01" y2="247.74" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="210,255 198.18,252.94 206.83,243.43" fill="#ffcc00"/>
+<line x1="346" y1="215" x2="309.99" y2="247.74" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="302,255 305.17,243.43 313.82,252.94" fill="#ffcc00"/>
+<rect x="141" y="90" width="230" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ffcc00">overwhelming</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">carga abrumadora</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cuál es la diferencia entre &quot;say&quot; y &quot;tell&quot; en inglés?">
+<title>¿Cuál es la diferencia entre &quot;say&quot; y &quot;tell&quot; en inglés?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="100.61" cy="142.94" rx="165.97" ry="165.97" fill="hsl(265 90% 58% / 0.195)"/>
+<ellipse cx="365.77" cy="266.81" rx="109.2" ry="109.2" fill="hsl(265 90% 58% / 0.19)"/>
+<ellipse cx="237.99" cy="74.88" rx="85.01" ry="85.01" fill="hsl(265 90% 58% / 0.207)"/>
+<ellipse cx="478.25" cy="299.16" rx="113.33" ry="113.33" fill="hsl(265 90% 58% / 0.215)"/>
+<rect x="55" y="160" width="185" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="69" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">tell</text>
+<text x="147" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">tell me</text>
+<rect x="272" y="160" width="185" height="200" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="286" y="178" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">say</text>
+<text x="364" y="250" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">say to me</text>
+<rect x="156" y="90" width="200" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ffcc00">say vs tell</text>
+<text x="256" y="420" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">nunca &quot;say me&quot;</text>
+</svg>

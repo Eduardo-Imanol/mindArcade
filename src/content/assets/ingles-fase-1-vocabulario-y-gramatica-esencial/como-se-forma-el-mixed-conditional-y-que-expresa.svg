@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se forma el mixed conditional y qué expresa?">
+<title>¿Cómo se forma el mixed conditional y qué expresa?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="176.66" cy="323.53" rx="196.58" ry="196.58" fill="hsl(120 90% 58% / 0.206)"/>
+<ellipse cx="423.5" cy="332.51" rx="150.62" ry="150.62" fill="hsl(120 90% 58% / 0.199)"/>
+<ellipse cx="402.42" cy="38.51" rx="188.11" ry="188.11" fill="hsl(120 90% 58% / 0.216)"/>
+<ellipse cx="439.38" cy="290.69" rx="193.33" ry="193.33" fill="hsl(120 90% 58% / 0.197)"/>
+<rect x="40" y="189" width="220" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#ff007f" stroke-width="2.5"/>
+<text x="150" y="220" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#f1f1f1">If + past perfect</text>
+<rect x="247" y="289" width="230" height="62" rx="14" fill="rgba(0, 255, 204, 0.08)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="362" y="320" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#f1f1f1">would + infinitivo</text>
+<line x1="255" y1="245" x2="271.31" y2="289.85" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="275,300 265.49,292.68 277.58,288.28" fill="#ffcc00"/>
+<rect x="126" y="90" width="260" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#ffcc00">mixed conditional</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#8a7fb5">pasado que afecta al presente</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la palabra &quot;insightful&quot;?">
+<title>¿Qué significa la palabra &quot;insightful&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="11.67" cy="290.95" rx="190.01" ry="190.01" fill="hsl(320 90% 58% / 0.239)"/>
+<ellipse cx="223.78" cy="491.14" rx="176.94" ry="176.94" fill="hsl(320 90% 58% / 0.158)"/>
+<ellipse cx="237.42" cy="449.53" rx="171.17" ry="171.17" fill="hsl(320 90% 58% / 0.209)"/>
+<ellipse cx="198.82" cy="292.14" rx="158.23" ry="158.23" fill="hsl(320 90% 58% / 0.217)"/>
+<ellipse cx="170" cy="270" rx="50" ry="50" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="170" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#f1f1f1">idea</text>
+<line x1="230" y1="245" x2="305.93" y2="195.87" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="315,190 309.99,200.9 303,190.11" fill="#39ff14"/>
+<line x1="340" y1="150" x2="340" y2="220" stroke="#ffcc00" stroke-width="4" stroke-linecap="round"/>
+<line x1="305" y1="185" x2="375" y2="185" stroke="#ffcc00" stroke-width="4" stroke-linecap="round"/>
+<line x1="314" y1="159" x2="366" y2="211" stroke="#ffcc00" stroke-width="3" stroke-linecap="round"/>
+<line x1="366" y1="159" x2="314" y2="211" stroke="#ffcc00" stroke-width="3" stroke-linecap="round"/>
+<rect x="161" y="85" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" font-weight="700" fill="#39ff14">insightful</text>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">perspicaz y profundo</text>
+</svg>

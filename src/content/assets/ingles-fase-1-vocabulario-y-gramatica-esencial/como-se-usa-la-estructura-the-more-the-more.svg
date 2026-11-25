@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Cómo se usa la estructura &quot;the more, the more&quot;?">
+<title>¿Cómo se usa la estructura &quot;the more, the more&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="168.09" cy="228.63" rx="191" ry="191" fill="hsl(265 90% 58% / 0.162)"/>
+<ellipse cx="317.16" cy="488.86" rx="87.2" ry="87.2" fill="hsl(265 90% 58% / 0.204)"/>
+<ellipse cx="112.25" cy="421.26" rx="176.12" ry="176.12" fill="hsl(265 90% 58% / 0.209)"/>
+<ellipse cx="339.62" cy="386.19" rx="82.25" ry="82.25" fill="hsl(265 90% 58% / 0.224)"/>
+<line x1="80" y1="400" x2="432" y2="400" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<line x1="120" y1="360" x2="202.78" y2="268.03" stroke="#39ff14" stroke-width="2" stroke-linecap="round"/>
+<polygon points="210,260 208,271.83 198.44,263.23" fill="#39ff14"/>
+<line x1="290" y1="360" x2="372.78" y2="268.03" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+<polygon points="380,260 378,271.83 368.44,263.23" fill="#ffcc00"/>
+<ellipse cx="210" cy="240" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="210" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">+</text>
+<ellipse cx="380" cy="240" rx="32" ry="32" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2.5"/>
+<text x="380" y="240" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" font-weight="700" fill="#f1f1f1">+</text>
+<rect x="121" y="85" width="270" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="105" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#ffcc00">the more, the more</text>
+<text x="256" y="445" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#8a7fb5">más práctica, mejor resultado</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa &quot;We&apos;ve run out of milk&quot;?">
+<title>¿Qué significa &quot;We&apos;ve run out of milk&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="284.93" cy="106.49" rx="120.63" ry="120.63" fill="hsl(265 90% 58% / 0.162)"/>
+<ellipse cx="167.85" cy="119.54" rx="203.26" ry="203.26" fill="hsl(265 90% 58% / 0.224)"/>
+<ellipse cx="269.23" cy="384.32" rx="164.94" ry="164.94" fill="hsl(265 90% 58% / 0.201)"/>
+<ellipse cx="439.56" cy="395.38" rx="177.69" ry="177.69" fill="hsl(265 90% 58% / 0.199)"/>
+<rect x="176" y="150" width="160" height="220" rx="12" fill="rgba(15, 5, 29, 0.55)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="190" y="168" text-anchor="start" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#00ffcc">milk</text>
+<rect x="186" y="240" width="140" height="120" rx="12" fill="none" stroke="#ff007f" stroke-width="2.5"/>
+<text x="256" y="300" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">sin leche</text>
+<line x1="256" y1="110" x2="256" y2="134.2" stroke="#ff007f" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="256,145 249.57,134.87 262.43,134.87" fill="#ff007f"/>
+<rect x="161" y="420" width="190" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ff007f" stroke-width="2"/>
+<text x="256" y="440" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#ff007f">run out of</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa &quot;I came across an old photo yesterday&quot;?">
+<title>¿Qué significa &quot;I came across an old photo yesterday&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="395.27" cy="252.56" rx="76.83" ry="76.83" fill="hsl(168 90% 58% / 0.173)"/>
+<ellipse cx="134.64" cy="43.38" rx="92.97" ry="92.97" fill="hsl(168 90% 58% / 0.223)"/>
+<ellipse cx="136.07" cy="315.35" rx="193.05" ry="193.05" fill="hsl(168 90% 58% / 0.228)"/>
+<ellipse cx="43.14" cy="281.29" rx="77.94" ry="77.94" fill="hsl(168 90% 58% / 0.153)"/>
+<ellipse cx="130" cy="265" rx="36" ry="36" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#f1f1f1">yo</text>
+<rect x="300" y="195" width="150" height="140" rx="12" fill="none" stroke="#ff007f" stroke-width="2.5"/>
+<text x="375" y="265" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">foto</text>
+<line x1="175" y1="265" x2="279.2" y2="265" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 7"/>
+<polygon points="290,265 279.87,271.43 279.87,258.57" fill="#39ff14"/>
+<rect x="151" y="90" width="210" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#39ff14">came across</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" font-weight="700" fill="#8a7fb5">encuentro casual</text>
+</svg>

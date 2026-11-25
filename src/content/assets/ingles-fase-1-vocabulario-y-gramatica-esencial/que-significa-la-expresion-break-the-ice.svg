@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="¿Qué significa la expresión &quot;break the ice&quot;?">
+<title>¿Qué significa la expresión &quot;break the ice&quot;?</title>
+<rect x="0" y="0" width="512" height="512" fill="#1a0b2e"/>
+<ellipse cx="17.5" cy="347.88" rx="77.1" ry="77.1" fill="hsl(168 90% 58% / 0.178)"/>
+<ellipse cx="163.31" cy="5.14" rx="115.45" ry="115.45" fill="hsl(168 90% 58% / 0.229)"/>
+<ellipse cx="349.8" cy="56.29" rx="173.77" ry="173.77" fill="hsl(168 90% 58% / 0.146)"/>
+<ellipse cx="313.1" cy="476.63" rx="96.99" ry="96.99" fill="hsl(168 90% 58% / 0.171)"/>
+<ellipse cx="130" cy="270" rx="38" ry="38" fill="rgba(57, 255, 20, 0.1)" stroke="#00ffcc" stroke-width="2.5"/>
+<text x="130" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">A</text>
+<ellipse cx="382" cy="270" rx="38" ry="38" fill="rgba(57, 255, 20, 0.1)" stroke="#39ff14" stroke-width="2.5"/>
+<text x="382" y="270" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="#f1f1f1">B</text>
+<line x1="180" y1="270" x2="330" y2="270" stroke="#8a7fb5" stroke-width="3" stroke-linecap="round"/>
+<line x1="238" y1="242" x2="274" y2="298" stroke="#ffcc00" stroke-width="6" stroke-linecap="round"/>
+<line x1="274" y1="242" x2="238" y2="298" stroke="#ffcc00" stroke-width="6" stroke-linecap="round"/>
+<rect x="146" y="90" width="220" height="40" rx="20" fill="rgba(57, 255, 20, 0.1)" stroke="#ffcc00" stroke-width="2"/>
+<text x="256" y="110" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" font-weight="700" fill="#ffcc00">break the ice</text>
+<text x="256" y="430" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="#8a7fb5">romper el hielo</text>
+</svg>

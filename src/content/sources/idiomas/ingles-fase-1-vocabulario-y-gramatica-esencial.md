@@ -1,6 +1,6 @@
 # Inglés — Fase 1: Vocabulario y Gramática Esencial (fuente)
 
-Fase 1 del plan de inglés. 200 tarjetas previstas en total; esta entrega incluye 30 tarjetas divididas en 3 mazos de 10.
+Fase 1 del plan de inglés. 200 tarjetas previstas en total; esta entrega incluye 50 tarjetas divididas en 5 mazos de 10.
 
 ## Mazo 1 — viernes 20 nov 2026
 
@@ -40,3 +40,29 @@ Fase 1 del plan de inglés. 200 tarjetas previstas en total; esta entrega incluy
 8. have something done — MANDAR QUE TE HAGAN ALGO. "I had my car repaired yesterday." / Ayer mandé reparar el coche.
 9. pick up — APRENDER DE FORMA NATURAL. "He picked up Spanish living in Mexico." / Aprendió español viviendo en México.
 10. embarrassed — AVERGONZADO, NO EMBARAZADA. "I was so embarrassed when I tripped in public." / Me dio tanta vergüenza cuando me tropecé en público. "Embarazada" es "pregnant".
+
+## Mazo 4 — martes 24 nov 2026
+
+1. get along with — llevarse bien con alguien. "I get along really well with my coworkers." / Me llevo muy bien con mis compañeros de trabajo.
+2. hit the nail on the head — dar en el clavo, acertar exactamente. "You hit the nail on the head — that's exactly the problem." / Diste en el clavo: ese es exactamente el problema.
+3. reluctant — reacio, poco dispuesto. "He was reluctant to admit he was wrong." / Se mostraba reacio a admitir que estaba equivocado.
+4. mixed conditional — condicional mixto: If + past perfect, would + infinitivo. Para un pasado que afecta al presente. "If I had saved more money, I would travel now." / Si hubiera ahorrado más dinero, ahora estaría viajando. No usar "If I saved more money, I would travel now" para hablar de un pasado real que ya no se puede cambiar.
+5. bring up — sacar un tema en una conversación, mencionar algo; también "criar" (a un niño). "She brought up an interesting point in the meeting." / Sacó a relucir un punto interesante en la reunión.
+6. cost an arm and a leg — costar un ojo de la cara, ser carísimo. "That new phone costs an arm and a leg." / Ese teléfono nuevo cuesta un ojo de la cara.
+7. tedious — tedioso, aburrido, pesado. "Filling out forms is such a tedious task." / Llenar formularios es una tarea tan tediosa.
+8. say vs. tell — "tell" siempre lleva a quién se le dice algo (tell me, tell him); "say" no lleva persona, o usa "to" (say to me). Es un error muy común. "He told me he was tired." / Me dijo que estaba cansado. No usar "He said me he was tired".
+9. figure out — descifrar, resolver, entender algo. "I finally figured out how the app works." / Por fin descubrí cómo funciona la app.
+10. exit — significa "salida", NO "éxito" (eso es "success"). "The exit is on the left." / La salida está a la izquierda. "Hard work leads to success." / El trabajo duro lleva al éxito.
+
+## Mazo 5 — miércoles 25 nov 2026
+
+1. run out of — quedarse sin algo. "We've run out of milk." / Nos hemos quedado sin leche.
+2. break the ice — romper el hielo. "He told a joke to break the ice." / Contó un chiste para romper el hielo.
+3. overwhelming — abrumador, agobiante. "The amount of work was overwhelming." / La cantidad de trabajo era abrumadora.
+4. present perfect vs. past simple — "have done" es un pasado conectado con el presente; "did" es un pasado cerrado. "I have lived here for five years." / Vivo aquí desde hace cinco años (y sigo viviendo). "I lived there in 2020." / Viví ahí en 2020 (ya no). No usar "I have lived there in 2020" para un pasado cerrado.
+5. come across — encontrarse con algo por casualidad; también dar cierta impresión. "I came across an old photo yesterday." / Me encontré una foto vieja ayer.
+6. on the same page — estar en la misma sintonía, de acuerdo. "Let's make sure we're on the same page before the meeting." / Asegurémonos de estar en la misma sintonía antes de la reunión.
+7. insightful — perspicaz, profundo. "She gave an insightful comment about the book." / Hizo un comentario perspicaz sobre el libro.
+8. the more..., the more... — cuanto más..., más... "The more you practice, the better you get." / Cuanto más practicas, mejor te sale.
+9. set up — montar, establecer, organizar. "He set up his own business last year." / Montó su propio negocio el año pasado.
+10. actually — significa "en realidad / de hecho", NO "actualmente" (eso es "currently"). "Actually, I don't like coffee." / En realidad, no me gusta el café. "I'm currently working on a new project." / Actualmente estoy trabajando en un proyecto nuevo.
